@@ -479,6 +479,19 @@
           
             
             
+              
+              <span class="post-comments-count">
+                <span class="post-meta-divider">|</span>
+                <span class="post-meta-item-icon">
+                  <i class="fa fa-comment-o"></i>
+                </span>
+            
+                <span class="post-meta-item-text">评论数：</span>
+                <a href="/tempfile/#comments" itemprop="discussionUrl">
+                  <span class="post-comments-count valine-comment-count" data-xid="/tempfile/" itemprop="commentCount"></span>
+                </a>
+              </span>
+            
           
 
           
@@ -693,6 +706,19 @@ tempfile 临时文件(夹)操作tempfile.mkstemp([suffix=”[, prefix=’tmp’[
           
             
             
+              
+              <span class="post-comments-count">
+                <span class="post-meta-divider">|</span>
+                <span class="post-meta-item-icon">
+                  <i class="fa fa-comment-o"></i>
+                </span>
+            
+                <span class="post-meta-item-text">评论数：</span>
+                <a href="/OS-Path/#comments" itemprop="discussionUrl">
+                  <span class="post-comments-count valine-comment-count" data-xid="/OS-Path/" itemprop="commentCount"></span>
+                </a>
+              </span>
+            
           
 
           
@@ -906,6 +932,19 @@ os.path.commonprefix(list) #返回list(多个路径)中
 
           
             
+            
+              
+              <span class="post-comments-count">
+                <span class="post-meta-divider">|</span>
+                <span class="post-meta-item-icon">
+                  <i class="fa fa-comment-o"></i>
+                </span>
+            
+                <span class="post-meta-item-text">评论数：</span>
+                <a href="/FTP-Module/#comments" itemprop="discussionUrl">
+                  <span class="post-comments-count valine-comment-count" data-xid="/FTP-Module/" itemprop="commentCount"></span>
+                </a>
+              </span>
             
           
 
@@ -1122,6 +1161,19 @@ dir([path[,…[,
           
             
             
+              
+              <span class="post-comments-count">
+                <span class="post-meta-divider">|</span>
+                <span class="post-meta-item-icon">
+                  <i class="fa fa-comment-o"></i>
+                </span>
+            
+                <span class="post-meta-item-text">评论数：</span>
+                <a href="/BaseServer/#comments" itemprop="discussionUrl">
+                  <span class="post-comments-count valine-comment-count" data-xid="/BaseServer/" itemprop="commentCount"></span>
+                </a>
+              </span>
+            
           
 
           
@@ -1336,6 +1388,19 @@ class SocketS
 
           
             
+            
+              
+              <span class="post-comments-count">
+                <span class="post-meta-divider">|</span>
+                <span class="post-meta-item-icon">
+                  <i class="fa fa-comment-o"></i>
+                </span>
+            
+                <span class="post-meta-item-text">评论数：</span>
+                <a href="/hello-world/#comments" itemprop="discussionUrl">
+                  <span class="post-comments-count valine-comment-count" data-xid="/hello-world/" itemprop="commentCount"></span>
+                </a>
+              </span>
             
           
 
@@ -1709,7 +1774,7 @@ class SocketS
     
       <span class="post-meta-item-text">站点总字数：</span>
     
-    <span title="站点总字数">40k</span>
+    <span title="站点总字数">51k</span>
   
 
   
@@ -1720,7 +1785,7 @@ class SocketS
     
       <span class="post-meta-item-text">站点阅读时长 &asymp;</span>
     
-    <span title="站点阅读时长">1:07</span>
+    <span title="站点阅读时长">1:26</span>
   
 </div>
 
@@ -1833,6 +1898,35 @@ class SocketS
   
 
   
+  
+
+<script src="//cdn1.lncld.net/static/js/3.11.1/av-min.js"></script>
+
+
+
+<script src="//unpkg.com/valine/dist/Valine.min.js"></script>
+
+<script>
+  var GUEST = ['nick', 'mail', 'link'];
+  var guest = 'nick,mail,link';
+  guest = guest.split(',').filter(function(item) {
+    return GUEST.indexOf(item) > -1;
+  });
+  new Valine({
+    el: '#comments',
+    verify: false,
+    notify: false,
+    appId: 'NKaTDAiG9DICaE4Okr8fdvyV-gzGzoHsz',
+    appKey: 'V4Sa7YceaoaXrMmbNqjO3G6N',
+    placeholder: 'ヾﾉ≧∀≦)o来啊，快活啊!',
+    avatar: 'mm',
+    meta: guest,
+    pageSize: '10' || 10,
+    visitor: false
+  });
+</script>
+
+
 
 
 

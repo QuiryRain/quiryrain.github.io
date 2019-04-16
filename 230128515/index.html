@@ -106,13 +106,10 @@
 <meta property="og:site_name" content="QuiryRain的博客">
 <meta property="og:description" content="关于个人的一些回忆">
 <meta property="og:locale" content="zh-CN">
-<meta property="og:image" content="http://quiryrain.tk/userImages/a.jpg">
-<meta property="og:image" content="http://quiryrain.tk/userImages/b.png">
 <meta property="og:updated_time" content="2019-03-05T13:32:48.677Z">
 <meta name="twitter:card" content="summary">
 <meta name="twitter:title" content="那年刚好17岁">
 <meta name="twitter:description" content="关于个人的一些回忆">
-<meta name="twitter:image" content="http://quiryrain.tk/userImages/a.jpg">
 
 
 
@@ -481,6 +478,19 @@
           
             
             
+              
+              <span class="post-comments-count">
+                <span class="post-meta-divider">|</span>
+                <span class="post-meta-item-icon">
+                  <i class="fa fa-comment-o"></i>
+                </span>
+            
+                <span class="post-meta-item-text">评论数：</span>
+                <a href="/230128515/#comments" itemprop="discussionUrl">
+                  <span class="post-comments-count valine-comment-count" data-xid="/230128515/" itemprop="commentCount"></span>
+                </a>
+              </span>
+            
           
 
           
@@ -499,7 +509,7 @@
                 
                   <span class="post-meta-item-text">本文字数：</span>
                 
-                <span title="本文字数">736</span>
+                <span title="本文字数">4.8k</span>
               
 
               
@@ -513,7 +523,7 @@
                 
                   <span class="post-meta-item-text">阅读时长 &asymp;</span>
                 
-                <span title="阅读时长">1 分钟</span>
+                <span title="阅读时长">8 分钟</span>
               
             </div>
           
@@ -535,17 +545,46 @@
       
 
       
-        <blockquote>
-<p>人生若只如初见，何事秋风悲画扇？</p>
-</blockquote>
-<h3 id="那年刚好17岁"><a href="#那年刚好17岁" class="headerlink" title="那年刚好17岁"></a>那年刚好17岁</h3><p>是的那年我刚好是17岁，在一个意外得早晨看到了你从窗前走过。从此我便一发不可收拾的爱上了你。<br><img src="/userImages/a.jpg" alt></p>
-<h3 id="最美不过是朝晖"><a href="#最美不过是朝晖" class="headerlink" title="最美不过是朝晖"></a>最美不过是朝晖</h3><p>我在最美的年纪里遇到了你，这就是我一生的幸运。虽然之后分开了，但是我的故事里全是关于你的，而你选择遗忘的，却是我最不舍的，纸短情长，道不尽太多的涟漪。<br>之所以为最美不过是朝晖，是因为太美的景色总是很容易消散。就像烟花绽放的瞬间，太美，又太让人留恋。<br><img src="/userImages/b.png" alt></p>
-<h3 id="又是一年花开季"><a href="#又是一年花开季" class="headerlink" title="又是一年花开季"></a>又是一年花开季</h3><p>又下雨了，时光总是会匆匆而过。带走了太多，也让人放下了很多，有时放不下的却是自己心中的一丝执念。我爱你，但同时我也恨你，放下后，这些又有什么区别呢？不过是一时的执念而已。走了就散场了。电影总有结束的时候，而我们却是活在了电影外，饱受着生活中的各种酸甜苦辣。是啊，又是一年的花开季，但是我的内心中去平静了太多，因为失望了太多，对你也渐渐的放下了。虽然说是那年刚好17岁，但是六年后的那天对你来说却是一个花开季，而对于我来说却是一个冰河期。<br>等青春消失殆尽一切，才说当时如果的胡话。有时真是觉得一腔的诗意喂了狗，时间磨平了当时的棱角，却终究没有办法赛过现实的残酷。  </p>
-<h3 id="纸短情长"><a href="#纸短情长" class="headerlink" title="纸短情长"></a>纸短情长</h3><p>我终于学会了体面的离开，无论当时是多么的放不下，现在都可以淡然处之。那年刚好17岁，那年刚好是我最美的一段记忆，给了当时最美的你，最美的年纪。<br>曾经我天真的以为，在一起了就会永远在一起，从没有想过会分开。现在的我，当每次别人问我“你怎么没有女朋友时”，我却可以笑着说“一个人挺好的”，因为曾经的美好都已经消失了。淡然处之，六百多公里的思念终究断了，我不后悔，爱过就是爱过。或许下次相见时，能够淡然的看着你说句“好久不见”。  </p>
-<h3 id="结尾"><a href="#结尾" class="headerlink" title="结尾"></a>结尾</h3><blockquote>
-<p>“好久不见！”<br>  “是的，好久不见！”  </p>
-</blockquote>
-
+        <script src="/js/crypto-js.js"></script>
+<script>
+function doDecrypt (pwd, onError) {
+	console.log('in doDecrypt');
+	const txt = document.getElementById('enc_content').innerHTML;
+	let plantext;
+	try {
+		const bytes = CryptoJS.AES.decrypt(txt, pwd);
+		var plaintext = bytes.toString(CryptoJS.enc.Utf8);
+	} catch(err) {
+		if(onError) {
+			onError(err);
+		}
+		return;
+	}
+	document.getElementById('enc_content').innerHTML = plaintext;
+	document.getElementById('enc_content').style.display = 'block';
+	document.getElementById('enc_passwd').style.display = 'none';
+	if(typeof MathJax !== 'undefined') {
+		MathJax.Hub.Queue(
+			['resetEquationNumbers', MathJax.InputJax.TeX],
+			['PreProcess', MathJax.Hub],
+			['Reprocess', MathJax.Hub]
+		);
+	}
+}
+</script>
+<div id="enc_content" style="display:none">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</div>
+<div id="enc_passwd"> <input id="enc_pwd_input" type="password" style="border-radius: 5px;border-style: groove;height: 30px;width: 50%;cursor: auto;font-size: 102%;color: currentColor;outline: none;text-overflow: initial;padding-left: 5px;" onkeydown="if (event.keyCode == 13) { decrypt(); return false;}"> <input type="submit" value="解&nbsp;密" onclick="decrypt()" style="width: 58px;height: 34px;border-radius: 5px;background-color: white;border-style: solid;color: currentColor;"><div id="enc_error" style="display: inline-block;color: #d84527;margin-left: 10px"></div>
+<script>
+var onError = function(error) {
+	document.getElementById("enc_error").innerHTML = "password error!"
+};
+function decrypt() {
+var passwd = document.getElementById("enc_pwd_input").value;
+console.log(passwd);
+doDecrypt(passwd, onError);
+}
+</script>
+</div>
       
     </div>
 
@@ -618,6 +657,10 @@
           
 
   
+    <div class="comments" id="comments">
+    </div>
+
+  
 
 
 
@@ -639,17 +682,8 @@
       
 
       
-        <ul class="sidebar-nav motion-element">
-          <li class="sidebar-nav-toc sidebar-nav-active" data-target="post-toc-wrap">
-            文章目录
-          </li>
-          <li class="sidebar-nav-overview" data-target="site-overview-wrap">
-            站点概览
-          </li>
-        </ul>
-      
 
-      <div class="site-overview-wrap sidebar-panel">
+      <div class="site-overview-wrap sidebar-panel sidebar-panel-active">
         <div class="site-overview">
           <div class="site-author motion-element" itemprop="author" itemscope itemtype="http://schema.org/Person">
             
@@ -856,23 +890,6 @@
       </div>
 
       
-      <!--noindex-->
-        <div class="post-toc-wrap motion-element sidebar-panel sidebar-panel-active">
-          <div class="post-toc">
-
-            
-            
-            
-            
-
-            
-              <div class="post-toc-content"><ol class="nav"><li class="nav-item nav-level-3"><a class="nav-link" href="#那年刚好17岁"><span class="nav-number">1.</span> <span class="nav-text">那年刚好17岁</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#最美不过是朝晖"><span class="nav-number">2.</span> <span class="nav-text">最美不过是朝晖</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#又是一年花开季"><span class="nav-number">3.</span> <span class="nav-text">又是一年花开季</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#纸短情长"><span class="nav-number">4.</span> <span class="nav-text">纸短情长</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#结尾"><span class="nav-number">5.</span> <span class="nav-text">结尾</span></a></li></ol></div>
-            
-
-          </div>
-        </div>
-      <!--/noindex-->
-      
 
       
 
@@ -901,7 +918,7 @@
     
       <span class="post-meta-item-text">站点总字数：</span>
     
-    <span title="站点总字数">40k</span>
+    <span title="站点总字数">51k</span>
   
 
   
@@ -912,7 +929,7 @@
     
       <span class="post-meta-item-text">站点阅读时长 &asymp;</span>
     
-    <span title="站点阅读时长">1:07</span>
+    <span title="站点阅读时长">1:26</span>
   
 </div>
 
@@ -1029,6 +1046,35 @@
   
 
   
+  
+
+<script src="//cdn1.lncld.net/static/js/3.11.1/av-min.js"></script>
+
+
+
+<script src="//unpkg.com/valine/dist/Valine.min.js"></script>
+
+<script>
+  var GUEST = ['nick', 'mail', 'link'];
+  var guest = 'nick,mail,link';
+  guest = guest.split(',').filter(function(item) {
+    return GUEST.indexOf(item) > -1;
+  });
+  new Valine({
+    el: '#comments',
+    verify: false,
+    notify: false,
+    appId: 'NKaTDAiG9DICaE4Okr8fdvyV-gzGzoHsz',
+    appKey: 'V4Sa7YceaoaXrMmbNqjO3G6N',
+    placeholder: 'ヾﾉ≧∀≦)o来啊，快活啊!',
+    avatar: 'mm',
+    meta: guest,
+    pageSize: '10' || 10,
+    visitor: false
+  });
+</script>
+
+
 
 
   
