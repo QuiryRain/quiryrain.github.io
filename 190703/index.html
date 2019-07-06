@@ -106,7 +106,7 @@
 <meta property="og:site_name" content="QuiryRain的博客">
 <meta property="og:description" content="动态页面数据抓取什么是AJAXAJAX（Asynchronouse JavaScript And XML）异步JavaScript和XML。在后台与服务器进行少量数据换时，可以在不重新加载整个网页的情况下，利用Ajax对网页实现异步更新。在传统的网页中，如果要获取更新内容，需要重新加载整个页面。因为传统的网页数据传输格式使用的是XML语法。在Ajax加载的网页中，数据的交互使用的是JSON格式。">
 <meta property="og:locale" content="zh-CN">
-<meta property="og:updated_time" content="2019-07-06T10:45:32.787Z">
+<meta property="og:updated_time" content="2019-07-06T10:59:31.697Z">
 <meta name="twitter:card" content="summary">
 <meta name="twitter:title" content="动态网页数据抓取">
 <meta name="twitter:description" content="动态页面数据抓取什么是AJAXAJAX（Asynchronouse JavaScript And XML）异步JavaScript和XML。在后台与服务器进行少量数据换时，可以在不重新加载整个网页的情况下，利用Ajax对网页实现异步更新。在传统的网页中，如果要获取更新内容，需要重新加载整个页面。因为传统的网页数据传输格式使用的是XML语法。在Ajax加载的网页中，数据的交互使用的是JSON格式。">
@@ -450,7 +450,7 @@
                 
                   <span class="post-meta-item-text">更新于</span>
                 
-                <time title="修改时间：2019-07-06 18:45:32" itemprop="dateModified" datetime="2019-07-06T18:45:32+08:00">2019-07-06</time>
+                <time title="修改时间：2019-07-06 18:59:31" itemprop="dateModified" datetime="2019-07-06T18:59:31+08:00">2019-07-06</time>
               
             
           </span>
@@ -667,7 +667,7 @@
 </ul>
 <h3 id="切换页面"><a href="#切换页面" class="headerlink" title="切换页面"></a>切换页面</h3><p>在切换页面时，<code>selenium</code>提供了一个叫做<code>switch_to_window</code>来进行切换，具体切换到哪个页面，可以从<code>driver.window_handles</code>中找到。</p>
 <figure class="highlight python"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br></pre></td><td class="code"><pre><span class="line"><span class="comment"># 打开一个新的页面</span></span><br><span class="line">self.driver.execute_script(<span class="string">"window.open('"</span>+url+<span class="string">"')"</span>)</span><br><span class="line"><span class="comment"># 切换到这个新的页面中</span></span><br><span class="line">self.driver.switch_to_window(self.driver.window_handles[<span class="number">1</span>])</span><br></pre></td></tr></table></figure>
-<h3 id="设置代理"><a href="#设置代理" class="headerlink" title="设置代理"></a>设置代理</h3><figure class="highlight python"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">from</span> selenium <span class="keyword">import</span> webdriver</span><br><span class="line"><span class="keyword">import</span> time</span><br><span class="line"></span><br><span class="line">options = webdriver.ChromeOptions()</span><br><span class="line">options.add_argument(<span class="string">"--proxy-server=http://175.44.156.200:9000"</span>)</span><br><span class="line">driver_path = <span class="string">"./driver/chromedriver.exe"</span></span><br><span class="line">driver = webdriver.Chrome(executable_path=driver_path, options=options)</span><br><span class="line"></span><br><span class="line">driver.get(<span class="string">'http://httpbin.org/ip'</span>)</span><br><span class="line">time.sleep(<span class="number">5</span>)</span><br><span class="line">driver.quit()</span><br></pre></td></tr></table></figure>
+<h3 id="设置代理"><a href="#设置代理" class="headerlink" title="设置代理"></a>设置代理</h3><figure class="highlight python"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">from</span> selenium <span class="keyword">import</span> webdriver</span><br><span class="line"><span class="keyword">import</span> time</span><br><span class="line"></span><br><span class="line">options = webdriver.ChromeOptions()</span><br><span class="line">options.add_argument(<span class="string">"--proxy-server=http://113.12.202.50:50327"</span>)</span><br><span class="line">driver_path = <span class="string">"./driver/chromedriver.exe"</span></span><br><span class="line">driver = webdriver.Chrome(executable_path=driver_path, options=options)</span><br><span class="line"></span><br><span class="line">driver.get(<span class="string">'http://httpbin.org/ip'</span>)</span><br><span class="line">time.sleep(<span class="number">5</span>)</span><br><span class="line">driver.quit()</span><br></pre></td></tr></table></figure>
 <h3 id="WebElement元素"><a href="#WebElement元素" class="headerlink" title="WebElement元素"></a>WebElement元素</h3><p><code>from selenium.webdriver.remote.webelement import WebElement</code>类是每个获取出来的元素的所属类</p>
 <p>常用属性：</p>
 <ol>
