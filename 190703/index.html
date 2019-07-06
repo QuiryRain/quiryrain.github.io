@@ -106,7 +106,7 @@
 <meta property="og:site_name" content="QuiryRain的博客">
 <meta property="og:description" content="动态页面数据抓取什么是AJAXAJAX（Asynchronouse JavaScript And XML）异步JavaScript和XML。在后台与服务器进行少量数据换时，可以在不重新加载整个网页的情况下，利用Ajax对网页实现异步更新。在传统的网页中，如果要获取更新内容，需要重新加载整个页面。因为传统的网页数据传输格式使用的是XML语法。在Ajax加载的网页中，数据的交互使用的是JSON格式。">
 <meta property="og:locale" content="zh-CN">
-<meta property="og:updated_time" content="2019-07-03T09:45:00.240Z">
+<meta property="og:updated_time" content="2019-07-06T10:45:32.787Z">
 <meta name="twitter:card" content="summary">
 <meta name="twitter:title" content="动态网页数据抓取">
 <meta name="twitter:description" content="动态页面数据抓取什么是AJAXAJAX（Asynchronouse JavaScript And XML）异步JavaScript和XML。在后台与服务器进行少量数据换时，可以在不重新加载整个网页的情况下，利用Ajax对网页实现异步更新。在传统的网页中，如果要获取更新内容，需要重新加载整个页面。因为传统的网页数据传输格式使用的是XML语法。在Ajax加载的网页中，数据的交互使用的是JSON格式。">
@@ -433,12 +433,24 @@
                 
               
 
-              <time title="创建时间：2019-07-03 15:50:19 / 修改时间：17:45:00" itemprop="dateCreated datePublished" datetime="2019-07-03T15:50:19+08:00">2019-07-03</time>
+              <time title="创建时间：2019-07-03 15:50:19" itemprop="dateCreated datePublished" datetime="2019-07-03T15:50:19+08:00">2019-07-03</time>
             
 
             
               
 
+              
+                
+                <span class="post-meta-divider">|</span>
+                
+
+                <span class="post-meta-item-icon">
+                  <i class="fa fa-calendar-check-o"></i>
+                </span>
+                
+                  <span class="post-meta-item-text">更新于</span>
+                
+                <time title="修改时间：2019-07-06 18:45:32" itemprop="dateModified" datetime="2019-07-06T18:45:32+08:00">2019-07-06</time>
               
             
           </span>
@@ -497,7 +509,7 @@
                 
                   <span class="post-meta-item-text">本文字数：</span>
                 
-                <span title="本文字数">5.5k</span>
+                <span title="本文字数">6.8k</span>
               
 
               
@@ -511,7 +523,7 @@
                 
                   <span class="post-meta-item-text">阅读时长 &asymp;</span>
                 
-                <span title="阅读时长">9 分钟</span>
+                <span title="阅读时长">11 分钟</span>
               
             </div>
           
@@ -662,6 +674,15 @@
 <li>get_attribute：这个标签的某个属性的值。</li>
 <li>screentshot：获取当前页面的截图。这个方法只能在<code>driver</code>上使用。<code>driver</code>的对象类，也是继承自<code>WebElement</code>。</li>
 </ol>
+<h3 id="对带有页面嵌套的豆瓣进行登录"><a href="#对带有页面嵌套的豆瓣进行登录" class="headerlink" title="对带有页面嵌套的豆瓣进行登录"></a>对带有页面嵌套的豆瓣进行登录</h3><figure class="highlight python"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br><span class="line">26</span><br><span class="line">27</span><br><span class="line">28</span><br><span class="line">29</span><br><span class="line">30</span><br><span class="line">31</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">from</span> selenium <span class="keyword">import</span> webdriver</span><br><span class="line"><span class="keyword">import</span> time</span><br><span class="line"></span><br><span class="line">driver_path = <span class="string">"./driver/chromedriver.exe"</span></span><br><span class="line">driver = webdriver.Chrome(executable_path=driver_path)</span><br><span class="line">driver.get(<span class="string">'https://www.douban.com'</span>)</span><br><span class="line">iframe = driver.find_element_by_tag_name(<span class="string">"iframe"</span>)</span><br><span class="line">driver.switch_to.frame(iframe)</span><br><span class="line"></span><br><span class="line">login = driver.find_element_by_class_name(<span class="string">"account-tab-account"</span>)</span><br><span class="line"></span><br><span class="line">actions = webdriver.ActionChains(driver)</span><br><span class="line">actions.move_to_element(login)</span><br><span class="line">actions.click()</span><br><span class="line">actions.perform()</span><br><span class="line"></span><br><span class="line">username = driver.find_element_by_id(<span class="string">"username"</span>)</span><br><span class="line">password = driver.find_element_by_id(<span class="string">"password"</span>)</span><br><span class="line">submit = driver.find_element_by_xpath(<span class="string">"//div[@class='account-form-field-submit ']/a"</span>)</span><br><span class="line"></span><br><span class="line">actions.move_to_element(username)</span><br><span class="line">actions.send_keys_to_element(username, <span class="string">"your username"</span>)</span><br><span class="line">actions.move_to_element(password)</span><br><span class="line">actions.send_keys_to_element(password, <span class="string">"your password"</span>)</span><br><span class="line">actions.move_to_element(submit)</span><br><span class="line">actions.click()</span><br><span class="line">actions.perform()</span><br><span class="line"></span><br><span class="line">time.sleep(<span class="number">10</span>)</span><br><span class="line"></span><br><span class="line">driver.quit()</span><br></pre></td></tr></table></figure>
+<p>注意：在使用以下内容时会出现警告信息，身为有代码洁癖的人，最不能忍受运行中出现警告信息。</p>
+<p>警告信息：</p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">DeprecationWarning: use driver.switch_to.frame instead driver.switch_to_frame(iframe)</span><br></pre></td></tr></table></figure>
+<p>使用方式：</p>
+<figure class="highlight python"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line">iframe = driver.find_element_by_tag_name(<span class="string">"iframe"</span>)</span><br><span class="line">driver.switch_to_frame(iframe)</span><br></pre></td></tr></table></figure>
+<p>将上文改为即可：</p>
+<figure class="highlight python"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line">iframe = driver.find_element_by_tag_name(<span class="string">"iframe"</span>)</span><br><span class="line">driver.switch_to.frame(iframe)</span><br></pre></td></tr></table></figure>
+<p>对框架的解决方式推荐一篇文章：<a href="https://www.cnblogs.com/dydxw/p/10551160.html" target="_blank" rel="noopener">Selenium（十二）嵌套frame定位</a></p>
 
       
     </div>
@@ -1033,7 +1054,7 @@
             
 
             
-              <div class="post-toc-content"><ol class="nav"><li class="nav-item nav-level-2"><a class="nav-link" href="#动态页面数据抓取"><span class="nav-number">1.</span> <span class="nav-text">动态页面数据抓取</span></a><ol class="nav-child"><li class="nav-item nav-level-3"><a class="nav-link" href="#什么是AJAX"><span class="nav-number">1.1.</span> <span class="nav-text">什么是AJAX</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#获取ajax数据的格式"><span class="nav-number">1.2.</span> <span class="nav-text">获取ajax数据的格式</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#selenium-chromdriver获取动态数据"><span class="nav-number">1.3.</span> <span class="nav-text">selenium + chromdriver获取动态数据</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#安装Selenium和chromedriver"><span class="nav-number">1.4.</span> <span class="nav-text">安装Selenium和chromedriver</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#快速开始"><span class="nav-number">1.5.</span> <span class="nav-text">快速开始</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#selenium官方文档"><span class="nav-number">1.6.</span> <span class="nav-text">selenium官方文档</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#关闭页面"><span class="nav-number">1.7.</span> <span class="nav-text">关闭页面</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#定位元素"><span class="nav-number">1.8.</span> <span class="nav-text">定位元素</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#操作表单元素"><span class="nav-number">1.9.</span> <span class="nav-text">操作表单元素</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#行为链"><span class="nav-number">1.10.</span> <span class="nav-text">行为链</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#Cookie操作"><span class="nav-number">1.11.</span> <span class="nav-text">Cookie操作</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#页面等待"><span class="nav-number">1.12.</span> <span class="nav-text">页面等待</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#切换页面"><span class="nav-number">1.13.</span> <span class="nav-text">切换页面</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#设置代理"><span class="nav-number">1.14.</span> <span class="nav-text">设置代理</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#WebElement元素"><span class="nav-number">1.15.</span> <span class="nav-text">WebElement元素</span></a></li></ol></li></ol></div>
+              <div class="post-toc-content"><ol class="nav"><li class="nav-item nav-level-2"><a class="nav-link" href="#动态页面数据抓取"><span class="nav-number">1.</span> <span class="nav-text">动态页面数据抓取</span></a><ol class="nav-child"><li class="nav-item nav-level-3"><a class="nav-link" href="#什么是AJAX"><span class="nav-number">1.1.</span> <span class="nav-text">什么是AJAX</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#获取ajax数据的格式"><span class="nav-number">1.2.</span> <span class="nav-text">获取ajax数据的格式</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#selenium-chromdriver获取动态数据"><span class="nav-number">1.3.</span> <span class="nav-text">selenium + chromdriver获取动态数据</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#安装Selenium和chromedriver"><span class="nav-number">1.4.</span> <span class="nav-text">安装Selenium和chromedriver</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#快速开始"><span class="nav-number">1.5.</span> <span class="nav-text">快速开始</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#selenium官方文档"><span class="nav-number">1.6.</span> <span class="nav-text">selenium官方文档</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#关闭页面"><span class="nav-number">1.7.</span> <span class="nav-text">关闭页面</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#定位元素"><span class="nav-number">1.8.</span> <span class="nav-text">定位元素</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#操作表单元素"><span class="nav-number">1.9.</span> <span class="nav-text">操作表单元素</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#行为链"><span class="nav-number">1.10.</span> <span class="nav-text">行为链</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#Cookie操作"><span class="nav-number">1.11.</span> <span class="nav-text">Cookie操作</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#页面等待"><span class="nav-number">1.12.</span> <span class="nav-text">页面等待</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#切换页面"><span class="nav-number">1.13.</span> <span class="nav-text">切换页面</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#设置代理"><span class="nav-number">1.14.</span> <span class="nav-text">设置代理</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#WebElement元素"><span class="nav-number">1.15.</span> <span class="nav-text">WebElement元素</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#对带有页面嵌套的豆瓣进行登录"><span class="nav-number">1.16.</span> <span class="nav-text">对带有页面嵌套的豆瓣进行登录</span></a></li></ol></li></ol></div>
             
 
           </div>
@@ -1068,7 +1089,7 @@
     
       <span class="post-meta-item-text">站点总字数：</span>
     
-    <span title="站点总字数">124k</span>
+    <span title="站点总字数">125k</span>
   
 
   
@@ -1079,7 +1100,7 @@
     
       <span class="post-meta-item-text">站点阅读时长 &asymp;</span>
     
-    <span title="站点阅读时长">3:26</span>
+    <span title="站点阅读时长">3:29</span>
   
 </div>
 
