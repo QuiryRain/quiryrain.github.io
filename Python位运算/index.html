@@ -15,7 +15,7 @@
 
 
 <html class="theme-next gemini use-motion" lang="zh-CN">
-<head><meta name="generator" content="Hexo 3.8.0">
+<head><meta name="generator" content="Hexo 3.9.0">
   <meta charset="UTF-8">
 <meta http-equiv="X-UA-Compatible" content="IE=edge">
 <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=2">
@@ -509,7 +509,7 @@
                 
                   <span class="post-meta-item-text">本文字数：</span>
                 
-                <span title="本文字数">2.3k</span>
+                <span title="本文字数">5.4k</span>
               
 
               
@@ -523,7 +523,7 @@
                 
                   <span class="post-meta-item-text">阅读时长 &asymp;</span>
                 
-                <span title="阅读时长">4 分钟</span>
+                <span title="阅读时长">9 分钟</span>
               
             </div>
           
@@ -545,13 +545,23 @@
       
         <p>Python中的位运算是程序设计中对位模式或二进制的一元和二元操作。<br>按位运算就是把数字转换为机器语言—以二进制形式表示  </p>
 <h2 id="Python中的位运算有哪些？"><a href="#Python中的位运算有哪些？" class="headerlink" title="Python中的位运算有哪些？"></a>Python中的位运算有哪些？</h2><p>在Python中，按位运算符有左移运算符（&lt;&lt;）、右移运算符（&gt;&gt;）、按位与运算（&amp;）、按位或运算（|）、按位取反运算（~）、异或运算符，其中按位取反运算符为单目运算符</p>
-<h3 id="按位左移运算符（-lt-lt-）"><a href="#按位左移运算符（-lt-lt-）" class="headerlink" title="按位左移运算符（&lt;&lt;）"></a>按位左移运算符（&lt;&lt;）</h3><p>在机器语言中，任何形式均以二进制的形式进行表示：<br>举例：7&lt;&lt;2<br>二进制为：111 左移两位：11100 最后结果为：28<br><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line">&gt;&gt;&gt; 7&lt;&lt;2</span><br><span class="line">28</span><br></pre></td></tr></table></figure></p>
-<h3 id="按位右移运算符（-gt-gt-）"><a href="#按位右移运算符（-gt-gt-）" class="headerlink" title="按位右移运算符（&gt;&gt;）"></a>按位右移运算符（&gt;&gt;）</h3><p>具体的使用形式和左移一样。<br>举例：<br>7&gt;&gt;2<br>28&gt;&gt;2<br>二进制：7的二进制为：111，右移两位后为001，结果即为1<br>28的二进制为:11100，右移两位后为00111，结果为7<br><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br></pre></td><td class="code"><pre><span class="line">&gt;&gt;&gt; 7&gt;&gt;2</span><br><span class="line">1</span><br><span class="line">&gt;&gt;&gt; 28&gt;&gt;2</span><br><span class="line">7</span><br></pre></td></tr></table></figure></p>
+<h3 id="按位左移运算符（-lt-lt-）"><a href="#按位左移运算符（-lt-lt-）" class="headerlink" title="按位左移运算符（&lt;&lt;）"></a>按位左移运算符（&lt;&lt;）</h3><p>在机器语言中，任何形式均以二进制的形式进行表示：<br>举例：7&lt;&lt;2<br>二进制为：111 左移两位：11100 最后结果为：28  </p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line">&gt;&gt;&gt; 7&lt;&lt;2</span><br><span class="line">28</span><br></pre></td></tr></table></figure>
+
+<h3 id="按位右移运算符（-gt-gt-）"><a href="#按位右移运算符（-gt-gt-）" class="headerlink" title="按位右移运算符（&gt;&gt;）"></a>按位右移运算符（&gt;&gt;）</h3><p>具体的使用形式和左移一样。<br>举例：<br>7&gt;&gt;2<br>28&gt;&gt;2<br>二进制：7的二进制为：111，右移两位后为001，结果即为1<br>28的二进制为:11100，右移两位后为00111，结果为7  </p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br></pre></td><td class="code"><pre><span class="line">&gt;&gt;&gt; 7&gt;&gt;2</span><br><span class="line">1</span><br><span class="line">&gt;&gt;&gt; 28&gt;&gt;2</span><br><span class="line">7</span><br></pre></td></tr></table></figure>
+
 <p>由于正数和负数的二进制形式不同，所以此处特别说下以下两个运算。在计算机中，负数的二进制形式是其正数的补码形式，此处不做特别的说明，需要知道的以下给出一个<a href="http://www.cnblogs.com/junsky/archive/2009/08/06/1540727.html" target="_blank" rel="noopener">链接</a>.</p>
-<h3 id="按位与运算（-amp-）"><a href="#按位与运算（-amp-）" class="headerlink" title="按位与运算（&amp;）"></a>按位与运算（&amp;）</h3><p>正数和正数的与运算：<br>举例： 7&amp;9<br>二进制：7的二进制为:0111，9的二进制为:1001<br>说明：根据（1&amp;1=1、1&amp;0=0、0&amp;1=0、0&amp;0=0）即相同位置同为1结果即为1，否者为0，由此可见7&amp;9的二进制形式为：0111&amp;1001 == 0001<br>正数与负数的与运算：<br>举例：-7&amp;5<br>二进制：-7：1001，5：0101。结果为1<br>说明：此处你可能要问-7的二进制和9的二进制不是相同吗？答案是不相同，在机器中-7的二进制为：11111111 11111111 11111111 11111001，9的二进制为：00000000 00000000 00000000 00001001。同样根据上文的同为1既为1，所以结果为1。运算最后结果的二进制形式从最左侧的第一个0前的1开始，直至右侧结尾，将此数转换为10进制，重点是，此处不是依次相加，而是依次相减，得到的结果最后加上负号即为最后运算的结果。<br>负数与负数的与运算：<br>举例：-5&amp;-8<br>二进制：-5：11111011，-8：11111000结果为-8<br>说明：你可能会很疑惑，此处的结果明明是11111000，结果怎么是-8.原因是-5&amp;-8的二进制形式为：11111011&amp;11111000 == 11111000，从最左侧的第一个0前的1开始，直至右侧结尾，将此数转换为10进制，重点是，此处不是依次相加，而是依次相减，得到的结果最后加上负号即为最后运算的结果。<br><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br></pre></td><td class="code"><pre><span class="line">&gt;&gt;&gt; 7&amp;9</span><br><span class="line">1</span><br><span class="line">&gt;&gt;&gt; -7&amp;5</span><br><span class="line">1</span><br><span class="line">&gt;&gt;&gt; -5&amp;-8</span><br><span class="line">-8</span><br></pre></td></tr></table></figure></p>
-<h3 id="按位或运算（-）"><a href="#按位或运算（-）" class="headerlink" title="按位或运算（|）"></a>按位或运算（|）</h3><p>或运算和与运算十分相似，只是依据的逻辑运算不同，或运算的依据逻辑是相同位置有个为1结果即为1<br>正数与正数的或运算：<br>举例：7|9<br>二进制：7：0111，9：1001<br>说明：根据（1|0=1、1|1=1、0|1=1、0|0=0）可知，7|9的二进制形式为：0111|1001，结果为：15<br>负数与正数的或运算：<br>举例：-7|9<br>二进制：-7：11111001，9：00001001<br>说明：从最左侧的第一个0前的1开始的数，转化为十进制，需要进行的是依次相减运算。<br>负数与负数的或运算：<br>举例：-5|-8<br>二进制：-5：11111011，-8：11111000结果为-5<br>说明：运算最后结果的二进制形式从最左侧的第一个0前的1开始，直至右侧结尾，将此数转换为10进制，重点是，此处不是依次相加，而是依次相减，得到的结果最后加上负号即为最后运算的结果。<br><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br></pre></td><td class="code"><pre><span class="line">&gt;&gt;&gt; 7|9</span><br><span class="line">15</span><br><span class="line">&gt;&gt;&gt; -7|9</span><br><span class="line">-7</span><br><span class="line">&gt;&gt;&gt; -5|-8</span><br><span class="line">-5</span><br></pre></td></tr></table></figure></p>
+<h3 id="按位与运算（-amp-）"><a href="#按位与运算（-amp-）" class="headerlink" title="按位与运算（&amp;）"></a>按位与运算（&amp;）</h3><p>正数和正数的与运算：<br>举例： 7&amp;9<br>二进制：7的二进制为:0111，9的二进制为:1001<br>说明：根据（1&amp;1=1、1&amp;0=0、0&amp;1=0、0&amp;0=0）即相同位置同为1结果即为1，否者为0，由此可见7&amp;9的二进制形式为：0111&amp;1001 == 0001<br>正数与负数的与运算：<br>举例：-7&amp;5<br>二进制：-7：1001，5：0101。结果为1<br>说明：此处你可能要问-7的二进制和9的二进制不是相同吗？答案是不相同，在机器中-7的二进制为：11111111 11111111 11111111 11111001，9的二进制为：00000000 00000000 00000000 00001001。同样根据上文的同为1既为1，所以结果为1。运算最后结果的二进制形式从最左侧的第一个0前的1开始，直至右侧结尾，将此数转换为10进制，重点是，此处不是依次相加，而是依次相减，得到的结果最后加上负号即为最后运算的结果。<br>负数与负数的与运算：<br>举例：-5&amp;-8<br>二进制：-5：11111011，-8：11111000结果为-8<br>说明：你可能会很疑惑，此处的结果明明是11111000，结果怎么是-8.原因是-5&amp;-8的二进制形式为：11111011&amp;11111000 == 11111000，从最左侧的第一个0前的1开始，直至右侧结尾，将此数转换为10进制，重点是，此处不是依次相加，而是依次相减，得到的结果最后加上负号即为最后运算的结果。  </p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br></pre></td><td class="code"><pre><span class="line">&gt;&gt;&gt; 7&amp;9</span><br><span class="line">1</span><br><span class="line">&gt;&gt;&gt; -7&amp;5</span><br><span class="line">1</span><br><span class="line">&gt;&gt;&gt; -5&amp;-8</span><br><span class="line">-8</span><br></pre></td></tr></table></figure>
+
+<h3 id="按位或运算（-）"><a href="#按位或运算（-）" class="headerlink" title="按位或运算（|）"></a>按位或运算（|）</h3><p>或运算和与运算十分相似，只是依据的逻辑运算不同，或运算的依据逻辑是相同位置有个为1结果即为1<br>正数与正数的或运算：<br>举例：7|9<br>二进制：7：0111，9：1001<br>说明：根据（1|0=1、1|1=1、0|1=1、0|0=0）可知，7|9的二进制形式为：0111|1001，结果为：15<br>负数与正数的或运算：<br>举例：-7|9<br>二进制：-7：11111001，9：00001001<br>说明：从最左侧的第一个0前的1开始的数，转化为十进制，需要进行的是依次相减运算。<br>负数与负数的或运算：<br>举例：-5|-8<br>二进制：-5：11111011，-8：11111000结果为-5<br>说明：运算最后结果的二进制形式从最左侧的第一个0前的1开始，直至右侧结尾，将此数转换为10进制，重点是，此处不是依次相加，而是依次相减，得到的结果最后加上负号即为最后运算的结果。  </p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br></pre></td><td class="code"><pre><span class="line">&gt;&gt;&gt; 7|9</span><br><span class="line">15</span><br><span class="line">&gt;&gt;&gt; -7|9</span><br><span class="line">-7</span><br><span class="line">&gt;&gt;&gt; -5|-8</span><br><span class="line">-5</span><br></pre></td></tr></table></figure>
+
 <h3 id="按位取反运算符（-）"><a href="#按位取反运算符（-）" class="headerlink" title="按位取反运算符（~）"></a>按位取反运算符（~）</h3><p>将二进制数+1之后乘以-1,假如x的二进制数是y，x的按位翻转是-(y+1)<br>举例：-3<br>去反后：2<br>二进制：-3：11111101 取反操作：-（11111101+1）==-（11111110）==2  </p>
-<h3 id="异或运算符（-）"><a href="#异或运算符（-）" class="headerlink" title="异或运算符（^）"></a>异或运算符（^）</h3><p>二进制对应位相加，不进位。依据逻辑为：（1^1=0、1^0=1、0^1=1、0^0=0）,同样依照，如果两个数中一正一负，则最后的二进制转十进制时依次相减，如果同正同负，则相加<br>正数和正数的异或运算：<br>举例：7^9<br>二进制：7：0111，9：1001<br>说明：7^9的二进制形式为：0111^1001 == 1110，十进制为：14<br>负数和正数的异或运算：<br>举例：-3^4<br>二进制：-3：11111101，4：00000100<br>说明：-3^4的二进制形式为：11111101^00000100 == 11111001,根据说明可以知道结果为-（222-1）=-7<br>负数和负数的异或运算：<br>举例：-7^-9<br>二进制：-7：11111001，-9：11110111<br>说明；-7^-9的二进制形式为：11111001^11110111 == 00001110，根据说明可以知道结果为222+2*2+2=14<br><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br></pre></td><td class="code"><pre><span class="line">&gt;&gt;&gt; 7^9</span><br><span class="line">14</span><br><span class="line">&gt;&gt;&gt; -3^4</span><br><span class="line">-7</span><br><span class="line">&gt;&gt;&gt; -7^-9</span><br><span class="line">14</span><br></pre></td></tr></table></figure></p>
+<h3 id="异或运算符（-）"><a href="#异或运算符（-）" class="headerlink" title="异或运算符（^）"></a>异或运算符（^）</h3><p>二进制对应位相加，不进位。依据逻辑为：（1^1=0、1^0=1、0^1=1、0^0=0）,同样依照，如果两个数中一正一负，则最后的二进制转十进制时依次相减，如果同正同负，则相加<br>正数和正数的异或运算：<br>举例：7^9<br>二进制：7：0111，9：1001<br>说明：7^9的二进制形式为：0111^1001 == 1110，十进制为：14<br>负数和正数的异或运算：<br>举例：-3^4<br>二进制：-3：11111101，4：00000100<br>说明：-3^4的二进制形式为：11111101^00000100 == 11111001,根据说明可以知道结果为-（222-1）=-7<br>负数和负数的异或运算：<br>举例：-7^-9<br>二进制：-7：11111001，-9：11110111<br>说明；-7^-9的二进制形式为：11111001^11110111 == 00001110，根据说明可以知道结果为222+2*2+2=14  </p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br></pre></td><td class="code"><pre><span class="line">&gt;&gt;&gt; 7^9</span><br><span class="line">14</span><br><span class="line">&gt;&gt;&gt; -3^4</span><br><span class="line">-7</span><br><span class="line">&gt;&gt;&gt; -7^-9</span><br><span class="line">14</span><br></pre></td></tr></table></figure>
+
 
       
     </div>
@@ -675,7 +685,7 @@
                 
                   <a href="/archives/">
                 
-                    <span class="site-state-item-count">35</span>
+                    <span class="site-state-item-count">36</span>
                     <span class="site-state-item-name">日志</span>
                   </a>
                 </div>
@@ -718,7 +728,9 @@
                     
                       
                     
-                    <span class="site-state-item-count">13</span>
+                      
+                    
+                    <span class="site-state-item-count">14</span>
                     <span class="site-state-item-name">分类</span>
                   </a>
                 </div>
@@ -843,7 +855,9 @@
                     
                       
                     
-                    <span class="site-state-item-count">54</span>
+                      
+                    
+                    <span class="site-state-item-count">55</span>
                     <span class="site-state-item-name">标签</span>
                   </a>
                 </div>
@@ -958,7 +972,7 @@
     
       <span class="post-meta-item-text">站点总字数：</span>
     
-    <span title="站点总字数">125k</span>
+    <span title="站点总字数">110k</span>
   
 
   
@@ -969,7 +983,7 @@
     
       <span class="post-meta-item-text">站点阅读时长 &asymp;</span>
     
-    <span title="站点阅读时长">3:29</span>
+    <span title="站点阅读时长">3:03</span>
   
 </div>
 

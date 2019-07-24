@@ -15,7 +15,7 @@
 
 
 <html class="theme-next gemini use-motion" lang="zh-CN">
-<head><meta name="generator" content="Hexo 3.8.0">
+<head><meta name="generator" content="Hexo 3.9.0">
   <meta charset="UTF-8">
 <meta http-equiv="X-UA-Compatible" content="IE=edge">
 <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=2">
@@ -497,7 +497,7 @@
                 
                   <span class="post-meta-item-text">本文字数：</span>
                 
-                <span title="本文字数">3.8k</span>
+                <span title="本文字数">13k</span>
               
 
               
@@ -511,7 +511,7 @@
                 
                   <span class="post-meta-item-text">阅读时长 &asymp;</span>
                 
-                <span title="阅读时长">6 分钟</span>
+                <span title="阅读时长">22 分钟</span>
               
             </div>
           
@@ -546,8 +546,7 @@
 <th>结果</th>
 </tr>
 </thead>
-<tbody>
-<tr>
+<tbody><tr>
 <td>nodename</td>
 <td>选取此节点的所有结点</td>
 <td>bookstore</td>
@@ -571,8 +570,7 @@
 <td>//book[@id]</td>
 <td>选取所有拥有id属性的book节点</td>
 </tr>
-</tbody>
-</table>
+</tbody></table>
 <h5 id="谓语："><a href="#谓语：" class="headerlink" title="谓语："></a>谓语：</h5><p>谓语用来查找某个特定的节点或者包含某个指定的值的节点，被嵌在方括号中。</p>
 <table>
 <thead>
@@ -581,8 +579,7 @@
 <th>描述</th>
 </tr>
 </thead>
-<tbody>
-<tr>
+<tbody><tr>
 <td>/bookstore/book[1]</td>
 <td>选取bookstore下的第一个book元素</td>
 </tr>
@@ -602,8 +599,7 @@
 <td>//book[@id=10]</td>
 <td>选取所有id=10的所有book元素</td>
 </tr>
-</tbody>
-</table>
+</tbody></table>
 <h5 id="通配符："><a href="#通配符：" class="headerlink" title="通配符："></a>通配符：</h5><p><code>*</code> 表示通配符</p>
 <table>
 <thead>
@@ -614,8 +610,7 @@
 <th>结果</th>
 </tr>
 </thead>
-<tbody>
-<tr>
+<tbody><tr>
 <td>*</td>
 <td>匹配任意节点</td>
 <td>/bookstore/*</td>
@@ -627,11 +622,11 @@
 <td>//book[@*]</td>
 <td>选取所有带有属性的book元素</td>
 </tr>
-</tbody>
-</table>
+</tbody></table>
 <h5 id="选取多个路径："><a href="#选取多个路径：" class="headerlink" title="选取多个路径："></a>选取多个路径：</h5><p>通过在路径表达式中使用“|”运算符，可以选取若干路径。</p>
 <p>示例：</p>
 <figure class="highlight xml"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line">//bookstore/book | //book/title</span><br><span class="line">### 选取所有book元素以及book元素下所有的title元素</span><br></pre></td></tr></table></figure>
+
 <h5 id="运算符"><a href="#运算符" class="headerlink" title="运算符"></a>运算符</h5><table>
 <thead>
 <tr>
@@ -641,8 +636,7 @@
 <th>返回值</th>
 </tr>
 </thead>
-<tbody>
-<tr>
+<tbody><tr>
 <td>&#124;</td>
 <td>计算两个节点集</td>
 <td>//book &#124; //cd</td>
@@ -697,16 +691,16 @@
 <td>如果id &lt;= 101，则返回True，否则返回False</td>
 </tr>
 <tr>
-<td>></td>
+<td>&gt;</td>
 <td>大于</td>
 <td>id &gt; 101</td>
-<td>如果id > 101，则返回True，否则返回False</td>
+<td>如果id &gt; 101，则返回True，否则返回False</td>
 </tr>
 <tr>
-<td>>=</td>
+<td>&gt;=</td>
 <td>大于或等于</td>
 <td>id &gt;= 101</td>
-<td>如果id >= 101，则返回True，否则返回False</td>
+<td>如果id &gt;= 101，则返回True，否则返回False</td>
 </tr>
 <tr>
 <td>or</td>
@@ -726,14 +720,14 @@
 <td>5 mod 2</td>
 <td>1</td>
 </tr>
-</tbody>
-</table>
+</tbody></table>
 <p><em>注意:</em></p>
 <ol>
 <li><p>/和//的区别：/代表只获取直接子节点， //代表获取子孙节点。</p>
 </li>
 <li><p>contains：有时某个属性中包含多个值，可以使用模糊匹配的方式获取。</p>
 <figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">//div[contaions(@class, &apos;job_detail&apos;)]</span><br></pre></td></tr></table></figure>
+
 </li>
 </ol>
 <h3 id="lxml库"><a href="#lxml库" class="headerlink" title="lxml库"></a>lxml库</h3><p>lxml是一个HTML/XML的解析器，主要的功能是如何解析和提取HTML/XML数据。</p>
@@ -741,18 +735,20 @@
 <p>安装：<code>pip install lxml</code></p>
 <h4 id="基本使用："><a href="#基本使用：" class="headerlink" title="基本使用："></a>基本使用：</h4><p>在用lxml解析HTML代码的时候，如果HTML代码不规范，lxml库会自动的将其补全。</p>
 <figure class="highlight python"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br></pre></td><td class="code"><pre><span class="line"><span class="comment"># 使用lxml的etree库</span></span><br><span class="line"><span class="keyword">from</span> lxml <span class="keyword">import</span> etree</span><br><span class="line"></span><br><span class="line">text = <span class="string">'''</span></span><br><span class="line"><span class="string">&lt;div&gt;</span></span><br><span class="line"><span class="string">    &lt;ul&gt;</span></span><br><span class="line"><span class="string">        &lt;li class="item-0"&gt;&lt;a href="link0.html"&gt;First item&lt;/a&gt;&lt;/li&gt;</span></span><br><span class="line"><span class="string">        &lt;li class="item-1"&gt;&lt;a href="link1.html"&gt;Second item&lt;/a&gt;&lt;/li&gt;</span></span><br><span class="line"><span class="string">        &lt;li class="item-inactive"&gt;&lt;a href="link2.html"&gt;Third item&lt;/a&gt;&lt;/li&gt;</span></span><br><span class="line"><span class="string">        &lt;li class="item-1"&gt;&lt;a href="link3.html"&gt;Fourth item&lt;/a&gt;&lt;/li&gt;</span></span><br><span class="line"><span class="string">        &lt;li class="item-0"&gt;&lt;a href="link4.html"&gt;Fifth item&lt;/a&gt;</span></span><br><span class="line"><span class="string">    &lt;/ul&gt;</span></span><br><span class="line"><span class="string">&lt;/div&gt;</span></span><br><span class="line"><span class="string">'''</span></span><br><span class="line"></span><br><span class="line">html = etree.HTML(text)</span><br><span class="line"></span><br><span class="line"><span class="function"><span class="keyword">def</span> <span class="title">print_result</span><span class="params">(html)</span>:</span></span><br><span class="line">    result = etree.tostring(html, encoding=<span class="string">'utf-8'</span>).decode(<span class="string">'utf-8'</span>)</span><br><span class="line">    print(result)</span><br><span class="line">    </span><br><span class="line">print_result(html)</span><br></pre></td></tr></table></figure>
+
 <p>结果如下：</p>
 <figure class="highlight html"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br></pre></td><td class="code"><pre><span class="line"><span class="tag">&lt;<span class="name">html</span>&gt;</span><span class="tag">&lt;<span class="name">body</span>&gt;</span><span class="tag">&lt;<span class="name">div</span>&gt;</span></span><br><span class="line">    <span class="tag">&lt;<span class="name">ul</span>&gt;</span></span><br><span class="line">        <span class="tag">&lt;<span class="name">li</span> <span class="attr">class</span>=<span class="string">"item-0"</span>&gt;</span><span class="tag">&lt;<span class="name">a</span> <span class="attr">href</span>=<span class="string">"link0.html"</span>&gt;</span>First item<span class="tag">&lt;/<span class="name">a</span>&gt;</span><span class="tag">&lt;/<span class="name">li</span>&gt;</span></span><br><span class="line">        <span class="tag">&lt;<span class="name">li</span> <span class="attr">class</span>=<span class="string">"item-1"</span>&gt;</span><span class="tag">&lt;<span class="name">a</span> <span class="attr">href</span>=<span class="string">"link1.html"</span>&gt;</span>Second item<span class="tag">&lt;/<span class="name">a</span>&gt;</span><span class="tag">&lt;/<span class="name">li</span>&gt;</span></span><br><span class="line">        <span class="tag">&lt;<span class="name">li</span> <span class="attr">class</span>=<span class="string">"item-inactive"</span>&gt;</span><span class="tag">&lt;<span class="name">a</span> <span class="attr">href</span>=<span class="string">"link2.html"</span>&gt;</span>Third item<span class="tag">&lt;/<span class="name">a</span>&gt;</span><span class="tag">&lt;/<span class="name">li</span>&gt;</span></span><br><span class="line">        <span class="tag">&lt;<span class="name">li</span> <span class="attr">class</span>=<span class="string">"item-1"</span>&gt;</span><span class="tag">&lt;<span class="name">a</span> <span class="attr">href</span>=<span class="string">"link3.html"</span>&gt;</span>Fourth item<span class="tag">&lt;/<span class="name">a</span>&gt;</span><span class="tag">&lt;/<span class="name">li</span>&gt;</span></span><br><span class="line">        <span class="tag">&lt;<span class="name">li</span> <span class="attr">class</span>=<span class="string">"item-0"</span>&gt;</span><span class="tag">&lt;<span class="name">a</span> <span class="attr">href</span>=<span class="string">"link4.html"</span>&gt;</span>Fifth item<span class="tag">&lt;/<span class="name">a</span>&gt;</span></span><br><span class="line">    <span class="tag">&lt;/<span class="name">li</span>&gt;</span><span class="tag">&lt;/<span class="name">ul</span>&gt;</span></span><br><span class="line"><span class="tag">&lt;/<span class="name">div</span>&gt;</span></span><br><span class="line"><span class="tag">&lt;/<span class="name">body</span>&gt;</span><span class="tag">&lt;/<span class="name">html</span>&gt;</span></span><br></pre></td></tr></table></figure>
+
 <p>在解析html文件时，如果使用的<code>lxml.etree.parse</code>解析。该函数默认使用的解析器是<code>XML</code>解析器，所以，如果html文件中缺少相应标签，解析就会出错，此时可以自行创建解析器。</p>
 <h4 id="lxml的使用"><a href="#lxml的使用" class="headerlink" title="lxml的使用"></a>lxml的使用</h4><p>以上文的text为例：</p>
 <ul>
 <li><p>获取ul标签</p>
 <figure class="highlight python"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line">uls = html.xpath(<span class="string">'//ul'</span>)</span><br><span class="line"><span class="keyword">for</span> ut <span class="keyword">in</span> uls:</span><br><span class="line">    print_result(ut)</span><br></pre></td></tr></table></figure>
 </li>
-<li><p>获取&lt;li class=”item-1”>标签</p>
+<li><p>获取&lt;li class=”item-1”&gt;标签</p>
 <figure class="highlight python"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line">li_items_1 = html.xpath(<span class="string">"//li[@class='item-1']"</span>)</span><br><span class="line"><span class="keyword">for</span> li_item_1 <span class="keyword">in</span> li_items_1:</span><br><span class="line">    print_result(li_item_1)</span><br></pre></td></tr></table></figure>
 </li>
-<li><p>获取所有&lt;li class=”item-1”>中a标签中的链接</p>
+<li><p>获取所有&lt;li class=”item-1”&gt;中a标签中的链接</p>
 <figure class="highlight python"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line">li_items_1_as_href = html.xpath(<span class="string">"//li[@class='item-1']/a/@href"</span>)</span><br><span class="line"><span class="keyword">for</span> li_items_1_a_href <span class="keyword">in</span> li_items_1_as_href:</span><br><span class="line">    print(li_items_1_a_href)</span><br></pre></td></tr></table></figure>
 </li>
 <li><p>获取所有a标签中的文字</p>
@@ -881,7 +877,7 @@
                 
                   <a href="/archives/">
                 
-                    <span class="site-state-item-count">35</span>
+                    <span class="site-state-item-count">36</span>
                     <span class="site-state-item-name">日志</span>
                   </a>
                 </div>
@@ -924,7 +920,9 @@
                     
                       
                     
-                    <span class="site-state-item-count">13</span>
+                      
+                    
+                    <span class="site-state-item-count">14</span>
                     <span class="site-state-item-name">分类</span>
                   </a>
                 </div>
@@ -1049,7 +1047,9 @@
                     
                       
                     
-                    <span class="site-state-item-count">54</span>
+                      
+                    
+                    <span class="site-state-item-count">55</span>
                     <span class="site-state-item-name">标签</span>
                   </a>
                 </div>
@@ -1164,7 +1164,7 @@
     
       <span class="post-meta-item-text">站点总字数：</span>
     
-    <span title="站点总字数">125k</span>
+    <span title="站点总字数">110k</span>
   
 
   
@@ -1175,7 +1175,7 @@
     
       <span class="post-meta-item-text">站点阅读时长 &asymp;</span>
     
-    <span title="站点阅读时长">3:29</span>
+    <span title="站点阅读时长">3:03</span>
   
 </div>
 

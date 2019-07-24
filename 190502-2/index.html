@@ -15,7 +15,7 @@
 
 
 <html class="theme-next gemini use-motion" lang="zh-CN">
-<head><meta name="generator" content="Hexo 3.8.0">
+<head><meta name="generator" content="Hexo 3.9.0">
   <meta charset="UTF-8">
 <meta http-equiv="X-UA-Compatible" content="IE=edge">
 <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=2">
@@ -511,7 +511,7 @@
                 
                   <span class="post-meta-item-text">本文字数：</span>
                 
-                <span title="本文字数">3.5k</span>
+                <span title="本文字数">10k</span>
               
 
               
@@ -525,7 +525,7 @@
                 
                   <span class="post-meta-item-text">阅读时长 &asymp;</span>
                 
-                <span title="阅读时长">6 分钟</span>
+                <span title="阅读时长">17 分钟</span>
               
             </div>
           
@@ -549,27 +549,37 @@
 <p>工作区中的.git目录为Git版本库，git add将文件提交到暂存区,git commit将文件提交到本地仓库，git push将文件提交到远程仓库。</p>
 </blockquote>
 <h1 id="历史版本回退及提交至远程仓库"><a href="#历史版本回退及提交至远程仓库" class="headerlink" title="历史版本回退及提交至远程仓库"></a>历史版本回退及提交至远程仓库</h1><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br></pre></td><td class="code"><pre><span class="line">git reset --hard HEAD^  可以回退版本  当回退多个版本时可以使用 HEAD~100（恢复到第100个版本）。</span><br><span class="line">git reflog 用于记录每次的命令，最上方为最近一次的命令</span><br><span class="line">git reset HEAD &lt;file&gt; 将缓存区中的修改回退到工作区。</span><br><span class="line">git checkout -- &lt;file&gt; 将版本库中的版本替换工作区的版本，可以做恢复用。</span><br><span class="line">git push 将当前分支master推送到远程</span><br><span class="line">git commit 将缓存区中的文件推送到分支master(本地)</span><br></pre></td></tr></table></figure>
+
 <h1 id="分支的创建、切换与合并"><a href="#分支的创建、切换与合并" class="headerlink" title="分支的创建、切换与合并"></a>分支的创建、切换与合并</h1><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br></pre></td><td class="code"><pre><span class="line">git checkout -b &lt;branch&gt; 创建一个分支并切换，等同于git branch &lt;branch&gt; git checkout &lt;branch&gt;两条命令</span><br><span class="line">git branch 查看当前分支</span><br><span class="line">git merge 命令用于合并指定分支到当前分支</span><br><span class="line">git branch -d &lt;branch&gt; 删除分支</span><br><span class="line">git log --graph 可以查看分支合并图</span><br></pre></td></tr></table></figure>
+
 <h1 id="对远程分支进行操作"><a href="#对远程分支进行操作" class="headerlink" title="对远程分支进行操作"></a>对远程分支进行操作</h1><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">git push origin --delete branch &lt;branchname&gt;或git push origin :&lt;branchname&gt; 删除远程仓库中的分支</span><br></pre></td></tr></table></figure>
+
 <blockquote>
 <p>重命名远程分支：<br>1、删除远程分支：git push –delete origin <branchname><br>2、重命名本地分支：git branch -m <old> <new><br>3、推送本地分支：git push origin <newbranchname></newbranchname></new></old></branchname></p>
 </blockquote>
 <h1 id="提交出错解决方法"><a href="#提交出错解决方法" class="headerlink" title="提交出错解决方法"></a>提交出错解决方法</h1><p>如果在提交远程仓库的时候出现“更新被拒绝，因为您当前分支的最新提交落后于其对应的远程分支”，此时应该先获取远程更新,然后合并本地的分支，最后提交.</p>
 <figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br></pre></td><td class="code"><pre><span class="line">git fetch origin;		# 获取运程仓库</span><br><span class="line">git merge origin/master	# 将本地仓库与远程仓库合并</span><br><span class="line"></span><br><span class="line">git pull = git fetch + git merge 可能会产生冲突，需要手动解决</span><br><span class="line"></span><br><span class="line">--no-ff 参数表示禁用Fast forward</span><br></pre></td></tr></table></figure>
+
 <p>如果出现”您要求从远程 ‘origin’ 拉取，但是未指定一个分支。因为这不是当前分支默认的远程仓库，您必须在命令行中指定一个分支名。”<br>执行以下内容：<br><code>git branch --set-upstream-to corigin/master master</code></p>
-<h2 id="出错时"><a href="#出错时" class="headerlink" title="出错时"></a>出错时</h2><p>出错内容:<br><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br></pre></td><td class="code"><pre><span class="line">error: failed to push some refs to &apos;https://github.com/bnq456/bnq456.github.io.git&apos;</span><br><span class="line">hint: Updates were rejected because the tip of your current branch is behind</span><br><span class="line">hint: its remote counterpart. Integrate the remote changes (e.g.</span><br><span class="line">hint: &apos;git pull ...&apos;) before pushing again.</span><br></pre></td></tr></table></figure></p>
+<h2 id="出错时"><a href="#出错时" class="headerlink" title="出错时"></a>出错时</h2><p>出错内容: </p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br></pre></td><td class="code"><pre><span class="line">error: failed to push some refs to &apos;https://github.com/bnq456/bnq456.github.io.git&apos;</span><br><span class="line">hint: Updates were rejected because the tip of your current branch is behind</span><br><span class="line">hint: its remote counterpart. Integrate the remote changes (e.g.</span><br><span class="line">hint: &apos;git pull ...&apos;) before pushing again.</span><br></pre></td></tr></table></figure>
+
 <ul>
-<li>强制推送<br>在确定自己仓库中的内容低于本地仓库中的内容并且确定本地优于远程时，如果无法进行推送，可以选择强制推送<br><code>git push -u origin master -f</code></li>
+<li><p>强制推送<br>在确定自己仓库中的内容低于本地仓库中的内容并且确定本地优于远程时，如果无法进行推送，可以选择强制推送<br><code>git push -u origin master -f</code></p>
+</li>
 <li><p>push前先将远程repository修改pull下来</p>
 <figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line">git pull origin master</span><br><span class="line">git push -u origin master</span><br></pre></td></tr></table></figure>
 </li>
 <li><p>若不想merge远程和本地修改，可以先创建新的分支：</p>
 <figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line">git branch [name]</span><br><span class="line">然后push</span><br><span class="line">git push -u origin [name]</span><br></pre></td></tr></table></figure>
+
 </li>
 </ul>
 <h2 id="fetch-和-pull的区别："><a href="#fetch-和-pull的区别：" class="headerlink" title="fetch 和 pull的区别："></a>fetch 和 pull的区别：</h2><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br></pre></td><td class="code"><pre><span class="line">git fetch：将远程主机的最新内容拉取到本地，是否合并由用户决定。</span><br><span class="line">git pull：将远程主机的最新内容拉取到本地后直接合并，可能会产生冲突，需要手动解决。</span><br><span class="line">解决方法：</span><br><span class="line">git reset --hard FETCH_HEAD</span><br><span class="line">git pull</span><br><span class="line">注：将本地的冲突文件冲掉，不仅需要reset到MERGE-HEAD或HEAD，还需要--hard。当后面没有hard，不会冲掉本地工作区，只会冲掉stage区。</span><br></pre></td></tr></table></figure>
+
 <p><img src="/userImages/fetch_and_pull.png" alt="fetch和pull的不同"></p>
 <h1 id="Git中工作环境的临时存储与恢复"><a href="#Git中工作环境的临时存储与恢复" class="headerlink" title="Git中工作环境的临时存储与恢复"></a>Git中工作环境的临时存储与恢复</h1><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br></pre></td><td class="code"><pre><span class="line">git stash 把当前工作现场存储起来，用于以后恢复现场继续工作</span><br><span class="line">切换回工作时：</span><br><span class="line">	git stash list 列出所有存储的工作环境</span><br><span class="line">result: stash@&#123;0&#125;: WIP on dev: cc559a8 add merge</span><br><span class="line">git stash pop 切回工作场景，或git stash apply stash@&#123;0&#125; 恢复后不删除stash中的内容，需要使用git stash drop &lt;name&gt;删除</span><br></pre></td></tr></table></figure>
+
 <blockquote>
 <p>pop和 apply的区别<br>pop是将工作环境切回后直接删除<br>apply是先应用工作环境，然后存储的工作环境是否删除由用户自己决定。使用：git stash drop <name>进行删除</name></p>
 </blockquote>
@@ -577,6 +587,7 @@
 <p>实验性质的代码最好新建分支</p>
 </blockquote>
 <h1 id="分支的创建、删除、合并与推送"><a href="#分支的创建、删除、合并与推送" class="headerlink" title="分支的创建、删除、合并与推送"></a>分支的创建、删除、合并与推送</h1><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br></pre></td><td class="code"><pre><span class="line">git branch &lt;branchname&gt;</span><br><span class="line">git checkout &lt;branchname&gt;</span><br><span class="line">以上两条命令等同于git checkout -b &lt;branchname&gt;</span><br><span class="line">git branch -D &lt;name&gt; 表示强行删除一个分支</span><br><span class="line">git merge &lt;branchname&gt; 分支的合并，表示要将&lt;branchname&gt;分支合并到当前分支上</span><br><span class="line"></span><br><span class="line">分支的推送：</span><br><span class="line">master分支是主分支，因此要时刻与远程同步;</span><br><span class="line">dev分支是开发分支，团队所有成员都需要在上面工作，所以需要时刻与远程同步;</span><br><span class="line">bug分支是本地修复bug，可推送可不推送;</span><br><span class="line">feature分支取决与是否在上面进行开发。</span><br></pre></td></tr></table></figure>
+
 <h1 id="多人协作："><a href="#多人协作：" class="headerlink" title="多人协作："></a>多人协作：</h1><blockquote>
 <p>1、首先，可以试图用git push origin <branch-name>推送自己的修改；</branch-name></p>
 </blockquote>
@@ -597,6 +608,7 @@
 </blockquote>
 <h1 id="git-标签："><a href="#git-标签：" class="headerlink" title="git 标签："></a>git 标签：</h1><p>git tag <name>用于新建一个标签,默认为HEAD，当创建带有说明的标签时，用-a指定标签名，-m指定说明文字<br>git tag可以查看所有的标签<br>当给以前忘记打标签的项目打标签时，可以先找出要打标签项目的编号，然后git tag <tagname> <commit id><br>-d用于删除标签<br>    远程标签推送：<br>    git push origin <tagname>推送一个本地标签到远程<br>    git push origin –tags 将所有标签推送到远程</tagname></commit></tagname></name></p>
 <figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line">当删除远程标签时：</span><br><span class="line">1、首先先删除本地的标签 git tag -d &lt;tagname&gt;</span><br><span class="line">2、然后删除远程的标签 git push origin :refs/tags/&lt;tagname&gt;或者git push origin --delete tag &lt;tagname&gt;（作用与上两步相同）</span><br></pre></td></tr></table></figure>
+
 <h1 id="日志文件查询"><a href="#日志文件查询" class="headerlink" title="日志文件查询"></a>日志文件查询</h1><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">git config --global alias.lg &quot;log --color --graph --pretty=format:&apos;%Cred%h%Creset -%C(yellow)%d%Creset %s %Cgreen(%cr) %C(bold blue)&lt;%an&gt;%Creset&apos; --abbrev-commit&quot;</span><br></pre></td></tr></table></figure>
       
     </div>
@@ -722,7 +734,7 @@
                 
                   <a href="/archives/">
                 
-                    <span class="site-state-item-count">35</span>
+                    <span class="site-state-item-count">36</span>
                     <span class="site-state-item-name">日志</span>
                   </a>
                 </div>
@@ -765,7 +777,9 @@
                     
                       
                     
-                    <span class="site-state-item-count">13</span>
+                      
+                    
+                    <span class="site-state-item-count">14</span>
                     <span class="site-state-item-name">分类</span>
                   </a>
                 </div>
@@ -890,7 +904,9 @@
                     
                       
                     
-                    <span class="site-state-item-count">54</span>
+                      
+                    
+                    <span class="site-state-item-count">55</span>
                     <span class="site-state-item-name">标签</span>
                   </a>
                 </div>
@@ -1005,7 +1021,7 @@
     
       <span class="post-meta-item-text">站点总字数：</span>
     
-    <span title="站点总字数">125k</span>
+    <span title="站点总字数">110k</span>
   
 
   
@@ -1016,7 +1032,7 @@
     
       <span class="post-meta-item-text">站点阅读时长 &asymp;</span>
     
-    <span title="站点阅读时长">3:29</span>
+    <span title="站点阅读时长">3:03</span>
   
 </div>
 

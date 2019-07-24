@@ -15,7 +15,7 @@
 
 
 <html class="theme-next gemini use-motion" lang="zh-CN">
-<head><meta name="generator" content="Hexo 3.8.0">
+<head><meta name="generator" content="Hexo 3.9.0">
   <meta charset="UTF-8">
 <meta http-equiv="X-UA-Compatible" content="IE=edge">
 <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=2">
@@ -511,7 +511,7 @@
                 
                   <span class="post-meta-item-text">本文字数：</span>
                 
-                <span title="本文字数">4.6k</span>
+                <span title="本文字数">15k</span>
               
 
               
@@ -525,7 +525,7 @@
                 
                   <span class="post-meta-item-text">阅读时长 &asymp;</span>
                 
-                <span title="阅读时长">8 分钟</span>
+                <span title="阅读时长">24 分钟</span>
               
             </div>
           
@@ -549,21 +549,28 @@
 <p>在此处，使用Python3做记录。</p>
 <h3 id="urlopen函数"><a href="#urlopen函数" class="headerlink" title="urlopen函数"></a>urlopen函数</h3><p>urlopen函数是request中的一个很常用的函数，它主要用于打开一个网页。其中有着很多的属性。</p>
 <figure class="highlight python"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">from</span> urllib <span class="keyword">import</span> request</span><br><span class="line"></span><br><span class="line">resp = request.open(<span class="string">"https://www.baidu.com"</span>)</span><br><span class="line">print(resp.read())</span><br></pre></td></tr></table></figure>
+
 <h3 id="urlretrieve函数"><a href="#urlretrieve函数" class="headerlink" title="urlretrieve函数"></a>urlretrieve函数</h3><p>urlretrieve函数可以很方便的将网页保存至本地。其实用方法见下方代码：</p>
 <figure class="highlight python"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">from</span> urllib <span class="keyword">import</span> request</span><br><span class="line"></span><br><span class="line">request.urlretrieve()</span><br></pre></td></tr></table></figure>
+
 <h3 id="urlencode函数"><a href="#urlencode函数" class="headerlink" title="urlencode函数"></a>urlencode函数</h3><p>将字典类型的数据转化为url编码的数据</p>
 <figure class="highlight python"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">from</span> urllib <span class="keyword">import</span> parse, request</span><br><span class="line"></span><br><span class="line">params = &#123;<span class="string">"wd"</span>: <span class="string">"爬虫之道"</span>&#125;</span><br><span class="line"></span><br><span class="line">qs = parse.urlencode(params)</span><br><span class="line"></span><br><span class="line">url = <span class="string">f"https://www.baidu.com/s?<span class="subst">&#123;qs&#125;</span>"</span></span><br><span class="line"></span><br><span class="line">resp = request.urlopen(url)</span><br></pre></td></tr></table></figure>
+
 <h3 id="parse-qs函数"><a href="#parse-qs函数" class="headerlink" title="parse_qs函数"></a>parse_qs函数</h3><p>将url编码后的参数还原为字典形式，其中的值以列表形式进行存储。</p>
 <figure class="highlight python"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">from</span> urllib <span class="keyword">import</span> parse</span><br><span class="line"></span><br><span class="line">ps = &#123;<span class="string">"name"</span>: <span class="string">"爬虫之道"</span>, <span class="string">"vxcode"</span>: <span class="string">"spider_rold"</span>&#125;</span><br><span class="line"></span><br><span class="line">results = parse.urlencode(ps)</span><br><span class="line"></span><br><span class="line">new_results = parse.parse_qs(results)</span><br><span class="line">print(new_results)</span><br></pre></td></tr></table></figure>
-<h3 id="urlparse和urlsplit函数"><a href="#urlparse和urlsplit函数" class="headerlink" title="urlparse和urlsplit函数"></a>urlparse和urlsplit函数</h3><p>对URL各部分进行分割，其中在使用urlsplit函数时，没有<em>params</em>参数。（<em>注</em>：params参数指的是在以下链接中”?”前添加”;”，位于这两者之间的内容，如：<em><a href="https://www.baidu.com/s;hello?wd=hello+world" target="_blank" rel="noopener">https://www.baidu.com/s;hello?wd=hello+world</a></em>）</p>
+
+<h3 id="urlparse和urlsplit函数"><a href="#urlparse和urlsplit函数" class="headerlink" title="urlparse和urlsplit函数"></a>urlparse和urlsplit函数</h3><p>对URL各部分进行分割，其中在使用urlsplit函数时，没有_params_参数。（<em>注</em>：params参数指的是在以下链接中”?”前添加”;”，位于这两者之间的内容，如：_<a href="https://www.baidu.com/s;hello?wd=hello+world_）" target="_blank" rel="noopener">https://www.baidu.com/s;hello?wd=hello+world_）</a></p>
 <figure class="highlight python"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">from</span> urllib <span class="keyword">import</span> parse</span><br><span class="line"></span><br><span class="line">params = &#123;<span class="string">"wd"</span>: <span class="string">"爬虫之道"</span>&#125;</span><br><span class="line"></span><br><span class="line">qs = parse.urlencode(params)</span><br><span class="line">url = <span class="string">f"https://www.baidu.com/s?<span class="subst">&#123;qs&#125;</span>"</span></span><br><span class="line"></span><br><span class="line">result = parse.urlparse(url)</span><br><span class="line"></span><br><span class="line">print(<span class="string">'scheme:'</span>, result.scheme)</span><br><span class="line">print(<span class="string">'netloc:'</span>, result.netloc)</span><br><span class="line">print(<span class="string">'path:'</span>, result.path)</span><br><span class="line">print(<span class="string">'params:'</span>, result.params)</span><br><span class="line">print(<span class="string">'query:'</span>, result.query)</span><br><span class="line">print(<span class="string">'fragment:'</span>, result.fragment)</span><br></pre></td></tr></table></figure>
-<h3 id="request-Request类"><a href="#request-Request类" class="headerlink" title="request.Request类"></a>request.Request类</h3><p>在爬虫中，如果想使用一些参数，如：请求头，请求数据等，需要使用到Request类。如果只是使用urlopen函数，没有办法进行添加请求头。在没有使用<em>User-Agent</em>的时候，如果服务器发现是爬虫，服务器可能会返回一条假的数据内容，或者是不返回内容。所以，将爬虫程序伪装成正常的浏览器访问是很有必要的一件事。</p>
+
+<h3 id="request-Request类"><a href="#request-Request类" class="headerlink" title="request.Request类"></a>request.Request类</h3><p>在爬虫中，如果想使用一些参数，如：请求头，请求数据等，需要使用到Request类。如果只是使用urlopen函数，没有办法进行添加请求头。在没有使用_User-Agent_的时候，如果服务器发现是爬虫，服务器可能会返回一条假的数据内容，或者是不返回内容。所以，将爬虫程序伪装成正常的浏览器访问是很有必要的一件事。</p>
 <figure class="highlight python"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">from</span> urllib <span class="keyword">import</span> request, parse</span><br><span class="line"></span><br><span class="line">headers = &#123;<span class="string">'user-agent'</span>: <span class="string">"Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/75.0.3770.90 Safari/537.36"</span>&#125;</span><br><span class="line">params = &#123;<span class="string">"wd"</span>: <span class="string">"爬虫之道"</span>&#125;</span><br><span class="line"></span><br><span class="line">qs = parse.urlencode(params)</span><br><span class="line">url = <span class="string">f"https://www.baidu.com/s?<span class="subst">&#123;qs&#125;</span>"</span></span><br><span class="line"></span><br><span class="line">req = request.Request(url, headers=headers)</span><br><span class="line">resp = request.urlopen(req)</span><br><span class="line">print(resp.read())</span><br></pre></td></tr></table></figure>
+
 <p>注： 可以去挑战一下网络爬虫界的“珠穆朗玛峰” —– 拉勾网</p>
 <h3 id="ProxyHandler处理器"><a href="#ProxyHandler处理器" class="headerlink" title="ProxyHandler处理器"></a>ProxyHandler处理器</h3><p>在爬取网站时，一般情况下网站都会做一些反爬虫机制，如封ip。如果只使用一个ip地址进行爬取，在网站封掉ip地址后，就无法获取数据了。所以，在有反爬虫机制的情况，反反爬虫机制便可以使用了。在urllib中通过使用ProxyHandler进行设置代理服务器。</p>
 <p>在使用代理与未使用代理的区别：</p>
 <p><img src="/userImages/proxy.jpg" alt>  </p>
 <figure class="highlight python"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">from</span> urllib <span class="keyword">import</span> request</span><br><span class="line"></span><br><span class="line"><span class="comment">### 未使用代理</span></span><br><span class="line">resp = request.urlopen(<span class="string">'http://httpbin.org/get'</span>)</span><br><span class="line">print(resp.read())</span><br><span class="line"></span><br><span class="line"><span class="comment">### 使用代理</span></span><br><span class="line">handler = request.ProxyHandler(&#123;<span class="string">"https"</span>: <span class="string">"58.253.152.231:9999"</span>&#125;)</span><br><span class="line"></span><br><span class="line">opener = request.build_opener(handler)</span><br><span class="line">req = request.Request(<span class="string">"http://httpbin.org/get"</span>)</span><br><span class="line">resp = opener.open(req)</span><br><span class="line">print(resp.read())</span><br></pre></td></tr></table></figure>
+
 <p>常用的代理：</p>
 <ul>
 <li>西刺代理：<a href="https://www.xicidaili.com" target="_blank" rel="noopener">https://www.xicidaili.com</a></li>
@@ -594,8 +601,10 @@
 </ul>
 <h3 id="保存Cookie至本地"><a href="#保存Cookie至本地" class="headerlink" title="保存Cookie至本地"></a>保存Cookie至本地</h3><p>保存cookie到本地，可以使用cookiejar的save方法。</p>
 <figure class="highlight python"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">from</span> urllib <span class="keyword">import</span> request</span><br><span class="line"><span class="keyword">from</span> http.cookiejar <span class="keyword">import</span> MozillaCookieJar</span><br><span class="line"></span><br><span class="line">cookiejar = MozillaCookieJar(<span class="string">'cookies.txt'</span>)</span><br><span class="line">handler = request.HTTPCookieProcessor(cookiejar)</span><br><span class="line">opener = request.build_opener(handler)</span><br><span class="line"></span><br><span class="line">handlers = &#123;</span><br><span class="line">    <span class="string">'User-Agent'</span>: <span class="string">'Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/75.0.3770.100 Safari/537.36'</span>,</span><br><span class="line">&#125;</span><br><span class="line"></span><br><span class="line">req = request.Request(<span class="string">'http://httpbin.org/cookies'</span>, headers=handlers)</span><br><span class="line"></span><br><span class="line">resp = opener.open(req)</span><br><span class="line">print(resp.read())</span><br><span class="line"></span><br><span class="line">cookiejar.save(ignore_discard=<span class="literal">True</span>, ignore_expires=<span class="literal">True</span>)</span><br></pre></td></tr></table></figure>
+
 <h3 id="加载本地cookie"><a href="#加载本地cookie" class="headerlink" title="加载本地cookie"></a>加载本地cookie</h3><p>从本地文件读取cookie信息，可以使用cookiejar中的load方法</p>
 <figure class="highlight python"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">from</span> http.cookiejar <span class="keyword">import</span> MozillaCookieJar</span><br><span class="line"></span><br><span class="line">cookiejar = MozillaCookieJar(<span class="string">'cookies.txt'</span>)</span><br><span class="line">cookiejar.load(ignore_discard=<span class="literal">True</span>)</span><br><span class="line"><span class="keyword">for</span> cookie <span class="keyword">in</span> cookiejar:</span><br><span class="line">    print(cookie)</span><br></pre></td></tr></table></figure>
+
 
       
     </div>
@@ -719,7 +728,7 @@
                 
                   <a href="/archives/">
                 
-                    <span class="site-state-item-count">35</span>
+                    <span class="site-state-item-count">36</span>
                     <span class="site-state-item-name">日志</span>
                   </a>
                 </div>
@@ -762,7 +771,9 @@
                     
                       
                     
-                    <span class="site-state-item-count">13</span>
+                      
+                    
+                    <span class="site-state-item-count">14</span>
                     <span class="site-state-item-name">分类</span>
                   </a>
                 </div>
@@ -887,7 +898,9 @@
                     
                       
                     
-                    <span class="site-state-item-count">54</span>
+                      
+                    
+                    <span class="site-state-item-count">55</span>
                     <span class="site-state-item-name">标签</span>
                   </a>
                 </div>
@@ -1002,7 +1015,7 @@
     
       <span class="post-meta-item-text">站点总字数：</span>
     
-    <span title="站点总字数">125k</span>
+    <span title="站点总字数">110k</span>
   
 
   
@@ -1013,7 +1026,7 @@
     
       <span class="post-meta-item-text">站点阅读时长 &asymp;</span>
     
-    <span title="站点阅读时长">3:29</span>
+    <span title="站点阅读时长">3:03</span>
   
 </div>
 

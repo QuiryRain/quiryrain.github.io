@@ -15,7 +15,7 @@
 
 
 <html class="theme-next gemini use-motion" lang="zh-CN">
-<head><meta name="generator" content="Hexo 3.8.0">
+<head><meta name="generator" content="Hexo 3.9.0">
   <meta charset="UTF-8">
 <meta http-equiv="X-UA-Compatible" content="IE=edge">
 <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=2">
@@ -509,7 +509,7 @@
                 
                   <span class="post-meta-item-text">本文字数：</span>
                 
-                <span title="本文字数">6.8k</span>
+                <span title="本文字数">24k</span>
               
 
               
@@ -523,7 +523,7 @@
                 
                   <span class="post-meta-item-text">阅读时长 &asymp;</span>
                 
-                <span title="阅读时长">11 分钟</span>
+                <span title="阅读时长">40 分钟</span>
               
             </div>
           
@@ -556,8 +556,7 @@
 <th>缺点</th>
 </tr>
 </thead>
-<tbody>
-<tr>
+<tbody><tr>
 <td>分析接口</td>
 <td>直接可以请求到数据，不需要做一些解析工具，代码量少，性能高。</td>
 <td>分析接口比较复杂，特别是一些通过js混淆的接口，需要有js的功底。容易被发现是爬虫。</td>
@@ -567,8 +566,7 @@
 <td>直接模拟浏览器的行为，浏览器能请求到的，使用selenium也同样可以获取。爬虫更稳定。</td>
 <td>代码量多，性能低。</td>
 </tr>
-</tbody>
-</table>
+</tbody></table>
 <h3 id="selenium-chromdriver获取动态数据"><a href="#selenium-chromdriver获取动态数据" class="headerlink" title="selenium + chromdriver获取动态数据"></a>selenium + chromdriver获取动态数据</h3><p>Selenium是一个自动化测试工具，可以在模拟人类在浏览器上的行为，自动处理浏览器上的一些行为，如点击，填充数据，删除cookie等。chromedriver是一个chrome浏览器的驱动程序。</p>
 <p>Chromedriver：<a href="http://npm.taobao.org/mirrors/chromedriver" target="_blank" rel="noopener">http://npm.taobao.org/mirrors/chromedriver</a></p>
 <h3 id="安装Selenium和chromedriver"><a href="#安装Selenium和chromedriver" class="headerlink" title="安装Selenium和chromedriver"></a>安装Selenium和chromedriver</h3><ol>
@@ -577,6 +575,7 @@
 </ol>
 <h3 id="快速开始"><a href="#快速开始" class="headerlink" title="快速开始"></a>快速开始</h3><p>以一个例子快速开始</p>
 <figure class="highlight python"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">from</span> selenium <span class="keyword">import</span> webdriver</span><br><span class="line"><span class="keyword">import</span> time</span><br><span class="line"></span><br><span class="line">driver_path = <span class="string">'./driver/chromedriver.exe'</span></span><br><span class="line">url = <span class="string">"https://www.baidu.com"</span></span><br><span class="line"></span><br><span class="line">driver = webdriver.Chrome(executable_path=driver_path)</span><br><span class="line"></span><br><span class="line">driver.get(url)</span><br><span class="line">print(driver.page_source)</span><br><span class="line">time.sleep(<span class="number">5</span>)</span><br><span class="line">driver.close()</span><br></pre></td></tr></table></figure>
+
 <p>在运行之后会出现一个浏览器框，并自动的访问百度</p>
 <h3 id="selenium官方文档"><a href="#selenium官方文档" class="headerlink" title="selenium官方文档"></a>selenium官方文档</h3><p><a href="https://selenium-python.readthedocs.io/index.html" target="_blank" rel="noopener">https://selenium-python.readthedocs.io/index.html</a></p>
 <h3 id="关闭页面"><a href="#关闭页面" class="headerlink" title="关闭页面"></a>关闭页面</h3><ol>
@@ -604,12 +603,14 @@
 </li>
 <li><p><code>By</code>模块导入</p>
 <figure class="highlight python"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">from</span> selenium.webdriver.common.by <span class="keyword">import</span> By</span><br></pre></td></tr></table></figure>
+
 </li>
 </ol>
 <p><em>注意</em>：<code>find_element</code>是获取第一个满足条件的元素。<code>find_elements</code>是获取所有满足条件的元素</p>
 <h3 id="操作表单元素"><a href="#操作表单元素" class="headerlink" title="操作表单元素"></a>操作表单元素</h3><ol>
 <li><p>在操作输入框时需要分为两步，一：找到表单元素，二：填充数据。</p>
 <figure class="highlight python"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line">inputTag = driver.find_element_by_id(<span class="string">'kw'</span>)</span><br><span class="line">inputTag.send_keys(<span class="string">"Python"</span>)</span><br></pre></td></tr></table></figure>
+
 <p>使用clear方法可以清除输入框中的内容</p>
 <p><code>inputTag.clear()</code></p>
 </li>
@@ -621,10 +622,12 @@
 </li>
 <li><p>操作按钮：</p>
 <figure class="highlight python"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line">inputTag = driver.find_element_by_id(<span class="string">"su"</span>)</span><br><span class="line">inputTag.click()</span><br></pre></td></tr></table></figure>
+
 </li>
 </ol>
 <h3 id="行为链"><a href="#行为链" class="headerlink" title="行为链"></a>行为链</h3><p>有时候在页面中的操作可能要有很多步，那么这时候可以使用鼠标行为链类<code>ActionChains</code>来完成。如将鼠标移到某个元素并执行点击事件。</p>
 <figure class="highlight python"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br></pre></td><td class="code"><pre><span class="line">inputTag = driver.find_element(By.ID, <span class="string">'kw'</span>)</span><br><span class="line">submitTag = driver.find_element_by_id(<span class="string">'su'</span>)</span><br><span class="line"></span><br><span class="line">actions = webdriver.ActionChains(driver)</span><br><span class="line">actions.move_to_element(inputTag)</span><br><span class="line">actions.send_keys_to_element(inputTag, <span class="string">'Python'</span>)</span><br><span class="line">actions.move_to_element(submitTag)</span><br><span class="line">actions.click(submitTag)</span><br><span class="line">actions.perform()</span><br></pre></td></tr></table></figure>
+
 <p>更多鼠标相关操作</p>
 <ul>
 <li>click_and_hold(element)：点击但不松开鼠标</li>
@@ -644,6 +647,7 @@
 </li>
 <li><p>删除某个cookie</p>
 <figure class="highlight python"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">driver.delete_cookie(key)</span><br></pre></td></tr></table></figure>
+
 </li>
 </ol>
 <h3 id="页面等待"><a href="#页面等待" class="headerlink" title="页面等待"></a>页面等待</h3><p>现在的网页多采用 Ajax 技术，这样程序便不能确定何时某个元素完全加载出来了。如果实际页面等待时间过长导致某个dom元素还没出来，在使用了WebElement时，就会抛出NullPointer的异常。为了解决这个问题。所以 Selenium 提供了两种等待方式：一种是隐式等待、一种是显式等待。</p>
@@ -667,7 +671,9 @@
 </ul>
 <h3 id="切换页面"><a href="#切换页面" class="headerlink" title="切换页面"></a>切换页面</h3><p>在切换页面时，<code>selenium</code>提供了一个叫做<code>switch_to_window</code>来进行切换，具体切换到哪个页面，可以从<code>driver.window_handles</code>中找到。</p>
 <figure class="highlight python"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br></pre></td><td class="code"><pre><span class="line"><span class="comment"># 打开一个新的页面</span></span><br><span class="line">self.driver.execute_script(<span class="string">"window.open('"</span>+url+<span class="string">"')"</span>)</span><br><span class="line"><span class="comment"># 切换到这个新的页面中</span></span><br><span class="line">self.driver.switch_to_window(self.driver.window_handles[<span class="number">1</span>])</span><br></pre></td></tr></table></figure>
+
 <h3 id="设置代理"><a href="#设置代理" class="headerlink" title="设置代理"></a>设置代理</h3><figure class="highlight python"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">from</span> selenium <span class="keyword">import</span> webdriver</span><br><span class="line"><span class="keyword">import</span> time</span><br><span class="line"></span><br><span class="line">options = webdriver.ChromeOptions()</span><br><span class="line">options.add_argument(<span class="string">"--proxy-server=http://113.12.202.50:50327"</span>)</span><br><span class="line">driver_path = <span class="string">"./driver/chromedriver.exe"</span></span><br><span class="line">driver = webdriver.Chrome(executable_path=driver_path, options=options)</span><br><span class="line"></span><br><span class="line">driver.get(<span class="string">'http://httpbin.org/ip'</span>)</span><br><span class="line">time.sleep(<span class="number">5</span>)</span><br><span class="line">driver.quit()</span><br></pre></td></tr></table></figure>
+
 <h3 id="WebElement元素"><a href="#WebElement元素" class="headerlink" title="WebElement元素"></a>WebElement元素</h3><p><code>from selenium.webdriver.remote.webelement import WebElement</code>类是每个获取出来的元素的所属类</p>
 <p>常用属性：</p>
 <ol>
@@ -675,13 +681,17 @@
 <li>screentshot：获取当前页面的截图。这个方法只能在<code>driver</code>上使用。<code>driver</code>的对象类，也是继承自<code>WebElement</code>。</li>
 </ol>
 <h3 id="对带有页面嵌套的豆瓣进行登录"><a href="#对带有页面嵌套的豆瓣进行登录" class="headerlink" title="对带有页面嵌套的豆瓣进行登录"></a>对带有页面嵌套的豆瓣进行登录</h3><figure class="highlight python"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br><span class="line">26</span><br><span class="line">27</span><br><span class="line">28</span><br><span class="line">29</span><br><span class="line">30</span><br><span class="line">31</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">from</span> selenium <span class="keyword">import</span> webdriver</span><br><span class="line"><span class="keyword">import</span> time</span><br><span class="line"></span><br><span class="line">driver_path = <span class="string">"./driver/chromedriver.exe"</span></span><br><span class="line">driver = webdriver.Chrome(executable_path=driver_path)</span><br><span class="line">driver.get(<span class="string">'https://www.douban.com'</span>)</span><br><span class="line">iframe = driver.find_element_by_tag_name(<span class="string">"iframe"</span>)</span><br><span class="line">driver.switch_to.frame(iframe)</span><br><span class="line"></span><br><span class="line">login = driver.find_element_by_class_name(<span class="string">"account-tab-account"</span>)</span><br><span class="line"></span><br><span class="line">actions = webdriver.ActionChains(driver)</span><br><span class="line">actions.move_to_element(login)</span><br><span class="line">actions.click()</span><br><span class="line">actions.perform()</span><br><span class="line"></span><br><span class="line">username = driver.find_element_by_id(<span class="string">"username"</span>)</span><br><span class="line">password = driver.find_element_by_id(<span class="string">"password"</span>)</span><br><span class="line">submit = driver.find_element_by_xpath(<span class="string">"//div[@class='account-form-field-submit ']/a"</span>)</span><br><span class="line"></span><br><span class="line">actions.move_to_element(username)</span><br><span class="line">actions.send_keys_to_element(username, <span class="string">"your username"</span>)</span><br><span class="line">actions.move_to_element(password)</span><br><span class="line">actions.send_keys_to_element(password, <span class="string">"your password"</span>)</span><br><span class="line">actions.move_to_element(submit)</span><br><span class="line">actions.click()</span><br><span class="line">actions.perform()</span><br><span class="line"></span><br><span class="line">time.sleep(<span class="number">10</span>)</span><br><span class="line"></span><br><span class="line">driver.quit()</span><br></pre></td></tr></table></figure>
+
 <p>注意：在使用以下内容时会出现警告信息，身为有代码洁癖的人，最不能忍受运行中出现警告信息。</p>
 <p>警告信息：</p>
 <figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">DeprecationWarning: use driver.switch_to.frame instead driver.switch_to_frame(iframe)</span><br></pre></td></tr></table></figure>
+
 <p>使用方式：</p>
 <figure class="highlight python"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line">iframe = driver.find_element_by_tag_name(<span class="string">"iframe"</span>)</span><br><span class="line">driver.switch_to_frame(iframe)</span><br></pre></td></tr></table></figure>
+
 <p>将上文改为即可：</p>
 <figure class="highlight python"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line">iframe = driver.find_element_by_tag_name(<span class="string">"iframe"</span>)</span><br><span class="line">driver.switch_to.frame(iframe)</span><br></pre></td></tr></table></figure>
+
 <p>对框架的解决方式推荐一篇文章：<a href="https://www.cnblogs.com/dydxw/p/10551160.html" target="_blank" rel="noopener">Selenium（十二）嵌套frame定位</a></p>
 
       
@@ -732,6 +742,10 @@
           <span class="post-nav-divider"></span>
 
           <div class="post-nav-prev post-nav-item">
+            
+              <a href="/190724/" rel="prev" title="一次完整的HTTP请求过程">
+                一次完整的HTTP请求过程 <i class="fa fa-chevron-right"></i>
+              </a>
             
           </div>
         </div>
@@ -806,7 +820,7 @@
                 
                   <a href="/archives/">
                 
-                    <span class="site-state-item-count">35</span>
+                    <span class="site-state-item-count">36</span>
                     <span class="site-state-item-name">日志</span>
                   </a>
                 </div>
@@ -849,7 +863,9 @@
                     
                       
                     
-                    <span class="site-state-item-count">13</span>
+                      
+                    
+                    <span class="site-state-item-count">14</span>
                     <span class="site-state-item-name">分类</span>
                   </a>
                 </div>
@@ -974,7 +990,9 @@
                     
                       
                     
-                    <span class="site-state-item-count">54</span>
+                      
+                    
+                    <span class="site-state-item-count">55</span>
                     <span class="site-state-item-name">标签</span>
                   </a>
                 </div>
@@ -1089,7 +1107,7 @@
     
       <span class="post-meta-item-text">站点总字数：</span>
     
-    <span title="站点总字数">125k</span>
+    <span title="站点总字数">110k</span>
   
 
   
@@ -1100,7 +1118,7 @@
     
       <span class="post-meta-item-text">站点阅读时长 &asymp;</span>
     
-    <span title="站点阅读时长">3:29</span>
+    <span title="站点阅读时长">3:03</span>
   
 </div>
 

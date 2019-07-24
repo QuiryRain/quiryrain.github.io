@@ -15,7 +15,7 @@
 
 
 <html class="theme-next gemini use-motion" lang="zh-CN">
-<head><meta name="generator" content="Hexo 3.8.0">
+<head><meta name="generator" content="Hexo 3.9.0">
   <meta charset="UTF-8">
 <meta http-equiv="X-UA-Compatible" content="IE=edge">
 <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=2">
@@ -98,19 +98,19 @@
 
 
 
-  <meta name="description" content="最近一直看hexo官方的标签云太难看，就google了一下。最终搜索到了这篇文章（传送门），在此也做下记录吧！  打开themes –&amp;gt; next –&amp;gt; layout –&amp;gt; page.swig文件  找到{ % if page.type === &amp;#39;tags&amp;#39; % }  将下方代码进行替换即可   123456789原内容：&amp;lt;div class=&amp;quot;tag-cloud-">
+  <meta name="description" content="最近一直看hexo官方的标签云太难看，就google了一下。最终搜索到了这篇文章（传送门），在此也做下记录吧！  打开themes –&amp;gt; next –&amp;gt; layout –&amp;gt; page.swig文件  找到{ % if page.type === &amp;#39;tags&amp;#39; % }  将下方代码进行替换即可   123456789原内容：&amp;lt;div class=&amp;quot;t">
 <meta name="keywords" content="标签云">
 <meta property="og:type" content="article">
 <meta property="og:title" content="为Next加上彩色标签云">
 <meta property="og:url" content="http://quiryrain.tk/190520/index.html">
 <meta property="og:site_name" content="QuiryRain的博客">
-<meta property="og:description" content="最近一直看hexo官方的标签云太难看，就google了一下。最终搜索到了这篇文章（传送门），在此也做下记录吧！  打开themes –&amp;gt; next –&amp;gt; layout –&amp;gt; page.swig文件  找到{ % if page.type === &amp;#39;tags&amp;#39; % }  将下方代码进行替换即可   123456789原内容：&amp;lt;div class=&amp;quot;tag-cloud-">
+<meta property="og:description" content="最近一直看hexo官方的标签云太难看，就google了一下。最终搜索到了这篇文章（传送门），在此也做下记录吧！  打开themes –&amp;gt; next –&amp;gt; layout –&amp;gt; page.swig文件  找到{ % if page.type === &amp;#39;tags&amp;#39; % }  将下方代码进行替换即可   123456789原内容：&amp;lt;div class=&amp;quot;t">
 <meta property="og:locale" content="zh-CN">
 <meta property="og:image" content="http://quiryrain.tk/userImages/tag-cloud.png">
 <meta property="og:updated_time" content="2019-06-15T03:05:48.825Z">
 <meta name="twitter:card" content="summary">
 <meta name="twitter:title" content="为Next加上彩色标签云">
-<meta name="twitter:description" content="最近一直看hexo官方的标签云太难看，就google了一下。最终搜索到了这篇文章（传送门），在此也做下记录吧！  打开themes –&amp;gt; next –&amp;gt; layout –&amp;gt; page.swig文件  找到{ % if page.type === &amp;#39;tags&amp;#39; % }  将下方代码进行替换即可   123456789原内容：&amp;lt;div class=&amp;quot;tag-cloud-">
+<meta name="twitter:description" content="最近一直看hexo官方的标签云太难看，就google了一下。最终搜索到了这篇文章（传送门），在此也做下记录吧！  打开themes –&amp;gt; next –&amp;gt; layout –&amp;gt; page.swig文件  找到{ % if page.type === &amp;#39;tags&amp;#39; % }  将下方代码进行替换即可   123456789原内容：&amp;lt;div class=&amp;quot;t">
 <meta name="twitter:image" content="http://quiryrain.tk/userImages/tag-cloud.png">
 
 
@@ -511,7 +511,7 @@
                 
                   <span class="post-meta-item-text">本文字数：</span>
                 
-                <span title="本文字数">2.1k</span>
+                <span title="本文字数">6k</span>
               
 
               
@@ -525,7 +525,7 @@
                 
                   <span class="post-meta-item-text">阅读时长 &asymp;</span>
                 
-                <span title="阅读时长">3 分钟</span>
+                <span title="阅读时长">10 分钟</span>
               
             </div>
           
@@ -547,7 +547,7 @@
       
         <p>最近一直看hexo官方的标签云太难看，就google了一下。最终搜索到了这篇文章（<a href="https://me.idealli.com/post/d6caa003.html" target="_blank" rel="noopener">传送门</a>），在此也做下记录吧！</p>
 <ol>
-<li><p>打开themes –> next –> layout –> page.swig文件</p>
+<li><p>打开themes –&gt; next –&gt; layout –&gt; page.swig文件</p>
 </li>
 <li><p>找到<code>{ % if page.type === &#39;tags&#39; % }</code></p>
 </li>
@@ -555,8 +555,10 @@
 </li>
 </ol>
 <figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br></pre></td><td class="code"><pre><span class="line">原内容：</span><br><span class="line"></span><br><span class="line">&lt;div class=&quot;tag-cloud-tags&quot;&gt;</span><br><span class="line">  &#123;% if not theme.tagcloud %&#125;</span><br><span class="line">    &#123;&#123; tagcloud(&#123;min_font: 12, max_font: 30, amount: 200, color: true, start_color: &apos;#ccc&apos;, end_color: &apos;#111&apos;&#125;) &#125;&#125;</span><br><span class="line">  &#123;% else %&#125;</span><br><span class="line">    &#123;&#123; tagcloud(&#123;min_font: theme.tagcloud.min, max_font: theme.tagcloud.max, amount: theme.tagcloud.amount, color: true, start_color: theme.tagcloud.start, end_color: theme.tagcloud.end&#125;) &#125;&#125;</span><br><span class="line">  &#123;% endif %&#125;</span><br><span class="line">&lt;/div&gt;</span><br></pre></td></tr></table></figure>
+
 <hr>
 <figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br><span class="line">26</span><br><span class="line">27</span><br><span class="line">28</span><br><span class="line">29</span><br><span class="line">30</span><br><span class="line">31</span><br><span class="line">32</span><br><span class="line">33</span><br><span class="line">34</span><br><span class="line">35</span><br><span class="line">36</span><br><span class="line">37</span><br><span class="line">38</span><br><span class="line">39</span><br><span class="line">40</span><br><span class="line">41</span><br><span class="line">42</span><br><span class="line">43</span><br><span class="line">44</span><br><span class="line">45</span><br><span class="line">46</span><br><span class="line">47</span><br><span class="line">48</span><br></pre></td><td class="code"><pre><span class="line">修改之后的内容：</span><br><span class="line"></span><br><span class="line">&lt;div class=&quot;tag-cloud-tags&quot; id=&quot;tags&quot;&gt;</span><br><span class="line">  &#123;&#123; tagcloud(&#123;min_font: 16, max_font: 16, amount: 300, color: true, start_color: &apos;#fff&apos;, end_color: &apos;#fff&apos;&#125;) &#125;&#125;</span><br><span class="line">&lt;/div&gt;</span><br><span class="line">&lt;br/&gt;</span><br><span class="line"></span><br><span class="line">&lt;script type=&quot;text/javascript&quot;&gt;</span><br><span class="line">  var alltags=document.getElementById(&apos;tags&apos;);</span><br><span class="line">  var tags=alltags.getElementsByTagName(&apos;a&apos;);</span><br><span class="line"></span><br><span class="line">  for (var i = tags.length - 1; i &gt;= 0; i--) &#123;</span><br><span class="line">    var r=Math.floor(Math.random()*75+130);</span><br><span class="line">    var g=Math.floor(Math.random()*75+100);</span><br><span class="line">    var b=Math.floor(Math.random()*75+80);</span><br><span class="line">    tags[i].style.background = &quot;rgb(&quot;+r+&quot;,&quot;+g+&quot;,&quot;+b+&quot;)&quot;;</span><br><span class="line">  &#125;</span><br><span class="line">&lt;/script&gt;</span><br><span class="line"></span><br><span class="line">&lt;style type=&quot;text/css&quot;&gt;</span><br><span class="line">  div#posts.posts-expand .tag-cloud a&#123;</span><br><span class="line">    background-color: #f5f7f1;</span><br><span class="line">    border-radius: 6px;</span><br><span class="line">    padding-left: 10px;</span><br><span class="line">    padding-right: 10px;</span><br><span class="line">    margin-top: 18px;</span><br><span class="line">  &#125;</span><br><span class="line"></span><br><span class="line">  .tag-cloud a&#123;</span><br><span class="line">    background-color: #f5f7f1;</span><br><span class="line">    border-radius: 4px;</span><br><span class="line">    padding-right: 5px;</span><br><span class="line">    padding-left: 5px;</span><br><span class="line">    margin-right: 5px;</span><br><span class="line">    margin-left: 0px;</span><br><span class="line">    margin-top: 8px;</span><br><span class="line">    margin-bottom: 0px;</span><br><span class="line">&#125;</span><br><span class="line"></span><br><span class="line">  .tag-cloud a:before&#123;</span><br><span class="line">    content: &quot;&quot;;</span><br><span class="line">  &#125;</span><br><span class="line"></span><br><span class="line">  .tag-cloud-tags&#123;</span><br><span class="line">    text-align: left;</span><br><span class="line">    counter-reset: tags;</span><br><span class="line">  &#125;</span><br><span class="line">&lt;/style&gt;</span><br></pre></td></tr></table></figure>
+
 <p>之后清理缓存，重新部署就行了。</p>
 <p>最终效果如下：</p>
 <p><img src="/userImages/tag-cloud.png" alt="彩色标签云"></p>
@@ -674,7 +676,7 @@
                 
                   <a href="/archives/">
                 
-                    <span class="site-state-item-count">35</span>
+                    <span class="site-state-item-count">36</span>
                     <span class="site-state-item-name">日志</span>
                   </a>
                 </div>
@@ -717,7 +719,9 @@
                     
                       
                     
-                    <span class="site-state-item-count">13</span>
+                      
+                    
+                    <span class="site-state-item-count">14</span>
                     <span class="site-state-item-name">分类</span>
                   </a>
                 </div>
@@ -842,7 +846,9 @@
                     
                       
                     
-                    <span class="site-state-item-count">54</span>
+                      
+                    
+                    <span class="site-state-item-count">55</span>
                     <span class="site-state-item-name">标签</span>
                   </a>
                 </div>
@@ -940,7 +946,7 @@
     
       <span class="post-meta-item-text">站点总字数：</span>
     
-    <span title="站点总字数">125k</span>
+    <span title="站点总字数">110k</span>
   
 
   
@@ -951,7 +957,7 @@
     
       <span class="post-meta-item-text">站点阅读时长 &asymp;</span>
     
-    <span title="站点阅读时长">3:29</span>
+    <span title="站点阅读时长">3:03</span>
   
 </div>
 

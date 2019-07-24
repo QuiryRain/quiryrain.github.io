@@ -15,7 +15,7 @@
 
 
 <html class="theme-next gemini use-motion" lang="zh-CN">
-<head><meta name="generator" content="Hexo 3.8.0">
+<head><meta name="generator" content="Hexo 3.9.0">
   <meta charset="UTF-8">
 <meta http-equiv="X-UA-Compatible" content="IE=edge">
 <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=2">
@@ -512,7 +512,7 @@
                 
                   <span class="post-meta-item-text">本文字数：</span>
                 
-                <span title="本文字数">1.9k</span>
+                <span title="本文字数">7.5k</span>
               
 
               
@@ -526,7 +526,7 @@
                 
                   <span class="post-meta-item-text">阅读时长 &asymp;</span>
                 
-                <span title="阅读时长">3 分钟</span>
+                <span title="阅读时长">13 分钟</span>
               
             </div>
           
@@ -553,57 +553,54 @@
 <table>
 <thead>
 <tr>
-<th style="text-align:left">需要装的箱数</th>
-<th style="text-align:left">4</th>
+<th align="left">需要装的箱数</th>
+<th align="left">4</th>
 </tr>
 </thead>
-<tbody>
-<tr>
-<td style="text-align:left">驯鹿最大承受重量</td>
-<td style="text-align:left">15</td>
+<tbody><tr>
+<td align="left">驯鹿最大承受重量</td>
+<td align="left">15</td>
 </tr>
-</tbody>
-</table>
+</tbody></table>
 <table>
 <thead>
 <tr>
-<th style="text-align:left">批次</th>
-<th style="text-align:left">价值</th>
-<th style="text-align:left">重量</th>
+<th align="left">批次</th>
+<th align="left">价值</th>
+<th align="left">重量</th>
 </tr>
 </thead>
-<tbody>
-<tr>
-<td style="text-align:left">1</td>
-<td style="text-align:left">4</td>
-<td style="text-align:left">15</td>
+<tbody><tr>
+<td align="left">1</td>
+<td align="left">4</td>
+<td align="left">15</td>
 </tr>
 <tr>
-<td style="text-align:left">2</td>
-<td style="text-align:left">100</td>
-<td style="text-align:left">4</td>
+<td align="left">2</td>
+<td align="left">100</td>
+<td align="left">4</td>
 </tr>
 <tr>
-<td style="text-align:left">3</td>
-<td style="text-align:left">412</td>
-<td style="text-align:left">8</td>
+<td align="left">3</td>
+<td align="left">412</td>
+<td align="left">8</td>
 </tr>
 <tr>
-<td style="text-align:left">4</td>
-<td style="text-align:left">266</td>
-<td style="text-align:left">7</td>
+<td align="left">4</td>
+<td align="left">266</td>
+<td align="left">7</td>
 </tr>
 <tr>
-<td style="text-align:left">5</td>
-<td style="text-align:left">591</td>
-<td style="text-align:left">2</td>
+<td align="left">5</td>
+<td align="left">591</td>
+<td align="left">2</td>
 </tr>
-</tbody>
-</table>
+</tbody></table>
 <p>输出样例:</p>
 <p>　1193.0</p>
 <p>注：此处并没有按照这样的格式进行输入。</p>
 <figure class="highlight python"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br><span class="line">26</span><br><span class="line">27</span><br><span class="line">28</span><br><span class="line">29</span><br><span class="line">30</span><br><span class="line">31</span><br><span class="line">32</span><br><span class="line">33</span><br><span class="line">34</span><br><span class="line">35</span><br><span class="line">36</span><br><span class="line">37</span><br><span class="line">38</span><br><span class="line">39</span><br><span class="line">40</span><br><span class="line">41</span><br><span class="line">42</span><br><span class="line">43</span><br></pre></td><td class="code"><pre><span class="line"><span class="comment">#coding:utf-8</span></span><br><span class="line"><span class="keyword">from</span> __future__ <span class="keyword">import</span> division</span><br><span class="line"></span><br><span class="line">input_a = raw_input(<span class="string">u'箱数:'</span>)</span><br><span class="line">input_b = raw_input(<span class="string">u'最大承受重量:'</span>)</span><br><span class="line"></span><br><span class="line">list_c = []</span><br><span class="line">list_z = []</span><br><span class="line"></span><br><span class="line"><span class="keyword">for</span> i <span class="keyword">in</span> range(<span class="number">1</span>,int(input_a)+<span class="number">1</span>):</span><br><span class="line">    input_c = raw_input(<span class="string">'第'</span>+str(i)+<span class="string">'箱的总价值:'</span>)</span><br><span class="line">    input_d = raw_input(<span class="string">'第'</span>+str(i)+<span class="string">'箱的重量:'</span>)</span><br><span class="line">    avg = round(int(input_c)/int(input_d),<span class="number">1</span>)<span class="comment">#每一箱，重量为1的价值</span></span><br><span class="line">    list_c.append(avg)<span class="comment">#添加到列表，用于之后做比较</span></span><br><span class="line">    list_z.append([int(input_d),avg,<span class="number">0</span>])<span class="comment">#此处列表中添加列表，中间的列表一个存放总重量，第二个存放单位价值，第三个存放是否该物品已被取走</span></span><br><span class="line"></span><br><span class="line">list_c.sort(reverse=<span class="literal">True</span>) <span class="comment"># 降序排序</span></span><br><span class="line">sum =[<span class="number">0</span>,<span class="number">0</span>]<span class="comment"># 用于存放取走的总重量，第一个参数是取走的重量，第二个是超出前的备份</span></span><br><span class="line">num =<span class="number">0</span></span><br><span class="line">ji = <span class="number">0</span></span><br><span class="line"></span><br><span class="line"></span><br><span class="line"><span class="keyword">for</span> i <span class="keyword">in</span> range(len(list_c)):</span><br><span class="line">    <span class="keyword">for</span> k <span class="keyword">in</span> range(len(list_z)):</span><br><span class="line">        <span class="keyword">if</span> ji == <span class="number">0</span>:<span class="comment">#做是否超出马车最大承受量的标记，未超出为0</span></span><br><span class="line">            <span class="keyword">if</span> (list_c[i] == list_z[k][<span class="number">1</span>]) <span class="keyword">and</span> (list_z[k][<span class="number">2</span>]==<span class="number">0</span>):</span><br><span class="line">                sum[<span class="number">1</span>] = sum[<span class="number">0</span>]<span class="comment">#备份</span></span><br><span class="line">                sum[<span class="number">0</span>] = sum[<span class="number">0</span>] + list_z[k][<span class="number">0</span>]<span class="comment">#取走的重量</span></span><br><span class="line">                v = list_z[k][<span class="number">0</span>]<span class="comment">#取走的重量</span></span><br><span class="line">                <span class="keyword">if</span> sum[<span class="number">0</span>] &gt; int(input_b):<span class="comment">#如果所有取走的重量超出马车的重量，就依次减少一单元的重量</span></span><br><span class="line">                    ji = <span class="number">1</span><span class="comment">#超出为1</span></span><br><span class="line">                    t= list_z[k][<span class="number">0</span>]</span><br><span class="line">                    <span class="keyword">while</span> <span class="literal">True</span>:<span class="comment">#依次减去单位1的重量</span></span><br><span class="line">                        z = sum[<span class="number">1</span>] + t<span class="comment">#使用备份进行判断，此时取走的数量已经大于最大承受量了</span></span><br><span class="line">                        <span class="keyword">if</span> z &lt;= int(input_b):</span><br><span class="line">                            <span class="keyword">break</span></span><br><span class="line">                        t = t<span class="number">-1</span></span><br><span class="line">                    v=t<span class="comment">#等于最大承受量时，价值较大的一件物品应取走的数量</span></span><br><span class="line">                    sum[<span class="number">0</span>]=sum[<span class="number">1</span>]<span class="comment">#从备份恢复</span></span><br><span class="line">                    sum[<span class="number">0</span>] = sum[<span class="number">0</span>] + t<span class="comment">#此时为真正的取走数量</span></span><br><span class="line">                num = list_c[i]*v + num<span class="comment">#总价值</span></span><br><span class="line">                list_z[k][<span class="number">2</span>] = <span class="number">1</span><span class="comment">#取走的标记</span></span><br><span class="line"><span class="keyword">print</span> <span class="string">u'能带走的糖果的最大价值为:'</span>,num</span><br></pre></td></tr></table></figure>
+
 <p>实现的效果图(此处用两组数据进行测试)：<br>第一组数据：<br><img src="/userImages/tanxin1.png" alt="测试结果1"></p>
 <p>第二组数据：<br><img src="/userImages/tanxin2.png" alt="测试结果2"></p>
 
@@ -720,7 +717,7 @@
                 
                   <a href="/archives/">
                 
-                    <span class="site-state-item-count">35</span>
+                    <span class="site-state-item-count">36</span>
                     <span class="site-state-item-name">日志</span>
                   </a>
                 </div>
@@ -763,7 +760,9 @@
                     
                       
                     
-                    <span class="site-state-item-count">13</span>
+                      
+                    
+                    <span class="site-state-item-count">14</span>
                     <span class="site-state-item-name">分类</span>
                   </a>
                 </div>
@@ -888,7 +887,9 @@
                     
                       
                     
-                    <span class="site-state-item-count">54</span>
+                      
+                    
+                    <span class="site-state-item-count">55</span>
                     <span class="site-state-item-name">标签</span>
                   </a>
                 </div>
@@ -986,7 +987,7 @@
     
       <span class="post-meta-item-text">站点总字数：</span>
     
-    <span title="站点总字数">125k</span>
+    <span title="站点总字数">110k</span>
   
 
   
@@ -997,7 +998,7 @@
     
       <span class="post-meta-item-text">站点阅读时长 &asymp;</span>
     
-    <span title="站点阅读时长">3:29</span>
+    <span title="站点阅读时长">3:03</span>
   
 </div>
 

@@ -15,7 +15,7 @@
 
 
 <html class="theme-next gemini use-motion" lang="zh-CN">
-<head><meta name="generator" content="Hexo 3.8.0">
+<head><meta name="generator" content="Hexo 3.9.0">
   <meta charset="UTF-8">
 <meta http-equiv="X-UA-Compatible" content="IE=edge">
 <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=2">
@@ -511,7 +511,7 @@
                 
                   <span class="post-meta-item-text">本文字数：</span>
                 
-                <span title="本文字数">1.2k</span>
+                <span title="本文字数">5.3k</span>
               
 
               
@@ -525,7 +525,7 @@
                 
                   <span class="post-meta-item-text">阅读时长 &asymp;</span>
                 
-                <span title="阅读时长">2 分钟</span>
+                <span title="阅读时长">9 分钟</span>
               
             </div>
           
@@ -547,6 +547,7 @@
       
         <p>某日，闲来无事做，就尝试着用Python实现了下杨辉三角，以下使用Python2 实现的杨辉三角 </p>
 <figure class="highlight python"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br><span class="line">26</span><br><span class="line">27</span><br><span class="line">28</span><br><span class="line">29</span><br><span class="line">30</span><br></pre></td><td class="code"><pre><span class="line"><span class="function"><span class="keyword">def</span> <span class="title">triangel</span><span class="params">()</span>:</span></span><br><span class="line">    <span class="keyword">print</span> <span class="string">' '</span>*(<span class="number">20</span>*<span class="number">3</span>)+str(<span class="number">1</span>)             <span class="comment">#定义起始两行</span></span><br><span class="line">    <span class="keyword">print</span> <span class="string">' '</span>*(<span class="number">19</span>*<span class="number">3</span>)+str(<span class="number">1</span>)+<span class="string">' '</span>*<span class="number">5</span>+str(<span class="number">1</span>)</span><br><span class="line">    <span class="keyword">for</span> i <span class="keyword">in</span> range(<span class="number">3</span>,<span class="number">21</span>):</span><br><span class="line">        <span class="keyword">if</span> i ==<span class="number">3</span>:</span><br><span class="line">            L = [<span class="number">1</span>,<span class="number">1</span>]       <span class="comment">#初始化第二行        </span></span><br><span class="line">        L1 = []</span><br><span class="line">        <span class="keyword">for</span> j <span class="keyword">in</span> range(<span class="number">2</span>,i):</span><br><span class="line">            z = L[i-j<span class="number">-1</span>]+L[i-j] <span class="comment"># 通过上一行构建下一层数据</span></span><br><span class="line">            L1.append(z)        <span class="comment"># 将数据添加到一个空列表中</span></span><br><span class="line">        L = [<span class="number">1</span>]       <span class="comment"># 再次对L初始化</span></span><br><span class="line">        L.extend(L1)    <span class="comment"># 将两个列表合并</span></span><br><span class="line">        L.append(<span class="number">1</span>)     <span class="comment"># 在L列表中添加最后一个数据“1”</span></span><br><span class="line"></span><br><span class="line">        <span class="comment"># 以下内容为杨辉三角的打印</span></span><br><span class="line">        t = <span class="string">' '</span>*((<span class="number">21</span>-i)*<span class="number">3</span>)+str(<span class="number">1</span>)   <span class="comment"># 每次循环进行初始化每列的第一个数据1</span></span><br><span class="line">        <span class="keyword">for</span> h <span class="keyword">in</span> range(<span class="number">1</span>,len(L)):   <span class="comment"># 以下为构建每列的除一个数据外的其他数据，</span></span><br><span class="line">            <span class="keyword">if</span> L[h]&lt;<span class="number">10</span>:             <span class="comment"># 如果数据小于10，就是其前面5个空格，如果</span></span><br><span class="line">                t = t + <span class="string">' '</span>*<span class="number">5</span>+str(L[h]) <span class="comment">#数据小于100，就减少一个空格，依次类推，</span></span><br><span class="line">            <span class="keyword">elif</span> L[h] &lt;<span class="number">100</span>:         <span class="comment"># 直至剩余一个空格，用于分辨相邻的数据</span></span><br><span class="line">                t = t+<span class="string">' '</span>*<span class="number">4</span>+str(L[h])</span><br><span class="line">            <span class="keyword">elif</span> L[h] &lt; <span class="number">1000</span>:</span><br><span class="line">                t = t + <span class="string">' '</span>*<span class="number">3</span>+str(L[h])</span><br><span class="line">            <span class="keyword">elif</span> L[h] &lt; <span class="number">10000</span>:</span><br><span class="line">                t = t + <span class="string">' '</span>*<span class="number">2</span>+str(L[h])</span><br><span class="line">            <span class="keyword">elif</span> L[h] &lt; <span class="number">100000</span>:</span><br><span class="line">                t = t + <span class="string">' '</span>*<span class="number">1</span>+str(L[h])</span><br><span class="line">        <span class="keyword">print</span> t</span><br><span class="line"><span class="keyword">if</span> __name__ == <span class="string">"__main__"</span>:</span><br><span class="line">    triangel()</span><br></pre></td></tr></table></figure>
+
 <p><img src="/userImages/yanghuisanjiao.png" alt="杨辉三角"></p>
 
       
@@ -662,7 +663,7 @@
                 
                   <a href="/archives/">
                 
-                    <span class="site-state-item-count">35</span>
+                    <span class="site-state-item-count">36</span>
                     <span class="site-state-item-name">日志</span>
                   </a>
                 </div>
@@ -705,7 +706,9 @@
                     
                       
                     
-                    <span class="site-state-item-count">13</span>
+                      
+                    
+                    <span class="site-state-item-count">14</span>
                     <span class="site-state-item-name">分类</span>
                   </a>
                 </div>
@@ -830,7 +833,9 @@
                     
                       
                     
-                    <span class="site-state-item-count">54</span>
+                      
+                    
+                    <span class="site-state-item-count">55</span>
                     <span class="site-state-item-name">标签</span>
                   </a>
                 </div>
@@ -928,7 +933,7 @@
     
       <span class="post-meta-item-text">站点总字数：</span>
     
-    <span title="站点总字数">125k</span>
+    <span title="站点总字数">110k</span>
   
 
   
@@ -939,7 +944,7 @@
     
       <span class="post-meta-item-text">站点阅读时长 &asymp;</span>
     
-    <span title="站点阅读时长">3:29</span>
+    <span title="站点阅读时长">3:03</span>
   
 </div>
 

@@ -15,7 +15,7 @@
 
 
 <html class="theme-next gemini use-motion" lang="zh-CN">
-<head><meta name="generator" content="Hexo 3.8.0">
+<head><meta name="generator" content="Hexo 3.9.0">
   <meta charset="UTF-8">
 <meta http-equiv="X-UA-Compatible" content="IE=edge">
 <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=2">
@@ -98,18 +98,18 @@
 
 
 
-  <meta name="description" content="PG数据库：理解：对于PostgreSQL数据库，我个人理解为和MySQL数据库很相识，比MySQL功能多，在pg数据库中，用户可以指定表集合，这点和mongodb很像。  模式(架构)：是指定的表集合，它还可以包含视图、索引、序列、数据类型、运算符和函数.  1创建模式:create schema &amp;lt;schemaname&amp;gt; 架构作用: 1、模式有助于多用户使用一个数据库,而不会互相干">
+  <meta name="description" content="PG数据库：理解：对于PostgreSQL数据库，我个人理解为和MySQL数据库很相识，比MySQL功能多，在pg数据库中，用户可以指定表集合，这点和mongodb很像。  模式(架构)：是指定的表集合，它还可以包含视图、索引、序列、数据类型、运算符和函数.  1创建模式:create schema &amp;lt;schemaname&amp;gt;  架构作用: 1、模式有助于多用户使用一个数据库,而不会互相">
 <meta name="keywords" content="学习总结,PostgreSQL">
 <meta property="og:type" content="article">
 <meta property="og:title" content="PostgreSQL学习总结">
 <meta property="og:url" content="http://quiryrain.tk/190502-3/index.html">
 <meta property="og:site_name" content="QuiryRain的博客">
-<meta property="og:description" content="PG数据库：理解：对于PostgreSQL数据库，我个人理解为和MySQL数据库很相识，比MySQL功能多，在pg数据库中，用户可以指定表集合，这点和mongodb很像。  模式(架构)：是指定的表集合，它还可以包含视图、索引、序列、数据类型、运算符和函数.  1创建模式:create schema &amp;lt;schemaname&amp;gt; 架构作用: 1、模式有助于多用户使用一个数据库,而不会互相干">
+<meta property="og:description" content="PG数据库：理解：对于PostgreSQL数据库，我个人理解为和MySQL数据库很相识，比MySQL功能多，在pg数据库中，用户可以指定表集合，这点和mongodb很像。  模式(架构)：是指定的表集合，它还可以包含视图、索引、序列、数据类型、运算符和函数.  1创建模式:create schema &amp;lt;schemaname&amp;gt;  架构作用: 1、模式有助于多用户使用一个数据库,而不会互相">
 <meta property="og:locale" content="zh-CN">
 <meta property="og:updated_time" content="2019-06-15T03:05:48.823Z">
 <meta name="twitter:card" content="summary">
 <meta name="twitter:title" content="PostgreSQL学习总结">
-<meta name="twitter:description" content="PG数据库：理解：对于PostgreSQL数据库，我个人理解为和MySQL数据库很相识，比MySQL功能多，在pg数据库中，用户可以指定表集合，这点和mongodb很像。  模式(架构)：是指定的表集合，它还可以包含视图、索引、序列、数据类型、运算符和函数.  1创建模式:create schema &amp;lt;schemaname&amp;gt; 架构作用: 1、模式有助于多用户使用一个数据库,而不会互相干">
+<meta name="twitter:description" content="PG数据库：理解：对于PostgreSQL数据库，我个人理解为和MySQL数据库很相识，比MySQL功能多，在pg数据库中，用户可以指定表集合，这点和mongodb很像。  模式(架构)：是指定的表集合，它还可以包含视图、索引、序列、数据类型、运算符和函数.  1创建模式:create schema &amp;lt;schemaname&amp;gt;  架构作用: 1、模式有助于多用户使用一个数据库,而不会互相">
 
 
 
@@ -509,7 +509,7 @@
                 
                   <span class="post-meta-item-text">本文字数：</span>
                 
-                <span title="本文字数">2.4k</span>
+                <span title="本文字数">6.4k</span>
               
 
               
@@ -523,7 +523,7 @@
                 
                   <span class="post-meta-item-text">阅读时长 &asymp;</span>
                 
-                <span title="阅读时长">4 分钟</span>
+                <span title="阅读时长">11 分钟</span>
               
             </div>
           
@@ -548,6 +548,7 @@
 <p>模式(架构)：是指定的表集合，它还可以包含视图、索引、序列、数据类型、运算符和函数.</p>
 </blockquote>
 <figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">创建模式:create schema &lt;schemaname&gt;</span><br></pre></td></tr></table></figure>
+
 <h1 id="架构作用"><a href="#架构作用" class="headerlink" title="架构作用:"></a>架构作用:</h1><blockquote>
 <p>1、模式有助于多用户使用一个数据库,而不会互相干扰</p>
 <p>2、将数据库对象组织成逻辑组,使其更易于管理</p>
@@ -581,7 +582,9 @@
 <p>6、普通用户登陆：psql -U dbuser -d dbusers -h localhost</p>
 </blockquote>
 <h1 id="触发器"><a href="#触发器" class="headerlink" title="触发器"></a>触发器</h1><figure class="highlight sql"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">create</span> <span class="keyword">or</span> <span class="keyword">replace</span> <span class="keyword">function</span> auditlogfunc() <span class="keyword">returns</span> <span class="keyword">trigger</span> <span class="keyword">as</span> $example_table$</span><br><span class="line"><span class="keyword">begin</span></span><br><span class="line">	<span class="keyword">insert</span> <span class="keyword">into</span> <span class="keyword">audit</span>(emp_id,entry_date) <span class="keyword">values</span> (new.ID, <span class="keyword">current_timestamp</span>);</span><br><span class="line">	return new</span><br><span class="line"><span class="keyword">end</span>;</span><br><span class="line">$example_table$ language plpgsql;</span><br></pre></td></tr></table></figure>
+
 <figure class="highlight sql"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">create</span> <span class="keyword">trigger</span> example_trigger <span class="keyword">after</span> <span class="keyword">insert</span> <span class="keyword">on</span> company <span class="keyword">for</span> <span class="keyword">each</span> <span class="keyword">row</span> <span class="keyword">execute</span> <span class="keyword">procedure</span> auditlogfunc();</span><br></pre></td></tr></table></figure>
+
 <blockquote>
 <p>PostgreSQL触发器目的：</p>
 <p>1、验证输入数据</p>
@@ -594,10 +597,11 @@
 </blockquote>
 <h1 id="触发器的查询、删除："><a href="#触发器的查询、删除：" class="headerlink" title="触发器的查询、删除："></a>触发器的查询、删除：</h1><ul>
 <li>列出当前数据库的所有触发器：select * from pg_trigger;</li>
-<li>列出某张表上的触发器：SELECT tgname FROM pg_trigger, pg_class WHERE tgrelid=pg_class.oid AND relname=’\<tablename>‘;</tablename></li>
-<li>删除触发器：drop trigger &lt;trigger_name&gt;;</li>
+<li>列出某张表上的触发器：SELECT tgname FROM pg_trigger, pg_class WHERE tgrelid=pg_class.oid AND relname=’&lt;tablename&gt;’;</li>
+<li>删除触发器：drop trigger <trigger_name>;</trigger_name></li>
 </ul>
 <h1 id="查询创建的函数："><a href="#查询创建的函数：" class="headerlink" title="查询创建的函数："></a>查询创建的函数：</h1><figure class="highlight sql"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">SELECT</span> </span><br><span class="line">	pg_proc.proname <span class="keyword">AS</span> <span class="string">"函数名称"</span>,</span><br><span class="line">	pg_type.typname <span class="keyword">AS</span> <span class="string">"返回值数据类型"</span>,</span><br><span class="line">	pg_proc.pronargs <span class="keyword">AS</span> <span class="string">"参数个数"</span> </span><br><span class="line"><span class="keyword">FROM</span> </span><br><span class="line">	pg_proc </span><br><span class="line">	<span class="keyword">JOIN</span> pg_type <span class="keyword">ON</span> (pg_proc.prorettype = pg_type.oid) </span><br><span class="line"><span class="keyword">WHERE</span> </span><br><span class="line">	pg_type.typname != <span class="string">'void'</span> </span><br><span class="line">	<span class="keyword">AND</span> </span><br><span class="line">	pronamespace = (<span class="keyword">SELECT</span> pg_namespace.oid <span class="keyword">FROM</span> pg_namespace <span class="keyword">WHERE</span> nspname = <span class="string">'public'</span>);</span><br></pre></td></tr></table></figure>
+
 <h1 id="索引"><a href="#索引" class="headerlink" title="索引"></a>索引</h1><p>用于加速从数据库中检索数据</p>
 <blockquote>
 <p>创建索引:create index index_name on table_name;</p>
@@ -728,7 +732,7 @@
                 
                   <a href="/archives/">
                 
-                    <span class="site-state-item-count">35</span>
+                    <span class="site-state-item-count">36</span>
                     <span class="site-state-item-name">日志</span>
                   </a>
                 </div>
@@ -771,7 +775,9 @@
                     
                       
                     
-                    <span class="site-state-item-count">13</span>
+                      
+                    
+                    <span class="site-state-item-count">14</span>
                     <span class="site-state-item-name">分类</span>
                   </a>
                 </div>
@@ -896,7 +902,9 @@
                     
                       
                     
-                    <span class="site-state-item-count">54</span>
+                      
+                    
+                    <span class="site-state-item-count">55</span>
                     <span class="site-state-item-name">标签</span>
                   </a>
                 </div>
@@ -1011,7 +1019,7 @@
     
       <span class="post-meta-item-text">站点总字数：</span>
     
-    <span title="站点总字数">125k</span>
+    <span title="站点总字数">110k</span>
   
 
   
@@ -1022,7 +1030,7 @@
     
       <span class="post-meta-item-text">站点阅读时长 &asymp;</span>
     
-    <span title="站点阅读时长">3:29</span>
+    <span title="站点阅读时长">3:03</span>
   
 </div>
 

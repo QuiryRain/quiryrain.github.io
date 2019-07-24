@@ -15,7 +15,7 @@
 
 
 <html class="theme-next gemini use-motion" lang="zh-CN">
-<head><meta name="generator" content="Hexo 3.8.0">
+<head><meta name="generator" content="Hexo 3.9.0">
   <meta charset="UTF-8">
 <meta http-equiv="X-UA-Compatible" content="IE=edge">
 <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=2">
@@ -509,7 +509,7 @@
                 
                   <span class="post-meta-item-text">本文字数：</span>
                 
-                <span title="本文字数">6k</span>
+                <span title="本文字数">14k</span>
               
 
               
@@ -523,7 +523,7 @@
                 
                   <span class="post-meta-item-text">阅读时长 &asymp;</span>
                 
-                <span title="阅读时长">10 分钟</span>
+                <span title="阅读时长">24 分钟</span>
               
             </div>
           
@@ -552,7 +552,9 @@
 <p>镜像不包含任何动态数据，其内容在构建之后也不会改变</p>
 <h2 id="容器"><a href="#容器" class="headerlink" title="容器"></a>容器</h2><p>是镜像的运行时实例 - 实际执行时镜像会在内存中变成什么。默认情况下，它完全独立于主机环境运行，仅在配置为访问主机文件和端口的情况下才执行此操作。</p>
 <h2 id="命令"><a href="#命令" class="headerlink" title="命令"></a>命令</h2><figure class="highlight docker"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br><span class="line">26</span><br><span class="line">27</span><br><span class="line">28</span><br><span class="line">29</span><br><span class="line">30</span><br><span class="line">31</span><br><span class="line">32</span><br><span class="line">33</span><br><span class="line">34</span><br><span class="line">35</span><br></pre></td><td class="code"><pre><span class="line">docker build -t friendlyname .<span class="comment"># 使用此目录的 Dockerfile 创建镜像</span></span><br><span class="line">docker <span class="keyword">run</span> -p 4000:80 friendlyname  # 运行端口 4000 到 90 的“友好名称”映射</span><br><span class="line">docker <span class="keyword">run</span> -d -p 4000:80 friendlyname         # 内容相同，但在分离模式下</span><br><span class="line">docker ps                                 <span class="comment"># 查看所有正在运行的容器的列表</span></span><br><span class="line">docker stop &lt;hash&gt;                     <span class="comment"># 平稳地停止指定的容器</span></span><br><span class="line">docker ps -a           <span class="comment"># 查看所有容器的列表，甚至包含未运行的容器</span></span><br><span class="line">docker kill &lt;hash&gt;                   <span class="comment"># 强制关闭指定的容器</span></span><br><span class="line">docker rm &lt;hash&gt;              <span class="comment"># 从此机器中删除指定的容器</span></span><br><span class="line">docker rm $(docker ps -a -q)           <span class="comment"># 从此机器中删除所有容器</span></span><br><span class="line">docker images -a                               <span class="comment"># 显示此机器上的所有镜像</span></span><br><span class="line">docker rmi &lt;imagename&gt;            <span class="comment"># 从此机器中删除指定的镜像</span></span><br><span class="line">docker rmi $(docker images -q)             <span class="comment"># 从此机器中删除所有镜像</span></span><br><span class="line">docker login             <span class="comment"># 使用您的 Docker 凭证登录此 CLI 会话</span></span><br><span class="line">docker tag &lt;image&gt; username/repository:tag  <span class="comment"># 标记 &lt;image&gt; 以上传到镜像库</span></span><br><span class="line">docker push username/repository:tag            <span class="comment"># 将已标记的镜像上传到镜像库</span></span><br><span class="line">docker <span class="keyword">run</span> username/repository:tag                   # 运行镜像库中的镜像</span><br><span class="line">docker stack ls              <span class="comment"># 列出此 Docker 主机上所有正在运行的应用</span></span><br><span class="line">docker stack deploy -c &lt;composefile&gt; &lt;appname&gt;  <span class="comment"># 运行指定的 Compose 文件</span></span><br><span class="line">docker stack services &lt;appname&gt;       <span class="comment"># 列出与应用关联的服务</span></span><br><span class="line">docker stack ps &lt;appname&gt;   <span class="comment"># 列出与应用关联的正在运行的容器</span></span><br><span class="line">docker stack rm &lt;appname&gt;                             <span class="comment"># 清除应用</span></span><br><span class="line">docker-machine create --driver virtualbox myvm1 <span class="comment"># 创建 VM（Mac、Win7、Linux）</span></span><br><span class="line">docker-machine create -d hyperv --hyperv-virtual-switch <span class="string">"myswitch"</span> myvm1 <span class="comment"># Win10</span></span><br><span class="line">docker-machine <span class="keyword">env</span> myvm1                <span class="comment"># 查看有关节点的基本信息</span></span><br><span class="line">docker-machine ssh myvm1 <span class="string">"docker node ls"</span>         <span class="comment"># 列出 swarm 中的节点</span></span><br><span class="line">docker-machine ssh myvm1 <span class="string">"docker node inspect &lt;node ID&gt;"</span>        <span class="comment"># 检查节点</span></span><br><span class="line">docker-machine ssh myvm1 <span class="string">"docker swarm join-token -q worker"</span>   <span class="comment"># 查看加入令牌</span></span><br><span class="line">docker-machine ssh myvm1   <span class="comment"># 打开与 VM 的 SSH 会话；输入“exit”以结束会话</span></span><br><span class="line">docker-machine ssh myvm2 <span class="string">"docker swarm leave"</span>  <span class="comment"># 使工作节点退出 swarm</span></span><br><span class="line">docker-machine ssh myvm1 <span class="string">"docker swarm leave -f"</span> <span class="comment"># 使主节点退出，终止 swarm</span></span><br><span class="line">docker-machine start myvm1            <span class="comment"># 启动当前未运行的 VM</span></span><br><span class="line">docker-machine stop $(docker-machine ls -q)               <span class="comment"># 停止所有正在运行的 VM</span></span><br><span class="line">docker-machine rm $(docker-machine ls -q) <span class="comment"># 删除所有 VM 及其磁盘镜像</span></span><br><span class="line">docker-machine scp docker-compose.yml myvm1:~     <span class="comment"># 将文件复制到节点的主目录</span></span><br><span class="line">docker-machine ssh myvm1 <span class="string">"docker stack deploy -c &lt;file&gt; &lt;app&gt;"</span>   <span class="comment"># 部署应用</span></span><br></pre></td></tr></table></figure>
+
 <h2 id="Docker命令"><a href="#Docker命令" class="headerlink" title="Docker命令"></a>Docker命令</h2><figure class="highlight docker"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br></pre></td><td class="code"><pre><span class="line">docker save -o &lt;localfilename&gt; &lt;flename&gt; <span class="comment">#导出镜像到本地文件</span></span><br><span class="line">docker load --input &lt;filename&gt; <span class="comment">#从导出的本地文件中再导入到本地镜像库</span></span><br><span class="line">docker load &lt; &lt;filename&gt; <span class="comment">#同上，导入镜像以及其相关的元数据信息(包括标签等)(生成镜像文件)</span></span><br><span class="line">docker <span class="keyword">run</span> -d ... # 使docker容器在后台以守护态形式运行</span><br><span class="line">docker export &lt;container id&gt; &gt; &lt;localfilename&gt; <span class="comment"># 将本地的某个容器导出</span></span><br><span class="line">docker import - &lt;repository:tag&gt; <span class="comment"># 将容器快照文件导入为镜像 (生成镜像快照)</span></span><br><span class="line">docker load 和 docker import 的区别：</span><br><span class="line">  docker import 将丢弃所有的历史记录和元数据信息(仅保存容器当时的快照状态)，</span><br><span class="line">  docker load 将保存完整记录，体积较大</span><br><span class="line">  docker import 导入时可以重新指定标签等元数据信息</span><br><span class="line">docker image ls --digests <span class="comment"># 列出所有镜像的摘要</span></span><br><span class="line">docker image rm &lt;id、repository:tag&gt; <span class="comment"># 删除镜像，在通过id删除时，可以指定前3个字符以上，但是要能足够用于区分别的镜像</span></span><br><span class="line">docker image rm &lt;digest&gt; <span class="comment"># 精确删除</span></span><br></pre></td></tr></table></figure>
+
 <p><em>Union FS 是有最大层数限制的,比如 AUFS，一个镜像不能超过127层</em></p>
 <p>当利用 <code>docker run</code> 来创建容器时，Docker 在后台运行的标准操作包括：</p>
 <ul>
@@ -577,6 +579,7 @@
 <p>镜像的定制实际上就是定制每一层所添加的配置、文件.</p>
 <p>在构建Dockerfile时，如果使用了scratch为基础镜像，意味着不以任何镜像为基础，接下来所写的指令将作为镜像第一层开始，这样减少了镜像体积。</p>
 <h2 id="从标准输入中读取Dockerfile"><a href="#从标准输入中读取Dockerfile" class="headerlink" title="从标准输入中读取Dockerfile"></a>从标准输入中读取Dockerfile</h2><figure class="highlight docker"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line">docker build - &lt; Dockerfile</span><br><span class="line">或</span><br><span class="line">cat Dockerfile | docker build -</span><br></pre></td></tr></table></figure>
+
 <p>如果标准输入传入的是文本文件，则将其视为<code>Dockerfile</code>，并开始构建。这种形式由于直接从标准输入中读取Dockerfile的内容，它没有上下文，因此不以像其他方法那样将文本文件<code>Copy</code>进镜像之类的事情</p>
 <h2 id="ADD中更高级的复制文件"><a href="#ADD中更高级的复制文件" class="headerlink" title="ADD中更高级的复制文件"></a>ADD中更高级的复制文件</h2><p>ADD指令将会自动解压缩这个压缩文件到&lt;目标路径&gt;</p>
 <h2 id="COPY和ADD指令选择时遵循的原则"><a href="#COPY和ADD指令选择时遵循的原则" class="headerlink" title="COPY和ADD指令选择时遵循的原则"></a>COPY和ADD指令选择时遵循的原则</h2><p>所有文件复制均使用COPY指令,仅在需要自动解压缩的场合使用ADD</p>
@@ -592,6 +595,7 @@
 </ul>
 <p><em><code>CMD</code>、<code>ENTRYPOINT</code>、<code>HEALTHCHECK</code>三者的共同点：在Dockerfile文件中只可以出现一次，如果出现多次，只有最后一个生效。</em></p>
 <h2 id="镜像迁移"><a href="#镜像迁移" class="headerlink" title="镜像迁移"></a>镜像迁移</h2><figure class="highlight docker"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line">docker export container_id &gt; export_filename.tar</span><br><span class="line"></span><br><span class="line">cat export_filename.tar | docker import - repository:tag</span><br></pre></td></tr></table></figure>
+
 <p>此处利用了Linux中的管道，将一个镜像文件从一台机器迁移到另一台机器</p>
 <h2 id="docker-attach和docker-exec的区别"><a href="#docker-attach和docker-exec的区别" class="headerlink" title="docker attach和docker exec的区别"></a>docker attach和docker exec的区别</h2><p>相同点：</p>
 <ul>
@@ -604,6 +608,7 @@
 <li>exec进入终端，输入exit退出时，不会导致容器的停止</li>
 </ul>
 <h2 id="容器的操作"><a href="#容器的操作" class="headerlink" title="容器的操作"></a>容器的操作</h2><figure class="highlight docker"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line">docker container rm 容器名称</span><br><span class="line">docker container prune <span class="comment"># 清理所有处于终止状态的容器</span></span><br></pre></td></tr></table></figure>
+
 <p>如果要删除一个运行中的容器,可以添加-f参数。Docker 会发送SIGKILL信号给容器。</p>
 <h2 id="Docker-数据管理"><a href="#Docker-数据管理" class="headerlink" title="Docker 数据管理"></a>Docker 数据管理</h2><p>在容器中管理数据主要有两种方式：</p>
 <ul>
@@ -618,6 +623,7 @@
 <li>数据卷默认一直存在，即使容器被删除</li>
 </ul>
 <h3 id="数据卷操作命令"><a href="#数据卷操作命令" class="headerlink" title="数据卷操作命令"></a>数据卷操作命令</h3><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br></pre></td><td class="code"><pre><span class="line">docker volume create &lt;volumename&gt; # 创建一个数据卷</span><br><span class="line">docker volume ls # 查看所有数据卷</span><br><span class="line">docker inspect &lt;contrainer name&gt; # 查看容器的信息</span><br><span class="line">docker volume rm &lt;volumename&gt; # 删除数据卷</span><br></pre></td></tr></table></figure>
+
 <p>在用docker run命令的时候，使用 –mount标记来将数据卷挂载到容器里，在一次docker run中可以挂载多个数据卷。</p>
 <p>数据卷是被设计用来持久化数据的，它的声明周期独立于容器，Docker不会在容器被删除后自动删除数据卷，并且也不存在垃圾回收机制。</p>
 <h3 id="使用网络"><a href="#使用网络" class="headerlink" title="使用网络"></a>使用网络</h3><p>在容器中运行一个网络应用，要让外部也可以访问这些应用，可以通过-P或-p参数来执行端口映射</p>
@@ -760,7 +766,7 @@
                 
                   <a href="/archives/">
                 
-                    <span class="site-state-item-count">35</span>
+                    <span class="site-state-item-count">36</span>
                     <span class="site-state-item-name">日志</span>
                   </a>
                 </div>
@@ -803,7 +809,9 @@
                     
                       
                     
-                    <span class="site-state-item-count">13</span>
+                      
+                    
+                    <span class="site-state-item-count">14</span>
                     <span class="site-state-item-name">分类</span>
                   </a>
                 </div>
@@ -928,7 +936,9 @@
                     
                       
                     
-                    <span class="site-state-item-count">54</span>
+                      
+                    
+                    <span class="site-state-item-count">55</span>
                     <span class="site-state-item-name">标签</span>
                   </a>
                 </div>
@@ -1043,7 +1053,7 @@
     
       <span class="post-meta-item-text">站点总字数：</span>
     
-    <span title="站点总字数">125k</span>
+    <span title="站点总字数">110k</span>
   
 
   
@@ -1054,7 +1064,7 @@
     
       <span class="post-meta-item-text">站点阅读时长 &asymp;</span>
     
-    <span title="站点阅读时长">3:29</span>
+    <span title="站点阅读时长">3:03</span>
   
 </div>
 

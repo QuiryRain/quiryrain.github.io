@@ -15,7 +15,7 @@
 
 
 <html class="theme-next gemini use-motion" lang="zh-CN">
-<head><meta name="generator" content="Hexo 3.8.0">
+<head><meta name="generator" content="Hexo 3.9.0">
   <meta charset="UTF-8">
 <meta http-equiv="X-UA-Compatible" content="IE=edge">
 <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=2">
@@ -511,7 +511,7 @@
                 
                   <span class="post-meta-item-text">本文字数：</span>
                 
-                <span title="本文字数">1.2k</span>
+                <span title="本文字数">3.1k</span>
               
 
               
@@ -525,7 +525,7 @@
                 
                   <span class="post-meta-item-text">阅读时长 &asymp;</span>
                 
-                <span title="阅读时长">2 分钟</span>
+                <span title="阅读时长">5 分钟</span>
               
             </div>
           
@@ -548,6 +548,7 @@
         <p>最近由于工作需要，需要对部分网站进行全文截屏。在网上搜了很久没有搜出好的方法，而且在新版的selenium中已经不在支持PhantomJS了，所以全文截取变得有点棘手。</p>
 <p>此处给出一个简单的方法，以20行代码实现<code>selenium+chromedriver+python</code>实现豆瓣的全文截取。  </p>
 <figure class="highlight python"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">from</span> selenium <span class="keyword">import</span> webdriver</span><br><span class="line"></span><br><span class="line">options = webdriver.ChromeOptions()</span><br><span class="line">options.add_argument(<span class="string">'--headless'</span>)</span><br><span class="line">options.add_argument(<span class="string">'--dns-prefetch-disable'</span>)</span><br><span class="line">options.add_argument(<span class="string">'--no-referrers'</span>)</span><br><span class="line">options.add_argument(<span class="string">'--disable-gpu'</span>)</span><br><span class="line">options.add_argument(<span class="string">'--disable-audio'</span>)</span><br><span class="line">options.add_argument(<span class="string">'--no-sandbox'</span>)</span><br><span class="line">options.add_argument(<span class="string">'--ignore-certificate-errors'</span>)</span><br><span class="line">options.add_argument(<span class="string">'--allow-insecure-localhost'</span>)</span><br><span class="line"></span><br><span class="line">driver = webdriver.Chrome(options=options)</span><br><span class="line">driver.get(<span class="string">'http://www.douban.com'</span>)</span><br><span class="line">width = driver.execute_script(</span><br><span class="line">        <span class="string">"return Math.max(document.body.scrollWidth, document.body.offsetWidth, document.documentElement.clientWidth, document.documentElement.scrollWidth, document.documentElement.offsetWidth);"</span>)</span><br><span class="line">height = driver.execute_script(</span><br><span class="line">        <span class="string">"return Math.max(document.body.scrollHeight, document.body.offsetHeight, document.documentElement.clientHeight, document.documentElement.scrollHeight, document.documentElement.offsetHeight);"</span>)</span><br><span class="line">driver.set_window_size(width + <span class="number">100</span>, height + <span class="number">100</span>)</span><br><span class="line">driver.save_screenshot(<span class="string">'douban.png'</span>)</span><br><span class="line">driver.close()</span><br></pre></td></tr></table></figure>
+
 <p><img src="/userImages/doubanjieping.png" alt="豆瓣全屏截取"></p>
 
       
@@ -665,7 +666,7 @@
                 
                   <a href="/archives/">
                 
-                    <span class="site-state-item-count">35</span>
+                    <span class="site-state-item-count">36</span>
                     <span class="site-state-item-name">日志</span>
                   </a>
                 </div>
@@ -708,7 +709,9 @@
                     
                       
                     
-                    <span class="site-state-item-count">13</span>
+                      
+                    
+                    <span class="site-state-item-count">14</span>
                     <span class="site-state-item-name">分类</span>
                   </a>
                 </div>
@@ -833,7 +836,9 @@
                     
                       
                     
-                    <span class="site-state-item-count">54</span>
+                      
+                    
+                    <span class="site-state-item-count">55</span>
                     <span class="site-state-item-name">标签</span>
                   </a>
                 </div>
@@ -931,7 +936,7 @@
     
       <span class="post-meta-item-text">站点总字数：</span>
     
-    <span title="站点总字数">125k</span>
+    <span title="站点总字数">110k</span>
   
 
   
@@ -942,7 +947,7 @@
     
       <span class="post-meta-item-text">站点阅读时长 &asymp;</span>
     
-    <span title="站点阅读时长">3:29</span>
+    <span title="站点阅读时长">3:03</span>
   
 </div>
 

@@ -15,7 +15,7 @@
 
 
 <html class="theme-next gemini use-motion" lang="zh-CN">
-<head><meta name="generator" content="Hexo 3.8.0">
+<head><meta name="generator" content="Hexo 3.9.0">
   <meta charset="UTF-8">
 <meta http-equiv="X-UA-Compatible" content="IE=edge">
 <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=2">
@@ -523,7 +523,7 @@
                 
                   <span class="post-meta-item-text">本文字数：</span>
                 
-                <span title="本文字数">1.9k</span>
+                <span title="本文字数">4.7k</span>
               
 
               
@@ -537,7 +537,7 @@
                 
                   <span class="post-meta-item-text">阅读时长 &asymp;</span>
                 
-                <span title="阅读时长">3 分钟</span>
+                <span title="阅读时长">8 分钟</span>
               
             </div>
           
@@ -566,6 +566,7 @@
 <p>在阿里开源镜像中找到<code>pypi</code>，然后点击帮助。  </p>
 <p>打开<code>C:\User\XXX</code>，然后在其中创建pip文件夹，打开刚创建的pip文件夹，在其中创建<code>pip.ini</code>文件。最后将下方代码粘贴进去即可。</p>
 <figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br></pre></td><td class="code"><pre><span class="line">[global]</span><br><span class="line">index-url = https://mirrors.aliyun.com/pypi/simple/</span><br><span class="line"></span><br><span class="line">[install]</span><br><span class="line">trusted-host=mirrors.aliyun.com</span><br></pre></td></tr></table></figure>
+
 <p>现在开始介绍Tensorflow的安装</p>
 <ul>
 <li><p>CPU版的安装</p>
@@ -582,7 +583,7 @@
 <li><p>CUDA的下载与安装</p>
 <p>下载网址:<a href="https://developer.nvidia.com/cuda-downloads" target="_blank" rel="noopener">https://developer.nvidia.com/cuda-downloads</a></p>
 <p><img src="/userImages/cuda_download_1.png" alt></p>
-<p>如果当前的CUDA Toolkit版本比较高，需要选择低版本的CUDA Toolkit，请点击<em>Legacy Releases</em>之后选择Tensorflow官网要求的版本。</p>
+<p>如果当前的CUDA Toolkit版本比较高，需要选择低版本的CUDA Toolkit，请点击_Legacy Releases_之后选择Tensorflow官网要求的版本。</p>
 <p><img src="/userImages/cuda_download_2.png" alt></p>
 <p><img src="/userImages/cuda_download_3.png" alt></p>
 <p>最后等待下载完毕。</p>
@@ -620,10 +621,12 @@
 <li><p>环境变量的配置</p>
 <p>将以下两个路径添加进系统的环境变量中，最后将刚才添加的环境变量移动到最上面。</p>
 <figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line">C:\Program Files\NVIDIA GPU Computing Toolkit\CUDA\v10.0\extras\CUPTI\libx64</span><br><span class="line">C:\Program Files\NVIDIA GPU Computing Toolkit\CUDA\v10.0\cudnn\bin</span><br></pre></td></tr></table></figure>
+
 <p><img src="/userImages/cuda_and_cudnn.png" alt></p>
 </li>
 <li><p>验证是否可用</p>
 <figure class="highlight python"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">import</span> tensorflow <span class="keyword">as</span> tf</span><br><span class="line">tf.test.is_gpu_available()</span><br></pre></td></tr></table></figure>
+
 <p><img src="/userImages/cuda_and_cudnn_1.png" alt></p>
 <p>通过以上程序，如果没有出错，则说明安装成功，如果出错，请仔细阅读以上内容。</p>
 </li>
@@ -753,7 +756,7 @@
                 
                   <a href="/archives/">
                 
-                    <span class="site-state-item-count">35</span>
+                    <span class="site-state-item-count">36</span>
                     <span class="site-state-item-name">日志</span>
                   </a>
                 </div>
@@ -796,7 +799,9 @@
                     
                       
                     
-                    <span class="site-state-item-count">13</span>
+                      
+                    
+                    <span class="site-state-item-count">14</span>
                     <span class="site-state-item-name">分类</span>
                   </a>
                 </div>
@@ -921,7 +926,9 @@
                     
                       
                     
-                    <span class="site-state-item-count">54</span>
+                      
+                    
+                    <span class="site-state-item-count">55</span>
                     <span class="site-state-item-name">标签</span>
                   </a>
                 </div>
@@ -1036,7 +1043,7 @@
     
       <span class="post-meta-item-text">站点总字数：</span>
     
-    <span title="站点总字数">125k</span>
+    <span title="站点总字数">110k</span>
   
 
   
@@ -1047,7 +1054,7 @@
     
       <span class="post-meta-item-text">站点阅读时长 &asymp;</span>
     
-    <span title="站点阅读时长">3:29</span>
+    <span title="站点阅读时长">3:03</span>
   
 </div>
 

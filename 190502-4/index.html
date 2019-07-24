@@ -15,7 +15,7 @@
 
 
 <html class="theme-next gemini use-motion" lang="zh-CN">
-<head><meta name="generator" content="Hexo 3.8.0">
+<head><meta name="generator" content="Hexo 3.9.0">
   <meta charset="UTF-8">
 <meta http-equiv="X-UA-Compatible" content="IE=edge">
 <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=2">
@@ -513,7 +513,7 @@
                 
                   <span class="post-meta-item-text">本文字数：</span>
                 
-                <span title="本文字数">4.1k</span>
+                <span title="本文字数">13k</span>
               
 
               
@@ -527,7 +527,7 @@
                 
                   <span class="post-meta-item-text">阅读时长 &asymp;</span>
                 
-                <span title="阅读时长">7 分钟</span>
+                <span title="阅读时长">22 分钟</span>
               
             </div>
           
@@ -566,15 +566,20 @@
 <p>在使用该方法编译的时候，一个函数只有一个参数时，有可能会出现无法找到函数的情况，鉴于这种情况，请参考复杂编译的过程。以Cython官方实例为例：</p>
 <p><code>setup.py</code>文件：</p>
 <figure class="highlight python"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">from</span> distutils.core <span class="keyword">import</span> setup</span><br><span class="line"><span class="keyword">from</span> Cython.Build <span class="keyword">import</span> cythonize</span><br><span class="line"></span><br><span class="line">setup(</span><br><span class="line">  name = <span class="string">'Hello world app'</span>,</span><br><span class="line">  ext_modules = cythonize(<span class="string">"hello.py"</span>),</span><br><span class="line">)</span><br></pre></td></tr></table></figure>
+
 <p><code>hello.py</code>文件：</p>
 <figure class="highlight python"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line"><span class="function"><span class="keyword">def</span> <span class="title">say_hello_to</span><span class="params">(name)</span>:</span></span><br><span class="line">    print(<span class="string">"Hello %s!"</span> % name)</span><br></pre></td></tr></table></figure>
+
 <p><img src="/userImages/Cython_example1.png" alt="example1"></p>
 <p>运行<code>python setup.py build_ext --inplace</code>，生成<code>.so</code>文件，删除该文件夹中的<code>py文件</code>和<code>c文件</code>。<br>在终端导入使用：<br><img src="/userImages/Cython_example2.png" alt="example2"></p>
 <ul>
 <li>使用<code>setup.py</code>文件进行复杂编译</li>
 </ul>
 <figure class="highlight python"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">from</span> setuptools <span class="keyword">import</span> setup</span><br><span class="line"><span class="keyword">from</span> setuptools.extension <span class="keyword">import</span> Extension</span><br><span class="line"><span class="keyword">from</span> Cython.Build <span class="keyword">import</span> cythonize</span><br><span class="line"><span class="keyword">from</span> Cython.Distutils <span class="keyword">import</span> build_ext</span><br><span class="line"></span><br><span class="line">setup(</span><br><span class="line">    ext_modules=cythonize(</span><br><span class="line">        [</span><br><span class="line">            Extension(<span class="string">'mypkg.*'</span>, [<span class="string">'mypkg/*.py'</span>]),</span><br><span class="line">            Extension(<span class="string">'mypkg.submypkg1.*'</span>, [<span class="string">'mypkg/submypkg1/*.py'</span>]),</span><br><span class="line">            Extension(<span class="string">'mypkg.submypkg2.*'</span>, [<span class="string">'mypkg/submypkg2/*.py'</span>]),</span><br><span class="line">            Extension(<span class="string">'mypkg2.*'</span>, [<span class="string">'mypkg2/*.py'</span>]),</span><br><span class="line">        ],</span><br><span class="line">        build_dir=<span class="string">'build'</span>,</span><br><span class="line">        compiler_directives=dict(</span><br><span class="line">            always_allow_keywords=<span class="literal">True</span></span><br><span class="line">        )</span><br><span class="line">    ),</span><br><span class="line">    cmdclass = dict(</span><br><span class="line">        build_ext=build_ext</span><br><span class="line">    ),</span><br><span class="line">)</span><br></pre></td></tr></table></figure>
-<p>结果：<br><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br><span class="line">26</span><br><span class="line">27</span><br><span class="line">28</span><br><span class="line">29</span><br><span class="line">30</span><br><span class="line">31</span><br><span class="line">32</span><br><span class="line">33</span><br><span class="line">34</span><br><span class="line">35</span><br><span class="line">36</span><br><span class="line">37</span><br><span class="line">38</span><br><span class="line">39</span><br><span class="line">40</span><br><span class="line">41</span><br><span class="line">42</span><br><span class="line">43</span><br><span class="line">44</span><br><span class="line">45</span><br><span class="line">46</span><br><span class="line">47</span><br><span class="line">48</span><br><span class="line">49</span><br><span class="line">50</span><br><span class="line">51</span><br><span class="line">52</span><br><span class="line">53</span><br><span class="line">54</span><br><span class="line">55</span><br><span class="line">56</span><br><span class="line">57</span><br><span class="line">58</span><br><span class="line">59</span><br><span class="line">60</span><br><span class="line">61</span><br><span class="line">62</span><br><span class="line">63</span><br><span class="line">64</span><br><span class="line">65</span><br></pre></td><td class="code"><pre><span class="line">.</span><br><span class="line">├── build</span><br><span class="line">│   ├── mypkg</span><br><span class="line">│   │   ├── bar.c</span><br><span class="line">│   │   ├── foo.c</span><br><span class="line">│   │   ├── __init__.c</span><br><span class="line">│   │   ├── submypkg1</span><br><span class="line">│   │   │   ├── bar.c</span><br><span class="line">│   │   │   ├── foo.c</span><br><span class="line">│   │   │   └── __init__.c</span><br><span class="line">│   │   └── submypkg2</span><br><span class="line">│   │       ├── bar.c</span><br><span class="line">│   │       ├── foo.c</span><br><span class="line">│   │       └── __init__.c</span><br><span class="line">│   ├── mypkg2</span><br><span class="line">│   │   ├── bar.c</span><br><span class="line">│   │   ├── foo.c</span><br><span class="line">│   │   └── __init__.c</span><br><span class="line">│   └── temp.linux-x86_64-3.7</span><br><span class="line">│       └── build</span><br><span class="line">│           ├── mypkg</span><br><span class="line">│           │   ├── bar.o</span><br><span class="line">│           │   ├── foo.o</span><br><span class="line">│           │   ├── __init__.o</span><br><span class="line">│           │   ├── submypkg1</span><br><span class="line">│           │   │   ├── bar.o</span><br><span class="line">│           │   │   ├── foo.o</span><br><span class="line">│           │   │   └── __init__.o</span><br><span class="line">│           │   └── submypkg2</span><br><span class="line">│           │       ├── bar.o</span><br><span class="line">│           │       ├── foo.o</span><br><span class="line">│           │       └── __init__.o</span><br><span class="line">│           └── mypkg2</span><br><span class="line">│               ├── bar.o</span><br><span class="line">│               ├── foo.o</span><br><span class="line">│               └── __init__.o</span><br><span class="line">├── mypkg</span><br><span class="line">│   ├── bar.cpython-37m-x86_64-linux-gnu.so</span><br><span class="line">│   ├── bar.py</span><br><span class="line">│   ├── foo.cpython-37m-x86_64-linux-gnu.so</span><br><span class="line">│   ├── foo.py</span><br><span class="line">│   ├── __init__.cpython-37m-x86_64-linux-gnu.so</span><br><span class="line">│   ├── __init__.py</span><br><span class="line">│   ├── submypkg1</span><br><span class="line">│   │   ├── bar.cpython-37m-x86_64-linux-gnu.so</span><br><span class="line">│   │   ├── bar.py</span><br><span class="line">│   │   ├── foo.cpython-37m-x86_64-linux-gnu.so</span><br><span class="line">│   │   ├── foo.py</span><br><span class="line">│   │   ├── __init__.cpython-37m-x86_64-linux-gnu.so</span><br><span class="line">│   │   └── __init__.py</span><br><span class="line">│   └── submypkg2</span><br><span class="line">│       ├── bar.cpython-37m-x86_64-linux-gnu.so</span><br><span class="line">│       ├── bar.py</span><br><span class="line">│       ├── foo.cpython-37m-x86_64-linux-gnu.so</span><br><span class="line">│       ├── foo.py</span><br><span class="line">│       ├── __init__.cpython-37m-x86_64-linux-gnu.so</span><br><span class="line">│       └── __init__.py</span><br><span class="line">├── mypkg2</span><br><span class="line">│   ├── bar.cpython-37m-x86_64-linux-gnu.so</span><br><span class="line">│   ├── bar.py</span><br><span class="line">│   ├── foo.cpython-37m-x86_64-linux-gnu.so</span><br><span class="line">│   ├── foo.py</span><br><span class="line">│   ├── __init__.cpython-37m-x86_64-linux-gnu.so</span><br><span class="line">│   └── __init__.py</span><br><span class="line">└── setup.py</span><br></pre></td></tr></table></figure></p>
+
+<p>结果：</p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br><span class="line">26</span><br><span class="line">27</span><br><span class="line">28</span><br><span class="line">29</span><br><span class="line">30</span><br><span class="line">31</span><br><span class="line">32</span><br><span class="line">33</span><br><span class="line">34</span><br><span class="line">35</span><br><span class="line">36</span><br><span class="line">37</span><br><span class="line">38</span><br><span class="line">39</span><br><span class="line">40</span><br><span class="line">41</span><br><span class="line">42</span><br><span class="line">43</span><br><span class="line">44</span><br><span class="line">45</span><br><span class="line">46</span><br><span class="line">47</span><br><span class="line">48</span><br><span class="line">49</span><br><span class="line">50</span><br><span class="line">51</span><br><span class="line">52</span><br><span class="line">53</span><br><span class="line">54</span><br><span class="line">55</span><br><span class="line">56</span><br><span class="line">57</span><br><span class="line">58</span><br><span class="line">59</span><br><span class="line">60</span><br><span class="line">61</span><br><span class="line">62</span><br><span class="line">63</span><br><span class="line">64</span><br><span class="line">65</span><br></pre></td><td class="code"><pre><span class="line">.</span><br><span class="line">├── build</span><br><span class="line">│   ├── mypkg</span><br><span class="line">│   │   ├── bar.c</span><br><span class="line">│   │   ├── foo.c</span><br><span class="line">│   │   ├── __init__.c</span><br><span class="line">│   │   ├── submypkg1</span><br><span class="line">│   │   │   ├── bar.c</span><br><span class="line">│   │   │   ├── foo.c</span><br><span class="line">│   │   │   └── __init__.c</span><br><span class="line">│   │   └── submypkg2</span><br><span class="line">│   │       ├── bar.c</span><br><span class="line">│   │       ├── foo.c</span><br><span class="line">│   │       └── __init__.c</span><br><span class="line">│   ├── mypkg2</span><br><span class="line">│   │   ├── bar.c</span><br><span class="line">│   │   ├── foo.c</span><br><span class="line">│   │   └── __init__.c</span><br><span class="line">│   └── temp.linux-x86_64-3.7</span><br><span class="line">│       └── build</span><br><span class="line">│           ├── mypkg</span><br><span class="line">│           │   ├── bar.o</span><br><span class="line">│           │   ├── foo.o</span><br><span class="line">│           │   ├── __init__.o</span><br><span class="line">│           │   ├── submypkg1</span><br><span class="line">│           │   │   ├── bar.o</span><br><span class="line">│           │   │   ├── foo.o</span><br><span class="line">│           │   │   └── __init__.o</span><br><span class="line">│           │   └── submypkg2</span><br><span class="line">│           │       ├── bar.o</span><br><span class="line">│           │       ├── foo.o</span><br><span class="line">│           │       └── __init__.o</span><br><span class="line">│           └── mypkg2</span><br><span class="line">│               ├── bar.o</span><br><span class="line">│               ├── foo.o</span><br><span class="line">│               └── __init__.o</span><br><span class="line">├── mypkg</span><br><span class="line">│   ├── bar.cpython-37m-x86_64-linux-gnu.so</span><br><span class="line">│   ├── bar.py</span><br><span class="line">│   ├── foo.cpython-37m-x86_64-linux-gnu.so</span><br><span class="line">│   ├── foo.py</span><br><span class="line">│   ├── __init__.cpython-37m-x86_64-linux-gnu.so</span><br><span class="line">│   ├── __init__.py</span><br><span class="line">│   ├── submypkg1</span><br><span class="line">│   │   ├── bar.cpython-37m-x86_64-linux-gnu.so</span><br><span class="line">│   │   ├── bar.py</span><br><span class="line">│   │   ├── foo.cpython-37m-x86_64-linux-gnu.so</span><br><span class="line">│   │   ├── foo.py</span><br><span class="line">│   │   ├── __init__.cpython-37m-x86_64-linux-gnu.so</span><br><span class="line">│   │   └── __init__.py</span><br><span class="line">│   └── submypkg2</span><br><span class="line">│       ├── bar.cpython-37m-x86_64-linux-gnu.so</span><br><span class="line">│       ├── bar.py</span><br><span class="line">│       ├── foo.cpython-37m-x86_64-linux-gnu.so</span><br><span class="line">│       ├── foo.py</span><br><span class="line">│       ├── __init__.cpython-37m-x86_64-linux-gnu.so</span><br><span class="line">│       └── __init__.py</span><br><span class="line">├── mypkg2</span><br><span class="line">│   ├── bar.cpython-37m-x86_64-linux-gnu.so</span><br><span class="line">│   ├── bar.py</span><br><span class="line">│   ├── foo.cpython-37m-x86_64-linux-gnu.so</span><br><span class="line">│   ├── foo.py</span><br><span class="line">│   ├── __init__.cpython-37m-x86_64-linux-gnu.so</span><br><span class="line">│   └── __init__.py</span><br><span class="line">└── setup.py</span><br></pre></td></tr></table></figure>
+
 <ul>
 <li>运行文件<code>python setup.py build_ext --inplace</code></li>
 <li>最终会在当前文件夹中生成build文件夹，同时在build文件夹中生成相应的文件夹和<code>.c</code>文件，在主目录对应的文件夹中生成<code>.so</code>文件，此时的<code>.so</code>文件就可以通过导入的方式直接使用。</li>
@@ -582,11 +587,13 @@
 </ul>
 <hr>
 <h2 id="注意事项："><a href="#注意事项：" class="headerlink" title="注意事项："></a>注意事项：</h2><ul>
-<li>此<code>always_allow_keywords=True</code>参数一定要添加，因为<code>always_allow_keywords</code>指令禁用具有大量参数的函数只允许使用关键字参数，如果不禁用，此处在传入一个参数时会找不到对应的函数。</li>
+<li><p>此<code>always_allow_keywords=True</code>参数一定要添加，因为<code>always_allow_keywords</code>指令禁用具有大量参数的函数只允许使用关键字参数，如果不禁用，此处在传入一个参数时会找不到对应的函数。</p>
+</li>
 <li><p>在使用第二种方法时，一定要注意一点，在有celery task任务的文件中，无法进行编译，否则在编译过后会出现celery无法启动的情况。</p>
 <ul>
 <li><p>对上文出现的问题进行给出一个解答：<br>在上文中，如果编译了带有task任务的文件，会出现以下错误  </p>
 <figure class="highlight python"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">AttributeError: <span class="string">'method-wrapper'</span> object has no attribute <span class="string">'__module__'</span></span><br></pre></td></tr></table></figure>
+
 <p>解决方法为：  </p>
 <blockquote>
 <ul>
@@ -730,7 +737,7 @@
                 
                   <a href="/archives/">
                 
-                    <span class="site-state-item-count">35</span>
+                    <span class="site-state-item-count">36</span>
                     <span class="site-state-item-name">日志</span>
                   </a>
                 </div>
@@ -773,7 +780,9 @@
                     
                       
                     
-                    <span class="site-state-item-count">13</span>
+                      
+                    
+                    <span class="site-state-item-count">14</span>
                     <span class="site-state-item-name">分类</span>
                   </a>
                 </div>
@@ -898,7 +907,9 @@
                     
                       
                     
-                    <span class="site-state-item-count">54</span>
+                      
+                    
+                    <span class="site-state-item-count">55</span>
                     <span class="site-state-item-name">标签</span>
                   </a>
                 </div>
@@ -1013,7 +1024,7 @@
     
       <span class="post-meta-item-text">站点总字数：</span>
     
-    <span title="站点总字数">125k</span>
+    <span title="站点总字数">110k</span>
   
 
   
@@ -1024,7 +1035,7 @@
     
       <span class="post-meta-item-text">站点阅读时长 &asymp;</span>
     
-    <span title="站点阅读时长">3:29</span>
+    <span title="站点阅读时长">3:03</span>
   
 </div>
 
