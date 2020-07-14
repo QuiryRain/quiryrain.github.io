@@ -307,7 +307,7 @@
                   <i class="far fa-calendar-check"></i>
                 </span>
                 <span class="post-meta-item-text">更新于</span>
-                <time title="修改时间：2019-03-05 21:32:48" itemprop="dateModified" datetime="2019-03-05T21:32:48+08:00">2019-03-05</time>
+                <time title="修改时间：2020-07-14 08:30:57" itemprop="dateModified" datetime="2020-07-14T08:30:57+08:00">2020-07-14</time>
               </span>
             <span class="post-meta-item">
               <span class="post-meta-item-icon">
@@ -360,22 +360,14 @@
       
           <p>Python中的位运算是程序设计中对位模式或二进制的一元和二元操作。<br>按位运算就是把数字转换为机器语言—以二进制形式表示  </p>
 <h2 id="Python中的位运算有哪些？"><a href="#Python中的位运算有哪些？" class="headerlink" title="Python中的位运算有哪些？"></a>Python中的位运算有哪些？</h2><p>在Python中，按位运算符有左移运算符（&lt;&lt;）、右移运算符（&gt;&gt;）、按位与运算（&amp;）、按位或运算（|）、按位取反运算（~）、异或运算符，其中按位取反运算符为单目运算符</p>
-<h3 id="按位左移运算符（-lt-lt-）"><a href="#按位左移运算符（-lt-lt-）" class="headerlink" title="按位左移运算符（&lt;&lt;）"></a>按位左移运算符（&lt;&lt;）</h3><p>在机器语言中，任何形式均以二进制的形式进行表示：<br>举例：7&lt;&lt;2<br>二进制为：111 左移两位：11100 最后结果为：28  </p>
-<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line">&gt;&gt;&gt; 7&lt;&lt;2</span><br><span class="line">28</span><br></pre></td></tr></table></figure>
-
-<h3 id="按位右移运算符（-gt-gt-）"><a href="#按位右移运算符（-gt-gt-）" class="headerlink" title="按位右移运算符（&gt;&gt;）"></a>按位右移运算符（&gt;&gt;）</h3><p>具体的使用形式和左移一样。<br>举例：<br>7&gt;&gt;2<br>28&gt;&gt;2<br>二进制：7的二进制为：111，右移两位后为001，结果即为1<br>28的二进制为:11100，右移两位后为00111，结果为7  </p>
-<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br></pre></td><td class="code"><pre><span class="line">&gt;&gt;&gt; 7&gt;&gt;2</span><br><span class="line">1</span><br><span class="line">&gt;&gt;&gt; 28&gt;&gt;2</span><br><span class="line">7</span><br></pre></td></tr></table></figure>
-<p>由于正数和负数的二进制形式不同，所以此处特别说下以下两个运算。在计算机中，负数的二进制形式是其正数的补码形式，此处不做特别的说明，需要知道的以下给出一个<a href="http://www.cnblogs.com/junsky/archive/2009/08/06/1540727.html" target="_blank" rel="noopener">链接</a>.</p>
-<h3 id="按位与运算（-amp-）"><a href="#按位与运算（-amp-）" class="headerlink" title="按位与运算（&amp;）"></a>按位与运算（&amp;）</h3><p>正数和正数的与运算：<br>举例： 7&amp;9<br>二进制：7的二进制为:0111，9的二进制为:1001<br>说明：根据（1&amp;1=1、1&amp;0=0、0&amp;1=0、0&amp;0=0）即相同位置同为1结果即为1，否者为0，由此可见7&amp;9的二进制形式为：0111&amp;1001 == 0001<br>正数与负数的与运算：<br>举例：-7&amp;5<br>二进制：-7：1001，5：0101。结果为1<br>说明：此处你可能要问-7的二进制和9的二进制不是相同吗？答案是不相同，在机器中-7的二进制为：11111111 11111111 11111111 11111001，9的二进制为：00000000 00000000 00000000 00001001。同样根据上文的同为1既为1，所以结果为1。运算最后结果的二进制形式从最左侧的第一个0前的1开始，直至右侧结尾，将此数转换为10进制，重点是，此处不是依次相加，而是依次相减，得到的结果最后加上负号即为最后运算的结果。<br>负数与负数的与运算：<br>举例：-5&amp;-8<br>二进制：-5：11111011，-8：11111000结果为-8<br>说明：你可能会很疑惑，此处的结果明明是11111000，结果怎么是-8.原因是-5&amp;-8的二进制形式为：11111011&amp;11111000 == 11111000，从最左侧的第一个0前的1开始，直至右侧结尾，将此数转换为10进制，重点是，此处不是依次相加，而是依次相减，得到的结果最后加上负号即为最后运算的结果。  </p>
-<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br></pre></td><td class="code"><pre><span class="line">&gt;&gt;&gt; 7&amp;9</span><br><span class="line">1</span><br><span class="line">&gt;&gt;&gt; -7&amp;5</span><br><span class="line">1</span><br><span class="line">&gt;&gt;&gt; -5&amp;-8</span><br><span class="line">-8</span><br></pre></td></tr></table></figure>
-
-<h3 id="按位或运算（-）"><a href="#按位或运算（-）" class="headerlink" title="按位或运算（|）"></a>按位或运算（|）</h3><p>或运算和与运算十分相似，只是依据的逻辑运算不同，或运算的依据逻辑是相同位置有个为1结果即为1<br>正数与正数的或运算：<br>举例：7|9<br>二进制：7：0111，9：1001<br>说明：根据（1|0=1、1|1=1、0|1=1、0|0=0）可知，7|9的二进制形式为：0111|1001，结果为：15<br>负数与正数的或运算：<br>举例：-7|9<br>二进制：-7：11111001，9：00001001<br>说明：从最左侧的第一个0前的1开始的数，转化为十进制，需要进行的是依次相减运算。<br>负数与负数的或运算：<br>举例：-5|-8<br>二进制：-5：11111011，-8：11111000结果为-5<br>说明：运算最后结果的二进制形式从最左侧的第一个0前的1开始，直至右侧结尾，将此数转换为10进制，重点是，此处不是依次相加，而是依次相减，得到的结果最后加上负号即为最后运算的结果。  </p>
-<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br></pre></td><td class="code"><pre><span class="line">&gt;&gt;&gt; 7|9</span><br><span class="line">15</span><br><span class="line">&gt;&gt;&gt; -7|9</span><br><span class="line">-7</span><br><span class="line">&gt;&gt;&gt; -5|-8</span><br><span class="line">-5</span><br></pre></td></tr></table></figure>
-
-<h3 id="按位取反运算符（-）"><a href="#按位取反运算符（-）" class="headerlink" title="按位取反运算符（~）"></a>按位取反运算符（~）</h3><p>将二进制数+1之后乘以-1,假如x的二进制数是y，x的按位翻转是-(y+1)<br>举例：-3<br>去反后：2<br>二进制：-3：11111101 取反操作：-（11111101+1）==-（11111110）==2  </p>
-<h3 id="异或运算符（-）"><a href="#异或运算符（-）" class="headerlink" title="异或运算符（^）"></a>异或运算符（^）</h3><p>二进制对应位相加，不进位。依据逻辑为：（1^1=0、1^0=1、0^1=1、0^0=0）,同样依照，如果两个数中一正一负，则最后的二进制转十进制时依次相减，如果同正同负，则相加<br>正数和正数的异或运算：<br>举例：7^9<br>二进制：7：0111，9：1001<br>说明：7^9的二进制形式为：0111^1001 == 1110，十进制为：14<br>负数和正数的异或运算：<br>举例：-3^4<br>二进制：-3：11111101，4：00000100<br>说明：-3^4的二进制形式为：11111101^00000100 == 11111001,根据说明可以知道结果为-（222-1）=-7<br>负数和负数的异或运算：<br>举例：-7^-9<br>二进制：-7：11111001，-9：11110111<br>说明；-7^-9的二进制形式为：11111001^11110111 == 00001110，根据说明可以知道结果为222+2*2+2=14  </p>
-<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br></pre></td><td class="code"><pre><span class="line">&gt;&gt;&gt; 7^9</span><br><span class="line">14</span><br><span class="line">&gt;&gt;&gt; -3^4</span><br><span class="line">-7</span><br><span class="line">&gt;&gt;&gt; -7^-9</span><br><span class="line">14</span><br></pre></td></tr></table></figure>
-
+          <!--noindex-->
+            <div class="post-button">
+              <a class="btn" href="/Python%E4%BD%8D%E8%BF%90%E7%AE%97/#more" rel="contents">
+                阅读全文 &raquo;
+              </a>
+            </div>
+          <!--/noindex-->
+        
       
     </div>
 
@@ -425,7 +417,7 @@
                   <i class="far fa-calendar-check"></i>
                 </span>
                 <span class="post-meta-item-text">更新于</span>
-                <time title="修改时间：2019-03-05 21:32:48" itemprop="dateModified" datetime="2019-03-05T21:32:48+08:00">2019-03-05</time>
+                <time title="修改时间：2020-07-14 08:30:23" itemprop="dateModified" datetime="2020-07-14T08:30:23+08:00">2020-07-14</time>
               </span>
             <span class="post-meta-item">
               <span class="post-meta-item-icon">
@@ -476,28 +468,15 @@
     <div class="post-body" itemprop="articleBody">
 
       
-          <h3 id="Drivers-Models"><a href="#Drivers-Models" class="headerlink" title="Drivers Models"></a>Drivers Models</h3><p>The libvirt library exposes a guaranteed stable API &amp; ABI which is decoupled from any particular virtualization technology. In addition many of the APIs have associated XML schemata which are considered part of the stable ABI guarantee. Internally, there are multiple of implementations of the public ABI, each targeting a different virtualization technology. Each implementation is referred to as a driver. When obtaining a instance of the virConnect class, the application developer can provide a URI to determine which hypervisor driver is activated.<br>No two virtualization technologies have exactly the same functionality. The libvirt goal is not to restrict applications to a lowest common denominator, since this would result in an unacceptably limited API. Instead libvirt attempts to define a representation of concepts and configuration that is hypervisor agnostic, and adaptable to allow future extensions. Thus, if two hypervisors implement a comparable feature, libvirt provides a uniform control mechanism or configuration format for that feature.<br>If a libvirt driver does not implement a particular API, then it will return a VIR_ERR_NO_SUPPORT error code enabling this to be detected. There is also an API to allow applications to the query certain capabilities of a hypervisor, such as the type of guest ABIs that are supported.<br>Internally a libvirt driver will attempt to utilize whatever management channels are available for the virtualization technology in question. For some drivers this may require libvirt to run directly on the host being managed, talking to a local hypervisor, while others may be able to communicate remotely over an RPC service. For drivers which have no native remote communication capability, libvirt provides a generic secure RPC service. This is discussed in detail later in this chapter.  </p>
-<h3 id="Hypervisor-drivers"><a href="#Hypervisor-drivers" class="headerlink" title="Hypervisor drivers"></a>Hypervisor drivers</h3><ul>
-<li><p>Xen: The open source Xen hypervisor providing paravirtualized and fully virtualized machines.</p>
-<p>A single system driver runs in the Dom0 host talking directly to a combination of the hypervisor,xenstored and xend. Example local URI scheme xen:///.</p>
-</li>
-<li><p>QEMU: Any open source QEMU based virtualization technology, including KVM. A single privileged system driver runs in the host managing QEMU processes. Each unprivileged user account also has a private instance of the driver. Example privileged URI scheme qemu:///system. Example unprivileged URI scheme qemu:///session</p>
-</li>
-<li><p>UML: The User Mode Linux kernel, a pure paravirtualization technology. A single privileged system driver runs in the host managing UML processes. Each unprivileged user account also has a private instance of the driver. Example privileged URI scheme uml:///system. Example unprivileged URI scheme uml:///session</p>
-</li>
-<li><p>OpenVZ: The OpenVZ container based virtualization technology, using a modified Linux host kernel.</p>
-<p>A single privileged system driver runs in the host talking to the OpenVZ tools. Example privileged URI scheme openvz:///system</p>
-</li>
-<li><p>LXC: The native Linux container based virtualization technology, available with Linux kernels since 2.6.25. A single privileged system driver runs in the host talking to the kernel. Example privileged URI scheme lxc:///</p>
-</li>
-<li><p>Remote: Generic secure RPC service talking to a libvirtd daemon. Encryption and authentication using a choice of TLS, x509 certificates, SASL (GSSAPI/Kerberos) and SSH tunneling. URIs follow the scheme of the desired driver, but with a hostname filled in, and a data transport name appended to the URI scheme. Example URI to talk to Xen over a TLS channel xen+tls://somehostname/. Example URI to talk to QEMU over a SASL channel qemu+tcp:///somehost/system</p>
-</li>
-<li><p>Test: A mock driver, providing a virtual in-memory hypervisor covering all the libvirt APIs. Facilities testing of applications using libvirt, by allowing automated tests to run which exercise libvirt APIs without needing to deal with a real hypervisor Example default URI scheme test:///default.</p>
-<p>Example customized URI scheme test:///path/to/driver/config.xml</p>
-</li>
-</ul>
-<p><img data-src="/userImages/hypervisor.png" alt="Hypervisor"></p>
-
+          <h3 id="Drivers-Models"><a href="#Drivers-Models" class="headerlink" title="Drivers Models"></a>Drivers Models</h3><p>The libvirt library exposes a guaranteed stable API &amp; ABI which is decoupled from any particular virtualization technology. In addition many of the APIs have associated XML schemata which are considered part of the stable ABI guarantee. Internally, there are multiple of implementations of the public ABI, each targeting a different virtualization technology. Each implementation is referred to as a driver. When obtaining a instance of the virConnect class, the application developer can provide a URI to determine which hypervisor driver is activated.  </p>
+          <!--noindex-->
+            <div class="post-button">
+              <a class="btn" href="/hypervisor-drivers/#more" rel="contents">
+                阅读全文 &raquo;
+              </a>
+            </div>
+          <!--/noindex-->
+        
       
     </div>
 
@@ -547,7 +526,7 @@
                   <i class="far fa-calendar-check"></i>
                 </span>
                 <span class="post-meta-item-text">更新于</span>
-                <time title="修改时间：2019-03-05 21:32:48" itemprop="dateModified" datetime="2019-03-05T21:32:48+08:00">2019-03-05</time>
+                <time title="修改时间：2020-07-14 08:31:21" itemprop="dateModified" datetime="2020-07-14T08:31:21+08:00">2020-07-14</time>
               </span>
             <span class="post-meta-item">
               <span class="post-meta-item-icon">
@@ -600,111 +579,14 @@
       
           <h3 id="动静态迁移的原理"><a href="#动静态迁移的原理" class="headerlink" title="动静态迁移的原理"></a>动静态迁移的原理</h3><p>静态迁移是指在虚拟机关闭或暂停的情况下，将源宿主机上虚拟机的磁盘文件和配置文件拷贝到目标宿主机上。这种方式需要显式的停止虚拟机运行，对服务可用性要求高的需求不合适。</p>
 <p>动态迁移无需拷贝虚拟机配置文件和磁盘文件，但是需要迁移的主机之间有相同的目录结构放置虚拟机磁盘文件，可以通过多种方式实现，本例采用基于共享存储动态迁移，通过NFS来实现。</p>
-<h3 id="实验环境"><a href="#实验环境" class="headerlink" title="实验环境"></a>实验环境</h3><blockquote>
-<p>源宿主机：Ubuntu17.10 Server版操作系统，4.10.0-38-generic内核。下文中以“Node1”表示，主机名为Service，IP地址为192.168.200.132，NFS挂载目录/opt。<br>  目标宿主机：Ubuntu17.10 Server版操作系统，4.10.0-38-generic内核。下文中以“Node2”表示，主机名为Service1，IP地址为192.168.200.131，NFS挂载目录/opt。<br>  基于QEMU的动态迁移虚拟机镜像文件为ubuntu16server.img。<br>  基于libvirt的静态迁移测试虚拟机：demo1，IP为192.168.200.132，虚拟镜像文件为ubuntu16.img。<br>  基于libvirt的动态迁移测试虚拟机：demo2，IP为192.168.200.131，虚拟镜像文件为ubuntu16.img。<br>  NFS服务器：Ubuntu17.10 Server版，4.10.0-38-generic内核。IP地址为192.168.200.130，服务目录为/opt/share。  </p>
-</blockquote>
-<h2 id="配置步骤"><a href="#配置步骤" class="headerlink" title="配置步骤"></a>配置步骤</h2><h3 id="NFS服务器的搭建"><a href="#NFS服务器的搭建" class="headerlink" title="NFS服务器的搭建"></a>NFS服务器的搭建</h3><ul>
-<li><p>KVM虚拟机动态迁移无需拷贝虚拟机配置文件和磁盘文件，但是需要迁移的主机之间有相同的目录结构放置虚拟机磁盘文件（本例为“/opt/share”目录），这里的动态迁移是基于共享存储动态迁移，通过NFS来实现，需要QEMU 0.12.2以上版本支持。可以使用以下命令查看安装的QEMU的版本号。</p>
-<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">qemu-img –help|grep version</span><br></pre></td></tr></table></figure>
-</li>
-<li><p>首先在NFS服务器上，下载安装NFS，kernel-server相当于server端,common是client端，使用命令以下命令进行安装NFS:</p>
-<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">sudo apt-get install nfs-kernel-server nfs-common -y</span><br></pre></td></tr></table></figure>
-</li>
-<li><p>配置NFS服务器，将NFS服务器上的“/opt/share”目录设为服务目录。首先使用以下命令创建目录，然后修改创建的目录权限，同时如果不放心是否权限修改了，可以查看下文件夹的权限，修改后为“drwxr-xr-x”</p>
-<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line">sudo mkdir &#x2F;opt&#x2F;share,</span><br><span class="line">sudo chmod 777 &#x2F;opt&#x2F;share</span><br><span class="line">sudo ll &#x2F;opt</span><br></pre></td></tr></table></figure>
-</li>
-<li><p>接下来使用vim修改<code>/etc/exports</code>:文件添加共享目录，在该文件最后添加以下内容即可。/opt/share:表示要设置的共享目录，__:表示允许所有的网段访问，也可以使用具体的IP。rw:表示挂载此目录的客户端对该共享目录具有读写权限。sync:表示资料同步写入内存和硬盘。no_root_squash:表示root用户具有对根目录的完全管理访问权限。no_subtree_check:表示不检查父目录的权限。修改完毕后保存退出。</p>
-<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">&#x2F;opt&#x2F;share (rw,sync,no_subtree_check,no_root_squash)</span><br></pre></td></tr></table></figure>
-</li>
-<li><p><code>/etc/exports</code>文件修改后，使用命令然后进行刷新。最后启动NFS服务，命令如下:</p>
-<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line">sudo exportfs –r</span><br><span class="line">sudo &#x2F;etc&#x2F;init.d&#x2F;rpcbind restart</span><br><span class="line">sudo &#x2F;etc&#x2F;init.d&#x2F;nfs-kernel-server restart</span><br></pre></td></tr></table></figure>
-</li>
-<li><p>NFS服务启动后，在Node1上使用以下命令查看远程主机的共享目录，可以看到以下斜体内容</p>
-<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br></pre></td><td class="code"><pre><span class="line">sudo showmount -e 192.168.200.130</span><br><span class="line">root@Service:~# sudo showmount -e 192.168.200.130</span><br><span class="line">Export list for 192.168.200.130:</span><br><span class="line">&#x2F;opt&#x2F;share *</span><br></pre></td></tr></table></figure>
-</li>
-<li><p>分别在Node1和Node2上分别挂载NFS服务器的共享文件夹到本地“/opt”目录中，然后将Node1上的的虚拟磁盘文件ubuntu16server.img（前面实验中制作的ubuntu的镜像文件）拷贝到挂载NFS服务器共享目录的文件夹“/opt”中(我制作好的镜像文件在/root文件夹中)，之后可以看到ubuntu16server.img镜像文件。在节点2上执行同样的操作，但在Node2中不用执行拷贝这一命令。</p>
-<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line">sudo mount -t nfs 192.168.200.130:&#x2F;opt&#x2F;share &#x2F;opt -o rw</span><br><span class="line">sudo cp &#x2F;root&#x2F;ubuntu16server.img &#x2F;opt</span><br></pre></td></tr></table></figure>
-</li>
-<li><p>挂载拷贝完成后两节点都有相同的虚拟机磁盘文件存储目录</p>
-</li>
-</ul>
-<h3 id="基于QEMU的虚拟机动态迁移"><a href="#基于QEMU的虚拟机动态迁移" class="headerlink" title="基于QEMU的虚拟机动态迁移"></a>基于QEMU的虚拟机动态迁移</h3><ul>
-<li><p>在Node1上使用如下命令启动虚拟机，ubuntu16server.img为前面实验制作的镜像文件，-monitor stdio表示可以进入QEMU监控器，以便接下来执行迁移命令。</p>
-<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line">qemu-system-x86_64 -hda ubuntu16server.img -m 1024 -smp 1 -vnc :0 -monitor stdio</span><br><span class="line">(qemu)</span><br></pre></td></tr></table></figure>
-</li>
-<li><p>打开VNC界面，连接节点1上的QEMU虚拟机,登陆之后并执行“top”命令,可以看到界面一直在发生改变。</p>
-</li>
-<li><p>在Node2上使用以下命令启动一个虚拟机，该虚拟机并没有真实启动，只是用于等待接收动态迁移过来的内存内容，使用VNC连接后显示界面状态为黑屏，或者是有一行提示。这里需要注意：在Node2上，NFS挂载目录必须与源主机上保持一致；启动客户机命令也需一致，但是需要增加-incoming 选项。“-incoming tcp:0:6666” 这个参数表示在6666 端口建立一个tcp socket 连接用于接收来自于源宿主机的动态迁移的内容，其中“0”表示允许来自任何主机的连接，“-incoming”表示使QEMU进程进入到迁移监听（migration-listen）模式，而不是真正以命令行中的镜像文件运行客户机。另外，这里是以NFS服务器上的镜像文件作为虚拟机磁盘来启动虚拟机，如果有多个用户同时使用NFS服务器上的镜像文件，请将镜像文件在本地进行派生，使用派生后的镜像文件启动虚拟机，具体方式读者可自行查阅相关资料</p>
-<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">qemu-system-x86_64 -hda &#x2F;opt&#x2F;ubuntu16server.img -m 1024 -smp 1 -vnc :0 -incoming tcp:0:6666</span><br></pre></td></tr></table></figure>
-</li>
-<li><p>在Node1源宿主机的qemu monitor 命令行中输入以下命令迁移虚拟机，进入动态迁移的流程，其中“192.168.200.131”是目标宿主机IP，TCP协议和6666端口与目标宿主机上命令行的-incoming 参数保持一致</p>
-<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">(qemu) migrate tcp:192.168.200.131:6666 &#x2F;&#x2F;(qemu)为启动镜像时出现的qemu monitor</span><br></pre></td></tr></table></figure>
-</li>
-<li><p>在Node1上执行”migrate”命令从开始到执行完成，大约十秒钟（视网络而定），在执行完成后迁移成功。迁移后在Node2上，也就是目标宿主机上，之前处于迁移监听状态的虚拟机开始运行，在该虚拟机中可以查看到，原来在Node1上运行的虚拟机上执行的top命令在迁移后仍在继续在Node2上执行。</p>
-</li>
-<li><p>至此基于QEMU的虚拟机动态迁移完成</p>
-</li>
-</ul>
-<h3 id="基于Libvirt的虚拟机静态迁移"><a href="#基于Libvirt的虚拟机静态迁移" class="headerlink" title="基于Libvirt的虚拟机静态迁移"></a>基于Libvirt的虚拟机静态迁移</h3><ul>
-<li><p>静态迁移也叫做常规迁移、离线迁移（Offline Migration）。是在虚拟机关机或暂停的情况下，拷贝虚拟机磁盘文件与配置文件从源宿主机到目标宿主机中，实现的从一台物理机到另一台物理机的迁移。因为虚拟机的文件系统建立在虚拟机镜像文件上面，所以在虚拟机关机的情况下，只需要简单的迁移虚拟机镜像和相应的配置文件到另外一台物理主机上即可。如果需要保存虚拟机迁移之前的状态，那么应该在迁移之前将虚拟机暂停，然后拷贝状态至目标宿主机，最后在目标宿主机重建虚拟机状态，恢复执行。这种方式的迁移过程需要显式的停止虚拟机的运行。从用户角度看，有明确的一段停机时间，虚拟机上的服务不可用。这种迁移方式简单易行，适用于对服务可用性要求不严格的场合。</p>
-</li>
-<li><p>为网络添加br0网桥</p>
-<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br></pre></td><td class="code"><pre><span class="line">sudo brctl addbr br0</span><br><span class="line">sudo brctl addif br0 ens33</span><br><span class="line">sudo brctl stp br0 on</span><br><span class="line">sudo ifconfig ens33 0</span><br><span class="line">sudo dhclient br0</span><br></pre></td></tr></table></figure>
-</li>
-<li><p>在Node1上进行操作，首先确定demo虚拟机状态为“shut off”,如果不是可以执行“destroy ”进行关闭</p>
-<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">sudo virsh list –all</span><br></pre></td></tr></table></figure>
-</li>
-<li><p>准备迁移demo虚拟机，查看demo虚拟机的磁盘文件</p>
-<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">virsh domblklist</span><br></pre></td></tr></table></figure>
-</li>
-<li><p>导出虚拟机配置文件demo.xml、ubuntu16.img,将其发送到Node2中与Node1中文件对应的文件夹（demo.xml文件在文章结尾会给出代码）</p>
-<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">sudo scp &#x2F;root&#x2F;demo.xml &#x2F;root&#x2F;ubuntu16.img 192.168.200.131:&#x2F;root</span><br></pre></td></tr></table></figure>
-</li>
-<li><p>之后开始在目标宿主机Node2上进行虚拟机的配置和启动。</p>
-</li>
-<li><p>使用virsh的子命令define定义并注册demo虚拟机</p>
-<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">sudo virsh define &#x2F;root&#x2F;demo.xml</span><br></pre></td></tr></table></figure>
-</li>
-<li><p>启动迁移后的demo虚拟机,通过VNC查看,VNC端口查看</p>
-<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">sudo virsh vncdisplay</span><br></pre></td></tr></table></figure>
-</li>
-<li><p>然后通过VNC查看是否可以登陆和其他操作</p>
-</li>
-</ul>
-<h3 id="基于Libvirt的虚拟机动态迁移"><a href="#基于Libvirt的虚拟机动态迁移" class="headerlink" title="基于Libvirt的虚拟机动态迁移"></a>基于Libvirt的虚拟机动态迁移</h3><ul>
-<li><p>此处我说明下，这种迁移虽然为基于Libvirt的动态迁移，但是其迁移的只是虚拟机的状态而不是虚拟机的状态和文件，这一点我再次特别说明。</p>
-</li>
-<li><p>将Node1上的“ubuntu16.img”发送到Node2对应的文件夹,此时的demo状态为“shut off”，发送后启动demo虚拟机</p>
-<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">sudo scp &#x2F;root&#x2F;ubuntu16.img 192.168.200.131:&#x2F;root</span><br></pre></td></tr></table></figure>
-</li>
-<li><p>查看Node1上虚拟机状态，demo虚拟机保证处于“runing”（如果demo处于“shut off”，将其启动运行“sudo virsh start demo”）</p>
-<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">sudo virsh list –all</span><br></pre></td></tr></table></figure>
-</li>
-<li><p>查看Node2上虚拟机状态，确保无虚拟机运行，命令如上</p>
-</li>
-<li><p>通过VNC连接登陆，并执行“top”命令</p>
-</li>
-<li><p>在Node1上执行“virsh migrate”迁移命令，虚拟机demo在迁移出去的过程中，状态有从“running”到“shut off”的一个改变。–verbose 指迁移demo虚拟机，192.168.200.131为节点2的IP地址，使用tcp协议连接，–unsafe参数表示跳过安全检测, /system为以root身份进行状态迁移,qemu+ssh表示为通过ssh通道连接到远程节点的system实例，具有最大权限来管理远程节点上的虚拟机资源</p>
-<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">sudo virsh migrate –live –verbose demo qemu+ssh:&#x2F;&#x2F;192.168.200.131&#x2F;system tcp:&#x2F;&#x2F;192.168.200.131 –unsafe</span><br></pre></td></tr></table></figure>
-</li>
-<li><p>在Node2上,查看虚拟机demo虚拟机状态为“runing”</p>
-<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">sudo virsh list –all</span><br></pre></td></tr></table></figure>
-</li>
-<li><p>在迁移过程中，可以通过另外一台客户机一直ping虚拟机demo，查看demo迁移过程中的可连接性。实际上迁移过程除了偶尔有几个包的中断，基本上没有太大影响</p>
-</li>
-<li><p>此时虽然demo虚拟机已经在Node2上启动了，但是Node2上还没有demo虚拟机的配置文件。这时需要创建配置文件并定义该虚拟机，可以通过迁移过来的虚拟机内存状态创建虚拟机配置文件，然后通过xml配置文件定义虚拟机。</p>
-<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line">sudo virsh dumpxml demo &gt; &#x2F;etc&#x2F;libvirt&#x2F;qemu&#x2F;demo1.xml &#x2F;&#x2F;之所以命名为demo1.xml是因为，在libvirt静态迁移过程中已经有个demo.xml文件，虽然不在同一个文件夹，为了避免搞混。</span><br><span class="line">sudo virsh define &#x2F;etc&#x2F;libvirt&#x2F;qemu&#x2F;demo1.xml</span><br></pre></td></tr></table></figure>
-</li>
-<li><p>通过VNC连接查看，VNC端口号查询。</p>
-<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">sudo virsh vncdisplay demo</span><br></pre></td></tr></table></figure>
-</li>
-<li><p>在通过VNC连接上后发现迁移前的“top”命令依然在执行</p>
-</li>
-<li><p>至此，demo虚拟机迁移完成。</p>
-</li>
-</ul>
-<hr>
-<h3 id="demo-xml文件中的内容"><a href="#demo-xml文件中的内容" class="headerlink" title="demo.xml文件中的内容"></a>demo.xml文件中的内容</h3><figure class="highlight xml"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br><span class="line">26</span><br><span class="line">27</span><br><span class="line">28</span><br><span class="line">29</span><br><span class="line">30</span><br><span class="line">31</span><br><span class="line">32</span><br><span class="line">33</span><br><span class="line">34</span><br><span class="line">35</span><br><span class="line">36</span><br><span class="line">37</span><br><span class="line">38</span><br><span class="line">39</span><br><span class="line">40</span><br><span class="line">41</span><br><span class="line">42</span><br><span class="line">43</span><br><span class="line">44</span><br><span class="line">45</span><br><span class="line">46</span><br><span class="line">47</span><br><span class="line">48</span><br><span class="line">49</span><br><span class="line">50</span><br><span class="line">51</span><br><span class="line">52</span><br><span class="line">53</span><br><span class="line">54</span><br><span class="line">55</span><br><span class="line">56</span><br><span class="line">57</span><br><span class="line">58</span><br><span class="line">59</span><br><span class="line">60</span><br><span class="line">61</span><br></pre></td><td class="code"><pre><span class="line"><span class="comment">&lt;!--</span></span><br><span class="line"><span class="comment">WARNING: THIS IS AN AUTO-GENERATED FILE. CHANGES TO IT ARE LIKELY TO BE</span></span><br><span class="line"><span class="comment">OVERWRITTEN AND LOST. Changes to this xml configuration should be made using:</span></span><br><span class="line"><span class="comment">  virsh edit demo</span></span><br><span class="line"><span class="comment">or other application using the libvirt API.</span></span><br><span class="line"><span class="comment">--&gt;</span></span><br><span class="line"></span><br><span class="line"><span class="tag">&lt;<span class="name">domain</span> <span class="attr">type</span>=<span class="string">'kvm'</span>&gt;</span></span><br><span class="line">  <span class="tag">&lt;<span class="name">name</span>&gt;</span>demo<span class="tag">&lt;/<span class="name">name</span>&gt;</span></span><br><span class="line">  <span class="tag">&lt;<span class="name">uuid</span>&gt;</span>782ca9b9-8403-4fcd-979e-e4f038aaeb15<span class="tag">&lt;/<span class="name">uuid</span>&gt;</span></span><br><span class="line">  <span class="tag">&lt;<span class="name">memory</span> <span class="attr">unit</span>=<span class="string">'KiB'</span>&gt;</span>1048576<span class="tag">&lt;/<span class="name">memory</span>&gt;</span></span><br><span class="line">  <span class="tag">&lt;<span class="name">currentMemory</span> <span class="attr">unit</span>=<span class="string">'KiB'</span>&gt;</span>1048576<span class="tag">&lt;/<span class="name">currentMemory</span>&gt;</span></span><br><span class="line">  <span class="tag">&lt;<span class="name">vcpu</span> <span class="attr">placement</span>=<span class="string">'static'</span>&gt;</span>1<span class="tag">&lt;/<span class="name">vcpu</span>&gt;</span></span><br><span class="line">  <span class="tag">&lt;<span class="name">os</span>&gt;</span></span><br><span class="line">    <span class="tag">&lt;<span class="name">type</span> <span class="attr">arch</span>=<span class="string">'x86_64'</span> <span class="attr">machine</span>=<span class="string">'pc-i440fx-trusty'</span>&gt;</span>hvm<span class="tag">&lt;/<span class="name">type</span>&gt;</span></span><br><span class="line">    <span class="tag">&lt;<span class="name">boot</span> <span class="attr">dev</span>=<span class="string">'cdrom'</span>/&gt;</span></span><br><span class="line">    <span class="tag">&lt;<span class="name">boot</span> <span class="attr">dev</span>=<span class="string">'hd'</span>/&gt;</span></span><br><span class="line">  <span class="tag">&lt;/<span class="name">os</span>&gt;</span></span><br><span class="line">  <span class="tag">&lt;<span class="name">features</span>&gt;</span></span><br><span class="line">    <span class="tag">&lt;<span class="name">acpi</span>/&gt;</span></span><br><span class="line">    <span class="tag">&lt;<span class="name">apic</span>/&gt;</span></span><br><span class="line">    <span class="tag">&lt;<span class="name">pae</span>/&gt;</span></span><br><span class="line">  <span class="tag">&lt;/<span class="name">features</span>&gt;</span></span><br><span class="line">  <span class="tag">&lt;<span class="name">clock</span> <span class="attr">offset</span>=<span class="string">'localtime'</span>/&gt;</span></span><br><span class="line">  <span class="tag">&lt;<span class="name">on_poweroff</span>&gt;</span>destroy<span class="tag">&lt;/<span class="name">on_poweroff</span>&gt;</span></span><br><span class="line">  <span class="tag">&lt;<span class="name">on_reboot</span>&gt;</span>restart<span class="tag">&lt;/<span class="name">on_reboot</span>&gt;</span></span><br><span class="line">  <span class="tag">&lt;<span class="name">on_crash</span>&gt;</span>destroy<span class="tag">&lt;/<span class="name">on_crash</span>&gt;</span></span><br><span class="line">  <span class="tag">&lt;<span class="name">devices</span>&gt;</span></span><br><span class="line">    <span class="tag">&lt;<span class="name">emulator</span>&gt;</span>/usr/bin/kvm<span class="tag">&lt;/<span class="name">emulator</span>&gt;</span></span><br><span class="line">    <span class="tag">&lt;<span class="name">disk</span> <span class="attr">type</span>=<span class="string">'file'</span> <span class="attr">device</span>=<span class="string">'disk'</span>&gt;</span></span><br><span class="line">      <span class="tag">&lt;<span class="name">driver</span> <span class="attr">name</span>=<span class="string">'qemu'</span> <span class="attr">type</span>=<span class="string">'qcow2'</span>/&gt;</span></span><br><span class="line">      <span class="tag">&lt;<span class="name">source</span> <span class="attr">file</span>=<span class="string">'/home/ubuntu16.img'</span>/&gt;</span></span><br><span class="line">      <span class="tag">&lt;<span class="name">target</span> <span class="attr">dev</span>=<span class="string">'hda'</span> <span class="attr">bus</span>=<span class="string">'ide'</span>/&gt;</span></span><br><span class="line">      <span class="tag">&lt;<span class="name">address</span> <span class="attr">type</span>=<span class="string">'drive'</span> <span class="attr">controller</span>=<span class="string">'0'</span> <span class="attr">bus</span>=<span class="string">'0'</span> <span class="attr">target</span>=<span class="string">'0'</span> <span class="attr">unit</span>=<span class="string">'0'</span>/&gt;</span></span><br><span class="line">    <span class="tag">&lt;/<span class="name">disk</span>&gt;</span></span><br><span class="line">    <span class="tag">&lt;<span class="name">controller</span> <span class="attr">type</span>=<span class="string">'usb'</span> <span class="attr">index</span>=<span class="string">'0'</span>&gt;</span></span><br><span class="line">      <span class="tag">&lt;<span class="name">address</span> <span class="attr">type</span>=<span class="string">'pci'</span> <span class="attr">domain</span>=<span class="string">'0x0000'</span> <span class="attr">bus</span>=<span class="string">'0x00'</span> <span class="attr">slot</span>=<span class="string">'0x01'</span> <span class="attr">function</span>=<span class="string">'0x2'</span>/&gt;</span></span><br><span class="line">    <span class="tag">&lt;/<span class="name">controller</span>&gt;</span></span><br><span class="line">    <span class="tag">&lt;<span class="name">controller</span> <span class="attr">type</span>=<span class="string">'pci'</span> <span class="attr">index</span>=<span class="string">'0'</span> <span class="attr">model</span>=<span class="string">'pci-root'</span>/&gt;</span></span><br><span class="line">    <span class="tag">&lt;<span class="name">controller</span> <span class="attr">type</span>=<span class="string">'ide'</span> <span class="attr">index</span>=<span class="string">'0'</span>&gt;</span></span><br><span class="line">      <span class="tag">&lt;<span class="name">address</span> <span class="attr">type</span>=<span class="string">'pci'</span> <span class="attr">domain</span>=<span class="string">'0x0000'</span> <span class="attr">bus</span>=<span class="string">'0x00'</span> <span class="attr">slot</span>=<span class="string">'0x01'</span> <span class="attr">function</span>=<span class="string">'0x1'</span>/&gt;</span></span><br><span class="line">    <span class="tag">&lt;/<span class="name">controller</span>&gt;</span></span><br><span class="line">    <span class="tag">&lt;<span class="name">interface</span> <span class="attr">type</span>=<span class="string">'bridge'</span>&gt;</span></span><br><span class="line">      <span class="tag">&lt;<span class="name">mac</span> <span class="attr">address</span>=<span class="string">'52:54:00:c0:a2:8a'</span>/&gt;</span></span><br><span class="line">      <span class="tag">&lt;<span class="name">source</span> <span class="attr">bridge</span>=<span class="string">'br0'</span>/&gt;</span></span><br><span class="line">      <span class="tag">&lt;<span class="name">model</span> <span class="attr">type</span>=<span class="string">'rtl8139'</span>/&gt;</span></span><br><span class="line">      <span class="tag">&lt;<span class="name">address</span> <span class="attr">type</span>=<span class="string">'pci'</span> <span class="attr">domain</span>=<span class="string">'0x0000'</span> <span class="attr">bus</span>=<span class="string">'0x00'</span> <span class="attr">slot</span>=<span class="string">'0x03'</span> <span class="attr">function</span>=<span class="string">'0x0'</span>/&gt;</span></span><br><span class="line">    <span class="tag">&lt;/<span class="name">interface</span>&gt;</span></span><br><span class="line">    <span class="tag">&lt;<span class="name">input</span> <span class="attr">type</span>=<span class="string">'tablet'</span> <span class="attr">bus</span>=<span class="string">'usb'</span>/&gt;</span></span><br><span class="line">    <span class="tag">&lt;<span class="name">input</span> <span class="attr">type</span>=<span class="string">'mouse'</span> <span class="attr">bus</span>=<span class="string">'ps2'</span>/&gt;</span></span><br><span class="line">    <span class="tag">&lt;<span class="name">input</span> <span class="attr">type</span>=<span class="string">'keyboard'</span> <span class="attr">bus</span>=<span class="string">'ps2'</span>/&gt;</span></span><br><span class="line">    <span class="tag">&lt;<span class="name">graphics</span> <span class="attr">type</span>=<span class="string">'vnc'</span> <span class="attr">port</span>=<span class="string">'-1'</span> <span class="attr">autoport</span>=<span class="string">'yes'</span> <span class="attr">listen</span>=<span class="string">'0.0.0.0'</span> <span class="attr">keymap</span>=<span class="string">'en-us'</span>/&gt;</span></span><br><span class="line">    <span class="tag">&lt;<span class="name">video</span>&gt;</span></span><br><span class="line">      <span class="tag">&lt;<span class="name">model</span> <span class="attr">type</span>=<span class="string">'cirrus'</span> <span class="attr">vram</span>=<span class="string">'9216'</span> <span class="attr">heads</span>=<span class="string">'1'</span>/&gt;</span></span><br><span class="line">      <span class="tag">&lt;<span class="name">address</span> <span class="attr">type</span>=<span class="string">'pci'</span> <span class="attr">domain</span>=<span class="string">'0x0000'</span> <span class="attr">bus</span>=<span class="string">'0x00'</span> <span class="attr">slot</span>=<span class="string">'0x02'</span> <span class="attr">function</span>=<span class="string">'0x0'</span>/&gt;</span></span><br><span class="line">    <span class="tag">&lt;/<span class="name">video</span>&gt;</span></span><br><span class="line">    <span class="tag">&lt;<span class="name">memballoon</span> <span class="attr">model</span>=<span class="string">'virtio'</span>&gt;</span></span><br><span class="line">      <span class="tag">&lt;<span class="name">address</span> <span class="attr">type</span>=<span class="string">'pci'</span> <span class="attr">domain</span>=<span class="string">'0x0000'</span> <span class="attr">bus</span>=<span class="string">'0x00'</span> <span class="attr">slot</span>=<span class="string">'0x04'</span> <span class="attr">function</span>=<span class="string">'0x0'</span>/&gt;</span></span><br><span class="line">    <span class="tag">&lt;/<span class="name">memballoon</span>&gt;</span></span><br><span class="line">  <span class="tag">&lt;/<span class="name">devices</span>&gt;</span></span><br><span class="line"><span class="tag">&lt;/<span class="name">domain</span>&gt;</span></span><br></pre></td></tr></table></figure>
+          <!--noindex-->
+            <div class="post-button">
+              <a class="btn" href="/vmmove/#more" rel="contents">
+                阅读全文 &raquo;
+              </a>
+            </div>
+          <!--/noindex-->
+        
       
     </div>
 
@@ -754,7 +636,7 @@
                   <i class="far fa-calendar-check"></i>
                 </span>
                 <span class="post-meta-item-text">更新于</span>
-                <time title="修改时间：2019-03-05 21:32:48" itemprop="dateModified" datetime="2019-03-05T21:32:48+08:00">2019-03-05</time>
+                <time title="修改时间：2020-07-14 08:31:07" itemprop="dateModified" datetime="2020-07-14T08:31:07+08:00">2020-07-14</time>
               </span>
             <span class="post-meta-item">
               <span class="post-meta-item-icon">
@@ -809,14 +691,14 @@
 <p>tempfile模块，用来对临时数据进行操作</p>
 </blockquote>
 <h2 id="tempfile-临时文件-夹-操作"><a href="#tempfile-临时文件-夹-操作" class="headerlink" title="tempfile 临时文件(夹)操作"></a>tempfile 临时文件(夹)操作</h2><h3 id="tempfile-mkstemp-suffix-”-prefix-’tmp’-dir-None-text-False"><a href="#tempfile-mkstemp-suffix-”-prefix-’tmp’-dir-None-text-False" class="headerlink" title="tempfile.mkstemp([suffix=”[, prefix=’tmp’[, dir=None[, text=False]]]])"></a>tempfile.mkstemp([suffix=”[, prefix=’tmp’[, dir=None[, text=False]]]])</h3><p>mkstemp方法用于创建一个临时文件。该方法仅仅用于创建临时文件，调用tempfile.mkstemp函数后，返回包含两个元素的元组，第一个元素指示操作该临时文件的安全级别，第二个元素指示该临时文件的路径。参数suffix和prefix分别表示临时文件名称的后缀和前缀；dir指定了临时文件所在的目录，如果没有指定目录，将根据系统环境变量TMPDIR, TEMP或者TMP的设置来保存临时文件；参数text指定了是否以文本的形式来操作文件，默认为False，表示以二进制的形式来操作文件。</p>
-<h3 id="tempfile-mkdtemp-suffix-”-prefix-’tmp’-dir-None"><a href="#tempfile-mkdtemp-suffix-”-prefix-’tmp’-dir-None" class="headerlink" title="tempfile.mkdtemp([suffix=”[, prefix=’tmp’[, dir=None]]])"></a>tempfile.mkdtemp([suffix=”[, prefix=’tmp’[, dir=None]]])</h3><p>该函数用于创建一个临时文件夹。参数的意思与tempfile.mkdtemp一样。它返回临时文件夹的绝对路径。</p>
-<h3 id="tempfile-mktemp-suffix-”-prefix-’tmp’-dir-None"><a href="#tempfile-mktemp-suffix-”-prefix-’tmp’-dir-None" class="headerlink" title="tempfile.mktemp([suffix=”[, prefix=’tmp’[, dir=None]]])"></a>tempfile.mktemp([suffix=”[, prefix=’tmp’[, dir=None]]])</h3><p>mktemp用于返回一个临时文件的路径，但并不创建该临时文件。</p>
-<h3 id="tempfile-tempdir"><a href="#tempfile-tempdir" class="headerlink" title="tempfile.tempdir"></a>tempfile.tempdir</h3><p>该属性用于指定创建的临时文件（夹）所在的默认文件夹。如果没有设置该属性或者将其设为None，Python将返回以下环境变量TMPDIR, TEMP, TEMP指定的目录，如果没有定义这些环境变量，临时文件将被创建在当前工作目录。</p>
-<h3 id="tempfile-gettempdir"><a href="#tempfile-gettempdir" class="headerlink" title="tempfile.gettempdir()"></a>tempfile.gettempdir()</h3><p>gettempdir()则用于返回保存临时文件的文件夹路径。</p>
-<h3 id="tempfile-TemporaryFile-mode-’w-b’-bufsize-1-suffix-”-prefix-’tmp’-dir-None"><a href="#tempfile-TemporaryFile-mode-’w-b’-bufsize-1-suffix-”-prefix-’tmp’-dir-None" class="headerlink" title="tempfile.TemporaryFile([mode=’w+b’[, bufsize=-1[, suffix=”[, prefix=’tmp’[, dir=None]]]]])"></a>tempfile.TemporaryFile([mode=’w+b’[, bufsize=-1[, suffix=”[, prefix=’tmp’[, dir=None]]]]])</h3><p>该函数返回一个类文件对象(file-like)用于临时数据保存（实际上对应磁盘上的一个临时文件）。当文件对象被close或者被del的时候，临时文件将从磁盘上删除。mode、bufsize参数的单方与open()函数一样；suffix和prefix指定了临时文件名的后缀和前缀；dir用于设置临时文件默认的保存路径。返回的类文件对象有一个file属性，它指向真正操作的底层的file对象。</p>
-<h3 id="tempfile-NamedTemporaryFile-mode-’w-b’-bufsize-1-suffix-”-prefix-’tmp’-dir-None-delete-True"><a href="#tempfile-NamedTemporaryFile-mode-’w-b’-bufsize-1-suffix-”-prefix-’tmp’-dir-None-delete-True" class="headerlink" title="tempfile.NamedTemporaryFile([mode=’w+b’[, bufsize=-1[, suffix=”[, prefix=’tmp’[, dir=None[, delete=True]]]]]])"></a>tempfile.NamedTemporaryFile([mode=’w+b’[, bufsize=-1[, suffix=”[, prefix=’tmp’[, dir=None[, delete=True]]]]]])</h3><p>tempfile.NamedTemporaryFile函数的行为与tempfile.TemporaryFile类似，只不过它多了一个delete参数，用于指定类文件对象close或者被del之后，是否也一同删除磁盘上的临时文件（当delete = True的时候，行为与TemporaryFile一样）。</p>
-<h3 id="tempfile-SpooledTemporaryFile-max-size-0-mode-’w-b’-bufsize-1-suffix-”-prefix-’tmp’-dir-None"><a href="#tempfile-SpooledTemporaryFile-max-size-0-mode-’w-b’-bufsize-1-suffix-”-prefix-’tmp’-dir-None" class="headerlink" title="tempfile.SpooledTemporaryFile([max_size=0[, mode=’w+b’[, bufsize=-1[, suffix=”[, prefix=’tmp’[, dir=None]]]]]])"></a>tempfile.SpooledTemporaryFile([max_size=0[, mode=’w+b’[, bufsize=-1[, suffix=”[, prefix=’tmp’[, dir=None]]]]]])</h3><p>tempfile.SpooledTemporaryFile函数的行为与tempfile.TemporaryFile类似。不同的是向类文件对象写数据的时候，数据长度只有到达参数max_size指定大小时，或者调用类文件对象的fileno()方法，数据才会真正写入到磁盘的临时文件中。</p>
-
+          <!--noindex-->
+            <div class="post-button">
+              <a class="btn" href="/tempfile/#more" rel="contents">
+                阅读全文 &raquo;
+              </a>
+            </div>
+          <!--/noindex-->
+        
       
     </div>
 
@@ -866,7 +748,7 @@
                   <i class="far fa-calendar-check"></i>
                 </span>
                 <span class="post-meta-item-text">更新于</span>
-                <time title="修改时间：2019-03-05 21:32:48" itemprop="dateModified" datetime="2019-03-05T21:32:48+08:00">2019-03-05</time>
+                <time title="修改时间：2020-07-14 08:30:30" itemprop="dateModified" datetime="2020-07-14T08:30:30+08:00">2020-07-14</time>
               </span>
             <span class="post-meta-item">
               <span class="post-meta-item-icon">
@@ -925,32 +807,15 @@
 <li>os.path.exists(path) #路径存在则返回True,路径损坏返回False</li>
 <li>os.path.lexists #路径存在则返回True,路径损坏也返回True</li>
 <li>os.path.expanduser(path) #把path中包含的”<del>”和”</del>user”转换成用户目录</li>
-<li>os.path.expandvars(path) #根据环境变量的值替换path中包含的”$name”和”${name}”</li>
-<li>os.path.getatime(path) #返回最后一次进入此path的时间。</li>
-<li>os.path.getmtime(path) #返回在此path下最后一次修改的时间。</li>
-<li>os.path.getctime(path) #返回path的大小</li>
-<li>os.path.getsize(path) #返回文件大小，如果文件不存在就返回错误</li>
-<li>os.path.isabs(path) #判断是否为绝对路径</li>
-<li>os.path.isfile(path) #判断路径是否为文件</li>
-<li>os.path.isdir(path) #判断路径是否为目录</li>
-<li>os.path.islink(path) #判断路径是否为链接</li>
-<li>os.path.ismount(path) #判断路径是否为挂载点（）</li>
-<li>os.path.join(path1[, path2[, …]]) #把目录和文件名合成一个路径</li>
-<li>os.path.normcase(path) #转换path的大小写和斜杠</li>
-<li>os.path.normpath(path) #规范path字符串形式</li>
-<li>os.path.realpath(path) #返回path的真实路径</li>
-<li>os.path.relpath(path[, start]) #从start开始计算相对路径</li>
-<li>os.path.samefile(path1, path2) #判断目录或文件是否相同</li>
-<li>os.path.sameopenfile(fp1, fp2) #判断fp1和fp2是否指向同一文件</li>
-<li>os.path.samestat(stat1, stat2) #判断stat tuple stat1和stat2是否指向同一个文件</li>
-<li>os.path.split(path) #把路径分割成dirname和basename，返回一个元组</li>
-<li>os.path.splitdrive(path) #一般用在windows下，返回驱动器名和路径组成的元组</li>
-<li>os.path.splitext(path) #分割路径，返回路径名和文件扩展名的元组</li>
-<li>os.path.splitunc(path) #把路径分割为加载点与文件</li>
-<li>os.path.walk(path, visit, arg) #遍历path，进入每个目录都调用visit函数，visit函数必须有3个参数(arg, dirname, names)，dirname表示当前目录的目录名，names代表当前目录下的所有文件名，args则为walk的第三个参数</li>
-<li>os.path.supports_unicode_filenames #设置是否支持unicode路径名</li>
 </ul>
-
+          <!--noindex-->
+            <div class="post-button">
+              <a class="btn" href="/OS-Path/#more" rel="contents">
+                阅读全文 &raquo;
+              </a>
+            </div>
+          <!--/noindex-->
+        
       
     </div>
 
@@ -1000,7 +865,7 @@
                   <i class="far fa-calendar-check"></i>
                 </span>
                 <span class="post-meta-item-text">更新于</span>
-                <time title="修改时间：2019-03-05 21:32:48" itemprop="dateModified" datetime="2019-03-05T21:32:48+08:00">2019-03-05</time>
+                <time title="修改时间：2020-07-14 08:30:10" itemprop="dateModified" datetime="2020-07-14T08:30:10+08:00">2020-07-14</time>
               </span>
             <span class="post-meta-item">
               <span class="post-meta-item-icon">
@@ -1065,7 +930,14 @@
 <li>delete(path) 删除位于path 的远程文件</li>
 <li>mkd(directory) 创建远程目录</li>
 </ul>
-<h3 id="此处给出官方给的介绍"><a href="#此处给出官方给的介绍" class="headerlink" title="此处给出官方给的介绍"></a>此处给出官方给的介绍</h3><figure class="highlight python"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br></pre></td><td class="code"><pre><span class="line">Methods defined here:</span><br><span class="line">|</span><br><span class="line">| init(self, host=’’, user=’’, passwd=’’, acct=’’, keyfile=<span class="literal">None</span>, certfile=<span class="literal">None</span>, context=<span class="literal">None</span>, timeout=, source_address=<span class="literal">None</span>)</span><br><span class="line">|</span><br><span class="line">| auth(self)</span><br><span class="line">| Set up secure control connection by using TLS/SSL.</span><br><span class="line">|</span><br><span class="line">| login(self, user=’’, passwd=’’, acct=’’, secure=<span class="literal">True</span>)</span><br><span class="line">|</span><br><span class="line">| ntransfercmd(self, cmd, rest=<span class="literal">None</span>)</span><br><span class="line">|</span><br><span class="line">| prot_c(self)</span><br><span class="line">| Set up clear text data connection.</span><br><span class="line">|</span><br><span class="line">| prot_p(self)</span><br><span class="line">| Set up secure data connection.</span><br><span class="line">|</span><br><span class="line">| retrbinary(self, cmd, callback, blocksize=<span class="number">8192</span>, rest=<span class="literal">None</span>)</span><br><span class="line">|</span><br><span class="line">| retrlines(self, cmd, callback=<span class="literal">None</span>)</span><br><span class="line">|</span><br><span class="line">| storbinary(self, cmd, fp, blocksize=<span class="number">8192</span>, callback=<span class="literal">None</span>, rest=<span class="literal">None</span>)</span><br><span class="line">|</span><br><span class="line">| storlines(self, cmd, fp, callback=<span class="literal">None</span>)</span><br></pre></td></tr></table></figure>
+          <!--noindex-->
+            <div class="post-button">
+              <a class="btn" href="/FTP-Module/#more" rel="contents">
+                阅读全文 &raquo;
+              </a>
+            </div>
+          <!--/noindex-->
+        
       
     </div>
 
@@ -1115,7 +987,7 @@
                   <i class="far fa-calendar-check"></i>
                 </span>
                 <span class="post-meta-item-text">更新于</span>
-                <time title="修改时间：2019-03-05 21:32:48" itemprop="dateModified" datetime="2019-03-05T21:32:48+08:00">2019-03-05</time>
+                <time title="修改时间：2020-07-14 08:30:03" itemprop="dateModified" datetime="2020-07-14T08:30:03+08:00">2020-07-14</time>
               </span>
             <span class="post-meta-item">
               <span class="post-meta-item-icon">
@@ -1169,49 +1041,14 @@
           <h3 id="服务器类型"><a href="#服务器类型" class="headerlink" title="服务器类型"></a>服务器类型</h3><blockquote>
 <p>5种类型：BaseServer，TCPServer，UnixStreamServer，UDPServer，UnixDatagramServer。注意：BaseServer不直接对外服务。</p>
 </blockquote>
-<h3 id="服务器对象"><a href="#服务器对象" class="headerlink" title="服务器对象"></a>服务器对象</h3><ul>
-<li>class SocketServer.BaseServer:这是模块中的所有服务器对象的超类。它定义了接口，如下所述，但是大多数的方法不实现，在子类中进行细化。</li>
-<li>BaseServer.fileno():返回服务器监听套接字的整数文件描述符。通常用来传递给select.select(), 以允许一个进程监视多个服务器。</li>
-<li>BaseServer.handle_request():处理单个请求。处理顺序:get_request(),verify_request(),process_request()。如果用户提供handle()方法抛出异常，将调用服务器的handle_error()方法。如果self.timeout内没有请求收到， 将调用handle_timeout()并返回handle_request()。</li>
-<li>BaseServer.serve_forever(poll_interval=0.5):处理请求，直到一个明确的shutdown()请求。每poll_interval秒轮询一次shutdown。忽略self.timeout。如果你需要做周期性的任务，建议放置在其他线程。</li>
-<li>BaseServer.shutdown():告诉serve_forever()循环停止并等待其停止。python2.6版本。</li>
-<li>BaseServer.address_family::地址家族，比如socket.AF_INET和socket.AF_UNIX。</li>
-<li>BaseServer.RequestHandlerClass:用户提供的请求处理类，这个类为每个请求创建实例。</li>
-<li>BaseServer.server_address:服务器侦听的地址。格式根据协议家族地址的各不相同，请参阅socket模块的文档。</li>
-<li>BaseServer.socketSocket:服务器上侦听传入的请求socket对象的服务器。</li>
-</ul>
-<h3 id="服务器类支持下面的类变量"><a href="#服务器类支持下面的类变量" class="headerlink" title="服务器类支持下面的类变量"></a>服务器类支持下面的类变量</h3><ul>
-<li>BaseServer.allow_reuse_address：服务器是否允许地址的重用。默认为false ，并且可在子类中更改。</li>
-<li>BaseServer.request_queue_size</li>
-</ul>
-<h3 id="请求队列的大小"><a href="#请求队列的大小" class="headerlink" title="请求队列的大小"></a>请求队列的大小</h3><p>如果单个请求需要很长的时间来处理，服务器忙时请求被放置到队列中，最多可以放request_queue_size个。一旦队列已满，来自客户端的请求将得到 “Connection denied”错误。默认值通常为5 ，但可以被子类覆盖。</p>
-<ul>
-<li>BaseServer.socket_type：服务器使用的套接字类型;socket.SOCK_STREAM和socket.SOCK_DGRAM等。</li>
-<li>BaseServer.timeout：超时时间，以秒为单位，或 None表示没有超时。如果handle_request()在timeout内没有收到请求，将调用handle_timeout()。</li>
-</ul>
-<p>下面方法可以被子类重载，它们对服务器对象的外部用户没有影响。</p>
-<ul>
-<li>BaseServer.finish_request()：实际处理RequestHandlerClass发起的请求并调用其handle()方法。 常用。</li>
-<li>BaseServer.get_request()：接受socket请求，并返回二元组包含要用于与客户端通信的新socket对象，以及客户端的地址。</li>
-<li>BaseServer.handle_error(request, client_address)：如果RequestHandlerClass的handle()方法抛出异常时调用。默认操作是打印traceback到标准输出，并继续处理其他请求。</li>
-<li>BaseServer.handle_timeout()：超时处理。默认对于forking服务器是收集退出的子进程状态，threading服务器则什么都不做。</li>
-<li>BaseServer.process_request(request, client_address) :调用finish_request()创建RequestHandlerClass的实例。如果需要，此功能可以创建新的进程或线程来处理请求,ForkingMixIn和ThreadingMixIn类做到这点。常用。</li>
-<li>BaseServer.server_activate()：通过服务器的构造函数来激活服务器。默认的行为只是监听服务器套接字。可重载。</li>
-<li>BaseServer.server_bind()：通过服务器的构造函数中调用绑定socket到所需的地址。可重载。</li>
-<li>BaseServer.verify_request(request, client_address)：返回一个布尔值，如果该值为True ，则该请求将被处理，反之请求将被拒绝。此功能可以重写来实现对服务器的访问控制。默认的实现始终返回True。client_address可以限定客户端，比如只处理指定ip区间的请求。 常用。</li>
-</ul>
-<h3 id="请求处理器"><a href="#请求处理器" class="headerlink" title="请求处理器"></a>请求处理器</h3><p>处理器接收数据并决定如何操作。它负责在socket层之上实现协议（i.e., HTTP, XML-RPC, or AMQP)，读取数据，处理并写反应。可以重载的方法如下：</p>
-<ul>
-<li>setup():准备请求处理. 默认什么都不做，StreamRequestHandler中会创建文件类似的对象以读写socket.</li>
-<li>handle():处理请求。解析传入的请求，处理数据，并发送响应。默认什么都不做。常用变量：self.request，self.client_address，self.server。</li>
-<li>finish():环境清理。默认什么都不做，如果setup产生异常，不会执行finish。</li>
-</ul>
-<p>通常只需要重载handle,self.request的类型和数据报或流的服务不同。</p>
-<ul>
-<li>对于流服务，self.request是socket 对象；</li>
-<li>对于数据报服务，self.request是字符串和socket。可以在子类StreamRequestHandler或 DatagramRequestHandler中重载，重写setup()和finish(),并提供self.rfile和self.wfile属性。self.rfile和self.wfile可以读取或写入，以获得请求数据或将数据返回到客户端。</li>
-</ul>
-
+          <!--noindex-->
+            <div class="post-button">
+              <a class="btn" href="/BaseServer/#more" rel="contents">
+                阅读全文 &raquo;
+              </a>
+            </div>
+          <!--/noindex-->
+        
       
     </div>
 
@@ -1261,7 +1098,7 @@
                   <i class="far fa-calendar-check"></i>
                 </span>
                 <span class="post-meta-item-text">更新于</span>
-                <time title="修改时间：2019-03-05 21:32:48" itemprop="dateModified" datetime="2019-03-05T21:32:48+08:00">2019-03-05</time>
+                <time title="修改时间：2020-07-14 08:30:17" itemprop="dateModified" datetime="2020-07-14T08:30:17+08:00">2020-07-14</time>
               </span>
             <span class="post-meta-item">
               <span class="post-meta-item-icon">
@@ -1313,19 +1150,14 @@
 
       
           <p>Welcome to <a href="https://hexo.io/" target="_blank" rel="noopener">Hexo</a>! This is your very first post. Check <a href="https://hexo.io/docs/" target="_blank" rel="noopener">documentation</a> for more info. If you get any problems when using Hexo, you can find the answer in <a href="https://hexo.io/docs/troubleshooting.html" target="_blank" rel="noopener">troubleshooting</a> or you can ask me on <a href="https://github.com/hexojs/hexo/issues" target="_blank" rel="noopener">GitHub</a>.</p>
-<h2 id="Quick-Start"><a href="#Quick-Start" class="headerlink" title="Quick Start"></a>Quick Start</h2><h3 id="Create-a-new-post"><a href="#Create-a-new-post" class="headerlink" title="Create a new post"></a>Create a new post</h3><figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">$ hexo new <span class="string">"My New Post"</span></span><br></pre></td></tr></table></figure>
-
-<p>More info: <a href="https://hexo.io/docs/writing.html" target="_blank" rel="noopener">Writing</a></p>
-<h3 id="Run-server"><a href="#Run-server" class="headerlink" title="Run server"></a>Run server</h3><figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">$ hexo server</span><br></pre></td></tr></table></figure>
-
-<p>More info: <a href="https://hexo.io/docs/server.html" target="_blank" rel="noopener">Server</a></p>
-<h3 id="Generate-static-files"><a href="#Generate-static-files" class="headerlink" title="Generate static files"></a>Generate static files</h3><figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">$ hexo generate</span><br></pre></td></tr></table></figure>
-
-<p>More info: <a href="https://hexo.io/docs/generating.html" target="_blank" rel="noopener">Generating</a></p>
-<h3 id="Deploy-to-remote-sites"><a href="#Deploy-to-remote-sites" class="headerlink" title="Deploy to remote sites"></a>Deploy to remote sites</h3><figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">$ hexo deploy</span><br></pre></td></tr></table></figure>
-
-<p>More info: <a href="https://hexo.io/docs/deployment.html" target="_blank" rel="noopener">Deployment</a></p>
-
+          <!--noindex-->
+            <div class="post-button">
+              <a class="btn" href="/hello-world/#more" rel="contents">
+                阅读全文 &raquo;
+              </a>
+            </div>
+          <!--/noindex-->
+        
       
     </div>
 

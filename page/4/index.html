@@ -1075,7 +1075,7 @@
                   <i class="far fa-calendar-check"></i>
                 </span>
                 <span class="post-meta-item-text">更新于</span>
-                <time title="修改时间：2019-03-05 21:32:48" itemprop="dateModified" datetime="2019-03-05T21:32:48+08:00">2019-03-05</time>
+                <time title="修改时间：2020-07-14 08:31:17" itemprop="dateModified" datetime="2020-07-14T08:31:17+08:00">2020-07-14</time>
               </span>
             <span class="post-meta-item">
               <span class="post-meta-item-icon">
@@ -1129,26 +1129,14 @@
           <h3 id="Python中实现的进制间的转换"><a href="#Python中实现的进制间的转换" class="headerlink" title="Python中实现的进制间的转换"></a>Python中实现的进制间的转换</h3><blockquote>
 <p>在python中可以使用Python的内置函数进行进制间的转换。<br>  bin()：其他进制转二进制<br>  oct()：其他进制转八进制<br>  int()：其他进制转十进制<br>  hex()：其他进制转十六进制  </p>
 </blockquote>
-<h3 id="二进制、八进制、十六进制的形式"><a href="#二进制、八进制、十六进制的形式" class="headerlink" title="二进制、八进制、十六进制的形式"></a>二进制、八进制、十六进制的形式</h3><ul>
-<li>二进制：以“0b”开头，如：0b111为十进制的7</li>
-<li>八进制：以“0”开头，如：026为十进制的22</li>
-<li>十六进制：以“0x”开头，如：0x1f为十进制的31</li>
-</ul>
-<h3 id="二进制、八进制、十六进制对照表"><a href="#二进制、八进制、十六进制对照表" class="headerlink" title="二进制、八进制、十六进制对照表"></a>二进制、八进制、十六进制对照表</h3><p><img data-src="/userImages/dzb.png" alt="对照表"></p>
-<h3 id="二进制、八进制、十六进制转十进制"><a href="#二进制、八进制、十六进制转十进制" class="headerlink" title="二进制、八进制、十六进制转十进制"></a>二进制、八进制、十六进制转十进制</h3><p>使用int()函数，第一个参数是要转换的数字，类型为字符串，第二个参数是该数几进制的数，转化结果为一个十进制的数。  </p>
-<figure class="highlight python"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br></pre></td><td class="code"><pre><span class="line">二进制转十进制：</span><br><span class="line"><span class="meta">&gt;&gt;&gt; </span>int(<span class="string">'0b1111'</span>,<span class="number">2</span>)</span><br><span class="line"><span class="number">15</span></span><br><span class="line">八进制转十进制：</span><br><span class="line"><span class="meta">&gt;&gt;&gt; </span>int(<span class="string">'67'</span>,<span class="number">8</span>)</span><br><span class="line"><span class="number">55</span></span><br><span class="line">十六进制转十进制：</span><br><span class="line"><span class="meta">&gt;&gt;&gt; </span>int(<span class="string">'0x1f'</span>,<span class="number">16</span>)</span><br><span class="line"><span class="number">31</span></span><br></pre></td></tr></table></figure>
-
-<h3 id="八进制、十进制、十六进制转二进制"><a href="#八进制、十进制、十六进制转二进制" class="headerlink" title="八进制、十进制、十六进制转二进制"></a>八进制、十进制、十六进制转二进制</h3><p>使用bin()函数，需要先将八进制、十六进制转换为十进制，然后才能转换为二进制，<br>即八进制/十六进制 —&gt; 十进制 —&gt; 二进制</p>
-<figure class="highlight python"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br></pre></td><td class="code"><pre><span class="line">八进制转二进制：</span><br><span class="line"><span class="meta">&gt;&gt;&gt; </span>bin(int(<span class="string">'016'</span>,<span class="number">8</span>))</span><br><span class="line"><span class="string">'0b1110'</span></span><br><span class="line">十进制转二进制：</span><br><span class="line"><span class="meta">&gt;&gt;&gt; </span>bin(<span class="number">14</span>)</span><br><span class="line"><span class="string">'0b1110'</span></span><br><span class="line">十六进制转二进制：</span><br><span class="line"><span class="meta">&gt;&gt;&gt; </span>bin(int(<span class="string">'0xe'</span>,<span class="number">16</span>))</span><br><span class="line"><span class="string">'0b1110'</span></span><br></pre></td></tr></table></figure>
-
-<h3 id="二进制、十进制、十六进制转八进制"><a href="#二进制、十进制、十六进制转八进制" class="headerlink" title="二进制、十进制、十六进制转八进制"></a>二进制、十进制、十六进制转八进制</h3><p>使用oct()函数可以直接进行进制的转换</p>
-<figure class="highlight python"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br></pre></td><td class="code"><pre><span class="line">二进制转八进制：</span><br><span class="line"><span class="meta">&gt;&gt;&gt; </span>oct(<span class="number">0b1110</span>)</span><br><span class="line"><span class="string">'016'</span></span><br><span class="line">十进制转八进制：</span><br><span class="line"><span class="meta">&gt;&gt;&gt; </span>oct(<span class="number">14</span>)</span><br><span class="line"><span class="string">'016'</span></span><br><span class="line">十六进制转八进制：</span><br><span class="line"><span class="meta">&gt;&gt;&gt; </span>oct(<span class="number">0xe</span>)</span><br><span class="line"><span class="string">'016'</span></span><br></pre></td></tr></table></figure>
-
-<h3 id="二进制、八进制、十进制转十六进制"><a href="#二进制、八进制、十进制转十六进制" class="headerlink" title="二进制、八进制、十进制转十六进制"></a>二进制、八进制、十进制转十六进制</h3><p>使用hex()函数，需要先将二进制、八进制转换为十进制，然后才能转换为十六进制，<br>即二进制/八进制 —&gt; 十进制 —&gt; 十六进制</p>
-<figure class="highlight python"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br></pre></td><td class="code"><pre><span class="line">二进制转十六进制：</span><br><span class="line"><span class="meta">&gt;&gt;&gt; </span>hex(int(<span class="string">'0b1110'</span>,<span class="number">2</span>))</span><br><span class="line"><span class="string">'0xe'</span></span><br><span class="line">八进制转十六进制：</span><br><span class="line"><span class="meta">&gt;&gt;&gt; </span>hex(int(<span class="string">'016'</span>,<span class="number">8</span>))</span><br><span class="line"><span class="string">'0xe'</span></span><br><span class="line">十进制转十六进制：</span><br><span class="line"><span class="meta">&gt;&gt;&gt; </span>hex(<span class="number">14</span>)</span><br><span class="line"><span class="string">'0xe'</span></span><br></pre></td></tr></table></figure>
-
-
-
+          <!--noindex-->
+            <div class="post-button">
+              <a class="btn" href="/%E8%BF%9B%E5%88%B6%E8%BD%AC%E6%8D%A2/#more" rel="contents">
+                阅读全文 &raquo;
+              </a>
+            </div>
+          <!--/noindex-->
+        
       
     </div>
 
