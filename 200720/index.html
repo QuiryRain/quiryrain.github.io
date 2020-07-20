@@ -31,7 +31,7 @@
 <meta property="og:description" content="线程是可单独管理的最小指令集     变量名 上下文 说明    current_app 程序上下文 当前激活程序的程序实例   g 程序上下文 处理请求时用作临时存储的对象。每次请求都会重设   request 请求上下文 请求对象，封装了客户端发出的http请求中的内容   session 请求上下文 用户会话，用于存储请求之间需要“记住”的值的字典   Flask 在分发请求之前激活（或推">
 <meta property="og:locale" content="zh_CN">
 <meta property="article:published_time" content="2020-07-19T15:54:26.000Z">
-<meta property="article:modified_time" content="2020-07-19T16:00:57.220Z">
+<meta property="article:modified_time" content="2020-07-20T14:22:54.999Z">
 <meta property="article:author" content="QuiryRain">
 <meta property="article:tag" content="Flask">
 <meta name="twitter:card" content="summary">
@@ -198,7 +198,7 @@
 
   <aside class="sidebar">
 
-    <div class="sidebar-inner sidebar-overview-active">
+    <div class="sidebar-inner sidebar-nav-active sidebar-toc-active">
       <ul class="sidebar-nav">
         <li class="sidebar-nav-toc">
           文章目录
@@ -210,6 +210,7 @@
 
       <!--noindex-->
       <section class="post-toc-wrap sidebar-panel">
+          <div class="post-toc animated"><ol class="nav"><li class="nav-item nav-level-3"><a class="nav-link" href="#HTTP请求方式"><span class="nav-number">1.</span> <span class="nav-text">HTTP请求方式</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#常见的错误代码及错误原因"><span class="nav-number">2.</span> <span class="nav-text">常见的错误代码及错误原因</span></a></li></ol></div>
       </section>
       <!--/noindex-->
 
@@ -310,7 +311,7 @@
                   <i class="far fa-calendar-check"></i>
                 </span>
                 <span class="post-meta-item-text">更新于</span>
-                <time title="修改时间：2020-07-20 00:00:57" itemprop="dateModified" datetime="2020-07-20T00:00:57+08:00">2020-07-20</time>
+                <time title="修改时间：2020-07-20 22:22:54" itemprop="dateModified" datetime="2020-07-20T22:22:54+08:00">2020-07-20</time>
               </span>
             <span class="post-meta-item">
               <span class="post-meta-item-icon">
@@ -342,7 +343,7 @@
                 <i class="far fa-file-word"></i>
               </span>
                 <span class="post-meta-item-text">本文字数：</span>
-              <span>191</span>
+              <span>1.2k</span>
             </span>
             <span class="post-meta-item" title="阅读时长">
               <span class="post-meta-item-icon">
@@ -395,6 +396,232 @@
 </tbody></table>
 <p>Flask 在分发请求之前激活（或推送）程序和请求上下文，请求处理完成后再将其删除。</p>
 <a id="more"></a>
+
+<h3 id="HTTP请求方式"><a href="#HTTP请求方式" class="headerlink" title="HTTP请求方式"></a>HTTP请求方式</h3><table>
+<thead>
+<tr>
+<th align="left">方法</th>
+<th align="left">描述</th>
+</tr>
+</thead>
+<tbody><tr>
+<td align="left">GET</td>
+<td align="left">请求页面，并返回页面内容</td>
+</tr>
+<tr>
+<td align="left">HEAD</td>
+<td align="left">类似于GET请求，只不过返回的响应中没有具体的内容，用于获取报头</td>
+</tr>
+<tr>
+<td align="left">POST</td>
+<td align="left">大多用于提交表单或上传文件，数据包含在请求体中</td>
+</tr>
+</tbody></table>
+<h3 id="常见的错误代码及错误原因"><a href="#常见的错误代码及错误原因" class="headerlink" title="常见的错误代码及错误原因"></a>常见的错误代码及错误原因</h3><table>
+<thead>
+<tr>
+<th align="left">状态码</th>
+<th align="left">说明</th>
+<th align="left">详情</th>
+</tr>
+</thead>
+<tbody><tr>
+<td align="left">100</td>
+<td align="left">继续</td>
+<td align="left">请求者应当继续提出请求。服务器已经收到请求的部分内容，正在等待其余部分</td>
+</tr>
+<tr>
+<td align="left">101</td>
+<td align="left">切换协议</td>
+<td align="left">请求者已要求服务器切换协议，服务器已确认并准备切换</td>
+</tr>
+<tr>
+<td align="left">200</td>
+<td align="left">成功</td>
+<td align="left">服务器已成功处理了请求</td>
+</tr>
+<tr>
+<td align="left">201</td>
+<td align="left">已创建</td>
+<td align="left">请求成功并企鹅服务器创建了新的资源</td>
+</tr>
+<tr>
+<td align="left">202</td>
+<td align="left">已接受</td>
+<td align="left">服务器已接受请求，但尚未处理</td>
+</tr>
+<tr>
+<td align="left">203</td>
+<td align="left">非授权信息</td>
+<td align="left">服务器已成功处理了请求，但返回的信息可能来自另个源</td>
+</tr>
+<tr>
+<td align="left">204</td>
+<td align="left">无内容</td>
+<td align="left">服务器成功处理了请求，但没有返回任何内容</td>
+</tr>
+<tr>
+<td align="left">205</td>
+<td align="left">重置内容</td>
+<td align="left">服务器成功处理了请求，内容被重置</td>
+</tr>
+<tr>
+<td align="left">206</td>
+<td align="left">部分内容</td>
+<td align="left">服务器成功处理部分请求</td>
+</tr>
+<tr>
+<td align="left">300</td>
+<td align="left">多种选择</td>
+<td align="left">针对请求，服务器可执行多种操作</td>
+</tr>
+<tr>
+<td align="left">301</td>
+<td align="left">永久移动</td>
+<td align="left">请求的网页已永久移动到新位置，即永久重定向</td>
+</tr>
+<tr>
+<td align="left">302</td>
+<td align="left">临时移动</td>
+<td align="left">请求的页面暂时跳转到其他页面，即暂时重定向</td>
+</tr>
+<tr>
+<td align="left">303</td>
+<td align="left">查看其他位置</td>
+<td align="left">如果原来的请求是POST，重定向目标文档应该通过GET提取</td>
+</tr>
+<tr>
+<td align="left">304</td>
+<td align="left">未修改</td>
+<td align="left">此次请求返回的页面未修改，继续使用上次的资源</td>
+</tr>
+<tr>
+<td align="left">305</td>
+<td align="left">使用代理</td>
+<td align="left">请求者应该使用代理访问该网页</td>
+</tr>
+<tr>
+<td align="left">307</td>
+<td align="left">临时重定向</td>
+<td align="left">请求的资源临时从其他位置响应</td>
+</tr>
+<tr>
+<td align="left">400</td>
+<td align="left">错误请求</td>
+<td align="left">服务器无法解析该请求</td>
+</tr>
+<tr>
+<td align="left">401</td>
+<td align="left">未授权</td>
+<td align="left">请求没有进行身份验证或验证未通过</td>
+</tr>
+<tr>
+<td align="left">403</td>
+<td align="left">禁止访问</td>
+<td align="left">服务器拒绝此请求</td>
+</tr>
+<tr>
+<td align="left">404</td>
+<td align="left">未找到</td>
+<td align="left">服务器找不到请求的网页</td>
+</tr>
+<tr>
+<td align="left">405</td>
+<td align="left">方法禁用</td>
+<td align="left">服务器禁用了请求中指定的方法</td>
+</tr>
+<tr>
+<td align="left">406</td>
+<td align="left">不接受</td>
+<td align="left">无法使用请求的内容响应请求的网页</td>
+</tr>
+<tr>
+<td align="left">407</td>
+<td align="left">需要代理授权</td>
+<td align="left">请求者需要使用代理授权</td>
+</tr>
+<tr>
+<td align="left">408</td>
+<td align="left">请求超时</td>
+<td align="left">服务器请求超时</td>
+</tr>
+<tr>
+<td align="left">409</td>
+<td align="left">冲突</td>
+<td align="left">服务器在完成请求时发生冲突</td>
+</tr>
+<tr>
+<td align="left">410</td>
+<td align="left">已删除</td>
+<td align="left">请求的资源已永久删除</td>
+</tr>
+<tr>
+<td align="left">411</td>
+<td align="left">需要有效长度</td>
+<td align="left">服务器不接受不包含有效内容长度标头字段的请求</td>
+</tr>
+<tr>
+<td align="left">412</td>
+<td align="left">未满足前提条件</td>
+<td align="left">服务器未满足请求者在请求中设置的其中一个前提条件</td>
+</tr>
+<tr>
+<td align="left">413</td>
+<td align="left">请求实体过大</td>
+<td align="left">请求实体过大，超出服务器的处理能力</td>
+</tr>
+<tr>
+<td align="left">414</td>
+<td align="left">请求URI过长</td>
+<td align="left">请求网址过长，服务器无法处理</td>
+</tr>
+<tr>
+<td align="left">415</td>
+<td align="left">不支持类型</td>
+<td align="left">请求格式不被请求页面支持</td>
+</tr>
+<tr>
+<td align="left">416</td>
+<td align="left">请求范围不符</td>
+<td align="left">页面无法提供请求的范围</td>
+</tr>
+<tr>
+<td align="left">417</td>
+<td align="left">未满足期望值</td>
+<td align="left">服务器未满足期望请求标头字段的要求</td>
+</tr>
+<tr>
+<td align="left">500</td>
+<td align="left">服务器内部错误</td>
+<td align="left">服务器遇到错误，无法完成请求</td>
+</tr>
+<tr>
+<td align="left">501</td>
+<td align="left">未实现</td>
+<td align="left">服务器不具备完成请求的功能</td>
+</tr>
+<tr>
+<td align="left">502</td>
+<td align="left">错误网关</td>
+<td align="left">服务器作为网关或代理，从上游服务器收到无效响应</td>
+</tr>
+<tr>
+<td align="left">503</td>
+<td align="left">服务不可用</td>
+<td align="left">服务器目前无法使用</td>
+</tr>
+<tr>
+<td align="left">504</td>
+<td align="left">网管超时</td>
+<td align="left">服务器作为网关或代理，但是没有及时从上游服务器收到请求</td>
+</tr>
+<tr>
+<td align="left">505</td>
+<td align="left">HTTP版本不支持</td>
+<td align="left">服务器不支持请求中所用的HTTP协议版本</td>
+</tr>
+</tbody></table>
+
     </div>
 
     
@@ -474,13 +701,13 @@
       <i class="fa fa-chart-area"></i>
     </span>
       <span class="post-meta-item-text">站点总字数：</span>
-    <span title="站点总字数">108k</span>
+    <span title="站点总字数">109k</span>
     <span class="post-meta-divider">|</span>
     <span class="post-meta-item-icon">
       <i class="fa fa-coffee"></i>
     </span>
       <span class="post-meta-item-text">站点阅读时长 &asymp;</span>
-    <span title="站点阅读时长">1:38</span>
+    <span title="站点阅读时长">1:39</span>
 </div>
   <div class="powered-by">由 <a href="https://hexo.io/" class="theme-link" rel="noopener" target="_blank">Hexo</a> & <a href="https://theme-next.js.org/" class="theme-link" rel="noopener" target="_blank">NexT.Gemini</a> 强力驱动
   </div>
