@@ -127,23 +127,6 @@
       </tags>
   </entry>
   <entry>
-    <title>使用Python实现的杨辉三角</title>
-    <url>/171222/</url>
-    <content><![CDATA[<p>某日，闲来无事做，就尝试着用Python实现了下杨辉三角，以下使用Python2 实现的杨辉三角 </p>
-<a id="more"></a>
-
-<figure class="highlight python"><table><tr><td class="code"><pre><span class="line"><span class="function"><span class="keyword">def</span> <span class="title">triangel</span><span class="params">()</span>:</span></span><br><span class="line">    <span class="keyword">print</span> <span class="string">' '</span>*(<span class="number">20</span>*<span class="number">3</span>)+str(<span class="number">1</span>)             <span class="comment">#定义起始两行</span></span><br><span class="line">    <span class="keyword">print</span> <span class="string">' '</span>*(<span class="number">19</span>*<span class="number">3</span>)+str(<span class="number">1</span>)+<span class="string">' '</span>*<span class="number">5</span>+str(<span class="number">1</span>)</span><br><span class="line">    <span class="keyword">for</span> i <span class="keyword">in</span> range(<span class="number">3</span>,<span class="number">21</span>):</span><br><span class="line">        <span class="keyword">if</span> i ==<span class="number">3</span>:</span><br><span class="line">            L = [<span class="number">1</span>,<span class="number">1</span>]       <span class="comment">#初始化第二行        </span></span><br><span class="line">        L1 = []</span><br><span class="line">        <span class="keyword">for</span> j <span class="keyword">in</span> range(<span class="number">2</span>,i):</span><br><span class="line">            z = L[i-j<span class="number">-1</span>]+L[i-j] <span class="comment"># 通过上一行构建下一层数据</span></span><br><span class="line">            L1.append(z)        <span class="comment"># 将数据添加到一个空列表中</span></span><br><span class="line">        L = [<span class="number">1</span>]       <span class="comment"># 再次对L初始化</span></span><br><span class="line">        L.extend(L1)    <span class="comment"># 将两个列表合并</span></span><br><span class="line">        L.append(<span class="number">1</span>)     <span class="comment"># 在L列表中添加最后一个数据“1”</span></span><br><span class="line"></span><br><span class="line">        <span class="comment"># 以下内容为杨辉三角的打印</span></span><br><span class="line">        t = <span class="string">' '</span>*((<span class="number">21</span>-i)*<span class="number">3</span>)+str(<span class="number">1</span>)   <span class="comment"># 每次循环进行初始化每列的第一个数据1</span></span><br><span class="line">        <span class="keyword">for</span> h <span class="keyword">in</span> range(<span class="number">1</span>,len(L)):   <span class="comment"># 以下为构建每列的除一个数据外的其他数据，</span></span><br><span class="line">            <span class="keyword">if</span> L[h]&lt;<span class="number">10</span>:             <span class="comment"># 如果数据小于10，就是其前面5个空格，如果</span></span><br><span class="line">                t = t + <span class="string">' '</span>*<span class="number">5</span>+str(L[h]) <span class="comment">#数据小于100，就减少一个空格，依次类推，</span></span><br><span class="line">            <span class="keyword">elif</span> L[h] &lt;<span class="number">100</span>:         <span class="comment"># 直至剩余一个空格，用于分辨相邻的数据</span></span><br><span class="line">                t = t+<span class="string">' '</span>*<span class="number">4</span>+str(L[h])</span><br><span class="line">            <span class="keyword">elif</span> L[h] &lt; <span class="number">1000</span>:</span><br><span class="line">                t = t + <span class="string">' '</span>*<span class="number">3</span>+str(L[h])</span><br><span class="line">            <span class="keyword">elif</span> L[h] &lt; <span class="number">10000</span>:</span><br><span class="line">                t = t + <span class="string">' '</span>*<span class="number">2</span>+str(L[h])</span><br><span class="line">            <span class="keyword">elif</span> L[h] &lt; <span class="number">100000</span>:</span><br><span class="line">                t = t + <span class="string">' '</span>*<span class="number">1</span>+str(L[h])</span><br><span class="line">        <span class="keyword">print</span> t</span><br><span class="line"><span class="keyword">if</span> __name__ == <span class="string">"__main__"</span>:</span><br><span class="line">    triangel()</span><br></pre></td></tr></table></figure>
-
-<p><img data-src="/userImages/yanghuisanjiao.png" alt="杨辉三角"></p>
-]]></content>
-      <categories>
-        <category>Python杂记</category>
-      </categories>
-      <tags>
-        <tag>杨辉三角</tag>
-      </tags>
-  </entry>
-  <entry>
     <title>一场说走就走的旅行</title>
     <url>/180428/</url>
     <content><![CDATA[<p>时光荏苒，岁月如梭，大学里总需要一场说走就走的旅行。或为了心中的她，也或为了自己。</p>
@@ -178,22 +161,20 @@
       </tags>
   </entry>
   <entry>
-    <title>使用chromedriver实现豆瓣网页的全网页截图</title>
-    <url>/190108/</url>
-    <content><![CDATA[<p>最近由于工作需要，需要对部分网站进行全文截屏。在网上搜了很久没有搜出好的方法，而且在新版的selenium中已经不在支持PhantomJS了，所以全文截取变得有点棘手。</p>
+    <title>使用Python实现的杨辉三角</title>
+    <url>/171222/</url>
+    <content><![CDATA[<p>某日，闲来无事做，就尝试着用Python实现了下杨辉三角，以下使用Python2 实现的杨辉三角 </p>
 <a id="more"></a>
 
-<p>此处给出一个简单的方法，以20行代码实现<code>selenium+chromedriver+python</code>实现豆瓣的全文截取。  </p>
-<figure class="highlight python"><table><tr><td class="code"><pre><span class="line"><span class="keyword">from</span> selenium <span class="keyword">import</span> webdriver</span><br><span class="line"></span><br><span class="line">options = webdriver.ChromeOptions()</span><br><span class="line">options.add_argument(<span class="string">'--headless'</span>)</span><br><span class="line">options.add_argument(<span class="string">'--dns-prefetch-disable'</span>)</span><br><span class="line">options.add_argument(<span class="string">'--no-referrers'</span>)</span><br><span class="line">options.add_argument(<span class="string">'--disable-gpu'</span>)</span><br><span class="line">options.add_argument(<span class="string">'--disable-audio'</span>)</span><br><span class="line">options.add_argument(<span class="string">'--no-sandbox'</span>)</span><br><span class="line">options.add_argument(<span class="string">'--ignore-certificate-errors'</span>)</span><br><span class="line">options.add_argument(<span class="string">'--allow-insecure-localhost'</span>)</span><br><span class="line"></span><br><span class="line">driver = webdriver.Chrome(options=options)</span><br><span class="line">driver.get(<span class="string">'http://www.douban.com'</span>)</span><br><span class="line">width = driver.execute_script(</span><br><span class="line">        <span class="string">"return Math.max(document.body.scrollWidth, document.body.offsetWidth, document.documentElement.clientWidth, document.documentElement.scrollWidth, document.documentElement.offsetWidth);"</span>)</span><br><span class="line">height = driver.execute_script(</span><br><span class="line">        <span class="string">"return Math.max(document.body.scrollHeight, document.body.offsetHeight, document.documentElement.clientHeight, document.documentElement.scrollHeight, document.documentElement.offsetHeight);"</span>)</span><br><span class="line">driver.set_window_size(width + <span class="number">100</span>, height + <span class="number">100</span>)</span><br><span class="line">driver.save_screenshot(<span class="string">'douban.png'</span>)</span><br><span class="line">driver.close()</span><br></pre></td></tr></table></figure>
+<figure class="highlight python"><table><tr><td class="code"><pre><span class="line"><span class="function"><span class="keyword">def</span> <span class="title">triangel</span><span class="params">()</span>:</span></span><br><span class="line">    <span class="keyword">print</span> <span class="string">' '</span>*(<span class="number">20</span>*<span class="number">3</span>)+str(<span class="number">1</span>)             <span class="comment">#定义起始两行</span></span><br><span class="line">    <span class="keyword">print</span> <span class="string">' '</span>*(<span class="number">19</span>*<span class="number">3</span>)+str(<span class="number">1</span>)+<span class="string">' '</span>*<span class="number">5</span>+str(<span class="number">1</span>)</span><br><span class="line">    <span class="keyword">for</span> i <span class="keyword">in</span> range(<span class="number">3</span>,<span class="number">21</span>):</span><br><span class="line">        <span class="keyword">if</span> i ==<span class="number">3</span>:</span><br><span class="line">            L = [<span class="number">1</span>,<span class="number">1</span>]       <span class="comment">#初始化第二行        </span></span><br><span class="line">        L1 = []</span><br><span class="line">        <span class="keyword">for</span> j <span class="keyword">in</span> range(<span class="number">2</span>,i):</span><br><span class="line">            z = L[i-j<span class="number">-1</span>]+L[i-j] <span class="comment"># 通过上一行构建下一层数据</span></span><br><span class="line">            L1.append(z)        <span class="comment"># 将数据添加到一个空列表中</span></span><br><span class="line">        L = [<span class="number">1</span>]       <span class="comment"># 再次对L初始化</span></span><br><span class="line">        L.extend(L1)    <span class="comment"># 将两个列表合并</span></span><br><span class="line">        L.append(<span class="number">1</span>)     <span class="comment"># 在L列表中添加最后一个数据“1”</span></span><br><span class="line"></span><br><span class="line">        <span class="comment"># 以下内容为杨辉三角的打印</span></span><br><span class="line">        t = <span class="string">' '</span>*((<span class="number">21</span>-i)*<span class="number">3</span>)+str(<span class="number">1</span>)   <span class="comment"># 每次循环进行初始化每列的第一个数据1</span></span><br><span class="line">        <span class="keyword">for</span> h <span class="keyword">in</span> range(<span class="number">1</span>,len(L)):   <span class="comment"># 以下为构建每列的除一个数据外的其他数据，</span></span><br><span class="line">            <span class="keyword">if</span> L[h]&lt;<span class="number">10</span>:             <span class="comment"># 如果数据小于10，就是其前面5个空格，如果</span></span><br><span class="line">                t = t + <span class="string">' '</span>*<span class="number">5</span>+str(L[h]) <span class="comment">#数据小于100，就减少一个空格，依次类推，</span></span><br><span class="line">            <span class="keyword">elif</span> L[h] &lt;<span class="number">100</span>:         <span class="comment"># 直至剩余一个空格，用于分辨相邻的数据</span></span><br><span class="line">                t = t+<span class="string">' '</span>*<span class="number">4</span>+str(L[h])</span><br><span class="line">            <span class="keyword">elif</span> L[h] &lt; <span class="number">1000</span>:</span><br><span class="line">                t = t + <span class="string">' '</span>*<span class="number">3</span>+str(L[h])</span><br><span class="line">            <span class="keyword">elif</span> L[h] &lt; <span class="number">10000</span>:</span><br><span class="line">                t = t + <span class="string">' '</span>*<span class="number">2</span>+str(L[h])</span><br><span class="line">            <span class="keyword">elif</span> L[h] &lt; <span class="number">100000</span>:</span><br><span class="line">                t = t + <span class="string">' '</span>*<span class="number">1</span>+str(L[h])</span><br><span class="line">        <span class="keyword">print</span> t</span><br><span class="line"><span class="keyword">if</span> __name__ == <span class="string">"__main__"</span>:</span><br><span class="line">    triangel()</span><br></pre></td></tr></table></figure>
 
-<p><img data-src="/userImages/doubanjieping.png" alt="豆瓣全屏截取"></p>
+<p><img data-src="/userImages/yanghuisanjiao.png" alt="杨辉三角"></p>
 ]]></content>
       <categories>
-        <category>Python后端</category>
+        <category>Python杂记</category>
       </categories>
       <tags>
-        <tag>Chromedriver</tag>
-        <tag>全页面截屏</tag>
+        <tag>杨辉三角</tag>
       </tags>
   </entry>
   <entry>
@@ -230,6 +211,75 @@
       <tags>
         <tag>青春</tag>
         <tag>付出</tag>
+      </tags>
+  </entry>
+  <entry>
+    <title>使用chromedriver实现豆瓣网页的全网页截图</title>
+    <url>/190108/</url>
+    <content><![CDATA[<p>最近由于工作需要，需要对部分网站进行全文截屏。在网上搜了很久没有搜出好的方法，而且在新版的selenium中已经不在支持PhantomJS了，所以全文截取变得有点棘手。</p>
+<a id="more"></a>
+
+<p>此处给出一个简单的方法，以20行代码实现<code>selenium+chromedriver+python</code>实现豆瓣的全文截取。  </p>
+<figure class="highlight python"><table><tr><td class="code"><pre><span class="line"><span class="keyword">from</span> selenium <span class="keyword">import</span> webdriver</span><br><span class="line"></span><br><span class="line">options = webdriver.ChromeOptions()</span><br><span class="line">options.add_argument(<span class="string">'--headless'</span>)</span><br><span class="line">options.add_argument(<span class="string">'--dns-prefetch-disable'</span>)</span><br><span class="line">options.add_argument(<span class="string">'--no-referrers'</span>)</span><br><span class="line">options.add_argument(<span class="string">'--disable-gpu'</span>)</span><br><span class="line">options.add_argument(<span class="string">'--disable-audio'</span>)</span><br><span class="line">options.add_argument(<span class="string">'--no-sandbox'</span>)</span><br><span class="line">options.add_argument(<span class="string">'--ignore-certificate-errors'</span>)</span><br><span class="line">options.add_argument(<span class="string">'--allow-insecure-localhost'</span>)</span><br><span class="line"></span><br><span class="line">driver = webdriver.Chrome(options=options)</span><br><span class="line">driver.get(<span class="string">'http://www.douban.com'</span>)</span><br><span class="line">width = driver.execute_script(</span><br><span class="line">        <span class="string">"return Math.max(document.body.scrollWidth, document.body.offsetWidth, document.documentElement.clientWidth, document.documentElement.scrollWidth, document.documentElement.offsetWidth);"</span>)</span><br><span class="line">height = driver.execute_script(</span><br><span class="line">        <span class="string">"return Math.max(document.body.scrollHeight, document.body.offsetHeight, document.documentElement.clientHeight, document.documentElement.scrollHeight, document.documentElement.offsetHeight);"</span>)</span><br><span class="line">driver.set_window_size(width + <span class="number">100</span>, height + <span class="number">100</span>)</span><br><span class="line">driver.save_screenshot(<span class="string">'douban.png'</span>)</span><br><span class="line">driver.close()</span><br></pre></td></tr></table></figure>
+
+<p><img data-src="/userImages/doubanjieping.png" alt="豆瓣全屏截取"></p>
+]]></content>
+      <categories>
+        <category>Python后端</category>
+      </categories>
+      <tags>
+        <tag>Chromedriver</tag>
+        <tag>全页面截屏</tag>
+      </tags>
+  </entry>
+  <entry>
+    <title>有些人走着走着就散了</title>
+    <url>/181118/</url>
+    <content><![CDATA[<script src=/js/crypto-js.js></script>
+<script>
+function doDecrypt (pwd, onError) {
+	console.log('in doDecrypt');
+	const txt = document.getElementById('enc_content').innerHTML;
+	let plantext;
+	try {
+		const bytes = CryptoJS.AES.decrypt(txt, pwd);
+		var plaintext = bytes.toString(CryptoJS.enc.Utf8);
+	} catch(err) {
+		if(onError) {
+			onError(err);
+		}
+		return;
+	}
+	document.getElementById('enc_content').innerHTML = plaintext;
+	document.getElementById('enc_content').style.display = 'block';
+	document.getElementById('enc_passwd').style.display = 'none';
+	if(typeof MathJax !== 'undefined') {
+		MathJax.Hub.Queue(
+			['resetEquationNumbers', MathJax.InputJax.TeX],
+			['PreProcess', MathJax.Hub],
+			['Reprocess', MathJax.Hub]
+		);
+	}
+}
+</script>
+<div id="enc_content" style="display:none">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</div>
+<div id="enc_passwd"> <input id="enc_pwd_input" type="password" style="border-radius: 5px;border-style: groove;height: 30px;width: 50%;cursor: auto;font-size: 102%;color: currentColor;outline: none;text-overflow: initial;padding-left: 5px;" onkeydown="if (event.keyCode == 13) { decrypt(); return false;}"> <input type="submit" value="解&nbsp;密" onclick="decrypt()" style="width: 58px;height: 34px;border-radius: 5px;background-color: white;border-style: solid;color: currentColor;"><div id="enc_error" style="display: inline-block;color: #d84527;margin-left: 10px"></div>
+<script>
+var onError = function(error) {
+	document.getElementById("enc_error").innerHTML = "password error!"
+};
+function decrypt() {
+var passwd = document.getElementById("enc_pwd_input").value;
+console.log(passwd);
+doDecrypt(passwd, onError);
+}
+</script>
+</div>]]></content>
+      <categories>
+        <category>往事回廊</category>
+      </categories>
+      <tags>
+        <tag>一场梦</tag>
       </tags>
   </entry>
   <entry>
@@ -341,53 +391,21 @@
       </tags>
   </entry>
   <entry>
-    <title>有些人走着走着就散了</title>
-    <url>/181118/</url>
-    <content><![CDATA[<script src=/js/crypto-js.js></script>
-<script>
-function doDecrypt (pwd, onError) {
-	console.log('in doDecrypt');
-	const txt = document.getElementById('enc_content').innerHTML;
-	let plantext;
-	try {
-		const bytes = CryptoJS.AES.decrypt(txt, pwd);
-		var plaintext = bytes.toString(CryptoJS.enc.Utf8);
-	} catch(err) {
-		if(onError) {
-			onError(err);
-		}
-		return;
-	}
-	document.getElementById('enc_content').innerHTML = plaintext;
-	document.getElementById('enc_content').style.display = 'block';
-	document.getElementById('enc_passwd').style.display = 'none';
-	if(typeof MathJax !== 'undefined') {
-		MathJax.Hub.Queue(
-			['resetEquationNumbers', MathJax.InputJax.TeX],
-			['PreProcess', MathJax.Hub],
-			['Reprocess', MathJax.Hub]
-		);
-	}
-}
-</script>
-<div id="enc_content" style="display:none">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</div>
-<div id="enc_passwd"> <input id="enc_pwd_input" type="password" style="border-radius: 5px;border-style: groove;height: 30px;width: 50%;cursor: auto;font-size: 102%;color: currentColor;outline: none;text-overflow: initial;padding-left: 5px;" onkeydown="if (event.keyCode == 13) { decrypt(); return false;}"> <input type="submit" value="解&nbsp;密" onclick="decrypt()" style="width: 58px;height: 34px;border-radius: 5px;background-color: white;border-style: solid;color: currentColor;"><div id="enc_error" style="display: inline-block;color: #d84527;margin-left: 10px"></div>
-<script>
-var onError = function(error) {
-	document.getElementById("enc_error").innerHTML = "password error!"
-};
-function decrypt() {
-var passwd = document.getElementById("enc_pwd_input").value;
-console.log(passwd);
-doDecrypt(passwd, onError);
-}
-</script>
-</div>]]></content>
+    <title>使用tkinter进行图片的遍历显示</title>
+    <url>/190228/</url>
+    <content><![CDATA[<h3 id="原因"><a href="#原因" class="headerlink" title="原因"></a>原因</h3><p>最近因为要写个GUI的内容，需要用到图像的遍历显示，因为没有办法,所以就自行摸索着开始写一个循环显示的TK。最终算是不符所望吧，勉强写出来一个，以此做下记录，便于下次使用。</p>
+<a id="more"></a>
+
+<figure class="highlight python"><table><tr><td class="code"><pre><span class="line"><span class="keyword">import</span> tkinter <span class="keyword">as</span> tk</span><br><span class="line"><span class="keyword">from</span> PIL <span class="keyword">import</span> ImageTk, Image</span><br><span class="line"><span class="keyword">import</span> glob, time</span><br><span class="line"><span class="keyword">import</span> threading</span><br><span class="line"></span><br><span class="line">filenames = glob.glob(<span class="string">'sysImages/*'</span>)</span><br><span class="line"></span><br><span class="line"></span><br><span class="line"><span class="function"><span class="keyword">def</span> <span class="title">autoQuit</span><span class="params">()</span>:</span></span><br><span class="line">    time.sleep(<span class="number">2</span>)</span><br><span class="line">    root.quit()</span><br><span class="line"></span><br><span class="line"><span class="keyword">for</span> filename <span class="keyword">in</span> filenames:</span><br><span class="line">    root = tk.Tk()</span><br><span class="line"></span><br><span class="line">    img = Image.open(filename)</span><br><span class="line">    photo = ImageTk.PhotoImage(img)</span><br><span class="line">    label = tk.Label(image=photo)</span><br><span class="line">    label.image = photo</span><br><span class="line">    label.pack()</span><br><span class="line"></span><br><span class="line">    t = threading.Thread(target=autoQuit)</span><br><span class="line">    t.start()</span><br><span class="line">    root.mainloop()</span><br><span class="line">    root.destroy()</span><br></pre></td></tr></table></figure>
+
+<hr>
+]]></content>
       <categories>
-        <category>往事回廊</category>
+        <category>Python杂记</category>
       </categories>
       <tags>
-        <tag>一场梦</tag>
+        <tag>tkinter</tag>
+        <tag>遍历图片</tag>
       </tags>
   </entry>
   <entry>
@@ -476,132 +494,6 @@ doDecrypt(passwd, onError);
       <tags>
         <tag>Tensorflow</tag>
         <tag>GPU</tag>
-      </tags>
-  </entry>
-  <entry>
-    <title>在Centos中架设ss服务</title>
-    <url>/190425/</url>
-    <content><![CDATA[<p>想必大家都被国内的“墙”折磨过，是不是很难受，是不是有时候很无能为力。这里就为大家介绍几种上网的方式。</p>
-<h3 id="Google访问助手"><a href="#Google访问助手" class="headerlink" title="Google访问助手"></a>Google访问助手</h3><p>如果你使用的是这种方式，那么恭喜你，下面介绍的内容和你无关了。</p>
-<p>Google访问助手下载链接：<a href="http://ggfwzs.com/" target="_blank" rel="noopener">链接</a></p>
-<a id="more"></a>
-
-<h3 id="架设SS服务"><a href="#架设SS服务" class="headerlink" title="架设SS服务"></a>架设SS服务</h3><p>架设环境</p>
-<ul>
-<li>一台可以访问外网的VPS服务器</li>
-<li>Centos7 + Python2.x</li>
-</ul>
-<p>架设步骤</p>
-<ul>
-<li>安装必须的软件包:</li>
-</ul>
-<figure class="highlight plain"><table><tr><td class="code"><pre><span class="line">yum upgrade -y</span><br><span class="line">yum groupinstall &quot;Development Tools&quot;</span><br><span class="line">yum install epel-release -y</span><br><span class="line">yum install python-setuptools python-pip m2crypto -y</span><br><span class="line"></span><br><span class="line">## 更新pip包</span><br><span class="line">python -m pip install -U pip</span><br><span class="line"></span><br><span class="line">## 安装shadowsocks</span><br><span class="line">pip install shadowsocks</span><br></pre></td></tr></table></figure>
-
-<ul>
-<li><p>创建配置文件</p>
-<p>以下内容是创建唯一密码和端口的配置文件，如果多用户使用，建议直接使用多用户配置.</p>
-<figure class="highlight plain"><table><tr><td class="code"><pre><span class="line">### 单用户配置</span><br><span class="line">vim &#x2F;etc&#x2F;shadowsocks.json</span><br><span class="line"></span><br><span class="line">&#123;</span><br><span class="line">  &quot;server&quot;:&quot;0.0.0.0&quot;,</span><br><span class="line">  &quot;server_port&quot;:server_port,    #例如5460</span><br><span class="line">  &quot;local_port&quot;:1080,</span><br><span class="line">  &quot;password&quot;:&quot;password&quot;,</span><br><span class="line">  &quot;timeout&quot;:600,</span><br><span class="line">  &quot;method&quot;:&quot;aes-256-cfb&quot;</span><br><span class="line">&#125;</span><br><span class="line"></span><br><span class="line">### 多用户配置</span><br><span class="line">vim &#x2F;etc&#x2F;shadowsocks.json</span><br><span class="line"></span><br><span class="line">第一种：</span><br><span class="line">&#123;</span><br><span class="line">  &quot;server&quot;:&quot;your_server_ip&quot;, # 或者使用 0.0.0.0</span><br><span class="line">  &quot;local_address&quot;: &quot;127.0.0.1&quot;,</span><br><span class="line">  &quot;local_port&quot;:1080,</span><br><span class="line">  &quot;port_password&quot;:&#123;   #端口号与密码</span><br><span class="line">    &quot;8989&quot;:&quot;password0&quot;,   # 左边是端口号，右边是密码</span><br><span class="line">    &quot;9001&quot;:&quot;password1&quot;,</span><br><span class="line">    &quot;9002&quot;:&quot;password2&quot;,</span><br><span class="line">    &quot;9003&quot;:&quot;password3&quot;,</span><br><span class="line">    &quot;9004&quot;:&quot;password4&quot;</span><br><span class="line">  &#125;,</span><br><span class="line">  &quot;timeout&quot;:300,</span><br><span class="line">  &quot;method&quot;:&quot;aes-256-cfb&quot;,</span><br><span class="line">  &quot;fast_open&quot;: false</span><br><span class="line">&#125;</span><br><span class="line">第二种：</span><br><span class="line">&#123;</span><br><span class="line">  &quot;timeout&quot;: 600,</span><br><span class="line">  &quot;method&quot;: &quot;aes-256-cfb&quot;,</span><br><span class="line">  &quot;port_password&quot;:&#123;</span><br><span class="line">    &quot;40001&quot;: &quot;password1&quot;,</span><br><span class="line">    &quot;40002&quot;: &quot;password2&quot;,</span><br><span class="line">    &quot;40003&quot;: &quot;password3&quot;</span><br><span class="line">  &#125;,</span><br><span class="line">  &quot;_comment&quot;:&#123;</span><br><span class="line">    &quot;40001&quot;: &quot;xiaoming&quot;,</span><br><span class="line">    &quot;40002&quot;: &quot;lilei&quot;,</span><br><span class="line">    &quot;40003&quot;: &quot;mike&quot;</span><br><span class="line">  &#125;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
-</li>
-<li><p>系统级服务关闭</p>
-<p>在配置完成后，需要关闭防火墙，否者会造成无法科学上网。</p>
-<figure class="highlight plain"><table><tr><td class="code"><pre><span class="line">systemctl stop iptables</span><br><span class="line">systemctl stop firewalld</span><br></pre></td></tr></table></figure>
-
-<p>若配置完成，且防火墙关闭，依旧无法科学上网，那么看是否是浏览器设置问题，若浏览器有FQ插件且处于启用状态（浏览器启用代理），停用它。</p>
-</li>
-<li><p>测试是否可用</p>
-<figure class="highlight plain"><table><tr><td class="code"><pre><span class="line">### 开启ss服务</span><br><span class="line">ssserver -c &#x2F;etc&#x2F;shadowsocks.json start</span><br></pre></td></tr></table></figure>
-
-<p>如果可以使用，则说明配置完成</p>
-</li>
-<li><p>将SS服务变为系统级服务</p>
-<figure class="highlight plain"><table><tr><td class="code"><pre><span class="line">vim &#x2F;etc&#x2F;systemd&#x2F;system&#x2F;shadowsocks.service</span><br><span class="line"></span><br><span class="line">### 将以下内容粘贴到打开的shadowsocks.service文件中</span><br><span class="line"></span><br><span class="line">[Unit]</span><br><span class="line">Description&#x3D;Shadowsocks</span><br><span class="line"></span><br><span class="line">[Service]</span><br><span class="line">TimeoutStartSec&#x3D;0</span><br><span class="line">ExecStart&#x3D;&#x2F;usr&#x2F;bin&#x2F;ssserver -c &#x2F;etc&#x2F;shadowsocks.json</span><br><span class="line"></span><br><span class="line">[Install]</span><br><span class="line">WantedBy&#x3D;multi-user.target</span><br></pre></td></tr></table></figure>
-
-<p>设置开机启动</p>
-<figure class="highlight plain"><table><tr><td class="code"><pre><span class="line">systemctl enable shadowsocks &amp;&amp; systemctl start shadowsocks</span><br></pre></td></tr></table></figure>
-</li>
-<li><p>为OpenVZ的VPS服务器做BBR加速</p>
-<p>本安装<strong>适用于CentOS/RHEL7+，Ubuntu15+，Debian8+</strong> 的64位系统，如不是请先重装系统，下载rintd二进制文件(原版bbr和修改版bbr二选一即可)</p>
-<figure class="highlight plain"><table><tr><td class="code"><pre><span class="line">wget --no-check-certificate https:&#x2F;&#x2F;raw.githubusercontent.com&#x2F;mixool&#x2F;rinetd&#x2F;master&#x2F;rinetd</span><br><span class="line"></span><br><span class="line">wget --no-check-certificate https:&#x2F;&#x2F;raw.githubusercontent.com&#x2F;mixool&#x2F;rinetd&#x2F;master&#x2F;rinetd_bbr_powered -O &#x2F;root&#x2F;rinetd</span><br></pre></td></tr></table></figure>
-
-<p>最后一个为魔改版BBR，上面一个为原版。选一个下载就可以了。然后修改权限</p>
-<figure class="highlight plain"><table><tr><td class="code"><pre><span class="line">chmod +x rinetd</span><br></pre></td></tr></table></figure>
-
-<p>修改rinetd的配置文件rinetd.conf,添加监听地址:</p>
-<figure class="highlight plain"><table><tr><td class="code"><pre><span class="line">vim rinetd.conf</span><br><span class="line"></span><br><span class="line"># bindadress bindport connectaddress connectport </span><br><span class="line">0.0.0.0 443 0.0.0.0 443</span><br><span class="line"></span><br><span class="line">0.0.0.0 80 0.0.0.0 80</span><br></pre></td></tr></table></figure>
-
-<p>每一行都是一个端口，将端口改成你使用的端口就可以了。不要问我一行为什么要写两个相同的，我也不知道为什么。</p>
-</li>
-<li><p>将rinetd变为系统级应用</p>
-<figure class="highlight plain"><table><tr><td class="code"><pre><span class="line">vim &#x2F;etc&#x2F;systemd&#x2F;system&#x2F;rinetd.service</span><br><span class="line"></span><br><span class="line">[Unit]</span><br><span class="line">Description&#x3D;rinetd</span><br><span class="line"></span><br><span class="line">[Service]</span><br><span class="line">ExecStart&#x3D;&#x2F;root&#x2F;rinetd -f -c &#x2F;root&#x2F;rinetd.conf raw venet0:0</span><br><span class="line">Restart&#x3D;always</span><br><span class="line">  </span><br><span class="line">[Install]</span><br><span class="line">WantedBy&#x3D;multi-user.target</span><br></pre></td></tr></table></figure>
-
-<p>设置开机启动</p>
-<figure class="highlight plain"><table><tr><td class="code"><pre><span class="line">systemctl enable rinetd &amp;&amp; systemctl start rinetd</span><br></pre></td></tr></table></figure>
-
-<p>在以上操作完毕后，OpenVZ架构的VPS服务器在使用SS服务时，会明显感觉到访问速度快了很多。</p>
-</li>
-</ul>
-]]></content>
-      <categories>
-        <category>科学上网</category>
-      </categories>
-      <tags>
-        <tag>ss</tag>
-        <tag>科学上网</tag>
-      </tags>
-  </entry>
-  <entry>
-    <title>岁月静好</title>
-    <url>/180625/</url>
-    <content><![CDATA[<h3 id="开始"><a href="#开始" class="headerlink" title="开始"></a>开始</h3><blockquote>
-<p>故事的开始都很美好</p>
-</blockquote>
-<p>2015年9月2号，我来到了这所大学，虽然这所大学并不是很好的大学，但是这所大学却给了我很多记忆。<br>初入大学，总有太多的新鲜感，逛逛走走，时间总会匆匆而过。记得正式上课的第一天跑错了教室，不是我一人，而是我们整个班，现在想起来都很搞笑。<br>在那一年里，我有着自己的梦想，我期盼着自己的未来，因为我相信自己会过的更好。  </p>
-<a id="more"></a>
-
-<h3 id="悄悄"><a href="#悄悄" class="headerlink" title="悄悄"></a>悄悄</h3><blockquote>
-<p>窗外的景色依旧燥热，有你时如此，无你时也是如此。</p>
-</blockquote>
-<p>我们有些时候总是悄悄的来，然后再悄悄的走开。人生中有很多的聚散，最后不过是风轻云淡。曾经我很爱很爱一个女孩，异地很痛苦，时刻想着她，后来也放下了。有时候人生啊，真的是悄悄的来，悄悄的走。大学四年里，我爱过就好，现在我已经习惯了一个人生活，回忆里和朋友坐在喧闹街市的路边摊，几瓶啤酒，一点小菜。聊起彼此曾经失败的感情，都在岁月变迁里逐渐释怀。胸膛上固守的温度总是会被南来北往的季风吹散，那些念念不忘的名字最后也被后来者取代。记住当时的日色，也未必能与你岁岁相守，彼此停留。  </p>
-<h3 id="那一年"><a href="#那一年" class="headerlink" title="那一年"></a>那一年</h3><blockquote>
-<p>记忆它总是慢慢的累积在我心中无法抹去</p>
-</blockquote>
-<p>那一年，我认识了你，一句半开玩笑的话，我们在一起了。时至今日，我依然记得当初说的那句玩笑话“要不你做我女朋友吧”，没错，就是这句，然后我们就在一起了，我开心的像个八百斤的胖子一样。之后的我做什么事都会为你想着，爱着你，宠着你，陪着你。只是后来 。。。 只是后来我们走散了。高中的生活中，你是我最美好的回忆，朋友羡慕着你我的感情，而我也认为我们会走到一起。那一年，《漂洋过海来看你》还很火，你对我说“我多想去见你”，因为那年我转到了另一所学校，在那所学校中我过着没有你的生活，殊不知我也很想见你，不善言表的我，不会更好的用语言来表达我对你的爱，而我却选择了为你默默付出。  </p>
-<h3 id="也许，也许"><a href="#也许，也许" class="headerlink" title="也许，也许"></a>也许，也许</h3><blockquote>
-<p>如果当初没有如果，现在的结局会不会不一样</p>
-</blockquote>
-<p>高考过后，我们去了两所不一样的学校，准确来说是我去了一所离你800多公里外的一所本科学校，而你却选择去了一所专科学校。也许这就注定了之后的结局吧。价值观不同，有时候很难走到一起。那时我们并没分开，而我也只在放假的时候才有空去找你，陪着你。繁忙的学业，时刻都会落后的技术，让我选择了我要给你更好的生活，而你选择的是要我时刻陪伴。大学上课时，手机成为了我们两个唯一交流的桥梁。整日看着手机，每当手机亮了我就知道是你给我发消息。时光蹉跎，岁月静好，三年里我们就是这样过去了，手机、放假后的陪伴。渐渐的我们都变了，17年，你去了你们那里做了一名幼教，你实习之前你问我“以后你养得起我吗”，我沉默了，是啊，我当时的能力能养你吗，我也问我自己，技术那么渣，我怎么去养你。我想了许久，我说“我养你”，后来我变了，变得想要为你我的生活做拼搏。我用实际行动做证明，但是我们却渐渐走散了，我想要给你我所拥有的最好的。接触的不同，价值观也就渐渐的改变了。  </p>
-<h3 id="后来的我们"><a href="#后来的我们" class="headerlink" title="后来的我们"></a>后来的我们</h3><blockquote>
-<p>美好的爱情大都相似，而不幸的爱情最后都成了故事，如果当时你没走，后来的我们会不会不一样? ——《后来的我们》</p>
-</blockquote>
-<p>后来，我们走散了。分手后的某一天，我突然知道你订了婚，要和别人去结婚了，我突然间觉得有我的世界都坍塌了。虽然我们分手了，我只是我没有想到你会选择那么早结婚。当我知道后的两天中，我彻夜未眠，听了两晚的《体面》。那天是过年后，朋友来找我喝酒，我大醉，醉的不省人事。虽然是醉的不省人事，但是我却记得关于你的话，我说“我想XXX”。那场感情上的坍塌，让我颓废了一星期，一星期之后，我选择了放下，彻彻底底的放下，手机和电脑里都删了关于你的一切。  </p>
-<h3 id="如今"><a href="#如今" class="headerlink" title="如今"></a>如今</h3><blockquote>
-<p>再见，曾经最爱的她。</p>
-</blockquote>
-<p>如今的我初入社会，离开了有太多记忆的学校。我为了自己的生活做着拼搏，不再是为了我们。<br><img data-src="/userImages/515.jpg"></p>
-]]></content>
-      <categories>
-        <category>往事回廊</category>
-      </categories>
-      <tags>
-        <tag>Miss</tag>
-      </tags>
-  </entry>
-  <entry>
-    <title>使用tkinter进行图片的遍历显示</title>
-    <url>/190228/</url>
-    <content><![CDATA[<h3 id="原因"><a href="#原因" class="headerlink" title="原因"></a>原因</h3><p>最近因为要写个GUI的内容，需要用到图像的遍历显示，因为没有办法,所以就自行摸索着开始写一个循环显示的TK。最终算是不符所望吧，勉强写出来一个，以此做下记录，便于下次使用。</p>
-<a id="more"></a>
-
-<figure class="highlight python"><table><tr><td class="code"><pre><span class="line"><span class="keyword">import</span> tkinter <span class="keyword">as</span> tk</span><br><span class="line"><span class="keyword">from</span> PIL <span class="keyword">import</span> ImageTk, Image</span><br><span class="line"><span class="keyword">import</span> glob, time</span><br><span class="line"><span class="keyword">import</span> threading</span><br><span class="line"></span><br><span class="line">filenames = glob.glob(<span class="string">'sysImages/*'</span>)</span><br><span class="line"></span><br><span class="line"></span><br><span class="line"><span class="function"><span class="keyword">def</span> <span class="title">autoQuit</span><span class="params">()</span>:</span></span><br><span class="line">    time.sleep(<span class="number">2</span>)</span><br><span class="line">    root.quit()</span><br><span class="line"></span><br><span class="line"><span class="keyword">for</span> filename <span class="keyword">in</span> filenames:</span><br><span class="line">    root = tk.Tk()</span><br><span class="line"></span><br><span class="line">    img = Image.open(filename)</span><br><span class="line">    photo = ImageTk.PhotoImage(img)</span><br><span class="line">    label = tk.Label(image=photo)</span><br><span class="line">    label.image = photo</span><br><span class="line">    label.pack()</span><br><span class="line"></span><br><span class="line">    t = threading.Thread(target=autoQuit)</span><br><span class="line">    t.start()</span><br><span class="line">    root.mainloop()</span><br><span class="line">    root.destroy()</span><br></pre></td></tr></table></figure>
-
-<hr>
-]]></content>
-      <categories>
-        <category>Python杂记</category>
-      </categories>
-      <tags>
-        <tag>tkinter</tag>
-        <tag>遍历图片</tag>
       </tags>
   </entry>
   <entry>
@@ -720,6 +612,114 @@ doDecrypt(passwd, onError);
       </tags>
   </entry>
   <entry>
+    <title>岁月静好</title>
+    <url>/180625/</url>
+    <content><![CDATA[<h3 id="开始"><a href="#开始" class="headerlink" title="开始"></a>开始</h3><blockquote>
+<p>故事的开始都很美好</p>
+</blockquote>
+<p>2015年9月2号，我来到了这所大学，虽然这所大学并不是很好的大学，但是这所大学却给了我很多记忆。<br>初入大学，总有太多的新鲜感，逛逛走走，时间总会匆匆而过。记得正式上课的第一天跑错了教室，不是我一人，而是我们整个班，现在想起来都很搞笑。<br>在那一年里，我有着自己的梦想，我期盼着自己的未来，因为我相信自己会过的更好。  </p>
+<a id="more"></a>
+
+<h3 id="悄悄"><a href="#悄悄" class="headerlink" title="悄悄"></a>悄悄</h3><blockquote>
+<p>窗外的景色依旧燥热，有你时如此，无你时也是如此。</p>
+</blockquote>
+<p>我们有些时候总是悄悄的来，然后再悄悄的走开。人生中有很多的聚散，最后不过是风轻云淡。曾经我很爱很爱一个女孩，异地很痛苦，时刻想着她，后来也放下了。有时候人生啊，真的是悄悄的来，悄悄的走。大学四年里，我爱过就好，现在我已经习惯了一个人生活，回忆里和朋友坐在喧闹街市的路边摊，几瓶啤酒，一点小菜。聊起彼此曾经失败的感情，都在岁月变迁里逐渐释怀。胸膛上固守的温度总是会被南来北往的季风吹散，那些念念不忘的名字最后也被后来者取代。记住当时的日色，也未必能与你岁岁相守，彼此停留。  </p>
+<h3 id="那一年"><a href="#那一年" class="headerlink" title="那一年"></a>那一年</h3><blockquote>
+<p>记忆它总是慢慢的累积在我心中无法抹去</p>
+</blockquote>
+<p>那一年，我认识了你，一句半开玩笑的话，我们在一起了。时至今日，我依然记得当初说的那句玩笑话“要不你做我女朋友吧”，没错，就是这句，然后我们就在一起了，我开心的像个八百斤的胖子一样。之后的我做什么事都会为你想着，爱着你，宠着你，陪着你。只是后来 。。。 只是后来我们走散了。高中的生活中，你是我最美好的回忆，朋友羡慕着你我的感情，而我也认为我们会走到一起。那一年，《漂洋过海来看你》还很火，你对我说“我多想去见你”，因为那年我转到了另一所学校，在那所学校中我过着没有你的生活，殊不知我也很想见你，不善言表的我，不会更好的用语言来表达我对你的爱，而我却选择了为你默默付出。  </p>
+<h3 id="也许，也许"><a href="#也许，也许" class="headerlink" title="也许，也许"></a>也许，也许</h3><blockquote>
+<p>如果当初没有如果，现在的结局会不会不一样</p>
+</blockquote>
+<p>高考过后，我们去了两所不一样的学校，准确来说是我去了一所离你800多公里外的一所本科学校，而你却选择去了一所专科学校。也许这就注定了之后的结局吧。价值观不同，有时候很难走到一起。那时我们并没分开，而我也只在放假的时候才有空去找你，陪着你。繁忙的学业，时刻都会落后的技术，让我选择了我要给你更好的生活，而你选择的是要我时刻陪伴。大学上课时，手机成为了我们两个唯一交流的桥梁。整日看着手机，每当手机亮了我就知道是你给我发消息。时光蹉跎，岁月静好，三年里我们就是这样过去了，手机、放假后的陪伴。渐渐的我们都变了，17年，你去了你们那里做了一名幼教，你实习之前你问我“以后你养得起我吗”，我沉默了，是啊，我当时的能力能养你吗，我也问我自己，技术那么渣，我怎么去养你。我想了许久，我说“我养你”，后来我变了，变得想要为你我的生活做拼搏。我用实际行动做证明，但是我们却渐渐走散了，我想要给你我所拥有的最好的。接触的不同，价值观也就渐渐的改变了。  </p>
+<h3 id="后来的我们"><a href="#后来的我们" class="headerlink" title="后来的我们"></a>后来的我们</h3><blockquote>
+<p>美好的爱情大都相似，而不幸的爱情最后都成了故事，如果当时你没走，后来的我们会不会不一样? ——《后来的我们》</p>
+</blockquote>
+<p>后来，我们走散了。分手后的某一天，我突然知道你订了婚，要和别人去结婚了，我突然间觉得有我的世界都坍塌了。虽然我们分手了，我只是我没有想到你会选择那么早结婚。当我知道后的两天中，我彻夜未眠，听了两晚的《体面》。那天是过年后，朋友来找我喝酒，我大醉，醉的不省人事。虽然是醉的不省人事，但是我却记得关于你的话，我说“我想XXX”。那场感情上的坍塌，让我颓废了一星期，一星期之后，我选择了放下，彻彻底底的放下，手机和电脑里都删了关于你的一切。  </p>
+<h3 id="如今"><a href="#如今" class="headerlink" title="如今"></a>如今</h3><blockquote>
+<p>再见，曾经最爱的她。</p>
+</blockquote>
+<p>如今的我初入社会，离开了有太多记忆的学校。我为了自己的生活做着拼搏，不再是为了我们。<br><img data-src="/userImages/515.jpg"></p>
+]]></content>
+      <categories>
+        <category>往事回廊</category>
+      </categories>
+      <tags>
+        <tag>Miss</tag>
+      </tags>
+  </entry>
+  <entry>
+    <title>在Centos中架设ss服务</title>
+    <url>/190425/</url>
+    <content><![CDATA[<p>想必大家都被国内的“墙”折磨过，是不是很难受，是不是有时候很无能为力。这里就为大家介绍几种上网的方式。</p>
+<h3 id="Google访问助手"><a href="#Google访问助手" class="headerlink" title="Google访问助手"></a>Google访问助手</h3><p>如果你使用的是这种方式，那么恭喜你，下面介绍的内容和你无关了。</p>
+<p>Google访问助手下载链接：<a href="http://ggfwzs.com/" target="_blank" rel="noopener">链接</a></p>
+<a id="more"></a>
+
+<h3 id="架设SS服务"><a href="#架设SS服务" class="headerlink" title="架设SS服务"></a>架设SS服务</h3><p>架设环境</p>
+<ul>
+<li>一台可以访问外网的VPS服务器</li>
+<li>Centos7 + Python2.x</li>
+</ul>
+<p>架设步骤</p>
+<ul>
+<li>安装必须的软件包:</li>
+</ul>
+<figure class="highlight plain"><table><tr><td class="code"><pre><span class="line">yum upgrade -y</span><br><span class="line">yum groupinstall &quot;Development Tools&quot;</span><br><span class="line">yum install epel-release -y</span><br><span class="line">yum install python-setuptools python-pip m2crypto -y</span><br><span class="line"></span><br><span class="line">## 更新pip包</span><br><span class="line">python -m pip install -U pip</span><br><span class="line"></span><br><span class="line">## 安装shadowsocks</span><br><span class="line">pip install shadowsocks</span><br></pre></td></tr></table></figure>
+
+<ul>
+<li><p>创建配置文件</p>
+<p>以下内容是创建唯一密码和端口的配置文件，如果多用户使用，建议直接使用多用户配置.</p>
+<figure class="highlight plain"><table><tr><td class="code"><pre><span class="line">### 单用户配置</span><br><span class="line">vim &#x2F;etc&#x2F;shadowsocks.json</span><br><span class="line"></span><br><span class="line">&#123;</span><br><span class="line">  &quot;server&quot;:&quot;0.0.0.0&quot;,</span><br><span class="line">  &quot;server_port&quot;:server_port,    #例如5460</span><br><span class="line">  &quot;local_port&quot;:1080,</span><br><span class="line">  &quot;password&quot;:&quot;password&quot;,</span><br><span class="line">  &quot;timeout&quot;:600,</span><br><span class="line">  &quot;method&quot;:&quot;aes-256-cfb&quot;</span><br><span class="line">&#125;</span><br><span class="line"></span><br><span class="line">### 多用户配置</span><br><span class="line">vim &#x2F;etc&#x2F;shadowsocks.json</span><br><span class="line"></span><br><span class="line">第一种：</span><br><span class="line">&#123;</span><br><span class="line">  &quot;server&quot;:&quot;your_server_ip&quot;, # 或者使用 0.0.0.0</span><br><span class="line">  &quot;local_address&quot;: &quot;127.0.0.1&quot;,</span><br><span class="line">  &quot;local_port&quot;:1080,</span><br><span class="line">  &quot;port_password&quot;:&#123;   #端口号与密码</span><br><span class="line">    &quot;8989&quot;:&quot;password0&quot;,   # 左边是端口号，右边是密码</span><br><span class="line">    &quot;9001&quot;:&quot;password1&quot;,</span><br><span class="line">    &quot;9002&quot;:&quot;password2&quot;,</span><br><span class="line">    &quot;9003&quot;:&quot;password3&quot;,</span><br><span class="line">    &quot;9004&quot;:&quot;password4&quot;</span><br><span class="line">  &#125;,</span><br><span class="line">  &quot;timeout&quot;:300,</span><br><span class="line">  &quot;method&quot;:&quot;aes-256-cfb&quot;,</span><br><span class="line">  &quot;fast_open&quot;: false</span><br><span class="line">&#125;</span><br><span class="line">第二种：</span><br><span class="line">&#123;</span><br><span class="line">  &quot;timeout&quot;: 600,</span><br><span class="line">  &quot;method&quot;: &quot;aes-256-cfb&quot;,</span><br><span class="line">  &quot;port_password&quot;:&#123;</span><br><span class="line">    &quot;40001&quot;: &quot;password1&quot;,</span><br><span class="line">    &quot;40002&quot;: &quot;password2&quot;,</span><br><span class="line">    &quot;40003&quot;: &quot;password3&quot;</span><br><span class="line">  &#125;,</span><br><span class="line">  &quot;_comment&quot;:&#123;</span><br><span class="line">    &quot;40001&quot;: &quot;xiaoming&quot;,</span><br><span class="line">    &quot;40002&quot;: &quot;lilei&quot;,</span><br><span class="line">    &quot;40003&quot;: &quot;mike&quot;</span><br><span class="line">  &#125;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+</li>
+<li><p>系统级服务关闭</p>
+<p>在配置完成后，需要关闭防火墙，否者会造成无法科学上网。</p>
+<figure class="highlight plain"><table><tr><td class="code"><pre><span class="line">systemctl stop iptables</span><br><span class="line">systemctl stop firewalld</span><br></pre></td></tr></table></figure>
+
+<p>若配置完成，且防火墙关闭，依旧无法科学上网，那么看是否是浏览器设置问题，若浏览器有FQ插件且处于启用状态（浏览器启用代理），停用它。</p>
+</li>
+<li><p>测试是否可用</p>
+<figure class="highlight plain"><table><tr><td class="code"><pre><span class="line">### 开启ss服务</span><br><span class="line">ssserver -c &#x2F;etc&#x2F;shadowsocks.json start</span><br></pre></td></tr></table></figure>
+
+<p>如果可以使用，则说明配置完成</p>
+</li>
+<li><p>将SS服务变为系统级服务</p>
+<figure class="highlight plain"><table><tr><td class="code"><pre><span class="line">vim &#x2F;etc&#x2F;systemd&#x2F;system&#x2F;shadowsocks.service</span><br><span class="line"></span><br><span class="line">### 将以下内容粘贴到打开的shadowsocks.service文件中</span><br><span class="line"></span><br><span class="line">[Unit]</span><br><span class="line">Description&#x3D;Shadowsocks</span><br><span class="line"></span><br><span class="line">[Service]</span><br><span class="line">TimeoutStartSec&#x3D;0</span><br><span class="line">ExecStart&#x3D;&#x2F;usr&#x2F;bin&#x2F;ssserver -c &#x2F;etc&#x2F;shadowsocks.json</span><br><span class="line"></span><br><span class="line">[Install]</span><br><span class="line">WantedBy&#x3D;multi-user.target</span><br></pre></td></tr></table></figure>
+
+<p>设置开机启动</p>
+<figure class="highlight plain"><table><tr><td class="code"><pre><span class="line">systemctl enable shadowsocks &amp;&amp; systemctl start shadowsocks</span><br></pre></td></tr></table></figure>
+</li>
+<li><p>为OpenVZ的VPS服务器做BBR加速</p>
+<p>本安装<strong>适用于CentOS/RHEL7+，Ubuntu15+，Debian8+</strong> 的64位系统，如不是请先重装系统，下载rintd二进制文件(原版bbr和修改版bbr二选一即可)</p>
+<figure class="highlight plain"><table><tr><td class="code"><pre><span class="line">wget --no-check-certificate https:&#x2F;&#x2F;raw.githubusercontent.com&#x2F;mixool&#x2F;rinetd&#x2F;master&#x2F;rinetd</span><br><span class="line"></span><br><span class="line">wget --no-check-certificate https:&#x2F;&#x2F;raw.githubusercontent.com&#x2F;mixool&#x2F;rinetd&#x2F;master&#x2F;rinetd_bbr_powered -O &#x2F;root&#x2F;rinetd</span><br></pre></td></tr></table></figure>
+
+<p>最后一个为魔改版BBR，上面一个为原版。选一个下载就可以了。然后修改权限</p>
+<figure class="highlight plain"><table><tr><td class="code"><pre><span class="line">chmod +x rinetd</span><br></pre></td></tr></table></figure>
+
+<p>修改rinetd的配置文件rinetd.conf,添加监听地址:</p>
+<figure class="highlight plain"><table><tr><td class="code"><pre><span class="line">vim rinetd.conf</span><br><span class="line"></span><br><span class="line"># bindadress bindport connectaddress connectport </span><br><span class="line">0.0.0.0 443 0.0.0.0 443</span><br><span class="line"></span><br><span class="line">0.0.0.0 80 0.0.0.0 80</span><br></pre></td></tr></table></figure>
+
+<p>每一行都是一个端口，将端口改成你使用的端口就可以了。不要问我一行为什么要写两个相同的，我也不知道为什么。</p>
+</li>
+<li><p>将rinetd变为系统级应用</p>
+<figure class="highlight plain"><table><tr><td class="code"><pre><span class="line">vim &#x2F;etc&#x2F;systemd&#x2F;system&#x2F;rinetd.service</span><br><span class="line"></span><br><span class="line">[Unit]</span><br><span class="line">Description&#x3D;rinetd</span><br><span class="line"></span><br><span class="line">[Service]</span><br><span class="line">ExecStart&#x3D;&#x2F;root&#x2F;rinetd -f -c &#x2F;root&#x2F;rinetd.conf raw venet0:0</span><br><span class="line">Restart&#x3D;always</span><br><span class="line">  </span><br><span class="line">[Install]</span><br><span class="line">WantedBy&#x3D;multi-user.target</span><br></pre></td></tr></table></figure>
+
+<p>设置开机启动</p>
+<figure class="highlight plain"><table><tr><td class="code"><pre><span class="line">systemctl enable rinetd &amp;&amp; systemctl start rinetd</span><br></pre></td></tr></table></figure>
+
+<p>在以上操作完毕后，OpenVZ架构的VPS服务器在使用SS服务时，会明显感觉到访问速度快了很多。</p>
+</li>
+</ul>
+]]></content>
+      <categories>
+        <category>科学上网</category>
+      </categories>
+      <tags>
+        <tag>ss</tag>
+        <tag>科学上网</tag>
+      </tags>
+  </entry>
+  <entry>
     <title>使用Cython保护Python文件</title>
     <url>/190502-4/</url>
     <content><![CDATA[<h1 id="使用Cython保护Python代码库"><a href="#使用Cython保护Python代码库" class="headerlink" title="使用Cython保护Python代码库"></a>使用Cython保护Python代码库</h1><p>从语言层面来说，Cython是一种拓展的Python，其文件的扩展名为.pyx。这种类型的文件通过编译之后可以变成供Python直接调用的动态链接库（Linux/Mac下是.so，Windows下是.pyd）。根据官方文档，主要如下几编译方式：</p>
@@ -790,76 +790,6 @@ doDecrypt(passwd, onError);
       <tags>
         <tag>加密</tag>
         <tag>Cython</tag>
-      </tags>
-  </entry>
-  <entry>
-    <title>Git学习总结</title>
-    <url>/190502-2/</url>
-    <content><![CDATA[<h1 id="git整理："><a href="#git整理：" class="headerlink" title="git整理："></a>git整理：</h1><blockquote>
-<p>工作区中的.git目录为Git版本库，git add将文件提交到暂存区,git commit将文件提交到本地仓库，git push将文件提交到远程仓库。</p>
-</blockquote>
-<a id="more"></a>
-
-<h1 id="历史版本回退及提交至远程仓库"><a href="#历史版本回退及提交至远程仓库" class="headerlink" title="历史版本回退及提交至远程仓库"></a>历史版本回退及提交至远程仓库</h1><figure class="highlight plain"><table><tr><td class="code"><pre><span class="line">git reset --hard HEAD^  可以回退版本  当回退多个版本时可以使用 HEAD~100（恢复到第100个版本）。</span><br><span class="line">git reflog 用于记录每次的命令，最上方为最近一次的命令</span><br><span class="line">git reset HEAD &lt;file&gt; 将缓存区中的修改回退到工作区。</span><br><span class="line">git checkout -- &lt;file&gt; 将版本库中的版本替换工作区的版本，可以做恢复用。</span><br><span class="line">git push 将当前分支master推送到远程</span><br><span class="line">git commit 将缓存区中的文件推送到分支master(本地)</span><br></pre></td></tr></table></figure>
-
-<h1 id="分支的创建、切换与合并"><a href="#分支的创建、切换与合并" class="headerlink" title="分支的创建、切换与合并"></a>分支的创建、切换与合并</h1><figure class="highlight plain"><table><tr><td class="code"><pre><span class="line">git checkout -b &lt;branch&gt; 创建一个分支并切换，等同于git branch &lt;branch&gt; git checkout &lt;branch&gt;两条命令</span><br><span class="line">git branch 查看当前分支</span><br><span class="line">git merge 命令用于合并指定分支到当前分支</span><br><span class="line">git branch -d &lt;branch&gt; 删除分支</span><br><span class="line">git log --graph 可以查看分支合并图</span><br></pre></td></tr></table></figure>
-
-<h1 id="对远程分支进行操作"><a href="#对远程分支进行操作" class="headerlink" title="对远程分支进行操作"></a>对远程分支进行操作</h1><figure class="highlight plain"><table><tr><td class="code"><pre><span class="line">git push origin --delete branch &lt;branchname&gt;或git push origin :&lt;branchname&gt; 删除远程仓库中的分支</span><br></pre></td></tr></table></figure>
-
-<blockquote>
-<p>重命名远程分支：<br>1、删除远程分支：git push –delete origin <branchname><br>2、重命名本地分支：git branch -m <old> <new><br>3、推送本地分支：git push origin <NewBranchName></p>
-</blockquote>
-<h1 id="提交出错解决方法"><a href="#提交出错解决方法" class="headerlink" title="提交出错解决方法"></a>提交出错解决方法</h1><p>如果在提交远程仓库的时候出现“更新被拒绝，因为您当前分支的最新提交落后于其对应的远程分支”，此时应该先获取远程更新,然后合并本地的分支，最后提交.</p>
-<figure class="highlight plain"><table><tr><td class="code"><pre><span class="line">git fetch origin;		# 获取运程仓库</span><br><span class="line">git merge origin&#x2F;master	# 将本地仓库与远程仓库合并</span><br><span class="line"></span><br><span class="line">git pull &#x3D; git fetch + git merge 可能会产生冲突，需要手动解决</span><br><span class="line"></span><br><span class="line">--no-ff 参数表示禁用Fast forward</span><br></pre></td></tr></table></figure>
-<p>如果出现”您要求从远程 ‘origin’ 拉取，但是未指定一个分支。因为这不是当前分支默认的远程仓库，您必须在命令行中指定一个分支名。”<br>执行以下内容：<br><code>git branch --set-upstream-to corigin/master master</code></p>
-<h2 id="出错时"><a href="#出错时" class="headerlink" title="出错时"></a>出错时</h2><p>出错内容: </p>
-<figure class="highlight plain"><table><tr><td class="code"><pre><span class="line">error: failed to push some refs to &#39;https:&#x2F;&#x2F;github.com&#x2F;bnq456&#x2F;bnq456.github.io.git&#39;</span><br><span class="line">hint: Updates were rejected because the tip of your current branch is behind</span><br><span class="line">hint: its remote counterpart. Integrate the remote changes (e.g.</span><br><span class="line">hint: &#39;git pull ...&#39;) before pushing again.</span><br></pre></td></tr></table></figure>
-<ul>
-<li>强制推送<br>在确定自己仓库中的内容低于本地仓库中的内容并且确定本地优于远程时，如果无法进行推送，可以选择强制推送<br><code>git push -u origin master -f</code></li>
-<li>push前先将远程repository修改pull下来<figure class="highlight plain"><table><tr><td class="code"><pre><span class="line">git pull origin master</span><br><span class="line">git push -u origin master</span><br></pre></td></tr></table></figure></li>
-<li>若不想merge远程和本地修改，可以先创建新的分支：<figure class="highlight plain"><table><tr><td class="code"><pre><span class="line">git branch [name]</span><br><span class="line">然后push</span><br><span class="line">git push -u origin [name]</span><br></pre></td></tr></table></figure>
-<h2 id="fetch-和-pull的区别："><a href="#fetch-和-pull的区别：" class="headerlink" title="fetch 和 pull的区别："></a>fetch 和 pull的区别：</h2></li>
-</ul>
-<figure class="highlight plain"><table><tr><td class="code"><pre><span class="line">git fetch：将远程主机的最新内容拉取到本地，是否合并由用户决定。</span><br><span class="line">git pull：将远程主机的最新内容拉取到本地后直接合并，可能会产生冲突，需要手动解决。</span><br><span class="line">解决方法：</span><br><span class="line">git reset --hard FETCH_HEAD</span><br><span class="line">git pull</span><br><span class="line">注：将本地的冲突文件冲掉，不仅需要reset到MERGE-HEAD或HEAD，还需要--hard。当后面没有hard，不会冲掉本地工作区，只会冲掉stage区。</span><br></pre></td></tr></table></figure>
-
-<p><img data-src="/userImages/fetch_and_pull.png" alt="fetch和pull的不同"></p>
-<h1 id="Git中工作环境的临时存储与恢复"><a href="#Git中工作环境的临时存储与恢复" class="headerlink" title="Git中工作环境的临时存储与恢复"></a>Git中工作环境的临时存储与恢复</h1><figure class="highlight plain"><table><tr><td class="code"><pre><span class="line">git stash 把当前工作现场存储起来，用于以后恢复现场继续工作</span><br><span class="line">切换回工作时：</span><br><span class="line">	git stash list 列出所有存储的工作环境</span><br><span class="line">result: stash@&#123;0&#125;: WIP on dev: cc559a8 add merge</span><br><span class="line">git stash pop 切回工作场景，或git stash apply stash@&#123;0&#125; 恢复后不删除stash中的内容，需要使用git stash drop &lt;name&gt;删除</span><br></pre></td></tr></table></figure>
-<blockquote>
-<p>pop和 apply的区别<br>pop是将工作环境切回后直接删除<br>apply是先应用工作环境，然后存储的工作环境是否删除由用户自己决定。使用：git stash drop <name>进行删除</p>
-</blockquote>
-<blockquote>
-<p>实验性质的代码最好新建分支</p>
-</blockquote>
-<h1 id="分支的创建、删除、合并与推送"><a href="#分支的创建、删除、合并与推送" class="headerlink" title="分支的创建、删除、合并与推送"></a>分支的创建、删除、合并与推送</h1><figure class="highlight plain"><table><tr><td class="code"><pre><span class="line">git branch &lt;branchname&gt;</span><br><span class="line">git checkout &lt;branchname&gt;</span><br><span class="line">以上两条命令等同于git checkout -b &lt;branchname&gt;</span><br><span class="line">git branch -D &lt;name&gt; 表示强行删除一个分支</span><br><span class="line">git merge &lt;branchname&gt; 分支的合并，表示要将&lt;branchname&gt;分支合并到当前分支上</span><br><span class="line"></span><br><span class="line">分支的推送：</span><br><span class="line">master分支是主分支，因此要时刻与远程同步;</span><br><span class="line">dev分支是开发分支，团队所有成员都需要在上面工作，所以需要时刻与远程同步;</span><br><span class="line">bug分支是本地修复bug，可推送可不推送;</span><br><span class="line">feature分支取决与是否在上面进行开发。</span><br></pre></td></tr></table></figure>
-
-<h1 id="多人协作："><a href="#多人协作：" class="headerlink" title="多人协作："></a>多人协作：</h1><blockquote>
-<p>1、首先，可以试图用git push origin <branch-name>推送自己的修改；</p>
-</blockquote>
-<blockquote>
-<p>2、如果推送失败，则因为远程分支比你的本地更新，需要先用git pull试图合并；</p>
-</blockquote>
-<blockquote>
-<p>3、如果合并有冲突，则解决冲突，并在本地提交；</p>
-</blockquote>
-<blockquote>
-<p>4、没有冲突或者解决掉冲突后，再用git push origin <branch-name>推送就能成功！</p>
-</blockquote>
-<blockquote>
-<p>5、如果git pull提示no tracking information，则说明本地分支和远程分支的链接关系没有创建，用命令git branch –set-upstream-to <branch-name> origin/<branch-name>。</p>
-</blockquote>
-<h1 id="rebase：（不是很了解）"><a href="#rebase：（不是很了解）" class="headerlink" title="rebase：（不是很了解）"></a>rebase：（不是很了解）</h1><blockquote>
-<p>rebase操作可以将本地未push的分叉提交历史整理成一条直线;<br>rebase的目的是使我们在查看提交的变化时更容易，因为分叉的提交需要三方比较。</p>
-</blockquote>
-<h1 id="git-标签："><a href="#git-标签：" class="headerlink" title="git 标签："></a>git 标签：</h1><p>git tag <name>用于新建一个标签,默认为HEAD，当创建带有说明的标签时，用-a指定标签名，-m指定说明文字<br>git tag可以查看所有的标签<br>当给以前忘记打标签的项目打标签时，可以先找出要打标签项目的编号，然后git tag <tagname> <commit id><br>-d用于删除标签<br>    远程标签推送：<br>    git push origin <tagname>推送一个本地标签到远程<br>    git push origin –tags 将所有标签推送到远程</p>
-<figure class="highlight plain"><table><tr><td class="code"><pre><span class="line">当删除远程标签时：</span><br><span class="line">1、首先先删除本地的标签 git tag -d &lt;tagname&gt;</span><br><span class="line">2、然后删除远程的标签 git push origin :refs&#x2F;tags&#x2F;&lt;tagname&gt;或者git push origin --delete tag &lt;tagname&gt;（作用与上两步相同）</span><br></pre></td></tr></table></figure>
-
-<h1 id="日志文件查询"><a href="#日志文件查询" class="headerlink" title="日志文件查询"></a>日志文件查询</h1><figure class="highlight plain"><table><tr><td class="code"><pre><span class="line">git config --global alias.lg &quot;log --color --graph --pretty&#x3D;format:&#39;%Cred%h%Creset -%C(yellow)%d%Creset %s %Cgreen(%cr) %C(bold blue)&lt;%an&gt;%Creset&#39; --abbrev-commit&quot;</span><br></pre></td></tr></table></figure>]]></content>
-      <categories>
-        <category>Git</category>
-      </categories>
-      <tags>
-        <tag>学习总结</tag>
-        <tag>Git</tag>
       </tags>
   </entry>
   <entry>
@@ -941,6 +871,76 @@ doDecrypt(passwd, onError);
       </tags>
   </entry>
   <entry>
+    <title>Git学习总结</title>
+    <url>/190502-2/</url>
+    <content><![CDATA[<h1 id="git整理："><a href="#git整理：" class="headerlink" title="git整理："></a>git整理：</h1><blockquote>
+<p>工作区中的.git目录为Git版本库，git add将文件提交到暂存区,git commit将文件提交到本地仓库，git push将文件提交到远程仓库。</p>
+</blockquote>
+<a id="more"></a>
+
+<h1 id="历史版本回退及提交至远程仓库"><a href="#历史版本回退及提交至远程仓库" class="headerlink" title="历史版本回退及提交至远程仓库"></a>历史版本回退及提交至远程仓库</h1><figure class="highlight plain"><table><tr><td class="code"><pre><span class="line">git reset --hard HEAD^  可以回退版本  当回退多个版本时可以使用 HEAD~100（恢复到第100个版本）。</span><br><span class="line">git reflog 用于记录每次的命令，最上方为最近一次的命令</span><br><span class="line">git reset HEAD &lt;file&gt; 将缓存区中的修改回退到工作区。</span><br><span class="line">git checkout -- &lt;file&gt; 将版本库中的版本替换工作区的版本，可以做恢复用。</span><br><span class="line">git push 将当前分支master推送到远程</span><br><span class="line">git commit 将缓存区中的文件推送到分支master(本地)</span><br></pre></td></tr></table></figure>
+
+<h1 id="分支的创建、切换与合并"><a href="#分支的创建、切换与合并" class="headerlink" title="分支的创建、切换与合并"></a>分支的创建、切换与合并</h1><figure class="highlight plain"><table><tr><td class="code"><pre><span class="line">git checkout -b &lt;branch&gt; 创建一个分支并切换，等同于git branch &lt;branch&gt; git checkout &lt;branch&gt;两条命令</span><br><span class="line">git branch 查看当前分支</span><br><span class="line">git merge 命令用于合并指定分支到当前分支</span><br><span class="line">git branch -d &lt;branch&gt; 删除分支</span><br><span class="line">git log --graph 可以查看分支合并图</span><br></pre></td></tr></table></figure>
+
+<h1 id="对远程分支进行操作"><a href="#对远程分支进行操作" class="headerlink" title="对远程分支进行操作"></a>对远程分支进行操作</h1><figure class="highlight plain"><table><tr><td class="code"><pre><span class="line">git push origin --delete branch &lt;branchname&gt;或git push origin :&lt;branchname&gt; 删除远程仓库中的分支</span><br></pre></td></tr></table></figure>
+
+<blockquote>
+<p>重命名远程分支：<br>1、删除远程分支：git push –delete origin <branchname><br>2、重命名本地分支：git branch -m <old> <new><br>3、推送本地分支：git push origin <NewBranchName></p>
+</blockquote>
+<h1 id="提交出错解决方法"><a href="#提交出错解决方法" class="headerlink" title="提交出错解决方法"></a>提交出错解决方法</h1><p>如果在提交远程仓库的时候出现“更新被拒绝，因为您当前分支的最新提交落后于其对应的远程分支”，此时应该先获取远程更新,然后合并本地的分支，最后提交.</p>
+<figure class="highlight plain"><table><tr><td class="code"><pre><span class="line">git fetch origin;		# 获取运程仓库</span><br><span class="line">git merge origin&#x2F;master	# 将本地仓库与远程仓库合并</span><br><span class="line"></span><br><span class="line">git pull &#x3D; git fetch + git merge 可能会产生冲突，需要手动解决</span><br><span class="line"></span><br><span class="line">--no-ff 参数表示禁用Fast forward</span><br></pre></td></tr></table></figure>
+<p>如果出现”您要求从远程 ‘origin’ 拉取，但是未指定一个分支。因为这不是当前分支默认的远程仓库，您必须在命令行中指定一个分支名。”<br>执行以下内容：<br><code>git branch --set-upstream-to corigin/master master</code></p>
+<h2 id="出错时"><a href="#出错时" class="headerlink" title="出错时"></a>出错时</h2><p>出错内容: </p>
+<figure class="highlight plain"><table><tr><td class="code"><pre><span class="line">error: failed to push some refs to &#39;https:&#x2F;&#x2F;github.com&#x2F;bnq456&#x2F;bnq456.github.io.git&#39;</span><br><span class="line">hint: Updates were rejected because the tip of your current branch is behind</span><br><span class="line">hint: its remote counterpart. Integrate the remote changes (e.g.</span><br><span class="line">hint: &#39;git pull ...&#39;) before pushing again.</span><br></pre></td></tr></table></figure>
+<ul>
+<li>强制推送<br>在确定自己仓库中的内容低于本地仓库中的内容并且确定本地优于远程时，如果无法进行推送，可以选择强制推送<br><code>git push -u origin master -f</code></li>
+<li>push前先将远程repository修改pull下来<figure class="highlight plain"><table><tr><td class="code"><pre><span class="line">git pull origin master</span><br><span class="line">git push -u origin master</span><br></pre></td></tr></table></figure></li>
+<li>若不想merge远程和本地修改，可以先创建新的分支：<figure class="highlight plain"><table><tr><td class="code"><pre><span class="line">git branch [name]</span><br><span class="line">然后push</span><br><span class="line">git push -u origin [name]</span><br></pre></td></tr></table></figure>
+<h2 id="fetch-和-pull的区别："><a href="#fetch-和-pull的区别：" class="headerlink" title="fetch 和 pull的区别："></a>fetch 和 pull的区别：</h2></li>
+</ul>
+<figure class="highlight plain"><table><tr><td class="code"><pre><span class="line">git fetch：将远程主机的最新内容拉取到本地，是否合并由用户决定。</span><br><span class="line">git pull：将远程主机的最新内容拉取到本地后直接合并，可能会产生冲突，需要手动解决。</span><br><span class="line">解决方法：</span><br><span class="line">git reset --hard FETCH_HEAD</span><br><span class="line">git pull</span><br><span class="line">注：将本地的冲突文件冲掉，不仅需要reset到MERGE-HEAD或HEAD，还需要--hard。当后面没有hard，不会冲掉本地工作区，只会冲掉stage区。</span><br></pre></td></tr></table></figure>
+
+<p><img data-src="/userImages/fetch_and_pull.png" alt="fetch和pull的不同"></p>
+<h1 id="Git中工作环境的临时存储与恢复"><a href="#Git中工作环境的临时存储与恢复" class="headerlink" title="Git中工作环境的临时存储与恢复"></a>Git中工作环境的临时存储与恢复</h1><figure class="highlight plain"><table><tr><td class="code"><pre><span class="line">git stash 把当前工作现场存储起来，用于以后恢复现场继续工作</span><br><span class="line">切换回工作时：</span><br><span class="line">	git stash list 列出所有存储的工作环境</span><br><span class="line">result: stash@&#123;0&#125;: WIP on dev: cc559a8 add merge</span><br><span class="line">git stash pop 切回工作场景，或git stash apply stash@&#123;0&#125; 恢复后不删除stash中的内容，需要使用git stash drop &lt;name&gt;删除</span><br></pre></td></tr></table></figure>
+<blockquote>
+<p>pop和 apply的区别<br>pop是将工作环境切回后直接删除<br>apply是先应用工作环境，然后存储的工作环境是否删除由用户自己决定。使用：git stash drop <name>进行删除</p>
+</blockquote>
+<blockquote>
+<p>实验性质的代码最好新建分支</p>
+</blockquote>
+<h1 id="分支的创建、删除、合并与推送"><a href="#分支的创建、删除、合并与推送" class="headerlink" title="分支的创建、删除、合并与推送"></a>分支的创建、删除、合并与推送</h1><figure class="highlight plain"><table><tr><td class="code"><pre><span class="line">git branch &lt;branchname&gt;</span><br><span class="line">git checkout &lt;branchname&gt;</span><br><span class="line">以上两条命令等同于git checkout -b &lt;branchname&gt;</span><br><span class="line">git branch -D &lt;name&gt; 表示强行删除一个分支</span><br><span class="line">git merge &lt;branchname&gt; 分支的合并，表示要将&lt;branchname&gt;分支合并到当前分支上</span><br><span class="line"></span><br><span class="line">分支的推送：</span><br><span class="line">master分支是主分支，因此要时刻与远程同步;</span><br><span class="line">dev分支是开发分支，团队所有成员都需要在上面工作，所以需要时刻与远程同步;</span><br><span class="line">bug分支是本地修复bug，可推送可不推送;</span><br><span class="line">feature分支取决与是否在上面进行开发。</span><br></pre></td></tr></table></figure>
+
+<h1 id="多人协作："><a href="#多人协作：" class="headerlink" title="多人协作："></a>多人协作：</h1><blockquote>
+<p>1、首先，可以试图用git push origin <branch-name>推送自己的修改；</p>
+</blockquote>
+<blockquote>
+<p>2、如果推送失败，则因为远程分支比你的本地更新，需要先用git pull试图合并；</p>
+</blockquote>
+<blockquote>
+<p>3、如果合并有冲突，则解决冲突，并在本地提交；</p>
+</blockquote>
+<blockquote>
+<p>4、没有冲突或者解决掉冲突后，再用git push origin <branch-name>推送就能成功！</p>
+</blockquote>
+<blockquote>
+<p>5、如果git pull提示no tracking information，则说明本地分支和远程分支的链接关系没有创建，用命令git branch –set-upstream-to <branch-name> origin/<branch-name>。</p>
+</blockquote>
+<h1 id="rebase：（不是很了解）"><a href="#rebase：（不是很了解）" class="headerlink" title="rebase：（不是很了解）"></a>rebase：（不是很了解）</h1><blockquote>
+<p>rebase操作可以将本地未push的分叉提交历史整理成一条直线;<br>rebase的目的是使我们在查看提交的变化时更容易，因为分叉的提交需要三方比较。</p>
+</blockquote>
+<h1 id="git-标签："><a href="#git-标签：" class="headerlink" title="git 标签："></a>git 标签：</h1><p>git tag <name>用于新建一个标签,默认为HEAD，当创建带有说明的标签时，用-a指定标签名，-m指定说明文字<br>git tag可以查看所有的标签<br>当给以前忘记打标签的项目打标签时，可以先找出要打标签项目的编号，然后git tag <tagname> <commit id><br>-d用于删除标签<br>    远程标签推送：<br>    git push origin <tagname>推送一个本地标签到远程<br>    git push origin –tags 将所有标签推送到远程</p>
+<figure class="highlight plain"><table><tr><td class="code"><pre><span class="line">当删除远程标签时：</span><br><span class="line">1、首先先删除本地的标签 git tag -d &lt;tagname&gt;</span><br><span class="line">2、然后删除远程的标签 git push origin :refs&#x2F;tags&#x2F;&lt;tagname&gt;或者git push origin --delete tag &lt;tagname&gt;（作用与上两步相同）</span><br></pre></td></tr></table></figure>
+
+<h1 id="日志文件查询"><a href="#日志文件查询" class="headerlink" title="日志文件查询"></a>日志文件查询</h1><figure class="highlight plain"><table><tr><td class="code"><pre><span class="line">git config --global alias.lg &quot;log --color --graph --pretty&#x3D;format:&#39;%Cred%h%Creset -%C(yellow)%d%Creset %s %Cgreen(%cr) %C(bold blue)&lt;%an&gt;%Creset&#39; --abbrev-commit&quot;</span><br></pre></td></tr></table></figure>]]></content>
+      <categories>
+        <category>Git</category>
+      </categories>
+      <tags>
+        <tag>学习总结</tag>
+        <tag>Git</tag>
+      </tags>
+  </entry>
+  <entry>
     <title>那天一切都结束了</title>
     <url>/190517/</url>
     <content><![CDATA[<script src=/js/crypto-js.js></script>
@@ -970,7 +970,7 @@ function doDecrypt (pwd, onError) {
 	}
 }
 </script>
-<div id="enc_content" style="display:none">U2FsdGVkX19EFLHrXegccxX9bI9tYxGe5H74k+ZcGIarHJ/ONgN8fwDdS3qZlFCKv/AJlOP6SGRZIzCz0csavJXjkLVZ9AJwwc9bCkv3ejwm32A4Qkgf1/vf24dr6q+xvTfWv3rvyQ1R1QcLoEwAuNbgMwLT/69bDZc4idbNgjGJLYYXNC47MA78bM1Kv4KLboYAmVgqTu8Fs60xjvcDgDnesjrGSeekYEaYsOARNL+CDzufKswTZzJOedsR7tPAIbcliETPg80MyqnlOEjhfZbTpMVMtuHit2BXl/A2/Tfl2Zbve3HI3Et/BtKYyjOPy/wjDRCOyiyzBrgTwqkXPRPHlf0sVynh7WNrk2sCLc05LIILhgzhMY1rOWlGC2VhJRV/JPZaduqlEukf3Bhf/V+bLgDdhB9jdm+ykOENpjGce+N9JfIYKXzcGaX48CP4Khg4AsVLlv8KhCq5FkKSzwXBDXCgelRWjTK3shwbemqAjeHPwbLdmwiBnkO4gY/sJP2/J5ANuNMA3dxnQfqshFRmcENJqHo+xotIsO0VSmdAHln3HK9QZzBeY6g9foxXbWsCwZRYfXJT6AhJeEmtqf7U3/AitoqychqWNl/AG9IGvHv9yXrf0BVOUp/LORRZZiOauAlQV6VOnPZTeFdurs7HZ2eKd1kV3qsql3BXZgIJPKSzuCSbq6GmfjsE3qVSZvLJoweYn/3dmkhX+roabMpWsNG/hmZjAeAKsTkcnh+2l6t14Ti6GfhxJeIkbb5buV5lbTHq439sx/Wc7q/DIOuQYornOJEDzmD8vJRGSblF71IZUuANyTxTrMzDqOjRrNuVe5tyrY+tgsB44vr7rrK0s6B6Mheh0an/6t71zS8=</div>
+<div id="enc_content" style="display:none">U2FsdGVkX19nLDAonq0MyHDK4u1YUWKQQSHPNchPnRpzdVtzb5OJAKGjP/lY7hNMhSY4ExwPca2T0qiAagIXfA4iawOkk5z8He7dBEY9S0xplxBOceJVjmDMg/NgBYnbnoDbqBXB30gfityLEeckQq0vv+pxj1UhEgekwL4L0KGlH/nG9lrCBj87rDfRnGkRAb8kbZxks7w4N3+VthC+XnQqpcSbf21Zc3ttI+GGdtptlEsrCOxRXakWP5E2/irEYMQBKLGZyG+NEoI1/fI4ptHYMdrE/gEn2G95dFt5DFVKbL+/l3eNr8cNN1HjjwEmwQFlycBtLE8VNbh5WYyNPOXVrztLFedJAvoE1Kg2CJEBLW9NFcyOHcPl0388I9wGYzSLZVFzU5FdBGvpUzE37j94qLU73QHxfgC/J64IL1rzhrt9aphoqd/xV1qk+FwQb4+kVbg8/ke8U0LMXJDigjR1lCtCTk8VHL26pn8KCh6yWWUa2w+A4/0KsZxyzEeZxBQ1itNGfmDnIV69Lwvlf8xAvSiUYE4b9fGp96yc8EjdcuCix3xKolyPlqu/rkhJqWVRoer6bNkF6cBtoqAp9Ne1XkEgm6Dv9W64TePXVbQGl61Nk31OTOXxWHDFuor2sRTVyFq9zmdEJavbd0IxBhNUUeD4YA4uqUu0hhVrfpTlK/sSovw6+cVXOS+EO/VPgO1lqW4IxXKnkyMDFR7ntXROG59gl4C0p/C/kiHOoydbxXtt4a7xfLfof22YUoBF1b2yjRMwyJiSBwawv08V5QzwnbscqGNPrQ38+uDuP3JRtmoDqCDwojx24Ww8dEhFaNulCJjs1N14u3FUTA1GcmussEk3D08s8L/Gy57sJDY=</div>
 <div id="enc_passwd"> <input id="enc_pwd_input" type="password" style="border-radius: 5px;border-style: groove;height: 30px;width: 50%;cursor: auto;font-size: 102%;color: currentColor;outline: none;text-overflow: initial;padding-left: 5px;" onkeydown="if (event.keyCode == 13) { decrypt(); return false;}"> <input type="submit" value="解&nbsp;密" onclick="decrypt()" style="width: 58px;height: 34px;border-radius: 5px;background-color: white;border-style: solid;color: currentColor;"><div id="enc_error" style="display: inline-block;color: #d84527;margin-left: 10px"></div>
 <script>
 var onError = function(error) {
@@ -1050,6 +1050,85 @@ doDecrypt(passwd, onError);
       </categories>
       <tags>
         <tag>爬虫</tag>
+        <tag>urllib</tag>
+      </tags>
+  </entry>
+  <entry>
+    <title>Python 3中的Urllib库的使用</title>
+    <url>/190615/</url>
+    <content><![CDATA[<p>在Python中有着这样一个常用的、基础的爬虫库。在Python2中为urllib.urllib，在Python3中官方为了便于管理，将和请求有关的函数封装进了urllib.request模块中。</p>
+<p>在此处，使用Python3做记录。</p>
+<a id="more"></a>
+
+<h3 id="urlopen函数"><a href="#urlopen函数" class="headerlink" title="urlopen函数"></a>urlopen函数</h3><p>urlopen函数是request中的一个很常用的函数，它主要用于打开一个网页。其中有着很多的属性。</p>
+<figure class="highlight python"><table><tr><td class="code"><pre><span class="line"><span class="keyword">from</span> urllib <span class="keyword">import</span> request</span><br><span class="line"></span><br><span class="line">resp = request.open(<span class="string">"https://www.baidu.com"</span>)</span><br><span class="line">print(resp.read())</span><br></pre></td></tr></table></figure>
+
+
+
+<h3 id="urlretrieve函数"><a href="#urlretrieve函数" class="headerlink" title="urlretrieve函数"></a>urlretrieve函数</h3><p>urlretrieve函数可以很方便的将网页保存至本地。其实用方法见下方代码：</p>
+<figure class="highlight python"><table><tr><td class="code"><pre><span class="line"><span class="keyword">from</span> urllib <span class="keyword">import</span> request</span><br><span class="line"></span><br><span class="line">request.urlretrieve()</span><br></pre></td></tr></table></figure>
+
+
+
+<h3 id="urlencode函数"><a href="#urlencode函数" class="headerlink" title="urlencode函数"></a>urlencode函数</h3><p>将字典类型的数据转化为url编码的数据</p>
+<figure class="highlight python"><table><tr><td class="code"><pre><span class="line"><span class="keyword">from</span> urllib <span class="keyword">import</span> parse, request</span><br><span class="line"></span><br><span class="line">params = &#123;<span class="string">"wd"</span>: <span class="string">"爬虫之道"</span>&#125;</span><br><span class="line"></span><br><span class="line">qs = parse.urlencode(params)</span><br><span class="line"></span><br><span class="line">url = <span class="string">f"https://www.baidu.com/s?<span class="subst">&#123;qs&#125;</span>"</span></span><br><span class="line"></span><br><span class="line">resp = request.urlopen(url)</span><br></pre></td></tr></table></figure>
+
+
+
+<h3 id="parse-qs函数"><a href="#parse-qs函数" class="headerlink" title="parse_qs函数"></a>parse_qs函数</h3><p>将url编码后的参数还原为字典形式，其中的值以列表形式进行存储。</p>
+<figure class="highlight python"><table><tr><td class="code"><pre><span class="line"><span class="keyword">from</span> urllib <span class="keyword">import</span> parse</span><br><span class="line"></span><br><span class="line">ps = &#123;<span class="string">"name"</span>: <span class="string">"爬虫之道"</span>, <span class="string">"vxcode"</span>: <span class="string">"spider_rold"</span>&#125;</span><br><span class="line"></span><br><span class="line">results = parse.urlencode(ps)</span><br><span class="line"></span><br><span class="line">new_results = parse.parse_qs(results)</span><br><span class="line">print(new_results)</span><br></pre></td></tr></table></figure>
+
+<h3 id="urlparse和urlsplit函数"><a href="#urlparse和urlsplit函数" class="headerlink" title="urlparse和urlsplit函数"></a>urlparse和urlsplit函数</h3><p>对URL各部分进行分割，其中在使用urlsplit函数时，没有_params_参数。（<em>注</em>：params参数指的是在以下链接中”?”前添加”;”，位于这两者之间的内容，如：_<a href="https://www.baidu.com/s;hello?wd=hello+world_%EF%BC%89" target="_blank" rel="noopener">https://www.baidu.com/s;hello?wd=hello+world_）</a></p>
+<figure class="highlight python"><table><tr><td class="code"><pre><span class="line"><span class="keyword">from</span> urllib <span class="keyword">import</span> parse</span><br><span class="line"></span><br><span class="line">params = &#123;<span class="string">"wd"</span>: <span class="string">"爬虫之道"</span>&#125;</span><br><span class="line"></span><br><span class="line">qs = parse.urlencode(params)</span><br><span class="line">url = <span class="string">f"https://www.baidu.com/s?<span class="subst">&#123;qs&#125;</span>"</span></span><br><span class="line"></span><br><span class="line">result = parse.urlparse(url)</span><br><span class="line"></span><br><span class="line">print(<span class="string">'scheme:'</span>, result.scheme)</span><br><span class="line">print(<span class="string">'netloc:'</span>, result.netloc)</span><br><span class="line">print(<span class="string">'path:'</span>, result.path)</span><br><span class="line">print(<span class="string">'params:'</span>, result.params)</span><br><span class="line">print(<span class="string">'query:'</span>, result.query)</span><br><span class="line">print(<span class="string">'fragment:'</span>, result.fragment)</span><br></pre></td></tr></table></figure>
+
+<h3 id="request-Request类"><a href="#request-Request类" class="headerlink" title="request.Request类"></a>request.Request类</h3><p>在爬虫中，如果想使用一些参数，如：请求头，请求数据等，需要使用到Request类。如果只是使用urlopen函数，没有办法进行添加请求头。在没有使用_User-Agent_的时候，如果服务器发现是爬虫，服务器可能会返回一条假的数据内容，或者是不返回内容。所以，将爬虫程序伪装成正常的浏览器访问是很有必要的一件事。</p>
+<figure class="highlight python"><table><tr><td class="code"><pre><span class="line"><span class="keyword">from</span> urllib <span class="keyword">import</span> request, parse</span><br><span class="line"></span><br><span class="line">headers = &#123;<span class="string">'user-agent'</span>: <span class="string">"Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/75.0.3770.90 Safari/537.36"</span>&#125;</span><br><span class="line">params = &#123;<span class="string">"wd"</span>: <span class="string">"爬虫之道"</span>&#125;</span><br><span class="line"></span><br><span class="line">qs = parse.urlencode(params)</span><br><span class="line">url = <span class="string">f"https://www.baidu.com/s?<span class="subst">&#123;qs&#125;</span>"</span></span><br><span class="line"></span><br><span class="line">req = request.Request(url, headers=headers)</span><br><span class="line">resp = request.urlopen(req)</span><br><span class="line">print(resp.read())</span><br></pre></td></tr></table></figure>
+
+<p>注： 可以去挑战一下网络爬虫界的“珠穆朗玛峰” —– 拉勾网</p>
+<h3 id="ProxyHandler处理器"><a href="#ProxyHandler处理器" class="headerlink" title="ProxyHandler处理器"></a>ProxyHandler处理器</h3><p>在爬取网站时，一般情况下网站都会做一些反爬虫机制，如封ip。如果只使用一个ip地址进行爬取，在网站封掉ip地址后，就无法获取数据了。所以，在有反爬虫机制的情况，反反爬虫机制便可以使用了。在urllib中通过使用ProxyHandler进行设置代理服务器。</p>
+<p>在使用代理与未使用代理的区别：</p>
+<p><img data-src="/userImages/proxy.jpg">  </p>
+<figure class="highlight python"><table><tr><td class="code"><pre><span class="line"><span class="keyword">from</span> urllib <span class="keyword">import</span> request</span><br><span class="line"></span><br><span class="line"><span class="comment">### 未使用代理</span></span><br><span class="line">resp = request.urlopen(<span class="string">'http://httpbin.org/get'</span>)</span><br><span class="line">print(resp.read())</span><br><span class="line"></span><br><span class="line"><span class="comment">### 使用代理</span></span><br><span class="line">handler = request.ProxyHandler(&#123;<span class="string">"https"</span>: <span class="string">"58.253.152.231:9999"</span>&#125;)</span><br><span class="line"></span><br><span class="line">opener = request.build_opener(handler)</span><br><span class="line">req = request.Request(<span class="string">"http://httpbin.org/get"</span>)</span><br><span class="line">resp = opener.open(req)</span><br><span class="line">print(resp.read())</span><br></pre></td></tr></table></figure>
+
+<p>常用的代理：</p>
+<ul>
+<li>西刺代理：<a href="https://www.xicidaili.com/" target="_blank" rel="noopener">https://www.xicidaili.com</a></li>
+<li>快代理: <a href="https://www.kuaidaili.com/free/" target="_blank" rel="noopener">https://www.kuaidaili.com/free/</a></li>
+</ul>
+<h3 id="Cookie是什么"><a href="#Cookie是什么" class="headerlink" title="Cookie是什么"></a>Cookie是什么</h3><p>在网站汇总，http请求是无状态的。在第一次和服务器建立连接登录后，第二次请求服务器依旧不能知道当前请求的用户是谁。Cookie的出现就是为了解决该问题。第一次登录后，服务器会返回一些数据(cookie) 给浏览器，然后浏览器将数据保存在本地。当用户发送第二次请求时，浏览器会自动的将保存在本地的数据(cookie)一起发送给服务器。服务通过判断不同的cookie信息，进行确认用户。cookie的存储大小是有限的一般不会超过4KB，因此在设置cookie对的时候，只能存储少量数据。</p>
+<h4 id="cookie的格式："><a href="#cookie的格式：" class="headerlink" title="cookie的格式："></a>cookie的格式：</h4><p>Set-Cookie: NAME=VALUE；Expires=DATE；Path=PATH；Domain=DOMAIN_NAME；SECURE</p>
+<p>参数含义：</p>
+<ul>
+<li>NAME：Cookie的名字</li>
+<li>VALUE：Cookie的值</li>
+<li>Expires:  Cookie的过期时间</li>
+<li>Path：Cookie作用的路径</li>
+<li>Domain： Cookie作用的域名</li>
+<li>SECURE：是否只在HTTP协议下起作用</li>
+</ul>
+<h3 id="使用cookielib库和HTTPCookieProcessor模块模拟登陆"><a href="#使用cookielib库和HTTPCookieProcessor模块模拟登陆" class="headerlink" title="使用cookielib库和HTTPCookieProcessor模块模拟登陆"></a>使用cookielib库和HTTPCookieProcessor模块模拟登陆</h3><p>在Python中使用cookie，一般是通过http.cookiejar模块和urllib模块的HTTPCookieProcessor处理器一起使用的。</p>
+<ul>
+<li>http.cookiejar：提供用于存储cookie的对象</li>
+<li>HTTPCookieProcessor：处理cookie对象并构建handler对象</li>
+</ul>
+<h4 id="http-cookiejar模块"><a href="#http-cookiejar模块" class="headerlink" title="http.cookiejar模块"></a>http.cookiejar模块</h4><p>在该模块中主要有三个类，CookieJar、FileCookieJar、MozillaCookieJar、LWPCookieJar。其作用如下：</p>
+<ul>
+<li>CookieJar：管理HTTP cookie值、存储HTTP请求生成的cookie，向传出的HTTP请求添加cookie对象。整个cookie都存储在内存中，对CookieJar实例进行垃圾回收后cookie失效。</li>
+<li>FileCookieJar (filename, delayload=None, policy=None)：从CookieJar派生而来，用来创建FileCookieJar实例。检索cookie信息并将cookie存储到文件中。filename是存储cookie的文件名，delayload为True是支持延迟访问文件，即只有在需要时才读取文件或将数据存储在文件中。</li>
+<li>MozillaCookieJar (filename, delayload=None, policy=None)：从FileCookieJar派生而来，创建与Mozilla浏览器cookies.txt兼容的FileCookieJar实例。</li>
+<li>LWPCookieJar (filename, delayload=None, policy=None)：从FileCookieJar派生而来，创建与libwww·per标准的Set-Cookies3文件格式兼容的FileCookieJar实例。</li>
+</ul>
+<h3 id="保存Cookie至本地"><a href="#保存Cookie至本地" class="headerlink" title="保存Cookie至本地"></a>保存Cookie至本地</h3><p>保存cookie到本地，可以使用cookiejar的save方法。</p>
+<figure class="highlight python"><table><tr><td class="code"><pre><span class="line"><span class="keyword">from</span> urllib <span class="keyword">import</span> request</span><br><span class="line"><span class="keyword">from</span> http.cookiejar <span class="keyword">import</span> MozillaCookieJar</span><br><span class="line"></span><br><span class="line">cookiejar = MozillaCookieJar(<span class="string">'cookies.txt'</span>)</span><br><span class="line">handler = request.HTTPCookieProcessor(cookiejar)</span><br><span class="line">opener = request.build_opener(handler)</span><br><span class="line"></span><br><span class="line">handlers = &#123;</span><br><span class="line">    <span class="string">'User-Agent'</span>: <span class="string">'Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/75.0.3770.100 Safari/537.36'</span>,</span><br><span class="line">&#125;</span><br><span class="line"></span><br><span class="line">req = request.Request(<span class="string">'http://httpbin.org/cookies'</span>, headers=handlers)</span><br><span class="line"></span><br><span class="line">resp = opener.open(req)</span><br><span class="line">print(resp.read())</span><br><span class="line"></span><br><span class="line">cookiejar.save(ignore_discard=<span class="literal">True</span>, ignore_expires=<span class="literal">True</span>)</span><br></pre></td></tr></table></figure>
+
+<h3 id="加载本地cookie"><a href="#加载本地cookie" class="headerlink" title="加载本地cookie"></a>加载本地cookie</h3><p>从本地文件读取cookie信息，可以使用cookiejar中的load方法</p>
+<figure class="highlight python"><table><tr><td class="code"><pre><span class="line"><span class="keyword">from</span> http.cookiejar <span class="keyword">import</span> MozillaCookieJar</span><br><span class="line"></span><br><span class="line">cookiejar = MozillaCookieJar(<span class="string">'cookies.txt'</span>)</span><br><span class="line">cookiejar.load(ignore_discard=<span class="literal">True</span>)</span><br><span class="line"><span class="keyword">for</span> cookie <span class="keyword">in</span> cookiejar:</span><br><span class="line">    print(cookie)</span><br></pre></td></tr></table></figure>
+
+]]></content>
+      <categories>
+        <category>爬虫</category>
+      </categories>
+      <tags>
         <tag>urllib</tag>
       </tags>
   </entry>
@@ -1211,171 +1290,6 @@ doDecrypt(passwd, onError);
       </categories>
       <tags>
         <tag>标签云</tag>
-      </tags>
-  </entry>
-  <entry>
-    <title>动态网页数据抓取</title>
-    <url>/190703/</url>
-    <content><![CDATA[<h2 id="动态页面数据抓取"><a href="#动态页面数据抓取" class="headerlink" title="动态页面数据抓取"></a>动态页面数据抓取</h2><h3 id="什么是AJAX"><a href="#什么是AJAX" class="headerlink" title="什么是AJAX"></a>什么是AJAX</h3><p>AJAX（Asynchronouse JavaScript And XML）异步JavaScript和XML。在后台与服务器进行少量数据换时，可以在不重新加载整个网页的情况下，利用Ajax对网页实现异步更新。在传统的网页中，如果要获取更新内容，需要重新加载整个页面。因为传统的网页数据传输格式使用的是XML语法。在Ajax加载的网页中，数据的交互使用的是JSON格式。</p>
-<a id="more"></a>
-
-<h3 id="获取ajax数据的格式"><a href="#获取ajax数据的格式" class="headerlink" title="获取ajax数据的格式"></a>获取ajax数据的格式</h3><ol>
-<li>直接分析ajax调用的接口，然后通过代码请求接口。</li>
-<li>使用selenium+chromedriver模拟浏览器的行为获取数据。</li>
-</ol>
-<table>
-<thead>
-<tr>
-<th>方式</th>
-<th>优点</th>
-<th>缺点</th>
-</tr>
-</thead>
-<tbody><tr>
-<td>分析接口</td>
-<td>直接可以请求到数据，不需要做一些解析工具，代码量少，性能高。</td>
-<td>分析接口比较复杂，特别是一些通过js混淆的接口，需要有js的功底。容易被发现是爬虫。</td>
-</tr>
-<tr>
-<td>selenium</td>
-<td>直接模拟浏览器的行为，浏览器能请求到的，使用selenium也同样可以获取。爬虫更稳定。</td>
-<td>代码量多，性能低。</td>
-</tr>
-</tbody></table>
-<h3 id="selenium-chromdriver获取动态数据"><a href="#selenium-chromdriver获取动态数据" class="headerlink" title="selenium + chromdriver获取动态数据"></a>selenium + chromdriver获取动态数据</h3><p>Selenium是一个自动化测试工具，可以在模拟人类在浏览器上的行为，自动处理浏览器上的一些行为，如点击，填充数据，删除cookie等。chromedriver是一个chrome浏览器的驱动程序。</p>
-<p>Chromedriver：<a href="http://npm.taobao.org/mirrors/chromedriver" target="_blank" rel="noopener">http://npm.taobao.org/mirrors/chromedriver</a></p>
-<h3 id="安装Selenium和chromedriver"><a href="#安装Selenium和chromedriver" class="headerlink" title="安装Selenium和chromedriver"></a>安装Selenium和chromedriver</h3><ol>
-<li>安装selenium：<code>pip install selenium</code></li>
-<li>安装chromedriver：下载完毕后，放到自己能找到的英文目录中即可。</li>
-</ol>
-<h3 id="快速开始"><a href="#快速开始" class="headerlink" title="快速开始"></a>快速开始</h3><p>以一个例子快速开始</p>
-<figure class="highlight python"><table><tr><td class="code"><pre><span class="line"><span class="keyword">from</span> selenium <span class="keyword">import</span> webdriver</span><br><span class="line"><span class="keyword">import</span> time</span><br><span class="line"></span><br><span class="line">driver_path = <span class="string">'./driver/chromedriver.exe'</span></span><br><span class="line">url = <span class="string">"https://www.baidu.com"</span></span><br><span class="line"></span><br><span class="line">driver = webdriver.Chrome(executable_path=driver_path)</span><br><span class="line"></span><br><span class="line">driver.get(url)</span><br><span class="line">print(driver.page_source)</span><br><span class="line">time.sleep(<span class="number">5</span>)</span><br><span class="line">driver.close()</span><br></pre></td></tr></table></figure>
-
-<p>在运行之后会出现一个浏览器框，并自动的访问百度</p>
-<h3 id="selenium官方文档"><a href="#selenium官方文档" class="headerlink" title="selenium官方文档"></a>selenium官方文档</h3><p><a href="https://selenium-python.readthedocs.io/index.html" target="_blank" rel="noopener">https://selenium-python.readthedocs.io/index.html</a></p>
-<h3 id="关闭页面"><a href="#关闭页面" class="headerlink" title="关闭页面"></a>关闭页面</h3><ol>
-<li>driver.close()：关闭当前页面</li>
-<li>driver.quit()：退出整个浏览器</li>
-</ol>
-<h3 id="定位元素"><a href="#定位元素" class="headerlink" title="定位元素"></a>定位元素</h3><ol>
-<li><p><code>find_element_by_id</code>：根据id查找某个元素</p>
-<figure class="highlight python"><table><tr><td class="code"><pre><span class="line">submitTag = driver.find_element_by_id(<span class="string">'su'</span>)</span><br><span class="line"><span class="comment">### 等价于</span></span><br><span class="line">submitTag = driver.find_element(By.ID, <span class="string">'su'</span>)</span><br></pre></td></tr></table></figure>
-</li>
-<li><p><code>find_element_by_class_name</code>：根据类名查找元素</p>
-<figure class="highlight python"><table><tr><td class="code"><pre><span class="line">submitTag = driver.find_element_by_class_name(<span class="string">'s_ipt'</span>)</span><br><span class="line"><span class="comment">### 等价于</span></span><br><span class="line">submitTag = driver.find_element(By.CLASS, <span class="string">'s_ipt'</span>)</span><br></pre></td></tr></table></figure>
-</li>
-<li><p><code>find_element_by_name</code>：根据name属性的值来查找元素</p>
-<figure class="highlight python"><table><tr><td class="code"><pre><span class="line">submitTag = driver.find_element_by_name(<span class="string">'email'</span>)</span><br><span class="line"><span class="comment">### 等价于</span></span><br><span class="line">submitTag = driver.find_element(By.NAME,<span class="string">'email'</span>)</span><br></pre></td></tr></table></figure>
-</li>
-<li><p><code>find_element_by_tag_name</code>：根据标签名来查找元素</p>
-<figure class="highlight python"><table><tr><td class="code"><pre><span class="line">submitTag = driver.find_element_by_tag_name(<span class="string">'div'</span>)</span><br><span class="line"><span class="comment">### 等价于</span></span><br><span class="line">submitTag = driver.find_element(By.TAG_NAME,<span class="string">'div'</span>)</span><br></pre></td></tr></table></figure>
-</li>
-<li><p><code>find_element_by_xpath</code>：根据xpath语法来获取元素</p>
-<figure class="highlight python"><table><tr><td class="code"><pre><span class="line">submitTag = driver.find_element_by_xpath(<span class="string">'//div'</span>)</span><br><span class="line"><span class="comment">### 等价于</span></span><br><span class="line">submitTag = driver.find_element(By.XPATH,<span class="string">'//div'</span>)</span><br></pre></td></tr></table></figure>
-</li>
-<li><p><code>find_element_by_css_selector</code>：根据css选择器选择元素</p>
-<figure class="highlight python"><table><tr><td class="code"><pre><span class="line">submitTag = driver.find_element_by_css_selector(<span class="string">'//div'</span>)</span><br><span class="line"><span class="comment">### 等价于</span></span><br><span class="line">submitTag = driver.find_element(By.CSS_SELECTOR,<span class="string">'//div'</span>)</span><br></pre></td></tr></table></figure>
-</li>
-<li><p><code>By</code>模块导入</p>
-<figure class="highlight python"><table><tr><td class="code"><pre><span class="line"><span class="keyword">from</span> selenium.webdriver.common.by <span class="keyword">import</span> By</span><br></pre></td></tr></table></figure>
-
-</li>
-</ol>
-<p><em>注意</em>：<code>find_element</code>是获取第一个满足条件的元素。<code>find_elements</code>是获取所有满足条件的元素</p>
-<h3 id="操作表单元素"><a href="#操作表单元素" class="headerlink" title="操作表单元素"></a>操作表单元素</h3><ol>
-<li><p>在操作输入框时需要分为两步，一：找到表单元素，二：填充数据。</p>
-<figure class="highlight python"><table><tr><td class="code"><pre><span class="line">inputTag = driver.find_element_by_id(<span class="string">'kw'</span>)</span><br><span class="line">inputTag.send_keys(<span class="string">"Python"</span>)</span><br></pre></td></tr></table></figure>
-
-<p>使用clear方法可以清除输入框中的内容</p>
-<p><code>inputTag.clear()</code></p>
-</li>
-<li><p>操作checkbox时，需要先选中checkbox标签，然后执行click事件。</p>
-<figure class="highlight python"><table><tr><td class="code"><pre><span class="line">rememberTag = driver.find_element_by_name(<span class="string">"rememberMe"</span>)</span><br><span class="line">rememberTag.click()</span><br></pre></td></tr></table></figure>
-</li>
-<li><p>选择select时，不能直接点击，因为点击后还需要选中元素。因此在selenium中专门为select标签设置了一个类<code>selenium.webdriver.support.ui.Select</code>。将获取到的元素当成参数传到这个类中，创建这个对象，之后就可以使用这个对象进行选择了。</p>
-<figure class="highlight python"><table><tr><td class="code"><pre><span class="line"><span class="keyword">from</span> selenium.webdriver.support.ui <span class="keyword">import</span> Select</span><br><span class="line"></span><br><span class="line"><span class="comment">### 选中标签创建对象</span></span><br><span class="line">selectTag = Select(driver.find_element_by_name(<span class="string">"jumpMenu"</span>))</span><br><span class="line"><span class="comment">### 根据索引选择</span></span><br><span class="line">selectTag.select_by_index(<span class="number">1</span>)</span><br><span class="line"></span><br><span class="line"><span class="comment">### 根据值选择</span></span><br><span class="line">selectTag.select_by_value(<span class="string">"https://www.python.org"</span>)</span><br><span class="line"></span><br><span class="line"><span class="comment">### 根据可视化文本选择</span></span><br><span class="line">selectTag.select_by_visible_text(<span class="string">"Python"</span>)</span><br><span class="line"></span><br><span class="line"><span class="comment">### 取消选中的所有选项</span></span><br><span class="line">selectTag.deselect_all()</span><br></pre></td></tr></table></figure>
-</li>
-<li><p>操作按钮：</p>
-<figure class="highlight python"><table><tr><td class="code"><pre><span class="line">inputTag = driver.find_element_by_id(<span class="string">"su"</span>)</span><br><span class="line">inputTag.click()</span><br></pre></td></tr></table></figure>
-
-</li>
-</ol>
-<h3 id="行为链"><a href="#行为链" class="headerlink" title="行为链"></a>行为链</h3><p>有时候在页面中的操作可能要有很多步，那么这时候可以使用鼠标行为链类<code>ActionChains</code>来完成。如将鼠标移到某个元素并执行点击事件。</p>
-<figure class="highlight python"><table><tr><td class="code"><pre><span class="line">inputTag = driver.find_element(By.ID, <span class="string">'kw'</span>)</span><br><span class="line">submitTag = driver.find_element_by_id(<span class="string">'su'</span>)</span><br><span class="line"></span><br><span class="line">actions = webdriver.ActionChains(driver)</span><br><span class="line">actions.move_to_element(inputTag)</span><br><span class="line">actions.send_keys_to_element(inputTag, <span class="string">'Python'</span>)</span><br><span class="line">actions.move_to_element(submitTag)</span><br><span class="line">actions.click(submitTag)</span><br><span class="line">actions.perform()</span><br></pre></td></tr></table></figure>
-
-<p>更多鼠标相关操作</p>
-<ul>
-<li>click_and_hold(element)：点击但不松开鼠标</li>
-<li>context_click(element)：右键点击</li>
-<li>double_click(element)：双击</li>
-</ul>
-<p>更多方法：<a href="https://selenium-python.readthedocs.io/api.html" target="_blank" rel="noopener">https://selenium-python.readthedocs.io/api.html</a></p>
-<h3 id="Cookie操作"><a href="#Cookie操作" class="headerlink" title="Cookie操作"></a>Cookie操作</h3><ol>
-<li><p>获取所有的cookie</p>
-<figure class="highlight python"><table><tr><td class="code"><pre><span class="line"><span class="keyword">for</span> cookie <span class="keyword">in</span> driver.get_cookies():</span><br><span class="line">    print(cookie)</span><br></pre></td></tr></table></figure>
-</li>
-<li><p>根据cookie的key获取value</p>
-<figure class="highlight python"><table><tr><td class="code"><pre><span class="line">value = driver.get_cookie(key)</span><br></pre></td></tr></table></figure>
-</li>
-<li><p>删除所有的cookie</p>
-<figure class="highlight python"><table><tr><td class="code"><pre><span class="line">driver.delete_all_cookies()</span><br></pre></td></tr></table></figure>
-</li>
-<li><p>删除某个cookie</p>
-<figure class="highlight python"><table><tr><td class="code"><pre><span class="line">driver.delete_cookie(key)</span><br></pre></td></tr></table></figure>
-
-</li>
-</ol>
-<h3 id="页面等待"><a href="#页面等待" class="headerlink" title="页面等待"></a>页面等待</h3><p>现在的网页多采用 Ajax 技术，这样程序便不能确定何时某个元素完全加载出来了。如果实际页面等待时间过长导致某个dom元素还没出来，在使用了WebElement时，就会抛出NullPointer的异常。为了解决这个问题。所以 Selenium 提供了两种等待方式：一种是隐式等待、一种是显式等待。</p>
-<ul>
-<li><p>隐式等待</p>
-<p>调用<code>driver.implicitly_wait</code>。</p>
-<figure class="highlight python"><table><tr><td class="code"><pre><span class="line">driver = webdriver.Chrome(executable_path=driver_path)</span><br><span class="line">driver.implicitly_wait(<span class="number">10</span>)</span><br><span class="line"><span class="comment"># 请求网页</span></span><br><span class="line">driver.get(<span class="string">"https://www.douban.com/"</span>)</span><br></pre></td></tr></table></figure>
-</li>
-<li><p>显式等待</p>
-<p>显示等待是表明某个条件成立后才执行获取元素的操作。也可以在等待的时候指定一个最大的时间，如果超过这个时间那么就抛出一个异常。显示等待应该使用<code>selenium.webdriver.support.excepted_conditions</code>期望的条件和<code>selenium.webdriver.support.ui.WebDriverWait</code>来配合完成。</p>
-<figure class="highlight python"><table><tr><td class="code"><pre><span class="line"><span class="keyword">from</span> selenium <span class="keyword">import</span> webdriver</span><br><span class="line"><span class="keyword">from</span> selenium.webdriver.common.by <span class="keyword">import</span> By</span><br><span class="line"><span class="keyword">from</span> selenium.webdriver.support.ui <span class="keyword">import</span> WebDriverWait</span><br><span class="line"><span class="keyword">from</span> selenium.webdriver.support <span class="keyword">import</span> expected_conditions <span class="keyword">as</span> EC</span><br><span class="line"></span><br><span class="line">driver = webdriver.Firefox()</span><br><span class="line">driver.get(<span class="string">"http://somedomain/url_that_delays_loading"</span>)</span><br><span class="line"><span class="keyword">try</span>:</span><br><span class="line">    element = WebDriverWait(driver, <span class="number">10</span>).until(</span><br><span class="line">        EC.presence_of_element_located((By.ID, <span class="string">"myDynamicElement"</span>))</span><br><span class="line">    )</span><br><span class="line"><span class="keyword">finally</span>:</span><br><span class="line">    driver.quit()</span><br></pre></td></tr></table></figure>
-</li>
-<li><p>其他的等待条件</p>
-<ol>
-<li><code>presence_of_element_located</code>：某个元素已经加载完毕了。</li>
-<li><code>presence_of_all_emement_located</code>：网页中所有满足条件的元素都加载完毕了。</li>
-<li><code>element_to_be_cliable</code>：某个元素是可以点击了。</li>
-</ol>
-<p>更多条件请参考：<a href="http://selenium-python.readthedocs.io/waits.html" target="_blank" rel="noopener">http://selenium-python.readthedocs.io/waits.html</a></p>
-</li>
-</ul>
-<h3 id="切换页面"><a href="#切换页面" class="headerlink" title="切换页面"></a>切换页面</h3><p>在切换页面时，<code>selenium</code>提供了一个叫做<code>switch_to_window</code>来进行切换，具体切换到哪个页面，可以从<code>driver.window_handles</code>中找到。</p>
-<figure class="highlight python"><table><tr><td class="code"><pre><span class="line"><span class="comment"># 打开一个新的页面</span></span><br><span class="line">self.driver.execute_script(<span class="string">"window.open('"</span>+url+<span class="string">"')"</span>)</span><br><span class="line"><span class="comment"># 切换到这个新的页面中</span></span><br><span class="line">self.driver.switch_to_window(self.driver.window_handles[<span class="number">1</span>])</span><br></pre></td></tr></table></figure>
-
-<h3 id="设置代理"><a href="#设置代理" class="headerlink" title="设置代理"></a>设置代理</h3><figure class="highlight python"><table><tr><td class="code"><pre><span class="line"><span class="keyword">from</span> selenium <span class="keyword">import</span> webdriver</span><br><span class="line"><span class="keyword">import</span> time</span><br><span class="line"></span><br><span class="line">options = webdriver.ChromeOptions()</span><br><span class="line">options.add_argument(<span class="string">"--proxy-server=http://113.12.202.50:50327"</span>)</span><br><span class="line">driver_path = <span class="string">"./driver/chromedriver.exe"</span></span><br><span class="line">driver = webdriver.Chrome(executable_path=driver_path, options=options)</span><br><span class="line"></span><br><span class="line">driver.get(<span class="string">'http://httpbin.org/ip'</span>)</span><br><span class="line">time.sleep(<span class="number">5</span>)</span><br><span class="line">driver.quit()</span><br></pre></td></tr></table></figure>
-
-<h3 id="WebElement元素"><a href="#WebElement元素" class="headerlink" title="WebElement元素"></a>WebElement元素</h3><p><code>from selenium.webdriver.remote.webelement import WebElement</code>类是每个获取出来的元素的所属类</p>
-<p>常用属性：</p>
-<ol>
-<li>get_attribute：这个标签的某个属性的值。</li>
-<li>screentshot：获取当前页面的截图。这个方法只能在<code>driver</code>上使用。<code>driver</code>的对象类，也是继承自<code>WebElement</code>。</li>
-</ol>
-<h3 id="对带有页面嵌套的豆瓣进行登录"><a href="#对带有页面嵌套的豆瓣进行登录" class="headerlink" title="对带有页面嵌套的豆瓣进行登录"></a>对带有页面嵌套的豆瓣进行登录</h3><figure class="highlight python"><table><tr><td class="code"><pre><span class="line"><span class="keyword">from</span> selenium <span class="keyword">import</span> webdriver</span><br><span class="line"><span class="keyword">import</span> time</span><br><span class="line"></span><br><span class="line">driver_path = <span class="string">"./driver/chromedriver.exe"</span></span><br><span class="line">driver = webdriver.Chrome(executable_path=driver_path)</span><br><span class="line">driver.get(<span class="string">'https://www.douban.com'</span>)</span><br><span class="line">iframe = driver.find_element_by_tag_name(<span class="string">"iframe"</span>)</span><br><span class="line">driver.switch_to.frame(iframe)</span><br><span class="line"></span><br><span class="line">login = driver.find_element_by_class_name(<span class="string">"account-tab-account"</span>)</span><br><span class="line"></span><br><span class="line">actions = webdriver.ActionChains(driver)</span><br><span class="line">actions.move_to_element(login)</span><br><span class="line">actions.click()</span><br><span class="line">actions.perform()</span><br><span class="line"></span><br><span class="line">username = driver.find_element_by_id(<span class="string">"username"</span>)</span><br><span class="line">password = driver.find_element_by_id(<span class="string">"password"</span>)</span><br><span class="line">submit = driver.find_element_by_xpath(<span class="string">"//div[@class='account-form-field-submit ']/a"</span>)</span><br><span class="line"></span><br><span class="line">actions.move_to_element(username)</span><br><span class="line">actions.send_keys_to_element(username, <span class="string">"your username"</span>)</span><br><span class="line">actions.move_to_element(password)</span><br><span class="line">actions.send_keys_to_element(password, <span class="string">"your password"</span>)</span><br><span class="line">actions.move_to_element(submit)</span><br><span class="line">actions.click()</span><br><span class="line">actions.perform()</span><br><span class="line"></span><br><span class="line">time.sleep(<span class="number">10</span>)</span><br><span class="line"></span><br><span class="line">driver.quit()</span><br></pre></td></tr></table></figure>
-
-<p>注意：在使用以下内容时会出现警告信息，身为有代码洁癖的人，最不能忍受运行中出现警告信息。</p>
-<p>警告信息：</p>
-<figure class="highlight plain"><table><tr><td class="code"><pre><span class="line">DeprecationWarning: use driver.switch_to.frame instead driver.switch_to_frame(iframe)</span><br></pre></td></tr></table></figure>
-
-<p>使用方式：</p>
-<figure class="highlight python"><table><tr><td class="code"><pre><span class="line">iframe = driver.find_element_by_tag_name(<span class="string">"iframe"</span>)</span><br><span class="line">driver.switch_to_frame(iframe)</span><br></pre></td></tr></table></figure>
-
-<p>将上文改为即可：</p>
-<figure class="highlight python"><table><tr><td class="code"><pre><span class="line">iframe = driver.find_element_by_tag_name(<span class="string">"iframe"</span>)</span><br><span class="line">driver.switch_to.frame(iframe)</span><br></pre></td></tr></table></figure>
-
-<p>对框架的解决方式推荐一篇文章：<a href="https://www.cnblogs.com/dydxw/p/10551160.html" target="_blank" rel="noopener">Selenium（十二）嵌套frame定位</a></p>
-]]></content>
-      <categories>
-        <category>爬虫</category>
-      </categories>
-      <tags>
-        <tag>AJAX</tag>
-        <tag>Selenium</tag>
-        <tag>chromedriver</tag>
       </tags>
   </entry>
   <entry>
@@ -1615,98 +1529,6 @@ doDecrypt(passwd, onError);
       </tags>
   </entry>
   <entry>
-    <title>Python 3中的Urllib库的使用</title>
-    <url>/190615/</url>
-    <content><![CDATA[<p>在Python中有着这样一个常用的、基础的爬虫库。在Python2中为urllib.urllib，在Python3中官方为了便于管理，将和请求有关的函数封装进了urllib.request模块中。</p>
-<p>在此处，使用Python3做记录。</p>
-<a id="more"></a>
-
-<h3 id="urlopen函数"><a href="#urlopen函数" class="headerlink" title="urlopen函数"></a>urlopen函数</h3><p>urlopen函数是request中的一个很常用的函数，它主要用于打开一个网页。其中有着很多的属性。</p>
-<figure class="highlight python"><table><tr><td class="code"><pre><span class="line"><span class="keyword">from</span> urllib <span class="keyword">import</span> request</span><br><span class="line"></span><br><span class="line">resp = request.open(<span class="string">"https://www.baidu.com"</span>)</span><br><span class="line">print(resp.read())</span><br></pre></td></tr></table></figure>
-
-
-
-<h3 id="urlretrieve函数"><a href="#urlretrieve函数" class="headerlink" title="urlretrieve函数"></a>urlretrieve函数</h3><p>urlretrieve函数可以很方便的将网页保存至本地。其实用方法见下方代码：</p>
-<figure class="highlight python"><table><tr><td class="code"><pre><span class="line"><span class="keyword">from</span> urllib <span class="keyword">import</span> request</span><br><span class="line"></span><br><span class="line">request.urlretrieve()</span><br></pre></td></tr></table></figure>
-
-
-
-<h3 id="urlencode函数"><a href="#urlencode函数" class="headerlink" title="urlencode函数"></a>urlencode函数</h3><p>将字典类型的数据转化为url编码的数据</p>
-<figure class="highlight python"><table><tr><td class="code"><pre><span class="line"><span class="keyword">from</span> urllib <span class="keyword">import</span> parse, request</span><br><span class="line"></span><br><span class="line">params = &#123;<span class="string">"wd"</span>: <span class="string">"爬虫之道"</span>&#125;</span><br><span class="line"></span><br><span class="line">qs = parse.urlencode(params)</span><br><span class="line"></span><br><span class="line">url = <span class="string">f"https://www.baidu.com/s?<span class="subst">&#123;qs&#125;</span>"</span></span><br><span class="line"></span><br><span class="line">resp = request.urlopen(url)</span><br></pre></td></tr></table></figure>
-
-
-
-<h3 id="parse-qs函数"><a href="#parse-qs函数" class="headerlink" title="parse_qs函数"></a>parse_qs函数</h3><p>将url编码后的参数还原为字典形式，其中的值以列表形式进行存储。</p>
-<figure class="highlight python"><table><tr><td class="code"><pre><span class="line"><span class="keyword">from</span> urllib <span class="keyword">import</span> parse</span><br><span class="line"></span><br><span class="line">ps = &#123;<span class="string">"name"</span>: <span class="string">"爬虫之道"</span>, <span class="string">"vxcode"</span>: <span class="string">"spider_rold"</span>&#125;</span><br><span class="line"></span><br><span class="line">results = parse.urlencode(ps)</span><br><span class="line"></span><br><span class="line">new_results = parse.parse_qs(results)</span><br><span class="line">print(new_results)</span><br></pre></td></tr></table></figure>
-
-<h3 id="urlparse和urlsplit函数"><a href="#urlparse和urlsplit函数" class="headerlink" title="urlparse和urlsplit函数"></a>urlparse和urlsplit函数</h3><p>对URL各部分进行分割，其中在使用urlsplit函数时，没有_params_参数。（<em>注</em>：params参数指的是在以下链接中”?”前添加”;”，位于这两者之间的内容，如：_<a href="https://www.baidu.com/s;hello?wd=hello+world_%EF%BC%89" target="_blank" rel="noopener">https://www.baidu.com/s;hello?wd=hello+world_）</a></p>
-<figure class="highlight python"><table><tr><td class="code"><pre><span class="line"><span class="keyword">from</span> urllib <span class="keyword">import</span> parse</span><br><span class="line"></span><br><span class="line">params = &#123;<span class="string">"wd"</span>: <span class="string">"爬虫之道"</span>&#125;</span><br><span class="line"></span><br><span class="line">qs = parse.urlencode(params)</span><br><span class="line">url = <span class="string">f"https://www.baidu.com/s?<span class="subst">&#123;qs&#125;</span>"</span></span><br><span class="line"></span><br><span class="line">result = parse.urlparse(url)</span><br><span class="line"></span><br><span class="line">print(<span class="string">'scheme:'</span>, result.scheme)</span><br><span class="line">print(<span class="string">'netloc:'</span>, result.netloc)</span><br><span class="line">print(<span class="string">'path:'</span>, result.path)</span><br><span class="line">print(<span class="string">'params:'</span>, result.params)</span><br><span class="line">print(<span class="string">'query:'</span>, result.query)</span><br><span class="line">print(<span class="string">'fragment:'</span>, result.fragment)</span><br></pre></td></tr></table></figure>
-
-<h3 id="request-Request类"><a href="#request-Request类" class="headerlink" title="request.Request类"></a>request.Request类</h3><p>在爬虫中，如果想使用一些参数，如：请求头，请求数据等，需要使用到Request类。如果只是使用urlopen函数，没有办法进行添加请求头。在没有使用_User-Agent_的时候，如果服务器发现是爬虫，服务器可能会返回一条假的数据内容，或者是不返回内容。所以，将爬虫程序伪装成正常的浏览器访问是很有必要的一件事。</p>
-<figure class="highlight python"><table><tr><td class="code"><pre><span class="line"><span class="keyword">from</span> urllib <span class="keyword">import</span> request, parse</span><br><span class="line"></span><br><span class="line">headers = &#123;<span class="string">'user-agent'</span>: <span class="string">"Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/75.0.3770.90 Safari/537.36"</span>&#125;</span><br><span class="line">params = &#123;<span class="string">"wd"</span>: <span class="string">"爬虫之道"</span>&#125;</span><br><span class="line"></span><br><span class="line">qs = parse.urlencode(params)</span><br><span class="line">url = <span class="string">f"https://www.baidu.com/s?<span class="subst">&#123;qs&#125;</span>"</span></span><br><span class="line"></span><br><span class="line">req = request.Request(url, headers=headers)</span><br><span class="line">resp = request.urlopen(req)</span><br><span class="line">print(resp.read())</span><br></pre></td></tr></table></figure>
-
-<p>注： 可以去挑战一下网络爬虫界的“珠穆朗玛峰” —– 拉勾网</p>
-<h3 id="ProxyHandler处理器"><a href="#ProxyHandler处理器" class="headerlink" title="ProxyHandler处理器"></a>ProxyHandler处理器</h3><p>在爬取网站时，一般情况下网站都会做一些反爬虫机制，如封ip。如果只使用一个ip地址进行爬取，在网站封掉ip地址后，就无法获取数据了。所以，在有反爬虫机制的情况，反反爬虫机制便可以使用了。在urllib中通过使用ProxyHandler进行设置代理服务器。</p>
-<p>在使用代理与未使用代理的区别：</p>
-<p><img data-src="/userImages/proxy.jpg">  </p>
-<figure class="highlight python"><table><tr><td class="code"><pre><span class="line"><span class="keyword">from</span> urllib <span class="keyword">import</span> request</span><br><span class="line"></span><br><span class="line"><span class="comment">### 未使用代理</span></span><br><span class="line">resp = request.urlopen(<span class="string">'http://httpbin.org/get'</span>)</span><br><span class="line">print(resp.read())</span><br><span class="line"></span><br><span class="line"><span class="comment">### 使用代理</span></span><br><span class="line">handler = request.ProxyHandler(&#123;<span class="string">"https"</span>: <span class="string">"58.253.152.231:9999"</span>&#125;)</span><br><span class="line"></span><br><span class="line">opener = request.build_opener(handler)</span><br><span class="line">req = request.Request(<span class="string">"http://httpbin.org/get"</span>)</span><br><span class="line">resp = opener.open(req)</span><br><span class="line">print(resp.read())</span><br></pre></td></tr></table></figure>
-
-<p>常用的代理：</p>
-<ul>
-<li>西刺代理：<a href="https://www.xicidaili.com/" target="_blank" rel="noopener">https://www.xicidaili.com</a></li>
-<li>快代理: <a href="https://www.kuaidaili.com/free/" target="_blank" rel="noopener">https://www.kuaidaili.com/free/</a></li>
-</ul>
-<h3 id="Cookie是什么"><a href="#Cookie是什么" class="headerlink" title="Cookie是什么"></a>Cookie是什么</h3><p>在网站汇总，http请求是无状态的。在第一次和服务器建立连接登录后，第二次请求服务器依旧不能知道当前请求的用户是谁。Cookie的出现就是为了解决该问题。第一次登录后，服务器会返回一些数据(cookie) 给浏览器，然后浏览器将数据保存在本地。当用户发送第二次请求时，浏览器会自动的将保存在本地的数据(cookie)一起发送给服务器。服务通过判断不同的cookie信息，进行确认用户。cookie的存储大小是有限的一般不会超过4KB，因此在设置cookie对的时候，只能存储少量数据。</p>
-<h4 id="cookie的格式："><a href="#cookie的格式：" class="headerlink" title="cookie的格式："></a>cookie的格式：</h4><p>Set-Cookie: NAME=VALUE；Expires=DATE；Path=PATH；Domain=DOMAIN_NAME；SECURE</p>
-<p>参数含义：</p>
-<ul>
-<li>NAME：Cookie的名字</li>
-<li>VALUE：Cookie的值</li>
-<li>Expires:  Cookie的过期时间</li>
-<li>Path：Cookie作用的路径</li>
-<li>Domain： Cookie作用的域名</li>
-<li>SECURE：是否只在HTTP协议下起作用</li>
-</ul>
-<h3 id="使用cookielib库和HTTPCookieProcessor模块模拟登陆"><a href="#使用cookielib库和HTTPCookieProcessor模块模拟登陆" class="headerlink" title="使用cookielib库和HTTPCookieProcessor模块模拟登陆"></a>使用cookielib库和HTTPCookieProcessor模块模拟登陆</h3><p>在Python中使用cookie，一般是通过http.cookiejar模块和urllib模块的HTTPCookieProcessor处理器一起使用的。</p>
-<ul>
-<li>http.cookiejar：提供用于存储cookie的对象</li>
-<li>HTTPCookieProcessor：处理cookie对象并构建handler对象</li>
-</ul>
-<h4 id="http-cookiejar模块"><a href="#http-cookiejar模块" class="headerlink" title="http.cookiejar模块"></a>http.cookiejar模块</h4><p>在该模块中主要有三个类，CookieJar、FileCookieJar、MozillaCookieJar、LWPCookieJar。其作用如下：</p>
-<ul>
-<li>CookieJar：管理HTTP cookie值、存储HTTP请求生成的cookie，向传出的HTTP请求添加cookie对象。整个cookie都存储在内存中，对CookieJar实例进行垃圾回收后cookie失效。</li>
-<li>FileCookieJar (filename, delayload=None, policy=None)：从CookieJar派生而来，用来创建FileCookieJar实例。检索cookie信息并将cookie存储到文件中。filename是存储cookie的文件名，delayload为True是支持延迟访问文件，即只有在需要时才读取文件或将数据存储在文件中。</li>
-<li>MozillaCookieJar (filename, delayload=None, policy=None)：从FileCookieJar派生而来，创建与Mozilla浏览器cookies.txt兼容的FileCookieJar实例。</li>
-<li>LWPCookieJar (filename, delayload=None, policy=None)：从FileCookieJar派生而来，创建与libwww·per标准的Set-Cookies3文件格式兼容的FileCookieJar实例。</li>
-</ul>
-<h3 id="保存Cookie至本地"><a href="#保存Cookie至本地" class="headerlink" title="保存Cookie至本地"></a>保存Cookie至本地</h3><p>保存cookie到本地，可以使用cookiejar的save方法。</p>
-<figure class="highlight python"><table><tr><td class="code"><pre><span class="line"><span class="keyword">from</span> urllib <span class="keyword">import</span> request</span><br><span class="line"><span class="keyword">from</span> http.cookiejar <span class="keyword">import</span> MozillaCookieJar</span><br><span class="line"></span><br><span class="line">cookiejar = MozillaCookieJar(<span class="string">'cookies.txt'</span>)</span><br><span class="line">handler = request.HTTPCookieProcessor(cookiejar)</span><br><span class="line">opener = request.build_opener(handler)</span><br><span class="line"></span><br><span class="line">handlers = &#123;</span><br><span class="line">    <span class="string">'User-Agent'</span>: <span class="string">'Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/75.0.3770.100 Safari/537.36'</span>,</span><br><span class="line">&#125;</span><br><span class="line"></span><br><span class="line">req = request.Request(<span class="string">'http://httpbin.org/cookies'</span>, headers=handlers)</span><br><span class="line"></span><br><span class="line">resp = opener.open(req)</span><br><span class="line">print(resp.read())</span><br><span class="line"></span><br><span class="line">cookiejar.save(ignore_discard=<span class="literal">True</span>, ignore_expires=<span class="literal">True</span>)</span><br></pre></td></tr></table></figure>
-
-<h3 id="加载本地cookie"><a href="#加载本地cookie" class="headerlink" title="加载本地cookie"></a>加载本地cookie</h3><p>从本地文件读取cookie信息，可以使用cookiejar中的load方法</p>
-<figure class="highlight python"><table><tr><td class="code"><pre><span class="line"><span class="keyword">from</span> http.cookiejar <span class="keyword">import</span> MozillaCookieJar</span><br><span class="line"></span><br><span class="line">cookiejar = MozillaCookieJar(<span class="string">'cookies.txt'</span>)</span><br><span class="line">cookiejar.load(ignore_discard=<span class="literal">True</span>)</span><br><span class="line"><span class="keyword">for</span> cookie <span class="keyword">in</span> cookiejar:</span><br><span class="line">    print(cookie)</span><br></pre></td></tr></table></figure>
-
-]]></content>
-      <categories>
-        <category>爬虫</category>
-      </categories>
-      <tags>
-        <tag>urllib</tag>
-      </tags>
-  </entry>
-  <entry>
-    <title>一次完整的HTTP请求过程</title>
-    <url>/190724/</url>
-    <content><![CDATA[<h3 id="一次完整的HTTP请求过程"><a href="#一次完整的HTTP请求过程" class="headerlink" title="一次完整的HTTP请求过程"></a>一次完整的HTTP请求过程</h3><p>搬运来的，直接上链接吧：</p>
-<p>链接：<a href="https://www.cnblogs.com/xuzekun/p/7527736.html" target="_blank" rel="noopener">飞机起飞</a></p>
-]]></content>
-      <categories>
-        <category>HTTP</category>
-      </categories>
-      <tags>
-        <tag>HTTP请求过程</tag>
-      </tags>
-  </entry>
-  <entry>
     <title>多线程爬虫</title>
     <url>/190630/</url>
     <content><![CDATA[<h3 id="多线程介绍"><a href="#多线程介绍" class="headerlink" title="多线程介绍"></a>多线程介绍</h3><p>多线程时为了同步完成多项任务，通过提高资源使用效率来提高系统的效率。线程是在同一时间需要完成多项任务的时候实现的。就好比多线程是火车的每一节车厢，而进程就是火车，车厢离开火车无法启动。多线程的出现是为了提高效率。</p>
@@ -1779,6 +1601,19 @@ doDecrypt(passwd, onError);
       </tags>
   </entry>
   <entry>
+    <title>一次完整的HTTP请求过程</title>
+    <url>/190724/</url>
+    <content><![CDATA[<h3 id="一次完整的HTTP请求过程"><a href="#一次完整的HTTP请求过程" class="headerlink" title="一次完整的HTTP请求过程"></a>一次完整的HTTP请求过程</h3><p>搬运来的，直接上链接吧：</p>
+<p>链接：<a href="https://www.cnblogs.com/xuzekun/p/7527736.html" target="_blank" rel="noopener">飞机起飞</a></p>
+]]></content>
+      <categories>
+        <category>HTTP</category>
+      </categories>
+      <tags>
+        <tag>HTTP请求过程</tag>
+      </tags>
+  </entry>
+  <entry>
     <title>通过图像像素值对图像进行降噪处理</title>
     <url>/191028/</url>
     <content><![CDATA[<h3 id="如何更好获取图像的像素值"><a href="#如何更好获取图像的像素值" class="headerlink" title="如何更好获取图像的像素值"></a>如何更好获取图像的像素值</h3><p>对于一张彩色的验证码，肯定少不了RBG三通道或者是RGBA四通道，其中在四通道的图像中，是在原来的基础上加上了alpha通道，即透明度。</p>
@@ -1832,6 +1667,171 @@ doDecrypt(passwd, onError);
       <tags>
         <tag>降噪</tag>
         <tag>像素值</tag>
+      </tags>
+  </entry>
+  <entry>
+    <title>动态网页数据抓取</title>
+    <url>/190703/</url>
+    <content><![CDATA[<h2 id="动态页面数据抓取"><a href="#动态页面数据抓取" class="headerlink" title="动态页面数据抓取"></a>动态页面数据抓取</h2><h3 id="什么是AJAX"><a href="#什么是AJAX" class="headerlink" title="什么是AJAX"></a>什么是AJAX</h3><p>AJAX（Asynchronouse JavaScript And XML）异步JavaScript和XML。在后台与服务器进行少量数据换时，可以在不重新加载整个网页的情况下，利用Ajax对网页实现异步更新。在传统的网页中，如果要获取更新内容，需要重新加载整个页面。因为传统的网页数据传输格式使用的是XML语法。在Ajax加载的网页中，数据的交互使用的是JSON格式。</p>
+<a id="more"></a>
+
+<h3 id="获取ajax数据的格式"><a href="#获取ajax数据的格式" class="headerlink" title="获取ajax数据的格式"></a>获取ajax数据的格式</h3><ol>
+<li>直接分析ajax调用的接口，然后通过代码请求接口。</li>
+<li>使用selenium+chromedriver模拟浏览器的行为获取数据。</li>
+</ol>
+<table>
+<thead>
+<tr>
+<th>方式</th>
+<th>优点</th>
+<th>缺点</th>
+</tr>
+</thead>
+<tbody><tr>
+<td>分析接口</td>
+<td>直接可以请求到数据，不需要做一些解析工具，代码量少，性能高。</td>
+<td>分析接口比较复杂，特别是一些通过js混淆的接口，需要有js的功底。容易被发现是爬虫。</td>
+</tr>
+<tr>
+<td>selenium</td>
+<td>直接模拟浏览器的行为，浏览器能请求到的，使用selenium也同样可以获取。爬虫更稳定。</td>
+<td>代码量多，性能低。</td>
+</tr>
+</tbody></table>
+<h3 id="selenium-chromdriver获取动态数据"><a href="#selenium-chromdriver获取动态数据" class="headerlink" title="selenium + chromdriver获取动态数据"></a>selenium + chromdriver获取动态数据</h3><p>Selenium是一个自动化测试工具，可以在模拟人类在浏览器上的行为，自动处理浏览器上的一些行为，如点击，填充数据，删除cookie等。chromedriver是一个chrome浏览器的驱动程序。</p>
+<p>Chromedriver：<a href="http://npm.taobao.org/mirrors/chromedriver" target="_blank" rel="noopener">http://npm.taobao.org/mirrors/chromedriver</a></p>
+<h3 id="安装Selenium和chromedriver"><a href="#安装Selenium和chromedriver" class="headerlink" title="安装Selenium和chromedriver"></a>安装Selenium和chromedriver</h3><ol>
+<li>安装selenium：<code>pip install selenium</code></li>
+<li>安装chromedriver：下载完毕后，放到自己能找到的英文目录中即可。</li>
+</ol>
+<h3 id="快速开始"><a href="#快速开始" class="headerlink" title="快速开始"></a>快速开始</h3><p>以一个例子快速开始</p>
+<figure class="highlight python"><table><tr><td class="code"><pre><span class="line"><span class="keyword">from</span> selenium <span class="keyword">import</span> webdriver</span><br><span class="line"><span class="keyword">import</span> time</span><br><span class="line"></span><br><span class="line">driver_path = <span class="string">'./driver/chromedriver.exe'</span></span><br><span class="line">url = <span class="string">"https://www.baidu.com"</span></span><br><span class="line"></span><br><span class="line">driver = webdriver.Chrome(executable_path=driver_path)</span><br><span class="line"></span><br><span class="line">driver.get(url)</span><br><span class="line">print(driver.page_source)</span><br><span class="line">time.sleep(<span class="number">5</span>)</span><br><span class="line">driver.close()</span><br></pre></td></tr></table></figure>
+
+<p>在运行之后会出现一个浏览器框，并自动的访问百度</p>
+<h3 id="selenium官方文档"><a href="#selenium官方文档" class="headerlink" title="selenium官方文档"></a>selenium官方文档</h3><p><a href="https://selenium-python.readthedocs.io/index.html" target="_blank" rel="noopener">https://selenium-python.readthedocs.io/index.html</a></p>
+<h3 id="关闭页面"><a href="#关闭页面" class="headerlink" title="关闭页面"></a>关闭页面</h3><ol>
+<li>driver.close()：关闭当前页面</li>
+<li>driver.quit()：退出整个浏览器</li>
+</ol>
+<h3 id="定位元素"><a href="#定位元素" class="headerlink" title="定位元素"></a>定位元素</h3><ol>
+<li><p><code>find_element_by_id</code>：根据id查找某个元素</p>
+<figure class="highlight python"><table><tr><td class="code"><pre><span class="line">submitTag = driver.find_element_by_id(<span class="string">'su'</span>)</span><br><span class="line"><span class="comment">### 等价于</span></span><br><span class="line">submitTag = driver.find_element(By.ID, <span class="string">'su'</span>)</span><br></pre></td></tr></table></figure>
+</li>
+<li><p><code>find_element_by_class_name</code>：根据类名查找元素</p>
+<figure class="highlight python"><table><tr><td class="code"><pre><span class="line">submitTag = driver.find_element_by_class_name(<span class="string">'s_ipt'</span>)</span><br><span class="line"><span class="comment">### 等价于</span></span><br><span class="line">submitTag = driver.find_element(By.CLASS, <span class="string">'s_ipt'</span>)</span><br></pre></td></tr></table></figure>
+</li>
+<li><p><code>find_element_by_name</code>：根据name属性的值来查找元素</p>
+<figure class="highlight python"><table><tr><td class="code"><pre><span class="line">submitTag = driver.find_element_by_name(<span class="string">'email'</span>)</span><br><span class="line"><span class="comment">### 等价于</span></span><br><span class="line">submitTag = driver.find_element(By.NAME,<span class="string">'email'</span>)</span><br></pre></td></tr></table></figure>
+</li>
+<li><p><code>find_element_by_tag_name</code>：根据标签名来查找元素</p>
+<figure class="highlight python"><table><tr><td class="code"><pre><span class="line">submitTag = driver.find_element_by_tag_name(<span class="string">'div'</span>)</span><br><span class="line"><span class="comment">### 等价于</span></span><br><span class="line">submitTag = driver.find_element(By.TAG_NAME,<span class="string">'div'</span>)</span><br></pre></td></tr></table></figure>
+</li>
+<li><p><code>find_element_by_xpath</code>：根据xpath语法来获取元素</p>
+<figure class="highlight python"><table><tr><td class="code"><pre><span class="line">submitTag = driver.find_element_by_xpath(<span class="string">'//div'</span>)</span><br><span class="line"><span class="comment">### 等价于</span></span><br><span class="line">submitTag = driver.find_element(By.XPATH,<span class="string">'//div'</span>)</span><br></pre></td></tr></table></figure>
+</li>
+<li><p><code>find_element_by_css_selector</code>：根据css选择器选择元素</p>
+<figure class="highlight python"><table><tr><td class="code"><pre><span class="line">submitTag = driver.find_element_by_css_selector(<span class="string">'//div'</span>)</span><br><span class="line"><span class="comment">### 等价于</span></span><br><span class="line">submitTag = driver.find_element(By.CSS_SELECTOR,<span class="string">'//div'</span>)</span><br></pre></td></tr></table></figure>
+</li>
+<li><p><code>By</code>模块导入</p>
+<figure class="highlight python"><table><tr><td class="code"><pre><span class="line"><span class="keyword">from</span> selenium.webdriver.common.by <span class="keyword">import</span> By</span><br></pre></td></tr></table></figure>
+
+</li>
+</ol>
+<p><em>注意</em>：<code>find_element</code>是获取第一个满足条件的元素。<code>find_elements</code>是获取所有满足条件的元素</p>
+<h3 id="操作表单元素"><a href="#操作表单元素" class="headerlink" title="操作表单元素"></a>操作表单元素</h3><ol>
+<li><p>在操作输入框时需要分为两步，一：找到表单元素，二：填充数据。</p>
+<figure class="highlight python"><table><tr><td class="code"><pre><span class="line">inputTag = driver.find_element_by_id(<span class="string">'kw'</span>)</span><br><span class="line">inputTag.send_keys(<span class="string">"Python"</span>)</span><br></pre></td></tr></table></figure>
+
+<p>使用clear方法可以清除输入框中的内容</p>
+<p><code>inputTag.clear()</code></p>
+</li>
+<li><p>操作checkbox时，需要先选中checkbox标签，然后执行click事件。</p>
+<figure class="highlight python"><table><tr><td class="code"><pre><span class="line">rememberTag = driver.find_element_by_name(<span class="string">"rememberMe"</span>)</span><br><span class="line">rememberTag.click()</span><br></pre></td></tr></table></figure>
+</li>
+<li><p>选择select时，不能直接点击，因为点击后还需要选中元素。因此在selenium中专门为select标签设置了一个类<code>selenium.webdriver.support.ui.Select</code>。将获取到的元素当成参数传到这个类中，创建这个对象，之后就可以使用这个对象进行选择了。</p>
+<figure class="highlight python"><table><tr><td class="code"><pre><span class="line"><span class="keyword">from</span> selenium.webdriver.support.ui <span class="keyword">import</span> Select</span><br><span class="line"></span><br><span class="line"><span class="comment">### 选中标签创建对象</span></span><br><span class="line">selectTag = Select(driver.find_element_by_name(<span class="string">"jumpMenu"</span>))</span><br><span class="line"><span class="comment">### 根据索引选择</span></span><br><span class="line">selectTag.select_by_index(<span class="number">1</span>)</span><br><span class="line"></span><br><span class="line"><span class="comment">### 根据值选择</span></span><br><span class="line">selectTag.select_by_value(<span class="string">"https://www.python.org"</span>)</span><br><span class="line"></span><br><span class="line"><span class="comment">### 根据可视化文本选择</span></span><br><span class="line">selectTag.select_by_visible_text(<span class="string">"Python"</span>)</span><br><span class="line"></span><br><span class="line"><span class="comment">### 取消选中的所有选项</span></span><br><span class="line">selectTag.deselect_all()</span><br></pre></td></tr></table></figure>
+</li>
+<li><p>操作按钮：</p>
+<figure class="highlight python"><table><tr><td class="code"><pre><span class="line">inputTag = driver.find_element_by_id(<span class="string">"su"</span>)</span><br><span class="line">inputTag.click()</span><br></pre></td></tr></table></figure>
+
+</li>
+</ol>
+<h3 id="行为链"><a href="#行为链" class="headerlink" title="行为链"></a>行为链</h3><p>有时候在页面中的操作可能要有很多步，那么这时候可以使用鼠标行为链类<code>ActionChains</code>来完成。如将鼠标移到某个元素并执行点击事件。</p>
+<figure class="highlight python"><table><tr><td class="code"><pre><span class="line">inputTag = driver.find_element(By.ID, <span class="string">'kw'</span>)</span><br><span class="line">submitTag = driver.find_element_by_id(<span class="string">'su'</span>)</span><br><span class="line"></span><br><span class="line">actions = webdriver.ActionChains(driver)</span><br><span class="line">actions.move_to_element(inputTag)</span><br><span class="line">actions.send_keys_to_element(inputTag, <span class="string">'Python'</span>)</span><br><span class="line">actions.move_to_element(submitTag)</span><br><span class="line">actions.click(submitTag)</span><br><span class="line">actions.perform()</span><br></pre></td></tr></table></figure>
+
+<p>更多鼠标相关操作</p>
+<ul>
+<li>click_and_hold(element)：点击但不松开鼠标</li>
+<li>context_click(element)：右键点击</li>
+<li>double_click(element)：双击</li>
+</ul>
+<p>更多方法：<a href="https://selenium-python.readthedocs.io/api.html" target="_blank" rel="noopener">https://selenium-python.readthedocs.io/api.html</a></p>
+<h3 id="Cookie操作"><a href="#Cookie操作" class="headerlink" title="Cookie操作"></a>Cookie操作</h3><ol>
+<li><p>获取所有的cookie</p>
+<figure class="highlight python"><table><tr><td class="code"><pre><span class="line"><span class="keyword">for</span> cookie <span class="keyword">in</span> driver.get_cookies():</span><br><span class="line">    print(cookie)</span><br></pre></td></tr></table></figure>
+</li>
+<li><p>根据cookie的key获取value</p>
+<figure class="highlight python"><table><tr><td class="code"><pre><span class="line">value = driver.get_cookie(key)</span><br></pre></td></tr></table></figure>
+</li>
+<li><p>删除所有的cookie</p>
+<figure class="highlight python"><table><tr><td class="code"><pre><span class="line">driver.delete_all_cookies()</span><br></pre></td></tr></table></figure>
+</li>
+<li><p>删除某个cookie</p>
+<figure class="highlight python"><table><tr><td class="code"><pre><span class="line">driver.delete_cookie(key)</span><br></pre></td></tr></table></figure>
+
+</li>
+</ol>
+<h3 id="页面等待"><a href="#页面等待" class="headerlink" title="页面等待"></a>页面等待</h3><p>现在的网页多采用 Ajax 技术，这样程序便不能确定何时某个元素完全加载出来了。如果实际页面等待时间过长导致某个dom元素还没出来，在使用了WebElement时，就会抛出NullPointer的异常。为了解决这个问题。所以 Selenium 提供了两种等待方式：一种是隐式等待、一种是显式等待。</p>
+<ul>
+<li><p>隐式等待</p>
+<p>调用<code>driver.implicitly_wait</code>。</p>
+<figure class="highlight python"><table><tr><td class="code"><pre><span class="line">driver = webdriver.Chrome(executable_path=driver_path)</span><br><span class="line">driver.implicitly_wait(<span class="number">10</span>)</span><br><span class="line"><span class="comment"># 请求网页</span></span><br><span class="line">driver.get(<span class="string">"https://www.douban.com/"</span>)</span><br></pre></td></tr></table></figure>
+</li>
+<li><p>显式等待</p>
+<p>显示等待是表明某个条件成立后才执行获取元素的操作。也可以在等待的时候指定一个最大的时间，如果超过这个时间那么就抛出一个异常。显示等待应该使用<code>selenium.webdriver.support.excepted_conditions</code>期望的条件和<code>selenium.webdriver.support.ui.WebDriverWait</code>来配合完成。</p>
+<figure class="highlight python"><table><tr><td class="code"><pre><span class="line"><span class="keyword">from</span> selenium <span class="keyword">import</span> webdriver</span><br><span class="line"><span class="keyword">from</span> selenium.webdriver.common.by <span class="keyword">import</span> By</span><br><span class="line"><span class="keyword">from</span> selenium.webdriver.support.ui <span class="keyword">import</span> WebDriverWait</span><br><span class="line"><span class="keyword">from</span> selenium.webdriver.support <span class="keyword">import</span> expected_conditions <span class="keyword">as</span> EC</span><br><span class="line"></span><br><span class="line">driver = webdriver.Firefox()</span><br><span class="line">driver.get(<span class="string">"http://somedomain/url_that_delays_loading"</span>)</span><br><span class="line"><span class="keyword">try</span>:</span><br><span class="line">    element = WebDriverWait(driver, <span class="number">10</span>).until(</span><br><span class="line">        EC.presence_of_element_located((By.ID, <span class="string">"myDynamicElement"</span>))</span><br><span class="line">    )</span><br><span class="line"><span class="keyword">finally</span>:</span><br><span class="line">    driver.quit()</span><br></pre></td></tr></table></figure>
+</li>
+<li><p>其他的等待条件</p>
+<ol>
+<li><code>presence_of_element_located</code>：某个元素已经加载完毕了。</li>
+<li><code>presence_of_all_emement_located</code>：网页中所有满足条件的元素都加载完毕了。</li>
+<li><code>element_to_be_cliable</code>：某个元素是可以点击了。</li>
+</ol>
+<p>更多条件请参考：<a href="http://selenium-python.readthedocs.io/waits.html" target="_blank" rel="noopener">http://selenium-python.readthedocs.io/waits.html</a></p>
+</li>
+</ul>
+<h3 id="切换页面"><a href="#切换页面" class="headerlink" title="切换页面"></a>切换页面</h3><p>在切换页面时，<code>selenium</code>提供了一个叫做<code>switch_to_window</code>来进行切换，具体切换到哪个页面，可以从<code>driver.window_handles</code>中找到。</p>
+<figure class="highlight python"><table><tr><td class="code"><pre><span class="line"><span class="comment"># 打开一个新的页面</span></span><br><span class="line">self.driver.execute_script(<span class="string">"window.open('"</span>+url+<span class="string">"')"</span>)</span><br><span class="line"><span class="comment"># 切换到这个新的页面中</span></span><br><span class="line">self.driver.switch_to_window(self.driver.window_handles[<span class="number">1</span>])</span><br></pre></td></tr></table></figure>
+
+<h3 id="设置代理"><a href="#设置代理" class="headerlink" title="设置代理"></a>设置代理</h3><figure class="highlight python"><table><tr><td class="code"><pre><span class="line"><span class="keyword">from</span> selenium <span class="keyword">import</span> webdriver</span><br><span class="line"><span class="keyword">import</span> time</span><br><span class="line"></span><br><span class="line">options = webdriver.ChromeOptions()</span><br><span class="line">options.add_argument(<span class="string">"--proxy-server=http://113.12.202.50:50327"</span>)</span><br><span class="line">driver_path = <span class="string">"./driver/chromedriver.exe"</span></span><br><span class="line">driver = webdriver.Chrome(executable_path=driver_path, options=options)</span><br><span class="line"></span><br><span class="line">driver.get(<span class="string">'http://httpbin.org/ip'</span>)</span><br><span class="line">time.sleep(<span class="number">5</span>)</span><br><span class="line">driver.quit()</span><br></pre></td></tr></table></figure>
+
+<h3 id="WebElement元素"><a href="#WebElement元素" class="headerlink" title="WebElement元素"></a>WebElement元素</h3><p><code>from selenium.webdriver.remote.webelement import WebElement</code>类是每个获取出来的元素的所属类</p>
+<p>常用属性：</p>
+<ol>
+<li>get_attribute：这个标签的某个属性的值。</li>
+<li>screentshot：获取当前页面的截图。这个方法只能在<code>driver</code>上使用。<code>driver</code>的对象类，也是继承自<code>WebElement</code>。</li>
+</ol>
+<h3 id="对带有页面嵌套的豆瓣进行登录"><a href="#对带有页面嵌套的豆瓣进行登录" class="headerlink" title="对带有页面嵌套的豆瓣进行登录"></a>对带有页面嵌套的豆瓣进行登录</h3><figure class="highlight python"><table><tr><td class="code"><pre><span class="line"><span class="keyword">from</span> selenium <span class="keyword">import</span> webdriver</span><br><span class="line"><span class="keyword">import</span> time</span><br><span class="line"></span><br><span class="line">driver_path = <span class="string">"./driver/chromedriver.exe"</span></span><br><span class="line">driver = webdriver.Chrome(executable_path=driver_path)</span><br><span class="line">driver.get(<span class="string">'https://www.douban.com'</span>)</span><br><span class="line">iframe = driver.find_element_by_tag_name(<span class="string">"iframe"</span>)</span><br><span class="line">driver.switch_to.frame(iframe)</span><br><span class="line"></span><br><span class="line">login = driver.find_element_by_class_name(<span class="string">"account-tab-account"</span>)</span><br><span class="line"></span><br><span class="line">actions = webdriver.ActionChains(driver)</span><br><span class="line">actions.move_to_element(login)</span><br><span class="line">actions.click()</span><br><span class="line">actions.perform()</span><br><span class="line"></span><br><span class="line">username = driver.find_element_by_id(<span class="string">"username"</span>)</span><br><span class="line">password = driver.find_element_by_id(<span class="string">"password"</span>)</span><br><span class="line">submit = driver.find_element_by_xpath(<span class="string">"//div[@class='account-form-field-submit ']/a"</span>)</span><br><span class="line"></span><br><span class="line">actions.move_to_element(username)</span><br><span class="line">actions.send_keys_to_element(username, <span class="string">"your username"</span>)</span><br><span class="line">actions.move_to_element(password)</span><br><span class="line">actions.send_keys_to_element(password, <span class="string">"your password"</span>)</span><br><span class="line">actions.move_to_element(submit)</span><br><span class="line">actions.click()</span><br><span class="line">actions.perform()</span><br><span class="line"></span><br><span class="line">time.sleep(<span class="number">10</span>)</span><br><span class="line"></span><br><span class="line">driver.quit()</span><br></pre></td></tr></table></figure>
+
+<p>注意：在使用以下内容时会出现警告信息，身为有代码洁癖的人，最不能忍受运行中出现警告信息。</p>
+<p>警告信息：</p>
+<figure class="highlight plain"><table><tr><td class="code"><pre><span class="line">DeprecationWarning: use driver.switch_to.frame instead driver.switch_to_frame(iframe)</span><br></pre></td></tr></table></figure>
+
+<p>使用方式：</p>
+<figure class="highlight python"><table><tr><td class="code"><pre><span class="line">iframe = driver.find_element_by_tag_name(<span class="string">"iframe"</span>)</span><br><span class="line">driver.switch_to_frame(iframe)</span><br></pre></td></tr></table></figure>
+
+<p>将上文改为即可：</p>
+<figure class="highlight python"><table><tr><td class="code"><pre><span class="line">iframe = driver.find_element_by_tag_name(<span class="string">"iframe"</span>)</span><br><span class="line">driver.switch_to.frame(iframe)</span><br></pre></td></tr></table></figure>
+
+<p>对框架的解决方式推荐一篇文章：<a href="https://www.cnblogs.com/dydxw/p/10551160.html" target="_blank" rel="noopener">Selenium（十二）嵌套frame定位</a></p>
+]]></content>
+      <categories>
+        <category>爬虫</category>
+      </categories>
+      <tags>
+        <tag>AJAX</tag>
+        <tag>Selenium</tag>
+        <tag>chromedriver</tag>
       </tags>
   </entry>
   <entry>
@@ -2629,7 +2629,7 @@ function doDecrypt (pwd, onError) {
 	}
 }
 </script>
-<div id="enc_content" style="display:none">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</div>
+<div id="enc_content" style="display:none">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</div>
 <div id="enc_passwd"> <input id="enc_pwd_input" type="password" style="border-radius: 5px;border-style: groove;height: 30px;width: 50%;cursor: auto;font-size: 102%;color: currentColor;outline: none;text-overflow: initial;padding-left: 5px;" onkeydown="if (event.keyCode == 13) { decrypt(); return false;}"> <input type="submit" value="解&nbsp;密" onclick="decrypt()" style="width: 58px;height: 34px;border-radius: 5px;background-color: white;border-style: solid;color: currentColor;"><div id="enc_error" style="display: inline-block;color: #d84527;margin-left: 10px"></div>
 <script>
 var onError = function(error) {
@@ -2675,55 +2675,6 @@ doDecrypt(passwd, onError);
       </categories>
       <tags>
         <tag>ftp</tag>
-      </tags>
-  </entry>
-  <entry>
-    <title>OSPath的用法</title>
-    <url>/OS-Path/</url>
-    <content><![CDATA[<h3 id="OS-path模块中的部分函数的介绍"><a href="#OS-path模块中的部分函数的介绍" class="headerlink" title="OS.path模块中的部分函数的介绍"></a>OS.path模块中的部分函数的介绍</h3><ul>
-<li>os.path.abspath(path) #返回绝对路径</li>
-<li>os.path.basename(path) #返回文件名</li>
-<li>os.path.commonprefix(list) #返回list(多个路径)中，所有path共有的最长的路径。</li>
-<li>os.path.dirname(path) #返回文件路径</li>
-<li>os.path.exists(path) #路径存在则返回True,路径损坏返回False</li>
-<li>os.path.lexists #路径存在则返回True,路径损坏也返回True</li>
-<li>os.path.expanduser(path) #把path中包含的”<del>”和”</del>user”转换成用户目录</li>
-</ul>
-<a id="more"></a>
-
-<ul>
-<li>os.path.expandvars(path) #根据环境变量的值替换path中包含的”$name”和”${name}”</li>
-<li>os.path.getatime(path) #返回最后一次进入此path的时间。</li>
-<li>os.path.getmtime(path) #返回在此path下最后一次修改的时间。</li>
-<li>os.path.getctime(path) #返回path的大小</li>
-<li>os.path.getsize(path) #返回文件大小，如果文件不存在就返回错误</li>
-<li>os.path.isabs(path) #判断是否为绝对路径</li>
-<li>os.path.isfile(path) #判断路径是否为文件</li>
-<li>os.path.isdir(path) #判断路径是否为目录</li>
-<li>os.path.islink(path) #判断路径是否为链接</li>
-<li>os.path.ismount(path) #判断路径是否为挂载点（）</li>
-<li>os.path.join(path1[, path2[, …]]) #把目录和文件名合成一个路径</li>
-<li>os.path.normcase(path) #转换path的大小写和斜杠</li>
-<li>os.path.normpath(path) #规范path字符串形式</li>
-<li>os.path.realpath(path) #返回path的真实路径</li>
-<li>os.path.relpath(path[, start]) #从start开始计算相对路径</li>
-<li>os.path.samefile(path1, path2) #判断目录或文件是否相同</li>
-<li>os.path.sameopenfile(fp1, fp2) #判断fp1和fp2是否指向同一文件</li>
-<li>os.path.samestat(stat1, stat2) #判断stat tuple stat1和stat2是否指向同一个文件</li>
-<li>os.path.split(path) #把路径分割成dirname和basename，返回一个元组</li>
-<li>os.path.splitdrive(path) #一般用在windows下，返回驱动器名和路径组成的元组</li>
-<li>os.path.splitext(path) #分割路径，返回路径名和文件扩展名的元组</li>
-<li>os.path.splitunc(path) #把路径分割为加载点与文件</li>
-<li>os.path.walk(path, visit, arg) #遍历path，进入每个目录都调用visit函数，visit函数必须有3个参数(arg, dirname, names)，dirname表示当前目录的目录名，names代表当前目录下的所有文件名，args则为walk的第三个参数</li>
-<li>os.path.supports_unicode_filenames #设置是否支持unicode路径名</li>
-</ul>
-]]></content>
-      <categories>
-        <category>Python后端</category>
-      </categories>
-      <tags>
-        <tag>os模块</tag>
-        <tag>path的用法</tag>
       </tags>
   </entry>
   <entry>
@@ -2785,6 +2736,32 @@ doDecrypt(passwd, onError);
       </tags>
   </entry>
   <entry>
+    <title>Hello World</title>
+    <url>/hello-world/</url>
+    <content><![CDATA[<p>Welcome to <a href="https://hexo.io/" target="_blank" rel="noopener">Hexo</a>! This is your very first post. Check <a href="https://hexo.io/docs/" target="_blank" rel="noopener">documentation</a> for more info. If you get any problems when using Hexo, you can find the answer in <a href="https://hexo.io/docs/troubleshooting.html" target="_blank" rel="noopener">troubleshooting</a> or you can ask me on <a href="https://github.com/hexojs/hexo/issues" target="_blank" rel="noopener">GitHub</a>.</p>
+<a id="more"></a>
+
+<h2 id="Quick-Start"><a href="#Quick-Start" class="headerlink" title="Quick Start"></a>Quick Start</h2><h3 id="Create-a-new-post"><a href="#Create-a-new-post" class="headerlink" title="Create a new post"></a>Create a new post</h3><figure class="highlight bash"><table><tr><td class="code"><pre><span class="line">$ hexo new <span class="string">"My New Post"</span></span><br></pre></td></tr></table></figure>
+
+<p>More info: <a href="https://hexo.io/docs/writing.html" target="_blank" rel="noopener">Writing</a></p>
+<h3 id="Run-server"><a href="#Run-server" class="headerlink" title="Run server"></a>Run server</h3><figure class="highlight bash"><table><tr><td class="code"><pre><span class="line">$ hexo server</span><br></pre></td></tr></table></figure>
+
+<p>More info: <a href="https://hexo.io/docs/server.html" target="_blank" rel="noopener">Server</a></p>
+<h3 id="Generate-static-files"><a href="#Generate-static-files" class="headerlink" title="Generate static files"></a>Generate static files</h3><figure class="highlight bash"><table><tr><td class="code"><pre><span class="line">$ hexo generate</span><br></pre></td></tr></table></figure>
+
+<p>More info: <a href="https://hexo.io/docs/generating.html" target="_blank" rel="noopener">Generating</a></p>
+<h3 id="Deploy-to-remote-sites"><a href="#Deploy-to-remote-sites" class="headerlink" title="Deploy to remote sites"></a>Deploy to remote sites</h3><figure class="highlight bash"><table><tr><td class="code"><pre><span class="line">$ hexo deploy</span><br></pre></td></tr></table></figure>
+
+<p>More info: <a href="https://hexo.io/docs/deployment.html" target="_blank" rel="noopener">Deployment</a></p>
+]]></content>
+      <categories>
+        <category>起始篇</category>
+      </categories>
+      <tags>
+        <tag>Hello World</tag>
+      </tags>
+  </entry>
+  <entry>
     <title>Python位运算</title>
     <url>/Python%E4%BD%8D%E8%BF%90%E7%AE%97/</url>
     <content><![CDATA[<p>Python中的位运算是程序设计中对位模式或二进制的一元和二元操作。<br>按位运算就是把数字转换为机器语言—以二进制形式表示  </p>
@@ -2812,6 +2789,55 @@ doDecrypt(passwd, onError);
       </categories>
       <tags>
         <tag>位运算</tag>
+      </tags>
+  </entry>
+  <entry>
+    <title>OSPath的用法</title>
+    <url>/OS-Path/</url>
+    <content><![CDATA[<h3 id="OS-path模块中的部分函数的介绍"><a href="#OS-path模块中的部分函数的介绍" class="headerlink" title="OS.path模块中的部分函数的介绍"></a>OS.path模块中的部分函数的介绍</h3><ul>
+<li>os.path.abspath(path) #返回绝对路径</li>
+<li>os.path.basename(path) #返回文件名</li>
+<li>os.path.commonprefix(list) #返回list(多个路径)中，所有path共有的最长的路径。</li>
+<li>os.path.dirname(path) #返回文件路径</li>
+<li>os.path.exists(path) #路径存在则返回True,路径损坏返回False</li>
+<li>os.path.lexists #路径存在则返回True,路径损坏也返回True</li>
+<li>os.path.expanduser(path) #把path中包含的”<del>”和”</del>user”转换成用户目录</li>
+</ul>
+<a id="more"></a>
+
+<ul>
+<li>os.path.expandvars(path) #根据环境变量的值替换path中包含的”$name”和”${name}”</li>
+<li>os.path.getatime(path) #返回最后一次进入此path的时间。</li>
+<li>os.path.getmtime(path) #返回在此path下最后一次修改的时间。</li>
+<li>os.path.getctime(path) #返回path的大小</li>
+<li>os.path.getsize(path) #返回文件大小，如果文件不存在就返回错误</li>
+<li>os.path.isabs(path) #判断是否为绝对路径</li>
+<li>os.path.isfile(path) #判断路径是否为文件</li>
+<li>os.path.isdir(path) #判断路径是否为目录</li>
+<li>os.path.islink(path) #判断路径是否为链接</li>
+<li>os.path.ismount(path) #判断路径是否为挂载点（）</li>
+<li>os.path.join(path1[, path2[, …]]) #把目录和文件名合成一个路径</li>
+<li>os.path.normcase(path) #转换path的大小写和斜杠</li>
+<li>os.path.normpath(path) #规范path字符串形式</li>
+<li>os.path.realpath(path) #返回path的真实路径</li>
+<li>os.path.relpath(path[, start]) #从start开始计算相对路径</li>
+<li>os.path.samefile(path1, path2) #判断目录或文件是否相同</li>
+<li>os.path.sameopenfile(fp1, fp2) #判断fp1和fp2是否指向同一文件</li>
+<li>os.path.samestat(stat1, stat2) #判断stat tuple stat1和stat2是否指向同一个文件</li>
+<li>os.path.split(path) #把路径分割成dirname和basename，返回一个元组</li>
+<li>os.path.splitdrive(path) #一般用在windows下，返回驱动器名和路径组成的元组</li>
+<li>os.path.splitext(path) #分割路径，返回路径名和文件扩展名的元组</li>
+<li>os.path.splitunc(path) #把路径分割为加载点与文件</li>
+<li>os.path.walk(path, visit, arg) #遍历path，进入每个目录都调用visit函数，visit函数必须有3个参数(arg, dirname, names)，dirname表示当前目录的目录名，names代表当前目录下的所有文件名，args则为walk的第三个参数</li>
+<li>os.path.supports_unicode_filenames #设置是否支持unicode路径名</li>
+</ul>
+]]></content>
+      <categories>
+        <category>Python后端</category>
+      </categories>
+      <tags>
+        <tag>os模块</tag>
+        <tag>path的用法</tag>
       </tags>
   </entry>
   <entry>
@@ -2849,69 +2875,6 @@ doDecrypt(passwd, onError);
         <tag>Hypervisor</tag>
         <tag>qemu</tag>
         <tag>xen</tag>
-      </tags>
-  </entry>
-  <entry>
-    <title>Hello World</title>
-    <url>/hello-world/</url>
-    <content><![CDATA[<p>Welcome to <a href="https://hexo.io/" target="_blank" rel="noopener">Hexo</a>! This is your very first post. Check <a href="https://hexo.io/docs/" target="_blank" rel="noopener">documentation</a> for more info. If you get any problems when using Hexo, you can find the answer in <a href="https://hexo.io/docs/troubleshooting.html" target="_blank" rel="noopener">troubleshooting</a> or you can ask me on <a href="https://github.com/hexojs/hexo/issues" target="_blank" rel="noopener">GitHub</a>.</p>
-<a id="more"></a>
-
-<h2 id="Quick-Start"><a href="#Quick-Start" class="headerlink" title="Quick Start"></a>Quick Start</h2><h3 id="Create-a-new-post"><a href="#Create-a-new-post" class="headerlink" title="Create a new post"></a>Create a new post</h3><figure class="highlight bash"><table><tr><td class="code"><pre><span class="line">$ hexo new <span class="string">"My New Post"</span></span><br></pre></td></tr></table></figure>
-
-<p>More info: <a href="https://hexo.io/docs/writing.html" target="_blank" rel="noopener">Writing</a></p>
-<h3 id="Run-server"><a href="#Run-server" class="headerlink" title="Run server"></a>Run server</h3><figure class="highlight bash"><table><tr><td class="code"><pre><span class="line">$ hexo server</span><br></pre></td></tr></table></figure>
-
-<p>More info: <a href="https://hexo.io/docs/server.html" target="_blank" rel="noopener">Server</a></p>
-<h3 id="Generate-static-files"><a href="#Generate-static-files" class="headerlink" title="Generate static files"></a>Generate static files</h3><figure class="highlight bash"><table><tr><td class="code"><pre><span class="line">$ hexo generate</span><br></pre></td></tr></table></figure>
-
-<p>More info: <a href="https://hexo.io/docs/generating.html" target="_blank" rel="noopener">Generating</a></p>
-<h3 id="Deploy-to-remote-sites"><a href="#Deploy-to-remote-sites" class="headerlink" title="Deploy to remote sites"></a>Deploy to remote sites</h3><figure class="highlight bash"><table><tr><td class="code"><pre><span class="line">$ hexo deploy</span><br></pre></td></tr></table></figure>
-
-<p>More info: <a href="https://hexo.io/docs/deployment.html" target="_blank" rel="noopener">Deployment</a></p>
-]]></content>
-      <categories>
-        <category>起始篇</category>
-      </categories>
-      <tags>
-        <tag>Hello World</tag>
-      </tags>
-  </entry>
-  <entry>
-    <title>Python进制转换</title>
-    <url>/%E8%BF%9B%E5%88%B6%E8%BD%AC%E6%8D%A2/</url>
-    <content><![CDATA[<h3 id="Python中实现的进制间的转换"><a href="#Python中实现的进制间的转换" class="headerlink" title="Python中实现的进制间的转换"></a>Python中实现的进制间的转换</h3><blockquote>
-<p>在python中可以使用Python的内置函数进行进制间的转换。<br>  bin()：其他进制转二进制<br>  oct()：其他进制转八进制<br>  int()：其他进制转十进制<br>  hex()：其他进制转十六进制  </p>
-</blockquote>
-<a id="more"></a>
-
-<h3 id="二进制、八进制、十六进制的形式"><a href="#二进制、八进制、十六进制的形式" class="headerlink" title="二进制、八进制、十六进制的形式"></a>二进制、八进制、十六进制的形式</h3><ul>
-<li>二进制：以“0b”开头，如：0b111为十进制的7</li>
-<li>八进制：以“0”开头，如：026为十进制的22</li>
-<li>十六进制：以“0x”开头，如：0x1f为十进制的31</li>
-</ul>
-<h3 id="二进制、八进制、十六进制对照表"><a href="#二进制、八进制、十六进制对照表" class="headerlink" title="二进制、八进制、十六进制对照表"></a>二进制、八进制、十六进制对照表</h3><p><img data-src="/userImages/dzb.png" alt="对照表"></p>
-<h3 id="二进制、八进制、十六进制转十进制"><a href="#二进制、八进制、十六进制转十进制" class="headerlink" title="二进制、八进制、十六进制转十进制"></a>二进制、八进制、十六进制转十进制</h3><p>使用int()函数，第一个参数是要转换的数字，类型为字符串，第二个参数是该数几进制的数，转化结果为一个十进制的数。  </p>
-<figure class="highlight python"><table><tr><td class="code"><pre><span class="line">二进制转十进制：</span><br><span class="line"><span class="meta">&gt;&gt;&gt; </span>int(<span class="string">'0b1111'</span>,<span class="number">2</span>)</span><br><span class="line"><span class="number">15</span></span><br><span class="line">八进制转十进制：</span><br><span class="line"><span class="meta">&gt;&gt;&gt; </span>int(<span class="string">'67'</span>,<span class="number">8</span>)</span><br><span class="line"><span class="number">55</span></span><br><span class="line">十六进制转十进制：</span><br><span class="line"><span class="meta">&gt;&gt;&gt; </span>int(<span class="string">'0x1f'</span>,<span class="number">16</span>)</span><br><span class="line"><span class="number">31</span></span><br></pre></td></tr></table></figure>
-
-<h3 id="八进制、十进制、十六进制转二进制"><a href="#八进制、十进制、十六进制转二进制" class="headerlink" title="八进制、十进制、十六进制转二进制"></a>八进制、十进制、十六进制转二进制</h3><p>使用bin()函数，需要先将八进制、十六进制转换为十进制，然后才能转换为二进制，<br>即八进制/十六进制 —&gt; 十进制 —&gt; 二进制</p>
-<figure class="highlight python"><table><tr><td class="code"><pre><span class="line">八进制转二进制：</span><br><span class="line"><span class="meta">&gt;&gt;&gt; </span>bin(int(<span class="string">'016'</span>,<span class="number">8</span>))</span><br><span class="line"><span class="string">'0b1110'</span></span><br><span class="line">十进制转二进制：</span><br><span class="line"><span class="meta">&gt;&gt;&gt; </span>bin(<span class="number">14</span>)</span><br><span class="line"><span class="string">'0b1110'</span></span><br><span class="line">十六进制转二进制：</span><br><span class="line"><span class="meta">&gt;&gt;&gt; </span>bin(int(<span class="string">'0xe'</span>,<span class="number">16</span>))</span><br><span class="line"><span class="string">'0b1110'</span></span><br></pre></td></tr></table></figure>
-
-<h3 id="二进制、十进制、十六进制转八进制"><a href="#二进制、十进制、十六进制转八进制" class="headerlink" title="二进制、十进制、十六进制转八进制"></a>二进制、十进制、十六进制转八进制</h3><p>使用oct()函数可以直接进行进制的转换</p>
-<figure class="highlight python"><table><tr><td class="code"><pre><span class="line">二进制转八进制：</span><br><span class="line"><span class="meta">&gt;&gt;&gt; </span>oct(<span class="number">0b1110</span>)</span><br><span class="line"><span class="string">'016'</span></span><br><span class="line">十进制转八进制：</span><br><span class="line"><span class="meta">&gt;&gt;&gt; </span>oct(<span class="number">14</span>)</span><br><span class="line"><span class="string">'016'</span></span><br><span class="line">十六进制转八进制：</span><br><span class="line"><span class="meta">&gt;&gt;&gt; </span>oct(<span class="number">0xe</span>)</span><br><span class="line"><span class="string">'016'</span></span><br></pre></td></tr></table></figure>
-
-<h3 id="二进制、八进制、十进制转十六进制"><a href="#二进制、八进制、十进制转十六进制" class="headerlink" title="二进制、八进制、十进制转十六进制"></a>二进制、八进制、十进制转十六进制</h3><p>使用hex()函数，需要先将二进制、八进制转换为十进制，然后才能转换为十六进制，<br>即二进制/八进制 —&gt; 十进制 —&gt; 十六进制</p>
-<figure class="highlight python"><table><tr><td class="code"><pre><span class="line">二进制转十六进制：</span><br><span class="line"><span class="meta">&gt;&gt;&gt; </span>hex(int(<span class="string">'0b1110'</span>,<span class="number">2</span>))</span><br><span class="line"><span class="string">'0xe'</span></span><br><span class="line">八进制转十六进制：</span><br><span class="line"><span class="meta">&gt;&gt;&gt; </span>hex(int(<span class="string">'016'</span>,<span class="number">8</span>))</span><br><span class="line"><span class="string">'0xe'</span></span><br><span class="line">十进制转十六进制：</span><br><span class="line"><span class="meta">&gt;&gt;&gt; </span>hex(<span class="number">14</span>)</span><br><span class="line"><span class="string">'0xe'</span></span><br></pre></td></tr></table></figure>
-
-
-]]></content>
-      <categories>
-        <category>Python杂记</category>
-      </categories>
-      <tags>
-        <tag>二进制</tag>
-        <tag>八进制</tag>
-        <tag>十六进制</tag>
       </tags>
   </entry>
   <entry>
@@ -3058,6 +3021,43 @@ doDecrypt(passwd, onError);
       <tags>
         <tag>tempfile</tag>
         <tag>临时文件</tag>
+      </tags>
+  </entry>
+  <entry>
+    <title>Python进制转换</title>
+    <url>/%E8%BF%9B%E5%88%B6%E8%BD%AC%E6%8D%A2/</url>
+    <content><![CDATA[<h3 id="Python中实现的进制间的转换"><a href="#Python中实现的进制间的转换" class="headerlink" title="Python中实现的进制间的转换"></a>Python中实现的进制间的转换</h3><blockquote>
+<p>在python中可以使用Python的内置函数进行进制间的转换。<br>  bin()：其他进制转二进制<br>  oct()：其他进制转八进制<br>  int()：其他进制转十进制<br>  hex()：其他进制转十六进制  </p>
+</blockquote>
+<a id="more"></a>
+
+<h3 id="二进制、八进制、十六进制的形式"><a href="#二进制、八进制、十六进制的形式" class="headerlink" title="二进制、八进制、十六进制的形式"></a>二进制、八进制、十六进制的形式</h3><ul>
+<li>二进制：以“0b”开头，如：0b111为十进制的7</li>
+<li>八进制：以“0”开头，如：026为十进制的22</li>
+<li>十六进制：以“0x”开头，如：0x1f为十进制的31</li>
+</ul>
+<h3 id="二进制、八进制、十六进制对照表"><a href="#二进制、八进制、十六进制对照表" class="headerlink" title="二进制、八进制、十六进制对照表"></a>二进制、八进制、十六进制对照表</h3><p><img data-src="/userImages/dzb.png" alt="对照表"></p>
+<h3 id="二进制、八进制、十六进制转十进制"><a href="#二进制、八进制、十六进制转十进制" class="headerlink" title="二进制、八进制、十六进制转十进制"></a>二进制、八进制、十六进制转十进制</h3><p>使用int()函数，第一个参数是要转换的数字，类型为字符串，第二个参数是该数几进制的数，转化结果为一个十进制的数。  </p>
+<figure class="highlight python"><table><tr><td class="code"><pre><span class="line">二进制转十进制：</span><br><span class="line"><span class="meta">&gt;&gt;&gt; </span>int(<span class="string">'0b1111'</span>,<span class="number">2</span>)</span><br><span class="line"><span class="number">15</span></span><br><span class="line">八进制转十进制：</span><br><span class="line"><span class="meta">&gt;&gt;&gt; </span>int(<span class="string">'67'</span>,<span class="number">8</span>)</span><br><span class="line"><span class="number">55</span></span><br><span class="line">十六进制转十进制：</span><br><span class="line"><span class="meta">&gt;&gt;&gt; </span>int(<span class="string">'0x1f'</span>,<span class="number">16</span>)</span><br><span class="line"><span class="number">31</span></span><br></pre></td></tr></table></figure>
+
+<h3 id="八进制、十进制、十六进制转二进制"><a href="#八进制、十进制、十六进制转二进制" class="headerlink" title="八进制、十进制、十六进制转二进制"></a>八进制、十进制、十六进制转二进制</h3><p>使用bin()函数，需要先将八进制、十六进制转换为十进制，然后才能转换为二进制，<br>即八进制/十六进制 —&gt; 十进制 —&gt; 二进制</p>
+<figure class="highlight python"><table><tr><td class="code"><pre><span class="line">八进制转二进制：</span><br><span class="line"><span class="meta">&gt;&gt;&gt; </span>bin(int(<span class="string">'016'</span>,<span class="number">8</span>))</span><br><span class="line"><span class="string">'0b1110'</span></span><br><span class="line">十进制转二进制：</span><br><span class="line"><span class="meta">&gt;&gt;&gt; </span>bin(<span class="number">14</span>)</span><br><span class="line"><span class="string">'0b1110'</span></span><br><span class="line">十六进制转二进制：</span><br><span class="line"><span class="meta">&gt;&gt;&gt; </span>bin(int(<span class="string">'0xe'</span>,<span class="number">16</span>))</span><br><span class="line"><span class="string">'0b1110'</span></span><br></pre></td></tr></table></figure>
+
+<h3 id="二进制、十进制、十六进制转八进制"><a href="#二进制、十进制、十六进制转八进制" class="headerlink" title="二进制、十进制、十六进制转八进制"></a>二进制、十进制、十六进制转八进制</h3><p>使用oct()函数可以直接进行进制的转换</p>
+<figure class="highlight python"><table><tr><td class="code"><pre><span class="line">二进制转八进制：</span><br><span class="line"><span class="meta">&gt;&gt;&gt; </span>oct(<span class="number">0b1110</span>)</span><br><span class="line"><span class="string">'016'</span></span><br><span class="line">十进制转八进制：</span><br><span class="line"><span class="meta">&gt;&gt;&gt; </span>oct(<span class="number">14</span>)</span><br><span class="line"><span class="string">'016'</span></span><br><span class="line">十六进制转八进制：</span><br><span class="line"><span class="meta">&gt;&gt;&gt; </span>oct(<span class="number">0xe</span>)</span><br><span class="line"><span class="string">'016'</span></span><br></pre></td></tr></table></figure>
+
+<h3 id="二进制、八进制、十进制转十六进制"><a href="#二进制、八进制、十进制转十六进制" class="headerlink" title="二进制、八进制、十进制转十六进制"></a>二进制、八进制、十进制转十六进制</h3><p>使用hex()函数，需要先将二进制、八进制转换为十进制，然后才能转换为十六进制，<br>即二进制/八进制 —&gt; 十进制 —&gt; 十六进制</p>
+<figure class="highlight python"><table><tr><td class="code"><pre><span class="line">二进制转十六进制：</span><br><span class="line"><span class="meta">&gt;&gt;&gt; </span>hex(int(<span class="string">'0b1110'</span>,<span class="number">2</span>))</span><br><span class="line"><span class="string">'0xe'</span></span><br><span class="line">八进制转十六进制：</span><br><span class="line"><span class="meta">&gt;&gt;&gt; </span>hex(int(<span class="string">'016'</span>,<span class="number">8</span>))</span><br><span class="line"><span class="string">'0xe'</span></span><br><span class="line">十进制转十六进制：</span><br><span class="line"><span class="meta">&gt;&gt;&gt; </span>hex(<span class="number">14</span>)</span><br><span class="line"><span class="string">'0xe'</span></span><br></pre></td></tr></table></figure>
+
+
+]]></content>
+      <categories>
+        <category>Python杂记</category>
+      </categories>
+      <tags>
+        <tag>二进制</tag>
+        <tag>八进制</tag>
+        <tag>十六进制</tag>
       </tags>
   </entry>
 </search>
