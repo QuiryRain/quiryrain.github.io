@@ -1,23 +1,6 @@
 <?xml version="1.0" encoding="utf-8"?>
 <search>
   <entry>
-    <title>使用Python实现的杨辉三角</title>
-    <url>/171222/</url>
-    <content><![CDATA[<p>某日，闲来无事做，就尝试着用Python实现了下杨辉三角，以下使用Python2 实现的杨辉三角 </p>
-<span id="more"></span>
-
-<figure class="highlight python"><table><tr><td class="code"><pre><span class="line"><span class="keyword">def</span> <span class="title function_">triangel</span>():</span><br><span class="line">    <span class="built_in">print</span> <span class="string">&#x27; &#x27;</span>*(<span class="number">20</span>*<span class="number">3</span>)+<span class="built_in">str</span>(<span class="number">1</span>)             <span class="comment">#定义起始两行</span></span><br><span class="line">    <span class="built_in">print</span> <span class="string">&#x27; &#x27;</span>*(<span class="number">19</span>*<span class="number">3</span>)+<span class="built_in">str</span>(<span class="number">1</span>)+<span class="string">&#x27; &#x27;</span>*<span class="number">5</span>+<span class="built_in">str</span>(<span class="number">1</span>)</span><br><span class="line">    <span class="keyword">for</span> i <span class="keyword">in</span> <span class="built_in">range</span>(<span class="number">3</span>,<span class="number">21</span>):</span><br><span class="line">        <span class="keyword">if</span> i ==<span class="number">3</span>:</span><br><span class="line">            L = [<span class="number">1</span>,<span class="number">1</span>]       <span class="comment">#初始化第二行        </span></span><br><span class="line">        L1 = []</span><br><span class="line">        <span class="keyword">for</span> j <span class="keyword">in</span> <span class="built_in">range</span>(<span class="number">2</span>,i):</span><br><span class="line">            z = L[i-j-<span class="number">1</span>]+L[i-j] <span class="comment"># 通过上一行构建下一层数据</span></span><br><span class="line">            L1.append(z)        <span class="comment"># 将数据添加到一个空列表中</span></span><br><span class="line">        L = [<span class="number">1</span>]       <span class="comment"># 再次对L初始化</span></span><br><span class="line">        L.extend(L1)    <span class="comment"># 将两个列表合并</span></span><br><span class="line">        L.append(<span class="number">1</span>)     <span class="comment"># 在L列表中添加最后一个数据“1”</span></span><br><span class="line"></span><br><span class="line">        <span class="comment"># 以下内容为杨辉三角的打印</span></span><br><span class="line">        t = <span class="string">&#x27; &#x27;</span>*((<span class="number">21</span>-i)*<span class="number">3</span>)+<span class="built_in">str</span>(<span class="number">1</span>)   <span class="comment"># 每次循环进行初始化每列的第一个数据1</span></span><br><span class="line">        <span class="keyword">for</span> h <span class="keyword">in</span> <span class="built_in">range</span>(<span class="number">1</span>,<span class="built_in">len</span>(L)):   <span class="comment"># 以下为构建每列的除一个数据外的其他数据，</span></span><br><span class="line">            <span class="keyword">if</span> L[h]&lt;<span class="number">10</span>:             <span class="comment"># 如果数据小于10，就是其前面5个空格，如果</span></span><br><span class="line">                t = t + <span class="string">&#x27; &#x27;</span>*<span class="number">5</span>+<span class="built_in">str</span>(L[h]) <span class="comment">#数据小于100，就减少一个空格，依次类推，</span></span><br><span class="line">            <span class="keyword">elif</span> L[h] &lt;<span class="number">100</span>:         <span class="comment"># 直至剩余一个空格，用于分辨相邻的数据</span></span><br><span class="line">                t = t+<span class="string">&#x27; &#x27;</span>*<span class="number">4</span>+<span class="built_in">str</span>(L[h])</span><br><span class="line">            <span class="keyword">elif</span> L[h] &lt; <span class="number">1000</span>:</span><br><span class="line">                t = t + <span class="string">&#x27; &#x27;</span>*<span class="number">3</span>+<span class="built_in">str</span>(L[h])</span><br><span class="line">            <span class="keyword">elif</span> L[h] &lt; <span class="number">10000</span>:</span><br><span class="line">                t = t + <span class="string">&#x27; &#x27;</span>*<span class="number">2</span>+<span class="built_in">str</span>(L[h])</span><br><span class="line">            <span class="keyword">elif</span> L[h] &lt; <span class="number">100000</span>:</span><br><span class="line">                t = t + <span class="string">&#x27; &#x27;</span>*<span class="number">1</span>+<span class="built_in">str</span>(L[h])</span><br><span class="line">        <span class="built_in">print</span> t</span><br><span class="line"><span class="keyword">if</span> __name__ == <span class="string">&quot;__main__&quot;</span>:</span><br><span class="line">    triangel()</span><br><span class="line"></span><br></pre></td></tr></table></figure>
-
-<p><img src="/userImages/yanghuisanjiao.png" alt="杨辉三角"></p>
-]]></content>
-      <categories>
-        <category>Python杂记</category>
-      </categories>
-      <tags>
-        <tag>杨辉三角</tag>
-      </tags>
-  </entry>
-  <entry>
     <title>MongoEngine所使用的操作符</title>
     <url>/171220/</url>
     <content><![CDATA[<h3 id="什么是MongoEngine？"><a href="#什么是MongoEngine？" class="headerlink" title="什么是MongoEngine？"></a>什么是MongoEngine？</h3><blockquote>
@@ -71,6 +54,59 @@
       <tags>
         <tag>Mongo</tag>
         <tag>操作符</tag>
+      </tags>
+  </entry>
+  <entry>
+    <title>使用Python实现的杨辉三角</title>
+    <url>/171222/</url>
+    <content><![CDATA[<p>某日，闲来无事做，就尝试着用Python实现了下杨辉三角，以下使用Python2 实现的杨辉三角 </p>
+<span id="more"></span>
+
+<figure class="highlight python"><table><tr><td class="code"><pre><span class="line"><span class="keyword">def</span> <span class="title function_">triangel</span>():</span><br><span class="line">    <span class="built_in">print</span> <span class="string">&#x27; &#x27;</span>*(<span class="number">20</span>*<span class="number">3</span>)+<span class="built_in">str</span>(<span class="number">1</span>)             <span class="comment">#定义起始两行</span></span><br><span class="line">    <span class="built_in">print</span> <span class="string">&#x27; &#x27;</span>*(<span class="number">19</span>*<span class="number">3</span>)+<span class="built_in">str</span>(<span class="number">1</span>)+<span class="string">&#x27; &#x27;</span>*<span class="number">5</span>+<span class="built_in">str</span>(<span class="number">1</span>)</span><br><span class="line">    <span class="keyword">for</span> i <span class="keyword">in</span> <span class="built_in">range</span>(<span class="number">3</span>,<span class="number">21</span>):</span><br><span class="line">        <span class="keyword">if</span> i ==<span class="number">3</span>:</span><br><span class="line">            L = [<span class="number">1</span>,<span class="number">1</span>]       <span class="comment">#初始化第二行        </span></span><br><span class="line">        L1 = []</span><br><span class="line">        <span class="keyword">for</span> j <span class="keyword">in</span> <span class="built_in">range</span>(<span class="number">2</span>,i):</span><br><span class="line">            z = L[i-j-<span class="number">1</span>]+L[i-j] <span class="comment"># 通过上一行构建下一层数据</span></span><br><span class="line">            L1.append(z)        <span class="comment"># 将数据添加到一个空列表中</span></span><br><span class="line">        L = [<span class="number">1</span>]       <span class="comment"># 再次对L初始化</span></span><br><span class="line">        L.extend(L1)    <span class="comment"># 将两个列表合并</span></span><br><span class="line">        L.append(<span class="number">1</span>)     <span class="comment"># 在L列表中添加最后一个数据“1”</span></span><br><span class="line"></span><br><span class="line">        <span class="comment"># 以下内容为杨辉三角的打印</span></span><br><span class="line">        t = <span class="string">&#x27; &#x27;</span>*((<span class="number">21</span>-i)*<span class="number">3</span>)+<span class="built_in">str</span>(<span class="number">1</span>)   <span class="comment"># 每次循环进行初始化每列的第一个数据1</span></span><br><span class="line">        <span class="keyword">for</span> h <span class="keyword">in</span> <span class="built_in">range</span>(<span class="number">1</span>,<span class="built_in">len</span>(L)):   <span class="comment"># 以下为构建每列的除一个数据外的其他数据，</span></span><br><span class="line">            <span class="keyword">if</span> L[h]&lt;<span class="number">10</span>:             <span class="comment"># 如果数据小于10，就是其前面5个空格，如果</span></span><br><span class="line">                t = t + <span class="string">&#x27; &#x27;</span>*<span class="number">5</span>+<span class="built_in">str</span>(L[h]) <span class="comment">#数据小于100，就减少一个空格，依次类推，</span></span><br><span class="line">            <span class="keyword">elif</span> L[h] &lt;<span class="number">100</span>:         <span class="comment"># 直至剩余一个空格，用于分辨相邻的数据</span></span><br><span class="line">                t = t+<span class="string">&#x27; &#x27;</span>*<span class="number">4</span>+<span class="built_in">str</span>(L[h])</span><br><span class="line">            <span class="keyword">elif</span> L[h] &lt; <span class="number">1000</span>:</span><br><span class="line">                t = t + <span class="string">&#x27; &#x27;</span>*<span class="number">3</span>+<span class="built_in">str</span>(L[h])</span><br><span class="line">            <span class="keyword">elif</span> L[h] &lt; <span class="number">10000</span>:</span><br><span class="line">                t = t + <span class="string">&#x27; &#x27;</span>*<span class="number">2</span>+<span class="built_in">str</span>(L[h])</span><br><span class="line">            <span class="keyword">elif</span> L[h] &lt; <span class="number">100000</span>:</span><br><span class="line">                t = t + <span class="string">&#x27; &#x27;</span>*<span class="number">1</span>+<span class="built_in">str</span>(L[h])</span><br><span class="line">        <span class="built_in">print</span> t</span><br><span class="line"><span class="keyword">if</span> __name__ == <span class="string">&quot;__main__&quot;</span>:</span><br><span class="line">    triangel()</span><br><span class="line"></span><br></pre></td></tr></table></figure>
+
+<p><img src="/userImages/yanghuisanjiao.png" alt="杨辉三角"></p>
+]]></content>
+      <categories>
+        <category>Python杂记</category>
+      </categories>
+      <tags>
+        <tag>杨辉三角</tag>
+      </tags>
+  </entry>
+  <entry>
+    <title>玩命追一姑娘</title>
+    <url>/180623/</url>
+    <content><![CDATA[<h3 id="玩命的追一姑娘"><a href="#玩命的追一姑娘" class="headerlink" title="玩命的追一姑娘"></a>玩命的追一姑娘</h3><p>和朋友们聚会，大家决定玩一个游戏。<br>找一个主题，然后讲一段自己的真实经历，看看谁的经历最有起承转合，最催泪，最奇葩，或者最让人无语凝噎，想抄家伙。<br>最后我们选定了一个主题——你有没有玩命爱一个姑娘。<br>这个问题抛出来的时候，大家都沉默了，纷纷在记忆中寻找那一段为了姑娘、为了爱情玩命的激情岁月。<br>在座的男士们，有的已经结婚，有的有了女朋友，有的还是一如既往的单身狗。<br>在大家都沉默的片刻，四张点了根烟，说：“我的故事都到了嗓子眼了，我先说吧。”<br>我笑而不语，等着四张的下文。  </p>
+<span id="more"></span>
+
+<p>四张并没有四十岁。<br>我们二十来岁认识的时候，大家就管他叫四张了。<br>当时，我们都在山东上大学。<br>四张有个青梅竹马的女朋友叫何玉。<br>据四张说，自己和何玉从小穿开裆裤长大，一块啃过锅里的大腿骨，一块光着屁股洗过澡，更神奇的是，两个人生日只差两天，性格互补，血型一致，简直就是上天早就设定好的一对。<br>四张说，在我还不知道男孩和女孩在一起可以生小孩的时候，我就想跟何玉生小孩了。<br>两个人从小在一起过过家家，玩过给对方检查身体的游戏，不论见到谁的父母都可以直接叫爸妈。<br>四张跟何玉从小学到高中一直在一起，两个人一起经历了第二性征发育，长出喉结，胸脯耸起来，梦遗，初潮，青春期的各种烦躁，在别人都早恋的时候，两个人还是单纯得像是初生婴儿。<br>高中时代，何玉出过一次意外，失血过多。<br>四张不由分说地给何玉输了血。<br>四张说，看着我的血通过血管流进何玉的身体里，我就感觉我和何玉血脉相通了。就好像，就好像我把我的基因输送到何玉身体里一样。跟做爱的感觉一模一样，有战栗，有晕眩，还有高潮。真的，不骗人。  </p>
+<p>最终，两个人去了山东两所相邻的大学，隔着一百八十公里。<br>上大学是两个人这么多年来第一次分开，四张说，我就好像经历了一次连体婴儿分离手术，而何玉就是我的幻肢，我总觉得一转头就能看见她，可是真转过头，又发现她不在了。  </p>
+<p>真正的变故发生在一年后的情人节前夜。<br>四张接到了何玉的一通电话，电话里，何玉不无娇羞地说，四张，四张，有个男孩子跟我表白哎，你说我该不该答应他啊？<br>四张傻了，在四张听起来，这仿佛就是在问，老公老公，有个男孩子要跟我睡觉哎，你说我该不该答应他？<br>四张疯了，跳起来，念叨着，哎呀，我擦，我擦，我擦。<br>四张外套都没穿，直接冲出宿舍，抄起自己的自行车，蹬上车就往外狂奔。<br>夜色中的马路上，一个只穿着毛衣的缺货发狂地蹬着自行车，正在赶往一百八十公里之外的城市，问题是他要去干嘛呢？<br>四张说，当时我自己也不知道我也去干嘛，也许是去灭口。  </p>
+<p>四张发狂地蹬了一整夜自行车，从毛衣到内裤都湿透了，整个人冒着热气，像是一个瓦特时代的蒸汽机。<br>到了情人节当天中午，四张终于赶到了何玉的宿舍，跳下自行车的时候，四张差点瘫在地上。<br>多年以后，四张回忆起来的时候，恨恨地说了一句英文：“I cannot feel my legs”  </p>
+<p>何玉从女生宿舍楼下来的时候，四张正用一种诡异的外八字站着，穿着毛衣，瑟缩着，像是刚刚从戒备最森严的监狱里越狱而出。<br>何玉惊得差点背过气去，你怎么来了？你外套呢？<br>何玉不等四张说话，冲回去，不一会儿，拿着一件女式的粉色及膝羽绒服跑出来，不由分说地套在了四张身上。<br>四张继续用外八字的姿势站着，穿着粉色的女式及膝羽绒服，好不容易憋出一句话，你答应了？<br>何玉一愣，什么？<br>四张几乎都带了哭腔，你答应和追你的那个男人好了？<br>何玉哭笑不得，我……我还没有。<br>四张疯了，那你是准备答应了？<br>何玉沉默了一会儿，娇羞上脸，我不知道。哎，不过我问你，男生追求女生的时候，是不是脑子里都想着那个啊？<br>四张一下子这句话打得痛彻心扉。<br>时隔多年，四张回忆起那个时刻，还是痛得弯下了腰，恨不得立刻倒在地上舔马路。  </p>
+<p>当天晚上，何玉带着四张到学校餐厅吃了饺子，把四张安排到男生宿舍睡一晚。<br>四张送何玉回女生宿舍的时候，那个追求何玉的男生抱着一束花等在了宿舍楼底下。<br>男生看到何玉身旁穿着粉色女式及膝羽绒服的四张，狐疑地往后退了两步。<br>何玉不好意思地对四张说，我过去跟他说两句。<br>四张说不出话，就看着何玉跑向那个男生，两个人叽里咕噜地不知道在说什么，四张恨自己为什么不好好学学唇语。<br>就在四张忍不住要冲过去的时候，何玉接过了男生递给她的那束花，对着男生娇羞地笑笑。<br>四张听见自己心碎的声音，不是咔嚓，也不是吧唧，也不是轰隆，而是何玉的笑声，呵呵。<br>四张男性的尊严终于复苏，他转身就跑，只留下何玉在他身后喊，你去哪啊？<br>夜色中的马路上，一个穿着女式及膝羽绒服的倒霉缺货，拼命地瞪着自行车奔驰在马路上。<br>四张形容说，那时候的心痛就像是，我的内脏全长在了外面，每走一步，都被粗糙的柏油马路摩擦。  </p>
+<p>四张无法想象，自己青梅竹马了二十年的女孩，在情人节的夜晚，当着自己的面，答应了另一个不知道哪冒出来的男人的求爱。<br>四张觉得这个世界不会好了。<br>我们帮四张分析，也许是因为，熟悉的地方没有风景，熟悉的男人没有小鸡鸡吧。<br>四张哭着骂了一句，操你们大爷。  </p>
+<p>大学里剩下的时光，四张没有谈恋爱，转而对各种社团活动产生了兴趣。先后参加过什么大学生电路装置比赛，大学生贫困山区十日行，大学生街头公益筹款之类。  </p>
+<p>毕业之后，何玉拿到一份不错的offer，去了北京，成了北漂的一员。<br>四张就在山东一家运输公司跑货运，开着那种大卡车，一趟车要跑三四天，车上吃，车上睡，夏天就在驾驶室里挂个蚊帐，冬天就浑身贴着暖宝宝，车里放十几把暖瓶。碰上堵车的时候，也能堵个两三天，四张就和同样被困的司机斗地主，打保皇。<br>一次， 四张开着卡车跑长途送一车情趣玩具，路上，突然接到了何玉的电话。<br>何玉在电话里哭着说，四张，四张，我钱包丢了，身份证也没了，我租的房子下水道也堵了，现在正往外冒水，我找不到房东，我不知道该怎么办？<br>四张一听，嘴里念叨着，哎呀，我擦，我擦，我擦。<br>当即猛地掉转车头，临时改了路线，憋着一泡从山东就带着的尿，拉着一车情趣玩具就往北京狂奔，完全忘记了等着发货那批淘宝店店主。  </p>
+<p>四张的大货车开不进小区，四张就把车停在小区外面的马路上，自己跳下车，憋着那泡尿，冲到了何玉租住的小区砸门。<br>何玉打开门，看着风尘仆仆的四张，呆住了。<br>四张从牙缝里提出一句话，先让我撒个尿。  </p>
+<p>何玉听着四张水流湍急地打击着马桶，惊魂未定。<br>紧接着，又听见洗手间里，四张吭哧吭哧的声音。<br>半个小时后，四张走出来，洗手间里焕然一新，下水道也疏通了。<br>四张甩下一叠钱，还有一张银行卡，对何玉说，你先用着。<br>何玉刚要感谢，四张的手机急促的响起，货运公司老板在电话里狂吼，你他妈去哪了？<br>四张一下子急了，嘴里念叨着，哎呀，我擦，我擦，我擦。急忙冲出去，何玉在身后喊，你倒是吃了饭再走啊。<br>四张跑到小区外面，发现两个交警，面对着大货车，不知所措。<br>大货车的吨位，交警的拖车是拖不走的。<br>四张硬着头皮，跑过去，和交警套近乎，说，我老婆生孩子，您行行好。<br>四张认栽交了罚款，又开着货车，拉着一车情趣玩具，在高速公路上狂奔。  </p>
+<p>四张任劳任怨，勤勤恳恳，攒了钱，自己买了一辆卡车，继续跑着长途，送过各种各样稀奇古怪的货物。<br>他最爱看的电影是《玩命快递》，四张说，这演的就他妈是我啊。我有一次大半夜的，就在一条黑压压的马路上，遇到拦路抢劫的。他们弄了一颗树横在马路中间，我一看不好，猛踩油门，飞驰而过。开除十公里之后，才发现两个轮胎都漏气了。  </p>
+<p>四张再一次跑北京的时候，在北京留了一天。<br>何玉请四张吃饭。<br>何玉看起来有些奇怪，说话吞吞吐吐。<br>四张不耐烦，有事你就直说，跟我还用得着客气？<br>何玉说，我男朋友做生意，需要一笔钱周转，否则他过不了这个坎。<br>四张一愣，你什么时候交的男朋友？我怎么不知道？<br>何玉有些惭愧，我不想跟你说，我怕说了你难受。<br>四张沉默。<br>何玉说，他借了高利贷。<br>四张点了根烟，问，缺多少钱。<br>何玉鼓足勇气，说，十万。<br>四张抽了两口烟，给我五天，五天之后，我打你银行卡上。<br>四张说着就起身走了，留下何玉愣在原地。  </p>
+<p>回到山东，四张把卡车卖了，加上自己的积蓄，凑了十万块给何玉。<br>我们都骂他，你脑残了？你不想想，万一何玉那个什么男朋友是个骗子呢？<br>四张无所谓的笑笑，我感觉，那男的百分百是骗子，好男人就是他妈再难，也不会向自己的女人开口要钱。<br>我们都惊呆了，你丫知道还借给她？<br>四张说，她要的东西，我没法拒绝。再说，让她上上课也好，她哪都好，就是太单纯。<br>我们再一次惊呆，她单纯？我看啊，是你傻逼。<br>四张切了一声，大智若愚，聪明还是傻逼，得分事儿。  </p>
+<p>卖了卡车之后，四张又回到了原来的运输公司，继续打工。<br>一样勤勤恳恳，任劳任怨。<br>两个月后，何玉打电话给四张，哭着说，她男朋友不见了，电话也不接，他是个骗子。我对不起你。<br>四张说，不就十万块钱吗？有什么大不了的。花十万块，让你长长记性，值了。<br>何玉在电话里泣不成声。  </p>
+<p>四张最爱跑的一条线，就是从山东到北京，他说，总觉得何玉在哪，哪立马就不一样了。就算何玉在撒哈拉，撒哈拉也能凭空生出喷泉来。就算何玉在索马里，索马里就立马变成天上人间。<br>何玉却消失了一段时间，再也没有联系四张，不知道是不是因为觉得自己就是个扫把星，总是拖累四张，因此故意远离四张的生活。  </p>
+<p>又到了冬天。<br>四张依旧跑着长途，这次他拉着一车泡面跑北京，天寒地冻，高速公路上的积雪刚刚撒过盐，几乎都融化了，但是风很大。四张顺风撒尿的时候，尿柱射到了几百米外的广告牌上。<br>四张过了收费站口，猛地踩了刹车，他看见一个熟悉的身影，站在一望无际的高速公路隔离带旁边，冻得瑟瑟发抖，是何玉。<br>四张头发都炸起来了，他的车堵在高速公路入口，自己跳下去，几乎是飞到何玉面前，一把抱住何玉。<br>何玉整个人冻得就跟个冰美人一样，四张抱着何玉的时候打了个冷战，四张又生气又心疼，你他妈在这干嘛？<br>何玉泣不成声，我在这等了你三天了。晚上就在收费站里睡。我算错了时间，可我又不敢走，怕错过你。<br>四张疯了，你不会打个电话吗？<br>何玉说，我总是给你打电话，打电话给你都没好事，这一次我想见你。<br>四张紧紧地抱住何玉，直到高速公路路口堵成一排的车集体狂摁喇叭。  </p>
+<p>四张开着大货车，行驶在冰雪皑皑的高速公路上。<br>何玉坐在副驾驶，身上裹着四张的军大衣，正在吃着一碗热气腾腾的泡面。<br>何玉吃完泡面，掏出两万块钱给四张。<br>四张生气了，你这是干什么？<br>何玉说，这是我这段时间攒的，还欠你八万，以后我就跟着你跑长途，给你打工，给你洗衣服，给你做饭。<br>四张傻了，你疯了，跑长途这是女人干的活吗？<br>何玉恨铁不成钢，从小到大，你怎么总是抓不到我的重点？我的重点在后半句，给你洗衣服，给你做饭！<br>四张愣愣地看着何玉，傻了。<br>何玉双颊都冻伤了，泛着红光，认真地看着四张。<br>大卡车远远地往前飞奔。  </p>
+<p>今年，四张又买了一辆卡车，取了个名字，叫“何玉号”。<br>被同行取笑，你以为你开的是驱逐舰吗？<br>四张说，我开的就是驱逐舰，只属于我和我老婆的驱逐舰，一切坏人坏事统统退避。  </p>
+<p>四张讲完了自己的故事，大家忍不住给她鼓掌。<br>四张憨笑，其实这也不算玩命爱一个姑娘，离着玩命还早呢。我只是觉得，既然爱了，就用点力，用点力总不会是坏事。<br>这个时候，一个女孩大着肚子走过来，走到四张身边。<br>四张吓坏了，你怎么来了？<br>女孩很娇羞，开玩笑似的，我想你了啊。<br>我们都愣住。<br>四张有些尴尬，跟大家介绍，这是我老婆，何玉。<br>我们都站起来，一起喊，嫂子好。<br>何玉被眼前的阵势吓了一跳，你们好，你们好，有空来家里喝酒。<br>四张笑得很欠揍，明目张胆秀恩爱。  </p>
+<p>生命中，有些错过，最后成为了错过。<br>而有些错过，因为两个人的勇敢，又变成了相遇。<br>我们都期待美满的故事，但其实恰恰是靠着我们的勇气，让故事变得美满，让爱人就离着自己一个枕头的距离，有时候甚至是负20厘米的距离。<br>男人应该玩命爱一个姑娘。<br>好姑娘也值得被男人玩命去爱。<br>爱情，本来就是勇敢者的游戏。<br>如果你不够勇敢，你很快就会出局。<br>如果你够勇敢，此刻转个身，就能抱住你所爱的人吧。  </p>
+]]></content>
+      <categories>
+        <category>短文</category>
+      </categories>
+      <tags>
+        <tag>青春</tag>
+        <tag>付出</tag>
       </tags>
   </entry>
   <entry>
@@ -141,42 +177,6 @@
       </categories>
       <tags>
         <tag>贪心算法</tag>
-      </tags>
-  </entry>
-  <entry>
-    <title>玩命追一姑娘</title>
-    <url>/180623/</url>
-    <content><![CDATA[<h3 id="玩命的追一姑娘"><a href="#玩命的追一姑娘" class="headerlink" title="玩命的追一姑娘"></a>玩命的追一姑娘</h3><p>和朋友们聚会，大家决定玩一个游戏。<br>找一个主题，然后讲一段自己的真实经历，看看谁的经历最有起承转合，最催泪，最奇葩，或者最让人无语凝噎，想抄家伙。<br>最后我们选定了一个主题——你有没有玩命爱一个姑娘。<br>这个问题抛出来的时候，大家都沉默了，纷纷在记忆中寻找那一段为了姑娘、为了爱情玩命的激情岁月。<br>在座的男士们，有的已经结婚，有的有了女朋友，有的还是一如既往的单身狗。<br>在大家都沉默的片刻，四张点了根烟，说：“我的故事都到了嗓子眼了，我先说吧。”<br>我笑而不语，等着四张的下文。  </p>
-<span id="more"></span>
-
-<p>四张并没有四十岁。<br>我们二十来岁认识的时候，大家就管他叫四张了。<br>当时，我们都在山东上大学。<br>四张有个青梅竹马的女朋友叫何玉。<br>据四张说，自己和何玉从小穿开裆裤长大，一块啃过锅里的大腿骨，一块光着屁股洗过澡，更神奇的是，两个人生日只差两天，性格互补，血型一致，简直就是上天早就设定好的一对。<br>四张说，在我还不知道男孩和女孩在一起可以生小孩的时候，我就想跟何玉生小孩了。<br>两个人从小在一起过过家家，玩过给对方检查身体的游戏，不论见到谁的父母都可以直接叫爸妈。<br>四张跟何玉从小学到高中一直在一起，两个人一起经历了第二性征发育，长出喉结，胸脯耸起来，梦遗，初潮，青春期的各种烦躁，在别人都早恋的时候，两个人还是单纯得像是初生婴儿。<br>高中时代，何玉出过一次意外，失血过多。<br>四张不由分说地给何玉输了血。<br>四张说，看着我的血通过血管流进何玉的身体里，我就感觉我和何玉血脉相通了。就好像，就好像我把我的基因输送到何玉身体里一样。跟做爱的感觉一模一样，有战栗，有晕眩，还有高潮。真的，不骗人。  </p>
-<p>最终，两个人去了山东两所相邻的大学，隔着一百八十公里。<br>上大学是两个人这么多年来第一次分开，四张说，我就好像经历了一次连体婴儿分离手术，而何玉就是我的幻肢，我总觉得一转头就能看见她，可是真转过头，又发现她不在了。  </p>
-<p>真正的变故发生在一年后的情人节前夜。<br>四张接到了何玉的一通电话，电话里，何玉不无娇羞地说，四张，四张，有个男孩子跟我表白哎，你说我该不该答应他啊？<br>四张傻了，在四张听起来，这仿佛就是在问，老公老公，有个男孩子要跟我睡觉哎，你说我该不该答应他？<br>四张疯了，跳起来，念叨着，哎呀，我擦，我擦，我擦。<br>四张外套都没穿，直接冲出宿舍，抄起自己的自行车，蹬上车就往外狂奔。<br>夜色中的马路上，一个只穿着毛衣的缺货发狂地蹬着自行车，正在赶往一百八十公里之外的城市，问题是他要去干嘛呢？<br>四张说，当时我自己也不知道我也去干嘛，也许是去灭口。  </p>
-<p>四张发狂地蹬了一整夜自行车，从毛衣到内裤都湿透了，整个人冒着热气，像是一个瓦特时代的蒸汽机。<br>到了情人节当天中午，四张终于赶到了何玉的宿舍，跳下自行车的时候，四张差点瘫在地上。<br>多年以后，四张回忆起来的时候，恨恨地说了一句英文：“I cannot feel my legs”  </p>
-<p>何玉从女生宿舍楼下来的时候，四张正用一种诡异的外八字站着，穿着毛衣，瑟缩着，像是刚刚从戒备最森严的监狱里越狱而出。<br>何玉惊得差点背过气去，你怎么来了？你外套呢？<br>何玉不等四张说话，冲回去，不一会儿，拿着一件女式的粉色及膝羽绒服跑出来，不由分说地套在了四张身上。<br>四张继续用外八字的姿势站着，穿着粉色的女式及膝羽绒服，好不容易憋出一句话，你答应了？<br>何玉一愣，什么？<br>四张几乎都带了哭腔，你答应和追你的那个男人好了？<br>何玉哭笑不得，我……我还没有。<br>四张疯了，那你是准备答应了？<br>何玉沉默了一会儿，娇羞上脸，我不知道。哎，不过我问你，男生追求女生的时候，是不是脑子里都想着那个啊？<br>四张一下子这句话打得痛彻心扉。<br>时隔多年，四张回忆起那个时刻，还是痛得弯下了腰，恨不得立刻倒在地上舔马路。  </p>
-<p>当天晚上，何玉带着四张到学校餐厅吃了饺子，把四张安排到男生宿舍睡一晚。<br>四张送何玉回女生宿舍的时候，那个追求何玉的男生抱着一束花等在了宿舍楼底下。<br>男生看到何玉身旁穿着粉色女式及膝羽绒服的四张，狐疑地往后退了两步。<br>何玉不好意思地对四张说，我过去跟他说两句。<br>四张说不出话，就看着何玉跑向那个男生，两个人叽里咕噜地不知道在说什么，四张恨自己为什么不好好学学唇语。<br>就在四张忍不住要冲过去的时候，何玉接过了男生递给她的那束花，对着男生娇羞地笑笑。<br>四张听见自己心碎的声音，不是咔嚓，也不是吧唧，也不是轰隆，而是何玉的笑声，呵呵。<br>四张男性的尊严终于复苏，他转身就跑，只留下何玉在他身后喊，你去哪啊？<br>夜色中的马路上，一个穿着女式及膝羽绒服的倒霉缺货，拼命地瞪着自行车奔驰在马路上。<br>四张形容说，那时候的心痛就像是，我的内脏全长在了外面，每走一步，都被粗糙的柏油马路摩擦。  </p>
-<p>四张无法想象，自己青梅竹马了二十年的女孩，在情人节的夜晚，当着自己的面，答应了另一个不知道哪冒出来的男人的求爱。<br>四张觉得这个世界不会好了。<br>我们帮四张分析，也许是因为，熟悉的地方没有风景，熟悉的男人没有小鸡鸡吧。<br>四张哭着骂了一句，操你们大爷。  </p>
-<p>大学里剩下的时光，四张没有谈恋爱，转而对各种社团活动产生了兴趣。先后参加过什么大学生电路装置比赛，大学生贫困山区十日行，大学生街头公益筹款之类。  </p>
-<p>毕业之后，何玉拿到一份不错的offer，去了北京，成了北漂的一员。<br>四张就在山东一家运输公司跑货运，开着那种大卡车，一趟车要跑三四天，车上吃，车上睡，夏天就在驾驶室里挂个蚊帐，冬天就浑身贴着暖宝宝，车里放十几把暖瓶。碰上堵车的时候，也能堵个两三天，四张就和同样被困的司机斗地主，打保皇。<br>一次， 四张开着卡车跑长途送一车情趣玩具，路上，突然接到了何玉的电话。<br>何玉在电话里哭着说，四张，四张，我钱包丢了，身份证也没了，我租的房子下水道也堵了，现在正往外冒水，我找不到房东，我不知道该怎么办？<br>四张一听，嘴里念叨着，哎呀，我擦，我擦，我擦。<br>当即猛地掉转车头，临时改了路线，憋着一泡从山东就带着的尿，拉着一车情趣玩具就往北京狂奔，完全忘记了等着发货那批淘宝店店主。  </p>
-<p>四张的大货车开不进小区，四张就把车停在小区外面的马路上，自己跳下车，憋着那泡尿，冲到了何玉租住的小区砸门。<br>何玉打开门，看着风尘仆仆的四张，呆住了。<br>四张从牙缝里提出一句话，先让我撒个尿。  </p>
-<p>何玉听着四张水流湍急地打击着马桶，惊魂未定。<br>紧接着，又听见洗手间里，四张吭哧吭哧的声音。<br>半个小时后，四张走出来，洗手间里焕然一新，下水道也疏通了。<br>四张甩下一叠钱，还有一张银行卡，对何玉说，你先用着。<br>何玉刚要感谢，四张的手机急促的响起，货运公司老板在电话里狂吼，你他妈去哪了？<br>四张一下子急了，嘴里念叨着，哎呀，我擦，我擦，我擦。急忙冲出去，何玉在身后喊，你倒是吃了饭再走啊。<br>四张跑到小区外面，发现两个交警，面对着大货车，不知所措。<br>大货车的吨位，交警的拖车是拖不走的。<br>四张硬着头皮，跑过去，和交警套近乎，说，我老婆生孩子，您行行好。<br>四张认栽交了罚款，又开着货车，拉着一车情趣玩具，在高速公路上狂奔。  </p>
-<p>四张任劳任怨，勤勤恳恳，攒了钱，自己买了一辆卡车，继续跑着长途，送过各种各样稀奇古怪的货物。<br>他最爱看的电影是《玩命快递》，四张说，这演的就他妈是我啊。我有一次大半夜的，就在一条黑压压的马路上，遇到拦路抢劫的。他们弄了一颗树横在马路中间，我一看不好，猛踩油门，飞驰而过。开除十公里之后，才发现两个轮胎都漏气了。  </p>
-<p>四张再一次跑北京的时候，在北京留了一天。<br>何玉请四张吃饭。<br>何玉看起来有些奇怪，说话吞吞吐吐。<br>四张不耐烦，有事你就直说，跟我还用得着客气？<br>何玉说，我男朋友做生意，需要一笔钱周转，否则他过不了这个坎。<br>四张一愣，你什么时候交的男朋友？我怎么不知道？<br>何玉有些惭愧，我不想跟你说，我怕说了你难受。<br>四张沉默。<br>何玉说，他借了高利贷。<br>四张点了根烟，问，缺多少钱。<br>何玉鼓足勇气，说，十万。<br>四张抽了两口烟，给我五天，五天之后，我打你银行卡上。<br>四张说着就起身走了，留下何玉愣在原地。  </p>
-<p>回到山东，四张把卡车卖了，加上自己的积蓄，凑了十万块给何玉。<br>我们都骂他，你脑残了？你不想想，万一何玉那个什么男朋友是个骗子呢？<br>四张无所谓的笑笑，我感觉，那男的百分百是骗子，好男人就是他妈再难，也不会向自己的女人开口要钱。<br>我们都惊呆了，你丫知道还借给她？<br>四张说，她要的东西，我没法拒绝。再说，让她上上课也好，她哪都好，就是太单纯。<br>我们再一次惊呆，她单纯？我看啊，是你傻逼。<br>四张切了一声，大智若愚，聪明还是傻逼，得分事儿。  </p>
-<p>卖了卡车之后，四张又回到了原来的运输公司，继续打工。<br>一样勤勤恳恳，任劳任怨。<br>两个月后，何玉打电话给四张，哭着说，她男朋友不见了，电话也不接，他是个骗子。我对不起你。<br>四张说，不就十万块钱吗？有什么大不了的。花十万块，让你长长记性，值了。<br>何玉在电话里泣不成声。  </p>
-<p>四张最爱跑的一条线，就是从山东到北京，他说，总觉得何玉在哪，哪立马就不一样了。就算何玉在撒哈拉，撒哈拉也能凭空生出喷泉来。就算何玉在索马里，索马里就立马变成天上人间。<br>何玉却消失了一段时间，再也没有联系四张，不知道是不是因为觉得自己就是个扫把星，总是拖累四张，因此故意远离四张的生活。  </p>
-<p>又到了冬天。<br>四张依旧跑着长途，这次他拉着一车泡面跑北京，天寒地冻，高速公路上的积雪刚刚撒过盐，几乎都融化了，但是风很大。四张顺风撒尿的时候，尿柱射到了几百米外的广告牌上。<br>四张过了收费站口，猛地踩了刹车，他看见一个熟悉的身影，站在一望无际的高速公路隔离带旁边，冻得瑟瑟发抖，是何玉。<br>四张头发都炸起来了，他的车堵在高速公路入口，自己跳下去，几乎是飞到何玉面前，一把抱住何玉。<br>何玉整个人冻得就跟个冰美人一样，四张抱着何玉的时候打了个冷战，四张又生气又心疼，你他妈在这干嘛？<br>何玉泣不成声，我在这等了你三天了。晚上就在收费站里睡。我算错了时间，可我又不敢走，怕错过你。<br>四张疯了，你不会打个电话吗？<br>何玉说，我总是给你打电话，打电话给你都没好事，这一次我想见你。<br>四张紧紧地抱住何玉，直到高速公路路口堵成一排的车集体狂摁喇叭。  </p>
-<p>四张开着大货车，行驶在冰雪皑皑的高速公路上。<br>何玉坐在副驾驶，身上裹着四张的军大衣，正在吃着一碗热气腾腾的泡面。<br>何玉吃完泡面，掏出两万块钱给四张。<br>四张生气了，你这是干什么？<br>何玉说，这是我这段时间攒的，还欠你八万，以后我就跟着你跑长途，给你打工，给你洗衣服，给你做饭。<br>四张傻了，你疯了，跑长途这是女人干的活吗？<br>何玉恨铁不成钢，从小到大，你怎么总是抓不到我的重点？我的重点在后半句，给你洗衣服，给你做饭！<br>四张愣愣地看着何玉，傻了。<br>何玉双颊都冻伤了，泛着红光，认真地看着四张。<br>大卡车远远地往前飞奔。  </p>
-<p>今年，四张又买了一辆卡车，取了个名字，叫“何玉号”。<br>被同行取笑，你以为你开的是驱逐舰吗？<br>四张说，我开的就是驱逐舰，只属于我和我老婆的驱逐舰，一切坏人坏事统统退避。  </p>
-<p>四张讲完了自己的故事，大家忍不住给她鼓掌。<br>四张憨笑，其实这也不算玩命爱一个姑娘，离着玩命还早呢。我只是觉得，既然爱了，就用点力，用点力总不会是坏事。<br>这个时候，一个女孩大着肚子走过来，走到四张身边。<br>四张吓坏了，你怎么来了？<br>女孩很娇羞，开玩笑似的，我想你了啊。<br>我们都愣住。<br>四张有些尴尬，跟大家介绍，这是我老婆，何玉。<br>我们都站起来，一起喊，嫂子好。<br>何玉被眼前的阵势吓了一跳，你们好，你们好，有空来家里喝酒。<br>四张笑得很欠揍，明目张胆秀恩爱。  </p>
-<p>生命中，有些错过，最后成为了错过。<br>而有些错过，因为两个人的勇敢，又变成了相遇。<br>我们都期待美满的故事，但其实恰恰是靠着我们的勇气，让故事变得美满，让爱人就离着自己一个枕头的距离，有时候甚至是负20厘米的距离。<br>男人应该玩命爱一个姑娘。<br>好姑娘也值得被男人玩命去爱。<br>爱情，本来就是勇敢者的游戏。<br>如果你不够勇敢，你很快就会出局。<br>如果你够勇敢，此刻转个身，就能抱住你所爱的人吧。  </p>
-]]></content>
-      <categories>
-        <category>短文</category>
-      </categories>
-      <tags>
-        <tag>青春</tag>
-        <tag>付出</tag>
       </tags>
   </entry>
   <entry>
@@ -744,6 +744,69 @@
       </tags>
   </entry>
   <entry>
+    <title>Python3爬虫之urllib模块</title>
+    <url>/190502/</url>
+    <content><![CDATA[<h3 id="Python2-中的urllib和Python3中的urlllib的区别"><a href="#Python2-中的urllib和Python3中的urlllib的区别" class="headerlink" title="Python2 中的urllib和Python3中的urlllib的区别"></a>Python2 中的urllib和Python3中的urlllib的区别</h3><p>在python 2中有urllib和urllib2两个库进行实现请求的发送，但是再python 3中官方将urllib2库合并在了urllib库中。所以在3中使用urllib库时一定要先了解其中的四个模块：</p>
+<ul>
+<li>request：这个模块是最基本的HTTP请求模块，用来模拟发送请求。</li>
+<li>error：异常处理模块，用来捕获异常，保证程序不会意外终止。</li>
+<li>parse：工具模块，提供了许多URL处理方法，如拆分、解析、编码等</li>
+<li>robotparser:用来识别网站的robots.txt文件，判断哪些网站可以爬，一般不用。<br>此处只讲解前三个的用法。</li>
+</ul>
+<span id="more"></span>
+
+<h3 id="请求的发送"><a href="#请求的发送" class="headerlink" title="请求的发送"></a>请求的发送</h3><p>1、urlopen()函数<br>在urllib.request模块中提供了最基本的构造HTTP请求的方法，可以利用它进行模拟浏览器发送一个请求，同时它还具有处理授权验证、重定向、浏览器cookies等其他内容<br>下面以百度为例子，进行网页的抓取：  </p>
+<figure class="highlight plaintext"><table><tr><td class="code"><pre><span class="line">from urllib import request</span><br><span class="line"></span><br><span class="line">response = request.urlopen(&#x27;http://www.baidu.com&#x27;)</span><br><span class="line">print(response.read().decode(&#x27;utf8&#x27;))</span><br></pre></td></tr></table></figure>
+<p>可以很简单的看出，上面很简单的三行代码已经实现了一个简单的爬虫了。只不过这个爬虫获取下来的内容没有经过任何数据处理，我们可以很容的看到百度首页的源代码。<br>之后，查看返回的内容是什么类型的。<br><code>print(type(response))</code><br>输出为：<code>&lt;class &#39;http.client.HTTPResponse&#39;&gt;</code><br>可以发现，它是一个HTTPResponse类型的对象，接下来查看有那些函数和属性，使用<code>dir(response)</code>：<br>输出为:</p>
+<figure class="highlight plaintext"><table><tr><td class="code"><pre><span class="line">[&#x27;__abstractmethods__&#x27;, &#x27;__class__&#x27;, &#x27;__del__&#x27;, &#x27;__delattr__&#x27;, &#x27;__dict__&#x27;, &#x27;__dir__&#x27;, &#x27;__doc__&#x27;, &#x27;__enter__&#x27;, &#x27;__eq__&#x27;, &#x27;__exit__&#x27;, &#x27;__format__&#x27;, &#x27;__ge__&#x27;, &#x27;__getattribute__&#x27;, &#x27;__gt__&#x27;, &#x27;__hash__&#x27;, &#x27;__init__&#x27;, &#x27;__init_subclass__&#x27;, &#x27;__iter__&#x27;, &#x27;__le__&#x27;, &#x27;__lt__&#x27;, &#x27;__module__&#x27;, &#x27;__ne__&#x27;, &#x27;__new__&#x27;, &#x27;__next__&#x27;, &#x27;__reduce__&#x27;, &#x27;__reduce_ex__&#x27;, &#x27;__repr__&#x27;, &#x27;__setattr__&#x27;, &#x27;__sizeof__&#x27;, &#x27;__str__&#x27;, &#x27;__subclasshook__&#x27;, &#x27;_abc_impl&#x27;, &#x27;_checkClosed&#x27;, &#x27;_checkReadable&#x27;, &#x27;_checkSeekable&#x27;, &#x27;_checkWritable&#x27;, &#x27;_check_close&#x27;, &#x27;_close_conn&#x27;, &#x27;_get_chunk_left&#x27;, &#x27;_method&#x27;, &#x27;_peek_chunked&#x27;, &#x27;_read1_chunked&#x27;, &#x27;_read_and_discard_trailer&#x27;, &#x27;_read_next_chunk_size&#x27;, &#x27;_read_status&#x27;, &#x27;_readall_chunked&#x27;, &#x27;_readinto_chunked&#x27;, &#x27;_safe_read&#x27;, &#x27;_safe_readinto&#x27;, &#x27;begin&#x27;, &#x27;chunk_left&#x27;, &#x27;chunked&#x27;, &#x27;close&#x27;, &#x27;closed&#x27;, &#x27;code&#x27;, &#x27;debuglevel&#x27;, &#x27;detach&#x27;, &#x27;fileno&#x27;, &#x27;flush&#x27;, &#x27;fp&#x27;, &#x27;getcode&#x27;, &#x27;getheader&#x27;, &#x27;getheaders&#x27;, &#x27;geturl&#x27;, &#x27;headers&#x27;, &#x27;info&#x27;, &#x27;isatty&#x27;, &#x27;isclosed&#x27;, &#x27;length&#x27;, &#x27;msg&#x27;, &#x27;peek&#x27;, &#x27;read&#x27;, &#x27;read1&#x27;, &#x27;readable&#x27;, &#x27;readinto&#x27;, &#x27;readinto1&#x27;, &#x27;readline&#x27;, &#x27;readlines&#x27;, &#x27;reason&#x27;, &#x27;seek&#x27;, &#x27;seekable&#x27;, &#x27;status&#x27;, &#x27;tell&#x27;, &#x27;truncate&#x27;, &#x27;url&#x27;, &#x27;version&#x27;, &#x27;will_close&#x27;, &#x27;writable&#x27;, &#x27;write&#x27;, &#x27;writelines&#x27;]</span><br></pre></td></tr></table></figure>
+<p>其中最主要函数为：read()、readinto()、getheader(name)、getheaders()、fileno()等方法。<br>在调用read()方法时可以返回网页内容，使用status属性可以查看返回的状态码。<br>在urlopen()方法中，最基本的是简单网页的GET请求抓取。但是如果要传入一个参数呢？下面就讲解参数的使用方法。  </p>
+<ol>
+<li>data参数<br>在讲解之前，首先需要说明的是data参数是可选的，如果传入了此参数，要以字节流编码格式的内容，即bytes类型，需要进行转化。此时的请求方式不再是GET方法，而是POST方法.因为如果使用GET方法，会将传入data暴露在url中，十分不安全。<br>实例一:    <figure class="highlight plaintext"><table><tr><td class="code"><pre><span class="line">from urllib import request, parse</span><br><span class="line"></span><br><span class="line">data = bytes(parse.urlencode(&#123;&#x27;word&#x27;: &#x27;hello world&#x27;&#125;), encoding=&#x27;utf8&#x27;)</span><br><span class="line">response = request.urlopen(&#x27;http://httpbin.org/post&#x27;, data=data)</span><br><span class="line">print(response.read().decode(&#x27;utf8&#x27;))</span><br></pre></td></tr></table></figure>
+这里我们传入了一个参数word，值为hello world。由于发送的的data需要是字节流类型，此处使用到了上文提到的工具包函数parse，使用它将我们要传入的函数进行转码。在我们执行完这段代码后，服务器会给我们返回一下结果:    <figure class="highlight plaintext"><table><tr><td class="code"><pre><span class="line">&#123;</span><br><span class="line">  &quot;args&quot;: &#123;&#125;,</span><br><span class="line">  &quot;data&quot;: &quot;&quot;,</span><br><span class="line">  &quot;files&quot;: &#123;&#125;,</span><br><span class="line">  &quot;form&quot;: &#123;</span><br><span class="line">    &quot;word&quot;: &quot;hello world&quot;</span><br><span class="line">  &#125;,</span><br><span class="line">  &quot;headers&quot;: &#123;</span><br><span class="line">    &quot;Accept-Encoding&quot;: &quot;identity&quot;,</span><br><span class="line">    &quot;Connection&quot;: &quot;close&quot;,</span><br><span class="line">    &quot;Content-Length&quot;: &quot;16&quot;,</span><br><span class="line">    &quot;Content-Type&quot;: &quot;application/x-www-form-urlencoded&quot;,</span><br><span class="line">    &quot;Host&quot;: &quot;httpbin.org&quot;,</span><br><span class="line">    &quot;User-Agent&quot;: &quot;Python-urllib/3.7&quot;</span><br><span class="line">  &#125;,</span><br><span class="line">  &quot;json&quot;: null,</span><br><span class="line">  &quot;origin&quot;: &quot;115.60.58.52&quot;,</span><br><span class="line">  &quot;url&quot;: &quot;http://httpbin.org/post&quot;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+此时我们可以很容易的看到，在返回的结果中有form字段，字段中的内容就是我们传入的data中的内容，至此我们已经模拟了表单提交的过程，以POST请求方式尽心传输数据。  </li>
+<li>timeout参数<br>顾名思义，这个参数就是用来设置超时的。单位为秒，意思是当请求超出了设置的值后还有得到响应，就讲异常抛出。如果此参数不指定时间，使用全局默认时间。<br>实例：  <figure class="highlight plaintext"><table><tr><td class="code"><pre><span class="line">from urllib import request</span><br><span class="line"></span><br><span class="line">response = request .urlopen(&#x27;http://httpbin.org/get&#x27;, timeout=0.1)</span><br><span class="line">print(response .read().decode(&#x27;utf8&#x27;))</span><br></pre></td></tr></table></figure>
+运行结果：  <figure class="highlight plaintext"><table><tr><td class="code"><pre><span class="line">Traceback (most recent call last):</span><br><span class="line">  File &quot;test_urllib_001.py&quot;, line 14, in &lt;module&gt;</span><br><span class="line">    response = request .urlopen(&#x27;http://httpbin.org/get&#x27;, timeout=0.1)</span><br><span class="line">  File &quot;/home/rain/.pyenv/versions/3.7.0/lib/python3.7/urllib/request.py&quot;, line 222, in urlopen</span><br><span class="line">    return opener.open(url, data, timeout)</span><br><span class="line">  File &quot;/home/rain/.pyenv/versions/3.7.0/lib/python3.7/urllib/request.py&quot;, line 525, in open</span><br><span class="line">    response = self._open(req, data)</span><br><span class="line">  File &quot;/home/rain/.pyenv/versions/3.7.0/lib/python3.7/urllib/request.py&quot;, line 543, in _open</span><br><span class="line">    &#x27;_open&#x27;, req)</span><br><span class="line">  File &quot;/home/rain/.pyenv/versions/3.7.0/lib/python3.7/urllib/request.py&quot;, line 503, in _call_chain</span><br><span class="line">    result = func(*args)</span><br><span class="line">  File &quot;/home/rain/.pyenv/versions/3.7.0/lib/python3.7/urllib/request.py&quot;, line 1345, in http_open</span><br><span class="line">    return self.do_open(http.client.HTTPConnection, req)</span><br><span class="line">  File &quot;/home/rain/.pyenv/versions/3.7.0/lib/python3.7/urllib/request.py&quot;, line 1319, in do_open</span><br><span class="line">    raise URLError(err)</span><br><span class="line">urllib.error.URLError: &lt;urlopen error timed out&gt;</span><br></pre></td></tr></table></figure>
+这里我们设置了超时的时间是0.1秒。程序再执行0.1秒以后，服务器依然没有任何响应，于是抛出了URLError异常。可以从<code>&lt;urlopen error timed out&gt;</code>看出是网络超时。那么问题来了，如何抓取这种情况呢？<br>实例：  <figure class="highlight plaintext"><table><tr><td class="code"><pre><span class="line">from urllib import request, error</span><br><span class="line">import socket</span><br><span class="line"></span><br><span class="line">try:</span><br><span class="line">    response = request .urlopen(&#x27;http://httpbin.org/get&#x27;, timeout=0.1)</span><br><span class="line">except error.URLError as e:</span><br><span class="line">    if isinstance(e.reason, socket.timeout):</span><br><span class="line">        print(&#x27;Time Out&#x27;)</span><br></pre></td></tr></table></figure>
+我们用try: … except: …来捕获异常，此处引入了socket模块。</li>
+</ol>
+<p>2、Request<br>到此，我们知道了如何用urlopen方法实现一个简单的请求发送。但是这些简单参数有时候并不能满足我们的需求，比如我们需要在请求中添加header，此时就需要一个更加强大的类来实现了，这就是本节要讲的Request类。<br>实例是最好的验证。<br>实例：</p>
+<figure class="highlight plaintext"><table><tr><td class="code"><pre><span class="line">from urllib import request</span><br><span class="line"></span><br><span class="line">req = request.Request(&#x27;https://baidu.com&#x27;)</span><br><span class="line">response = request.urlopen(req)</span><br><span class="line">print(response.read().decode(&#x27;utf-8&#x27;))</span><br></pre></td></tr></table></figure>
+<p>此处我们依然使用了上文的urlopen()方法，只是此时的参数不再是一个URL了，而是一个Request对象。另外，这个函数我们可以很灵活的配置我们需要的参数。看下它的构造方法吧：<br><code>urllib.request.Request(url, data=None, headers=&#123;&#125;,origin_req_host=None, unverifiable=False,method=None)</code><br>  解释下：</p>
+<ul>
+<li>url：请求的URL，必填项</li>
+<li>data：字节流，请求时需要带的数据</li>
+<li>header：请求头，在创建实例后可以通过add_header()添加</li>
+<li>origin_req_host: 请求方的host名称或IP地址</li>
+<li>unverifiable：表示请求是否无法是验证的，默认为False。意思是用户没有足够的权限来选择接收这个请求的结果。</li>
+<li>method：请求是用的方法，如GET、POST等</li>
+</ul>
+<p>下面实现一个多参数构建请求的例子：</p>
+<figure class="highlight plaintext"><table><tr><td class="code"><pre><span class="line">from urllib import request, parse</span><br><span class="line"></span><br><span class="line">url = &#x27;http://httpbin.org/post&#x27;</span><br><span class="line"></span><br><span class="line">headers = &#123;</span><br><span class="line">    &#x27;User-Agent&#x27;: &#x27;Mozilla/5.0 (X11; Linux x86_64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/71.0.3578.80 Safari/537.36&#x27;</span><br><span class="line">&#125;</span><br><span class="line">dict = &#123;</span><br><span class="line">    &#x27;name&#x27;: &quot;spider_road&quot;</span><br><span class="line">&#125;</span><br><span class="line"></span><br><span class="line">data= bytes(parse.urlencode(dict), encoding=&#x27;utf8&#x27;)</span><br><span class="line">req = request.Request(url=url, data=data, headers=headers, method =&#x27;POST&#x27;)</span><br><span class="line">response = request.urlopen(req)</span><br><span class="line">print(response.read().decode(&#x27;utf8&#x27;))</span><br></pre></td></tr></table></figure>
+<p>我们通过四个参数四个参数构建了这个请求，运行结果如下：</p>
+<figure class="highlight plaintext"><table><tr><td class="code"><pre><span class="line">&#123;</span><br><span class="line">  &quot;args&quot;: &#123;&#125;,</span><br><span class="line">  &quot;data&quot;: &quot;&quot;,</span><br><span class="line">  &quot;files&quot;: &#123;&#125;,</span><br><span class="line">  &quot;form&quot;: &#123;</span><br><span class="line">    &quot;name&quot;: &quot;spider_road&quot;</span><br><span class="line">  &#125;,</span><br><span class="line">  &quot;headers&quot;: &#123;</span><br><span class="line">    &quot;Accept-Encoding&quot;: &quot;identity&quot;,</span><br><span class="line">    &quot;Connection&quot;: &quot;close&quot;,</span><br><span class="line">    &quot;Content-Length&quot;: &quot;16&quot;,</span><br><span class="line">    &quot;Content-Type&quot;: &quot;application/x-www-form-urlencoded&quot;,</span><br><span class="line">    &quot;Host&quot;: &quot;httpbin.org&quot;,</span><br><span class="line">    &quot;User-Agent&quot;: &quot;Mozilla/5.0 (X11; Linux x86_64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/71.0.3578.80 Safari/537.36&quot;</span><br><span class="line">  &#125;,</span><br><span class="line">  &quot;json&quot;: null,</span><br><span class="line">  &quot;origin&quot;: &quot;115.60.58.52&quot;,</span><br><span class="line">  &quot;url&quot;: &quot;http://httpbin.org/post&quot;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+
+<h3 id="异常的处理"><a href="#异常的处理" class="headerlink" title="异常的处理"></a>异常的处理</h3><p>在上节中，我们简单的提到了如何对异常做出处理，但是程序在运行过程总会出现一些其他的错误，当出现这些错误时，异常处理还是很有必要做的。<br>1、URLError<br>URLError类来自于urllib库的error模块，继承自OSError类，由request模块产生的异常都已使用这个类来捕捉。<br>实例：  </p>
+<figure class="highlight plaintext"><table><tr><td class="code"><pre><span class="line">from urllib import request, error</span><br><span class="line"></span><br><span class="line">try:</span><br><span class="line">    response = request.urlopen(&#x27;https://spider-road.com&#x27;)</span><br><span class="line">except error.URLError as e:</span><br><span class="line">    print(e.reason)</span><br></pre></td></tr></table></figure>
+<p>上面的程序我们使用它打开了一个不存在的网址，我们使用try:… except:…来捕获了异常。<br>运行输出：<code>[Errno -2] Name or service not known</code>，此时有效得避免了程序异常终止。</p>
+<p>2、HTTPError<br>它是URLError的子类，用来处理HTTP请求错误，比如认证请求失败等。它有一下3个属性：</p>
+<ul>
+<li>code： http状态码</li>
+<li>reason：错误原因</li>
+<li>headers： 返回请求头</li>
+</ul>
+<p>实例验证：</p>
+<figure class="highlight plaintext"><table><tr><td class="code"><pre><span class="line">from urllib import request, error</span><br><span class="line"></span><br><span class="line">try:</span><br><span class="line">    response = request.urlopen(&#x27;https://spider-road.com&#x27;)</span><br><span class="line">except error.HTTPError as e:</span><br><span class="line">    print(f&#x27;code:&#123;e.code&#125;\nreason:&#123;e.reason&#125;\nheaders:&#123;e.headers&#125;&#x27;)</span><br><span class="line">except error.URLError as e:</span><br><span class="line">    print(e.reason)</span><br></pre></td></tr></table></figure>
+<p>由于没有该网站，所以最后返回的是：<code>[Errno 110] Connection timed out</code><br>至此，关于urllib请求和错误处理已经讲解完毕，后续还有关于此节更为高级的用法。欢迎订阅爬虫之道，我们在这里等待你的到来。</p>
+]]></content>
+      <categories>
+        <category>Python后端</category>
+      </categories>
+      <tags>
+        <tag>爬虫</tag>
+        <tag>urllib</tag>
+      </tags>
+  </entry>
+  <entry>
     <title>使用Cython保护Python文件</title>
     <url>/190502-4/</url>
     <content><![CDATA[<h1 id="使用Cython保护Python代码库"><a href="#使用Cython保护Python代码库" class="headerlink" title="使用Cython保护Python代码库"></a>使用Cython保护Python代码库</h1><p>从语言层面来说，Cython是一种拓展的Python，其文件的扩展名为.pyx。这种类型的文件通过编译之后可以变成供Python直接调用的动态链接库（Linux&#x2F;Mac下是.so，Windows下是.pyd）。根据官方文档，主要如下几编译方式：</p>
@@ -814,6 +877,116 @@
       <tags>
         <tag>加密</tag>
         <tag>Cython</tag>
+      </tags>
+  </entry>
+  <entry>
+    <title>Python 3中的Urllib库的使用</title>
+    <url>/190615/</url>
+    <content><![CDATA[<p>在Python中有着这样一个常用的、基础的爬虫库。在Python2中为urllib.urllib，在Python3中官方为了便于管理，将和请求有关的函数封装进了urllib.request模块中。</p>
+<p>在此处，使用Python3做记录。</p>
+<span id="more"></span>
+
+<h3 id="urlopen函数"><a href="#urlopen函数" class="headerlink" title="urlopen函数"></a>urlopen函数</h3><p>urlopen函数是request中的一个很常用的函数，它主要用于打开一个网页。其中有着很多的属性。</p>
+<figure class="highlight python"><table><tr><td class="code"><pre><span class="line"><span class="keyword">from</span> urllib <span class="keyword">import</span> request</span><br><span class="line"></span><br><span class="line">resp = request.<span class="built_in">open</span>(<span class="string">&quot;https://www.baidu.com&quot;</span>)</span><br><span class="line"><span class="built_in">print</span>(resp.read())</span><br></pre></td></tr></table></figure>
+
+
+
+<h3 id="urlretrieve函数"><a href="#urlretrieve函数" class="headerlink" title="urlretrieve函数"></a>urlretrieve函数</h3><p>urlretrieve函数可以很方便的将网页保存至本地。其实用方法见下方代码：</p>
+<figure class="highlight python"><table><tr><td class="code"><pre><span class="line"><span class="keyword">from</span> urllib <span class="keyword">import</span> request</span><br><span class="line"></span><br><span class="line">request.urlretrieve()</span><br></pre></td></tr></table></figure>
+
+
+
+<h3 id="urlencode函数"><a href="#urlencode函数" class="headerlink" title="urlencode函数"></a>urlencode函数</h3><p>将字典类型的数据转化为url编码的数据</p>
+<figure class="highlight python"><table><tr><td class="code"><pre><span class="line"><span class="keyword">from</span> urllib <span class="keyword">import</span> parse, request</span><br><span class="line"></span><br><span class="line">params = &#123;<span class="string">&quot;wd&quot;</span>: <span class="string">&quot;爬虫之道&quot;</span>&#125;</span><br><span class="line"></span><br><span class="line">qs = parse.urlencode(params)</span><br><span class="line"></span><br><span class="line">url = <span class="string">f&quot;https://www.baidu.com/s?<span class="subst">&#123;qs&#125;</span>&quot;</span></span><br><span class="line"></span><br><span class="line">resp = request.urlopen(url)</span><br></pre></td></tr></table></figure>
+
+
+
+<h3 id="parse-qs函数"><a href="#parse-qs函数" class="headerlink" title="parse_qs函数"></a>parse_qs函数</h3><p>将url编码后的参数还原为字典形式，其中的值以列表形式进行存储。</p>
+<figure class="highlight python"><table><tr><td class="code"><pre><span class="line"><span class="keyword">from</span> urllib <span class="keyword">import</span> parse</span><br><span class="line"></span><br><span class="line">ps = &#123;<span class="string">&quot;name&quot;</span>: <span class="string">&quot;爬虫之道&quot;</span>, <span class="string">&quot;vxcode&quot;</span>: <span class="string">&quot;spider_rold&quot;</span>&#125;</span><br><span class="line"></span><br><span class="line">results = parse.urlencode(ps)</span><br><span class="line"></span><br><span class="line">new_results = parse.parse_qs(results)</span><br><span class="line"><span class="built_in">print</span>(new_results)</span><br></pre></td></tr></table></figure>
+
+<h3 id="urlparse和urlsplit函数"><a href="#urlparse和urlsplit函数" class="headerlink" title="urlparse和urlsplit函数"></a>urlparse和urlsplit函数</h3><p>对URL各部分进行分割，其中在使用urlsplit函数时，没有_params_参数。（<em>注</em>：params参数指的是在以下链接中”?”前添加”;”，位于这两者之间的内容，如：_<a href="https://www.baidu.com/s;hello?wd=hello+world_%EF%BC%89">https://www.baidu.com/s;hello?wd=hello+world_）</a></p>
+<figure class="highlight python"><table><tr><td class="code"><pre><span class="line"><span class="keyword">from</span> urllib <span class="keyword">import</span> parse</span><br><span class="line"></span><br><span class="line">params = &#123;<span class="string">&quot;wd&quot;</span>: <span class="string">&quot;爬虫之道&quot;</span>&#125;</span><br><span class="line"></span><br><span class="line">qs = parse.urlencode(params)</span><br><span class="line">url = <span class="string">f&quot;https://www.baidu.com/s?<span class="subst">&#123;qs&#125;</span>&quot;</span></span><br><span class="line"></span><br><span class="line">result = parse.urlparse(url)</span><br><span class="line"></span><br><span class="line"><span class="built_in">print</span>(<span class="string">&#x27;scheme:&#x27;</span>, result.scheme)</span><br><span class="line"><span class="built_in">print</span>(<span class="string">&#x27;netloc:&#x27;</span>, result.netloc)</span><br><span class="line"><span class="built_in">print</span>(<span class="string">&#x27;path:&#x27;</span>, result.path)</span><br><span class="line"><span class="built_in">print</span>(<span class="string">&#x27;params:&#x27;</span>, result.params)</span><br><span class="line"><span class="built_in">print</span>(<span class="string">&#x27;query:&#x27;</span>, result.query)</span><br><span class="line"><span class="built_in">print</span>(<span class="string">&#x27;fragment:&#x27;</span>, result.fragment)</span><br></pre></td></tr></table></figure>
+
+<h3 id="request-Request类"><a href="#request-Request类" class="headerlink" title="request.Request类"></a>request.Request类</h3><p>在爬虫中，如果想使用一些参数，如：请求头，请求数据等，需要使用到Request类。如果只是使用urlopen函数，没有办法进行添加请求头。在没有使用_User-Agent_的时候，如果服务器发现是爬虫，服务器可能会返回一条假的数据内容，或者是不返回内容。所以，将爬虫程序伪装成正常的浏览器访问是很有必要的一件事。</p>
+<figure class="highlight python"><table><tr><td class="code"><pre><span class="line"><span class="keyword">from</span> urllib <span class="keyword">import</span> request, parse</span><br><span class="line"></span><br><span class="line">headers = &#123;<span class="string">&#x27;user-agent&#x27;</span>: <span class="string">&quot;Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/75.0.3770.90 Safari/537.36&quot;</span>&#125;</span><br><span class="line">params = &#123;<span class="string">&quot;wd&quot;</span>: <span class="string">&quot;爬虫之道&quot;</span>&#125;</span><br><span class="line"></span><br><span class="line">qs = parse.urlencode(params)</span><br><span class="line">url = <span class="string">f&quot;https://www.baidu.com/s?<span class="subst">&#123;qs&#125;</span>&quot;</span></span><br><span class="line"></span><br><span class="line">req = request.Request(url, headers=headers)</span><br><span class="line">resp = request.urlopen(req)</span><br><span class="line"><span class="built_in">print</span>(resp.read())</span><br></pre></td></tr></table></figure>
+
+<p>注： 可以去挑战一下网络爬虫界的“珠穆朗玛峰” —– 拉勾网</p>
+<h3 id="ProxyHandler处理器"><a href="#ProxyHandler处理器" class="headerlink" title="ProxyHandler处理器"></a>ProxyHandler处理器</h3><p>在爬取网站时，一般情况下网站都会做一些反爬虫机制，如封ip。如果只使用一个ip地址进行爬取，在网站封掉ip地址后，就无法获取数据了。所以，在有反爬虫机制的情况，反反爬虫机制便可以使用了。在urllib中通过使用ProxyHandler进行设置代理服务器。</p>
+<p>在使用代理与未使用代理的区别：</p>
+<p><img src="/userImages/proxy.jpg">  </p>
+<figure class="highlight python"><table><tr><td class="code"><pre><span class="line"><span class="keyword">from</span> urllib <span class="keyword">import</span> request</span><br><span class="line"></span><br><span class="line"><span class="comment">### 未使用代理</span></span><br><span class="line">resp = request.urlopen(<span class="string">&#x27;http://httpbin.org/get&#x27;</span>)</span><br><span class="line"><span class="built_in">print</span>(resp.read())</span><br><span class="line"></span><br><span class="line"><span class="comment">### 使用代理</span></span><br><span class="line">handler = request.ProxyHandler(&#123;<span class="string">&quot;https&quot;</span>: <span class="string">&quot;58.253.152.231:9999&quot;</span>&#125;)</span><br><span class="line"></span><br><span class="line">opener = request.build_opener(handler)</span><br><span class="line">req = request.Request(<span class="string">&quot;http://httpbin.org/get&quot;</span>)</span><br><span class="line">resp = opener.<span class="built_in">open</span>(req)</span><br><span class="line"><span class="built_in">print</span>(resp.read())</span><br></pre></td></tr></table></figure>
+
+<p>常用的代理：</p>
+<ul>
+<li>西刺代理：<a href="https://www.xicidaili.com/">https://www.xicidaili.com</a></li>
+<li>快代理: <a href="https://www.kuaidaili.com/free/">https://www.kuaidaili.com/free/</a></li>
+</ul>
+<h3 id="Cookie是什么"><a href="#Cookie是什么" class="headerlink" title="Cookie是什么"></a>Cookie是什么</h3><p>在网站汇总，http请求是无状态的。在第一次和服务器建立连接登录后，第二次请求服务器依旧不能知道当前请求的用户是谁。Cookie的出现就是为了解决该问题。第一次登录后，服务器会返回一些数据(cookie) 给浏览器，然后浏览器将数据保存在本地。当用户发送第二次请求时，浏览器会自动的将保存在本地的数据(cookie)一起发送给服务器。服务通过判断不同的cookie信息，进行确认用户。cookie的存储大小是有限的一般不会超过4KB，因此在设置cookie对的时候，只能存储少量数据。</p>
+<h4 id="cookie的格式："><a href="#cookie的格式：" class="headerlink" title="cookie的格式："></a>cookie的格式：</h4><p>Set-Cookie: NAME&#x3D;VALUE；Expires&#x3D;DATE；Path&#x3D;PATH；Domain&#x3D;DOMAIN_NAME；SECURE</p>
+<p>参数含义：</p>
+<ul>
+<li>NAME：Cookie的名字</li>
+<li>VALUE：Cookie的值</li>
+<li>Expires:  Cookie的过期时间</li>
+<li>Path：Cookie作用的路径</li>
+<li>Domain： Cookie作用的域名</li>
+<li>SECURE：是否只在HTTP协议下起作用</li>
+</ul>
+<h3 id="使用cookielib库和HTTPCookieProcessor模块模拟登陆"><a href="#使用cookielib库和HTTPCookieProcessor模块模拟登陆" class="headerlink" title="使用cookielib库和HTTPCookieProcessor模块模拟登陆"></a>使用cookielib库和HTTPCookieProcessor模块模拟登陆</h3><p>在Python中使用cookie，一般是通过http.cookiejar模块和urllib模块的HTTPCookieProcessor处理器一起使用的。</p>
+<ul>
+<li>http.cookiejar：提供用于存储cookie的对象</li>
+<li>HTTPCookieProcessor：处理cookie对象并构建handler对象</li>
+</ul>
+<h4 id="http-cookiejar模块"><a href="#http-cookiejar模块" class="headerlink" title="http.cookiejar模块"></a>http.cookiejar模块</h4><p>在该模块中主要有三个类，CookieJar、FileCookieJar、MozillaCookieJar、LWPCookieJar。其作用如下：</p>
+<ul>
+<li>CookieJar：管理HTTP cookie值、存储HTTP请求生成的cookie，向传出的HTTP请求添加cookie对象。整个cookie都存储在内存中，对CookieJar实例进行垃圾回收后cookie失效。</li>
+<li>FileCookieJar (filename, delayload&#x3D;None, policy&#x3D;None)：从CookieJar派生而来，用来创建FileCookieJar实例。检索cookie信息并将cookie存储到文件中。filename是存储cookie的文件名，delayload为True是支持延迟访问文件，即只有在需要时才读取文件或将数据存储在文件中。</li>
+<li>MozillaCookieJar (filename, delayload&#x3D;None, policy&#x3D;None)：从FileCookieJar派生而来，创建与Mozilla浏览器cookies.txt兼容的FileCookieJar实例。</li>
+<li>LWPCookieJar (filename, delayload&#x3D;None, policy&#x3D;None)：从FileCookieJar派生而来，创建与libwww·per标准的Set-Cookies3文件格式兼容的FileCookieJar实例。</li>
+</ul>
+<h3 id="保存Cookie至本地"><a href="#保存Cookie至本地" class="headerlink" title="保存Cookie至本地"></a>保存Cookie至本地</h3><p>保存cookie到本地，可以使用cookiejar的save方法。</p>
+<figure class="highlight python"><table><tr><td class="code"><pre><span class="line"><span class="keyword">from</span> urllib <span class="keyword">import</span> request</span><br><span class="line"><span class="keyword">from</span> http.cookiejar <span class="keyword">import</span> MozillaCookieJar</span><br><span class="line"></span><br><span class="line">cookiejar = MozillaCookieJar(<span class="string">&#x27;cookies.txt&#x27;</span>)</span><br><span class="line">handler = request.HTTPCookieProcessor(cookiejar)</span><br><span class="line">opener = request.build_opener(handler)</span><br><span class="line"></span><br><span class="line">handlers = &#123;</span><br><span class="line">    <span class="string">&#x27;User-Agent&#x27;</span>: <span class="string">&#x27;Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/75.0.3770.100 Safari/537.36&#x27;</span>,</span><br><span class="line">&#125;</span><br><span class="line"></span><br><span class="line">req = request.Request(<span class="string">&#x27;http://httpbin.org/cookies&#x27;</span>, headers=handlers)</span><br><span class="line"></span><br><span class="line">resp = opener.<span class="built_in">open</span>(req)</span><br><span class="line"><span class="built_in">print</span>(resp.read())</span><br><span class="line"></span><br><span class="line">cookiejar.save(ignore_discard=<span class="literal">True</span>, ignore_expires=<span class="literal">True</span>)</span><br></pre></td></tr></table></figure>
+
+<h3 id="加载本地cookie"><a href="#加载本地cookie" class="headerlink" title="加载本地cookie"></a>加载本地cookie</h3><p>从本地文件读取cookie信息，可以使用cookiejar中的load方法</p>
+<figure class="highlight python"><table><tr><td class="code"><pre><span class="line"><span class="keyword">from</span> http.cookiejar <span class="keyword">import</span> MozillaCookieJar</span><br><span class="line"></span><br><span class="line">cookiejar = MozillaCookieJar(<span class="string">&#x27;cookies.txt&#x27;</span>)</span><br><span class="line">cookiejar.load(ignore_discard=<span class="literal">True</span>)</span><br><span class="line"><span class="keyword">for</span> cookie <span class="keyword">in</span> cookiejar:</span><br><span class="line">    <span class="built_in">print</span>(cookie)</span><br></pre></td></tr></table></figure>
+
+]]></content>
+      <categories>
+        <category>爬虫</category>
+      </categories>
+      <tags>
+        <tag>urllib</tag>
+      </tags>
+  </entry>
+  <entry>
+    <title>为Next加上彩色标签云</title>
+    <url>/190520/</url>
+    <content><![CDATA[<p>最近一直看hexo官方的标签云太难看，就google了一下。最终搜索到了这篇文章（<a href="https://me.idealli.com/post/d6caa003.html">传送门</a>），在此也做下记录吧！</p>
+<span id="more"></span>
+
+
+<ol>
+<li><p>打开themes –&gt; next –&gt; layout –&gt; page.swig文件</p>
+</li>
+<li><p>找到<code>&#123; % if page.type === &#39;tags&#39; % &#125;</code></p>
+</li>
+<li><p>将下方代码进行替换即可</p>
+</li>
+</ol>
+<figure class="highlight text"><table><tr><td class="code"><pre><span class="line">原内容：</span><br><span class="line"></span><br><span class="line">&lt;div class=&quot;tag-cloud-tags&quot;&gt;</span><br><span class="line">  &#123;% if not theme.tagcloud %&#125;</span><br><span class="line">    &#123;&#123; tagcloud(&#123;min_font: 12, max_font: 30, amount: 200, color: true, start_color: &#x27;#ccc&#x27;, end_color: &#x27;#111&#x27;&#125;) &#125;&#125;</span><br><span class="line">  &#123;% else %&#125;</span><br><span class="line">    &#123;&#123; tagcloud(&#123;min_font: theme.tagcloud.min, max_font: theme.tagcloud.max, amount: theme.tagcloud.amount, color: true, start_color: theme.tagcloud.start, end_color: theme.tagcloud.end&#125;) &#125;&#125;</span><br><span class="line">  &#123;% endif %&#125;</span><br><span class="line">&lt;/div&gt;</span><br></pre></td></tr></table></figure>
+
+<hr>
+<figure class="highlight text"><table><tr><td class="code"><pre><span class="line">修改之后的内容：</span><br><span class="line"></span><br><span class="line">&lt;div class=&quot;tag-cloud-tags&quot; id=&quot;tags&quot;&gt;</span><br><span class="line">  &#123;&#123; tagcloud(&#123;min_font: 16, max_font: 16, amount: 300, color: true, start_color: &#x27;#fff&#x27;, end_color: &#x27;#fff&#x27;&#125;) &#125;&#125;</span><br><span class="line">&lt;/div&gt;</span><br><span class="line">&lt;br/&gt;</span><br><span class="line"></span><br><span class="line">&lt;script type=&quot;text/javascript&quot;&gt;</span><br><span class="line">  var alltags=document.getElementById(&#x27;tags&#x27;);</span><br><span class="line">  var tags=alltags.getElementsByTagName(&#x27;a&#x27;);</span><br><span class="line"></span><br><span class="line">  for (var i = tags.length - 1; i &gt;= 0; i--) &#123;</span><br><span class="line">    var r=Math.floor(Math.random()*75+130);</span><br><span class="line">    var g=Math.floor(Math.random()*75+100);</span><br><span class="line">    var b=Math.floor(Math.random()*75+80);</span><br><span class="line">    tags[i].style.background = &quot;rgb(&quot;+r+&quot;,&quot;+g+&quot;,&quot;+b+&quot;)&quot;;</span><br><span class="line">  &#125;</span><br><span class="line">&lt;/script&gt;</span><br><span class="line"></span><br><span class="line">&lt;style type=&quot;text/css&quot;&gt;</span><br><span class="line">  div#posts.posts-expand .tag-cloud a&#123;</span><br><span class="line">    background-color: #f5f7f1;</span><br><span class="line">    border-radius: 6px;</span><br><span class="line">    padding-left: 10px;</span><br><span class="line">    padding-right: 10px;</span><br><span class="line">    margin-top: 18px;</span><br><span class="line">  &#125;</span><br><span class="line"></span><br><span class="line">  .tag-cloud a&#123;</span><br><span class="line">    background-color: #f5f7f1;</span><br><span class="line">    border-radius: 4px;</span><br><span class="line">    padding-right: 5px;</span><br><span class="line">    padding-left: 5px;</span><br><span class="line">    margin-right: 5px;</span><br><span class="line">    margin-left: 0px;</span><br><span class="line">    margin-top: 8px;</span><br><span class="line">    margin-bottom: 0px;</span><br><span class="line">&#125;</span><br><span class="line"></span><br><span class="line">  .tag-cloud a:before&#123;</span><br><span class="line">    content: &quot;&quot;;</span><br><span class="line">  &#125;</span><br><span class="line"></span><br><span class="line">  .tag-cloud-tags&#123;</span><br><span class="line">    text-align: left;</span><br><span class="line">    counter-reset: tags;</span><br><span class="line">  &#125;</span><br><span class="line">&lt;/style&gt;</span><br></pre></td></tr></table></figure>
+
+<p>之后清理缓存，重新部署就行了。</p>
+<p>最终效果如下：</p>
+<p><img src="/userImages/tag-cloud.png" alt="彩色标签云"></p>
+]]></content>
+      <categories>
+        <category>起始篇</category>
+      </categories>
+      <tags>
+        <tag>标签云</tag>
       </tags>
   </entry>
   <entry>
@@ -939,179 +1112,6 @@
       </categories>
       <tags>
         <tag>bs4</tag>
-      </tags>
-  </entry>
-  <entry>
-    <title>Python3爬虫之urllib模块</title>
-    <url>/190502/</url>
-    <content><![CDATA[<h3 id="Python2-中的urllib和Python3中的urlllib的区别"><a href="#Python2-中的urllib和Python3中的urlllib的区别" class="headerlink" title="Python2 中的urllib和Python3中的urlllib的区别"></a>Python2 中的urllib和Python3中的urlllib的区别</h3><p>在python 2中有urllib和urllib2两个库进行实现请求的发送，但是再python 3中官方将urllib2库合并在了urllib库中。所以在3中使用urllib库时一定要先了解其中的四个模块：</p>
-<ul>
-<li>request：这个模块是最基本的HTTP请求模块，用来模拟发送请求。</li>
-<li>error：异常处理模块，用来捕获异常，保证程序不会意外终止。</li>
-<li>parse：工具模块，提供了许多URL处理方法，如拆分、解析、编码等</li>
-<li>robotparser:用来识别网站的robots.txt文件，判断哪些网站可以爬，一般不用。<br>此处只讲解前三个的用法。</li>
-</ul>
-<span id="more"></span>
-
-<h3 id="请求的发送"><a href="#请求的发送" class="headerlink" title="请求的发送"></a>请求的发送</h3><p>1、urlopen()函数<br>在urllib.request模块中提供了最基本的构造HTTP请求的方法，可以利用它进行模拟浏览器发送一个请求，同时它还具有处理授权验证、重定向、浏览器cookies等其他内容<br>下面以百度为例子，进行网页的抓取：  </p>
-<figure class="highlight plaintext"><table><tr><td class="code"><pre><span class="line">from urllib import request</span><br><span class="line"></span><br><span class="line">response = request.urlopen(&#x27;http://www.baidu.com&#x27;)</span><br><span class="line">print(response.read().decode(&#x27;utf8&#x27;))</span><br></pre></td></tr></table></figure>
-<p>可以很简单的看出，上面很简单的三行代码已经实现了一个简单的爬虫了。只不过这个爬虫获取下来的内容没有经过任何数据处理，我们可以很容的看到百度首页的源代码。<br>之后，查看返回的内容是什么类型的。<br><code>print(type(response))</code><br>输出为：<code>&lt;class &#39;http.client.HTTPResponse&#39;&gt;</code><br>可以发现，它是一个HTTPResponse类型的对象，接下来查看有那些函数和属性，使用<code>dir(response)</code>：<br>输出为:</p>
-<figure class="highlight plaintext"><table><tr><td class="code"><pre><span class="line">[&#x27;__abstractmethods__&#x27;, &#x27;__class__&#x27;, &#x27;__del__&#x27;, &#x27;__delattr__&#x27;, &#x27;__dict__&#x27;, &#x27;__dir__&#x27;, &#x27;__doc__&#x27;, &#x27;__enter__&#x27;, &#x27;__eq__&#x27;, &#x27;__exit__&#x27;, &#x27;__format__&#x27;, &#x27;__ge__&#x27;, &#x27;__getattribute__&#x27;, &#x27;__gt__&#x27;, &#x27;__hash__&#x27;, &#x27;__init__&#x27;, &#x27;__init_subclass__&#x27;, &#x27;__iter__&#x27;, &#x27;__le__&#x27;, &#x27;__lt__&#x27;, &#x27;__module__&#x27;, &#x27;__ne__&#x27;, &#x27;__new__&#x27;, &#x27;__next__&#x27;, &#x27;__reduce__&#x27;, &#x27;__reduce_ex__&#x27;, &#x27;__repr__&#x27;, &#x27;__setattr__&#x27;, &#x27;__sizeof__&#x27;, &#x27;__str__&#x27;, &#x27;__subclasshook__&#x27;, &#x27;_abc_impl&#x27;, &#x27;_checkClosed&#x27;, &#x27;_checkReadable&#x27;, &#x27;_checkSeekable&#x27;, &#x27;_checkWritable&#x27;, &#x27;_check_close&#x27;, &#x27;_close_conn&#x27;, &#x27;_get_chunk_left&#x27;, &#x27;_method&#x27;, &#x27;_peek_chunked&#x27;, &#x27;_read1_chunked&#x27;, &#x27;_read_and_discard_trailer&#x27;, &#x27;_read_next_chunk_size&#x27;, &#x27;_read_status&#x27;, &#x27;_readall_chunked&#x27;, &#x27;_readinto_chunked&#x27;, &#x27;_safe_read&#x27;, &#x27;_safe_readinto&#x27;, &#x27;begin&#x27;, &#x27;chunk_left&#x27;, &#x27;chunked&#x27;, &#x27;close&#x27;, &#x27;closed&#x27;, &#x27;code&#x27;, &#x27;debuglevel&#x27;, &#x27;detach&#x27;, &#x27;fileno&#x27;, &#x27;flush&#x27;, &#x27;fp&#x27;, &#x27;getcode&#x27;, &#x27;getheader&#x27;, &#x27;getheaders&#x27;, &#x27;geturl&#x27;, &#x27;headers&#x27;, &#x27;info&#x27;, &#x27;isatty&#x27;, &#x27;isclosed&#x27;, &#x27;length&#x27;, &#x27;msg&#x27;, &#x27;peek&#x27;, &#x27;read&#x27;, &#x27;read1&#x27;, &#x27;readable&#x27;, &#x27;readinto&#x27;, &#x27;readinto1&#x27;, &#x27;readline&#x27;, &#x27;readlines&#x27;, &#x27;reason&#x27;, &#x27;seek&#x27;, &#x27;seekable&#x27;, &#x27;status&#x27;, &#x27;tell&#x27;, &#x27;truncate&#x27;, &#x27;url&#x27;, &#x27;version&#x27;, &#x27;will_close&#x27;, &#x27;writable&#x27;, &#x27;write&#x27;, &#x27;writelines&#x27;]</span><br></pre></td></tr></table></figure>
-<p>其中最主要函数为：read()、readinto()、getheader(name)、getheaders()、fileno()等方法。<br>在调用read()方法时可以返回网页内容，使用status属性可以查看返回的状态码。<br>在urlopen()方法中，最基本的是简单网页的GET请求抓取。但是如果要传入一个参数呢？下面就讲解参数的使用方法。  </p>
-<ol>
-<li>data参数<br>在讲解之前，首先需要说明的是data参数是可选的，如果传入了此参数，要以字节流编码格式的内容，即bytes类型，需要进行转化。此时的请求方式不再是GET方法，而是POST方法.因为如果使用GET方法，会将传入data暴露在url中，十分不安全。<br>实例一:    <figure class="highlight plaintext"><table><tr><td class="code"><pre><span class="line">from urllib import request, parse</span><br><span class="line"></span><br><span class="line">data = bytes(parse.urlencode(&#123;&#x27;word&#x27;: &#x27;hello world&#x27;&#125;), encoding=&#x27;utf8&#x27;)</span><br><span class="line">response = request.urlopen(&#x27;http://httpbin.org/post&#x27;, data=data)</span><br><span class="line">print(response.read().decode(&#x27;utf8&#x27;))</span><br></pre></td></tr></table></figure>
-这里我们传入了一个参数word，值为hello world。由于发送的的data需要是字节流类型，此处使用到了上文提到的工具包函数parse，使用它将我们要传入的函数进行转码。在我们执行完这段代码后，服务器会给我们返回一下结果:    <figure class="highlight plaintext"><table><tr><td class="code"><pre><span class="line">&#123;</span><br><span class="line">  &quot;args&quot;: &#123;&#125;,</span><br><span class="line">  &quot;data&quot;: &quot;&quot;,</span><br><span class="line">  &quot;files&quot;: &#123;&#125;,</span><br><span class="line">  &quot;form&quot;: &#123;</span><br><span class="line">    &quot;word&quot;: &quot;hello world&quot;</span><br><span class="line">  &#125;,</span><br><span class="line">  &quot;headers&quot;: &#123;</span><br><span class="line">    &quot;Accept-Encoding&quot;: &quot;identity&quot;,</span><br><span class="line">    &quot;Connection&quot;: &quot;close&quot;,</span><br><span class="line">    &quot;Content-Length&quot;: &quot;16&quot;,</span><br><span class="line">    &quot;Content-Type&quot;: &quot;application/x-www-form-urlencoded&quot;,</span><br><span class="line">    &quot;Host&quot;: &quot;httpbin.org&quot;,</span><br><span class="line">    &quot;User-Agent&quot;: &quot;Python-urllib/3.7&quot;</span><br><span class="line">  &#125;,</span><br><span class="line">  &quot;json&quot;: null,</span><br><span class="line">  &quot;origin&quot;: &quot;115.60.58.52&quot;,</span><br><span class="line">  &quot;url&quot;: &quot;http://httpbin.org/post&quot;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
-此时我们可以很容易的看到，在返回的结果中有form字段，字段中的内容就是我们传入的data中的内容，至此我们已经模拟了表单提交的过程，以POST请求方式尽心传输数据。  </li>
-<li>timeout参数<br>顾名思义，这个参数就是用来设置超时的。单位为秒，意思是当请求超出了设置的值后还有得到响应，就讲异常抛出。如果此参数不指定时间，使用全局默认时间。<br>实例：  <figure class="highlight plaintext"><table><tr><td class="code"><pre><span class="line">from urllib import request</span><br><span class="line"></span><br><span class="line">response = request .urlopen(&#x27;http://httpbin.org/get&#x27;, timeout=0.1)</span><br><span class="line">print(response .read().decode(&#x27;utf8&#x27;))</span><br></pre></td></tr></table></figure>
-运行结果：  <figure class="highlight plaintext"><table><tr><td class="code"><pre><span class="line">Traceback (most recent call last):</span><br><span class="line">  File &quot;test_urllib_001.py&quot;, line 14, in &lt;module&gt;</span><br><span class="line">    response = request .urlopen(&#x27;http://httpbin.org/get&#x27;, timeout=0.1)</span><br><span class="line">  File &quot;/home/rain/.pyenv/versions/3.7.0/lib/python3.7/urllib/request.py&quot;, line 222, in urlopen</span><br><span class="line">    return opener.open(url, data, timeout)</span><br><span class="line">  File &quot;/home/rain/.pyenv/versions/3.7.0/lib/python3.7/urllib/request.py&quot;, line 525, in open</span><br><span class="line">    response = self._open(req, data)</span><br><span class="line">  File &quot;/home/rain/.pyenv/versions/3.7.0/lib/python3.7/urllib/request.py&quot;, line 543, in _open</span><br><span class="line">    &#x27;_open&#x27;, req)</span><br><span class="line">  File &quot;/home/rain/.pyenv/versions/3.7.0/lib/python3.7/urllib/request.py&quot;, line 503, in _call_chain</span><br><span class="line">    result = func(*args)</span><br><span class="line">  File &quot;/home/rain/.pyenv/versions/3.7.0/lib/python3.7/urllib/request.py&quot;, line 1345, in http_open</span><br><span class="line">    return self.do_open(http.client.HTTPConnection, req)</span><br><span class="line">  File &quot;/home/rain/.pyenv/versions/3.7.0/lib/python3.7/urllib/request.py&quot;, line 1319, in do_open</span><br><span class="line">    raise URLError(err)</span><br><span class="line">urllib.error.URLError: &lt;urlopen error timed out&gt;</span><br></pre></td></tr></table></figure>
-这里我们设置了超时的时间是0.1秒。程序再执行0.1秒以后，服务器依然没有任何响应，于是抛出了URLError异常。可以从<code>&lt;urlopen error timed out&gt;</code>看出是网络超时。那么问题来了，如何抓取这种情况呢？<br>实例：  <figure class="highlight plaintext"><table><tr><td class="code"><pre><span class="line">from urllib import request, error</span><br><span class="line">import socket</span><br><span class="line"></span><br><span class="line">try:</span><br><span class="line">    response = request .urlopen(&#x27;http://httpbin.org/get&#x27;, timeout=0.1)</span><br><span class="line">except error.URLError as e:</span><br><span class="line">    if isinstance(e.reason, socket.timeout):</span><br><span class="line">        print(&#x27;Time Out&#x27;)</span><br></pre></td></tr></table></figure>
-我们用try: … except: …来捕获异常，此处引入了socket模块。</li>
-</ol>
-<p>2、Request<br>到此，我们知道了如何用urlopen方法实现一个简单的请求发送。但是这些简单参数有时候并不能满足我们的需求，比如我们需要在请求中添加header，此时就需要一个更加强大的类来实现了，这就是本节要讲的Request类。<br>实例是最好的验证。<br>实例：</p>
-<figure class="highlight plaintext"><table><tr><td class="code"><pre><span class="line">from urllib import request</span><br><span class="line"></span><br><span class="line">req = request.Request(&#x27;https://baidu.com&#x27;)</span><br><span class="line">response = request.urlopen(req)</span><br><span class="line">print(response.read().decode(&#x27;utf-8&#x27;))</span><br></pre></td></tr></table></figure>
-<p>此处我们依然使用了上文的urlopen()方法，只是此时的参数不再是一个URL了，而是一个Request对象。另外，这个函数我们可以很灵活的配置我们需要的参数。看下它的构造方法吧：<br><code>urllib.request.Request(url, data=None, headers=&#123;&#125;,origin_req_host=None, unverifiable=False,method=None)</code><br>  解释下：</p>
-<ul>
-<li>url：请求的URL，必填项</li>
-<li>data：字节流，请求时需要带的数据</li>
-<li>header：请求头，在创建实例后可以通过add_header()添加</li>
-<li>origin_req_host: 请求方的host名称或IP地址</li>
-<li>unverifiable：表示请求是否无法是验证的，默认为False。意思是用户没有足够的权限来选择接收这个请求的结果。</li>
-<li>method：请求是用的方法，如GET、POST等</li>
-</ul>
-<p>下面实现一个多参数构建请求的例子：</p>
-<figure class="highlight plaintext"><table><tr><td class="code"><pre><span class="line">from urllib import request, parse</span><br><span class="line"></span><br><span class="line">url = &#x27;http://httpbin.org/post&#x27;</span><br><span class="line"></span><br><span class="line">headers = &#123;</span><br><span class="line">    &#x27;User-Agent&#x27;: &#x27;Mozilla/5.0 (X11; Linux x86_64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/71.0.3578.80 Safari/537.36&#x27;</span><br><span class="line">&#125;</span><br><span class="line">dict = &#123;</span><br><span class="line">    &#x27;name&#x27;: &quot;spider_road&quot;</span><br><span class="line">&#125;</span><br><span class="line"></span><br><span class="line">data= bytes(parse.urlencode(dict), encoding=&#x27;utf8&#x27;)</span><br><span class="line">req = request.Request(url=url, data=data, headers=headers, method =&#x27;POST&#x27;)</span><br><span class="line">response = request.urlopen(req)</span><br><span class="line">print(response.read().decode(&#x27;utf8&#x27;))</span><br></pre></td></tr></table></figure>
-<p>我们通过四个参数四个参数构建了这个请求，运行结果如下：</p>
-<figure class="highlight plaintext"><table><tr><td class="code"><pre><span class="line">&#123;</span><br><span class="line">  &quot;args&quot;: &#123;&#125;,</span><br><span class="line">  &quot;data&quot;: &quot;&quot;,</span><br><span class="line">  &quot;files&quot;: &#123;&#125;,</span><br><span class="line">  &quot;form&quot;: &#123;</span><br><span class="line">    &quot;name&quot;: &quot;spider_road&quot;</span><br><span class="line">  &#125;,</span><br><span class="line">  &quot;headers&quot;: &#123;</span><br><span class="line">    &quot;Accept-Encoding&quot;: &quot;identity&quot;,</span><br><span class="line">    &quot;Connection&quot;: &quot;close&quot;,</span><br><span class="line">    &quot;Content-Length&quot;: &quot;16&quot;,</span><br><span class="line">    &quot;Content-Type&quot;: &quot;application/x-www-form-urlencoded&quot;,</span><br><span class="line">    &quot;Host&quot;: &quot;httpbin.org&quot;,</span><br><span class="line">    &quot;User-Agent&quot;: &quot;Mozilla/5.0 (X11; Linux x86_64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/71.0.3578.80 Safari/537.36&quot;</span><br><span class="line">  &#125;,</span><br><span class="line">  &quot;json&quot;: null,</span><br><span class="line">  &quot;origin&quot;: &quot;115.60.58.52&quot;,</span><br><span class="line">  &quot;url&quot;: &quot;http://httpbin.org/post&quot;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
-
-<h3 id="异常的处理"><a href="#异常的处理" class="headerlink" title="异常的处理"></a>异常的处理</h3><p>在上节中，我们简单的提到了如何对异常做出处理，但是程序在运行过程总会出现一些其他的错误，当出现这些错误时，异常处理还是很有必要做的。<br>1、URLError<br>URLError类来自于urllib库的error模块，继承自OSError类，由request模块产生的异常都已使用这个类来捕捉。<br>实例：  </p>
-<figure class="highlight plaintext"><table><tr><td class="code"><pre><span class="line">from urllib import request, error</span><br><span class="line"></span><br><span class="line">try:</span><br><span class="line">    response = request.urlopen(&#x27;https://spider-road.com&#x27;)</span><br><span class="line">except error.URLError as e:</span><br><span class="line">    print(e.reason)</span><br></pre></td></tr></table></figure>
-<p>上面的程序我们使用它打开了一个不存在的网址，我们使用try:… except:…来捕获了异常。<br>运行输出：<code>[Errno -2] Name or service not known</code>，此时有效得避免了程序异常终止。</p>
-<p>2、HTTPError<br>它是URLError的子类，用来处理HTTP请求错误，比如认证请求失败等。它有一下3个属性：</p>
-<ul>
-<li>code： http状态码</li>
-<li>reason：错误原因</li>
-<li>headers： 返回请求头</li>
-</ul>
-<p>实例验证：</p>
-<figure class="highlight plaintext"><table><tr><td class="code"><pre><span class="line">from urllib import request, error</span><br><span class="line"></span><br><span class="line">try:</span><br><span class="line">    response = request.urlopen(&#x27;https://spider-road.com&#x27;)</span><br><span class="line">except error.HTTPError as e:</span><br><span class="line">    print(f&#x27;code:&#123;e.code&#125;\nreason:&#123;e.reason&#125;\nheaders:&#123;e.headers&#125;&#x27;)</span><br><span class="line">except error.URLError as e:</span><br><span class="line">    print(e.reason)</span><br></pre></td></tr></table></figure>
-<p>由于没有该网站，所以最后返回的是：<code>[Errno 110] Connection timed out</code><br>至此，关于urllib请求和错误处理已经讲解完毕，后续还有关于此节更为高级的用法。欢迎订阅爬虫之道，我们在这里等待你的到来。</p>
-]]></content>
-      <categories>
-        <category>Python后端</category>
-      </categories>
-      <tags>
-        <tag>爬虫</tag>
-        <tag>urllib</tag>
-      </tags>
-  </entry>
-  <entry>
-    <title>为Next加上彩色标签云</title>
-    <url>/190520/</url>
-    <content><![CDATA[<p>最近一直看hexo官方的标签云太难看，就google了一下。最终搜索到了这篇文章（<a href="https://me.idealli.com/post/d6caa003.html">传送门</a>），在此也做下记录吧！</p>
-<span id="more"></span>
-
-
-<ol>
-<li><p>打开themes –&gt; next –&gt; layout –&gt; page.swig文件</p>
-</li>
-<li><p>找到<code>&#123; % if page.type === &#39;tags&#39; % &#125;</code></p>
-</li>
-<li><p>将下方代码进行替换即可</p>
-</li>
-</ol>
-<figure class="highlight text"><table><tr><td class="code"><pre><span class="line">原内容：</span><br><span class="line"></span><br><span class="line">&lt;div class=&quot;tag-cloud-tags&quot;&gt;</span><br><span class="line">  &#123;% if not theme.tagcloud %&#125;</span><br><span class="line">    &#123;&#123; tagcloud(&#123;min_font: 12, max_font: 30, amount: 200, color: true, start_color: &#x27;#ccc&#x27;, end_color: &#x27;#111&#x27;&#125;) &#125;&#125;</span><br><span class="line">  &#123;% else %&#125;</span><br><span class="line">    &#123;&#123; tagcloud(&#123;min_font: theme.tagcloud.min, max_font: theme.tagcloud.max, amount: theme.tagcloud.amount, color: true, start_color: theme.tagcloud.start, end_color: theme.tagcloud.end&#125;) &#125;&#125;</span><br><span class="line">  &#123;% endif %&#125;</span><br><span class="line">&lt;/div&gt;</span><br></pre></td></tr></table></figure>
-
-<hr>
-<figure class="highlight text"><table><tr><td class="code"><pre><span class="line">修改之后的内容：</span><br><span class="line"></span><br><span class="line">&lt;div class=&quot;tag-cloud-tags&quot; id=&quot;tags&quot;&gt;</span><br><span class="line">  &#123;&#123; tagcloud(&#123;min_font: 16, max_font: 16, amount: 300, color: true, start_color: &#x27;#fff&#x27;, end_color: &#x27;#fff&#x27;&#125;) &#125;&#125;</span><br><span class="line">&lt;/div&gt;</span><br><span class="line">&lt;br/&gt;</span><br><span class="line"></span><br><span class="line">&lt;script type=&quot;text/javascript&quot;&gt;</span><br><span class="line">  var alltags=document.getElementById(&#x27;tags&#x27;);</span><br><span class="line">  var tags=alltags.getElementsByTagName(&#x27;a&#x27;);</span><br><span class="line"></span><br><span class="line">  for (var i = tags.length - 1; i &gt;= 0; i--) &#123;</span><br><span class="line">    var r=Math.floor(Math.random()*75+130);</span><br><span class="line">    var g=Math.floor(Math.random()*75+100);</span><br><span class="line">    var b=Math.floor(Math.random()*75+80);</span><br><span class="line">    tags[i].style.background = &quot;rgb(&quot;+r+&quot;,&quot;+g+&quot;,&quot;+b+&quot;)&quot;;</span><br><span class="line">  &#125;</span><br><span class="line">&lt;/script&gt;</span><br><span class="line"></span><br><span class="line">&lt;style type=&quot;text/css&quot;&gt;</span><br><span class="line">  div#posts.posts-expand .tag-cloud a&#123;</span><br><span class="line">    background-color: #f5f7f1;</span><br><span class="line">    border-radius: 6px;</span><br><span class="line">    padding-left: 10px;</span><br><span class="line">    padding-right: 10px;</span><br><span class="line">    margin-top: 18px;</span><br><span class="line">  &#125;</span><br><span class="line"></span><br><span class="line">  .tag-cloud a&#123;</span><br><span class="line">    background-color: #f5f7f1;</span><br><span class="line">    border-radius: 4px;</span><br><span class="line">    padding-right: 5px;</span><br><span class="line">    padding-left: 5px;</span><br><span class="line">    margin-right: 5px;</span><br><span class="line">    margin-left: 0px;</span><br><span class="line">    margin-top: 8px;</span><br><span class="line">    margin-bottom: 0px;</span><br><span class="line">&#125;</span><br><span class="line"></span><br><span class="line">  .tag-cloud a:before&#123;</span><br><span class="line">    content: &quot;&quot;;</span><br><span class="line">  &#125;</span><br><span class="line"></span><br><span class="line">  .tag-cloud-tags&#123;</span><br><span class="line">    text-align: left;</span><br><span class="line">    counter-reset: tags;</span><br><span class="line">  &#125;</span><br><span class="line">&lt;/style&gt;</span><br></pre></td></tr></table></figure>
-
-<p>之后清理缓存，重新部署就行了。</p>
-<p>最终效果如下：</p>
-<p><img src="/userImages/tag-cloud.png" alt="彩色标签云"></p>
-]]></content>
-      <categories>
-        <category>起始篇</category>
-      </categories>
-      <tags>
-        <tag>标签云</tag>
-      </tags>
-  </entry>
-  <entry>
-    <title>Python 3中的Urllib库的使用</title>
-    <url>/190615/</url>
-    <content><![CDATA[<p>在Python中有着这样一个常用的、基础的爬虫库。在Python2中为urllib.urllib，在Python3中官方为了便于管理，将和请求有关的函数封装进了urllib.request模块中。</p>
-<p>在此处，使用Python3做记录。</p>
-<span id="more"></span>
-
-<h3 id="urlopen函数"><a href="#urlopen函数" class="headerlink" title="urlopen函数"></a>urlopen函数</h3><p>urlopen函数是request中的一个很常用的函数，它主要用于打开一个网页。其中有着很多的属性。</p>
-<figure class="highlight python"><table><tr><td class="code"><pre><span class="line"><span class="keyword">from</span> urllib <span class="keyword">import</span> request</span><br><span class="line"></span><br><span class="line">resp = request.<span class="built_in">open</span>(<span class="string">&quot;https://www.baidu.com&quot;</span>)</span><br><span class="line"><span class="built_in">print</span>(resp.read())</span><br></pre></td></tr></table></figure>
-
-
-
-<h3 id="urlretrieve函数"><a href="#urlretrieve函数" class="headerlink" title="urlretrieve函数"></a>urlretrieve函数</h3><p>urlretrieve函数可以很方便的将网页保存至本地。其实用方法见下方代码：</p>
-<figure class="highlight python"><table><tr><td class="code"><pre><span class="line"><span class="keyword">from</span> urllib <span class="keyword">import</span> request</span><br><span class="line"></span><br><span class="line">request.urlretrieve()</span><br></pre></td></tr></table></figure>
-
-
-
-<h3 id="urlencode函数"><a href="#urlencode函数" class="headerlink" title="urlencode函数"></a>urlencode函数</h3><p>将字典类型的数据转化为url编码的数据</p>
-<figure class="highlight python"><table><tr><td class="code"><pre><span class="line"><span class="keyword">from</span> urllib <span class="keyword">import</span> parse, request</span><br><span class="line"></span><br><span class="line">params = &#123;<span class="string">&quot;wd&quot;</span>: <span class="string">&quot;爬虫之道&quot;</span>&#125;</span><br><span class="line"></span><br><span class="line">qs = parse.urlencode(params)</span><br><span class="line"></span><br><span class="line">url = <span class="string">f&quot;https://www.baidu.com/s?<span class="subst">&#123;qs&#125;</span>&quot;</span></span><br><span class="line"></span><br><span class="line">resp = request.urlopen(url)</span><br></pre></td></tr></table></figure>
-
-
-
-<h3 id="parse-qs函数"><a href="#parse-qs函数" class="headerlink" title="parse_qs函数"></a>parse_qs函数</h3><p>将url编码后的参数还原为字典形式，其中的值以列表形式进行存储。</p>
-<figure class="highlight python"><table><tr><td class="code"><pre><span class="line"><span class="keyword">from</span> urllib <span class="keyword">import</span> parse</span><br><span class="line"></span><br><span class="line">ps = &#123;<span class="string">&quot;name&quot;</span>: <span class="string">&quot;爬虫之道&quot;</span>, <span class="string">&quot;vxcode&quot;</span>: <span class="string">&quot;spider_rold&quot;</span>&#125;</span><br><span class="line"></span><br><span class="line">results = parse.urlencode(ps)</span><br><span class="line"></span><br><span class="line">new_results = parse.parse_qs(results)</span><br><span class="line"><span class="built_in">print</span>(new_results)</span><br></pre></td></tr></table></figure>
-
-<h3 id="urlparse和urlsplit函数"><a href="#urlparse和urlsplit函数" class="headerlink" title="urlparse和urlsplit函数"></a>urlparse和urlsplit函数</h3><p>对URL各部分进行分割，其中在使用urlsplit函数时，没有_params_参数。（<em>注</em>：params参数指的是在以下链接中”?”前添加”;”，位于这两者之间的内容，如：_<a href="https://www.baidu.com/s;hello?wd=hello+world_%EF%BC%89">https://www.baidu.com/s;hello?wd=hello+world_）</a></p>
-<figure class="highlight python"><table><tr><td class="code"><pre><span class="line"><span class="keyword">from</span> urllib <span class="keyword">import</span> parse</span><br><span class="line"></span><br><span class="line">params = &#123;<span class="string">&quot;wd&quot;</span>: <span class="string">&quot;爬虫之道&quot;</span>&#125;</span><br><span class="line"></span><br><span class="line">qs = parse.urlencode(params)</span><br><span class="line">url = <span class="string">f&quot;https://www.baidu.com/s?<span class="subst">&#123;qs&#125;</span>&quot;</span></span><br><span class="line"></span><br><span class="line">result = parse.urlparse(url)</span><br><span class="line"></span><br><span class="line"><span class="built_in">print</span>(<span class="string">&#x27;scheme:&#x27;</span>, result.scheme)</span><br><span class="line"><span class="built_in">print</span>(<span class="string">&#x27;netloc:&#x27;</span>, result.netloc)</span><br><span class="line"><span class="built_in">print</span>(<span class="string">&#x27;path:&#x27;</span>, result.path)</span><br><span class="line"><span class="built_in">print</span>(<span class="string">&#x27;params:&#x27;</span>, result.params)</span><br><span class="line"><span class="built_in">print</span>(<span class="string">&#x27;query:&#x27;</span>, result.query)</span><br><span class="line"><span class="built_in">print</span>(<span class="string">&#x27;fragment:&#x27;</span>, result.fragment)</span><br></pre></td></tr></table></figure>
-
-<h3 id="request-Request类"><a href="#request-Request类" class="headerlink" title="request.Request类"></a>request.Request类</h3><p>在爬虫中，如果想使用一些参数，如：请求头，请求数据等，需要使用到Request类。如果只是使用urlopen函数，没有办法进行添加请求头。在没有使用_User-Agent_的时候，如果服务器发现是爬虫，服务器可能会返回一条假的数据内容，或者是不返回内容。所以，将爬虫程序伪装成正常的浏览器访问是很有必要的一件事。</p>
-<figure class="highlight python"><table><tr><td class="code"><pre><span class="line"><span class="keyword">from</span> urllib <span class="keyword">import</span> request, parse</span><br><span class="line"></span><br><span class="line">headers = &#123;<span class="string">&#x27;user-agent&#x27;</span>: <span class="string">&quot;Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/75.0.3770.90 Safari/537.36&quot;</span>&#125;</span><br><span class="line">params = &#123;<span class="string">&quot;wd&quot;</span>: <span class="string">&quot;爬虫之道&quot;</span>&#125;</span><br><span class="line"></span><br><span class="line">qs = parse.urlencode(params)</span><br><span class="line">url = <span class="string">f&quot;https://www.baidu.com/s?<span class="subst">&#123;qs&#125;</span>&quot;</span></span><br><span class="line"></span><br><span class="line">req = request.Request(url, headers=headers)</span><br><span class="line">resp = request.urlopen(req)</span><br><span class="line"><span class="built_in">print</span>(resp.read())</span><br></pre></td></tr></table></figure>
-
-<p>注： 可以去挑战一下网络爬虫界的“珠穆朗玛峰” —– 拉勾网</p>
-<h3 id="ProxyHandler处理器"><a href="#ProxyHandler处理器" class="headerlink" title="ProxyHandler处理器"></a>ProxyHandler处理器</h3><p>在爬取网站时，一般情况下网站都会做一些反爬虫机制，如封ip。如果只使用一个ip地址进行爬取，在网站封掉ip地址后，就无法获取数据了。所以，在有反爬虫机制的情况，反反爬虫机制便可以使用了。在urllib中通过使用ProxyHandler进行设置代理服务器。</p>
-<p>在使用代理与未使用代理的区别：</p>
-<p><img src="/userImages/proxy.jpg">  </p>
-<figure class="highlight python"><table><tr><td class="code"><pre><span class="line"><span class="keyword">from</span> urllib <span class="keyword">import</span> request</span><br><span class="line"></span><br><span class="line"><span class="comment">### 未使用代理</span></span><br><span class="line">resp = request.urlopen(<span class="string">&#x27;http://httpbin.org/get&#x27;</span>)</span><br><span class="line"><span class="built_in">print</span>(resp.read())</span><br><span class="line"></span><br><span class="line"><span class="comment">### 使用代理</span></span><br><span class="line">handler = request.ProxyHandler(&#123;<span class="string">&quot;https&quot;</span>: <span class="string">&quot;58.253.152.231:9999&quot;</span>&#125;)</span><br><span class="line"></span><br><span class="line">opener = request.build_opener(handler)</span><br><span class="line">req = request.Request(<span class="string">&quot;http://httpbin.org/get&quot;</span>)</span><br><span class="line">resp = opener.<span class="built_in">open</span>(req)</span><br><span class="line"><span class="built_in">print</span>(resp.read())</span><br></pre></td></tr></table></figure>
-
-<p>常用的代理：</p>
-<ul>
-<li>西刺代理：<a href="https://www.xicidaili.com/">https://www.xicidaili.com</a></li>
-<li>快代理: <a href="https://www.kuaidaili.com/free/">https://www.kuaidaili.com/free/</a></li>
-</ul>
-<h3 id="Cookie是什么"><a href="#Cookie是什么" class="headerlink" title="Cookie是什么"></a>Cookie是什么</h3><p>在网站汇总，http请求是无状态的。在第一次和服务器建立连接登录后，第二次请求服务器依旧不能知道当前请求的用户是谁。Cookie的出现就是为了解决该问题。第一次登录后，服务器会返回一些数据(cookie) 给浏览器，然后浏览器将数据保存在本地。当用户发送第二次请求时，浏览器会自动的将保存在本地的数据(cookie)一起发送给服务器。服务通过判断不同的cookie信息，进行确认用户。cookie的存储大小是有限的一般不会超过4KB，因此在设置cookie对的时候，只能存储少量数据。</p>
-<h4 id="cookie的格式："><a href="#cookie的格式：" class="headerlink" title="cookie的格式："></a>cookie的格式：</h4><p>Set-Cookie: NAME&#x3D;VALUE；Expires&#x3D;DATE；Path&#x3D;PATH；Domain&#x3D;DOMAIN_NAME；SECURE</p>
-<p>参数含义：</p>
-<ul>
-<li>NAME：Cookie的名字</li>
-<li>VALUE：Cookie的值</li>
-<li>Expires:  Cookie的过期时间</li>
-<li>Path：Cookie作用的路径</li>
-<li>Domain： Cookie作用的域名</li>
-<li>SECURE：是否只在HTTP协议下起作用</li>
-</ul>
-<h3 id="使用cookielib库和HTTPCookieProcessor模块模拟登陆"><a href="#使用cookielib库和HTTPCookieProcessor模块模拟登陆" class="headerlink" title="使用cookielib库和HTTPCookieProcessor模块模拟登陆"></a>使用cookielib库和HTTPCookieProcessor模块模拟登陆</h3><p>在Python中使用cookie，一般是通过http.cookiejar模块和urllib模块的HTTPCookieProcessor处理器一起使用的。</p>
-<ul>
-<li>http.cookiejar：提供用于存储cookie的对象</li>
-<li>HTTPCookieProcessor：处理cookie对象并构建handler对象</li>
-</ul>
-<h4 id="http-cookiejar模块"><a href="#http-cookiejar模块" class="headerlink" title="http.cookiejar模块"></a>http.cookiejar模块</h4><p>在该模块中主要有三个类，CookieJar、FileCookieJar、MozillaCookieJar、LWPCookieJar。其作用如下：</p>
-<ul>
-<li>CookieJar：管理HTTP cookie值、存储HTTP请求生成的cookie，向传出的HTTP请求添加cookie对象。整个cookie都存储在内存中，对CookieJar实例进行垃圾回收后cookie失效。</li>
-<li>FileCookieJar (filename, delayload&#x3D;None, policy&#x3D;None)：从CookieJar派生而来，用来创建FileCookieJar实例。检索cookie信息并将cookie存储到文件中。filename是存储cookie的文件名，delayload为True是支持延迟访问文件，即只有在需要时才读取文件或将数据存储在文件中。</li>
-<li>MozillaCookieJar (filename, delayload&#x3D;None, policy&#x3D;None)：从FileCookieJar派生而来，创建与Mozilla浏览器cookies.txt兼容的FileCookieJar实例。</li>
-<li>LWPCookieJar (filename, delayload&#x3D;None, policy&#x3D;None)：从FileCookieJar派生而来，创建与libwww·per标准的Set-Cookies3文件格式兼容的FileCookieJar实例。</li>
-</ul>
-<h3 id="保存Cookie至本地"><a href="#保存Cookie至本地" class="headerlink" title="保存Cookie至本地"></a>保存Cookie至本地</h3><p>保存cookie到本地，可以使用cookiejar的save方法。</p>
-<figure class="highlight python"><table><tr><td class="code"><pre><span class="line"><span class="keyword">from</span> urllib <span class="keyword">import</span> request</span><br><span class="line"><span class="keyword">from</span> http.cookiejar <span class="keyword">import</span> MozillaCookieJar</span><br><span class="line"></span><br><span class="line">cookiejar = MozillaCookieJar(<span class="string">&#x27;cookies.txt&#x27;</span>)</span><br><span class="line">handler = request.HTTPCookieProcessor(cookiejar)</span><br><span class="line">opener = request.build_opener(handler)</span><br><span class="line"></span><br><span class="line">handlers = &#123;</span><br><span class="line">    <span class="string">&#x27;User-Agent&#x27;</span>: <span class="string">&#x27;Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/75.0.3770.100 Safari/537.36&#x27;</span>,</span><br><span class="line">&#125;</span><br><span class="line"></span><br><span class="line">req = request.Request(<span class="string">&#x27;http://httpbin.org/cookies&#x27;</span>, headers=handlers)</span><br><span class="line"></span><br><span class="line">resp = opener.<span class="built_in">open</span>(req)</span><br><span class="line"><span class="built_in">print</span>(resp.read())</span><br><span class="line"></span><br><span class="line">cookiejar.save(ignore_discard=<span class="literal">True</span>, ignore_expires=<span class="literal">True</span>)</span><br></pre></td></tr></table></figure>
-
-<h3 id="加载本地cookie"><a href="#加载本地cookie" class="headerlink" title="加载本地cookie"></a>加载本地cookie</h3><p>从本地文件读取cookie信息，可以使用cookiejar中的load方法</p>
-<figure class="highlight python"><table><tr><td class="code"><pre><span class="line"><span class="keyword">from</span> http.cookiejar <span class="keyword">import</span> MozillaCookieJar</span><br><span class="line"></span><br><span class="line">cookiejar = MozillaCookieJar(<span class="string">&#x27;cookies.txt&#x27;</span>)</span><br><span class="line">cookiejar.load(ignore_discard=<span class="literal">True</span>)</span><br><span class="line"><span class="keyword">for</span> cookie <span class="keyword">in</span> cookiejar:</span><br><span class="line">    <span class="built_in">print</span>(cookie)</span><br></pre></td></tr></table></figure>
-
-]]></content>
-      <categories>
-        <category>爬虫</category>
-      </categories>
-      <tags>
-        <tag>urllib</tag>
       </tags>
   </entry>
   <entry>
@@ -1421,6 +1421,19 @@
       </tags>
   </entry>
   <entry>
+    <title>一次完整的HTTP请求过程</title>
+    <url>/190724/</url>
+    <content><![CDATA[<h3 id="一次完整的HTTP请求过程"><a href="#一次完整的HTTP请求过程" class="headerlink" title="一次完整的HTTP请求过程"></a>一次完整的HTTP请求过程</h3><p>搬运来的，直接上链接吧：</p>
+<p>链接：<a href="https://www.cnblogs.com/xuzekun/p/7527736.html">飞机起飞</a></p>
+]]></content>
+      <categories>
+        <category>HTTP</category>
+      </categories>
+      <tags>
+        <tag>HTTP请求过程</tag>
+      </tags>
+  </entry>
+  <entry>
     <title>动态网页数据抓取</title>
     <url>/190703/</url>
     <content><![CDATA[<h2 id="动态页面数据抓取"><a href="#动态页面数据抓取" class="headerlink" title="动态页面数据抓取"></a>动态页面数据抓取</h2><h3 id="什么是AJAX"><a href="#什么是AJAX" class="headerlink" title="什么是AJAX"></a>什么是AJAX</h3><p>AJAX（Asynchronouse JavaScript And XML）异步JavaScript和XML。在后台与服务器进行少量数据换时，可以在不重新加载整个网页的情况下，利用Ajax对网页实现异步更新。在传统的网页中，如果要获取更新内容，需要重新加载整个页面。因为传统的网页数据传输格式使用的是XML语法。在Ajax加载的网页中，数据的交互使用的是JSON格式。</p>
@@ -1636,19 +1649,6 @@
       </tags>
   </entry>
   <entry>
-    <title>一次完整的HTTP请求过程</title>
-    <url>/190724/</url>
-    <content><![CDATA[<h3 id="一次完整的HTTP请求过程"><a href="#一次完整的HTTP请求过程" class="headerlink" title="一次完整的HTTP请求过程"></a>一次完整的HTTP请求过程</h3><p>搬运来的，直接上链接吧：</p>
-<p>链接：<a href="https://www.cnblogs.com/xuzekun/p/7527736.html">飞机起飞</a></p>
-]]></content>
-      <categories>
-        <category>HTTP</category>
-      </categories>
-      <tags>
-        <tag>HTTP请求过程</tag>
-      </tags>
-  </entry>
-  <entry>
     <title>Mac中使用Navicat Premium</title>
     <url>/191217/</url>
     <content><![CDATA[<h3 id="给一个飞机链接"><a href="#给一个飞机链接" class="headerlink" title="给一个飞机链接"></a>给一个飞机链接</h3><p>链接1：<a href="https://linan.blog/2019/Navicat-Premium2/">起飞</a><br>链接2：<a href="https://hacpai.com/article/1571890862655">起飞</a></p>
@@ -1660,19 +1660,6 @@
       <tags>
         <tag>Mac</tag>
         <tag>破解</tag>
-      </tags>
-  </entry>
-  <entry>
-    <title>Pip 更新所有包</title>
-    <url>/20200412/</url>
-    <content><![CDATA[<figure class="highlight python"><table><tr><td class="code"><pre><span class="line">查看可更新包：</span><br><span class="line">pip <span class="built_in">list</span>  --outdated --<span class="built_in">format</span>=columns</span><br><span class="line">批量下载并更新：</span><br><span class="line">pip install pip-review</span><br><span class="line">pip-review --local --interactive</span><br></pre></td></tr></table></figure>
-
-]]></content>
-      <categories>
-        <category>Python后端</category>
-      </categories>
-      <tags>
-        <tag>Pip</tag>
       </tags>
   </entry>
   <entry>
@@ -2080,6 +2067,19 @@
       </categories>
       <tags>
         <tag>Flask</tag>
+      </tags>
+  </entry>
+  <entry>
+    <title>Pip 更新所有包</title>
+    <url>/20200412/</url>
+    <content><![CDATA[<figure class="highlight python"><table><tr><td class="code"><pre><span class="line">查看可更新包：</span><br><span class="line">pip <span class="built_in">list</span>  --outdated --<span class="built_in">format</span>=columns</span><br><span class="line">批量下载并更新：</span><br><span class="line">pip install pip-review</span><br><span class="line">pip-review --local --interactive</span><br></pre></td></tr></table></figure>
+
+]]></content>
+      <categories>
+        <category>Python后端</category>
+      </categories>
+      <tags>
+        <tag>Pip</tag>
       </tags>
   </entry>
   <entry>
@@ -2578,6 +2578,32 @@
       </tags>
   </entry>
   <entry>
+    <title>Hello World</title>
+    <url>/hello-world/</url>
+    <content><![CDATA[<p>Welcome to <a href="https://hexo.io/">Hexo</a>! This is your very first post. Check <a href="https://hexo.io/docs/">documentation</a> for more info. If you get any problems when using Hexo, you can find the answer in <a href="https://hexo.io/docs/troubleshooting.html">troubleshooting</a> or you can ask me on <a href="https://github.com/hexojs/hexo/issues">GitHub</a>.</p>
+<span id="more"></span>
+
+<h2 id="Quick-Start"><a href="#Quick-Start" class="headerlink" title="Quick Start"></a>Quick Start</h2><h3 id="Create-a-new-post"><a href="#Create-a-new-post" class="headerlink" title="Create a new post"></a>Create a new post</h3><figure class="highlight bash"><table><tr><td class="code"><pre><span class="line">$ hexo new <span class="string">&quot;My New Post&quot;</span></span><br></pre></td></tr></table></figure>
+
+<p>More info: <a href="https://hexo.io/docs/writing.html">Writing</a></p>
+<h3 id="Run-server"><a href="#Run-server" class="headerlink" title="Run server"></a>Run server</h3><figure class="highlight bash"><table><tr><td class="code"><pre><span class="line">$ hexo server</span><br></pre></td></tr></table></figure>
+
+<p>More info: <a href="https://hexo.io/docs/server.html">Server</a></p>
+<h3 id="Generate-static-files"><a href="#Generate-static-files" class="headerlink" title="Generate static files"></a>Generate static files</h3><figure class="highlight bash"><table><tr><td class="code"><pre><span class="line">$ hexo generate</span><br></pre></td></tr></table></figure>
+
+<p>More info: <a href="https://hexo.io/docs/generating.html">Generating</a></p>
+<h3 id="Deploy-to-remote-sites"><a href="#Deploy-to-remote-sites" class="headerlink" title="Deploy to remote sites"></a>Deploy to remote sites</h3><figure class="highlight bash"><table><tr><td class="code"><pre><span class="line">$ hexo deploy</span><br></pre></td></tr></table></figure>
+
+<p>More info: <a href="https://hexo.io/docs/deployment.html">Deployment</a></p>
+]]></content>
+      <categories>
+        <category>起始篇</category>
+      </categories>
+      <tags>
+        <tag>Hello World</tag>
+      </tags>
+  </entry>
+  <entry>
     <title>Hypervisor Drivers</title>
     <url>/hypervisor-drivers/</url>
     <content><![CDATA[<h3 id="Drivers-Models"><a href="#Drivers-Models" class="headerlink" title="Drivers Models"></a>Drivers Models</h3><p>The libvirt library exposes a guaranteed stable API &amp; ABI which is decoupled from any particular virtualization technology. In addition many of the APIs have associated XML schemata which are considered part of the stable ABI guarantee. Internally, there are multiple of implementations of the public ABI, each targeting a different virtualization technology. Each implementation is referred to as a driver. When obtaining a instance of the virConnect class, the application developer can provide a URI to determine which hypervisor driver is activated.  </p>
@@ -2637,32 +2663,6 @@
       <tags>
         <tag>tempfile</tag>
         <tag>临时文件</tag>
-      </tags>
-  </entry>
-  <entry>
-    <title>Hello World</title>
-    <url>/hello-world/</url>
-    <content><![CDATA[<p>Welcome to <a href="https://hexo.io/">Hexo</a>! This is your very first post. Check <a href="https://hexo.io/docs/">documentation</a> for more info. If you get any problems when using Hexo, you can find the answer in <a href="https://hexo.io/docs/troubleshooting.html">troubleshooting</a> or you can ask me on <a href="https://github.com/hexojs/hexo/issues">GitHub</a>.</p>
-<span id="more"></span>
-
-<h2 id="Quick-Start"><a href="#Quick-Start" class="headerlink" title="Quick Start"></a>Quick Start</h2><h3 id="Create-a-new-post"><a href="#Create-a-new-post" class="headerlink" title="Create a new post"></a>Create a new post</h3><figure class="highlight bash"><table><tr><td class="code"><pre><span class="line">$ hexo new <span class="string">&quot;My New Post&quot;</span></span><br></pre></td></tr></table></figure>
-
-<p>More info: <a href="https://hexo.io/docs/writing.html">Writing</a></p>
-<h3 id="Run-server"><a href="#Run-server" class="headerlink" title="Run server"></a>Run server</h3><figure class="highlight bash"><table><tr><td class="code"><pre><span class="line">$ hexo server</span><br></pre></td></tr></table></figure>
-
-<p>More info: <a href="https://hexo.io/docs/server.html">Server</a></p>
-<h3 id="Generate-static-files"><a href="#Generate-static-files" class="headerlink" title="Generate static files"></a>Generate static files</h3><figure class="highlight bash"><table><tr><td class="code"><pre><span class="line">$ hexo generate</span><br></pre></td></tr></table></figure>
-
-<p>More info: <a href="https://hexo.io/docs/generating.html">Generating</a></p>
-<h3 id="Deploy-to-remote-sites"><a href="#Deploy-to-remote-sites" class="headerlink" title="Deploy to remote sites"></a>Deploy to remote sites</h3><figure class="highlight bash"><table><tr><td class="code"><pre><span class="line">$ hexo deploy</span><br></pre></td></tr></table></figure>
-
-<p>More info: <a href="https://hexo.io/docs/deployment.html">Deployment</a></p>
-]]></content>
-      <categories>
-        <category>起始篇</category>
-      </categories>
-      <tags>
-        <tag>Hello World</tag>
       </tags>
   </entry>
   <entry>
