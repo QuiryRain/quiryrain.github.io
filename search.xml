@@ -180,6 +180,24 @@
       </tags>
   </entry>
   <entry>
+    <title>使用tkinter进行图片的遍历显示</title>
+    <url>/190228/</url>
+    <content><![CDATA[<h3 id="原因"><a href="#原因" class="headerlink" title="原因"></a>原因</h3><p>最近因为要写个GUI的内容，需要用到图像的遍历显示，因为没有办法,所以就自行摸索着开始写一个循环显示的TK。最终算是不符所望吧，勉强写出来一个，以此做下记录，便于下次使用。</p>
+<span id="more"></span>
+
+<figure class="highlight python"><table><tr><td class="code"><pre><span class="line"><span class="keyword">import</span> tkinter <span class="keyword">as</span> tk</span><br><span class="line"><span class="keyword">from</span> PIL <span class="keyword">import</span> ImageTk, Image</span><br><span class="line"><span class="keyword">import</span> glob, time</span><br><span class="line"><span class="keyword">import</span> threading</span><br><span class="line"></span><br><span class="line">filenames = glob.glob(<span class="string">&#x27;sysImages/*&#x27;</span>)</span><br><span class="line"></span><br><span class="line"></span><br><span class="line"><span class="keyword">def</span> <span class="title function_">autoQuit</span>():</span><br><span class="line">    time.sleep(<span class="number">2</span>)</span><br><span class="line">    root.quit()</span><br><span class="line"></span><br><span class="line"><span class="keyword">for</span> filename <span class="keyword">in</span> filenames:</span><br><span class="line">    root = tk.Tk()</span><br><span class="line"></span><br><span class="line">    img = Image.<span class="built_in">open</span>(filename)</span><br><span class="line">    photo = ImageTk.PhotoImage(img)</span><br><span class="line">    label = tk.Label(image=photo)</span><br><span class="line">    label.image = photo</span><br><span class="line">    label.pack()</span><br><span class="line"></span><br><span class="line">    t = threading.Thread(target=autoQuit)</span><br><span class="line">    t.start()</span><br><span class="line">    root.mainloop()</span><br><span class="line">    root.destroy()</span><br></pre></td></tr></table></figure>
+
+<hr>
+]]></content>
+      <categories>
+        <category>Python杂记</category>
+      </categories>
+      <tags>
+        <tag>tkinter</tag>
+        <tag>遍历图片</tag>
+      </tags>
+  </entry>
+  <entry>
     <title>使用chromedriver实现豆瓣网页的全网页截图</title>
     <url>/190108/</url>
     <content><![CDATA[<p>最近由于工作需要，需要对部分网站进行全文截屏。在网上搜了很久没有搜出好的方法，而且在新版的selenium中已经不在支持PhantomJS了，所以全文截取变得有点棘手。</p>
@@ -196,6 +214,24 @@
       <tags>
         <tag>Chromedriver</tag>
         <tag>全页面截屏</tag>
+      </tags>
+  </entry>
+  <entry>
+    <title>Tensorflow的基础学习和资料</title>
+    <url>/190416/</url>
+    <content><![CDATA[<h3 id="测试"><a href="#测试" class="headerlink" title="测试"></a>测试</h3><h3 id="以下内容为测试内容"><a href="#以下内容为测试内容" class="headerlink" title="以下内容为测试内容"></a>以下内容为测试内容</h3><blockquote>
+<p>以下内容未测试内容</p>
+</blockquote>
+<p>中文测试</p>
+<p>再次测试</p>
+]]></content>
+      <categories>
+        <category>Tensorflow</category>
+      </categories>
+      <tags>
+        <tag>Tensorflow</tag>
+        <tag>机器学习</tag>
+        <tag>资料</tag>
       </tags>
   </entry>
   <entry>
@@ -289,39 +325,74 @@
       </tags>
   </entry>
   <entry>
-    <title>Tensorflow的基础学习和资料</title>
-    <url>/190416/</url>
-    <content><![CDATA[<h3 id="测试"><a href="#测试" class="headerlink" title="测试"></a>测试</h3><h3 id="以下内容为测试内容"><a href="#以下内容为测试内容" class="headerlink" title="以下内容为测试内容"></a>以下内容为测试内容</h3><blockquote>
-<p>以下内容未测试内容</p>
-</blockquote>
-<p>中文测试</p>
-<p>再次测试</p>
-]]></content>
-      <categories>
-        <category>Tensorflow</category>
-      </categories>
-      <tags>
-        <tag>Tensorflow</tag>
-        <tag>机器学习</tag>
-        <tag>资料</tag>
-      </tags>
-  </entry>
-  <entry>
-    <title>使用tkinter进行图片的遍历显示</title>
-    <url>/190228/</url>
-    <content><![CDATA[<h3 id="原因"><a href="#原因" class="headerlink" title="原因"></a>原因</h3><p>最近因为要写个GUI的内容，需要用到图像的遍历显示，因为没有办法,所以就自行摸索着开始写一个循环显示的TK。最终算是不符所望吧，勉强写出来一个，以此做下记录，便于下次使用。</p>
+    <title>在Centos中架设ss服务</title>
+    <url>/190425/</url>
+    <content><![CDATA[<p>想必大家都被国内的“墙”折磨过，是不是很难受，是不是有时候很无能为力。这里就为大家介绍几种上网的方式。</p>
+<h3 id="Google访问助手"><a href="#Google访问助手" class="headerlink" title="Google访问助手"></a>Google访问助手</h3><p>如果你使用的是这种方式，那么恭喜你，下面介绍的内容和你无关了。</p>
+<p>Google访问助手下载链接：<a href="http://ggfwzs.com/">链接</a></p>
 <span id="more"></span>
 
-<figure class="highlight python"><table><tr><td class="code"><pre><span class="line"><span class="keyword">import</span> tkinter <span class="keyword">as</span> tk</span><br><span class="line"><span class="keyword">from</span> PIL <span class="keyword">import</span> ImageTk, Image</span><br><span class="line"><span class="keyword">import</span> glob, time</span><br><span class="line"><span class="keyword">import</span> threading</span><br><span class="line"></span><br><span class="line">filenames = glob.glob(<span class="string">&#x27;sysImages/*&#x27;</span>)</span><br><span class="line"></span><br><span class="line"></span><br><span class="line"><span class="keyword">def</span> <span class="title function_">autoQuit</span>():</span><br><span class="line">    time.sleep(<span class="number">2</span>)</span><br><span class="line">    root.quit()</span><br><span class="line"></span><br><span class="line"><span class="keyword">for</span> filename <span class="keyword">in</span> filenames:</span><br><span class="line">    root = tk.Tk()</span><br><span class="line"></span><br><span class="line">    img = Image.<span class="built_in">open</span>(filename)</span><br><span class="line">    photo = ImageTk.PhotoImage(img)</span><br><span class="line">    label = tk.Label(image=photo)</span><br><span class="line">    label.image = photo</span><br><span class="line">    label.pack()</span><br><span class="line"></span><br><span class="line">    t = threading.Thread(target=autoQuit)</span><br><span class="line">    t.start()</span><br><span class="line">    root.mainloop()</span><br><span class="line">    root.destroy()</span><br></pre></td></tr></table></figure>
+<h3 id="架设SS服务"><a href="#架设SS服务" class="headerlink" title="架设SS服务"></a>架设SS服务</h3><p>架设环境</p>
+<ul>
+<li>一台可以访问外网的VPS服务器</li>
+<li>Centos7 + Python2.x</li>
+</ul>
+<p>架设步骤</p>
+<ul>
+<li>安装必须的软件包:</li>
+</ul>
+<figure class="highlight text"><table><tr><td class="code"><pre><span class="line">yum upgrade -y</span><br><span class="line">yum groupinstall &quot;Development Tools&quot;</span><br><span class="line">yum install epel-release -y</span><br><span class="line">yum install python-setuptools python-pip m2crypto -y</span><br><span class="line"></span><br><span class="line">## 更新pip包</span><br><span class="line">python -m pip install -U pip</span><br><span class="line"></span><br><span class="line">## 安装shadowsocks</span><br><span class="line">pip install shadowsocks</span><br></pre></td></tr></table></figure>
 
-<hr>
+<ul>
+<li><p>创建配置文件</p>
+<p>以下内容是创建唯一密码和端口的配置文件，如果多用户使用，建议直接使用多用户配置.</p>
+<figure class="highlight text"><table><tr><td class="code"><pre><span class="line">### 单用户配置</span><br><span class="line">vim /etc/shadowsocks.json</span><br><span class="line"></span><br><span class="line">&#123;</span><br><span class="line">  &quot;server&quot;:&quot;0.0.0.0&quot;,</span><br><span class="line">  &quot;server_port&quot;:server_port,    #例如5460</span><br><span class="line">  &quot;local_port&quot;:1080,</span><br><span class="line">  &quot;password&quot;:&quot;password&quot;,</span><br><span class="line">  &quot;timeout&quot;:600,</span><br><span class="line">  &quot;method&quot;:&quot;aes-256-cfb&quot;</span><br><span class="line">&#125;</span><br><span class="line"></span><br><span class="line">### 多用户配置</span><br><span class="line">vim /etc/shadowsocks.json</span><br><span class="line"></span><br><span class="line">第一种：</span><br><span class="line">&#123;</span><br><span class="line">  &quot;server&quot;:&quot;your_server_ip&quot;, # 或者使用 0.0.0.0</span><br><span class="line">  &quot;local_address&quot;: &quot;127.0.0.1&quot;,</span><br><span class="line">  &quot;local_port&quot;:1080,</span><br><span class="line">  &quot;port_password&quot;:&#123;   #端口号与密码</span><br><span class="line">    &quot;8989&quot;:&quot;password0&quot;,   # 左边是端口号，右边是密码</span><br><span class="line">    &quot;9001&quot;:&quot;password1&quot;,</span><br><span class="line">    &quot;9002&quot;:&quot;password2&quot;,</span><br><span class="line">    &quot;9003&quot;:&quot;password3&quot;,</span><br><span class="line">    &quot;9004&quot;:&quot;password4&quot;</span><br><span class="line">  &#125;,</span><br><span class="line">  &quot;timeout&quot;:300,</span><br><span class="line">  &quot;method&quot;:&quot;aes-256-cfb&quot;,</span><br><span class="line">  &quot;fast_open&quot;: false</span><br><span class="line">&#125;</span><br><span class="line">第二种：</span><br><span class="line">&#123;</span><br><span class="line">  &quot;timeout&quot;: 600,</span><br><span class="line">  &quot;method&quot;: &quot;aes-256-cfb&quot;,</span><br><span class="line">  &quot;port_password&quot;:&#123;</span><br><span class="line">    &quot;40001&quot;: &quot;password1&quot;,</span><br><span class="line">    &quot;40002&quot;: &quot;password2&quot;,</span><br><span class="line">    &quot;40003&quot;: &quot;password3&quot;</span><br><span class="line">  &#125;,</span><br><span class="line">  &quot;_comment&quot;:&#123;</span><br><span class="line">    &quot;40001&quot;: &quot;xiaoming&quot;,</span><br><span class="line">    &quot;40002&quot;: &quot;lilei&quot;,</span><br><span class="line">    &quot;40003&quot;: &quot;mike&quot;</span><br><span class="line">  &#125;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+</li>
+<li><p>系统级服务关闭</p>
+<p>在配置完成后，需要关闭防火墙，否者会造成无法科学上网。</p>
+<figure class="highlight plaintext"><table><tr><td class="code"><pre><span class="line">systemctl stop iptables</span><br><span class="line">systemctl stop firewalld</span><br></pre></td></tr></table></figure>
+
+<p>若配置完成，且防火墙关闭，依旧无法科学上网，那么看是否是浏览器设置问题，若浏览器有FQ插件且处于启用状态（浏览器启用代理），停用它。</p>
+</li>
+<li><p>测试是否可用</p>
+<figure class="highlight plaintext"><table><tr><td class="code"><pre><span class="line">### 开启ss服务</span><br><span class="line">ssserver -c /etc/shadowsocks.json start</span><br></pre></td></tr></table></figure>
+
+<p>如果可以使用，则说明配置完成</p>
+</li>
+<li><p>将SS服务变为系统级服务</p>
+<figure class="highlight text"><table><tr><td class="code"><pre><span class="line">vim /etc/systemd/system/shadowsocks.service</span><br><span class="line"></span><br><span class="line">### 将以下内容粘贴到打开的shadowsocks.service文件中</span><br><span class="line"></span><br><span class="line">[Unit]</span><br><span class="line">Description=Shadowsocks</span><br><span class="line"></span><br><span class="line">[Service]</span><br><span class="line">TimeoutStartSec=0</span><br><span class="line">ExecStart=/usr/bin/ssserver -c /etc/shadowsocks.json</span><br><span class="line"></span><br><span class="line">[Install]</span><br><span class="line">WantedBy=multi-user.target</span><br></pre></td></tr></table></figure>
+
+<p>设置开机启动</p>
+<figure class="highlight text"><table><tr><td class="code"><pre><span class="line">systemctl enable shadowsocks &amp;&amp; systemctl start shadowsocks</span><br></pre></td></tr></table></figure>
+</li>
+<li><p>为OpenVZ的VPS服务器做BBR加速</p>
+<p>本安装<strong>适用于CentOS&#x2F;RHEL7+，Ubuntu15+，Debian8+</strong> 的64位系统，如不是请先重装系统，下载rintd二进制文件(原版bbr和修改版bbr二选一即可)</p>
+<figure class="highlight plaintext"><table><tr><td class="code"><pre><span class="line">wget --no-check-certificate https://raw.githubusercontent.com/mixool/rinetd/master/rinetd</span><br><span class="line"></span><br><span class="line">wget --no-check-certificate https://raw.githubusercontent.com/mixool/rinetd/master/rinetd_bbr_powered -O /root/rinetd </span><br></pre></td></tr></table></figure>
+
+<p>最后一个为魔改版BBR，上面一个为原版。选一个下载就可以了。然后修改权限</p>
+<figure class="highlight text"><table><tr><td class="code"><pre><span class="line">chmod +x rinetd</span><br></pre></td></tr></table></figure>
+
+<p>修改rinetd的配置文件rinetd.conf,添加监听地址:</p>
+<figure class="highlight plaintext"><table><tr><td class="code"><pre><span class="line">vim rinetd.conf</span><br><span class="line"></span><br><span class="line"># bindadress bindport connectaddress connectport </span><br><span class="line">0.0.0.0 443 0.0.0.0 443</span><br><span class="line"></span><br><span class="line">0.0.0.0 80 0.0.0.0 80</span><br></pre></td></tr></table></figure>
+
+<p>每一行都是一个端口，将端口改成你使用的端口就可以了。不要问我一行为什么要写两个相同的，我也不知道为什么。</p>
+</li>
+<li><p>将rinetd变为系统级应用</p>
+<figure class="highlight text"><table><tr><td class="code"><pre><span class="line">vim /etc/systemd/system/rinetd.service</span><br><span class="line"></span><br><span class="line">[Unit]</span><br><span class="line">Description=rinetd</span><br><span class="line"></span><br><span class="line">[Service]</span><br><span class="line">ExecStart=/root/rinetd -f -c /root/rinetd.conf raw venet0:0</span><br><span class="line">Restart=always</span><br><span class="line">  </span><br><span class="line">[Install]</span><br><span class="line">WantedBy=multi-user.target</span><br></pre></td></tr></table></figure>
+
+<p>设置开机启动</p>
+<figure class="highlight plaintext"><table><tr><td class="code"><pre><span class="line">systemctl enable rinetd &amp;&amp; systemctl start rinetd</span><br></pre></td></tr></table></figure>
+
+<p>在以上操作完毕后，OpenVZ架构的VPS服务器在使用SS服务时，会明显感觉到访问速度快了很多。</p>
+</li>
+</ul>
 ]]></content>
       <categories>
-        <category>Python杂记</category>
+        <category>科学上网</category>
       </categories>
       <tags>
-        <tag>tkinter</tag>
-        <tag>遍历图片</tag>
+        <tag>ss</tag>
+        <tag>科学上网</tag>
       </tags>
   </entry>
   <entry>
@@ -408,77 +479,6 @@
       <tags>
         <tag>Tensorflow</tag>
         <tag>GPU</tag>
-      </tags>
-  </entry>
-  <entry>
-    <title>在Centos中架设ss服务</title>
-    <url>/190425/</url>
-    <content><![CDATA[<p>想必大家都被国内的“墙”折磨过，是不是很难受，是不是有时候很无能为力。这里就为大家介绍几种上网的方式。</p>
-<h3 id="Google访问助手"><a href="#Google访问助手" class="headerlink" title="Google访问助手"></a>Google访问助手</h3><p>如果你使用的是这种方式，那么恭喜你，下面介绍的内容和你无关了。</p>
-<p>Google访问助手下载链接：<a href="http://ggfwzs.com/">链接</a></p>
-<span id="more"></span>
-
-<h3 id="架设SS服务"><a href="#架设SS服务" class="headerlink" title="架设SS服务"></a>架设SS服务</h3><p>架设环境</p>
-<ul>
-<li>一台可以访问外网的VPS服务器</li>
-<li>Centos7 + Python2.x</li>
-</ul>
-<p>架设步骤</p>
-<ul>
-<li>安装必须的软件包:</li>
-</ul>
-<figure class="highlight text"><table><tr><td class="code"><pre><span class="line">yum upgrade -y</span><br><span class="line">yum groupinstall &quot;Development Tools&quot;</span><br><span class="line">yum install epel-release -y</span><br><span class="line">yum install python-setuptools python-pip m2crypto -y</span><br><span class="line"></span><br><span class="line">## 更新pip包</span><br><span class="line">python -m pip install -U pip</span><br><span class="line"></span><br><span class="line">## 安装shadowsocks</span><br><span class="line">pip install shadowsocks</span><br></pre></td></tr></table></figure>
-
-<ul>
-<li><p>创建配置文件</p>
-<p>以下内容是创建唯一密码和端口的配置文件，如果多用户使用，建议直接使用多用户配置.</p>
-<figure class="highlight text"><table><tr><td class="code"><pre><span class="line">### 单用户配置</span><br><span class="line">vim /etc/shadowsocks.json</span><br><span class="line"></span><br><span class="line">&#123;</span><br><span class="line">  &quot;server&quot;:&quot;0.0.0.0&quot;,</span><br><span class="line">  &quot;server_port&quot;:server_port,    #例如5460</span><br><span class="line">  &quot;local_port&quot;:1080,</span><br><span class="line">  &quot;password&quot;:&quot;password&quot;,</span><br><span class="line">  &quot;timeout&quot;:600,</span><br><span class="line">  &quot;method&quot;:&quot;aes-256-cfb&quot;</span><br><span class="line">&#125;</span><br><span class="line"></span><br><span class="line">### 多用户配置</span><br><span class="line">vim /etc/shadowsocks.json</span><br><span class="line"></span><br><span class="line">第一种：</span><br><span class="line">&#123;</span><br><span class="line">  &quot;server&quot;:&quot;your_server_ip&quot;, # 或者使用 0.0.0.0</span><br><span class="line">  &quot;local_address&quot;: &quot;127.0.0.1&quot;,</span><br><span class="line">  &quot;local_port&quot;:1080,</span><br><span class="line">  &quot;port_password&quot;:&#123;   #端口号与密码</span><br><span class="line">    &quot;8989&quot;:&quot;password0&quot;,   # 左边是端口号，右边是密码</span><br><span class="line">    &quot;9001&quot;:&quot;password1&quot;,</span><br><span class="line">    &quot;9002&quot;:&quot;password2&quot;,</span><br><span class="line">    &quot;9003&quot;:&quot;password3&quot;,</span><br><span class="line">    &quot;9004&quot;:&quot;password4&quot;</span><br><span class="line">  &#125;,</span><br><span class="line">  &quot;timeout&quot;:300,</span><br><span class="line">  &quot;method&quot;:&quot;aes-256-cfb&quot;,</span><br><span class="line">  &quot;fast_open&quot;: false</span><br><span class="line">&#125;</span><br><span class="line">第二种：</span><br><span class="line">&#123;</span><br><span class="line">  &quot;timeout&quot;: 600,</span><br><span class="line">  &quot;method&quot;: &quot;aes-256-cfb&quot;,</span><br><span class="line">  &quot;port_password&quot;:&#123;</span><br><span class="line">    &quot;40001&quot;: &quot;password1&quot;,</span><br><span class="line">    &quot;40002&quot;: &quot;password2&quot;,</span><br><span class="line">    &quot;40003&quot;: &quot;password3&quot;</span><br><span class="line">  &#125;,</span><br><span class="line">  &quot;_comment&quot;:&#123;</span><br><span class="line">    &quot;40001&quot;: &quot;xiaoming&quot;,</span><br><span class="line">    &quot;40002&quot;: &quot;lilei&quot;,</span><br><span class="line">    &quot;40003&quot;: &quot;mike&quot;</span><br><span class="line">  &#125;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
-</li>
-<li><p>系统级服务关闭</p>
-<p>在配置完成后，需要关闭防火墙，否者会造成无法科学上网。</p>
-<figure class="highlight plaintext"><table><tr><td class="code"><pre><span class="line">systemctl stop iptables</span><br><span class="line">systemctl stop firewalld</span><br></pre></td></tr></table></figure>
-
-<p>若配置完成，且防火墙关闭，依旧无法科学上网，那么看是否是浏览器设置问题，若浏览器有FQ插件且处于启用状态（浏览器启用代理），停用它。</p>
-</li>
-<li><p>测试是否可用</p>
-<figure class="highlight plaintext"><table><tr><td class="code"><pre><span class="line">### 开启ss服务</span><br><span class="line">ssserver -c /etc/shadowsocks.json start</span><br></pre></td></tr></table></figure>
-
-<p>如果可以使用，则说明配置完成</p>
-</li>
-<li><p>将SS服务变为系统级服务</p>
-<figure class="highlight text"><table><tr><td class="code"><pre><span class="line">vim /etc/systemd/system/shadowsocks.service</span><br><span class="line"></span><br><span class="line">### 将以下内容粘贴到打开的shadowsocks.service文件中</span><br><span class="line"></span><br><span class="line">[Unit]</span><br><span class="line">Description=Shadowsocks</span><br><span class="line"></span><br><span class="line">[Service]</span><br><span class="line">TimeoutStartSec=0</span><br><span class="line">ExecStart=/usr/bin/ssserver -c /etc/shadowsocks.json</span><br><span class="line"></span><br><span class="line">[Install]</span><br><span class="line">WantedBy=multi-user.target</span><br></pre></td></tr></table></figure>
-
-<p>设置开机启动</p>
-<figure class="highlight text"><table><tr><td class="code"><pre><span class="line">systemctl enable shadowsocks &amp;&amp; systemctl start shadowsocks</span><br></pre></td></tr></table></figure>
-</li>
-<li><p>为OpenVZ的VPS服务器做BBR加速</p>
-<p>本安装<strong>适用于CentOS&#x2F;RHEL7+，Ubuntu15+，Debian8+</strong> 的64位系统，如不是请先重装系统，下载rintd二进制文件(原版bbr和修改版bbr二选一即可)</p>
-<figure class="highlight plaintext"><table><tr><td class="code"><pre><span class="line">wget --no-check-certificate https://raw.githubusercontent.com/mixool/rinetd/master/rinetd</span><br><span class="line"></span><br><span class="line">wget --no-check-certificate https://raw.githubusercontent.com/mixool/rinetd/master/rinetd_bbr_powered -O /root/rinetd </span><br></pre></td></tr></table></figure>
-
-<p>最后一个为魔改版BBR，上面一个为原版。选一个下载就可以了。然后修改权限</p>
-<figure class="highlight text"><table><tr><td class="code"><pre><span class="line">chmod +x rinetd</span><br></pre></td></tr></table></figure>
-
-<p>修改rinetd的配置文件rinetd.conf,添加监听地址:</p>
-<figure class="highlight plaintext"><table><tr><td class="code"><pre><span class="line">vim rinetd.conf</span><br><span class="line"></span><br><span class="line"># bindadress bindport connectaddress connectport </span><br><span class="line">0.0.0.0 443 0.0.0.0 443</span><br><span class="line"></span><br><span class="line">0.0.0.0 80 0.0.0.0 80</span><br></pre></td></tr></table></figure>
-
-<p>每一行都是一个端口，将端口改成你使用的端口就可以了。不要问我一行为什么要写两个相同的，我也不知道为什么。</p>
-</li>
-<li><p>将rinetd变为系统级应用</p>
-<figure class="highlight text"><table><tr><td class="code"><pre><span class="line">vim /etc/systemd/system/rinetd.service</span><br><span class="line"></span><br><span class="line">[Unit]</span><br><span class="line">Description=rinetd</span><br><span class="line"></span><br><span class="line">[Service]</span><br><span class="line">ExecStart=/root/rinetd -f -c /root/rinetd.conf raw venet0:0</span><br><span class="line">Restart=always</span><br><span class="line">  </span><br><span class="line">[Install]</span><br><span class="line">WantedBy=multi-user.target</span><br></pre></td></tr></table></figure>
-
-<p>设置开机启动</p>
-<figure class="highlight plaintext"><table><tr><td class="code"><pre><span class="line">systemctl enable rinetd &amp;&amp; systemctl start rinetd</span><br></pre></td></tr></table></figure>
-
-<p>在以上操作完毕后，OpenVZ架构的VPS服务器在使用SS服务时，会明显感觉到访问速度快了很多。</p>
-</li>
-</ul>
-]]></content>
-      <categories>
-        <category>科学上网</category>
-      </categories>
-      <tags>
-        <tag>ss</tag>
-        <tag>科学上网</tag>
       </tags>
   </entry>
   <entry>
@@ -990,131 +990,6 @@
       </tags>
   </entry>
   <entry>
-    <title>BeautifulSoup4库</title>
-    <url>/190628-1/</url>
-    <content><![CDATA[<p>和lxml一样，BeautifulSoup也是一个HTML&#x2F;XML的解析器，主要的功能也是解析和提取HTML&#x2F;XML数据。</p>
-<p>lxml只会局部遍历，而BeautifulSoup是基于HTML DOM的，它会加载整个文档，解析整个DOM树，因此在时间和内存上也会有很大的开销，所以性能要低于lxml。</p>
-<p>BeautifulSoup用来解析HTML比较简单，其API设计的非常人性化，同时BeautifulSoup也支持CSS选择器、Python标准库中的HTML解析器、lxml的XML。</p>
-<span id="more"></span>
-
-<p>安装：<code>pip install bs4</code></p>
-<p>中文文档：<a href="https://www.crummy.com/software/BeautifulSoup/bs4/doc/index.zh.html">https://www.crummy.com/software/BeautifulSoup/bs4/doc/index.zh.html</a></p>
-<h3 id="对比："><a href="#对比：" class="headerlink" title="对比："></a>对比：</h3><table>
-<thead>
-<tr>
-<th>解析工具</th>
-<th>解析速度</th>
-<th>使用难度</th>
-</tr>
-</thead>
-<tbody><tr>
-<td>BeautifulSoup4</td>
-<td>最慢</td>
-<td>最简单</td>
-</tr>
-<tr>
-<td>lxml</td>
-<td>快</td>
-<td>简单</td>
-</tr>
-<tr>
-<td>正则</td>
-<td>最快</td>
-<td>最难</td>
-</tr>
-</tbody></table>
-<h3 id="简单使用"><a href="#简单使用" class="headerlink" title="简单使用"></a>简单使用</h3><figure class="highlight python"><table><tr><td class="code"><pre><span class="line"><span class="keyword">from</span> bs4 <span class="keyword">import</span> BeautifulSoup</span><br><span class="line"></span><br><span class="line">html = <span class="string">&quot;&quot;&quot;</span></span><br><span class="line"><span class="string">&lt;html&gt;&lt;head&gt;&lt;title&gt;The Dormouse&#x27;s story&lt;/title&gt;&lt;/head&gt;</span></span><br><span class="line"><span class="string">&lt;body&gt;</span></span><br><span class="line"><span class="string">&lt;p class=&quot;title&quot;&gt;&lt;b&gt;The Dormouse&#x27;s story&lt;/b&gt;&lt;/p&gt;</span></span><br><span class="line"><span class="string"></span></span><br><span class="line"><span class="string">&lt;p class=&quot;story&quot;&gt;Once upon a time there were three little sisters; and their names were</span></span><br><span class="line"><span class="string">&lt;a href=&quot;http://example.com/elsie&quot; class=&quot;sister&quot; id=&quot;link1&quot;&gt;Elsie&lt;/a&gt;,</span></span><br><span class="line"><span class="string">&lt;a href=&quot;http://example.com/lacie&quot; class=&quot;sister&quot; id=&quot;link2&quot;&gt;Lacie&lt;/a&gt; and</span></span><br><span class="line"><span class="string">&lt;a href=&quot;http://example.com/tillie&quot; class=&quot;sister&quot; id=&quot;link3&quot;&gt;Tillie&lt;/a&gt;;</span></span><br><span class="line"><span class="string">and they lived at the bottom of a well.&lt;/p&gt;</span></span><br><span class="line"><span class="string"></span></span><br><span class="line"><span class="string">&lt;p class=&quot;story&quot;&gt;...&lt;/p&gt;</span></span><br><span class="line"><span class="string">&quot;&quot;&quot;</span></span><br><span class="line"></span><br><span class="line">soup = BeautifulSoup(html, <span class="string">&#x27;lxml&#x27;</span>)</span><br><span class="line"><span class="built_in">print</span>(soup.prettify())</span><br></pre></td></tr></table></figure>
-
-<p>BeautifulSoup(markup, features):在使用的时候需要指定解析器，如果未指定，BeautifulSoup使用的Python标准库中的HTML解析器，同时beautifulsoup也支持第三方的解析器如lxml。另一个可供选择的解析器是纯Python实现的html5lib，html5lib的解析方式与浏览器相同。</p>
-<p>安装lxml：<code>pip install lxml</code></p>
-<p>安装html5lib: <code>pip install html5lib</code></p>
-<p>主要解析器的优缺点：</p>
-<p><img src="/userImages/20190629_000.png" alt="解析器"></p>
-<h3 id="四个常用的对象"><a href="#四个常用的对象" class="headerlink" title="四个常用的对象"></a>四个常用的对象</h3><p>BeautifulSoup将复杂HTML文档转换成一个复杂的树形结构，每个节点都是Python对象，所有对象可以归纳为4种：</p>
-<ol>
-<li>Tag</li>
-<li>NavigatableString</li>
-<li>BeautifulSoup</li>
-<li>Comment</li>
-</ol>
-<h3 id="操作讲解"><a href="#操作讲解" class="headerlink" title="操作讲解"></a>操作讲解</h3><p>以下内容以4个例子的形式进行讲解：</p>
-<figure class="highlight python"><table><tr><td class="code"><pre><span class="line"><span class="comment"># demo.py</span></span><br><span class="line"></span><br><span class="line"><span class="keyword">from</span> bs4 <span class="keyword">import</span> BeautifulSoup</span><br><span class="line"></span><br><span class="line">html = <span class="string">&quot;&quot;&quot;</span></span><br><span class="line"><span class="string">&lt;div data-v-a6e3291a=&quot;&quot; class=&quot;correlation-degree&quot;&gt;</span></span><br><span class="line"><span class="string">  &lt;div data-v-a6e3291a=&quot;&quot; class=&quot;recruit-wrap recruit-margin&quot;&gt;</span></span><br><span class="line"><span class="string">    &lt;div data-v-a6e3291a=&quot;&quot; class=&quot;recruit-list&quot;&gt;</span></span><br><span class="line"><span class="string">      &lt;a data-v-a6e3291a=&quot;&quot; class=&quot;recruit-list-link&quot;&gt;</span></span><br><span class="line"><span class="string">        &lt;h4 data-v-a6e3291a=&quot;&quot; class=&quot;recruit-title&quot;&gt;TEG15-计费产品web前端开发工程师（深圳）&lt;/h4&gt; </span></span><br><span class="line"><span class="string">        &lt;p data-v-a6e3291a=&quot;&quot; class=&quot;recruit-tips&quot;&gt;</span></span><br><span class="line"><span class="string">          &lt;span data-v-a6e3291a=&quot;&quot;&gt;TEG&lt;/span&gt; | &lt;span data-v-a6e3291a=&quot;&quot;&gt;深圳,中国&lt;/span&gt; | </span></span><br><span class="line"><span class="string">          &lt;span data-v-a6e3291a=&quot;&quot;&gt;技术&lt;/span&gt; | &lt;span data-v-a6e3291a=&quot;&quot;&gt;2019年06月28日&lt;/span&gt;</span></span><br><span class="line"><span class="string">        &lt;/p&gt;</span></span><br><span class="line"><span class="string">        &lt;p data-v-a6e3291a=&quot;&quot; class=&quot;recruit-text&quot;&gt;负责腾讯计费平台基础支付前端架构设计和开发工作； 参与需求评审、架构设计、编码设计和上线运维； 负责用户体验优化，包括但不限于：业务流程、前端展示、性能、安全等。&lt;/p&gt;</span></span><br><span class="line"><span class="string">      &lt;/a&gt; </span></span><br><span class="line"><span class="string">      &lt;div data-v-a6e3291a=&quot;&quot; class=&quot;recruit-collection&quot;&gt;</span></span><br><span class="line"><span class="string">        &lt;span data-v-a6e3291a=&quot;&quot; class=&quot;icon-collection&quot;&gt;&lt;/span&gt; </span></span><br><span class="line"><span class="string">        &lt;span data-v-a6e3291a=&quot;&quot; class=&quot;collection-text&quot;&gt;收藏&lt;/span&gt;</span></span><br><span class="line"><span class="string">      &lt;/div&gt;</span></span><br><span class="line"><span class="string">    &lt;/div&gt;</span></span><br><span class="line"><span class="string">    &lt;div data-v-a6e3291a=&quot;&quot; class=&quot;recruit-list&quot;&gt;</span></span><br><span class="line"><span class="string">      &lt;a data-v-a6e3291a=&quot;&quot; class=&quot;recruit-list-link&quot;&gt;</span></span><br><span class="line"><span class="string">        &lt;h4 data-v-a6e3291a=&quot;&quot; class=&quot;recruit-title&quot;&gt;PCG19-腾讯视频媒资后台开发工程师&lt;/h4&gt;</span></span><br><span class="line"><span class="string">        &lt;p data-v-a6e3291a=&quot;&quot; class=&quot;recruit-tips&quot;&gt;</span></span><br><span class="line"><span class="string">          &lt;span data-v-a6e3291a=&quot;&quot;&gt;PCG&lt;/span&gt; | &lt;span data-v-a6e3291a=&quot;&quot;&gt;北京,中国&lt;/span&gt; | </span></span><br><span class="line"><span class="string">          &lt;span data-v-a6e3291a=&quot;&quot;&gt;技术&lt;/span&gt; | &lt;span data-v-a6e3291a=&quot;&quot;&gt;腾讯视频&lt;/span&gt; | </span></span><br><span class="line"><span class="string">          &lt;span data-v-a6e3291a=&quot;&quot;&gt;2019年06月28日&lt;/span&gt;</span></span><br><span class="line"><span class="string">        &lt;/p&gt;</span></span><br><span class="line"><span class="string">        &lt;p data-v-a6e3291a=&quot;&quot; class=&quot;recruit-text&quot;&gt;负责腾讯视频媒资中台开发工作。&lt;/p&gt;</span></span><br><span class="line"><span class="string">      &lt;/a&gt; </span></span><br><span class="line"><span class="string">      &lt;div data-v-a6e3291a=&quot;&quot; class=&quot;recruit-collection&quot;&gt;</span></span><br><span class="line"><span class="string">        &lt;span data-v-a6e3291a=&quot;&quot; class=&quot;icon-collection&quot;&gt;&lt;/span&gt; </span></span><br><span class="line"><span class="string">        &lt;span data-v-a6e3291a=&quot;&quot; class=&quot;collection-text&quot;&gt;收藏&lt;/span&gt;</span></span><br><span class="line"><span class="string">      &lt;/div&gt;</span></span><br><span class="line"><span class="string">    &lt;/div&gt;</span></span><br><span class="line"><span class="string">    &lt;div data-v-a6e3291a=&quot;&quot; class=&quot;recruit-list&quot;&gt;</span></span><br><span class="line"><span class="string">      &lt;a data-v-a6e3291a=&quot;&quot; class=&quot;recruit-list-link&quot;&gt;</span></span><br><span class="line"><span class="string">        &lt;h4 data-v-a6e3291a=&quot;&quot; class=&quot;recruit-title&quot;&gt;TEG15-计费系统前端测试工程师（深圳）&lt;/h4&gt; </span></span><br><span class="line"><span class="string">        &lt;p data-v-a6e3291a=&quot;&quot; class=&quot;recruit-tips&quot;&gt;</span></span><br><span class="line"><span class="string">          &lt;span data-v-a6e3291a=&quot;&quot;&gt;TEG&lt;/span&gt; | &lt;span data-v-a6e3291a=&quot;&quot;&gt;深圳,中国&lt;/span&gt; | </span></span><br><span class="line"><span class="string">          &lt;span data-v-a6e3291a=&quot;&quot;&gt;技术&lt;/span&gt; | &lt;span data-v-a6e3291a=&quot;&quot;&gt;2019年06月28日&lt;/span&gt;</span></span><br><span class="line"><span class="string">        &lt;/p&gt; </span></span><br><span class="line"><span class="string">        &lt;p data-v-a6e3291a=&quot;&quot; class=&quot;recruit-text&quot;&gt;负责web端/后台系统测试工作，从整个项目角度规划测试方法，达成项目质量目标； 负责web端/后台系统的自动化测试、性能测试，稳定性以及其它专项测试； 负责研究web端/后台系统测试技术，跟进业界测试技术发展，引进先进测试方法并开展二次开发，建立团队质量体系建设，有效提升测试效率&lt;/p&gt;</span></span><br><span class="line"><span class="string">      &lt;/a&gt; </span></span><br><span class="line"><span class="string">      &lt;div data-v-a6e3291a=&quot;&quot; class=&quot;recruit-collection&quot;&gt;</span></span><br><span class="line"><span class="string">        &lt;span data-v-a6e3291a=&quot;&quot; class=&quot;icon-collection&quot;&gt;&lt;/span&gt; </span></span><br><span class="line"><span class="string">        &lt;span data-v-a6e3291a=&quot;&quot; class=&quot;collection-text&quot;&gt;收藏&lt;/span&gt;</span></span><br><span class="line"><span class="string">      &lt;/div&gt;</span></span><br><span class="line"><span class="string">    &lt;/div&gt;</span></span><br><span class="line"><span class="string">    &lt;div data-v-a6e3291a=&quot;&quot; class=&quot;recruit-list&quot;&gt;</span></span><br><span class="line"><span class="string">      &lt;a data-v-a6e3291a=&quot;&quot; class=&quot;recruit-list-link&quot;&gt;</span></span><br><span class="line"><span class="string">        &lt;h4 data-v-a6e3291a=&quot;&quot; class=&quot;recruit-title&quot;&gt;32032-资深后台开发工程师（上海）&lt;/h4&gt; </span></span><br><span class="line"><span class="string">        &lt;p data-v-a6e3291a=&quot;&quot; class=&quot;recruit-tips&quot;&gt;</span></span><br><span class="line"><span class="string">          &lt;span data-v-a6e3291a=&quot;&quot;&gt;IEG&lt;/span&gt; | &lt;span data-v-a6e3291a=&quot;&quot;&gt;上海,中国&lt;/span&gt; | </span></span><br><span class="line"><span class="string">          &lt;span data-v-a6e3291a=&quot;&quot;&gt;技术&lt;/span&gt; | &lt;span data-v-a6e3291a=&quot;&quot;&gt;2019年06月28日&lt;/span&gt;</span></span><br><span class="line"><span class="string">        &lt;/p&gt; </span></span><br><span class="line"><span class="string">        &lt;p data-v-a6e3291a=&quot;&quot; class=&quot;recruit-text&quot;&gt;游戏服务器的功能开发和现有系统的持续优化； 负责服务器压力测试和性能优化； 负责服务器外网运营的持续跟进和优化。 &lt;/p&gt;</span></span><br><span class="line"><span class="string">      &lt;/a&gt; </span></span><br><span class="line"><span class="string">      &lt;div data-v-a6e3291a=&quot;&quot; class=&quot;recruit-collection&quot;&gt;</span></span><br><span class="line"><span class="string">        &lt;span data-v-a6e3291a=&quot;&quot; class=&quot;icon-collection&quot;&gt;&lt;/span&gt; </span></span><br><span class="line"><span class="string">        &lt;span data-v-a6e3291a=&quot;&quot; class=&quot;collection-text&quot;&gt;收藏&lt;/span&gt;</span></span><br><span class="line"><span class="string">      &lt;/div&gt;</span></span><br><span class="line"><span class="string">    &lt;/div&gt;</span></span><br><span class="line"><span class="string">    &lt;div data-v-a6e3291a=&quot;&quot; class=&quot;recruit-list&quot;&gt;</span></span><br><span class="line"><span class="string">      &lt;a data-v-a6e3291a=&quot;&quot; class=&quot;recruit-list-link&quot;&gt;</span></span><br><span class="line"><span class="string">        &lt;h4 data-v-a6e3291a=&quot;&quot; class=&quot;recruit-title&quot;&gt;WXG03-搜索自然语言算法工程师&lt;/h4&gt; </span></span><br><span class="line"><span class="string">        &lt;p data-v-a6e3291a=&quot;&quot; class=&quot;recruit-tips&quot;&gt;</span></span><br><span class="line"><span class="string">          &lt;span data-v-a6e3291a=&quot;&quot;&gt;WXG&lt;/span&gt; | &lt;span data-v-a6e3291a=&quot;&quot;&gt;广州,中国&lt;/span&gt; | </span></span><br><span class="line"><span class="string">          &lt;span data-v-a6e3291a=&quot;&quot;&gt;技术&lt;/span&gt; | &lt;span data-v-a6e3291a=&quot;&quot;&gt;2019年06月28日&lt;/span&gt;</span></span><br><span class="line"><span class="string">        &lt;/p&gt; </span></span><br><span class="line"><span class="string">        &lt;p data-v-a6e3291a=&quot;&quot; class=&quot;recruit-text&quot;&gt;负责包括新词发现、命名实体识别、查询理解、意图提取、知识图谱、搜索喜好偏向性等相关系统的建设，用以优化微信小程序搜索各产品方向的流量分发，并参与工程实践。&lt;/p&gt;</span></span><br><span class="line"><span class="string">      &lt;/a&gt; </span></span><br><span class="line"><span class="string">      &lt;div data-v-a6e3291a=&quot;&quot; class=&quot;recruit-collection&quot;&gt;</span></span><br><span class="line"><span class="string">        &lt;span data-v-a6e3291a=&quot;&quot; class=&quot;icon-collection&quot;&gt;&lt;/span&gt; </span></span><br><span class="line"><span class="string">        &lt;span data-v-a6e3291a=&quot;&quot; class=&quot;collection-text&quot;&gt;收藏&lt;/span&gt;</span></span><br><span class="line"><span class="string">      &lt;/div&gt;</span></span><br><span class="line"><span class="string">    &lt;/div&gt;</span></span><br><span class="line"><span class="string">    &lt;div data-v-a6e3291a=&quot;&quot; class=&quot;recruit-list&quot;&gt;</span></span><br><span class="line"><span class="string">      &lt;a data-v-a6e3291a=&quot;&quot; class=&quot;recruit-list-link&quot;&gt;</span></span><br><span class="line"><span class="string">        &lt;h4 data-v-a6e3291a=&quot;&quot; class=&quot;recruit-title&quot;&gt;WXG03-搜索检索算法工程师&lt;/h4&gt; </span></span><br><span class="line"><span class="string">        &lt;p data-v-a6e3291a=&quot;&quot; class=&quot;recruit-tips&quot;&gt;</span></span><br><span class="line"><span class="string">          &lt;span data-v-a6e3291a=&quot;&quot;&gt;WXG&lt;/span&gt; | &lt;span data-v-a6e3291a=&quot;&quot;&gt;广州,中国&lt;/span&gt; | </span></span><br><span class="line"><span class="string">          &lt;span data-v-a6e3291a=&quot;&quot;&gt;技术&lt;/span&gt; | &lt;span data-v-a6e3291a=&quot;&quot;&gt;2019年06月28日&lt;/span&gt;</span></span><br><span class="line"><span class="string">        &lt;/p&gt; </span></span><br><span class="line"><span class="string">        &lt;p data-v-a6e3291a=&quot;&quot; class=&quot;recruit-text&quot;&gt;负责微信小程序搜索各个产品方向的检索工作，内容包括页面识别、页面核心数据提取、页面分类、页面评分、词权重、排序等相关工作，并与开发工程师配合进行工程实践。 &lt;/p&gt;</span></span><br><span class="line"><span class="string">      &lt;/a&gt; </span></span><br><span class="line"><span class="string">      &lt;div data-v-a6e3291a=&quot;&quot; class=&quot;recruit-collection&quot;&gt;</span></span><br><span class="line"><span class="string">        &lt;span data-v-a6e3291a=&quot;&quot; class=&quot;icon-collection&quot;&gt;&lt;/span&gt; </span></span><br><span class="line"><span class="string">        &lt;span data-v-a6e3291a=&quot;&quot; class=&quot;collection-text&quot;&gt;收藏&lt;/span&gt;</span></span><br><span class="line"><span class="string">      &lt;/div&gt;</span></span><br><span class="line"><span class="string">    &lt;/div&gt;</span></span><br><span class="line"><span class="string">    &lt;div data-v-a6e3291a=&quot;&quot; class=&quot;recruit-list&quot;&gt;</span></span><br><span class="line"><span class="string">      &lt;a data-v-a6e3291a=&quot;&quot; class=&quot;recruit-list-link&quot;&gt;</span></span><br><span class="line"><span class="string">        &lt;h4 data-v-a6e3291a=&quot;&quot; class=&quot;recruit-title&quot;&gt;23486-证券业务C++后台开发高级工程师（深圳）&lt;/h4&gt; </span></span><br><span class="line"><span class="string">        &lt;p data-v-a6e3291a=&quot;&quot; class=&quot;recruit-tips&quot;&gt;</span></span><br><span class="line"><span class="string">          &lt;span data-v-a6e3291a=&quot;&quot;&gt;CDG&lt;/span&gt; | &lt;span data-v-a6e3291a=&quot;&quot;&gt;深圳,中国&lt;/span&gt; | </span></span><br><span class="line"><span class="string">          &lt;span data-v-a6e3291a=&quot;&quot;&gt;技术&lt;/span&gt; | &lt;span data-v-a6e3291a=&quot;&quot;&gt;2019年06月28日&lt;/span&gt;</span></span><br><span class="line"><span class="string">        &lt;/p&gt; </span></span><br><span class="line"><span class="string">        &lt;p data-v-a6e3291a=&quot;&quot; class=&quot;recruit-text&quot;&gt;负责证券交易、风控、清算等系统的开发维护，建设证券业务相关的技术基础平台。&lt;/p&gt;</span></span><br><span class="line"><span class="string">      &lt;/a&gt; </span></span><br><span class="line"><span class="string">      &lt;div data-v-a6e3291a=&quot;&quot; class=&quot;recruit-collection&quot;&gt;</span></span><br><span class="line"><span class="string">        &lt;span data-v-a6e3291a=&quot;&quot; class=&quot;icon-collection&quot;&gt;&lt;/span&gt; </span></span><br><span class="line"><span class="string">        &lt;span data-v-a6e3291a=&quot;&quot; class=&quot;collection-text&quot;&gt;收藏&lt;/span&gt;</span></span><br><span class="line"><span class="string">      &lt;/div&gt;</span></span><br><span class="line"><span class="string">    &lt;/div&gt;</span></span><br><span class="line"><span class="string">    &lt;div data-v-a6e3291a=&quot;&quot; class=&quot;recruit-list&quot;&gt;</span></span><br><span class="line"><span class="string">      &lt;a data-v-a6e3291a=&quot;&quot; class=&quot;recruit-list-link&quot;&gt;</span></span><br><span class="line"><span class="string">        &lt;h4 data-v-a6e3291a=&quot;&quot; class=&quot;recruit-title&quot;&gt;22989-腾讯云数据平台产品中心运营开发&lt;/h4&gt; </span></span><br><span class="line"><span class="string">        &lt;p data-v-a6e3291a=&quot;&quot; class=&quot;recruit-tips&quot;&gt;</span></span><br><span class="line"><span class="string">          &lt;span data-v-a6e3291a=&quot;&quot;&gt;CSIG&lt;/span&gt; | &lt;span data-v-a6e3291a=&quot;&quot;&gt;深圳,中国&lt;/span&gt; | </span></span><br><span class="line"><span class="string">          &lt;span data-v-a6e3291a=&quot;&quot;&gt;技术&lt;/span&gt; | &lt;span data-v-a6e3291a=&quot;&quot;&gt;2019年06月28日&lt;/span&gt;</span></span><br><span class="line"><span class="string">        &lt;/p&gt; </span></span><br><span class="line"><span class="string">        &lt;p data-v-a6e3291a=&quot;&quot; class=&quot;recruit-text&quot;&gt;负责腾讯云数据平台产品的设计和研发。 负责云产品数据管理和服务的设计和研发。 负责构建和完善云底层数据的存储和查询，优化数据的质量和监控能力。&lt;/p&gt;</span></span><br><span class="line"><span class="string">      &lt;/a&gt; </span></span><br><span class="line"><span class="string">      &lt;div data-v-a6e3291a=&quot;&quot; class=&quot;recruit-collection&quot;&gt;</span></span><br><span class="line"><span class="string">        &lt;span data-v-a6e3291a=&quot;&quot; class=&quot;icon-collection&quot;&gt;&lt;/span&gt; </span></span><br><span class="line"><span class="string">        &lt;span data-v-a6e3291a=&quot;&quot; class=&quot;collection-text&quot;&gt;收藏&lt;/span&gt;</span></span><br><span class="line"><span class="string">      &lt;/div&gt;</span></span><br><span class="line"><span class="string">    &lt;/div&gt;</span></span><br><span class="line"><span class="string">    &lt;div data-v-a6e3291a=&quot;&quot; class=&quot;recruit-list&quot;&gt;</span></span><br><span class="line"><span class="string">      &lt;a data-v-a6e3291a=&quot;&quot; class=&quot;recruit-list-link&quot;&gt;</span></span><br><span class="line"><span class="string">        &lt;h4 data-v-a6e3291a=&quot;&quot; class=&quot;recruit-title&quot;&gt;18428-证券业务测试工程师&lt;/h4&gt; </span></span><br><span class="line"><span class="string">        &lt;p data-v-a6e3291a=&quot;&quot; class=&quot;recruit-tips&quot;&gt;</span></span><br><span class="line"><span class="string">          &lt;span data-v-a6e3291a=&quot;&quot;&gt;CDG&lt;/span&gt; | &lt;span data-v-a6e3291a=&quot;&quot;&gt;北京,中国&lt;/span&gt; | </span></span><br><span class="line"><span class="string">          &lt;span data-v-a6e3291a=&quot;&quot;&gt;技术&lt;/span&gt; | &lt;span data-v-a6e3291a=&quot;&quot;&gt;财付通&lt;/span&gt; | </span></span><br><span class="line"><span class="string">          &lt;span data-v-a6e3291a=&quot;&quot;&gt;2019年06月28日&lt;/span&gt;</span></span><br><span class="line"><span class="string">        &lt;/p&gt; </span></span><br><span class="line"><span class="string">        &lt;p data-v-a6e3291a=&quot;&quot; class=&quot;recruit-text&quot;&gt;负责证券类产品的功能、性能、安全、自动化等测试工作，包括终端/H5及后台系统的测试。&lt;/p&gt;</span></span><br><span class="line"><span class="string">      &lt;/a&gt; </span></span><br><span class="line"><span class="string">      &lt;div data-v-a6e3291a=&quot;&quot; class=&quot;recruit-collection&quot;&gt;</span></span><br><span class="line"><span class="string">        &lt;span data-v-a6e3291a=&quot;&quot; class=&quot;icon-collection&quot;&gt;&lt;/span&gt; </span></span><br><span class="line"><span class="string">        &lt;span data-v-a6e3291a=&quot;&quot; class=&quot;collection-text&quot;&gt;收藏&lt;/span&gt;</span></span><br><span class="line"><span class="string">      &lt;/div&gt;</span></span><br><span class="line"><span class="string">    &lt;/div&gt;</span></span><br><span class="line"><span class="string">    &lt;div data-v-a6e3291a=&quot;&quot; class=&quot;recruit-list&quot;&gt;</span></span><br><span class="line"><span class="string">      &lt;a data-v-a6e3291a=&quot;&quot; class=&quot;recruit-list-link&quot;&gt;</span></span><br><span class="line"><span class="string">        &lt;h4 data-v-a6e3291a=&quot;&quot; class=&quot;recruit-title&quot;&gt;30360-后台平台开发（深圳）&lt;/h4&gt; </span></span><br><span class="line"><span class="string">        &lt;p data-v-a6e3291a=&quot;&quot; class=&quot;recruit-tips&quot;&gt;</span></span><br><span class="line"><span class="string">          &lt;span data-v-a6e3291a=&quot;&quot;&gt;PCG&lt;/span&gt; | &lt;span data-v-a6e3291a=&quot;&quot;&gt;深圳总部,中国&lt;/span&gt; | </span></span><br><span class="line"><span class="string">          &lt;span data-v-a6e3291a=&quot;&quot;&gt;技术&lt;/span&gt; | &lt;span data-v-a6e3291a=&quot;&quot;&gt;2019年06月28日&lt;/span&gt;</span></span><br><span class="line"><span class="string">        &lt;/p&gt; </span></span><br><span class="line"><span class="string">        &lt;p data-v-a6e3291a=&quot;&quot; class=&quot;recruit-text&quot;&gt;负责QQ平台海量用户和数据的基础后台研发工作； 负责AI基础架构系统后台研发工作； 负责推荐系统，大数据分析计算后台研发工作。&lt;/p&gt;</span></span><br><span class="line"><span class="string">      &lt;/a&gt; </span></span><br><span class="line"><span class="string">      &lt;div data-v-a6e3291a=&quot;&quot; class=&quot;recruit-collection&quot;&gt;</span></span><br><span class="line"><span class="string">        &lt;span data-v-a6e3291a=&quot;&quot; class=&quot;icon-collection&quot;&gt;&lt;/span&gt; </span></span><br><span class="line"><span class="string">        &lt;span data-v-a6e3291a=&quot;&quot; class=&quot;collection-text&quot;&gt;收藏&lt;/span&gt;</span></span><br><span class="line"><span class="string">      &lt;/div&gt;</span></span><br><span class="line"><span class="string">    &lt;/div&gt;</span></span><br><span class="line"><span class="string">  &lt;/div&gt;</span></span><br><span class="line"><span class="string">&lt;/div&gt;</span></span><br><span class="line"><span class="string">&quot;&quot;&quot;</span></span><br><span class="line"></span><br><span class="line">soup = BeautifulSoup(html, <span class="string">&#x27;lxml&#x27;</span>)</span><br></pre></td></tr></table></figure>
-
-<ul>
-<li><p>获取所有的class属性为“recruit-list”的div标签</p>
-<figure class="highlight python"><table><tr><td class="code"><pre><span class="line">divs = soup.find_all(<span class="string">&#x27;div&#x27;</span>, attrs=&#123;<span class="string">&#x27;class&#x27;</span>: <span class="string">&quot;recruit-list&quot;</span>&#125;)</span><br><span class="line"><span class="keyword">for</span> div <span class="keyword">in</span> divs:</span><br><span class="line">    <span class="built_in">print</span>(div)</span><br></pre></td></tr></table></figure>
-</li>
-<li><p>获取第二个class属性为“recruit-list”的div标签</p>
-<figure class="highlight python"><table><tr><td class="code"><pre><span class="line">div = soup.find_all(<span class="string">&#x27;div&#x27;</span>, attrs=&#123;<span class="string">&#x27;class&#x27;</span>: <span class="string">&quot;recruit-list&quot;</span>&#125;, limit=<span class="number">2</span>)[<span class="number">1</span>]</span><br><span class="line"><span class="built_in">print</span>(div)</span><br></pre></td></tr></table></figure>
-</li>
-<li><p>获取所有的h4标签中的class属性</p>
-<figure class="highlight python"><table><tr><td class="code"><pre><span class="line">h4_texts = soup.find_all(<span class="string">&#x27;h4&#x27;</span>)</span><br><span class="line"><span class="keyword">for</span> h4_text <span class="keyword">in</span> h4_texts:</span><br><span class="line">    <span class="built_in">print</span>(h4_text[<span class="string">&#x27;class&#x27;</span>])</span><br></pre></td></tr></table></figure>
-</li>
-<li><p>获取所有的职位信息（纯文本）</p>
-<figure class="highlight python"><table><tr><td class="code"><pre><span class="line">aEs = soup.find_all(<span class="string">&#x27;a&#x27;</span>)</span><br></pre></td></tr></table></figure>
-
-<ol>
-<li><p>方法一</p>
-<p>输出的字符串中可能包含了很多空格或空行,使用 <code>.stripped_strings</code> 可以去除多余空白内容</p>
-<figure class="highlight python"><table><tr><td class="code"><pre><span class="line"><span class="keyword">for</span> aE <span class="keyword">in</span> aEs:</span><br><span class="line">    infos = <span class="built_in">list</span>(aE.stripped_strings)</span><br><span class="line">    <span class="built_in">print</span>(infos)</span><br></pre></td></tr></table></figure>
-</li>
-<li><p>方法二</p>
-<figure class="highlight python"><table><tr><td class="code"><pre><span class="line">job = &#123;&#125;</span><br><span class="line"><span class="keyword">for</span> aE <span class="keyword">in</span> aEs:</span><br><span class="line">    h4 = aE.find(<span class="string">&#x27;h4&#x27;</span>).string</span><br><span class="line">    ps = aE.find_all(<span class="string">&#x27;p&#x27;</span>)</span><br><span class="line">    spans = ps[<span class="number">0</span>].find_all(<span class="string">&#x27;span&#x27;</span>)</span><br><span class="line">    span = <span class="string">&#x27;|&#x27;</span>.join([s.string <span class="keyword">for</span> s <span class="keyword">in</span> spans])</span><br><span class="line">    p2 = ps[<span class="number">1</span>].string</span><br><span class="line">    job[<span class="string">&#x27;title&#x27;</span>] = h4</span><br><span class="line">    job[<span class="string">&#x27;info&#x27;</span>] = span</span><br><span class="line">    job[<span class="string">&#x27;desc&#x27;</span>] = p2</span><br><span class="line">    <span class="built_in">print</span>(job)</span><br></pre></td></tr></table></figure>
-</li>
-<li><p>方法三</p>
-<p>该方法提取出的内容中包含换行、空格。</p>
-<figure class="highlight python"><table><tr><td class="code"><pre><span class="line"><span class="keyword">for</span> aE <span class="keyword">in</span> aEs:</span><br><span class="line">    <span class="built_in">print</span>(<span class="built_in">list</span>(aE.strings))</span><br></pre></td></tr></table></figure></li>
-</ol>
-<p>_注意_：</p>
-<p>strings和stripped_strings、string属性和get_text方法：</p>
-<ol>
-<li>string：获取某个标签下的非标签字符串。返回值为字符串。</li>
-<li>strings：获取某个标签下的所有非标签字符串，返回结果为一个生成器。</li>
-<li>stripped_strings：获取某个标签下的所有非空行、非换行的非标签字符串，返回结果为一个生成器。</li>
-<li>get_text：获取某个标签下的所有非标签字符串，返回结果为字符串。</li>
-</ol>
-</li>
-</ul>
-<h3 id="搜索文档树"><a href="#搜索文档树" class="headerlink" title="搜索文档树"></a>搜索文档树</h3><h4 id="find和find-all方法"><a href="#find和find-all方法" class="headerlink" title="find和find_all方法"></a>find和find_all方法</h4><p>搜索文档树，一般采用较多的是这两个方法，一个是find，另一个是find_all方法。find方法是在文档树中找到第一个满足条件的标签后就返回结果。find_all方法是在文档树中找到所有满足条件的标签后返回结果。在这两个方法中最常用的用法是name和attr参数，其中也可以直接传入关键字，在传入关键字”class”时，需要将”class”变为”class_”。</p>
-<figure class="highlight python"><table><tr><td class="code"><pre><span class="line">soup.find_all(<span class="string">&#x27;div&#x27;</span>, class_=<span class="string">&quot;test&quot;</span>)</span><br></pre></td></tr></table></figure>
-
-<h4 id="select方法"><a href="#select方法" class="headerlink" title="select方法"></a>select方法</h4><p>在使用css选择器的方式时，需要使用select方法。以下为几种常用的css选择器方法：</p>
-<ol>
-<li><p>通过标签名查找</p>
-<figure class="highlight python"><table><tr><td class="code"><pre><span class="line"><span class="built_in">print</span>(soup.select(<span class="string">&#x27;a&#x27;</span>))</span><br></pre></td></tr></table></figure>
-</li>
-<li><p>通过类名查找</p>
-<p>通过类名，应该在前面加一个”.”,比如要查找class&#x3D;sister的标签。</p>
-<figure class="highlight python"><table><tr><td class="code"><pre><span class="line"><span class="built_in">print</span>(soup.select(<span class="string">&#x27;.sister&#x27;</span>))</span><br></pre></td></tr></table></figure>
-</li>
-<li><p>通过id查找</p>
-<p>通过id查找，应该在id的名字前面加一个”#”号。</p>
-<figure class="highlight python"><table><tr><td class="code"><pre><span class="line"><span class="built_in">print</span>(soup.select(<span class="string">&#x27;#link1&#x27;</span>))</span><br></pre></td></tr></table></figure>
-</li>
-<li><p>通过组合查找</p>
-<p>组合查找时，标签名和类名、id名进行组合的方式进行查找，例如查找p标签中，id等于link1的内容。</p>
-<figure class="highlight python"><table><tr><td class="code"><pre><span class="line"><span class="built_in">print</span>(soup.select(<span class="string">&quot;p #link1&quot;</span>))</span><br></pre></td></tr></table></figure>
-
-<p>直接子标签查找，则用”&gt;”分隔</p>
-<figure class="highlight python"><table><tr><td class="code"><pre><span class="line"><span class="built_in">print</span>(soup.select(<span class="string">&quot;head &gt; title&quot;</span>))</span><br></pre></td></tr></table></figure>
-</li>
-<li><p>通过属性查找</p>
-<p>查找时还可以加入属性元素，属性元素需要使用中括号括起来，注意属性和标签属于同一节点，所以中间不能加空格，否则会无法匹配</p>
-<figure class="highlight python"><table><tr><td class="code"><pre><span class="line"><span class="built_in">print</span>(soup.select(<span class="string">&#x27;a[href=&quot;http://example.com/elsie&quot;]&#x27;</span>))</span><br></pre></td></tr></table></figure>
-</li>
-<li><p>获取内容</p>
-<p>以上的select方法返回的结果都是以列表的形式返回的，可以进行遍历输出，然后使用get_text()方法获取其他的内容。</p>
-<figure class="highlight python"><table><tr><td class="code"><pre><span class="line">soup = BeautifulSoup(html, <span class="string">&#x27;lxml&#x27;</span>)</span><br><span class="line"><span class="built_in">print</span>(<span class="built_in">type</span>(soup.select(<span class="string">&#x27;title&#x27;</span>)))</span><br><span class="line"><span class="built_in">print</span>(soup.select(<span class="string">&#x27;title&#x27;</span>)[<span class="number">0</span>].get_text())</span><br><span class="line"></span><br><span class="line"><span class="keyword">for</span> title <span class="keyword">in</span> soup.select(<span class="string">&#x27;title&#x27;</span>):</span><br><span class="line">    <span class="built_in">print</span>(title.get_text())</span><br></pre></td></tr></table></figure></li>
-</ol>
-]]></content>
-      <categories>
-        <category>爬虫</category>
-      </categories>
-      <tags>
-        <tag>bs4</tag>
-      </tags>
-  </entry>
-  <entry>
     <title>XPath语法详解</title>
     <url>/190628/</url>
     <content><![CDATA[<h3 id="Xpath语法和lxml模块"><a href="#Xpath语法和lxml模块" class="headerlink" title="Xpath语法和lxml模块"></a>Xpath语法和lxml模块</h3><h4 id="什么是XPath？"><a href="#什么是XPath？" class="headerlink" title="什么是XPath？"></a>什么是XPath？</h4><p>xpath (XML Path Language)是一门在XML和HTML文档中查找信息的语言，可用来在XML和HTML文档中对元素和属性进行遍历。</p>
@@ -1349,6 +1224,131 @@
       </tags>
   </entry>
   <entry>
+    <title>BeautifulSoup4库</title>
+    <url>/190628-1/</url>
+    <content><![CDATA[<p>和lxml一样，BeautifulSoup也是一个HTML&#x2F;XML的解析器，主要的功能也是解析和提取HTML&#x2F;XML数据。</p>
+<p>lxml只会局部遍历，而BeautifulSoup是基于HTML DOM的，它会加载整个文档，解析整个DOM树，因此在时间和内存上也会有很大的开销，所以性能要低于lxml。</p>
+<p>BeautifulSoup用来解析HTML比较简单，其API设计的非常人性化，同时BeautifulSoup也支持CSS选择器、Python标准库中的HTML解析器、lxml的XML。</p>
+<span id="more"></span>
+
+<p>安装：<code>pip install bs4</code></p>
+<p>中文文档：<a href="https://www.crummy.com/software/BeautifulSoup/bs4/doc/index.zh.html">https://www.crummy.com/software/BeautifulSoup/bs4/doc/index.zh.html</a></p>
+<h3 id="对比："><a href="#对比：" class="headerlink" title="对比："></a>对比：</h3><table>
+<thead>
+<tr>
+<th>解析工具</th>
+<th>解析速度</th>
+<th>使用难度</th>
+</tr>
+</thead>
+<tbody><tr>
+<td>BeautifulSoup4</td>
+<td>最慢</td>
+<td>最简单</td>
+</tr>
+<tr>
+<td>lxml</td>
+<td>快</td>
+<td>简单</td>
+</tr>
+<tr>
+<td>正则</td>
+<td>最快</td>
+<td>最难</td>
+</tr>
+</tbody></table>
+<h3 id="简单使用"><a href="#简单使用" class="headerlink" title="简单使用"></a>简单使用</h3><figure class="highlight python"><table><tr><td class="code"><pre><span class="line"><span class="keyword">from</span> bs4 <span class="keyword">import</span> BeautifulSoup</span><br><span class="line"></span><br><span class="line">html = <span class="string">&quot;&quot;&quot;</span></span><br><span class="line"><span class="string">&lt;html&gt;&lt;head&gt;&lt;title&gt;The Dormouse&#x27;s story&lt;/title&gt;&lt;/head&gt;</span></span><br><span class="line"><span class="string">&lt;body&gt;</span></span><br><span class="line"><span class="string">&lt;p class=&quot;title&quot;&gt;&lt;b&gt;The Dormouse&#x27;s story&lt;/b&gt;&lt;/p&gt;</span></span><br><span class="line"><span class="string"></span></span><br><span class="line"><span class="string">&lt;p class=&quot;story&quot;&gt;Once upon a time there were three little sisters; and their names were</span></span><br><span class="line"><span class="string">&lt;a href=&quot;http://example.com/elsie&quot; class=&quot;sister&quot; id=&quot;link1&quot;&gt;Elsie&lt;/a&gt;,</span></span><br><span class="line"><span class="string">&lt;a href=&quot;http://example.com/lacie&quot; class=&quot;sister&quot; id=&quot;link2&quot;&gt;Lacie&lt;/a&gt; and</span></span><br><span class="line"><span class="string">&lt;a href=&quot;http://example.com/tillie&quot; class=&quot;sister&quot; id=&quot;link3&quot;&gt;Tillie&lt;/a&gt;;</span></span><br><span class="line"><span class="string">and they lived at the bottom of a well.&lt;/p&gt;</span></span><br><span class="line"><span class="string"></span></span><br><span class="line"><span class="string">&lt;p class=&quot;story&quot;&gt;...&lt;/p&gt;</span></span><br><span class="line"><span class="string">&quot;&quot;&quot;</span></span><br><span class="line"></span><br><span class="line">soup = BeautifulSoup(html, <span class="string">&#x27;lxml&#x27;</span>)</span><br><span class="line"><span class="built_in">print</span>(soup.prettify())</span><br></pre></td></tr></table></figure>
+
+<p>BeautifulSoup(markup, features):在使用的时候需要指定解析器，如果未指定，BeautifulSoup使用的Python标准库中的HTML解析器，同时beautifulsoup也支持第三方的解析器如lxml。另一个可供选择的解析器是纯Python实现的html5lib，html5lib的解析方式与浏览器相同。</p>
+<p>安装lxml：<code>pip install lxml</code></p>
+<p>安装html5lib: <code>pip install html5lib</code></p>
+<p>主要解析器的优缺点：</p>
+<p><img src="/userImages/20190629_000.png" alt="解析器"></p>
+<h3 id="四个常用的对象"><a href="#四个常用的对象" class="headerlink" title="四个常用的对象"></a>四个常用的对象</h3><p>BeautifulSoup将复杂HTML文档转换成一个复杂的树形结构，每个节点都是Python对象，所有对象可以归纳为4种：</p>
+<ol>
+<li>Tag</li>
+<li>NavigatableString</li>
+<li>BeautifulSoup</li>
+<li>Comment</li>
+</ol>
+<h3 id="操作讲解"><a href="#操作讲解" class="headerlink" title="操作讲解"></a>操作讲解</h3><p>以下内容以4个例子的形式进行讲解：</p>
+<figure class="highlight python"><table><tr><td class="code"><pre><span class="line"><span class="comment"># demo.py</span></span><br><span class="line"></span><br><span class="line"><span class="keyword">from</span> bs4 <span class="keyword">import</span> BeautifulSoup</span><br><span class="line"></span><br><span class="line">html = <span class="string">&quot;&quot;&quot;</span></span><br><span class="line"><span class="string">&lt;div data-v-a6e3291a=&quot;&quot; class=&quot;correlation-degree&quot;&gt;</span></span><br><span class="line"><span class="string">  &lt;div data-v-a6e3291a=&quot;&quot; class=&quot;recruit-wrap recruit-margin&quot;&gt;</span></span><br><span class="line"><span class="string">    &lt;div data-v-a6e3291a=&quot;&quot; class=&quot;recruit-list&quot;&gt;</span></span><br><span class="line"><span class="string">      &lt;a data-v-a6e3291a=&quot;&quot; class=&quot;recruit-list-link&quot;&gt;</span></span><br><span class="line"><span class="string">        &lt;h4 data-v-a6e3291a=&quot;&quot; class=&quot;recruit-title&quot;&gt;TEG15-计费产品web前端开发工程师（深圳）&lt;/h4&gt; </span></span><br><span class="line"><span class="string">        &lt;p data-v-a6e3291a=&quot;&quot; class=&quot;recruit-tips&quot;&gt;</span></span><br><span class="line"><span class="string">          &lt;span data-v-a6e3291a=&quot;&quot;&gt;TEG&lt;/span&gt; | &lt;span data-v-a6e3291a=&quot;&quot;&gt;深圳,中国&lt;/span&gt; | </span></span><br><span class="line"><span class="string">          &lt;span data-v-a6e3291a=&quot;&quot;&gt;技术&lt;/span&gt; | &lt;span data-v-a6e3291a=&quot;&quot;&gt;2019年06月28日&lt;/span&gt;</span></span><br><span class="line"><span class="string">        &lt;/p&gt;</span></span><br><span class="line"><span class="string">        &lt;p data-v-a6e3291a=&quot;&quot; class=&quot;recruit-text&quot;&gt;负责腾讯计费平台基础支付前端架构设计和开发工作； 参与需求评审、架构设计、编码设计和上线运维； 负责用户体验优化，包括但不限于：业务流程、前端展示、性能、安全等。&lt;/p&gt;</span></span><br><span class="line"><span class="string">      &lt;/a&gt; </span></span><br><span class="line"><span class="string">      &lt;div data-v-a6e3291a=&quot;&quot; class=&quot;recruit-collection&quot;&gt;</span></span><br><span class="line"><span class="string">        &lt;span data-v-a6e3291a=&quot;&quot; class=&quot;icon-collection&quot;&gt;&lt;/span&gt; </span></span><br><span class="line"><span class="string">        &lt;span data-v-a6e3291a=&quot;&quot; class=&quot;collection-text&quot;&gt;收藏&lt;/span&gt;</span></span><br><span class="line"><span class="string">      &lt;/div&gt;</span></span><br><span class="line"><span class="string">    &lt;/div&gt;</span></span><br><span class="line"><span class="string">    &lt;div data-v-a6e3291a=&quot;&quot; class=&quot;recruit-list&quot;&gt;</span></span><br><span class="line"><span class="string">      &lt;a data-v-a6e3291a=&quot;&quot; class=&quot;recruit-list-link&quot;&gt;</span></span><br><span class="line"><span class="string">        &lt;h4 data-v-a6e3291a=&quot;&quot; class=&quot;recruit-title&quot;&gt;PCG19-腾讯视频媒资后台开发工程师&lt;/h4&gt;</span></span><br><span class="line"><span class="string">        &lt;p data-v-a6e3291a=&quot;&quot; class=&quot;recruit-tips&quot;&gt;</span></span><br><span class="line"><span class="string">          &lt;span data-v-a6e3291a=&quot;&quot;&gt;PCG&lt;/span&gt; | &lt;span data-v-a6e3291a=&quot;&quot;&gt;北京,中国&lt;/span&gt; | </span></span><br><span class="line"><span class="string">          &lt;span data-v-a6e3291a=&quot;&quot;&gt;技术&lt;/span&gt; | &lt;span data-v-a6e3291a=&quot;&quot;&gt;腾讯视频&lt;/span&gt; | </span></span><br><span class="line"><span class="string">          &lt;span data-v-a6e3291a=&quot;&quot;&gt;2019年06月28日&lt;/span&gt;</span></span><br><span class="line"><span class="string">        &lt;/p&gt;</span></span><br><span class="line"><span class="string">        &lt;p data-v-a6e3291a=&quot;&quot; class=&quot;recruit-text&quot;&gt;负责腾讯视频媒资中台开发工作。&lt;/p&gt;</span></span><br><span class="line"><span class="string">      &lt;/a&gt; </span></span><br><span class="line"><span class="string">      &lt;div data-v-a6e3291a=&quot;&quot; class=&quot;recruit-collection&quot;&gt;</span></span><br><span class="line"><span class="string">        &lt;span data-v-a6e3291a=&quot;&quot; class=&quot;icon-collection&quot;&gt;&lt;/span&gt; </span></span><br><span class="line"><span class="string">        &lt;span data-v-a6e3291a=&quot;&quot; class=&quot;collection-text&quot;&gt;收藏&lt;/span&gt;</span></span><br><span class="line"><span class="string">      &lt;/div&gt;</span></span><br><span class="line"><span class="string">    &lt;/div&gt;</span></span><br><span class="line"><span class="string">    &lt;div data-v-a6e3291a=&quot;&quot; class=&quot;recruit-list&quot;&gt;</span></span><br><span class="line"><span class="string">      &lt;a data-v-a6e3291a=&quot;&quot; class=&quot;recruit-list-link&quot;&gt;</span></span><br><span class="line"><span class="string">        &lt;h4 data-v-a6e3291a=&quot;&quot; class=&quot;recruit-title&quot;&gt;TEG15-计费系统前端测试工程师（深圳）&lt;/h4&gt; </span></span><br><span class="line"><span class="string">        &lt;p data-v-a6e3291a=&quot;&quot; class=&quot;recruit-tips&quot;&gt;</span></span><br><span class="line"><span class="string">          &lt;span data-v-a6e3291a=&quot;&quot;&gt;TEG&lt;/span&gt; | &lt;span data-v-a6e3291a=&quot;&quot;&gt;深圳,中国&lt;/span&gt; | </span></span><br><span class="line"><span class="string">          &lt;span data-v-a6e3291a=&quot;&quot;&gt;技术&lt;/span&gt; | &lt;span data-v-a6e3291a=&quot;&quot;&gt;2019年06月28日&lt;/span&gt;</span></span><br><span class="line"><span class="string">        &lt;/p&gt; </span></span><br><span class="line"><span class="string">        &lt;p data-v-a6e3291a=&quot;&quot; class=&quot;recruit-text&quot;&gt;负责web端/后台系统测试工作，从整个项目角度规划测试方法，达成项目质量目标； 负责web端/后台系统的自动化测试、性能测试，稳定性以及其它专项测试； 负责研究web端/后台系统测试技术，跟进业界测试技术发展，引进先进测试方法并开展二次开发，建立团队质量体系建设，有效提升测试效率&lt;/p&gt;</span></span><br><span class="line"><span class="string">      &lt;/a&gt; </span></span><br><span class="line"><span class="string">      &lt;div data-v-a6e3291a=&quot;&quot; class=&quot;recruit-collection&quot;&gt;</span></span><br><span class="line"><span class="string">        &lt;span data-v-a6e3291a=&quot;&quot; class=&quot;icon-collection&quot;&gt;&lt;/span&gt; </span></span><br><span class="line"><span class="string">        &lt;span data-v-a6e3291a=&quot;&quot; class=&quot;collection-text&quot;&gt;收藏&lt;/span&gt;</span></span><br><span class="line"><span class="string">      &lt;/div&gt;</span></span><br><span class="line"><span class="string">    &lt;/div&gt;</span></span><br><span class="line"><span class="string">    &lt;div data-v-a6e3291a=&quot;&quot; class=&quot;recruit-list&quot;&gt;</span></span><br><span class="line"><span class="string">      &lt;a data-v-a6e3291a=&quot;&quot; class=&quot;recruit-list-link&quot;&gt;</span></span><br><span class="line"><span class="string">        &lt;h4 data-v-a6e3291a=&quot;&quot; class=&quot;recruit-title&quot;&gt;32032-资深后台开发工程师（上海）&lt;/h4&gt; </span></span><br><span class="line"><span class="string">        &lt;p data-v-a6e3291a=&quot;&quot; class=&quot;recruit-tips&quot;&gt;</span></span><br><span class="line"><span class="string">          &lt;span data-v-a6e3291a=&quot;&quot;&gt;IEG&lt;/span&gt; | &lt;span data-v-a6e3291a=&quot;&quot;&gt;上海,中国&lt;/span&gt; | </span></span><br><span class="line"><span class="string">          &lt;span data-v-a6e3291a=&quot;&quot;&gt;技术&lt;/span&gt; | &lt;span data-v-a6e3291a=&quot;&quot;&gt;2019年06月28日&lt;/span&gt;</span></span><br><span class="line"><span class="string">        &lt;/p&gt; </span></span><br><span class="line"><span class="string">        &lt;p data-v-a6e3291a=&quot;&quot; class=&quot;recruit-text&quot;&gt;游戏服务器的功能开发和现有系统的持续优化； 负责服务器压力测试和性能优化； 负责服务器外网运营的持续跟进和优化。 &lt;/p&gt;</span></span><br><span class="line"><span class="string">      &lt;/a&gt; </span></span><br><span class="line"><span class="string">      &lt;div data-v-a6e3291a=&quot;&quot; class=&quot;recruit-collection&quot;&gt;</span></span><br><span class="line"><span class="string">        &lt;span data-v-a6e3291a=&quot;&quot; class=&quot;icon-collection&quot;&gt;&lt;/span&gt; </span></span><br><span class="line"><span class="string">        &lt;span data-v-a6e3291a=&quot;&quot; class=&quot;collection-text&quot;&gt;收藏&lt;/span&gt;</span></span><br><span class="line"><span class="string">      &lt;/div&gt;</span></span><br><span class="line"><span class="string">    &lt;/div&gt;</span></span><br><span class="line"><span class="string">    &lt;div data-v-a6e3291a=&quot;&quot; class=&quot;recruit-list&quot;&gt;</span></span><br><span class="line"><span class="string">      &lt;a data-v-a6e3291a=&quot;&quot; class=&quot;recruit-list-link&quot;&gt;</span></span><br><span class="line"><span class="string">        &lt;h4 data-v-a6e3291a=&quot;&quot; class=&quot;recruit-title&quot;&gt;WXG03-搜索自然语言算法工程师&lt;/h4&gt; </span></span><br><span class="line"><span class="string">        &lt;p data-v-a6e3291a=&quot;&quot; class=&quot;recruit-tips&quot;&gt;</span></span><br><span class="line"><span class="string">          &lt;span data-v-a6e3291a=&quot;&quot;&gt;WXG&lt;/span&gt; | &lt;span data-v-a6e3291a=&quot;&quot;&gt;广州,中国&lt;/span&gt; | </span></span><br><span class="line"><span class="string">          &lt;span data-v-a6e3291a=&quot;&quot;&gt;技术&lt;/span&gt; | &lt;span data-v-a6e3291a=&quot;&quot;&gt;2019年06月28日&lt;/span&gt;</span></span><br><span class="line"><span class="string">        &lt;/p&gt; </span></span><br><span class="line"><span class="string">        &lt;p data-v-a6e3291a=&quot;&quot; class=&quot;recruit-text&quot;&gt;负责包括新词发现、命名实体识别、查询理解、意图提取、知识图谱、搜索喜好偏向性等相关系统的建设，用以优化微信小程序搜索各产品方向的流量分发，并参与工程实践。&lt;/p&gt;</span></span><br><span class="line"><span class="string">      &lt;/a&gt; </span></span><br><span class="line"><span class="string">      &lt;div data-v-a6e3291a=&quot;&quot; class=&quot;recruit-collection&quot;&gt;</span></span><br><span class="line"><span class="string">        &lt;span data-v-a6e3291a=&quot;&quot; class=&quot;icon-collection&quot;&gt;&lt;/span&gt; </span></span><br><span class="line"><span class="string">        &lt;span data-v-a6e3291a=&quot;&quot; class=&quot;collection-text&quot;&gt;收藏&lt;/span&gt;</span></span><br><span class="line"><span class="string">      &lt;/div&gt;</span></span><br><span class="line"><span class="string">    &lt;/div&gt;</span></span><br><span class="line"><span class="string">    &lt;div data-v-a6e3291a=&quot;&quot; class=&quot;recruit-list&quot;&gt;</span></span><br><span class="line"><span class="string">      &lt;a data-v-a6e3291a=&quot;&quot; class=&quot;recruit-list-link&quot;&gt;</span></span><br><span class="line"><span class="string">        &lt;h4 data-v-a6e3291a=&quot;&quot; class=&quot;recruit-title&quot;&gt;WXG03-搜索检索算法工程师&lt;/h4&gt; </span></span><br><span class="line"><span class="string">        &lt;p data-v-a6e3291a=&quot;&quot; class=&quot;recruit-tips&quot;&gt;</span></span><br><span class="line"><span class="string">          &lt;span data-v-a6e3291a=&quot;&quot;&gt;WXG&lt;/span&gt; | &lt;span data-v-a6e3291a=&quot;&quot;&gt;广州,中国&lt;/span&gt; | </span></span><br><span class="line"><span class="string">          &lt;span data-v-a6e3291a=&quot;&quot;&gt;技术&lt;/span&gt; | &lt;span data-v-a6e3291a=&quot;&quot;&gt;2019年06月28日&lt;/span&gt;</span></span><br><span class="line"><span class="string">        &lt;/p&gt; </span></span><br><span class="line"><span class="string">        &lt;p data-v-a6e3291a=&quot;&quot; class=&quot;recruit-text&quot;&gt;负责微信小程序搜索各个产品方向的检索工作，内容包括页面识别、页面核心数据提取、页面分类、页面评分、词权重、排序等相关工作，并与开发工程师配合进行工程实践。 &lt;/p&gt;</span></span><br><span class="line"><span class="string">      &lt;/a&gt; </span></span><br><span class="line"><span class="string">      &lt;div data-v-a6e3291a=&quot;&quot; class=&quot;recruit-collection&quot;&gt;</span></span><br><span class="line"><span class="string">        &lt;span data-v-a6e3291a=&quot;&quot; class=&quot;icon-collection&quot;&gt;&lt;/span&gt; </span></span><br><span class="line"><span class="string">        &lt;span data-v-a6e3291a=&quot;&quot; class=&quot;collection-text&quot;&gt;收藏&lt;/span&gt;</span></span><br><span class="line"><span class="string">      &lt;/div&gt;</span></span><br><span class="line"><span class="string">    &lt;/div&gt;</span></span><br><span class="line"><span class="string">    &lt;div data-v-a6e3291a=&quot;&quot; class=&quot;recruit-list&quot;&gt;</span></span><br><span class="line"><span class="string">      &lt;a data-v-a6e3291a=&quot;&quot; class=&quot;recruit-list-link&quot;&gt;</span></span><br><span class="line"><span class="string">        &lt;h4 data-v-a6e3291a=&quot;&quot; class=&quot;recruit-title&quot;&gt;23486-证券业务C++后台开发高级工程师（深圳）&lt;/h4&gt; </span></span><br><span class="line"><span class="string">        &lt;p data-v-a6e3291a=&quot;&quot; class=&quot;recruit-tips&quot;&gt;</span></span><br><span class="line"><span class="string">          &lt;span data-v-a6e3291a=&quot;&quot;&gt;CDG&lt;/span&gt; | &lt;span data-v-a6e3291a=&quot;&quot;&gt;深圳,中国&lt;/span&gt; | </span></span><br><span class="line"><span class="string">          &lt;span data-v-a6e3291a=&quot;&quot;&gt;技术&lt;/span&gt; | &lt;span data-v-a6e3291a=&quot;&quot;&gt;2019年06月28日&lt;/span&gt;</span></span><br><span class="line"><span class="string">        &lt;/p&gt; </span></span><br><span class="line"><span class="string">        &lt;p data-v-a6e3291a=&quot;&quot; class=&quot;recruit-text&quot;&gt;负责证券交易、风控、清算等系统的开发维护，建设证券业务相关的技术基础平台。&lt;/p&gt;</span></span><br><span class="line"><span class="string">      &lt;/a&gt; </span></span><br><span class="line"><span class="string">      &lt;div data-v-a6e3291a=&quot;&quot; class=&quot;recruit-collection&quot;&gt;</span></span><br><span class="line"><span class="string">        &lt;span data-v-a6e3291a=&quot;&quot; class=&quot;icon-collection&quot;&gt;&lt;/span&gt; </span></span><br><span class="line"><span class="string">        &lt;span data-v-a6e3291a=&quot;&quot; class=&quot;collection-text&quot;&gt;收藏&lt;/span&gt;</span></span><br><span class="line"><span class="string">      &lt;/div&gt;</span></span><br><span class="line"><span class="string">    &lt;/div&gt;</span></span><br><span class="line"><span class="string">    &lt;div data-v-a6e3291a=&quot;&quot; class=&quot;recruit-list&quot;&gt;</span></span><br><span class="line"><span class="string">      &lt;a data-v-a6e3291a=&quot;&quot; class=&quot;recruit-list-link&quot;&gt;</span></span><br><span class="line"><span class="string">        &lt;h4 data-v-a6e3291a=&quot;&quot; class=&quot;recruit-title&quot;&gt;22989-腾讯云数据平台产品中心运营开发&lt;/h4&gt; </span></span><br><span class="line"><span class="string">        &lt;p data-v-a6e3291a=&quot;&quot; class=&quot;recruit-tips&quot;&gt;</span></span><br><span class="line"><span class="string">          &lt;span data-v-a6e3291a=&quot;&quot;&gt;CSIG&lt;/span&gt; | &lt;span data-v-a6e3291a=&quot;&quot;&gt;深圳,中国&lt;/span&gt; | </span></span><br><span class="line"><span class="string">          &lt;span data-v-a6e3291a=&quot;&quot;&gt;技术&lt;/span&gt; | &lt;span data-v-a6e3291a=&quot;&quot;&gt;2019年06月28日&lt;/span&gt;</span></span><br><span class="line"><span class="string">        &lt;/p&gt; </span></span><br><span class="line"><span class="string">        &lt;p data-v-a6e3291a=&quot;&quot; class=&quot;recruit-text&quot;&gt;负责腾讯云数据平台产品的设计和研发。 负责云产品数据管理和服务的设计和研发。 负责构建和完善云底层数据的存储和查询，优化数据的质量和监控能力。&lt;/p&gt;</span></span><br><span class="line"><span class="string">      &lt;/a&gt; </span></span><br><span class="line"><span class="string">      &lt;div data-v-a6e3291a=&quot;&quot; class=&quot;recruit-collection&quot;&gt;</span></span><br><span class="line"><span class="string">        &lt;span data-v-a6e3291a=&quot;&quot; class=&quot;icon-collection&quot;&gt;&lt;/span&gt; </span></span><br><span class="line"><span class="string">        &lt;span data-v-a6e3291a=&quot;&quot; class=&quot;collection-text&quot;&gt;收藏&lt;/span&gt;</span></span><br><span class="line"><span class="string">      &lt;/div&gt;</span></span><br><span class="line"><span class="string">    &lt;/div&gt;</span></span><br><span class="line"><span class="string">    &lt;div data-v-a6e3291a=&quot;&quot; class=&quot;recruit-list&quot;&gt;</span></span><br><span class="line"><span class="string">      &lt;a data-v-a6e3291a=&quot;&quot; class=&quot;recruit-list-link&quot;&gt;</span></span><br><span class="line"><span class="string">        &lt;h4 data-v-a6e3291a=&quot;&quot; class=&quot;recruit-title&quot;&gt;18428-证券业务测试工程师&lt;/h4&gt; </span></span><br><span class="line"><span class="string">        &lt;p data-v-a6e3291a=&quot;&quot; class=&quot;recruit-tips&quot;&gt;</span></span><br><span class="line"><span class="string">          &lt;span data-v-a6e3291a=&quot;&quot;&gt;CDG&lt;/span&gt; | &lt;span data-v-a6e3291a=&quot;&quot;&gt;北京,中国&lt;/span&gt; | </span></span><br><span class="line"><span class="string">          &lt;span data-v-a6e3291a=&quot;&quot;&gt;技术&lt;/span&gt; | &lt;span data-v-a6e3291a=&quot;&quot;&gt;财付通&lt;/span&gt; | </span></span><br><span class="line"><span class="string">          &lt;span data-v-a6e3291a=&quot;&quot;&gt;2019年06月28日&lt;/span&gt;</span></span><br><span class="line"><span class="string">        &lt;/p&gt; </span></span><br><span class="line"><span class="string">        &lt;p data-v-a6e3291a=&quot;&quot; class=&quot;recruit-text&quot;&gt;负责证券类产品的功能、性能、安全、自动化等测试工作，包括终端/H5及后台系统的测试。&lt;/p&gt;</span></span><br><span class="line"><span class="string">      &lt;/a&gt; </span></span><br><span class="line"><span class="string">      &lt;div data-v-a6e3291a=&quot;&quot; class=&quot;recruit-collection&quot;&gt;</span></span><br><span class="line"><span class="string">        &lt;span data-v-a6e3291a=&quot;&quot; class=&quot;icon-collection&quot;&gt;&lt;/span&gt; </span></span><br><span class="line"><span class="string">        &lt;span data-v-a6e3291a=&quot;&quot; class=&quot;collection-text&quot;&gt;收藏&lt;/span&gt;</span></span><br><span class="line"><span class="string">      &lt;/div&gt;</span></span><br><span class="line"><span class="string">    &lt;/div&gt;</span></span><br><span class="line"><span class="string">    &lt;div data-v-a6e3291a=&quot;&quot; class=&quot;recruit-list&quot;&gt;</span></span><br><span class="line"><span class="string">      &lt;a data-v-a6e3291a=&quot;&quot; class=&quot;recruit-list-link&quot;&gt;</span></span><br><span class="line"><span class="string">        &lt;h4 data-v-a6e3291a=&quot;&quot; class=&quot;recruit-title&quot;&gt;30360-后台平台开发（深圳）&lt;/h4&gt; </span></span><br><span class="line"><span class="string">        &lt;p data-v-a6e3291a=&quot;&quot; class=&quot;recruit-tips&quot;&gt;</span></span><br><span class="line"><span class="string">          &lt;span data-v-a6e3291a=&quot;&quot;&gt;PCG&lt;/span&gt; | &lt;span data-v-a6e3291a=&quot;&quot;&gt;深圳总部,中国&lt;/span&gt; | </span></span><br><span class="line"><span class="string">          &lt;span data-v-a6e3291a=&quot;&quot;&gt;技术&lt;/span&gt; | &lt;span data-v-a6e3291a=&quot;&quot;&gt;2019年06月28日&lt;/span&gt;</span></span><br><span class="line"><span class="string">        &lt;/p&gt; </span></span><br><span class="line"><span class="string">        &lt;p data-v-a6e3291a=&quot;&quot; class=&quot;recruit-text&quot;&gt;负责QQ平台海量用户和数据的基础后台研发工作； 负责AI基础架构系统后台研发工作； 负责推荐系统，大数据分析计算后台研发工作。&lt;/p&gt;</span></span><br><span class="line"><span class="string">      &lt;/a&gt; </span></span><br><span class="line"><span class="string">      &lt;div data-v-a6e3291a=&quot;&quot; class=&quot;recruit-collection&quot;&gt;</span></span><br><span class="line"><span class="string">        &lt;span data-v-a6e3291a=&quot;&quot; class=&quot;icon-collection&quot;&gt;&lt;/span&gt; </span></span><br><span class="line"><span class="string">        &lt;span data-v-a6e3291a=&quot;&quot; class=&quot;collection-text&quot;&gt;收藏&lt;/span&gt;</span></span><br><span class="line"><span class="string">      &lt;/div&gt;</span></span><br><span class="line"><span class="string">    &lt;/div&gt;</span></span><br><span class="line"><span class="string">  &lt;/div&gt;</span></span><br><span class="line"><span class="string">&lt;/div&gt;</span></span><br><span class="line"><span class="string">&quot;&quot;&quot;</span></span><br><span class="line"></span><br><span class="line">soup = BeautifulSoup(html, <span class="string">&#x27;lxml&#x27;</span>)</span><br></pre></td></tr></table></figure>
+
+<ul>
+<li><p>获取所有的class属性为“recruit-list”的div标签</p>
+<figure class="highlight python"><table><tr><td class="code"><pre><span class="line">divs = soup.find_all(<span class="string">&#x27;div&#x27;</span>, attrs=&#123;<span class="string">&#x27;class&#x27;</span>: <span class="string">&quot;recruit-list&quot;</span>&#125;)</span><br><span class="line"><span class="keyword">for</span> div <span class="keyword">in</span> divs:</span><br><span class="line">    <span class="built_in">print</span>(div)</span><br></pre></td></tr></table></figure>
+</li>
+<li><p>获取第二个class属性为“recruit-list”的div标签</p>
+<figure class="highlight python"><table><tr><td class="code"><pre><span class="line">div = soup.find_all(<span class="string">&#x27;div&#x27;</span>, attrs=&#123;<span class="string">&#x27;class&#x27;</span>: <span class="string">&quot;recruit-list&quot;</span>&#125;, limit=<span class="number">2</span>)[<span class="number">1</span>]</span><br><span class="line"><span class="built_in">print</span>(div)</span><br></pre></td></tr></table></figure>
+</li>
+<li><p>获取所有的h4标签中的class属性</p>
+<figure class="highlight python"><table><tr><td class="code"><pre><span class="line">h4_texts = soup.find_all(<span class="string">&#x27;h4&#x27;</span>)</span><br><span class="line"><span class="keyword">for</span> h4_text <span class="keyword">in</span> h4_texts:</span><br><span class="line">    <span class="built_in">print</span>(h4_text[<span class="string">&#x27;class&#x27;</span>])</span><br></pre></td></tr></table></figure>
+</li>
+<li><p>获取所有的职位信息（纯文本）</p>
+<figure class="highlight python"><table><tr><td class="code"><pre><span class="line">aEs = soup.find_all(<span class="string">&#x27;a&#x27;</span>)</span><br></pre></td></tr></table></figure>
+
+<ol>
+<li><p>方法一</p>
+<p>输出的字符串中可能包含了很多空格或空行,使用 <code>.stripped_strings</code> 可以去除多余空白内容</p>
+<figure class="highlight python"><table><tr><td class="code"><pre><span class="line"><span class="keyword">for</span> aE <span class="keyword">in</span> aEs:</span><br><span class="line">    infos = <span class="built_in">list</span>(aE.stripped_strings)</span><br><span class="line">    <span class="built_in">print</span>(infos)</span><br></pre></td></tr></table></figure>
+</li>
+<li><p>方法二</p>
+<figure class="highlight python"><table><tr><td class="code"><pre><span class="line">job = &#123;&#125;</span><br><span class="line"><span class="keyword">for</span> aE <span class="keyword">in</span> aEs:</span><br><span class="line">    h4 = aE.find(<span class="string">&#x27;h4&#x27;</span>).string</span><br><span class="line">    ps = aE.find_all(<span class="string">&#x27;p&#x27;</span>)</span><br><span class="line">    spans = ps[<span class="number">0</span>].find_all(<span class="string">&#x27;span&#x27;</span>)</span><br><span class="line">    span = <span class="string">&#x27;|&#x27;</span>.join([s.string <span class="keyword">for</span> s <span class="keyword">in</span> spans])</span><br><span class="line">    p2 = ps[<span class="number">1</span>].string</span><br><span class="line">    job[<span class="string">&#x27;title&#x27;</span>] = h4</span><br><span class="line">    job[<span class="string">&#x27;info&#x27;</span>] = span</span><br><span class="line">    job[<span class="string">&#x27;desc&#x27;</span>] = p2</span><br><span class="line">    <span class="built_in">print</span>(job)</span><br></pre></td></tr></table></figure>
+</li>
+<li><p>方法三</p>
+<p>该方法提取出的内容中包含换行、空格。</p>
+<figure class="highlight python"><table><tr><td class="code"><pre><span class="line"><span class="keyword">for</span> aE <span class="keyword">in</span> aEs:</span><br><span class="line">    <span class="built_in">print</span>(<span class="built_in">list</span>(aE.strings))</span><br></pre></td></tr></table></figure></li>
+</ol>
+<p>_注意_：</p>
+<p>strings和stripped_strings、string属性和get_text方法：</p>
+<ol>
+<li>string：获取某个标签下的非标签字符串。返回值为字符串。</li>
+<li>strings：获取某个标签下的所有非标签字符串，返回结果为一个生成器。</li>
+<li>stripped_strings：获取某个标签下的所有非空行、非换行的非标签字符串，返回结果为一个生成器。</li>
+<li>get_text：获取某个标签下的所有非标签字符串，返回结果为字符串。</li>
+</ol>
+</li>
+</ul>
+<h3 id="搜索文档树"><a href="#搜索文档树" class="headerlink" title="搜索文档树"></a>搜索文档树</h3><h4 id="find和find-all方法"><a href="#find和find-all方法" class="headerlink" title="find和find_all方法"></a>find和find_all方法</h4><p>搜索文档树，一般采用较多的是这两个方法，一个是find，另一个是find_all方法。find方法是在文档树中找到第一个满足条件的标签后就返回结果。find_all方法是在文档树中找到所有满足条件的标签后返回结果。在这两个方法中最常用的用法是name和attr参数，其中也可以直接传入关键字，在传入关键字”class”时，需要将”class”变为”class_”。</p>
+<figure class="highlight python"><table><tr><td class="code"><pre><span class="line">soup.find_all(<span class="string">&#x27;div&#x27;</span>, class_=<span class="string">&quot;test&quot;</span>)</span><br></pre></td></tr></table></figure>
+
+<h4 id="select方法"><a href="#select方法" class="headerlink" title="select方法"></a>select方法</h4><p>在使用css选择器的方式时，需要使用select方法。以下为几种常用的css选择器方法：</p>
+<ol>
+<li><p>通过标签名查找</p>
+<figure class="highlight python"><table><tr><td class="code"><pre><span class="line"><span class="built_in">print</span>(soup.select(<span class="string">&#x27;a&#x27;</span>))</span><br></pre></td></tr></table></figure>
+</li>
+<li><p>通过类名查找</p>
+<p>通过类名，应该在前面加一个”.”,比如要查找class&#x3D;sister的标签。</p>
+<figure class="highlight python"><table><tr><td class="code"><pre><span class="line"><span class="built_in">print</span>(soup.select(<span class="string">&#x27;.sister&#x27;</span>))</span><br></pre></td></tr></table></figure>
+</li>
+<li><p>通过id查找</p>
+<p>通过id查找，应该在id的名字前面加一个”#”号。</p>
+<figure class="highlight python"><table><tr><td class="code"><pre><span class="line"><span class="built_in">print</span>(soup.select(<span class="string">&#x27;#link1&#x27;</span>))</span><br></pre></td></tr></table></figure>
+</li>
+<li><p>通过组合查找</p>
+<p>组合查找时，标签名和类名、id名进行组合的方式进行查找，例如查找p标签中，id等于link1的内容。</p>
+<figure class="highlight python"><table><tr><td class="code"><pre><span class="line"><span class="built_in">print</span>(soup.select(<span class="string">&quot;p #link1&quot;</span>))</span><br></pre></td></tr></table></figure>
+
+<p>直接子标签查找，则用”&gt;”分隔</p>
+<figure class="highlight python"><table><tr><td class="code"><pre><span class="line"><span class="built_in">print</span>(soup.select(<span class="string">&quot;head &gt; title&quot;</span>))</span><br></pre></td></tr></table></figure>
+</li>
+<li><p>通过属性查找</p>
+<p>查找时还可以加入属性元素，属性元素需要使用中括号括起来，注意属性和标签属于同一节点，所以中间不能加空格，否则会无法匹配</p>
+<figure class="highlight python"><table><tr><td class="code"><pre><span class="line"><span class="built_in">print</span>(soup.select(<span class="string">&#x27;a[href=&quot;http://example.com/elsie&quot;]&#x27;</span>))</span><br></pre></td></tr></table></figure>
+</li>
+<li><p>获取内容</p>
+<p>以上的select方法返回的结果都是以列表的形式返回的，可以进行遍历输出，然后使用get_text()方法获取其他的内容。</p>
+<figure class="highlight python"><table><tr><td class="code"><pre><span class="line">soup = BeautifulSoup(html, <span class="string">&#x27;lxml&#x27;</span>)</span><br><span class="line"><span class="built_in">print</span>(<span class="built_in">type</span>(soup.select(<span class="string">&#x27;title&#x27;</span>)))</span><br><span class="line"><span class="built_in">print</span>(soup.select(<span class="string">&#x27;title&#x27;</span>)[<span class="number">0</span>].get_text())</span><br><span class="line"></span><br><span class="line"><span class="keyword">for</span> title <span class="keyword">in</span> soup.select(<span class="string">&#x27;title&#x27;</span>):</span><br><span class="line">    <span class="built_in">print</span>(title.get_text())</span><br></pre></td></tr></table></figure></li>
+</ol>
+]]></content>
+      <categories>
+        <category>爬虫</category>
+      </categories>
+      <tags>
+        <tag>bs4</tag>
+      </tags>
+  </entry>
+  <entry>
     <title>多线程爬虫</title>
     <url>/190630/</url>
     <content><![CDATA[<h3 id="多线程介绍"><a href="#多线程介绍" class="headerlink" title="多线程介绍"></a>多线程介绍</h3><p>多线程时为了同步完成多项任务，通过提高资源使用效率来提高系统的效率。线程是在同一时间需要完成多项任务的时候实现的。就好比多线程是火车的每一节车厢，而进程就是火车，车厢离开火车无法启动。多线程的出现是为了提高效率。</p>
@@ -1418,19 +1418,6 @@
       <tags>
         <tag>多线程</tag>
         <tag>threading</tag>
-      </tags>
-  </entry>
-  <entry>
-    <title>一次完整的HTTP请求过程</title>
-    <url>/190724/</url>
-    <content><![CDATA[<h3 id="一次完整的HTTP请求过程"><a href="#一次完整的HTTP请求过程" class="headerlink" title="一次完整的HTTP请求过程"></a>一次完整的HTTP请求过程</h3><p>搬运来的，直接上链接吧：</p>
-<p>链接：<a href="https://www.cnblogs.com/xuzekun/p/7527736.html">飞机起飞</a></p>
-]]></content>
-      <categories>
-        <category>HTTP</category>
-      </categories>
-      <tags>
-        <tag>HTTP请求过程</tag>
       </tags>
   </entry>
   <entry>
@@ -1660,6 +1647,19 @@
       <tags>
         <tag>Mac</tag>
         <tag>破解</tag>
+      </tags>
+  </entry>
+  <entry>
+    <title>一次完整的HTTP请求过程</title>
+    <url>/190724/</url>
+    <content><![CDATA[<h3 id="一次完整的HTTP请求过程"><a href="#一次完整的HTTP请求过程" class="headerlink" title="一次完整的HTTP请求过程"></a>一次完整的HTTP请求过程</h3><p>搬运来的，直接上链接吧：</p>
+<p>链接：<a href="https://www.cnblogs.com/xuzekun/p/7527736.html">飞机起飞</a></p>
+]]></content>
+      <categories>
+        <category>HTTP</category>
+      </categories>
+      <tags>
+        <tag>HTTP请求过程</tag>
       </tags>
   </entry>
   <entry>
@@ -2070,6 +2070,19 @@
       </tags>
   </entry>
   <entry>
+    <title>Pip 更新所有包</title>
+    <url>/20200412/</url>
+    <content><![CDATA[<figure class="highlight python"><table><tr><td class="code"><pre><span class="line">查看可更新包：</span><br><span class="line">pip <span class="built_in">list</span>  --outdated --<span class="built_in">format</span>=columns</span><br><span class="line">批量下载并更新：</span><br><span class="line">pip install pip-review</span><br><span class="line">pip-review --local --interactive</span><br></pre></td></tr></table></figure>
+
+]]></content>
+      <categories>
+        <category>Python后端</category>
+      </categories>
+      <tags>
+        <tag>Pip</tag>
+      </tags>
+  </entry>
+  <entry>
     <title>CSS选择器</title>
     <url>/20200712/</url>
     <content><![CDATA[<p>“CSS” 列指示该属性是在哪个 CSS 版本中定义的。（CSS1、CSS2 还是 CSS3。）</p>
@@ -2401,16 +2414,30 @@
       </tags>
   </entry>
   <entry>
-    <title>Pip 更新所有包</title>
-    <url>/20200412/</url>
-    <content><![CDATA[<figure class="highlight python"><table><tr><td class="code"><pre><span class="line">查看可更新包：</span><br><span class="line">pip <span class="built_in">list</span>  --outdated --<span class="built_in">format</span>=columns</span><br><span class="line">批量下载并更新：</span><br><span class="line">pip install pip-review</span><br><span class="line">pip-review --local --interactive</span><br></pre></td></tr></table></figure>
+    <title>FTP Module</title>
+    <url>/FTP-Module/</url>
+    <content><![CDATA[<h3 id="ftplib模块的用法"><a href="#ftplib模块的用法" class="headerlink" title="ftplib模块的用法"></a>ftplib模块的用法</h3><ul>
+<li>login(user&#x3D;’’,passwd&#x3D;’’, acct&#x3D;’’) 登录到FTP 服务器，所有的参数都是可选的</li>
+<li>pwd() 当前工作目录</li>
+<li>cwd(path) 把当前工作目录设置为path</li>
+<li>dir([path[,…[,cb]]) 显示path 目录里的内容，可选的参数cb 是一个回调函数，会被传给retrlines()方法</li>
+<li>nlst([path[,…]) 与dir()类似，但返回一个文件名的列表，而不是显示这些文件名</li>
+<li>retrlines(cmd [, cb]) 给定FTP 命令（如“RETR filename”），用于下载文本文件。可选的回调函数cb 用于处理文件的每一行</li>
+<li>retrbinary(cmd, cb[,bs&#x3D;8192[, ra]]) 与retrlines()类似，只是这个指令处理二进制文件。回调函数cb 用于处理每一块（块大小默认为8K）下载的数据。</li>
+<li>storlines(cmd, f) 给定FTP 命令（如“STOR filename”），以上传文本文件。要给定一个文件对象f</li>
+<li>storbinary(cmd, f[,bs&#x3D;8192]) 与storlines()类似，只是这个指令处理二进制文件。要给定一个文件对象f，上传块大小bs 默认为8Kbs&#x3D;8192])</li>
+<li>rename(old, new) 把远程文件old 改名为new</li>
+<li>delete(path) 删除位于path 的远程文件</li>
+<li>mkd(directory) 创建远程目录</li>
+</ul>
+<span id="more"></span>
 
-]]></content>
+<h3 id="此处给出官方给的介绍"><a href="#此处给出官方给的介绍" class="headerlink" title="此处给出官方给的介绍"></a>此处给出官方给的介绍</h3><figure class="highlight python"><table><tr><td class="code"><pre><span class="line">Methods defined here:</span><br><span class="line">|</span><br><span class="line">| init(self, host=’’, user=’’, passwd=’’, acct=’’, keyfile=<span class="literal">None</span>, certfile=<span class="literal">None</span>, context=<span class="literal">None</span>, timeout=, source_address=<span class="literal">None</span>)</span><br><span class="line">|</span><br><span class="line">| auth(self)</span><br><span class="line">| <span class="type">Set</span> up secure control connection by using TLS/SSL.</span><br><span class="line">|</span><br><span class="line">| login(self, user=’’, passwd=’’, acct=’’, secure=<span class="literal">True</span>)</span><br><span class="line">|</span><br><span class="line">| ntransfercmd(self, cmd, rest=<span class="literal">None</span>)</span><br><span class="line">|</span><br><span class="line">| prot_c(self)</span><br><span class="line">| <span class="type">Set</span> up clear text data connection.</span><br><span class="line">|</span><br><span class="line">| prot_p(self)</span><br><span class="line">| <span class="type">Set</span> up secure data connection.</span><br><span class="line">|</span><br><span class="line">| retrbinary(self, cmd, callback, blocksize=<span class="number">8192</span>, rest=<span class="literal">None</span>)</span><br><span class="line">|</span><br><span class="line">| retrlines(self, cmd, callback=<span class="literal">None</span>)</span><br><span class="line">|</span><br><span class="line">| storbinary(self, cmd, fp, blocksize=<span class="number">8192</span>, callback=<span class="literal">None</span>, rest=<span class="literal">None</span>)</span><br><span class="line">|</span><br><span class="line">| storlines(self, cmd, fp, callback=<span class="literal">None</span>)</span><br></pre></td></tr></table></figure>]]></content>
       <categories>
         <category>Python后端</category>
       </categories>
       <tags>
-        <tag>Pip</tag>
+        <tag>ftp</tag>
       </tags>
   </entry>
   <entry>
@@ -2469,33 +2496,6 @@
       </categories>
       <tags>
         <tag>base server</tag>
-      </tags>
-  </entry>
-  <entry>
-    <title>FTP Module</title>
-    <url>/FTP-Module/</url>
-    <content><![CDATA[<h3 id="ftplib模块的用法"><a href="#ftplib模块的用法" class="headerlink" title="ftplib模块的用法"></a>ftplib模块的用法</h3><ul>
-<li>login(user&#x3D;’’,passwd&#x3D;’’, acct&#x3D;’’) 登录到FTP 服务器，所有的参数都是可选的</li>
-<li>pwd() 当前工作目录</li>
-<li>cwd(path) 把当前工作目录设置为path</li>
-<li>dir([path[,…[,cb]]) 显示path 目录里的内容，可选的参数cb 是一个回调函数，会被传给retrlines()方法</li>
-<li>nlst([path[,…]) 与dir()类似，但返回一个文件名的列表，而不是显示这些文件名</li>
-<li>retrlines(cmd [, cb]) 给定FTP 命令（如“RETR filename”），用于下载文本文件。可选的回调函数cb 用于处理文件的每一行</li>
-<li>retrbinary(cmd, cb[,bs&#x3D;8192[, ra]]) 与retrlines()类似，只是这个指令处理二进制文件。回调函数cb 用于处理每一块（块大小默认为8K）下载的数据。</li>
-<li>storlines(cmd, f) 给定FTP 命令（如“STOR filename”），以上传文本文件。要给定一个文件对象f</li>
-<li>storbinary(cmd, f[,bs&#x3D;8192]) 与storlines()类似，只是这个指令处理二进制文件。要给定一个文件对象f，上传块大小bs 默认为8Kbs&#x3D;8192])</li>
-<li>rename(old, new) 把远程文件old 改名为new</li>
-<li>delete(path) 删除位于path 的远程文件</li>
-<li>mkd(directory) 创建远程目录</li>
-</ul>
-<span id="more"></span>
-
-<h3 id="此处给出官方给的介绍"><a href="#此处给出官方给的介绍" class="headerlink" title="此处给出官方给的介绍"></a>此处给出官方给的介绍</h3><figure class="highlight python"><table><tr><td class="code"><pre><span class="line">Methods defined here:</span><br><span class="line">|</span><br><span class="line">| init(self, host=’’, user=’’, passwd=’’, acct=’’, keyfile=<span class="literal">None</span>, certfile=<span class="literal">None</span>, context=<span class="literal">None</span>, timeout=, source_address=<span class="literal">None</span>)</span><br><span class="line">|</span><br><span class="line">| auth(self)</span><br><span class="line">| <span class="type">Set</span> up secure control connection by using TLS/SSL.</span><br><span class="line">|</span><br><span class="line">| login(self, user=’’, passwd=’’, acct=’’, secure=<span class="literal">True</span>)</span><br><span class="line">|</span><br><span class="line">| ntransfercmd(self, cmd, rest=<span class="literal">None</span>)</span><br><span class="line">|</span><br><span class="line">| prot_c(self)</span><br><span class="line">| <span class="type">Set</span> up clear text data connection.</span><br><span class="line">|</span><br><span class="line">| prot_p(self)</span><br><span class="line">| <span class="type">Set</span> up secure data connection.</span><br><span class="line">|</span><br><span class="line">| retrbinary(self, cmd, callback, blocksize=<span class="number">8192</span>, rest=<span class="literal">None</span>)</span><br><span class="line">|</span><br><span class="line">| retrlines(self, cmd, callback=<span class="literal">None</span>)</span><br><span class="line">|</span><br><span class="line">| storbinary(self, cmd, fp, blocksize=<span class="number">8192</span>, callback=<span class="literal">None</span>, rest=<span class="literal">None</span>)</span><br><span class="line">|</span><br><span class="line">| storlines(self, cmd, fp, callback=<span class="literal">None</span>)</span><br></pre></td></tr></table></figure>]]></content>
-      <categories>
-        <category>Python后端</category>
-      </categories>
-      <tags>
-        <tag>ftp</tag>
       </tags>
   </entry>
   <entry>
