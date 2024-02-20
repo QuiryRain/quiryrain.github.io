@@ -2,9 +2,9 @@
 <html lang="zh-CN">
 <head>
   <meta charset="UTF-8">
-<meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=2">
-<meta name="theme-color" content="#222">
-<meta name="generator" content="Hexo 4.2.1">
+<meta name="viewport" content="width=device-width">
+<meta name="theme-color" content="#222"><meta name="generator" content="Hexo 7.1.1">
+
   <link rel="apple-touch-icon" sizes="180x180" href="/images/apple-touch-icon-next.png">
   <link rel="icon" type="image/png" sizes="32x32" href="/images/favicon-32x32-next.png">
   <link rel="icon" type="image/png" sizes="16x16" href="/images/favicon-16x16-next.png">
@@ -13,20 +13,16 @@
 <link rel="stylesheet" href="/css/main.css">
 
 
-<link rel="stylesheet" href="/lib/font-awesome/css/all.min.css">
-  
-  <link rel="stylesheet" href="/lib/animate-css/animate.min.css">
-  <link rel="stylesheet" href="//cdn.jsdelivr.net/npm/@fancyapps/fancybox@3/dist/jquery.fancybox.min.css">
 
-<script class="hexo-configurations">
-    var NexT = window.NexT || {};
-    var CONFIG = {"hostname":"quiryrain.ml","root":"/","scheme":"Gemini","version":"8.0.0-rc.4","exturl":false,"sidebar":{"position":"left","display":"post","padding":18,"offset":12},"copycode":false,"bookmark":{"enable":false,"color":"#222","save":"auto"},"fancybox":true,"mediumzoom":false,"lazyload":true,"pangu":false,"comments":{"style":"tabs","active":null,"storage":true,"lazyload":false,"nav":null},"algolia":{"hits":{"per_page":10},"labels":{"input_placeholder":"Search for Posts","hits_empty":"We didn't find any results for the search: ${query}","hits_stats":"${hits} results found in ${time} ms"}},"localsearch":{"enable":true,"trigger":"auto","top_n_per_article":1,"unescape":false,"preload":false},"motion":{"enable":true,"async":false,"transition":{"post_block":"fadeIn","post_header":"fadeInDown","post_body":"fadeInDown","coll_header":"fadeInLeft","sidebar":"fadeInUp"}},"path":"search.xml"};
-  </script>
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css" integrity="sha256-wiz7ZSCn/btzhjKDQBms9Hx4sSeUYsDrTLg7roPstac=" crossorigin="anonymous">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/animate.css/3.1.1/animate.min.css" integrity="sha256-PR7ttpcvz8qrF57fur/yAx1qXMFJeJFiA6pSzWi0OIE=" crossorigin="anonymous">
 
-  <meta name="description" content="Python2 中的urllib和Python3中的urlllib的区别在python 2中有urllib和urllib2两个库进行实现请求的发送，但是再python 3中官方将urllib2库合并在了urllib库中。所以在3中使用urllib库时一定要先了解其中的四个模块：  request：这个模块是最基本的HTTP请求模块，用来模拟发送请求。 error：异常处理模块，用来捕获异常，保证程">
+<script class="next-config" data-name="main" type="application/json">{"hostname":"blog.qaz327zz.tk","root":"/","images":"/images","scheme":"Gemini","darkmode":false,"version":"8.19.1","exturl":false,"sidebar":{"position":"left","display":"post","padding":18,"offset":12},"copycode":{"enable":false,"style":null},"fold":{"enable":false,"height":500},"bookmark":{"enable":false,"color":"#222","save":"auto"},"mediumzoom":false,"lazyload":false,"pangu":false,"comments":{"style":"tabs","active":null,"storage":true,"lazyload":false,"nav":null},"stickytabs":false,"motion":{"enable":true,"async":false,"transition":{"menu_item":"fadeInDown","post_block":"fadeIn","post_header":"fadeInDown","post_body":"fadeInDown","coll_header":"fadeInLeft","sidebar":"fadeInUp"}},"i18n":{"placeholder":"搜索...","empty":"没有找到任何搜索结果：${query}","hits_time":"找到 ${hits} 个搜索结果（用时 ${time} 毫秒）","hits":"找到 ${hits} 个搜索结果"},"path":"/search.xml","localsearch":{"enable":true,"trigger":"auto","top_n_per_article":1,"unescape":false,"preload":false}}</script><script src="/js/config.js"></script>
+
+    <meta name="description" content="Python2 中的urllib和Python3中的urlllib的区别在python 2中有urllib和urllib2两个库进行实现请求的发送，但是再python 3中官方将urllib2库合并在了urllib库中。所以在3中使用urllib库时一定要先了解其中的四个模块：  request：这个模块是最基本的HTTP请求模块，用来模拟发送请求。 error：异常处理模块，用来捕获异常，保证程">
 <meta property="og:type" content="article">
 <meta property="og:title" content="Python3爬虫之urllib模块">
-<meta property="og:url" content="https://quiryrain.ml/190502/index.html">
+<meta property="og:url" content="https://blog.qaz327zz.tk/190502/index.html">
 <meta property="og:site_name" content="QuiryRain的博客">
 <meta property="og:description" content="Python2 中的urllib和Python3中的urlllib的区别在python 2中有urllib和urllib2两个库进行实现请求的发送，但是再python 3中官方将urllib2库合并在了urllib库中。所以在3中使用urllib库时一定要先了解其中的四个模块：  request：这个模块是最基本的HTTP请求模块，用来模拟发送请求。 error：异常处理模块，用来捕获异常，保证程">
 <meta property="og:locale" content="zh_CN">
@@ -37,20 +33,15 @@
 <meta property="article:tag" content="urllib">
 <meta name="twitter:card" content="summary">
 
-<link rel="canonical" href="https://quiryrain.ml/190502/">
+
+<link rel="canonical" href="https://blog.qaz327zz.tk/190502/">
 
 
-<script class="page-configurations">
-  // https://hexo.io/docs/variables.html
-  CONFIG.page = {
-    sidebar: "",
-    isHome : false,
-    isPost : true,
-    lang   : 'zh-CN'
-  };
-</script>
 
-  <title>Python3爬虫之urllib模块 | QuiryRain的博客</title>
+<script class="next-config" data-name="page" type="application/json">{"sidebar":"","isHome":false,"isPost":true,"lang":"zh-CN","comments":true,"permalink":"https://blog.qaz327zz.tk/190502/","path":"190502/","title":"Python3爬虫之urllib模块"}</script>
+
+<script class="next-config" data-name="calendar" type="application/json">""</script>
+<title>Python3爬虫之urllib模块 | QuiryRain的博客</title>
   
 
 
@@ -58,55 +49,22 @@
 
 
 
+
+
   <noscript>
-  <style>
-  body { margin-top: 2rem; }
-
-  .use-motion .menu-item,
-  .use-motion .sidebar,
-  .use-motion .post-block,
-  .use-motion .pagination,
-  .use-motion .comments,
-  .use-motion .post-header,
-  .use-motion .post-body,
-  .use-motion .collection-header {
-    visibility: visible;
-  }
-
-  .use-motion .header,
-  .use-motion .site-brand-container .toggle,
-  .use-motion .footer { opacity: initial; }
-
-  .use-motion .site-title,
-  .use-motion .site-subtitle,
-  .use-motion .custom-logo-image {
-    opacity: initial;
-    top: initial;
-  }
-
-  .use-motion .logo-line {
-    transform: scaleX(1);
-  }
-
-  .search-pop-overlay, .sidebar-nav { display: none; }
-  .sidebar-panel { display: block; }
-  </style>
-</noscript>
-
+    <link rel="stylesheet" href="/css/noscript.css">
+  </noscript>
+<link rel="alternate" href="/atom.xml" title="QuiryRain的博客" type="application/atom+xml">
 </head>
 
-<body itemscope itemtype="http://schema.org/WebPage">
-  <div class="container use-motion">
-    <div class="headband"></div>
+<body itemscope itemtype="http://schema.org/WebPage" class="use-motion">
+  <div class="headband"></div>
 
-    <main class="main">
-      <header class="header" itemscope itemtype="http://schema.org/WPHeader">
-        <div class="header-inner"><div class="site-brand-container">
+  <main class="main">
+    <div class="column">
+      <header class="header" itemscope itemtype="http://schema.org/WPHeader"><div class="site-brand-container">
   <div class="site-nav-toggle">
-    <div class="toggle" aria-label="切换导航栏">
-        <span class="toggle-line toggle-line-first"></span>
-        <span class="toggle-line toggle-line-middle"></span>
-        <span class="toggle-line toggle-line-last"></span>
+    <div class="toggle" aria-label="切换导航栏" role="button">
     </div>
   </div>
 
@@ -114,13 +72,13 @@
 
     <a href="/" class="brand" rel="start">
       <i class="logo-line"></i>
-      <h1 class="site-title">QuiryRain的博客</h1>
+      <p class="site-title">QuiryRain的博客</p>
       <i class="logo-line"></i>
     </a>
   </div>
 
   <div class="site-nav-right">
-    <div class="toggle popup-trigger">
+    <div class="toggle popup-trigger" aria-label="搜索" role="button">
         <i class="fa fa-search fa-fw fa-lg"></i>
     </div>
   </div>
@@ -129,32 +87,7 @@
 
 
 <nav class="site-nav">
-  <ul id="menu" class="main-menu menu">
-        <li class="menu-item menu-item-home">
-
-    <a href="/" rel="section"><i class="fa fa-home fa-fw"></i>首页</a>
-
-  </li>
-        <li class="menu-item menu-item-archives">
-
-    <a href="/archives/" rel="section"><i class="fa fa-archive fa-fw"></i>归档</a>
-
-  </li>
-        <li class="menu-item menu-item-categories">
-
-    <a href="/categories/" rel="section"><i class="fa fa-th fa-fw"></i>分类</a>
-
-  </li>
-        <li class="menu-item menu-item-tags">
-
-    <a href="/tags/" rel="section"><i class="fa fa-tags fa-fw"></i>标签</a>
-
-  </li>
-        <li class="menu-item menu-item-about">
-
-    <a href="/about/" rel="section"><i class="fa fa-user fa-fw"></i>关于</a>
-
-  </li>
+  <ul class="main-menu menu">
       <li class="menu-item menu-item-search">
         <a role="button" class="popup-trigger"><i class="fa fa-search fa-fw"></i>搜索
         </a>
@@ -165,22 +98,21 @@
 
 
   <div class="search-pop-overlay">
-    <div class="popup search-popup">
-        <div class="search-header">
+    <div class="popup search-popup"><div class="search-header">
   <span class="search-icon">
     <i class="fa fa-search"></i>
   </span>
   <div class="search-input-container">
-    <input autocomplete="off" autocapitalize="off"
+    <input autocomplete="off" autocapitalize="off" maxlength="80"
            placeholder="搜索..." spellcheck="false"
            type="search" class="search-input">
   </div>
-  <span class="popup-btn-close">
+  <span class="popup-btn-close" role="button">
     <i class="fa fa-times-circle"></i>
   </span>
 </div>
-<div id="search-result">
-  <div id="no-result">
+<div class="search-result-container no-result">
+  <div class="search-result-icon">
     <i class="fa fa-spinner fa-pulse fa-5x"></i>
   </div>
 </div>
@@ -188,15 +120,9 @@
     </div>
   </div>
 
-</div>
-          
+</header>
+        
   
-  <div class="toggle sidebar-toggle">
-    <span class="toggle-line toggle-line-first"></span>
-    <span class="toggle-line toggle-line-middle"></span>
-    <span class="toggle-line toggle-line-last"></span>
-  </div>
-
   <aside class="sidebar">
 
     <div class="sidebar-inner sidebar-nav-active sidebar-toc-active">
@@ -209,136 +135,130 @@
         </li>
       </ul>
 
-      <!--noindex-->
-      <section class="post-toc-wrap sidebar-panel">
-          <div class="post-toc animated"><ol class="nav"><li class="nav-item nav-level-3"><a class="nav-link" href="#Python2-中的urllib和Python3中的urlllib的区别"><span class="nav-number">1.</span> <span class="nav-text">Python2 中的urllib和Python3中的urlllib的区别</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#请求的发送"><span class="nav-number">2.</span> <span class="nav-text">请求的发送</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#异常的处理"><span class="nav-number">3.</span> <span class="nav-text">异常的处理</span></a></li></ol></div>
-      </section>
-      <!--/noindex-->
+      <div class="sidebar-panel-container">
+        <!--noindex-->
+        <div class="post-toc-wrap sidebar-panel">
+            <div class="post-toc animated"><ol class="nav"><li class="nav-item nav-level-3"><a class="nav-link" href="#Python2-%E4%B8%AD%E7%9A%84urllib%E5%92%8CPython3%E4%B8%AD%E7%9A%84urlllib%E7%9A%84%E5%8C%BA%E5%88%AB"><span class="nav-number">1.</span> <span class="nav-text">Python2 中的urllib和Python3中的urlllib的区别</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#%E8%AF%B7%E6%B1%82%E7%9A%84%E5%8F%91%E9%80%81"><span class="nav-number">2.</span> <span class="nav-text">请求的发送</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#%E5%BC%82%E5%B8%B8%E7%9A%84%E5%A4%84%E7%90%86"><span class="nav-number">3.</span> <span class="nav-text">异常的处理</span></a></li></ol></div>
+        </div>
+        <!--/noindex-->
 
-      <section class="site-overview-wrap sidebar-panel">
-        <div class="site-author animated" itemprop="author" itemscope itemtype="http://schema.org/Person">
+        <div class="site-overview-wrap sidebar-panel">
+          <div class="site-author animated" itemprop="author" itemscope itemtype="http://schema.org/Person">
   <p class="site-author-name" itemprop="name">QuiryRain</p>
   <div class="site-description" itemprop="description">时光大好，不负年少</div>
 </div>
 <div class="site-state-wrap animated">
   <nav class="site-state">
       <div class="site-state-item site-state-posts">
-          <a href="/archives/">
-        
-          <span class="site-state-item-count">44</span>
+        <a href="/archives/">
+          <span class="site-state-item-count">41</span>
           <span class="site-state-item-name">日志</span>
         </a>
       </div>
       <div class="site-state-item site-state-categories">
-            <a href="/categories/">
-          
-        <span class="site-state-item-count">19</span>
+          <a href="/categories/">
+        <span class="site-state-item-count">18</span>
         <span class="site-state-item-name">分类</span></a>
       </div>
       <div class="site-state-item site-state-tags">
-            <a href="/tags/">
-          
-        <span class="site-state-item-count">66</span>
+          <a href="/tags/">
+        <span class="site-state-item-count">63</span>
         <span class="site-state-item-name">标签</span></a>
       </div>
   </nav>
 </div>
   <div class="links-of-author animated">
       <span class="links-of-author-item">
-        <a href="https://github.com/quiryrain" title="GitHub → https:&#x2F;&#x2F;github.com&#x2F;quiryrain" rel="noopener" target="_blank"><i class="fab fa-github fa-fw"></i>GitHub</a>
+        <a href="https://github.com/quiryrain" title="GitHub → https:&#x2F;&#x2F;github.com&#x2F;quiryrain" rel="noopener me" target="_blank"><i class="fab fa-github fa-fw"></i>GitHub</a>
       </span>
   </div>
 
-
-
-      </section>
-        <div class="back-to-top animated">
-          <i class="fa fa-arrow-up"></i>
-          <span>0%</span>
         </div>
+      </div>
     </div>
-  </aside>
-  <div id="sidebar-dimmer"></div>
-
-
-      </header>
-
-      
-
-  <a href="https://github.com/quiryrain" class="github-corner" title="Follow me on GitHub" aria-label="Follow me on GitHub" rel="noopener" target="_blank"><svg width="80" height="80" viewBox="0 0 250 250" aria-hidden="true"><path d="M0,0 L115,115 L130,115 L142,142 L250,250 L250,0 Z"></path><path d="M128.3,109.0 C113.8,99.7 119.0,89.6 119.0,89.6 C122.0,82.7 120.5,78.6 120.5,78.6 C119.2,72.0 123.4,76.3 123.4,76.3 C127.3,80.9 125.5,87.3 125.5,87.3 C122.9,97.6 130.6,101.9 134.4,103.2" fill="currentColor" style="transform-origin: 130px 106px;" class="octo-arm"></path><path d="M115.0,115.0 C114.9,115.1 118.7,116.5 119.8,115.4 L133.7,101.6 C136.9,99.2 139.9,98.4 142.2,98.6 C133.8,88.0 127.5,74.4 143.8,58.0 C148.5,53.4 154.0,51.2 159.7,51.0 C160.3,49.4 163.2,43.6 171.4,40.1 C171.4,40.1 176.1,42.5 178.8,56.2 C183.1,58.6 187.2,61.8 190.9,65.4 C194.5,69.0 197.7,73.2 200.1,77.6 C213.8,80.2 216.3,84.9 216.3,84.9 C212.7,93.1 206.9,96.0 205.4,96.6 C205.1,102.4 203.0,107.8 198.3,112.5 C181.9,128.9 168.3,122.5 157.7,114.1 C157.9,116.9 156.7,120.9 152.7,124.9 L141.0,136.5 C139.8,137.7 141.6,141.9 141.8,141.8 Z" fill="currentColor" class="octo-body"></path></svg></a>
-
-<noscript>
-  <div id="noscript-warning">Theme NexT works best with JavaScript enabled</div>
-</noscript>
-
-
-      <div class="main-inner">
-        
-
-        <div class="content post posts-expand">
-          
 
     
+  </aside>
+
+
+    </div>
+
+    <div class="main-inner post posts-expand">
+
+
+  
+
+
+<div class="post-block">
   
   
-  <article itemscope itemtype="http://schema.org/Article" class="post-block" lang="zh-CN">
-    <link itemprop="mainEntityOfPage" href="https://quiryrain.ml/190502/">
+
+  <article itemscope itemtype="http://schema.org/Article" class="post-content" lang="zh-CN">
+    <link itemprop="mainEntityOfPage" href="https://blog.qaz327zz.tk/190502/">
 
     <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
       <meta itemprop="image" content="/images/avatar.gif">
       <meta itemprop="name" content="QuiryRain">
-      <meta itemprop="description" content="时光大好，不负年少">
     </span>
 
     <span hidden itemprop="publisher" itemscope itemtype="http://schema.org/Organization">
       <meta itemprop="name" content="QuiryRain的博客">
+      <meta itemprop="description" content="时光大好，不负年少">
+    </span>
+
+    <span hidden itemprop="post" itemscope itemtype="http://schema.org/CreativeWork">
+      <meta itemprop="name" content="Python3爬虫之urllib模块 | QuiryRain的博客">
+      <meta itemprop="description" content="">
     </span>
       <header class="post-header">
         <h1 class="post-title" itemprop="name headline">
           Python3爬虫之urllib模块
         </h1>
 
-        <div class="post-meta">
-            <span class="post-meta-item">
-              <span class="post-meta-item-icon">
-                <i class="far fa-calendar"></i>
-              </span>
-              <span class="post-meta-item-text">发表于</span>
+        <div class="post-meta-container">
+          <div class="post-meta">
+    <span class="post-meta-item">
+      <span class="post-meta-item-icon">
+        <i class="far fa-calendar"></i>
+      </span>
+      <span class="post-meta-item-text">发表于</span>
 
-              <time title="创建时间：2019-05-02 10:45:54" itemprop="dateCreated datePublished" datetime="2019-05-02T10:45:54+08:00">2019-05-02</time>
-            </span>
-              <span class="post-meta-item">
-                <span class="post-meta-item-icon">
-                  <i class="far fa-calendar-check"></i>
-                </span>
-                <span class="post-meta-item-text">更新于</span>
-                <time title="修改时间：2020-07-14 08:14:11" itemprop="dateModified" datetime="2020-07-14T08:14:11+08:00">2020-07-14</time>
-              </span>
-            <span class="post-meta-item">
-              <span class="post-meta-item-icon">
-                <i class="far fa-folder"></i>
-              </span>
-              <span class="post-meta-item-text">分类于</span>
-                <span itemprop="about" itemscope itemtype="http://schema.org/Thing">
-                  <a href="/categories/Python%E5%90%8E%E7%AB%AF/" itemprop="url" rel="index"><span itemprop="name">Python后端</span></a>
-                </span>
-            </span>
+      <time title="创建时间：2019-05-02 10:45:54" itemprop="dateCreated datePublished" datetime="2019-05-02T10:45:54+08:00">2019-05-02</time>
+    </span>
+    <span class="post-meta-item">
+      <span class="post-meta-item-icon">
+        <i class="far fa-calendar-check"></i>
+      </span>
+      <span class="post-meta-item-text">更新于</span>
+      <time title="修改时间：2020-07-14 08:14:11" itemprop="dateModified" datetime="2020-07-14T08:14:11+08:00">2020-07-14</time>
+    </span>
+    <span class="post-meta-item">
+      <span class="post-meta-item-icon">
+        <i class="far fa-folder"></i>
+      </span>
+      <span class="post-meta-item-text">分类于</span>
+        <span itemprop="about" itemscope itemtype="http://schema.org/Thing">
+          <a href="/categories/Python%E5%90%8E%E7%AB%AF/" itemprop="url" rel="index"><span itemprop="name">Python后端</span></a>
+        </span>
+    </span>
 
-          <br>
-            <span class="post-meta-item" title="本文字数">
-              <span class="post-meta-item-icon">
-                <i class="far fa-file-word"></i>
-              </span>
-                <span class="post-meta-item-text">本文字数：</span>
-              <span>8.9k</span>
-            </span>
-            <span class="post-meta-item" title="阅读时长">
-              <span class="post-meta-item-icon">
-                <i class="far fa-clock"></i>
-              </span>
-                <span class="post-meta-item-text">阅读时长 &asymp;</span>
-              <span>8 分钟</span>
-            </span>
+  
+    <span class="post-meta-break"></span>
+    <span class="post-meta-item" title="本文字数">
+      <span class="post-meta-item-icon">
+        <i class="far fa-file-word"></i>
+      </span>
+      <span class="post-meta-item-text">本文字数：</span>
+      <span>8.6k</span>
+    </span>
+    <span class="post-meta-item" title="阅读时长">
+      <span class="post-meta-item-icon">
+        <i class="far fa-clock"></i>
+      </span>
+      <span class="post-meta-item-text">阅读时长 &asymp;</span>
+      <span>8 分钟</span>
+    </span>
+</div>
 
         </div>
       </header>
@@ -346,35 +266,32 @@
     
     
     
-    <div class="post-body" itemprop="articleBody">
-
-      
-        <h3 id="Python2-中的urllib和Python3中的urlllib的区别"><a href="#Python2-中的urllib和Python3中的urlllib的区别" class="headerlink" title="Python2 中的urllib和Python3中的urlllib的区别"></a>Python2 中的urllib和Python3中的urlllib的区别</h3><p>在python 2中有urllib和urllib2两个库进行实现请求的发送，但是再python 3中官方将urllib2库合并在了urllib库中。所以在3中使用urllib库时一定要先了解其中的四个模块：</p>
+    <div class="post-body" itemprop="articleBody"><h3 id="Python2-中的urllib和Python3中的urlllib的区别"><a href="#Python2-中的urllib和Python3中的urlllib的区别" class="headerlink" title="Python2 中的urllib和Python3中的urlllib的区别"></a>Python2 中的urllib和Python3中的urlllib的区别</h3><p>在python 2中有urllib和urllib2两个库进行实现请求的发送，但是再python 3中官方将urllib2库合并在了urllib库中。所以在3中使用urllib库时一定要先了解其中的四个模块：</p>
 <ul>
 <li>request：这个模块是最基本的HTTP请求模块，用来模拟发送请求。</li>
 <li>error：异常处理模块，用来捕获异常，保证程序不会意外终止。</li>
 <li>parse：工具模块，提供了许多URL处理方法，如拆分、解析、编码等</li>
 <li>robotparser:用来识别网站的robots.txt文件，判断哪些网站可以爬，一般不用。<br>此处只讲解前三个的用法。</li>
 </ul>
-<a id="more"></a>
+<span id="more"></span>
 
 <h3 id="请求的发送"><a href="#请求的发送" class="headerlink" title="请求的发送"></a>请求的发送</h3><p>1、urlopen()函数<br>在urllib.request模块中提供了最基本的构造HTTP请求的方法，可以利用它进行模拟浏览器发送一个请求，同时它还具有处理授权验证、重定向、浏览器cookies等其他内容<br>下面以百度为例子，进行网页的抓取：  </p>
-<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br></pre></td><td class="code"><pre><span class="line">from urllib import request</span><br><span class="line"></span><br><span class="line">response &#x3D; request.urlopen(&#39;http:&#x2F;&#x2F;www.baidu.com&#39;)</span><br><span class="line">print(response.read().decode(&#39;utf8&#39;))</span><br></pre></td></tr></table></figure>
+<figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br></pre></td><td class="code"><pre><span class="line">from urllib import request</span><br><span class="line"></span><br><span class="line">response = request.urlopen(&#x27;http://www.baidu.com&#x27;)</span><br><span class="line">print(response.read().decode(&#x27;utf8&#x27;))</span><br></pre></td></tr></table></figure>
 <p>可以很简单的看出，上面很简单的三行代码已经实现了一个简单的爬虫了。只不过这个爬虫获取下来的内容没有经过任何数据处理，我们可以很容的看到百度首页的源代码。<br>之后，查看返回的内容是什么类型的。<br><code>print(type(response))</code><br>输出为：<code>&lt;class &#39;http.client.HTTPResponse&#39;&gt;</code><br>可以发现，它是一个HTTPResponse类型的对象，接下来查看有那些函数和属性，使用<code>dir(response)</code>：<br>输出为:</p>
-<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">[&#39;__abstractmethods__&#39;, &#39;__class__&#39;, &#39;__del__&#39;, &#39;__delattr__&#39;, &#39;__dict__&#39;, &#39;__dir__&#39;, &#39;__doc__&#39;, &#39;__enter__&#39;, &#39;__eq__&#39;, &#39;__exit__&#39;, &#39;__format__&#39;, &#39;__ge__&#39;, &#39;__getattribute__&#39;, &#39;__gt__&#39;, &#39;__hash__&#39;, &#39;__init__&#39;, &#39;__init_subclass__&#39;, &#39;__iter__&#39;, &#39;__le__&#39;, &#39;__lt__&#39;, &#39;__module__&#39;, &#39;__ne__&#39;, &#39;__new__&#39;, &#39;__next__&#39;, &#39;__reduce__&#39;, &#39;__reduce_ex__&#39;, &#39;__repr__&#39;, &#39;__setattr__&#39;, &#39;__sizeof__&#39;, &#39;__str__&#39;, &#39;__subclasshook__&#39;, &#39;_abc_impl&#39;, &#39;_checkClosed&#39;, &#39;_checkReadable&#39;, &#39;_checkSeekable&#39;, &#39;_checkWritable&#39;, &#39;_check_close&#39;, &#39;_close_conn&#39;, &#39;_get_chunk_left&#39;, &#39;_method&#39;, &#39;_peek_chunked&#39;, &#39;_read1_chunked&#39;, &#39;_read_and_discard_trailer&#39;, &#39;_read_next_chunk_size&#39;, &#39;_read_status&#39;, &#39;_readall_chunked&#39;, &#39;_readinto_chunked&#39;, &#39;_safe_read&#39;, &#39;_safe_readinto&#39;, &#39;begin&#39;, &#39;chunk_left&#39;, &#39;chunked&#39;, &#39;close&#39;, &#39;closed&#39;, &#39;code&#39;, &#39;debuglevel&#39;, &#39;detach&#39;, &#39;fileno&#39;, &#39;flush&#39;, &#39;fp&#39;, &#39;getcode&#39;, &#39;getheader&#39;, &#39;getheaders&#39;, &#39;geturl&#39;, &#39;headers&#39;, &#39;info&#39;, &#39;isatty&#39;, &#39;isclosed&#39;, &#39;length&#39;, &#39;msg&#39;, &#39;peek&#39;, &#39;read&#39;, &#39;read1&#39;, &#39;readable&#39;, &#39;readinto&#39;, &#39;readinto1&#39;, &#39;readline&#39;, &#39;readlines&#39;, &#39;reason&#39;, &#39;seek&#39;, &#39;seekable&#39;, &#39;status&#39;, &#39;tell&#39;, &#39;truncate&#39;, &#39;url&#39;, &#39;version&#39;, &#39;will_close&#39;, &#39;writable&#39;, &#39;write&#39;, &#39;writelines&#39;]</span><br></pre></td></tr></table></figure>
+<figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">[&#x27;__abstractmethods__&#x27;, &#x27;__class__&#x27;, &#x27;__del__&#x27;, &#x27;__delattr__&#x27;, &#x27;__dict__&#x27;, &#x27;__dir__&#x27;, &#x27;__doc__&#x27;, &#x27;__enter__&#x27;, &#x27;__eq__&#x27;, &#x27;__exit__&#x27;, &#x27;__format__&#x27;, &#x27;__ge__&#x27;, &#x27;__getattribute__&#x27;, &#x27;__gt__&#x27;, &#x27;__hash__&#x27;, &#x27;__init__&#x27;, &#x27;__init_subclass__&#x27;, &#x27;__iter__&#x27;, &#x27;__le__&#x27;, &#x27;__lt__&#x27;, &#x27;__module__&#x27;, &#x27;__ne__&#x27;, &#x27;__new__&#x27;, &#x27;__next__&#x27;, &#x27;__reduce__&#x27;, &#x27;__reduce_ex__&#x27;, &#x27;__repr__&#x27;, &#x27;__setattr__&#x27;, &#x27;__sizeof__&#x27;, &#x27;__str__&#x27;, &#x27;__subclasshook__&#x27;, &#x27;_abc_impl&#x27;, &#x27;_checkClosed&#x27;, &#x27;_checkReadable&#x27;, &#x27;_checkSeekable&#x27;, &#x27;_checkWritable&#x27;, &#x27;_check_close&#x27;, &#x27;_close_conn&#x27;, &#x27;_get_chunk_left&#x27;, &#x27;_method&#x27;, &#x27;_peek_chunked&#x27;, &#x27;_read1_chunked&#x27;, &#x27;_read_and_discard_trailer&#x27;, &#x27;_read_next_chunk_size&#x27;, &#x27;_read_status&#x27;, &#x27;_readall_chunked&#x27;, &#x27;_readinto_chunked&#x27;, &#x27;_safe_read&#x27;, &#x27;_safe_readinto&#x27;, &#x27;begin&#x27;, &#x27;chunk_left&#x27;, &#x27;chunked&#x27;, &#x27;close&#x27;, &#x27;closed&#x27;, &#x27;code&#x27;, &#x27;debuglevel&#x27;, &#x27;detach&#x27;, &#x27;fileno&#x27;, &#x27;flush&#x27;, &#x27;fp&#x27;, &#x27;getcode&#x27;, &#x27;getheader&#x27;, &#x27;getheaders&#x27;, &#x27;geturl&#x27;, &#x27;headers&#x27;, &#x27;info&#x27;, &#x27;isatty&#x27;, &#x27;isclosed&#x27;, &#x27;length&#x27;, &#x27;msg&#x27;, &#x27;peek&#x27;, &#x27;read&#x27;, &#x27;read1&#x27;, &#x27;readable&#x27;, &#x27;readinto&#x27;, &#x27;readinto1&#x27;, &#x27;readline&#x27;, &#x27;readlines&#x27;, &#x27;reason&#x27;, &#x27;seek&#x27;, &#x27;seekable&#x27;, &#x27;status&#x27;, &#x27;tell&#x27;, &#x27;truncate&#x27;, &#x27;url&#x27;, &#x27;version&#x27;, &#x27;will_close&#x27;, &#x27;writable&#x27;, &#x27;write&#x27;, &#x27;writelines&#x27;]</span><br></pre></td></tr></table></figure>
 <p>其中最主要函数为：read()、readinto()、getheader(name)、getheaders()、fileno()等方法。<br>在调用read()方法时可以返回网页内容，使用status属性可以查看返回的状态码。<br>在urlopen()方法中，最基本的是简单网页的GET请求抓取。但是如果要传入一个参数呢？下面就讲解参数的使用方法。  </p>
 <ol>
-<li>data参数<br>在讲解之前，首先需要说明的是data参数是可选的，如果传入了此参数，要以字节流编码格式的内容，即bytes类型，需要进行转化。此时的请求方式不再是GET方法，而是POST方法.因为如果使用GET方法，会将传入data暴露在url中，十分不安全。<br>实例一:  <figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br></pre></td><td class="code"><pre><span class="line">from urllib import request, parse</span><br><span class="line"></span><br><span class="line">data &#x3D; bytes(parse.urlencode(&#123;&#39;word&#39;: &#39;hello world&#39;&#125;), encoding&#x3D;&#39;utf8&#39;)</span><br><span class="line">response &#x3D; request.urlopen(&#39;http:&#x2F;&#x2F;httpbin.org&#x2F;post&#39;, data&#x3D;data)</span><br><span class="line">print(response.read().decode(&#39;utf8&#39;))</span><br></pre></td></tr></table></figure>
-这里我们传入了一个参数word，值为hello world。由于发送的的data需要是字节流类型，此处使用到了上文提到的工具包函数parse，使用它将我们要传入的函数进行转码。在我们执行完这段代码后，服务器会给我们返回一下结果:  <figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br></pre></td><td class="code"><pre><span class="line">&#123;</span><br><span class="line">  &quot;args&quot;: &#123;&#125;,</span><br><span class="line">  &quot;data&quot;: &quot;&quot;,</span><br><span class="line">  &quot;files&quot;: &#123;&#125;,</span><br><span class="line">  &quot;form&quot;: &#123;</span><br><span class="line">    &quot;word&quot;: &quot;hello world&quot;</span><br><span class="line">  &#125;,</span><br><span class="line">  &quot;headers&quot;: &#123;</span><br><span class="line">    &quot;Accept-Encoding&quot;: &quot;identity&quot;,</span><br><span class="line">    &quot;Connection&quot;: &quot;close&quot;,</span><br><span class="line">    &quot;Content-Length&quot;: &quot;16&quot;,</span><br><span class="line">    &quot;Content-Type&quot;: &quot;application&#x2F;x-www-form-urlencoded&quot;,</span><br><span class="line">    &quot;Host&quot;: &quot;httpbin.org&quot;,</span><br><span class="line">    &quot;User-Agent&quot;: &quot;Python-urllib&#x2F;3.7&quot;</span><br><span class="line">  &#125;,</span><br><span class="line">  &quot;json&quot;: null,</span><br><span class="line">  &quot;origin&quot;: &quot;115.60.58.52&quot;,</span><br><span class="line">  &quot;url&quot;: &quot;http:&#x2F;&#x2F;httpbin.org&#x2F;post&quot;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+<li>data参数<br>在讲解之前，首先需要说明的是data参数是可选的，如果传入了此参数，要以字节流编码格式的内容，即bytes类型，需要进行转化。此时的请求方式不再是GET方法，而是POST方法.因为如果使用GET方法，会将传入data暴露在url中，十分不安全。<br>实例一:    <figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br></pre></td><td class="code"><pre><span class="line">from urllib import request, parse</span><br><span class="line"></span><br><span class="line">data = bytes(parse.urlencode(&#123;&#x27;word&#x27;: &#x27;hello world&#x27;&#125;), encoding=&#x27;utf8&#x27;)</span><br><span class="line">response = request.urlopen(&#x27;http://httpbin.org/post&#x27;, data=data)</span><br><span class="line">print(response.read().decode(&#x27;utf8&#x27;))</span><br></pre></td></tr></table></figure>
+这里我们传入了一个参数word，值为hello world。由于发送的的data需要是字节流类型，此处使用到了上文提到的工具包函数parse，使用它将我们要传入的函数进行转码。在我们执行完这段代码后，服务器会给我们返回一下结果:    <figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br></pre></td><td class="code"><pre><span class="line">&#123;</span><br><span class="line">  &quot;args&quot;: &#123;&#125;,</span><br><span class="line">  &quot;data&quot;: &quot;&quot;,</span><br><span class="line">  &quot;files&quot;: &#123;&#125;,</span><br><span class="line">  &quot;form&quot;: &#123;</span><br><span class="line">    &quot;word&quot;: &quot;hello world&quot;</span><br><span class="line">  &#125;,</span><br><span class="line">  &quot;headers&quot;: &#123;</span><br><span class="line">    &quot;Accept-Encoding&quot;: &quot;identity&quot;,</span><br><span class="line">    &quot;Connection&quot;: &quot;close&quot;,</span><br><span class="line">    &quot;Content-Length&quot;: &quot;16&quot;,</span><br><span class="line">    &quot;Content-Type&quot;: &quot;application/x-www-form-urlencoded&quot;,</span><br><span class="line">    &quot;Host&quot;: &quot;httpbin.org&quot;,</span><br><span class="line">    &quot;User-Agent&quot;: &quot;Python-urllib/3.7&quot;</span><br><span class="line">  &#125;,</span><br><span class="line">  &quot;json&quot;: null,</span><br><span class="line">  &quot;origin&quot;: &quot;115.60.58.52&quot;,</span><br><span class="line">  &quot;url&quot;: &quot;http://httpbin.org/post&quot;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
 此时我们可以很容易的看到，在返回的结果中有form字段，字段中的内容就是我们传入的data中的内容，至此我们已经模拟了表单提交的过程，以POST请求方式尽心传输数据。  </li>
-<li>timeout参数<br>顾名思义，这个参数就是用来设置超时的。单位为秒，意思是当请求超出了设置的值后还有得到响应，就讲异常抛出。如果此参数不指定时间，使用全局默认时间。<br>实例：<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br></pre></td><td class="code"><pre><span class="line">from urllib import request</span><br><span class="line"></span><br><span class="line">response &#x3D; request .urlopen(&#39;http:&#x2F;&#x2F;httpbin.org&#x2F;get&#39;, timeout&#x3D;0.1)</span><br><span class="line">print(response .read().decode(&#39;utf8&#39;))</span><br></pre></td></tr></table></figure>
-运行结果：<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br></pre></td><td class="code"><pre><span class="line">Traceback (most recent call last):</span><br><span class="line">  File &quot;test_urllib_001.py&quot;, line 14, in &lt;module&gt;</span><br><span class="line">    response &#x3D; request .urlopen(&#39;http:&#x2F;&#x2F;httpbin.org&#x2F;get&#39;, timeout&#x3D;0.1)</span><br><span class="line">  File &quot;&#x2F;home&#x2F;rain&#x2F;.pyenv&#x2F;versions&#x2F;3.7.0&#x2F;lib&#x2F;python3.7&#x2F;urllib&#x2F;request.py&quot;, line 222, in urlopen</span><br><span class="line">    return opener.open(url, data, timeout)</span><br><span class="line">  File &quot;&#x2F;home&#x2F;rain&#x2F;.pyenv&#x2F;versions&#x2F;3.7.0&#x2F;lib&#x2F;python3.7&#x2F;urllib&#x2F;request.py&quot;, line 525, in open</span><br><span class="line">    response &#x3D; self._open(req, data)</span><br><span class="line">  File &quot;&#x2F;home&#x2F;rain&#x2F;.pyenv&#x2F;versions&#x2F;3.7.0&#x2F;lib&#x2F;python3.7&#x2F;urllib&#x2F;request.py&quot;, line 543, in _open</span><br><span class="line">    &#39;_open&#39;, req)</span><br><span class="line">  File &quot;&#x2F;home&#x2F;rain&#x2F;.pyenv&#x2F;versions&#x2F;3.7.0&#x2F;lib&#x2F;python3.7&#x2F;urllib&#x2F;request.py&quot;, line 503, in _call_chain</span><br><span class="line">    result &#x3D; func(*args)</span><br><span class="line">  File &quot;&#x2F;home&#x2F;rain&#x2F;.pyenv&#x2F;versions&#x2F;3.7.0&#x2F;lib&#x2F;python3.7&#x2F;urllib&#x2F;request.py&quot;, line 1345, in http_open</span><br><span class="line">    return self.do_open(http.client.HTTPConnection, req)</span><br><span class="line">  File &quot;&#x2F;home&#x2F;rain&#x2F;.pyenv&#x2F;versions&#x2F;3.7.0&#x2F;lib&#x2F;python3.7&#x2F;urllib&#x2F;request.py&quot;, line 1319, in do_open</span><br><span class="line">    raise URLError(err)</span><br><span class="line">urllib.error.URLError: &lt;urlopen error timed out&gt;</span><br></pre></td></tr></table></figure>
-这里我们设置了超时的时间是0.1秒。程序再执行0.1秒以后，服务器依然没有任何响应，于是抛出了URLError异常。可以从<code>&lt;urlopen error timed out&gt;</code>看出是网络超时。那么问题来了，如何抓取这种情况呢？<br>实例：<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br></pre></td><td class="code"><pre><span class="line">from urllib import request, error</span><br><span class="line">import socket</span><br><span class="line"></span><br><span class="line">try:</span><br><span class="line">    response &#x3D; request .urlopen(&#39;http:&#x2F;&#x2F;httpbin.org&#x2F;get&#39;, timeout&#x3D;0.1)</span><br><span class="line">except error.URLError as e:</span><br><span class="line">    if isinstance(e.reason, socket.timeout):</span><br><span class="line">        print(&#39;Time Out&#39;)</span><br></pre></td></tr></table></figure>
-我们用try: … except: …来捕获异常，此处引入了socket模块。  </li>
+<li>timeout参数<br>顾名思义，这个参数就是用来设置超时的。单位为秒，意思是当请求超出了设置的值后还有得到响应，就讲异常抛出。如果此参数不指定时间，使用全局默认时间。<br>实例：  <figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br></pre></td><td class="code"><pre><span class="line">from urllib import request</span><br><span class="line"></span><br><span class="line">response = request .urlopen(&#x27;http://httpbin.org/get&#x27;, timeout=0.1)</span><br><span class="line">print(response .read().decode(&#x27;utf8&#x27;))</span><br></pre></td></tr></table></figure>
+运行结果：  <figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br></pre></td><td class="code"><pre><span class="line">Traceback (most recent call last):</span><br><span class="line">  File &quot;test_urllib_001.py&quot;, line 14, in &lt;module&gt;</span><br><span class="line">    response = request .urlopen(&#x27;http://httpbin.org/get&#x27;, timeout=0.1)</span><br><span class="line">  File &quot;/home/rain/.pyenv/versions/3.7.0/lib/python3.7/urllib/request.py&quot;, line 222, in urlopen</span><br><span class="line">    return opener.open(url, data, timeout)</span><br><span class="line">  File &quot;/home/rain/.pyenv/versions/3.7.0/lib/python3.7/urllib/request.py&quot;, line 525, in open</span><br><span class="line">    response = self._open(req, data)</span><br><span class="line">  File &quot;/home/rain/.pyenv/versions/3.7.0/lib/python3.7/urllib/request.py&quot;, line 543, in _open</span><br><span class="line">    &#x27;_open&#x27;, req)</span><br><span class="line">  File &quot;/home/rain/.pyenv/versions/3.7.0/lib/python3.7/urllib/request.py&quot;, line 503, in _call_chain</span><br><span class="line">    result = func(*args)</span><br><span class="line">  File &quot;/home/rain/.pyenv/versions/3.7.0/lib/python3.7/urllib/request.py&quot;, line 1345, in http_open</span><br><span class="line">    return self.do_open(http.client.HTTPConnection, req)</span><br><span class="line">  File &quot;/home/rain/.pyenv/versions/3.7.0/lib/python3.7/urllib/request.py&quot;, line 1319, in do_open</span><br><span class="line">    raise URLError(err)</span><br><span class="line">urllib.error.URLError: &lt;urlopen error timed out&gt;</span><br></pre></td></tr></table></figure>
+这里我们设置了超时的时间是0.1秒。程序再执行0.1秒以后，服务器依然没有任何响应，于是抛出了URLError异常。可以从<code>&lt;urlopen error timed out&gt;</code>看出是网络超时。那么问题来了，如何抓取这种情况呢？<br>实例：  <figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br></pre></td><td class="code"><pre><span class="line">from urllib import request, error</span><br><span class="line">import socket</span><br><span class="line"></span><br><span class="line">try:</span><br><span class="line">    response = request .urlopen(&#x27;http://httpbin.org/get&#x27;, timeout=0.1)</span><br><span class="line">except error.URLError as e:</span><br><span class="line">    if isinstance(e.reason, socket.timeout):</span><br><span class="line">        print(&#x27;Time Out&#x27;)</span><br></pre></td></tr></table></figure>
+我们用try: … except: …来捕获异常，此处引入了socket模块。</li>
 </ol>
 <p>2、Request<br>到此，我们知道了如何用urlopen方法实现一个简单的请求发送。但是这些简单参数有时候并不能满足我们的需求，比如我们需要在请求中添加header，此时就需要一个更加强大的类来实现了，这就是本节要讲的Request类。<br>实例是最好的验证。<br>实例：</p>
-<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br></pre></td><td class="code"><pre><span class="line">from urllib import request</span><br><span class="line"></span><br><span class="line">req &#x3D; request.Request(&#39;https:&#x2F;&#x2F;baidu.com&#39;)</span><br><span class="line">response &#x3D; request.urlopen(req)</span><br><span class="line">print(response.read().decode(&#39;utf-8&#39;))</span><br></pre></td></tr></table></figure>
-<p>此处我们依然使用了上文的urlopen()方法，只是此时的参数不再是一个URL了，而是一个Request对象。另外，这个函数我们可以很灵活的配置我们需要的参数。看下它的构造方法吧：<br><code>urllib.request.Request(url, data=None, headers={},origin_req_host=None, unverifiable=False,method=None)</code><br>  解释下：</p>
+<figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br></pre></td><td class="code"><pre><span class="line">from urllib import request</span><br><span class="line"></span><br><span class="line">req = request.Request(&#x27;https://baidu.com&#x27;)</span><br><span class="line">response = request.urlopen(req)</span><br><span class="line">print(response.read().decode(&#x27;utf-8&#x27;))</span><br></pre></td></tr></table></figure>
+<p>此处我们依然使用了上文的urlopen()方法，只是此时的参数不再是一个URL了，而是一个Request对象。另外，这个函数我们可以很灵活的配置我们需要的参数。看下它的构造方法吧：<br><code>urllib.request.Request(url, data=None, headers=&#123;&#125;,origin_req_host=None, unverifiable=False,method=None)</code><br>  解释下：</p>
 <ul>
 <li>url：请求的URL，必填项</li>
 <li>data：字节流，请求时需要带的数据</li>
@@ -384,12 +301,12 @@
 <li>method：请求是用的方法，如GET、POST等</li>
 </ul>
 <p>下面实现一个多参数构建请求的例子：</p>
-<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br></pre></td><td class="code"><pre><span class="line">from urllib import request, parse</span><br><span class="line"></span><br><span class="line">url &#x3D; &#39;http:&#x2F;&#x2F;httpbin.org&#x2F;post&#39;</span><br><span class="line"></span><br><span class="line">headers &#x3D; &#123;</span><br><span class="line">    &#39;User-Agent&#39;: &#39;Mozilla&#x2F;5.0 (X11; Linux x86_64) AppleWebKit&#x2F;537.36 (KHTML, like Gecko) Chrome&#x2F;71.0.3578.80 Safari&#x2F;537.36&#39;</span><br><span class="line">&#125;</span><br><span class="line">dict &#x3D; &#123;</span><br><span class="line">    &#39;name&#39;: &quot;spider_road&quot;</span><br><span class="line">&#125;</span><br><span class="line"></span><br><span class="line">data&#x3D; bytes(parse.urlencode(dict), encoding&#x3D;&#39;utf8&#39;)</span><br><span class="line">req &#x3D; request.Request(url&#x3D;url, data&#x3D;data, headers&#x3D;headers, method &#x3D;&#39;POST&#39;)</span><br><span class="line">response &#x3D; request.urlopen(req)</span><br><span class="line">print(response.read().decode(&#39;utf8&#39;))</span><br></pre></td></tr></table></figure>
+<figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br></pre></td><td class="code"><pre><span class="line">from urllib import request, parse</span><br><span class="line"></span><br><span class="line">url = &#x27;http://httpbin.org/post&#x27;</span><br><span class="line"></span><br><span class="line">headers = &#123;</span><br><span class="line">    &#x27;User-Agent&#x27;: &#x27;Mozilla/5.0 (X11; Linux x86_64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/71.0.3578.80 Safari/537.36&#x27;</span><br><span class="line">&#125;</span><br><span class="line">dict = &#123;</span><br><span class="line">    &#x27;name&#x27;: &quot;spider_road&quot;</span><br><span class="line">&#125;</span><br><span class="line"></span><br><span class="line">data= bytes(parse.urlencode(dict), encoding=&#x27;utf8&#x27;)</span><br><span class="line">req = request.Request(url=url, data=data, headers=headers, method =&#x27;POST&#x27;)</span><br><span class="line">response = request.urlopen(req)</span><br><span class="line">print(response.read().decode(&#x27;utf8&#x27;))</span><br></pre></td></tr></table></figure>
 <p>我们通过四个参数四个参数构建了这个请求，运行结果如下：</p>
-<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br></pre></td><td class="code"><pre><span class="line">&#123;</span><br><span class="line">  &quot;args&quot;: &#123;&#125;,</span><br><span class="line">  &quot;data&quot;: &quot;&quot;,</span><br><span class="line">  &quot;files&quot;: &#123;&#125;,</span><br><span class="line">  &quot;form&quot;: &#123;</span><br><span class="line">    &quot;name&quot;: &quot;spider_road&quot;</span><br><span class="line">  &#125;,</span><br><span class="line">  &quot;headers&quot;: &#123;</span><br><span class="line">    &quot;Accept-Encoding&quot;: &quot;identity&quot;,</span><br><span class="line">    &quot;Connection&quot;: &quot;close&quot;,</span><br><span class="line">    &quot;Content-Length&quot;: &quot;16&quot;,</span><br><span class="line">    &quot;Content-Type&quot;: &quot;application&#x2F;x-www-form-urlencoded&quot;,</span><br><span class="line">    &quot;Host&quot;: &quot;httpbin.org&quot;,</span><br><span class="line">    &quot;User-Agent&quot;: &quot;Mozilla&#x2F;5.0 (X11; Linux x86_64) AppleWebKit&#x2F;537.36 (KHTML, like Gecko) Chrome&#x2F;71.0.3578.80 Safari&#x2F;537.36&quot;</span><br><span class="line">  &#125;,</span><br><span class="line">  &quot;json&quot;: null,</span><br><span class="line">  &quot;origin&quot;: &quot;115.60.58.52&quot;,</span><br><span class="line">  &quot;url&quot;: &quot;http:&#x2F;&#x2F;httpbin.org&#x2F;post&quot;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+<figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br></pre></td><td class="code"><pre><span class="line">&#123;</span><br><span class="line">  &quot;args&quot;: &#123;&#125;,</span><br><span class="line">  &quot;data&quot;: &quot;&quot;,</span><br><span class="line">  &quot;files&quot;: &#123;&#125;,</span><br><span class="line">  &quot;form&quot;: &#123;</span><br><span class="line">    &quot;name&quot;: &quot;spider_road&quot;</span><br><span class="line">  &#125;,</span><br><span class="line">  &quot;headers&quot;: &#123;</span><br><span class="line">    &quot;Accept-Encoding&quot;: &quot;identity&quot;,</span><br><span class="line">    &quot;Connection&quot;: &quot;close&quot;,</span><br><span class="line">    &quot;Content-Length&quot;: &quot;16&quot;,</span><br><span class="line">    &quot;Content-Type&quot;: &quot;application/x-www-form-urlencoded&quot;,</span><br><span class="line">    &quot;Host&quot;: &quot;httpbin.org&quot;,</span><br><span class="line">    &quot;User-Agent&quot;: &quot;Mozilla/5.0 (X11; Linux x86_64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/71.0.3578.80 Safari/537.36&quot;</span><br><span class="line">  &#125;,</span><br><span class="line">  &quot;json&quot;: null,</span><br><span class="line">  &quot;origin&quot;: &quot;115.60.58.52&quot;,</span><br><span class="line">  &quot;url&quot;: &quot;http://httpbin.org/post&quot;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
 
 <h3 id="异常的处理"><a href="#异常的处理" class="headerlink" title="异常的处理"></a>异常的处理</h3><p>在上节中，我们简单的提到了如何对异常做出处理，但是程序在运行过程总会出现一些其他的错误，当出现这些错误时，异常处理还是很有必要做的。<br>1、URLError<br>URLError类来自于urllib库的error模块，继承自OSError类，由request模块产生的异常都已使用这个类来捕捉。<br>实例：  </p>
-<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br></pre></td><td class="code"><pre><span class="line">from urllib import request, error</span><br><span class="line"></span><br><span class="line">try:</span><br><span class="line">    response &#x3D; request.urlopen(&#39;https:&#x2F;&#x2F;spider-road.com&#39;)</span><br><span class="line">except error.URLError as e:</span><br><span class="line">    print(e.reason)</span><br></pre></td></tr></table></figure>
+<figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br></pre></td><td class="code"><pre><span class="line">from urllib import request, error</span><br><span class="line"></span><br><span class="line">try:</span><br><span class="line">    response = request.urlopen(&#x27;https://spider-road.com&#x27;)</span><br><span class="line">except error.URLError as e:</span><br><span class="line">    print(e.reason)</span><br></pre></td></tr></table></figure>
 <p>上面的程序我们使用它打开了一个不存在的网址，我们使用try:… except:…来捕获了异常。<br>运行输出：<code>[Errno -2] Name or service not known</code>，此时有效得避免了程序异常终止。</p>
 <p>2、HTTPError<br>它是URLError的子类，用来处理HTTP请求错误，比如认证请求失败等。它有一下3个属性：</p>
 <ul>
@@ -398,7 +315,7 @@
 <li>headers： 返回请求头</li>
 </ul>
 <p>实例验证：</p>
-<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br></pre></td><td class="code"><pre><span class="line">from urllib import request, error</span><br><span class="line"></span><br><span class="line">try:</span><br><span class="line">    response &#x3D; request.urlopen(&#39;https:&#x2F;&#x2F;spider-road.com&#39;)</span><br><span class="line">except error.HTTPError as e:</span><br><span class="line">    print(f&#39;code:&#123;e.code&#125;\nreason:&#123;e.reason&#125;\nheaders:&#123;e.headers&#125;&#39;)</span><br><span class="line">except error.URLError as e:</span><br><span class="line">    print(e.reason)</span><br></pre></td></tr></table></figure>
+<figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br></pre></td><td class="code"><pre><span class="line">from urllib import request, error</span><br><span class="line"></span><br><span class="line">try:</span><br><span class="line">    response = request.urlopen(&#x27;https://spider-road.com&#x27;)</span><br><span class="line">except error.HTTPError as e:</span><br><span class="line">    print(f&#x27;code:&#123;e.code&#125;\nreason:&#123;e.reason&#125;\nheaders:&#123;e.headers&#125;&#x27;)</span><br><span class="line">except error.URLError as e:</span><br><span class="line">    print(e.reason)</span><br></pre></td></tr></table></figure>
 <p>由于没有该网站，所以最后返回的是：<code>[Errno 110] Connection timed out</code><br>至此，关于urllib请求和错误处理已经讲解完毕，后续还有关于此节更为高级的用法。欢迎订阅爬虫之道，我们在这里等待你的到来。</p>
 
     </div>
@@ -407,133 +324,86 @@
     
     
 
-      <footer class="post-footer">
+    <footer class="post-footer">
           <div class="post-tags">
-              <a href="/tags/%E7%88%AC%E8%99%AB/" rel="tag"><i class="fa fa-tag"></i> 爬虫</a>
-              <a href="/tags/urllib/" rel="tag"><i class="fa fa-tag"></i> urllib</a>
+              <a href="/tags/%E7%88%AC%E8%99%AB/" rel="tag"># 爬虫</a>
+              <a href="/tags/urllib/" rel="tag"># urllib</a>
           </div>
 
         
 
-
-        
-    <div class="post-nav">
-      <div class="post-nav-item">
-    <a href="/190425/" rel="prev" title="在Centos中架设ss服务">
-      <i class="fa fa-chevron-left"></i> 在Centos中架设ss服务
-    </a></div>
-      <div class="post-nav-item">
-    <a href="/190502-1/" rel="next" title="Docker学习总结">
-      Docker学习总结 <i class="fa fa-chevron-right"></i>
-    </a></div>
-    </div>
-      </footer>
-    
+          <div class="post-nav">
+            <div class="post-nav-item">
+                <a href="/190425/" rel="prev" title="在Centos中架设ss服务">
+                  <i class="fa fa-angle-left"></i> 在Centos中架设ss服务
+                </a>
+            </div>
+            <div class="post-nav-item">
+                <a href="/190502-1/" rel="next" title="Docker学习总结">
+                  Docker学习总结 <i class="fa fa-angle-right"></i>
+                </a>
+            </div>
+          </div>
+    </footer>
   </article>
-  
-  
-  
+</div>
 
 
 
-        </div>
-        
 
-<script>
-  window.addEventListener('tabs:register', () => {
-    let { activeClass } = CONFIG.comments;
-    if (CONFIG.comments.storage) {
-      activeClass = localStorage.getItem('comments_active') || activeClass;
-    }
-    if (activeClass) {
-      let activeTab = document.querySelector(`a[href="#comment-${activeClass}"]`);
-      if (activeTab) {
-        activeTab.click();
-      }
-    }
-  });
-  if (CONFIG.comments.storage) {
-    window.addEventListener('tabs:click', event => {
-      if (!event.target.matches('.tabs-comment .tab-content .tab-pane')) return;
-      let commentClass = event.target.classList[1];
-      localStorage.setItem('comments_active', commentClass);
-    });
-  }
-</script>
 
-      </div>
-    </main>
 
-    <footer class="footer">
-      <div class="footer-inner">
-        
+</div>
+  </main>
 
-        
+  <footer class="footer">
+    <div class="footer-inner">
 
-<div class="copyright">
-  
-  &copy; 
-  <span itemprop="copyrightYear">2021</span>
-  <span class="with-love">
-    <i class="fa fa-heart"></i>
-  </span>
-  <span class="author" itemprop="copyrightHolder">QuiryRain</span>
-    <span class="post-meta-divider">|</span>
-    <span class="post-meta-item-icon">
-      <i class="fa fa-chart-area"></i>
+  <div class="copyright">
+    &copy; 
+    <span itemprop="copyrightYear">2024</span>
+    <span class="with-love">
+      <i class="fa fa-heart"></i>
     </span>
-      <span class="post-meta-item-text">站点总字数：</span>
-    <span title="站点总字数">113k</span>
-    <span class="post-meta-divider">|</span>
+    <span class="author" itemprop="copyrightHolder">QuiryRain</span>
+  </div>
+<div class="wordcount">
+  <span class="post-meta-item">
+    <span class="post-meta-item-icon">
+      <i class="fa fa-chart-line"></i>
+    </span>
+    <span title="站点总字数">115k</span>
+  </span>
+  <span class="post-meta-item">
     <span class="post-meta-item-icon">
       <i class="fa fa-coffee"></i>
     </span>
-      <span class="post-meta-item-text">站点阅读时长 &asymp;</span>
-    <span title="站点阅读时长">1:43</span>
+    <span title="站点阅读时长">1:45</span>
+  </span>
 </div>
-  <div class="powered-by">由 <a href="https://hexo.io/" class="theme-link" rel="noopener" target="_blank">Hexo</a> & <a href="https://theme-next.js.org/" class="theme-link" rel="noopener" target="_blank">NexT.Gemini</a> 强力驱动
+  <div class="powered-by">由 <a href="https://hexo.io/" rel="noopener" target="_blank">Hexo</a> & <a href="https://theme-next.js.org/" rel="noopener" target="_blank">NexT.Gemini</a> 强力驱动
   </div>
 
-        
+    </div>
+  </footer>
 
-
-
-
-
-
-
-
-      </div>
-    </footer>
+  
+  <div class="back-to-top" role="button" aria-label="返回顶部">
+    <i class="fa fa-arrow-up fa-lg"></i>
+    <span>0%</span>
   </div>
 
-  
-  <script src="/lib/anime.min.js"></script>
-  <script src="//cdn.jsdelivr.net/npm/jquery@3/dist/jquery.min.js"></script>
-  <script src="//cdn.jsdelivr.net/npm/@fancyapps/fancybox@3/dist/jquery.fancybox.min.js"></script>
-  <script src="//cdn.jsdelivr.net/npm/lozad@1/dist/lozad.min.js"></script>
-
-<script src="/js/utils.js"></script>
-
-<script src="/js/motion.js"></script>
-
-
-<script src="/js/next-boot.js"></script>
+<noscript>
+  <div class="noscript-warning">Theme NexT works best with JavaScript enabled</div>
+</noscript>
 
 
   
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/animejs/3.2.1/anime.min.js" integrity="sha256-XL2inqUJaslATFnHdJOi9GfQ60on8Wx1C2H8DYiN1xY=" crossorigin="anonymous"></script>
+<script src="/js/comments.js"></script><script src="/js/utils.js"></script><script src="/js/motion.js"></script><script src="/js/next-boot.js"></script>
 
-
-
-
-  
-<script src="/js/local-search.js"></script>
-
-
-
-
-
-
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/hexo-generator-searchdb/1.4.1/search.js" integrity="sha256-1kfA5uHPf65M5cphT2dvymhkuyHPQp5A53EGZOnOLmc=" crossorigin="anonymous"></script>
+<script src="/js/third-party/search/local-search.js"></script>
 
 
 
@@ -543,7 +413,9 @@
 
   
 
-  
+
+
+
 
 </body>
 </html>

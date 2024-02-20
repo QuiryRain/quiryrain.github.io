@@ -2,9 +2,9 @@
 <html lang="zh-CN">
 <head>
   <meta charset="UTF-8">
-<meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=2">
-<meta name="theme-color" content="#222">
-<meta name="generator" content="Hexo 4.2.1">
+<meta name="viewport" content="width=device-width">
+<meta name="theme-color" content="#222"><meta name="generator" content="Hexo 7.1.1">
+
   <link rel="apple-touch-icon" sizes="180x180" href="/images/apple-touch-icon-next.png">
   <link rel="icon" type="image/png" sizes="32x32" href="/images/favicon-32x32-next.png">
   <link rel="icon" type="image/png" sizes="16x16" href="/images/favicon-16x16-next.png">
@@ -13,46 +13,39 @@
 <link rel="stylesheet" href="/css/main.css">
 
 
-<link rel="stylesheet" href="/lib/font-awesome/css/all.min.css">
-  
-  <link rel="stylesheet" href="/lib/animate-css/animate.min.css">
-  <link rel="stylesheet" href="//cdn.jsdelivr.net/npm/@fancyapps/fancybox@3/dist/jquery.fancybox.min.css">
 
-<script class="hexo-configurations">
-    var NexT = window.NexT || {};
-    var CONFIG = {"hostname":"quiryrain.ml","root":"/","scheme":"Gemini","version":"8.0.0-rc.4","exturl":false,"sidebar":{"position":"left","display":"post","padding":18,"offset":12},"copycode":false,"bookmark":{"enable":false,"color":"#222","save":"auto"},"fancybox":true,"mediumzoom":false,"lazyload":true,"pangu":false,"comments":{"style":"tabs","active":null,"storage":true,"lazyload":false,"nav":null},"algolia":{"hits":{"per_page":10},"labels":{"input_placeholder":"Search for Posts","hits_empty":"We didn't find any results for the search: ${query}","hits_stats":"${hits} results found in ${time} ms"}},"localsearch":{"enable":true,"trigger":"auto","top_n_per_article":1,"unescape":false,"preload":false},"motion":{"enable":true,"async":false,"transition":{"post_block":"fadeIn","post_header":"fadeInDown","post_body":"fadeInDown","coll_header":"fadeInLeft","sidebar":"fadeInUp"}},"path":"search.xml"};
-  </script>
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css" integrity="sha256-wiz7ZSCn/btzhjKDQBms9Hx4sSeUYsDrTLg7roPstac=" crossorigin="anonymous">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/animate.css/3.1.1/animate.min.css" integrity="sha256-PR7ttpcvz8qrF57fur/yAx1qXMFJeJFiA6pSzWi0OIE=" crossorigin="anonymous">
 
-  <meta name="description" content="和lxml一样，BeautifulSoup也是一个HTML&#x2F;XML的解析器，主要的功能也是解析和提取HTML&#x2F;XML数据。 lxml只会局部遍历，而BeautifulSoup是基于HTML DOM的，它会加载整个文档，解析整个DOM树，因此在时间和内存上也会有很大的开销，所以性能要低于lxml。 BeautifulSoup用来解析HTML比较简单，其API设计的非常人性化，同时BeautifulS">
+<script class="next-config" data-name="main" type="application/json">{"hostname":"blog.qaz327zz.tk","root":"/","images":"/images","scheme":"Gemini","darkmode":false,"version":"8.19.1","exturl":false,"sidebar":{"position":"left","display":"post","padding":18,"offset":12},"copycode":{"enable":false,"style":null},"fold":{"enable":false,"height":500},"bookmark":{"enable":false,"color":"#222","save":"auto"},"mediumzoom":false,"lazyload":false,"pangu":false,"comments":{"style":"tabs","active":null,"storage":true,"lazyload":false,"nav":null},"stickytabs":false,"motion":{"enable":true,"async":false,"transition":{"menu_item":"fadeInDown","post_block":"fadeIn","post_header":"fadeInDown","post_body":"fadeInDown","coll_header":"fadeInLeft","sidebar":"fadeInUp"}},"i18n":{"placeholder":"搜索...","empty":"没有找到任何搜索结果：${query}","hits_time":"找到 ${hits} 个搜索结果（用时 ${time} 毫秒）","hits":"找到 ${hits} 个搜索结果"},"path":"/search.xml","localsearch":{"enable":true,"trigger":"auto","top_n_per_article":1,"unescape":false,"preload":false}}</script><script src="/js/config.js"></script>
+
+    <meta name="description" content="和lxml一样，BeautifulSoup也是一个HTML&#x2F;XML的解析器，主要的功能也是解析和提取HTML&#x2F;XML数据。 lxml只会局部遍历，而BeautifulSoup是基于HTML DOM的，它会加载整个文档，解析整个DOM树，因此在时间和内存上也会有很大的开销，所以性能要低于lxml。 BeautifulSoup用来解析HTML比较简单，其API设计的非常人性化，同时">
 <meta property="og:type" content="article">
 <meta property="og:title" content="BeautifulSoup4库">
-<meta property="og:url" content="https://quiryrain.ml/190628-1/index.html">
+<meta property="og:url" content="https://blog.qaz327zz.tk/190628-1/index.html">
 <meta property="og:site_name" content="QuiryRain的博客">
-<meta property="og:description" content="和lxml一样，BeautifulSoup也是一个HTML&#x2F;XML的解析器，主要的功能也是解析和提取HTML&#x2F;XML数据。 lxml只会局部遍历，而BeautifulSoup是基于HTML DOM的，它会加载整个文档，解析整个DOM树，因此在时间和内存上也会有很大的开销，所以性能要低于lxml。 BeautifulSoup用来解析HTML比较简单，其API设计的非常人性化，同时BeautifulS">
+<meta property="og:description" content="和lxml一样，BeautifulSoup也是一个HTML&#x2F;XML的解析器，主要的功能也是解析和提取HTML&#x2F;XML数据。 lxml只会局部遍历，而BeautifulSoup是基于HTML DOM的，它会加载整个文档，解析整个DOM树，因此在时间和内存上也会有很大的开销，所以性能要低于lxml。 BeautifulSoup用来解析HTML比较简单，其API设计的非常人性化，同时">
 <meta property="og:locale" content="zh_CN">
-<meta property="og:image" content="https://quiryrain.ml/userImages/20190629_000.png">
+<meta property="og:image" content="https://blog.qaz327zz.tk/userImages/20190629_000.png">
 <meta property="article:published_time" content="2019-06-28T10:42:52.000Z">
 <meta property="article:modified_time" content="2020-07-14T00:14:35.984Z">
 <meta property="article:author" content="QuiryRain">
 <meta property="article:tag" content="bs4">
 <meta name="twitter:card" content="summary">
-<meta name="twitter:image" content="https://quiryrain.ml/userImages/20190629_000.png">
-
-<link rel="canonical" href="https://quiryrain.ml/190628-1/">
+<meta name="twitter:image" content="https://blog.qaz327zz.tk/userImages/20190629_000.png">
 
 
-<script class="page-configurations">
-  // https://hexo.io/docs/variables.html
-  CONFIG.page = {
-    sidebar: "",
-    isHome : false,
-    isPost : true,
-    lang   : 'zh-CN'
-  };
-</script>
+<link rel="canonical" href="https://blog.qaz327zz.tk/190628-1/">
 
-  <title>BeautifulSoup4库 | QuiryRain的博客</title>
+
+
+<script class="next-config" data-name="page" type="application/json">{"sidebar":"","isHome":false,"isPost":true,"lang":"zh-CN","comments":true,"permalink":"https://blog.qaz327zz.tk/190628-1/","path":"190628-1/","title":"BeautifulSoup4库"}</script>
+
+<script class="next-config" data-name="calendar" type="application/json">""</script>
+<title>BeautifulSoup4库 | QuiryRain的博客</title>
   
+
+
 
 
 
@@ -60,54 +53,19 @@
 
 
   <noscript>
-  <style>
-  body { margin-top: 2rem; }
-
-  .use-motion .menu-item,
-  .use-motion .sidebar,
-  .use-motion .post-block,
-  .use-motion .pagination,
-  .use-motion .comments,
-  .use-motion .post-header,
-  .use-motion .post-body,
-  .use-motion .collection-header {
-    visibility: visible;
-  }
-
-  .use-motion .header,
-  .use-motion .site-brand-container .toggle,
-  .use-motion .footer { opacity: initial; }
-
-  .use-motion .site-title,
-  .use-motion .site-subtitle,
-  .use-motion .custom-logo-image {
-    opacity: initial;
-    top: initial;
-  }
-
-  .use-motion .logo-line {
-    transform: scaleX(1);
-  }
-
-  .search-pop-overlay, .sidebar-nav { display: none; }
-  .sidebar-panel { display: block; }
-  </style>
-</noscript>
-
+    <link rel="stylesheet" href="/css/noscript.css">
+  </noscript>
+<link rel="alternate" href="/atom.xml" title="QuiryRain的博客" type="application/atom+xml">
 </head>
 
-<body itemscope itemtype="http://schema.org/WebPage">
-  <div class="container use-motion">
-    <div class="headband"></div>
+<body itemscope itemtype="http://schema.org/WebPage" class="use-motion">
+  <div class="headband"></div>
 
-    <main class="main">
-      <header class="header" itemscope itemtype="http://schema.org/WPHeader">
-        <div class="header-inner"><div class="site-brand-container">
+  <main class="main">
+    <div class="column">
+      <header class="header" itemscope itemtype="http://schema.org/WPHeader"><div class="site-brand-container">
   <div class="site-nav-toggle">
-    <div class="toggle" aria-label="切换导航栏">
-        <span class="toggle-line toggle-line-first"></span>
-        <span class="toggle-line toggle-line-middle"></span>
-        <span class="toggle-line toggle-line-last"></span>
+    <div class="toggle" aria-label="切换导航栏" role="button">
     </div>
   </div>
 
@@ -115,13 +73,13 @@
 
     <a href="/" class="brand" rel="start">
       <i class="logo-line"></i>
-      <h1 class="site-title">QuiryRain的博客</h1>
+      <p class="site-title">QuiryRain的博客</p>
       <i class="logo-line"></i>
     </a>
   </div>
 
   <div class="site-nav-right">
-    <div class="toggle popup-trigger">
+    <div class="toggle popup-trigger" aria-label="搜索" role="button">
         <i class="fa fa-search fa-fw fa-lg"></i>
     </div>
   </div>
@@ -130,32 +88,7 @@
 
 
 <nav class="site-nav">
-  <ul id="menu" class="main-menu menu">
-        <li class="menu-item menu-item-home">
-
-    <a href="/" rel="section"><i class="fa fa-home fa-fw"></i>首页</a>
-
-  </li>
-        <li class="menu-item menu-item-archives">
-
-    <a href="/archives/" rel="section"><i class="fa fa-archive fa-fw"></i>归档</a>
-
-  </li>
-        <li class="menu-item menu-item-categories">
-
-    <a href="/categories/" rel="section"><i class="fa fa-th fa-fw"></i>分类</a>
-
-  </li>
-        <li class="menu-item menu-item-tags">
-
-    <a href="/tags/" rel="section"><i class="fa fa-tags fa-fw"></i>标签</a>
-
-  </li>
-        <li class="menu-item menu-item-about">
-
-    <a href="/about/" rel="section"><i class="fa fa-user fa-fw"></i>关于</a>
-
-  </li>
+  <ul class="main-menu menu">
       <li class="menu-item menu-item-search">
         <a role="button" class="popup-trigger"><i class="fa fa-search fa-fw"></i>搜索
         </a>
@@ -166,22 +99,21 @@
 
 
   <div class="search-pop-overlay">
-    <div class="popup search-popup">
-        <div class="search-header">
+    <div class="popup search-popup"><div class="search-header">
   <span class="search-icon">
     <i class="fa fa-search"></i>
   </span>
   <div class="search-input-container">
-    <input autocomplete="off" autocapitalize="off"
+    <input autocomplete="off" autocapitalize="off" maxlength="80"
            placeholder="搜索..." spellcheck="false"
            type="search" class="search-input">
   </div>
-  <span class="popup-btn-close">
+  <span class="popup-btn-close" role="button">
     <i class="fa fa-times-circle"></i>
   </span>
 </div>
-<div id="search-result">
-  <div id="no-result">
+<div class="search-result-container no-result">
+  <div class="search-result-icon">
     <i class="fa fa-spinner fa-pulse fa-5x"></i>
   </div>
 </div>
@@ -189,15 +121,9 @@
     </div>
   </div>
 
-</div>
-          
+</header>
+        
   
-  <div class="toggle sidebar-toggle">
-    <span class="toggle-line toggle-line-first"></span>
-    <span class="toggle-line toggle-line-middle"></span>
-    <span class="toggle-line toggle-line-last"></span>
-  </div>
-
   <aside class="sidebar">
 
     <div class="sidebar-inner sidebar-nav-active sidebar-toc-active">
@@ -210,136 +136,130 @@
         </li>
       </ul>
 
-      <!--noindex-->
-      <section class="post-toc-wrap sidebar-panel">
-          <div class="post-toc animated"><ol class="nav"><li class="nav-item nav-level-3"><a class="nav-link" href="#对比："><span class="nav-number">1.</span> <span class="nav-text">对比：</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#简单使用"><span class="nav-number">2.</span> <span class="nav-text">简单使用</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#四个常用的对象"><span class="nav-number">3.</span> <span class="nav-text">四个常用的对象</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#操作讲解"><span class="nav-number">4.</span> <span class="nav-text">操作讲解</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#搜索文档树"><span class="nav-number">5.</span> <span class="nav-text">搜索文档树</span></a><ol class="nav-child"><li class="nav-item nav-level-4"><a class="nav-link" href="#find和find-all方法"><span class="nav-number">5.1.</span> <span class="nav-text">find和find_all方法</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#select方法"><span class="nav-number">5.2.</span> <span class="nav-text">select方法</span></a></li></ol></li></ol></div>
-      </section>
-      <!--/noindex-->
+      <div class="sidebar-panel-container">
+        <!--noindex-->
+        <div class="post-toc-wrap sidebar-panel">
+            <div class="post-toc animated"><ol class="nav"><li class="nav-item nav-level-3"><a class="nav-link" href="#%E5%AF%B9%E6%AF%94%EF%BC%9A"><span class="nav-number">1.</span> <span class="nav-text">对比：</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#%E7%AE%80%E5%8D%95%E4%BD%BF%E7%94%A8"><span class="nav-number">2.</span> <span class="nav-text">简单使用</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#%E5%9B%9B%E4%B8%AA%E5%B8%B8%E7%94%A8%E7%9A%84%E5%AF%B9%E8%B1%A1"><span class="nav-number">3.</span> <span class="nav-text">四个常用的对象</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#%E6%93%8D%E4%BD%9C%E8%AE%B2%E8%A7%A3"><span class="nav-number">4.</span> <span class="nav-text">操作讲解</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#%E6%90%9C%E7%B4%A2%E6%96%87%E6%A1%A3%E6%A0%91"><span class="nav-number">5.</span> <span class="nav-text">搜索文档树</span></a><ol class="nav-child"><li class="nav-item nav-level-4"><a class="nav-link" href="#find%E5%92%8Cfind-all%E6%96%B9%E6%B3%95"><span class="nav-number">5.1.</span> <span class="nav-text">find和find_all方法</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#select%E6%96%B9%E6%B3%95"><span class="nav-number">5.2.</span> <span class="nav-text">select方法</span></a></li></ol></li></ol></div>
+        </div>
+        <!--/noindex-->
 
-      <section class="site-overview-wrap sidebar-panel">
-        <div class="site-author animated" itemprop="author" itemscope itemtype="http://schema.org/Person">
+        <div class="site-overview-wrap sidebar-panel">
+          <div class="site-author animated" itemprop="author" itemscope itemtype="http://schema.org/Person">
   <p class="site-author-name" itemprop="name">QuiryRain</p>
   <div class="site-description" itemprop="description">时光大好，不负年少</div>
 </div>
 <div class="site-state-wrap animated">
   <nav class="site-state">
       <div class="site-state-item site-state-posts">
-          <a href="/archives/">
-        
-          <span class="site-state-item-count">44</span>
+        <a href="/archives/">
+          <span class="site-state-item-count">41</span>
           <span class="site-state-item-name">日志</span>
         </a>
       </div>
       <div class="site-state-item site-state-categories">
-            <a href="/categories/">
-          
-        <span class="site-state-item-count">19</span>
+          <a href="/categories/">
+        <span class="site-state-item-count">18</span>
         <span class="site-state-item-name">分类</span></a>
       </div>
       <div class="site-state-item site-state-tags">
-            <a href="/tags/">
-          
-        <span class="site-state-item-count">66</span>
+          <a href="/tags/">
+        <span class="site-state-item-count">63</span>
         <span class="site-state-item-name">标签</span></a>
       </div>
   </nav>
 </div>
   <div class="links-of-author animated">
       <span class="links-of-author-item">
-        <a href="https://github.com/quiryrain" title="GitHub → https:&#x2F;&#x2F;github.com&#x2F;quiryrain" rel="noopener" target="_blank"><i class="fab fa-github fa-fw"></i>GitHub</a>
+        <a href="https://github.com/quiryrain" title="GitHub → https:&#x2F;&#x2F;github.com&#x2F;quiryrain" rel="noopener me" target="_blank"><i class="fab fa-github fa-fw"></i>GitHub</a>
       </span>
   </div>
 
-
-
-      </section>
-        <div class="back-to-top animated">
-          <i class="fa fa-arrow-up"></i>
-          <span>0%</span>
         </div>
+      </div>
     </div>
-  </aside>
-  <div id="sidebar-dimmer"></div>
-
-
-      </header>
-
-      
-
-  <a href="https://github.com/quiryrain" class="github-corner" title="Follow me on GitHub" aria-label="Follow me on GitHub" rel="noopener" target="_blank"><svg width="80" height="80" viewBox="0 0 250 250" aria-hidden="true"><path d="M0,0 L115,115 L130,115 L142,142 L250,250 L250,0 Z"></path><path d="M128.3,109.0 C113.8,99.7 119.0,89.6 119.0,89.6 C122.0,82.7 120.5,78.6 120.5,78.6 C119.2,72.0 123.4,76.3 123.4,76.3 C127.3,80.9 125.5,87.3 125.5,87.3 C122.9,97.6 130.6,101.9 134.4,103.2" fill="currentColor" style="transform-origin: 130px 106px;" class="octo-arm"></path><path d="M115.0,115.0 C114.9,115.1 118.7,116.5 119.8,115.4 L133.7,101.6 C136.9,99.2 139.9,98.4 142.2,98.6 C133.8,88.0 127.5,74.4 143.8,58.0 C148.5,53.4 154.0,51.2 159.7,51.0 C160.3,49.4 163.2,43.6 171.4,40.1 C171.4,40.1 176.1,42.5 178.8,56.2 C183.1,58.6 187.2,61.8 190.9,65.4 C194.5,69.0 197.7,73.2 200.1,77.6 C213.8,80.2 216.3,84.9 216.3,84.9 C212.7,93.1 206.9,96.0 205.4,96.6 C205.1,102.4 203.0,107.8 198.3,112.5 C181.9,128.9 168.3,122.5 157.7,114.1 C157.9,116.9 156.7,120.9 152.7,124.9 L141.0,136.5 C139.8,137.7 141.6,141.9 141.8,141.8 Z" fill="currentColor" class="octo-body"></path></svg></a>
-
-<noscript>
-  <div id="noscript-warning">Theme NexT works best with JavaScript enabled</div>
-</noscript>
-
-
-      <div class="main-inner">
-        
-
-        <div class="content post posts-expand">
-          
 
     
+  </aside>
+
+
+    </div>
+
+    <div class="main-inner post posts-expand">
+
+
+  
+
+
+<div class="post-block">
   
   
-  <article itemscope itemtype="http://schema.org/Article" class="post-block" lang="zh-CN">
-    <link itemprop="mainEntityOfPage" href="https://quiryrain.ml/190628-1/">
+
+  <article itemscope itemtype="http://schema.org/Article" class="post-content" lang="zh-CN">
+    <link itemprop="mainEntityOfPage" href="https://blog.qaz327zz.tk/190628-1/">
 
     <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
       <meta itemprop="image" content="/images/avatar.gif">
       <meta itemprop="name" content="QuiryRain">
-      <meta itemprop="description" content="时光大好，不负年少">
     </span>
 
     <span hidden itemprop="publisher" itemscope itemtype="http://schema.org/Organization">
       <meta itemprop="name" content="QuiryRain的博客">
+      <meta itemprop="description" content="时光大好，不负年少">
+    </span>
+
+    <span hidden itemprop="post" itemscope itemtype="http://schema.org/CreativeWork">
+      <meta itemprop="name" content="BeautifulSoup4库 | QuiryRain的博客">
+      <meta itemprop="description" content="">
     </span>
       <header class="post-header">
         <h1 class="post-title" itemprop="name headline">
           BeautifulSoup4库
         </h1>
 
-        <div class="post-meta">
-            <span class="post-meta-item">
-              <span class="post-meta-item-icon">
-                <i class="far fa-calendar"></i>
-              </span>
-              <span class="post-meta-item-text">发表于</span>
+        <div class="post-meta-container">
+          <div class="post-meta">
+    <span class="post-meta-item">
+      <span class="post-meta-item-icon">
+        <i class="far fa-calendar"></i>
+      </span>
+      <span class="post-meta-item-text">发表于</span>
 
-              <time title="创建时间：2019-06-28 18:42:52" itemprop="dateCreated datePublished" datetime="2019-06-28T18:42:52+08:00">2019-06-28</time>
-            </span>
-              <span class="post-meta-item">
-                <span class="post-meta-item-icon">
-                  <i class="far fa-calendar-check"></i>
-                </span>
-                <span class="post-meta-item-text">更新于</span>
-                <time title="修改时间：2020-07-14 08:14:35" itemprop="dateModified" datetime="2020-07-14T08:14:35+08:00">2020-07-14</time>
-              </span>
-            <span class="post-meta-item">
-              <span class="post-meta-item-icon">
-                <i class="far fa-folder"></i>
-              </span>
-              <span class="post-meta-item-text">分类于</span>
-                <span itemprop="about" itemscope itemtype="http://schema.org/Thing">
-                  <a href="/categories/%E7%88%AC%E8%99%AB/" itemprop="url" rel="index"><span itemprop="name">爬虫</span></a>
-                </span>
-            </span>
+      <time title="创建时间：2019-06-28 18:42:52" itemprop="dateCreated datePublished" datetime="2019-06-28T18:42:52+08:00">2019-06-28</time>
+    </span>
+    <span class="post-meta-item">
+      <span class="post-meta-item-icon">
+        <i class="far fa-calendar-check"></i>
+      </span>
+      <span class="post-meta-item-text">更新于</span>
+      <time title="修改时间：2020-07-14 08:14:35" itemprop="dateModified" datetime="2020-07-14T08:14:35+08:00">2020-07-14</time>
+    </span>
+    <span class="post-meta-item">
+      <span class="post-meta-item-icon">
+        <i class="far fa-folder"></i>
+      </span>
+      <span class="post-meta-item-text">分类于</span>
+        <span itemprop="about" itemscope itemtype="http://schema.org/Thing">
+          <a href="/categories/%E7%88%AC%E8%99%AB/" itemprop="url" rel="index"><span itemprop="name">爬虫</span></a>
+        </span>
+    </span>
 
-          <br>
-            <span class="post-meta-item" title="本文字数">
-              <span class="post-meta-item-icon">
-                <i class="far fa-file-word"></i>
-              </span>
-                <span class="post-meta-item-text">本文字数：</span>
-              <span>12k</span>
-            </span>
-            <span class="post-meta-item" title="阅读时长">
-              <span class="post-meta-item-icon">
-                <i class="far fa-clock"></i>
-              </span>
-                <span class="post-meta-item-text">阅读时长 &asymp;</span>
-              <span>11 分钟</span>
-            </span>
+  
+    <span class="post-meta-break"></span>
+    <span class="post-meta-item" title="本文字数">
+      <span class="post-meta-item-icon">
+        <i class="far fa-file-word"></i>
+      </span>
+      <span class="post-meta-item-text">本文字数：</span>
+      <span>14k</span>
+    </span>
+    <span class="post-meta-item" title="阅读时长">
+      <span class="post-meta-item-icon">
+        <i class="far fa-clock"></i>
+      </span>
+      <span class="post-meta-item-text">阅读时长 &asymp;</span>
+      <span>13 分钟</span>
+    </span>
+</div>
 
         </div>
       </header>
@@ -347,16 +267,13 @@
     
     
     
-    <div class="post-body" itemprop="articleBody">
-
-      
-        <p>和lxml一样，BeautifulSoup也是一个HTML/XML的解析器，主要的功能也是解析和提取HTML/XML数据。</p>
+    <div class="post-body" itemprop="articleBody"><p>和lxml一样，BeautifulSoup也是一个HTML&#x2F;XML的解析器，主要的功能也是解析和提取HTML&#x2F;XML数据。</p>
 <p>lxml只会局部遍历，而BeautifulSoup是基于HTML DOM的，它会加载整个文档，解析整个DOM树，因此在时间和内存上也会有很大的开销，所以性能要低于lxml。</p>
 <p>BeautifulSoup用来解析HTML比较简单，其API设计的非常人性化，同时BeautifulSoup也支持CSS选择器、Python标准库中的HTML解析器、lxml的XML。</p>
-<a id="more"></a>
+<span id="more"></span>
 
 <p>安装：<code>pip install bs4</code></p>
-<p>中文文档：<a href="https://www.crummy.com/software/BeautifulSoup/bs4/doc/index.zh.html" target="_blank" rel="noopener">https://www.crummy.com/software/BeautifulSoup/bs4/doc/index.zh.html</a></p>
+<p>中文文档：<a href="https://www.crummy.com/software/BeautifulSoup/bs4/doc/index.zh.html">https://www.crummy.com/software/BeautifulSoup/bs4/doc/index.zh.html</a></p>
 <h3 id="对比："><a href="#对比：" class="headerlink" title="对比："></a>对比：</h3><table>
 <thead>
 <tr>
@@ -381,13 +298,13 @@
 <td>最难</td>
 </tr>
 </tbody></table>
-<h3 id="简单使用"><a href="#简单使用" class="headerlink" title="简单使用"></a>简单使用</h3><figure class="highlight python"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">from</span> bs4 <span class="keyword">import</span> BeautifulSoup</span><br><span class="line"></span><br><span class="line">html = <span class="string">"""</span></span><br><span class="line"><span class="string">&lt;html&gt;&lt;head&gt;&lt;title&gt;The Dormouse's story&lt;/title&gt;&lt;/head&gt;</span></span><br><span class="line"><span class="string">&lt;body&gt;</span></span><br><span class="line"><span class="string">&lt;p class="title"&gt;&lt;b&gt;The Dormouse's story&lt;/b&gt;&lt;/p&gt;</span></span><br><span class="line"><span class="string"></span></span><br><span class="line"><span class="string">&lt;p class="story"&gt;Once upon a time there were three little sisters; and their names were</span></span><br><span class="line"><span class="string">&lt;a href="http://example.com/elsie" class="sister" id="link1"&gt;Elsie&lt;/a&gt;,</span></span><br><span class="line"><span class="string">&lt;a href="http://example.com/lacie" class="sister" id="link2"&gt;Lacie&lt;/a&gt; and</span></span><br><span class="line"><span class="string">&lt;a href="http://example.com/tillie" class="sister" id="link3"&gt;Tillie&lt;/a&gt;;</span></span><br><span class="line"><span class="string">and they lived at the bottom of a well.&lt;/p&gt;</span></span><br><span class="line"><span class="string"></span></span><br><span class="line"><span class="string">&lt;p class="story"&gt;...&lt;/p&gt;</span></span><br><span class="line"><span class="string">"""</span></span><br><span class="line"></span><br><span class="line">soup = BeautifulSoup(html, <span class="string">'lxml'</span>)</span><br><span class="line">print(soup.prettify())</span><br></pre></td></tr></table></figure>
+<h3 id="简单使用"><a href="#简单使用" class="headerlink" title="简单使用"></a>简单使用</h3><figure class="highlight python"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">from</span> bs4 <span class="keyword">import</span> BeautifulSoup</span><br><span class="line"></span><br><span class="line">html = <span class="string">&quot;&quot;&quot;</span></span><br><span class="line"><span class="string">&lt;html&gt;&lt;head&gt;&lt;title&gt;The Dormouse&#x27;s story&lt;/title&gt;&lt;/head&gt;</span></span><br><span class="line"><span class="string">&lt;body&gt;</span></span><br><span class="line"><span class="string">&lt;p class=&quot;title&quot;&gt;&lt;b&gt;The Dormouse&#x27;s story&lt;/b&gt;&lt;/p&gt;</span></span><br><span class="line"><span class="string"></span></span><br><span class="line"><span class="string">&lt;p class=&quot;story&quot;&gt;Once upon a time there were three little sisters; and their names were</span></span><br><span class="line"><span class="string">&lt;a href=&quot;http://example.com/elsie&quot; class=&quot;sister&quot; id=&quot;link1&quot;&gt;Elsie&lt;/a&gt;,</span></span><br><span class="line"><span class="string">&lt;a href=&quot;http://example.com/lacie&quot; class=&quot;sister&quot; id=&quot;link2&quot;&gt;Lacie&lt;/a&gt; and</span></span><br><span class="line"><span class="string">&lt;a href=&quot;http://example.com/tillie&quot; class=&quot;sister&quot; id=&quot;link3&quot;&gt;Tillie&lt;/a&gt;;</span></span><br><span class="line"><span class="string">and they lived at the bottom of a well.&lt;/p&gt;</span></span><br><span class="line"><span class="string"></span></span><br><span class="line"><span class="string">&lt;p class=&quot;story&quot;&gt;...&lt;/p&gt;</span></span><br><span class="line"><span class="string">&quot;&quot;&quot;</span></span><br><span class="line"></span><br><span class="line">soup = BeautifulSoup(html, <span class="string">&#x27;lxml&#x27;</span>)</span><br><span class="line"><span class="built_in">print</span>(soup.prettify())</span><br></pre></td></tr></table></figure>
 
 <p>BeautifulSoup(markup, features):在使用的时候需要指定解析器，如果未指定，BeautifulSoup使用的Python标准库中的HTML解析器，同时beautifulsoup也支持第三方的解析器如lxml。另一个可供选择的解析器是纯Python实现的html5lib，html5lib的解析方式与浏览器相同。</p>
 <p>安装lxml：<code>pip install lxml</code></p>
 <p>安装html5lib: <code>pip install html5lib</code></p>
 <p>主要解析器的优缺点：</p>
-<p><img data-src="/userImages/20190629_000.png" alt="解析器"></p>
+<p><img src="/userImages/20190629_000.png" alt="解析器"></p>
 <h3 id="四个常用的对象"><a href="#四个常用的对象" class="headerlink" title="四个常用的对象"></a>四个常用的对象</h3><p>BeautifulSoup将复杂HTML文档转换成一个复杂的树形结构，每个节点都是Python对象，所有对象可以归纳为4种：</p>
 <ol>
 <li>Tag</li>
@@ -396,34 +313,32 @@
 <li>Comment</li>
 </ol>
 <h3 id="操作讲解"><a href="#操作讲解" class="headerlink" title="操作讲解"></a>操作讲解</h3><p>以下内容以4个例子的形式进行讲解：</p>
-<figure class="highlight python"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br><span class="line">26</span><br><span class="line">27</span><br><span class="line">28</span><br><span class="line">29</span><br><span class="line">30</span><br><span class="line">31</span><br><span class="line">32</span><br><span class="line">33</span><br><span class="line">34</span><br><span class="line">35</span><br><span class="line">36</span><br><span class="line">37</span><br><span class="line">38</span><br><span class="line">39</span><br><span class="line">40</span><br><span class="line">41</span><br><span class="line">42</span><br><span class="line">43</span><br><span class="line">44</span><br><span class="line">45</span><br><span class="line">46</span><br><span class="line">47</span><br><span class="line">48</span><br><span class="line">49</span><br><span class="line">50</span><br><span class="line">51</span><br><span class="line">52</span><br><span class="line">53</span><br><span class="line">54</span><br><span class="line">55</span><br><span class="line">56</span><br><span class="line">57</span><br><span class="line">58</span><br><span class="line">59</span><br><span class="line">60</span><br><span class="line">61</span><br><span class="line">62</span><br><span class="line">63</span><br><span class="line">64</span><br><span class="line">65</span><br><span class="line">66</span><br><span class="line">67</span><br><span class="line">68</span><br><span class="line">69</span><br><span class="line">70</span><br><span class="line">71</span><br><span class="line">72</span><br><span class="line">73</span><br><span class="line">74</span><br><span class="line">75</span><br><span class="line">76</span><br><span class="line">77</span><br><span class="line">78</span><br><span class="line">79</span><br><span class="line">80</span><br><span class="line">81</span><br><span class="line">82</span><br><span class="line">83</span><br><span class="line">84</span><br><span class="line">85</span><br><span class="line">86</span><br><span class="line">87</span><br><span class="line">88</span><br><span class="line">89</span><br><span class="line">90</span><br><span class="line">91</span><br><span class="line">92</span><br><span class="line">93</span><br><span class="line">94</span><br><span class="line">95</span><br><span class="line">96</span><br><span class="line">97</span><br><span class="line">98</span><br><span class="line">99</span><br><span class="line">100</span><br><span class="line">101</span><br><span class="line">102</span><br><span class="line">103</span><br><span class="line">104</span><br><span class="line">105</span><br><span class="line">106</span><br><span class="line">107</span><br><span class="line">108</span><br><span class="line">109</span><br><span class="line">110</span><br><span class="line">111</span><br><span class="line">112</span><br><span class="line">113</span><br><span class="line">114</span><br><span class="line">115</span><br><span class="line">116</span><br><span class="line">117</span><br><span class="line">118</span><br><span class="line">119</span><br><span class="line">120</span><br><span class="line">121</span><br><span class="line">122</span><br><span class="line">123</span><br><span class="line">124</span><br><span class="line">125</span><br><span class="line">126</span><br><span class="line">127</span><br><span class="line">128</span><br><span class="line">129</span><br><span class="line">130</span><br><span class="line">131</span><br><span class="line">132</span><br><span class="line">133</span><br><span class="line">134</span><br><span class="line">135</span><br><span class="line">136</span><br><span class="line">137</span><br><span class="line">138</span><br><span class="line">139</span><br><span class="line">140</span><br><span class="line">141</span><br><span class="line">142</span><br><span class="line">143</span><br><span class="line">144</span><br><span class="line">145</span><br><span class="line">146</span><br><span class="line">147</span><br><span class="line">148</span><br><span class="line">149</span><br><span class="line">150</span><br><span class="line">151</span><br><span class="line">152</span><br><span class="line">153</span><br><span class="line">154</span><br></pre></td><td class="code"><pre><span class="line"><span class="comment"># demo.py</span></span><br><span class="line"></span><br><span class="line"><span class="keyword">from</span> bs4 <span class="keyword">import</span> BeautifulSoup</span><br><span class="line"></span><br><span class="line">html = <span class="string">"""</span></span><br><span class="line"><span class="string">&lt;div data-v-a6e3291a="" class="correlation-degree"&gt;</span></span><br><span class="line"><span class="string">  &lt;div data-v-a6e3291a="" class="recruit-wrap recruit-margin"&gt;</span></span><br><span class="line"><span class="string">    &lt;div data-v-a6e3291a="" class="recruit-list"&gt;</span></span><br><span class="line"><span class="string">      &lt;a data-v-a6e3291a="" class="recruit-list-link"&gt;</span></span><br><span class="line"><span class="string">        &lt;h4 data-v-a6e3291a="" class="recruit-title"&gt;TEG15-计费产品web前端开发工程师（深圳）&lt;/h4&gt; </span></span><br><span class="line"><span class="string">        &lt;p data-v-a6e3291a="" class="recruit-tips"&gt;</span></span><br><span class="line"><span class="string">          &lt;span data-v-a6e3291a=""&gt;TEG&lt;/span&gt; | &lt;span data-v-a6e3291a=""&gt;深圳,中国&lt;/span&gt; | </span></span><br><span class="line"><span class="string">          &lt;span data-v-a6e3291a=""&gt;技术&lt;/span&gt; | &lt;span data-v-a6e3291a=""&gt;2019年06月28日&lt;/span&gt;</span></span><br><span class="line"><span class="string">        &lt;/p&gt;</span></span><br><span class="line"><span class="string">        &lt;p data-v-a6e3291a="" class="recruit-text"&gt;负责腾讯计费平台基础支付前端架构设计和开发工作； 参与需求评审、架构设计、编码设计和上线运维； 负责用户体验优化，包括但不限于：业务流程、前端展示、性能、安全等。&lt;/p&gt;</span></span><br><span class="line"><span class="string">      &lt;/a&gt; </span></span><br><span class="line"><span class="string">      &lt;div data-v-a6e3291a="" class="recruit-collection"&gt;</span></span><br><span class="line"><span class="string">        &lt;span data-v-a6e3291a="" class="icon-collection"&gt;&lt;/span&gt; </span></span><br><span class="line"><span class="string">        &lt;span data-v-a6e3291a="" class="collection-text"&gt;收藏&lt;/span&gt;</span></span><br><span class="line"><span class="string">      &lt;/div&gt;</span></span><br><span class="line"><span class="string">    &lt;/div&gt;</span></span><br><span class="line"><span class="string">    &lt;div data-v-a6e3291a="" class="recruit-list"&gt;</span></span><br><span class="line"><span class="string">      &lt;a data-v-a6e3291a="" class="recruit-list-link"&gt;</span></span><br><span class="line"><span class="string">        &lt;h4 data-v-a6e3291a="" class="recruit-title"&gt;PCG19-腾讯视频媒资后台开发工程师&lt;/h4&gt;</span></span><br><span class="line"><span class="string">        &lt;p data-v-a6e3291a="" class="recruit-tips"&gt;</span></span><br><span class="line"><span class="string">          &lt;span data-v-a6e3291a=""&gt;PCG&lt;/span&gt; | &lt;span data-v-a6e3291a=""&gt;北京,中国&lt;/span&gt; | </span></span><br><span class="line"><span class="string">          &lt;span data-v-a6e3291a=""&gt;技术&lt;/span&gt; | &lt;span data-v-a6e3291a=""&gt;腾讯视频&lt;/span&gt; | </span></span><br><span class="line"><span class="string">          &lt;span data-v-a6e3291a=""&gt;2019年06月28日&lt;/span&gt;</span></span><br><span class="line"><span class="string">        &lt;/p&gt;</span></span><br><span class="line"><span class="string">        &lt;p data-v-a6e3291a="" class="recruit-text"&gt;负责腾讯视频媒资中台开发工作。&lt;/p&gt;</span></span><br><span class="line"><span class="string">      &lt;/a&gt; </span></span><br><span class="line"><span class="string">      &lt;div data-v-a6e3291a="" class="recruit-collection"&gt;</span></span><br><span class="line"><span class="string">        &lt;span data-v-a6e3291a="" class="icon-collection"&gt;&lt;/span&gt; </span></span><br><span class="line"><span class="string">        &lt;span data-v-a6e3291a="" class="collection-text"&gt;收藏&lt;/span&gt;</span></span><br><span class="line"><span class="string">      &lt;/div&gt;</span></span><br><span class="line"><span class="string">    &lt;/div&gt;</span></span><br><span class="line"><span class="string">    &lt;div data-v-a6e3291a="" class="recruit-list"&gt;</span></span><br><span class="line"><span class="string">      &lt;a data-v-a6e3291a="" class="recruit-list-link"&gt;</span></span><br><span class="line"><span class="string">        &lt;h4 data-v-a6e3291a="" class="recruit-title"&gt;TEG15-计费系统前端测试工程师（深圳）&lt;/h4&gt; </span></span><br><span class="line"><span class="string">        &lt;p data-v-a6e3291a="" class="recruit-tips"&gt;</span></span><br><span class="line"><span class="string">          &lt;span data-v-a6e3291a=""&gt;TEG&lt;/span&gt; | &lt;span data-v-a6e3291a=""&gt;深圳,中国&lt;/span&gt; | </span></span><br><span class="line"><span class="string">          &lt;span data-v-a6e3291a=""&gt;技术&lt;/span&gt; | &lt;span data-v-a6e3291a=""&gt;2019年06月28日&lt;/span&gt;</span></span><br><span class="line"><span class="string">        &lt;/p&gt; </span></span><br><span class="line"><span class="string">        &lt;p data-v-a6e3291a="" class="recruit-text"&gt;负责web端/后台系统测试工作，从整个项目角度规划测试方法，达成项目质量目标； 负责web端/后台系统的自动化测试、性能测试，稳定性以及其它专项测试； 负责研究web端/后台系统测试技术，跟进业界测试技术发展，引进先进测试方法并开展二次开发，建立团队质量体系建设，有效提升测试效率&lt;/p&gt;</span></span><br><span class="line"><span class="string">      &lt;/a&gt; </span></span><br><span class="line"><span class="string">      &lt;div data-v-a6e3291a="" class="recruit-collection"&gt;</span></span><br><span class="line"><span class="string">        &lt;span data-v-a6e3291a="" class="icon-collection"&gt;&lt;/span&gt; </span></span><br><span class="line"><span class="string">        &lt;span data-v-a6e3291a="" class="collection-text"&gt;收藏&lt;/span&gt;</span></span><br><span class="line"><span class="string">      &lt;/div&gt;</span></span><br><span class="line"><span class="string">    &lt;/div&gt;</span></span><br><span class="line"><span class="string">    &lt;div data-v-a6e3291a="" class="recruit-list"&gt;</span></span><br><span class="line"><span class="string">      &lt;a data-v-a6e3291a="" class="recruit-list-link"&gt;</span></span><br><span class="line"><span class="string">        &lt;h4 data-v-a6e3291a="" class="recruit-title"&gt;32032-资深后台开发工程师（上海）&lt;/h4&gt; </span></span><br><span class="line"><span class="string">        &lt;p data-v-a6e3291a="" class="recruit-tips"&gt;</span></span><br><span class="line"><span class="string">          &lt;span data-v-a6e3291a=""&gt;IEG&lt;/span&gt; | &lt;span data-v-a6e3291a=""&gt;上海,中国&lt;/span&gt; | </span></span><br><span class="line"><span class="string">          &lt;span data-v-a6e3291a=""&gt;技术&lt;/span&gt; | &lt;span data-v-a6e3291a=""&gt;2019年06月28日&lt;/span&gt;</span></span><br><span class="line"><span class="string">        &lt;/p&gt; </span></span><br><span class="line"><span class="string">        &lt;p data-v-a6e3291a="" class="recruit-text"&gt;游戏服务器的功能开发和现有系统的持续优化； 负责服务器压力测试和性能优化； 负责服务器外网运营的持续跟进和优化。 &lt;/p&gt;</span></span><br><span class="line"><span class="string">      &lt;/a&gt; </span></span><br><span class="line"><span class="string">      &lt;div data-v-a6e3291a="" class="recruit-collection"&gt;</span></span><br><span class="line"><span class="string">        &lt;span data-v-a6e3291a="" class="icon-collection"&gt;&lt;/span&gt; </span></span><br><span class="line"><span class="string">        &lt;span data-v-a6e3291a="" class="collection-text"&gt;收藏&lt;/span&gt;</span></span><br><span class="line"><span class="string">      &lt;/div&gt;</span></span><br><span class="line"><span class="string">    &lt;/div&gt;</span></span><br><span class="line"><span class="string">    &lt;div data-v-a6e3291a="" class="recruit-list"&gt;</span></span><br><span class="line"><span class="string">      &lt;a data-v-a6e3291a="" class="recruit-list-link"&gt;</span></span><br><span class="line"><span class="string">        &lt;h4 data-v-a6e3291a="" class="recruit-title"&gt;WXG03-搜索自然语言算法工程师&lt;/h4&gt; </span></span><br><span class="line"><span class="string">        &lt;p data-v-a6e3291a="" class="recruit-tips"&gt;</span></span><br><span class="line"><span class="string">          &lt;span data-v-a6e3291a=""&gt;WXG&lt;/span&gt; | &lt;span data-v-a6e3291a=""&gt;广州,中国&lt;/span&gt; | </span></span><br><span class="line"><span class="string">          &lt;span data-v-a6e3291a=""&gt;技术&lt;/span&gt; | &lt;span data-v-a6e3291a=""&gt;2019年06月28日&lt;/span&gt;</span></span><br><span class="line"><span class="string">        &lt;/p&gt; </span></span><br><span class="line"><span class="string">        &lt;p data-v-a6e3291a="" class="recruit-text"&gt;负责包括新词发现、命名实体识别、查询理解、意图提取、知识图谱、搜索喜好偏向性等相关系统的建设，用以优化微信小程序搜索各产品方向的流量分发，并参与工程实践。&lt;/p&gt;</span></span><br><span class="line"><span class="string">      &lt;/a&gt; </span></span><br><span class="line"><span class="string">      &lt;div data-v-a6e3291a="" class="recruit-collection"&gt;</span></span><br><span class="line"><span class="string">        &lt;span data-v-a6e3291a="" class="icon-collection"&gt;&lt;/span&gt; </span></span><br><span class="line"><span class="string">        &lt;span data-v-a6e3291a="" class="collection-text"&gt;收藏&lt;/span&gt;</span></span><br><span class="line"><span class="string">      &lt;/div&gt;</span></span><br><span class="line"><span class="string">    &lt;/div&gt;</span></span><br><span class="line"><span class="string">    &lt;div data-v-a6e3291a="" class="recruit-list"&gt;</span></span><br><span class="line"><span class="string">      &lt;a data-v-a6e3291a="" class="recruit-list-link"&gt;</span></span><br><span class="line"><span class="string">        &lt;h4 data-v-a6e3291a="" class="recruit-title"&gt;WXG03-搜索检索算法工程师&lt;/h4&gt; </span></span><br><span class="line"><span class="string">        &lt;p data-v-a6e3291a="" class="recruit-tips"&gt;</span></span><br><span class="line"><span class="string">          &lt;span data-v-a6e3291a=""&gt;WXG&lt;/span&gt; | &lt;span data-v-a6e3291a=""&gt;广州,中国&lt;/span&gt; | </span></span><br><span class="line"><span class="string">          &lt;span data-v-a6e3291a=""&gt;技术&lt;/span&gt; | &lt;span data-v-a6e3291a=""&gt;2019年06月28日&lt;/span&gt;</span></span><br><span class="line"><span class="string">        &lt;/p&gt; </span></span><br><span class="line"><span class="string">        &lt;p data-v-a6e3291a="" class="recruit-text"&gt;负责微信小程序搜索各个产品方向的检索工作，内容包括页面识别、页面核心数据提取、页面分类、页面评分、词权重、排序等相关工作，并与开发工程师配合进行工程实践。 &lt;/p&gt;</span></span><br><span class="line"><span class="string">      &lt;/a&gt; </span></span><br><span class="line"><span class="string">      &lt;div data-v-a6e3291a="" class="recruit-collection"&gt;</span></span><br><span class="line"><span class="string">        &lt;span data-v-a6e3291a="" class="icon-collection"&gt;&lt;/span&gt; </span></span><br><span class="line"><span class="string">        &lt;span data-v-a6e3291a="" class="collection-text"&gt;收藏&lt;/span&gt;</span></span><br><span class="line"><span class="string">      &lt;/div&gt;</span></span><br><span class="line"><span class="string">    &lt;/div&gt;</span></span><br><span class="line"><span class="string">    &lt;div data-v-a6e3291a="" class="recruit-list"&gt;</span></span><br><span class="line"><span class="string">      &lt;a data-v-a6e3291a="" class="recruit-list-link"&gt;</span></span><br><span class="line"><span class="string">        &lt;h4 data-v-a6e3291a="" class="recruit-title"&gt;23486-证券业务C++后台开发高级工程师（深圳）&lt;/h4&gt; </span></span><br><span class="line"><span class="string">        &lt;p data-v-a6e3291a="" class="recruit-tips"&gt;</span></span><br><span class="line"><span class="string">          &lt;span data-v-a6e3291a=""&gt;CDG&lt;/span&gt; | &lt;span data-v-a6e3291a=""&gt;深圳,中国&lt;/span&gt; | </span></span><br><span class="line"><span class="string">          &lt;span data-v-a6e3291a=""&gt;技术&lt;/span&gt; | &lt;span data-v-a6e3291a=""&gt;2019年06月28日&lt;/span&gt;</span></span><br><span class="line"><span class="string">        &lt;/p&gt; </span></span><br><span class="line"><span class="string">        &lt;p data-v-a6e3291a="" class="recruit-text"&gt;负责证券交易、风控、清算等系统的开发维护，建设证券业务相关的技术基础平台。&lt;/p&gt;</span></span><br><span class="line"><span class="string">      &lt;/a&gt; </span></span><br><span class="line"><span class="string">      &lt;div data-v-a6e3291a="" class="recruit-collection"&gt;</span></span><br><span class="line"><span class="string">        &lt;span data-v-a6e3291a="" class="icon-collection"&gt;&lt;/span&gt; </span></span><br><span class="line"><span class="string">        &lt;span data-v-a6e3291a="" class="collection-text"&gt;收藏&lt;/span&gt;</span></span><br><span class="line"><span class="string">      &lt;/div&gt;</span></span><br><span class="line"><span class="string">    &lt;/div&gt;</span></span><br><span class="line"><span class="string">    &lt;div data-v-a6e3291a="" class="recruit-list"&gt;</span></span><br><span class="line"><span class="string">      &lt;a data-v-a6e3291a="" class="recruit-list-link"&gt;</span></span><br><span class="line"><span class="string">        &lt;h4 data-v-a6e3291a="" class="recruit-title"&gt;22989-腾讯云数据平台产品中心运营开发&lt;/h4&gt; </span></span><br><span class="line"><span class="string">        &lt;p data-v-a6e3291a="" class="recruit-tips"&gt;</span></span><br><span class="line"><span class="string">          &lt;span data-v-a6e3291a=""&gt;CSIG&lt;/span&gt; | &lt;span data-v-a6e3291a=""&gt;深圳,中国&lt;/span&gt; | </span></span><br><span class="line"><span class="string">          &lt;span data-v-a6e3291a=""&gt;技术&lt;/span&gt; | &lt;span data-v-a6e3291a=""&gt;2019年06月28日&lt;/span&gt;</span></span><br><span class="line"><span class="string">        &lt;/p&gt; </span></span><br><span class="line"><span class="string">        &lt;p data-v-a6e3291a="" class="recruit-text"&gt;负责腾讯云数据平台产品的设计和研发。 负责云产品数据管理和服务的设计和研发。 负责构建和完善云底层数据的存储和查询，优化数据的质量和监控能力。&lt;/p&gt;</span></span><br><span class="line"><span class="string">      &lt;/a&gt; </span></span><br><span class="line"><span class="string">      &lt;div data-v-a6e3291a="" class="recruit-collection"&gt;</span></span><br><span class="line"><span class="string">        &lt;span data-v-a6e3291a="" class="icon-collection"&gt;&lt;/span&gt; </span></span><br><span class="line"><span class="string">        &lt;span data-v-a6e3291a="" class="collection-text"&gt;收藏&lt;/span&gt;</span></span><br><span class="line"><span class="string">      &lt;/div&gt;</span></span><br><span class="line"><span class="string">    &lt;/div&gt;</span></span><br><span class="line"><span class="string">    &lt;div data-v-a6e3291a="" class="recruit-list"&gt;</span></span><br><span class="line"><span class="string">      &lt;a data-v-a6e3291a="" class="recruit-list-link"&gt;</span></span><br><span class="line"><span class="string">        &lt;h4 data-v-a6e3291a="" class="recruit-title"&gt;18428-证券业务测试工程师&lt;/h4&gt; </span></span><br><span class="line"><span class="string">        &lt;p data-v-a6e3291a="" class="recruit-tips"&gt;</span></span><br><span class="line"><span class="string">          &lt;span data-v-a6e3291a=""&gt;CDG&lt;/span&gt; | &lt;span data-v-a6e3291a=""&gt;北京,中国&lt;/span&gt; | </span></span><br><span class="line"><span class="string">          &lt;span data-v-a6e3291a=""&gt;技术&lt;/span&gt; | &lt;span data-v-a6e3291a=""&gt;财付通&lt;/span&gt; | </span></span><br><span class="line"><span class="string">          &lt;span data-v-a6e3291a=""&gt;2019年06月28日&lt;/span&gt;</span></span><br><span class="line"><span class="string">        &lt;/p&gt; </span></span><br><span class="line"><span class="string">        &lt;p data-v-a6e3291a="" class="recruit-text"&gt;负责证券类产品的功能、性能、安全、自动化等测试工作，包括终端/H5及后台系统的测试。&lt;/p&gt;</span></span><br><span class="line"><span class="string">      &lt;/a&gt; </span></span><br><span class="line"><span class="string">      &lt;div data-v-a6e3291a="" class="recruit-collection"&gt;</span></span><br><span class="line"><span class="string">        &lt;span data-v-a6e3291a="" class="icon-collection"&gt;&lt;/span&gt; </span></span><br><span class="line"><span class="string">        &lt;span data-v-a6e3291a="" class="collection-text"&gt;收藏&lt;/span&gt;</span></span><br><span class="line"><span class="string">      &lt;/div&gt;</span></span><br><span class="line"><span class="string">    &lt;/div&gt;</span></span><br><span class="line"><span class="string">    &lt;div data-v-a6e3291a="" class="recruit-list"&gt;</span></span><br><span class="line"><span class="string">      &lt;a data-v-a6e3291a="" class="recruit-list-link"&gt;</span></span><br><span class="line"><span class="string">        &lt;h4 data-v-a6e3291a="" class="recruit-title"&gt;30360-后台平台开发（深圳）&lt;/h4&gt; </span></span><br><span class="line"><span class="string">        &lt;p data-v-a6e3291a="" class="recruit-tips"&gt;</span></span><br><span class="line"><span class="string">          &lt;span data-v-a6e3291a=""&gt;PCG&lt;/span&gt; | &lt;span data-v-a6e3291a=""&gt;深圳总部,中国&lt;/span&gt; | </span></span><br><span class="line"><span class="string">          &lt;span data-v-a6e3291a=""&gt;技术&lt;/span&gt; | &lt;span data-v-a6e3291a=""&gt;2019年06月28日&lt;/span&gt;</span></span><br><span class="line"><span class="string">        &lt;/p&gt; </span></span><br><span class="line"><span class="string">        &lt;p data-v-a6e3291a="" class="recruit-text"&gt;负责QQ平台海量用户和数据的基础后台研发工作； 负责AI基础架构系统后台研发工作； 负责推荐系统，大数据分析计算后台研发工作。&lt;/p&gt;</span></span><br><span class="line"><span class="string">      &lt;/a&gt; </span></span><br><span class="line"><span class="string">      &lt;div data-v-a6e3291a="" class="recruit-collection"&gt;</span></span><br><span class="line"><span class="string">        &lt;span data-v-a6e3291a="" class="icon-collection"&gt;&lt;/span&gt; </span></span><br><span class="line"><span class="string">        &lt;span data-v-a6e3291a="" class="collection-text"&gt;收藏&lt;/span&gt;</span></span><br><span class="line"><span class="string">      &lt;/div&gt;</span></span><br><span class="line"><span class="string">    &lt;/div&gt;</span></span><br><span class="line"><span class="string">  &lt;/div&gt;</span></span><br><span class="line"><span class="string">&lt;/div&gt;</span></span><br><span class="line"><span class="string">"""</span></span><br><span class="line"></span><br><span class="line">soup = BeautifulSoup(html, <span class="string">'lxml'</span>)</span><br></pre></td></tr></table></figure>
+<figure class="highlight python"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br><span class="line">26</span><br><span class="line">27</span><br><span class="line">28</span><br><span class="line">29</span><br><span class="line">30</span><br><span class="line">31</span><br><span class="line">32</span><br><span class="line">33</span><br><span class="line">34</span><br><span class="line">35</span><br><span class="line">36</span><br><span class="line">37</span><br><span class="line">38</span><br><span class="line">39</span><br><span class="line">40</span><br><span class="line">41</span><br><span class="line">42</span><br><span class="line">43</span><br><span class="line">44</span><br><span class="line">45</span><br><span class="line">46</span><br><span class="line">47</span><br><span class="line">48</span><br><span class="line">49</span><br><span class="line">50</span><br><span class="line">51</span><br><span class="line">52</span><br><span class="line">53</span><br><span class="line">54</span><br><span class="line">55</span><br><span class="line">56</span><br><span class="line">57</span><br><span class="line">58</span><br><span class="line">59</span><br><span class="line">60</span><br><span class="line">61</span><br><span class="line">62</span><br><span class="line">63</span><br><span class="line">64</span><br><span class="line">65</span><br><span class="line">66</span><br><span class="line">67</span><br><span class="line">68</span><br><span class="line">69</span><br><span class="line">70</span><br><span class="line">71</span><br><span class="line">72</span><br><span class="line">73</span><br><span class="line">74</span><br><span class="line">75</span><br><span class="line">76</span><br><span class="line">77</span><br><span class="line">78</span><br><span class="line">79</span><br><span class="line">80</span><br><span class="line">81</span><br><span class="line">82</span><br><span class="line">83</span><br><span class="line">84</span><br><span class="line">85</span><br><span class="line">86</span><br><span class="line">87</span><br><span class="line">88</span><br><span class="line">89</span><br><span class="line">90</span><br><span class="line">91</span><br><span class="line">92</span><br><span class="line">93</span><br><span class="line">94</span><br><span class="line">95</span><br><span class="line">96</span><br><span class="line">97</span><br><span class="line">98</span><br><span class="line">99</span><br><span class="line">100</span><br><span class="line">101</span><br><span class="line">102</span><br><span class="line">103</span><br><span class="line">104</span><br><span class="line">105</span><br><span class="line">106</span><br><span class="line">107</span><br><span class="line">108</span><br><span class="line">109</span><br><span class="line">110</span><br><span class="line">111</span><br><span class="line">112</span><br><span class="line">113</span><br><span class="line">114</span><br><span class="line">115</span><br><span class="line">116</span><br><span class="line">117</span><br><span class="line">118</span><br><span class="line">119</span><br><span class="line">120</span><br><span class="line">121</span><br><span class="line">122</span><br><span class="line">123</span><br><span class="line">124</span><br><span class="line">125</span><br><span class="line">126</span><br><span class="line">127</span><br><span class="line">128</span><br><span class="line">129</span><br><span class="line">130</span><br><span class="line">131</span><br><span class="line">132</span><br><span class="line">133</span><br><span class="line">134</span><br><span class="line">135</span><br><span class="line">136</span><br><span class="line">137</span><br><span class="line">138</span><br><span class="line">139</span><br><span class="line">140</span><br><span class="line">141</span><br><span class="line">142</span><br><span class="line">143</span><br><span class="line">144</span><br><span class="line">145</span><br><span class="line">146</span><br><span class="line">147</span><br><span class="line">148</span><br><span class="line">149</span><br><span class="line">150</span><br><span class="line">151</span><br><span class="line">152</span><br><span class="line">153</span><br><span class="line">154</span><br></pre></td><td class="code"><pre><span class="line"><span class="comment"># demo.py</span></span><br><span class="line"></span><br><span class="line"><span class="keyword">from</span> bs4 <span class="keyword">import</span> BeautifulSoup</span><br><span class="line"></span><br><span class="line">html = <span class="string">&quot;&quot;&quot;</span></span><br><span class="line"><span class="string">&lt;div data-v-a6e3291a=&quot;&quot; class=&quot;correlation-degree&quot;&gt;</span></span><br><span class="line"><span class="string">  &lt;div data-v-a6e3291a=&quot;&quot; class=&quot;recruit-wrap recruit-margin&quot;&gt;</span></span><br><span class="line"><span class="string">    &lt;div data-v-a6e3291a=&quot;&quot; class=&quot;recruit-list&quot;&gt;</span></span><br><span class="line"><span class="string">      &lt;a data-v-a6e3291a=&quot;&quot; class=&quot;recruit-list-link&quot;&gt;</span></span><br><span class="line"><span class="string">        &lt;h4 data-v-a6e3291a=&quot;&quot; class=&quot;recruit-title&quot;&gt;TEG15-计费产品web前端开发工程师（深圳）&lt;/h4&gt; </span></span><br><span class="line"><span class="string">        &lt;p data-v-a6e3291a=&quot;&quot; class=&quot;recruit-tips&quot;&gt;</span></span><br><span class="line"><span class="string">          &lt;span data-v-a6e3291a=&quot;&quot;&gt;TEG&lt;/span&gt; | &lt;span data-v-a6e3291a=&quot;&quot;&gt;深圳,中国&lt;/span&gt; | </span></span><br><span class="line"><span class="string">          &lt;span data-v-a6e3291a=&quot;&quot;&gt;技术&lt;/span&gt; | &lt;span data-v-a6e3291a=&quot;&quot;&gt;2019年06月28日&lt;/span&gt;</span></span><br><span class="line"><span class="string">        &lt;/p&gt;</span></span><br><span class="line"><span class="string">        &lt;p data-v-a6e3291a=&quot;&quot; class=&quot;recruit-text&quot;&gt;负责腾讯计费平台基础支付前端架构设计和开发工作； 参与需求评审、架构设计、编码设计和上线运维； 负责用户体验优化，包括但不限于：业务流程、前端展示、性能、安全等。&lt;/p&gt;</span></span><br><span class="line"><span class="string">      &lt;/a&gt; </span></span><br><span class="line"><span class="string">      &lt;div data-v-a6e3291a=&quot;&quot; class=&quot;recruit-collection&quot;&gt;</span></span><br><span class="line"><span class="string">        &lt;span data-v-a6e3291a=&quot;&quot; class=&quot;icon-collection&quot;&gt;&lt;/span&gt; </span></span><br><span class="line"><span class="string">        &lt;span data-v-a6e3291a=&quot;&quot; class=&quot;collection-text&quot;&gt;收藏&lt;/span&gt;</span></span><br><span class="line"><span class="string">      &lt;/div&gt;</span></span><br><span class="line"><span class="string">    &lt;/div&gt;</span></span><br><span class="line"><span class="string">    &lt;div data-v-a6e3291a=&quot;&quot; class=&quot;recruit-list&quot;&gt;</span></span><br><span class="line"><span class="string">      &lt;a data-v-a6e3291a=&quot;&quot; class=&quot;recruit-list-link&quot;&gt;</span></span><br><span class="line"><span class="string">        &lt;h4 data-v-a6e3291a=&quot;&quot; class=&quot;recruit-title&quot;&gt;PCG19-腾讯视频媒资后台开发工程师&lt;/h4&gt;</span></span><br><span class="line"><span class="string">        &lt;p data-v-a6e3291a=&quot;&quot; class=&quot;recruit-tips&quot;&gt;</span></span><br><span class="line"><span class="string">          &lt;span data-v-a6e3291a=&quot;&quot;&gt;PCG&lt;/span&gt; | &lt;span data-v-a6e3291a=&quot;&quot;&gt;北京,中国&lt;/span&gt; | </span></span><br><span class="line"><span class="string">          &lt;span data-v-a6e3291a=&quot;&quot;&gt;技术&lt;/span&gt; | &lt;span data-v-a6e3291a=&quot;&quot;&gt;腾讯视频&lt;/span&gt; | </span></span><br><span class="line"><span class="string">          &lt;span data-v-a6e3291a=&quot;&quot;&gt;2019年06月28日&lt;/span&gt;</span></span><br><span class="line"><span class="string">        &lt;/p&gt;</span></span><br><span class="line"><span class="string">        &lt;p data-v-a6e3291a=&quot;&quot; class=&quot;recruit-text&quot;&gt;负责腾讯视频媒资中台开发工作。&lt;/p&gt;</span></span><br><span class="line"><span class="string">      &lt;/a&gt; </span></span><br><span class="line"><span class="string">      &lt;div data-v-a6e3291a=&quot;&quot; class=&quot;recruit-collection&quot;&gt;</span></span><br><span class="line"><span class="string">        &lt;span data-v-a6e3291a=&quot;&quot; class=&quot;icon-collection&quot;&gt;&lt;/span&gt; </span></span><br><span class="line"><span class="string">        &lt;span data-v-a6e3291a=&quot;&quot; class=&quot;collection-text&quot;&gt;收藏&lt;/span&gt;</span></span><br><span class="line"><span class="string">      &lt;/div&gt;</span></span><br><span class="line"><span class="string">    &lt;/div&gt;</span></span><br><span class="line"><span class="string">    &lt;div data-v-a6e3291a=&quot;&quot; class=&quot;recruit-list&quot;&gt;</span></span><br><span class="line"><span class="string">      &lt;a data-v-a6e3291a=&quot;&quot; class=&quot;recruit-list-link&quot;&gt;</span></span><br><span class="line"><span class="string">        &lt;h4 data-v-a6e3291a=&quot;&quot; class=&quot;recruit-title&quot;&gt;TEG15-计费系统前端测试工程师（深圳）&lt;/h4&gt; </span></span><br><span class="line"><span class="string">        &lt;p data-v-a6e3291a=&quot;&quot; class=&quot;recruit-tips&quot;&gt;</span></span><br><span class="line"><span class="string">          &lt;span data-v-a6e3291a=&quot;&quot;&gt;TEG&lt;/span&gt; | &lt;span data-v-a6e3291a=&quot;&quot;&gt;深圳,中国&lt;/span&gt; | </span></span><br><span class="line"><span class="string">          &lt;span data-v-a6e3291a=&quot;&quot;&gt;技术&lt;/span&gt; | &lt;span data-v-a6e3291a=&quot;&quot;&gt;2019年06月28日&lt;/span&gt;</span></span><br><span class="line"><span class="string">        &lt;/p&gt; </span></span><br><span class="line"><span class="string">        &lt;p data-v-a6e3291a=&quot;&quot; class=&quot;recruit-text&quot;&gt;负责web端/后台系统测试工作，从整个项目角度规划测试方法，达成项目质量目标； 负责web端/后台系统的自动化测试、性能测试，稳定性以及其它专项测试； 负责研究web端/后台系统测试技术，跟进业界测试技术发展，引进先进测试方法并开展二次开发，建立团队质量体系建设，有效提升测试效率&lt;/p&gt;</span></span><br><span class="line"><span class="string">      &lt;/a&gt; </span></span><br><span class="line"><span class="string">      &lt;div data-v-a6e3291a=&quot;&quot; class=&quot;recruit-collection&quot;&gt;</span></span><br><span class="line"><span class="string">        &lt;span data-v-a6e3291a=&quot;&quot; class=&quot;icon-collection&quot;&gt;&lt;/span&gt; </span></span><br><span class="line"><span class="string">        &lt;span data-v-a6e3291a=&quot;&quot; class=&quot;collection-text&quot;&gt;收藏&lt;/span&gt;</span></span><br><span class="line"><span class="string">      &lt;/div&gt;</span></span><br><span class="line"><span class="string">    &lt;/div&gt;</span></span><br><span class="line"><span class="string">    &lt;div data-v-a6e3291a=&quot;&quot; class=&quot;recruit-list&quot;&gt;</span></span><br><span class="line"><span class="string">      &lt;a data-v-a6e3291a=&quot;&quot; class=&quot;recruit-list-link&quot;&gt;</span></span><br><span class="line"><span class="string">        &lt;h4 data-v-a6e3291a=&quot;&quot; class=&quot;recruit-title&quot;&gt;32032-资深后台开发工程师（上海）&lt;/h4&gt; </span></span><br><span class="line"><span class="string">        &lt;p data-v-a6e3291a=&quot;&quot; class=&quot;recruit-tips&quot;&gt;</span></span><br><span class="line"><span class="string">          &lt;span data-v-a6e3291a=&quot;&quot;&gt;IEG&lt;/span&gt; | &lt;span data-v-a6e3291a=&quot;&quot;&gt;上海,中国&lt;/span&gt; | </span></span><br><span class="line"><span class="string">          &lt;span data-v-a6e3291a=&quot;&quot;&gt;技术&lt;/span&gt; | &lt;span data-v-a6e3291a=&quot;&quot;&gt;2019年06月28日&lt;/span&gt;</span></span><br><span class="line"><span class="string">        &lt;/p&gt; </span></span><br><span class="line"><span class="string">        &lt;p data-v-a6e3291a=&quot;&quot; class=&quot;recruit-text&quot;&gt;游戏服务器的功能开发和现有系统的持续优化； 负责服务器压力测试和性能优化； 负责服务器外网运营的持续跟进和优化。 &lt;/p&gt;</span></span><br><span class="line"><span class="string">      &lt;/a&gt; </span></span><br><span class="line"><span class="string">      &lt;div data-v-a6e3291a=&quot;&quot; class=&quot;recruit-collection&quot;&gt;</span></span><br><span class="line"><span class="string">        &lt;span data-v-a6e3291a=&quot;&quot; class=&quot;icon-collection&quot;&gt;&lt;/span&gt; </span></span><br><span class="line"><span class="string">        &lt;span data-v-a6e3291a=&quot;&quot; class=&quot;collection-text&quot;&gt;收藏&lt;/span&gt;</span></span><br><span class="line"><span class="string">      &lt;/div&gt;</span></span><br><span class="line"><span class="string">    &lt;/div&gt;</span></span><br><span class="line"><span class="string">    &lt;div data-v-a6e3291a=&quot;&quot; class=&quot;recruit-list&quot;&gt;</span></span><br><span class="line"><span class="string">      &lt;a data-v-a6e3291a=&quot;&quot; class=&quot;recruit-list-link&quot;&gt;</span></span><br><span class="line"><span class="string">        &lt;h4 data-v-a6e3291a=&quot;&quot; class=&quot;recruit-title&quot;&gt;WXG03-搜索自然语言算法工程师&lt;/h4&gt; </span></span><br><span class="line"><span class="string">        &lt;p data-v-a6e3291a=&quot;&quot; class=&quot;recruit-tips&quot;&gt;</span></span><br><span class="line"><span class="string">          &lt;span data-v-a6e3291a=&quot;&quot;&gt;WXG&lt;/span&gt; | &lt;span data-v-a6e3291a=&quot;&quot;&gt;广州,中国&lt;/span&gt; | </span></span><br><span class="line"><span class="string">          &lt;span data-v-a6e3291a=&quot;&quot;&gt;技术&lt;/span&gt; | &lt;span data-v-a6e3291a=&quot;&quot;&gt;2019年06月28日&lt;/span&gt;</span></span><br><span class="line"><span class="string">        &lt;/p&gt; </span></span><br><span class="line"><span class="string">        &lt;p data-v-a6e3291a=&quot;&quot; class=&quot;recruit-text&quot;&gt;负责包括新词发现、命名实体识别、查询理解、意图提取、知识图谱、搜索喜好偏向性等相关系统的建设，用以优化微信小程序搜索各产品方向的流量分发，并参与工程实践。&lt;/p&gt;</span></span><br><span class="line"><span class="string">      &lt;/a&gt; </span></span><br><span class="line"><span class="string">      &lt;div data-v-a6e3291a=&quot;&quot; class=&quot;recruit-collection&quot;&gt;</span></span><br><span class="line"><span class="string">        &lt;span data-v-a6e3291a=&quot;&quot; class=&quot;icon-collection&quot;&gt;&lt;/span&gt; </span></span><br><span class="line"><span class="string">        &lt;span data-v-a6e3291a=&quot;&quot; class=&quot;collection-text&quot;&gt;收藏&lt;/span&gt;</span></span><br><span class="line"><span class="string">      &lt;/div&gt;</span></span><br><span class="line"><span class="string">    &lt;/div&gt;</span></span><br><span class="line"><span class="string">    &lt;div data-v-a6e3291a=&quot;&quot; class=&quot;recruit-list&quot;&gt;</span></span><br><span class="line"><span class="string">      &lt;a data-v-a6e3291a=&quot;&quot; class=&quot;recruit-list-link&quot;&gt;</span></span><br><span class="line"><span class="string">        &lt;h4 data-v-a6e3291a=&quot;&quot; class=&quot;recruit-title&quot;&gt;WXG03-搜索检索算法工程师&lt;/h4&gt; </span></span><br><span class="line"><span class="string">        &lt;p data-v-a6e3291a=&quot;&quot; class=&quot;recruit-tips&quot;&gt;</span></span><br><span class="line"><span class="string">          &lt;span data-v-a6e3291a=&quot;&quot;&gt;WXG&lt;/span&gt; | &lt;span data-v-a6e3291a=&quot;&quot;&gt;广州,中国&lt;/span&gt; | </span></span><br><span class="line"><span class="string">          &lt;span data-v-a6e3291a=&quot;&quot;&gt;技术&lt;/span&gt; | &lt;span data-v-a6e3291a=&quot;&quot;&gt;2019年06月28日&lt;/span&gt;</span></span><br><span class="line"><span class="string">        &lt;/p&gt; </span></span><br><span class="line"><span class="string">        &lt;p data-v-a6e3291a=&quot;&quot; class=&quot;recruit-text&quot;&gt;负责微信小程序搜索各个产品方向的检索工作，内容包括页面识别、页面核心数据提取、页面分类、页面评分、词权重、排序等相关工作，并与开发工程师配合进行工程实践。 &lt;/p&gt;</span></span><br><span class="line"><span class="string">      &lt;/a&gt; </span></span><br><span class="line"><span class="string">      &lt;div data-v-a6e3291a=&quot;&quot; class=&quot;recruit-collection&quot;&gt;</span></span><br><span class="line"><span class="string">        &lt;span data-v-a6e3291a=&quot;&quot; class=&quot;icon-collection&quot;&gt;&lt;/span&gt; </span></span><br><span class="line"><span class="string">        &lt;span data-v-a6e3291a=&quot;&quot; class=&quot;collection-text&quot;&gt;收藏&lt;/span&gt;</span></span><br><span class="line"><span class="string">      &lt;/div&gt;</span></span><br><span class="line"><span class="string">    &lt;/div&gt;</span></span><br><span class="line"><span class="string">    &lt;div data-v-a6e3291a=&quot;&quot; class=&quot;recruit-list&quot;&gt;</span></span><br><span class="line"><span class="string">      &lt;a data-v-a6e3291a=&quot;&quot; class=&quot;recruit-list-link&quot;&gt;</span></span><br><span class="line"><span class="string">        &lt;h4 data-v-a6e3291a=&quot;&quot; class=&quot;recruit-title&quot;&gt;23486-证券业务C++后台开发高级工程师（深圳）&lt;/h4&gt; </span></span><br><span class="line"><span class="string">        &lt;p data-v-a6e3291a=&quot;&quot; class=&quot;recruit-tips&quot;&gt;</span></span><br><span class="line"><span class="string">          &lt;span data-v-a6e3291a=&quot;&quot;&gt;CDG&lt;/span&gt; | &lt;span data-v-a6e3291a=&quot;&quot;&gt;深圳,中国&lt;/span&gt; | </span></span><br><span class="line"><span class="string">          &lt;span data-v-a6e3291a=&quot;&quot;&gt;技术&lt;/span&gt; | &lt;span data-v-a6e3291a=&quot;&quot;&gt;2019年06月28日&lt;/span&gt;</span></span><br><span class="line"><span class="string">        &lt;/p&gt; </span></span><br><span class="line"><span class="string">        &lt;p data-v-a6e3291a=&quot;&quot; class=&quot;recruit-text&quot;&gt;负责证券交易、风控、清算等系统的开发维护，建设证券业务相关的技术基础平台。&lt;/p&gt;</span></span><br><span class="line"><span class="string">      &lt;/a&gt; </span></span><br><span class="line"><span class="string">      &lt;div data-v-a6e3291a=&quot;&quot; class=&quot;recruit-collection&quot;&gt;</span></span><br><span class="line"><span class="string">        &lt;span data-v-a6e3291a=&quot;&quot; class=&quot;icon-collection&quot;&gt;&lt;/span&gt; </span></span><br><span class="line"><span class="string">        &lt;span data-v-a6e3291a=&quot;&quot; class=&quot;collection-text&quot;&gt;收藏&lt;/span&gt;</span></span><br><span class="line"><span class="string">      &lt;/div&gt;</span></span><br><span class="line"><span class="string">    &lt;/div&gt;</span></span><br><span class="line"><span class="string">    &lt;div data-v-a6e3291a=&quot;&quot; class=&quot;recruit-list&quot;&gt;</span></span><br><span class="line"><span class="string">      &lt;a data-v-a6e3291a=&quot;&quot; class=&quot;recruit-list-link&quot;&gt;</span></span><br><span class="line"><span class="string">        &lt;h4 data-v-a6e3291a=&quot;&quot; class=&quot;recruit-title&quot;&gt;22989-腾讯云数据平台产品中心运营开发&lt;/h4&gt; </span></span><br><span class="line"><span class="string">        &lt;p data-v-a6e3291a=&quot;&quot; class=&quot;recruit-tips&quot;&gt;</span></span><br><span class="line"><span class="string">          &lt;span data-v-a6e3291a=&quot;&quot;&gt;CSIG&lt;/span&gt; | &lt;span data-v-a6e3291a=&quot;&quot;&gt;深圳,中国&lt;/span&gt; | </span></span><br><span class="line"><span class="string">          &lt;span data-v-a6e3291a=&quot;&quot;&gt;技术&lt;/span&gt; | &lt;span data-v-a6e3291a=&quot;&quot;&gt;2019年06月28日&lt;/span&gt;</span></span><br><span class="line"><span class="string">        &lt;/p&gt; </span></span><br><span class="line"><span class="string">        &lt;p data-v-a6e3291a=&quot;&quot; class=&quot;recruit-text&quot;&gt;负责腾讯云数据平台产品的设计和研发。 负责云产品数据管理和服务的设计和研发。 负责构建和完善云底层数据的存储和查询，优化数据的质量和监控能力。&lt;/p&gt;</span></span><br><span class="line"><span class="string">      &lt;/a&gt; </span></span><br><span class="line"><span class="string">      &lt;div data-v-a6e3291a=&quot;&quot; class=&quot;recruit-collection&quot;&gt;</span></span><br><span class="line"><span class="string">        &lt;span data-v-a6e3291a=&quot;&quot; class=&quot;icon-collection&quot;&gt;&lt;/span&gt; </span></span><br><span class="line"><span class="string">        &lt;span data-v-a6e3291a=&quot;&quot; class=&quot;collection-text&quot;&gt;收藏&lt;/span&gt;</span></span><br><span class="line"><span class="string">      &lt;/div&gt;</span></span><br><span class="line"><span class="string">    &lt;/div&gt;</span></span><br><span class="line"><span class="string">    &lt;div data-v-a6e3291a=&quot;&quot; class=&quot;recruit-list&quot;&gt;</span></span><br><span class="line"><span class="string">      &lt;a data-v-a6e3291a=&quot;&quot; class=&quot;recruit-list-link&quot;&gt;</span></span><br><span class="line"><span class="string">        &lt;h4 data-v-a6e3291a=&quot;&quot; class=&quot;recruit-title&quot;&gt;18428-证券业务测试工程师&lt;/h4&gt; </span></span><br><span class="line"><span class="string">        &lt;p data-v-a6e3291a=&quot;&quot; class=&quot;recruit-tips&quot;&gt;</span></span><br><span class="line"><span class="string">          &lt;span data-v-a6e3291a=&quot;&quot;&gt;CDG&lt;/span&gt; | &lt;span data-v-a6e3291a=&quot;&quot;&gt;北京,中国&lt;/span&gt; | </span></span><br><span class="line"><span class="string">          &lt;span data-v-a6e3291a=&quot;&quot;&gt;技术&lt;/span&gt; | &lt;span data-v-a6e3291a=&quot;&quot;&gt;财付通&lt;/span&gt; | </span></span><br><span class="line"><span class="string">          &lt;span data-v-a6e3291a=&quot;&quot;&gt;2019年06月28日&lt;/span&gt;</span></span><br><span class="line"><span class="string">        &lt;/p&gt; </span></span><br><span class="line"><span class="string">        &lt;p data-v-a6e3291a=&quot;&quot; class=&quot;recruit-text&quot;&gt;负责证券类产品的功能、性能、安全、自动化等测试工作，包括终端/H5及后台系统的测试。&lt;/p&gt;</span></span><br><span class="line"><span class="string">      &lt;/a&gt; </span></span><br><span class="line"><span class="string">      &lt;div data-v-a6e3291a=&quot;&quot; class=&quot;recruit-collection&quot;&gt;</span></span><br><span class="line"><span class="string">        &lt;span data-v-a6e3291a=&quot;&quot; class=&quot;icon-collection&quot;&gt;&lt;/span&gt; </span></span><br><span class="line"><span class="string">        &lt;span data-v-a6e3291a=&quot;&quot; class=&quot;collection-text&quot;&gt;收藏&lt;/span&gt;</span></span><br><span class="line"><span class="string">      &lt;/div&gt;</span></span><br><span class="line"><span class="string">    &lt;/div&gt;</span></span><br><span class="line"><span class="string">    &lt;div data-v-a6e3291a=&quot;&quot; class=&quot;recruit-list&quot;&gt;</span></span><br><span class="line"><span class="string">      &lt;a data-v-a6e3291a=&quot;&quot; class=&quot;recruit-list-link&quot;&gt;</span></span><br><span class="line"><span class="string">        &lt;h4 data-v-a6e3291a=&quot;&quot; class=&quot;recruit-title&quot;&gt;30360-后台平台开发（深圳）&lt;/h4&gt; </span></span><br><span class="line"><span class="string">        &lt;p data-v-a6e3291a=&quot;&quot; class=&quot;recruit-tips&quot;&gt;</span></span><br><span class="line"><span class="string">          &lt;span data-v-a6e3291a=&quot;&quot;&gt;PCG&lt;/span&gt; | &lt;span data-v-a6e3291a=&quot;&quot;&gt;深圳总部,中国&lt;/span&gt; | </span></span><br><span class="line"><span class="string">          &lt;span data-v-a6e3291a=&quot;&quot;&gt;技术&lt;/span&gt; | &lt;span data-v-a6e3291a=&quot;&quot;&gt;2019年06月28日&lt;/span&gt;</span></span><br><span class="line"><span class="string">        &lt;/p&gt; </span></span><br><span class="line"><span class="string">        &lt;p data-v-a6e3291a=&quot;&quot; class=&quot;recruit-text&quot;&gt;负责QQ平台海量用户和数据的基础后台研发工作； 负责AI基础架构系统后台研发工作； 负责推荐系统，大数据分析计算后台研发工作。&lt;/p&gt;</span></span><br><span class="line"><span class="string">      &lt;/a&gt; </span></span><br><span class="line"><span class="string">      &lt;div data-v-a6e3291a=&quot;&quot; class=&quot;recruit-collection&quot;&gt;</span></span><br><span class="line"><span class="string">        &lt;span data-v-a6e3291a=&quot;&quot; class=&quot;icon-collection&quot;&gt;&lt;/span&gt; </span></span><br><span class="line"><span class="string">        &lt;span data-v-a6e3291a=&quot;&quot; class=&quot;collection-text&quot;&gt;收藏&lt;/span&gt;</span></span><br><span class="line"><span class="string">      &lt;/div&gt;</span></span><br><span class="line"><span class="string">    &lt;/div&gt;</span></span><br><span class="line"><span class="string">  &lt;/div&gt;</span></span><br><span class="line"><span class="string">&lt;/div&gt;</span></span><br><span class="line"><span class="string">&quot;&quot;&quot;</span></span><br><span class="line"></span><br><span class="line">soup = BeautifulSoup(html, <span class="string">&#x27;lxml&#x27;</span>)</span><br></pre></td></tr></table></figure>
 
 <ul>
 <li><p>获取所有的class属性为“recruit-list”的div标签</p>
-<figure class="highlight python"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line">divs = soup.find_all(<span class="string">'div'</span>, attrs=&#123;<span class="string">'class'</span>: <span class="string">"recruit-list"</span>&#125;)</span><br><span class="line"><span class="keyword">for</span> div <span class="keyword">in</span> divs:</span><br><span class="line">    print(div)</span><br></pre></td></tr></table></figure>
+<figure class="highlight python"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line">divs = soup.find_all(<span class="string">&#x27;div&#x27;</span>, attrs=&#123;<span class="string">&#x27;class&#x27;</span>: <span class="string">&quot;recruit-list&quot;</span>&#125;)</span><br><span class="line"><span class="keyword">for</span> div <span class="keyword">in</span> divs:</span><br><span class="line">    <span class="built_in">print</span>(div)</span><br></pre></td></tr></table></figure>
 </li>
 <li><p>获取第二个class属性为“recruit-list”的div标签</p>
-<figure class="highlight python"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line">div = soup.find_all(<span class="string">'div'</span>, attrs=&#123;<span class="string">'class'</span>: <span class="string">"recruit-list"</span>&#125;, limit=<span class="number">2</span>)[<span class="number">1</span>]</span><br><span class="line">print(div)</span><br></pre></td></tr></table></figure>
+<figure class="highlight python"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line">div = soup.find_all(<span class="string">&#x27;div&#x27;</span>, attrs=&#123;<span class="string">&#x27;class&#x27;</span>: <span class="string">&quot;recruit-list&quot;</span>&#125;, limit=<span class="number">2</span>)[<span class="number">1</span>]</span><br><span class="line"><span class="built_in">print</span>(div)</span><br></pre></td></tr></table></figure>
 </li>
 <li><p>获取所有的h4标签中的class属性</p>
-<figure class="highlight python"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line">h4_texts = soup.find_all(<span class="string">'h4'</span>)</span><br><span class="line"><span class="keyword">for</span> h4_text <span class="keyword">in</span> h4_texts:</span><br><span class="line">    print(h4_text[<span class="string">'class'</span>])</span><br></pre></td></tr></table></figure>
+<figure class="highlight python"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line">h4_texts = soup.find_all(<span class="string">&#x27;h4&#x27;</span>)</span><br><span class="line"><span class="keyword">for</span> h4_text <span class="keyword">in</span> h4_texts:</span><br><span class="line">    <span class="built_in">print</span>(h4_text[<span class="string">&#x27;class&#x27;</span>])</span><br></pre></td></tr></table></figure>
 </li>
 <li><p>获取所有的职位信息（纯文本）</p>
-<figure class="highlight python"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">aEs = soup.find_all(<span class="string">'a'</span>)</span><br></pre></td></tr></table></figure>
+<figure class="highlight python"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">aEs = soup.find_all(<span class="string">&#x27;a&#x27;</span>)</span><br></pre></td></tr></table></figure>
 
 <ol>
 <li><p>方法一</p>
 <p>输出的字符串中可能包含了很多空格或空行,使用 <code>.stripped_strings</code> 可以去除多余空白内容</p>
-<figure class="highlight python"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">for</span> aE <span class="keyword">in</span> aEs:</span><br><span class="line">    infos = list(aE.stripped_strings)</span><br><span class="line">    print(infos)</span><br></pre></td></tr></table></figure>
+<figure class="highlight python"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">for</span> aE <span class="keyword">in</span> aEs:</span><br><span class="line">    infos = <span class="built_in">list</span>(aE.stripped_strings)</span><br><span class="line">    <span class="built_in">print</span>(infos)</span><br></pre></td></tr></table></figure>
 </li>
 <li><p>方法二</p>
-<figure class="highlight python"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br></pre></td><td class="code"><pre><span class="line">job = &#123;&#125;</span><br><span class="line"><span class="keyword">for</span> aE <span class="keyword">in</span> aEs:</span><br><span class="line">    h4 = aE.find(<span class="string">'h4'</span>).string</span><br><span class="line">    ps = aE.find_all(<span class="string">'p'</span>)</span><br><span class="line">    spans = ps[<span class="number">0</span>].find_all(<span class="string">'span'</span>)</span><br><span class="line">    span = <span class="string">'|'</span>.join([s.string <span class="keyword">for</span> s <span class="keyword">in</span> spans])</span><br><span class="line">    p2 = ps[<span class="number">1</span>].string</span><br><span class="line">    job[<span class="string">'title'</span>] = h4</span><br><span class="line">    job[<span class="string">'info'</span>] = span</span><br><span class="line">    job[<span class="string">'desc'</span>] = p2</span><br><span class="line">    print(job)</span><br></pre></td></tr></table></figure>
+<figure class="highlight python"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br></pre></td><td class="code"><pre><span class="line">job = &#123;&#125;</span><br><span class="line"><span class="keyword">for</span> aE <span class="keyword">in</span> aEs:</span><br><span class="line">    h4 = aE.find(<span class="string">&#x27;h4&#x27;</span>).string</span><br><span class="line">    ps = aE.find_all(<span class="string">&#x27;p&#x27;</span>)</span><br><span class="line">    spans = ps[<span class="number">0</span>].find_all(<span class="string">&#x27;span&#x27;</span>)</span><br><span class="line">    span = <span class="string">&#x27;|&#x27;</span>.join([s.string <span class="keyword">for</span> s <span class="keyword">in</span> spans])</span><br><span class="line">    p2 = ps[<span class="number">1</span>].string</span><br><span class="line">    job[<span class="string">&#x27;title&#x27;</span>] = h4</span><br><span class="line">    job[<span class="string">&#x27;info&#x27;</span>] = span</span><br><span class="line">    job[<span class="string">&#x27;desc&#x27;</span>] = p2</span><br><span class="line">    <span class="built_in">print</span>(job)</span><br></pre></td></tr></table></figure>
 </li>
 <li><p>方法三</p>
 <p>该方法提取出的内容中包含换行、空格。</p>
-<figure class="highlight python"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">for</span> aE <span class="keyword">in</span> aEs:</span><br><span class="line">    print(list(aE.strings))</span><br></pre></td></tr></table></figure>
-
-</li>
+<figure class="highlight python"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">for</span> aE <span class="keyword">in</span> aEs:</span><br><span class="line">    <span class="built_in">print</span>(<span class="built_in">list</span>(aE.strings))</span><br></pre></td></tr></table></figure></li>
 </ol>
 <p>_注意_：</p>
 <p>strings和stripped_strings、string属性和get_text方法：</p>
@@ -436,37 +351,35 @@
 </li>
 </ul>
 <h3 id="搜索文档树"><a href="#搜索文档树" class="headerlink" title="搜索文档树"></a>搜索文档树</h3><h4 id="find和find-all方法"><a href="#find和find-all方法" class="headerlink" title="find和find_all方法"></a>find和find_all方法</h4><p>搜索文档树，一般采用较多的是这两个方法，一个是find，另一个是find_all方法。find方法是在文档树中找到第一个满足条件的标签后就返回结果。find_all方法是在文档树中找到所有满足条件的标签后返回结果。在这两个方法中最常用的用法是name和attr参数，其中也可以直接传入关键字，在传入关键字”class”时，需要将”class”变为”class_”。</p>
-<figure class="highlight python"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">soup.find_all(<span class="string">'div'</span>, class_=<span class="string">"test"</span>)</span><br></pre></td></tr></table></figure>
+<figure class="highlight python"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">soup.find_all(<span class="string">&#x27;div&#x27;</span>, class_=<span class="string">&quot;test&quot;</span>)</span><br></pre></td></tr></table></figure>
 
 <h4 id="select方法"><a href="#select方法" class="headerlink" title="select方法"></a>select方法</h4><p>在使用css选择器的方式时，需要使用select方法。以下为几种常用的css选择器方法：</p>
 <ol>
 <li><p>通过标签名查找</p>
-<figure class="highlight python"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">print(soup.select(<span class="string">'a'</span>))</span><br></pre></td></tr></table></figure>
+<figure class="highlight python"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line"><span class="built_in">print</span>(soup.select(<span class="string">&#x27;a&#x27;</span>))</span><br></pre></td></tr></table></figure>
 </li>
 <li><p>通过类名查找</p>
-<p>通过类名，应该在前面加一个”.”,比如要查找class=sister的标签。</p>
-<figure class="highlight python"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">print(soup.select(<span class="string">'.sister'</span>))</span><br></pre></td></tr></table></figure>
+<p>通过类名，应该在前面加一个”.”,比如要查找class&#x3D;sister的标签。</p>
+<figure class="highlight python"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line"><span class="built_in">print</span>(soup.select(<span class="string">&#x27;.sister&#x27;</span>))</span><br></pre></td></tr></table></figure>
 </li>
 <li><p>通过id查找</p>
 <p>通过id查找，应该在id的名字前面加一个”#”号。</p>
-<figure class="highlight python"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">print(soup.select(<span class="string">'#link1'</span>))</span><br></pre></td></tr></table></figure>
+<figure class="highlight python"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line"><span class="built_in">print</span>(soup.select(<span class="string">&#x27;#link1&#x27;</span>))</span><br></pre></td></tr></table></figure>
 </li>
 <li><p>通过组合查找</p>
 <p>组合查找时，标签名和类名、id名进行组合的方式进行查找，例如查找p标签中，id等于link1的内容。</p>
-<figure class="highlight python"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">print(soup.select(<span class="string">"p #link1"</span>))</span><br></pre></td></tr></table></figure>
+<figure class="highlight python"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line"><span class="built_in">print</span>(soup.select(<span class="string">&quot;p #link1&quot;</span>))</span><br></pre></td></tr></table></figure>
 
 <p>直接子标签查找，则用”&gt;”分隔</p>
-<figure class="highlight python"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">print(soup.select(<span class="string">"head &gt; title"</span>))</span><br></pre></td></tr></table></figure>
+<figure class="highlight python"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line"><span class="built_in">print</span>(soup.select(<span class="string">&quot;head &gt; title&quot;</span>))</span><br></pre></td></tr></table></figure>
 </li>
 <li><p>通过属性查找</p>
 <p>查找时还可以加入属性元素，属性元素需要使用中括号括起来，注意属性和标签属于同一节点，所以中间不能加空格，否则会无法匹配</p>
-<figure class="highlight python"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">print(soup.select(<span class="string">'a[href="http://example.com/elsie"]'</span>))</span><br></pre></td></tr></table></figure>
+<figure class="highlight python"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line"><span class="built_in">print</span>(soup.select(<span class="string">&#x27;a[href=&quot;http://example.com/elsie&quot;]&#x27;</span>))</span><br></pre></td></tr></table></figure>
 </li>
 <li><p>获取内容</p>
 <p>以上的select方法返回的结果都是以列表的形式返回的，可以进行遍历输出，然后使用get_text()方法获取其他的内容。</p>
-<figure class="highlight python"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br></pre></td><td class="code"><pre><span class="line">soup = BeautifulSoup(html, <span class="string">'lxml'</span>)</span><br><span class="line">print(type(soup.select(<span class="string">'title'</span>)))</span><br><span class="line">print(soup.select(<span class="string">'title'</span>)[<span class="number">0</span>].get_text())</span><br><span class="line"></span><br><span class="line"><span class="keyword">for</span> title <span class="keyword">in</span> soup.select(<span class="string">'title'</span>):</span><br><span class="line">    print(title.get_text())</span><br></pre></td></tr></table></figure>
-
-</li>
+<figure class="highlight python"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br></pre></td><td class="code"><pre><span class="line">soup = BeautifulSoup(html, <span class="string">&#x27;lxml&#x27;</span>)</span><br><span class="line"><span class="built_in">print</span>(<span class="built_in">type</span>(soup.select(<span class="string">&#x27;title&#x27;</span>)))</span><br><span class="line"><span class="built_in">print</span>(soup.select(<span class="string">&#x27;title&#x27;</span>)[<span class="number">0</span>].get_text())</span><br><span class="line"></span><br><span class="line"><span class="keyword">for</span> title <span class="keyword">in</span> soup.select(<span class="string">&#x27;title&#x27;</span>):</span><br><span class="line">    <span class="built_in">print</span>(title.get_text())</span><br></pre></td></tr></table></figure></li>
 </ol>
 
     </div>
@@ -475,132 +388,85 @@
     
     
 
-      <footer class="post-footer">
+    <footer class="post-footer">
           <div class="post-tags">
-              <a href="/tags/bs4/" rel="tag"><i class="fa fa-tag"></i> bs4</a>
+              <a href="/tags/bs4/" rel="tag"># bs4</a>
           </div>
 
         
 
-
-        
-    <div class="post-nav">
-      <div class="post-nav-item">
-    <a href="/190628/" rel="prev" title="XPath语法详解">
-      <i class="fa fa-chevron-left"></i> XPath语法详解
-    </a></div>
-      <div class="post-nav-item">
-    <a href="/190630/" rel="next" title="多线程爬虫">
-      多线程爬虫 <i class="fa fa-chevron-right"></i>
-    </a></div>
-    </div>
-      </footer>
-    
+          <div class="post-nav">
+            <div class="post-nav-item">
+                <a href="/190628/" rel="prev" title="XPath语法详解">
+                  <i class="fa fa-angle-left"></i> XPath语法详解
+                </a>
+            </div>
+            <div class="post-nav-item">
+                <a href="/190630/" rel="next" title="多线程爬虫">
+                  多线程爬虫 <i class="fa fa-angle-right"></i>
+                </a>
+            </div>
+          </div>
+    </footer>
   </article>
-  
-  
-  
+</div>
 
 
 
-        </div>
-        
 
-<script>
-  window.addEventListener('tabs:register', () => {
-    let { activeClass } = CONFIG.comments;
-    if (CONFIG.comments.storage) {
-      activeClass = localStorage.getItem('comments_active') || activeClass;
-    }
-    if (activeClass) {
-      let activeTab = document.querySelector(`a[href="#comment-${activeClass}"]`);
-      if (activeTab) {
-        activeTab.click();
-      }
-    }
-  });
-  if (CONFIG.comments.storage) {
-    window.addEventListener('tabs:click', event => {
-      if (!event.target.matches('.tabs-comment .tab-content .tab-pane')) return;
-      let commentClass = event.target.classList[1];
-      localStorage.setItem('comments_active', commentClass);
-    });
-  }
-</script>
 
-      </div>
-    </main>
 
-    <footer class="footer">
-      <div class="footer-inner">
-        
+</div>
+  </main>
 
-        
+  <footer class="footer">
+    <div class="footer-inner">
 
-<div class="copyright">
-  
-  &copy; 
-  <span itemprop="copyrightYear">2021</span>
-  <span class="with-love">
-    <i class="fa fa-heart"></i>
-  </span>
-  <span class="author" itemprop="copyrightHolder">QuiryRain</span>
-    <span class="post-meta-divider">|</span>
-    <span class="post-meta-item-icon">
-      <i class="fa fa-chart-area"></i>
+  <div class="copyright">
+    &copy; 
+    <span itemprop="copyrightYear">2024</span>
+    <span class="with-love">
+      <i class="fa fa-heart"></i>
     </span>
-      <span class="post-meta-item-text">站点总字数：</span>
-    <span title="站点总字数">113k</span>
-    <span class="post-meta-divider">|</span>
+    <span class="author" itemprop="copyrightHolder">QuiryRain</span>
+  </div>
+<div class="wordcount">
+  <span class="post-meta-item">
+    <span class="post-meta-item-icon">
+      <i class="fa fa-chart-line"></i>
+    </span>
+    <span title="站点总字数">115k</span>
+  </span>
+  <span class="post-meta-item">
     <span class="post-meta-item-icon">
       <i class="fa fa-coffee"></i>
     </span>
-      <span class="post-meta-item-text">站点阅读时长 &asymp;</span>
-    <span title="站点阅读时长">1:43</span>
+    <span title="站点阅读时长">1:45</span>
+  </span>
 </div>
-  <div class="powered-by">由 <a href="https://hexo.io/" class="theme-link" rel="noopener" target="_blank">Hexo</a> & <a href="https://theme-next.js.org/" class="theme-link" rel="noopener" target="_blank">NexT.Gemini</a> 强力驱动
+  <div class="powered-by">由 <a href="https://hexo.io/" rel="noopener" target="_blank">Hexo</a> & <a href="https://theme-next.js.org/" rel="noopener" target="_blank">NexT.Gemini</a> 强力驱动
   </div>
 
-        
+    </div>
+  </footer>
 
-
-
-
-
-
-
-
-      </div>
-    </footer>
+  
+  <div class="back-to-top" role="button" aria-label="返回顶部">
+    <i class="fa fa-arrow-up fa-lg"></i>
+    <span>0%</span>
   </div>
 
-  
-  <script src="/lib/anime.min.js"></script>
-  <script src="//cdn.jsdelivr.net/npm/jquery@3/dist/jquery.min.js"></script>
-  <script src="//cdn.jsdelivr.net/npm/@fancyapps/fancybox@3/dist/jquery.fancybox.min.js"></script>
-  <script src="//cdn.jsdelivr.net/npm/lozad@1/dist/lozad.min.js"></script>
-
-<script src="/js/utils.js"></script>
-
-<script src="/js/motion.js"></script>
-
-
-<script src="/js/next-boot.js"></script>
+<noscript>
+  <div class="noscript-warning">Theme NexT works best with JavaScript enabled</div>
+</noscript>
 
 
   
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/animejs/3.2.1/anime.min.js" integrity="sha256-XL2inqUJaslATFnHdJOi9GfQ60on8Wx1C2H8DYiN1xY=" crossorigin="anonymous"></script>
+<script src="/js/comments.js"></script><script src="/js/utils.js"></script><script src="/js/motion.js"></script><script src="/js/next-boot.js"></script>
 
-
-
-
-  
-<script src="/js/local-search.js"></script>
-
-
-
-
-
-
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/hexo-generator-searchdb/1.4.1/search.js" integrity="sha256-1kfA5uHPf65M5cphT2dvymhkuyHPQp5A53EGZOnOLmc=" crossorigin="anonymous"></script>
+<script src="/js/third-party/search/local-search.js"></script>
 
 
 
@@ -610,7 +476,9 @@
 
   
 
-  
+
+
+
 
 </body>
 </html>
