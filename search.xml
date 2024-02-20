@@ -199,24 +199,6 @@
       </tags>
   </entry>
   <entry>
-    <title>使用tkinter进行图片的遍历显示</title>
-    <url>/190228/</url>
-    <content><![CDATA[<h3 id="原因"><a href="#原因" class="headerlink" title="原因"></a>原因</h3><p>最近因为要写个GUI的内容，需要用到图像的遍历显示，因为没有办法,所以就自行摸索着开始写一个循环显示的TK。最终算是不符所望吧，勉强写出来一个，以此做下记录，便于下次使用。</p>
-<span id="more"></span>
-
-<figure class="highlight python"><table><tr><td class="code"><pre><span class="line"><span class="keyword">import</span> tkinter <span class="keyword">as</span> tk</span><br><span class="line"><span class="keyword">from</span> PIL <span class="keyword">import</span> ImageTk, Image</span><br><span class="line"><span class="keyword">import</span> glob, time</span><br><span class="line"><span class="keyword">import</span> threading</span><br><span class="line"></span><br><span class="line">filenames = glob.glob(<span class="string">&#x27;sysImages/*&#x27;</span>)</span><br><span class="line"></span><br><span class="line"></span><br><span class="line"><span class="keyword">def</span> <span class="title function_">autoQuit</span>():</span><br><span class="line">    time.sleep(<span class="number">2</span>)</span><br><span class="line">    root.quit()</span><br><span class="line"></span><br><span class="line"><span class="keyword">for</span> filename <span class="keyword">in</span> filenames:</span><br><span class="line">    root = tk.Tk()</span><br><span class="line"></span><br><span class="line">    img = Image.<span class="built_in">open</span>(filename)</span><br><span class="line">    photo = ImageTk.PhotoImage(img)</span><br><span class="line">    label = tk.Label(image=photo)</span><br><span class="line">    label.image = photo</span><br><span class="line">    label.pack()</span><br><span class="line"></span><br><span class="line">    t = threading.Thread(target=autoQuit)</span><br><span class="line">    t.start()</span><br><span class="line">    root.mainloop()</span><br><span class="line">    root.destroy()</span><br></pre></td></tr></table></figure>
-
-<hr>
-]]></content>
-      <categories>
-        <category>Python杂记</category>
-      </categories>
-      <tags>
-        <tag>tkinter</tag>
-        <tag>遍历图片</tag>
-      </tags>
-  </entry>
-  <entry>
     <title>Tensorflow知识总结</title>
     <url>/190416-1/</url>
     <content><![CDATA[<h3 id="消除过拟合的方法"><a href="#消除过拟合的方法" class="headerlink" title="消除过拟合的方法"></a>消除过拟合的方法</h3><ul>
@@ -304,6 +286,42 @@
       <tags>
         <tag>Tensorflow</tag>
         <tag>学习总结</tag>
+      </tags>
+  </entry>
+  <entry>
+    <title>Tensorflow的基础学习和资料</title>
+    <url>/190416/</url>
+    <content><![CDATA[<h3 id="测试"><a href="#测试" class="headerlink" title="测试"></a>测试</h3><h3 id="以下内容为测试内容"><a href="#以下内容为测试内容" class="headerlink" title="以下内容为测试内容"></a>以下内容为测试内容</h3><blockquote>
+<p>以下内容未测试内容</p>
+</blockquote>
+<p>中文测试</p>
+<p>再次测试</p>
+]]></content>
+      <categories>
+        <category>Tensorflow</category>
+      </categories>
+      <tags>
+        <tag>Tensorflow</tag>
+        <tag>机器学习</tag>
+        <tag>资料</tag>
+      </tags>
+  </entry>
+  <entry>
+    <title>使用tkinter进行图片的遍历显示</title>
+    <url>/190228/</url>
+    <content><![CDATA[<h3 id="原因"><a href="#原因" class="headerlink" title="原因"></a>原因</h3><p>最近因为要写个GUI的内容，需要用到图像的遍历显示，因为没有办法,所以就自行摸索着开始写一个循环显示的TK。最终算是不符所望吧，勉强写出来一个，以此做下记录，便于下次使用。</p>
+<span id="more"></span>
+
+<figure class="highlight python"><table><tr><td class="code"><pre><span class="line"><span class="keyword">import</span> tkinter <span class="keyword">as</span> tk</span><br><span class="line"><span class="keyword">from</span> PIL <span class="keyword">import</span> ImageTk, Image</span><br><span class="line"><span class="keyword">import</span> glob, time</span><br><span class="line"><span class="keyword">import</span> threading</span><br><span class="line"></span><br><span class="line">filenames = glob.glob(<span class="string">&#x27;sysImages/*&#x27;</span>)</span><br><span class="line"></span><br><span class="line"></span><br><span class="line"><span class="keyword">def</span> <span class="title function_">autoQuit</span>():</span><br><span class="line">    time.sleep(<span class="number">2</span>)</span><br><span class="line">    root.quit()</span><br><span class="line"></span><br><span class="line"><span class="keyword">for</span> filename <span class="keyword">in</span> filenames:</span><br><span class="line">    root = tk.Tk()</span><br><span class="line"></span><br><span class="line">    img = Image.<span class="built_in">open</span>(filename)</span><br><span class="line">    photo = ImageTk.PhotoImage(img)</span><br><span class="line">    label = tk.Label(image=photo)</span><br><span class="line">    label.image = photo</span><br><span class="line">    label.pack()</span><br><span class="line"></span><br><span class="line">    t = threading.Thread(target=autoQuit)</span><br><span class="line">    t.start()</span><br><span class="line">    root.mainloop()</span><br><span class="line">    root.destroy()</span><br></pre></td></tr></table></figure>
+
+<hr>
+]]></content>
+      <categories>
+        <category>Python杂记</category>
+      </categories>
+      <tags>
+        <tag>tkinter</tag>
+        <tag>遍历图片</tag>
       </tags>
   </entry>
   <entry>
@@ -461,24 +479,6 @@
       <tags>
         <tag>ss</tag>
         <tag>科学上网</tag>
-      </tags>
-  </entry>
-  <entry>
-    <title>Tensorflow的基础学习和资料</title>
-    <url>/190416/</url>
-    <content><![CDATA[<h3 id="测试"><a href="#测试" class="headerlink" title="测试"></a>测试</h3><h3 id="以下内容为测试内容"><a href="#以下内容为测试内容" class="headerlink" title="以下内容为测试内容"></a>以下内容为测试内容</h3><blockquote>
-<p>以下内容未测试内容</p>
-</blockquote>
-<p>中文测试</p>
-<p>再次测试</p>
-]]></content>
-      <categories>
-        <category>Tensorflow</category>
-      </categories>
-      <tags>
-        <tag>Tensorflow</tag>
-        <tag>机器学习</tag>
-        <tag>资料</tag>
       </tags>
   </entry>
   <entry>
@@ -1421,6 +1421,19 @@
       </tags>
   </entry>
   <entry>
+    <title>一次完整的HTTP请求过程</title>
+    <url>/190724/</url>
+    <content><![CDATA[<h3 id="一次完整的HTTP请求过程"><a href="#一次完整的HTTP请求过程" class="headerlink" title="一次完整的HTTP请求过程"></a>一次完整的HTTP请求过程</h3><p>搬运来的，直接上链接吧：</p>
+<p>链接：<a href="https://www.cnblogs.com/xuzekun/p/7527736.html">飞机起飞</a></p>
+]]></content>
+      <categories>
+        <category>HTTP</category>
+      </categories>
+      <tags>
+        <tag>HTTP请求过程</tag>
+      </tags>
+  </entry>
+  <entry>
     <title>动态网页数据抓取</title>
     <url>/190703/</url>
     <content><![CDATA[<h2 id="动态页面数据抓取"><a href="#动态页面数据抓取" class="headerlink" title="动态页面数据抓取"></a>动态页面数据抓取</h2><h3 id="什么是AJAX"><a href="#什么是AJAX" class="headerlink" title="什么是AJAX"></a>什么是AJAX</h3><p>AJAX（Asynchronouse JavaScript And XML）异步JavaScript和XML。在后台与服务器进行少量数据换时，可以在不重新加载整个网页的情况下，利用Ajax对网页实现异步更新。在传统的网页中，如果要获取更新内容，需要重新加载整个页面。因为传统的网页数据传输格式使用的是XML语法。在Ajax加载的网页中，数据的交互使用的是JSON格式。</p>
@@ -1577,19 +1590,6 @@
         <tag>AJAX</tag>
         <tag>Selenium</tag>
         <tag>chromedriver</tag>
-      </tags>
-  </entry>
-  <entry>
-    <title>一次完整的HTTP请求过程</title>
-    <url>/190724/</url>
-    <content><![CDATA[<h3 id="一次完整的HTTP请求过程"><a href="#一次完整的HTTP请求过程" class="headerlink" title="一次完整的HTTP请求过程"></a>一次完整的HTTP请求过程</h3><p>搬运来的，直接上链接吧：</p>
-<p>链接：<a href="https://www.cnblogs.com/xuzekun/p/7527736.html">飞机起飞</a></p>
-]]></content>
-      <categories>
-        <category>HTTP</category>
-      </categories>
-      <tags>
-        <tag>HTTP请求过程</tag>
       </tags>
   </entry>
   <entry>
@@ -2070,19 +2070,6 @@
       </tags>
   </entry>
   <entry>
-    <title>Pip 更新所有包</title>
-    <url>/20200412/</url>
-    <content><![CDATA[<figure class="highlight python"><table><tr><td class="code"><pre><span class="line">查看可更新包：</span><br><span class="line">pip <span class="built_in">list</span>  --outdated --<span class="built_in">format</span>=columns</span><br><span class="line">批量下载并更新：</span><br><span class="line">pip install pip-review</span><br><span class="line">pip-review --local --interactive</span><br></pre></td></tr></table></figure>
-
-]]></content>
-      <categories>
-        <category>Python后端</category>
-      </categories>
-      <tags>
-        <tag>Pip</tag>
-      </tags>
-  </entry>
-  <entry>
     <title>CSS选择器</title>
     <url>/20200712/</url>
     <content><![CDATA[<p>“CSS” 列指示该属性是在哪个 CSS 版本中定义的。（CSS1、CSS2 还是 CSS3。）</p>
@@ -2414,6 +2401,19 @@
       </tags>
   </entry>
   <entry>
+    <title>Pip 更新所有包</title>
+    <url>/20200412/</url>
+    <content><![CDATA[<figure class="highlight python"><table><tr><td class="code"><pre><span class="line">查看可更新包：</span><br><span class="line">pip <span class="built_in">list</span>  --outdated --<span class="built_in">format</span>=columns</span><br><span class="line">批量下载并更新：</span><br><span class="line">pip install pip-review</span><br><span class="line">pip-review --local --interactive</span><br></pre></td></tr></table></figure>
+
+]]></content>
+      <categories>
+        <category>Python后端</category>
+      </categories>
+      <tags>
+        <tag>Pip</tag>
+      </tags>
+  </entry>
+  <entry>
     <title>BaseServer</title>
     <url>/BaseServer/</url>
     <content><![CDATA[<h3 id="服务器类型"><a href="#服务器类型" class="headerlink" title="服务器类型"></a>服务器类型</h3><blockquote>
@@ -2604,31 +2604,6 @@
       </tags>
   </entry>
   <entry>
-    <title>tempfile模块的用法</title>
-    <url>/tempfile/</url>
-    <content><![CDATA[<blockquote>
-<p>tempfile模块，用来对临时数据进行操作</p>
-</blockquote>
-<h2 id="tempfile-临时文件-夹-操作"><a href="#tempfile-临时文件-夹-操作" class="headerlink" title="tempfile 临时文件(夹)操作"></a>tempfile 临时文件(夹)操作</h2><h3 id="tempfile-mkstemp-suffix-”-prefix-’tmp’-dir-None-text-False"><a href="#tempfile-mkstemp-suffix-”-prefix-’tmp’-dir-None-text-False" class="headerlink" title="tempfile.mkstemp([suffix&#x3D;”[, prefix&#x3D;’tmp’[, dir&#x3D;None[, text&#x3D;False]]]])"></a>tempfile.mkstemp([suffix&#x3D;”[, prefix&#x3D;’tmp’[, dir&#x3D;None[, text&#x3D;False]]]])</h3><p>mkstemp方法用于创建一个临时文件。该方法仅仅用于创建临时文件，调用tempfile.mkstemp函数后，返回包含两个元素的元组，第一个元素指示操作该临时文件的安全级别，第二个元素指示该临时文件的路径。参数suffix和prefix分别表示临时文件名称的后缀和前缀；dir指定了临时文件所在的目录，如果没有指定目录，将根据系统环境变量TMPDIR, TEMP或者TMP的设置来保存临时文件；参数text指定了是否以文本的形式来操作文件，默认为False，表示以二进制的形式来操作文件。</p>
-<span id="more"></span>
-
-<h3 id="tempfile-mkdtemp-suffix-”-prefix-’tmp’-dir-None"><a href="#tempfile-mkdtemp-suffix-”-prefix-’tmp’-dir-None" class="headerlink" title="tempfile.mkdtemp([suffix&#x3D;”[, prefix&#x3D;’tmp’[, dir&#x3D;None]]])"></a>tempfile.mkdtemp([suffix&#x3D;”[, prefix&#x3D;’tmp’[, dir&#x3D;None]]])</h3><p>该函数用于创建一个临时文件夹。参数的意思与tempfile.mkdtemp一样。它返回临时文件夹的绝对路径。</p>
-<h3 id="tempfile-mktemp-suffix-”-prefix-’tmp’-dir-None"><a href="#tempfile-mktemp-suffix-”-prefix-’tmp’-dir-None" class="headerlink" title="tempfile.mktemp([suffix&#x3D;”[, prefix&#x3D;’tmp’[, dir&#x3D;None]]])"></a>tempfile.mktemp([suffix&#x3D;”[, prefix&#x3D;’tmp’[, dir&#x3D;None]]])</h3><p>mktemp用于返回一个临时文件的路径，但并不创建该临时文件。</p>
-<h3 id="tempfile-tempdir"><a href="#tempfile-tempdir" class="headerlink" title="tempfile.tempdir"></a>tempfile.tempdir</h3><p>该属性用于指定创建的临时文件（夹）所在的默认文件夹。如果没有设置该属性或者将其设为None，Python将返回以下环境变量TMPDIR, TEMP, TEMP指定的目录，如果没有定义这些环境变量，临时文件将被创建在当前工作目录。</p>
-<h3 id="tempfile-gettempdir"><a href="#tempfile-gettempdir" class="headerlink" title="tempfile.gettempdir()"></a>tempfile.gettempdir()</h3><p>gettempdir()则用于返回保存临时文件的文件夹路径。</p>
-<h3 id="tempfile-TemporaryFile-mode-’w-b’-bufsize-1-suffix-”-prefix-’tmp’-dir-None"><a href="#tempfile-TemporaryFile-mode-’w-b’-bufsize-1-suffix-”-prefix-’tmp’-dir-None" class="headerlink" title="tempfile.TemporaryFile([mode&#x3D;’w+b’[, bufsize&#x3D;-1[, suffix&#x3D;”[, prefix&#x3D;’tmp’[, dir&#x3D;None]]]]])"></a>tempfile.TemporaryFile([mode&#x3D;’w+b’[, bufsize&#x3D;-1[, suffix&#x3D;”[, prefix&#x3D;’tmp’[, dir&#x3D;None]]]]])</h3><p>该函数返回一个类文件对象(file-like)用于临时数据保存（实际上对应磁盘上的一个临时文件）。当文件对象被close或者被del的时候，临时文件将从磁盘上删除。mode、bufsize参数的单方与open()函数一样；suffix和prefix指定了临时文件名的后缀和前缀；dir用于设置临时文件默认的保存路径。返回的类文件对象有一个file属性，它指向真正操作的底层的file对象。</p>
-<h3 id="tempfile-NamedTemporaryFile-mode-’w-b’-bufsize-1-suffix-”-prefix-’tmp’-dir-None-delete-True"><a href="#tempfile-NamedTemporaryFile-mode-’w-b’-bufsize-1-suffix-”-prefix-’tmp’-dir-None-delete-True" class="headerlink" title="tempfile.NamedTemporaryFile([mode&#x3D;’w+b’[, bufsize&#x3D;-1[, suffix&#x3D;”[, prefix&#x3D;’tmp’[, dir&#x3D;None[, delete&#x3D;True]]]]]])"></a>tempfile.NamedTemporaryFile([mode&#x3D;’w+b’[, bufsize&#x3D;-1[, suffix&#x3D;”[, prefix&#x3D;’tmp’[, dir&#x3D;None[, delete&#x3D;True]]]]]])</h3><p>tempfile.NamedTemporaryFile函数的行为与tempfile.TemporaryFile类似，只不过它多了一个delete参数，用于指定类文件对象close或者被del之后，是否也一同删除磁盘上的临时文件（当delete &#x3D; True的时候，行为与TemporaryFile一样）。</p>
-<h3 id="tempfile-SpooledTemporaryFile-max-size-0-mode-’w-b’-bufsize-1-suffix-”-prefix-’tmp’-dir-None"><a href="#tempfile-SpooledTemporaryFile-max-size-0-mode-’w-b’-bufsize-1-suffix-”-prefix-’tmp’-dir-None" class="headerlink" title="tempfile.SpooledTemporaryFile([max_size&#x3D;0[, mode&#x3D;’w+b’[, bufsize&#x3D;-1[, suffix&#x3D;”[, prefix&#x3D;’tmp’[, dir&#x3D;None]]]]]])"></a>tempfile.SpooledTemporaryFile([max_size&#x3D;0[, mode&#x3D;’w+b’[, bufsize&#x3D;-1[, suffix&#x3D;”[, prefix&#x3D;’tmp’[, dir&#x3D;None]]]]]])</h3><p>tempfile.SpooledTemporaryFile函数的行为与tempfile.TemporaryFile类似。不同的是向类文件对象写数据的时候，数据长度只有到达参数max_size指定大小时，或者调用类文件对象的fileno()方法，数据才会真正写入到磁盘的临时文件中。</p>
-]]></content>
-      <categories>
-        <category>Python后端</category>
-      </categories>
-      <tags>
-        <tag>tempfile</tag>
-        <tag>临时文件</tag>
-      </tags>
-  </entry>
-  <entry>
     <title>Hypervisor Drivers</title>
     <url>/hypervisor-drivers/</url>
     <content><![CDATA[<h3 id="Drivers-Models"><a href="#Drivers-Models" class="headerlink" title="Drivers Models"></a>Drivers Models</h3><p>The libvirt library exposes a guaranteed stable API &amp; ABI which is decoupled from any particular virtualization technology. In addition many of the APIs have associated XML schemata which are considered part of the stable ABI guarantee. Internally, there are multiple of implementations of the public ABI, each targeting a different virtualization technology. Each implementation is referred to as a driver. When obtaining a instance of the virConnect class, the application developer can provide a URI to determine which hypervisor driver is activated.  </p>
@@ -2663,6 +2638,31 @@
         <tag>Hypervisor</tag>
         <tag>qemu</tag>
         <tag>xen</tag>
+      </tags>
+  </entry>
+  <entry>
+    <title>tempfile模块的用法</title>
+    <url>/tempfile/</url>
+    <content><![CDATA[<blockquote>
+<p>tempfile模块，用来对临时数据进行操作</p>
+</blockquote>
+<h2 id="tempfile-临时文件-夹-操作"><a href="#tempfile-临时文件-夹-操作" class="headerlink" title="tempfile 临时文件(夹)操作"></a>tempfile 临时文件(夹)操作</h2><h3 id="tempfile-mkstemp-suffix-”-prefix-’tmp’-dir-None-text-False"><a href="#tempfile-mkstemp-suffix-”-prefix-’tmp’-dir-None-text-False" class="headerlink" title="tempfile.mkstemp([suffix&#x3D;”[, prefix&#x3D;’tmp’[, dir&#x3D;None[, text&#x3D;False]]]])"></a>tempfile.mkstemp([suffix&#x3D;”[, prefix&#x3D;’tmp’[, dir&#x3D;None[, text&#x3D;False]]]])</h3><p>mkstemp方法用于创建一个临时文件。该方法仅仅用于创建临时文件，调用tempfile.mkstemp函数后，返回包含两个元素的元组，第一个元素指示操作该临时文件的安全级别，第二个元素指示该临时文件的路径。参数suffix和prefix分别表示临时文件名称的后缀和前缀；dir指定了临时文件所在的目录，如果没有指定目录，将根据系统环境变量TMPDIR, TEMP或者TMP的设置来保存临时文件；参数text指定了是否以文本的形式来操作文件，默认为False，表示以二进制的形式来操作文件。</p>
+<span id="more"></span>
+
+<h3 id="tempfile-mkdtemp-suffix-”-prefix-’tmp’-dir-None"><a href="#tempfile-mkdtemp-suffix-”-prefix-’tmp’-dir-None" class="headerlink" title="tempfile.mkdtemp([suffix&#x3D;”[, prefix&#x3D;’tmp’[, dir&#x3D;None]]])"></a>tempfile.mkdtemp([suffix&#x3D;”[, prefix&#x3D;’tmp’[, dir&#x3D;None]]])</h3><p>该函数用于创建一个临时文件夹。参数的意思与tempfile.mkdtemp一样。它返回临时文件夹的绝对路径。</p>
+<h3 id="tempfile-mktemp-suffix-”-prefix-’tmp’-dir-None"><a href="#tempfile-mktemp-suffix-”-prefix-’tmp’-dir-None" class="headerlink" title="tempfile.mktemp([suffix&#x3D;”[, prefix&#x3D;’tmp’[, dir&#x3D;None]]])"></a>tempfile.mktemp([suffix&#x3D;”[, prefix&#x3D;’tmp’[, dir&#x3D;None]]])</h3><p>mktemp用于返回一个临时文件的路径，但并不创建该临时文件。</p>
+<h3 id="tempfile-tempdir"><a href="#tempfile-tempdir" class="headerlink" title="tempfile.tempdir"></a>tempfile.tempdir</h3><p>该属性用于指定创建的临时文件（夹）所在的默认文件夹。如果没有设置该属性或者将其设为None，Python将返回以下环境变量TMPDIR, TEMP, TEMP指定的目录，如果没有定义这些环境变量，临时文件将被创建在当前工作目录。</p>
+<h3 id="tempfile-gettempdir"><a href="#tempfile-gettempdir" class="headerlink" title="tempfile.gettempdir()"></a>tempfile.gettempdir()</h3><p>gettempdir()则用于返回保存临时文件的文件夹路径。</p>
+<h3 id="tempfile-TemporaryFile-mode-’w-b’-bufsize-1-suffix-”-prefix-’tmp’-dir-None"><a href="#tempfile-TemporaryFile-mode-’w-b’-bufsize-1-suffix-”-prefix-’tmp’-dir-None" class="headerlink" title="tempfile.TemporaryFile([mode&#x3D;’w+b’[, bufsize&#x3D;-1[, suffix&#x3D;”[, prefix&#x3D;’tmp’[, dir&#x3D;None]]]]])"></a>tempfile.TemporaryFile([mode&#x3D;’w+b’[, bufsize&#x3D;-1[, suffix&#x3D;”[, prefix&#x3D;’tmp’[, dir&#x3D;None]]]]])</h3><p>该函数返回一个类文件对象(file-like)用于临时数据保存（实际上对应磁盘上的一个临时文件）。当文件对象被close或者被del的时候，临时文件将从磁盘上删除。mode、bufsize参数的单方与open()函数一样；suffix和prefix指定了临时文件名的后缀和前缀；dir用于设置临时文件默认的保存路径。返回的类文件对象有一个file属性，它指向真正操作的底层的file对象。</p>
+<h3 id="tempfile-NamedTemporaryFile-mode-’w-b’-bufsize-1-suffix-”-prefix-’tmp’-dir-None-delete-True"><a href="#tempfile-NamedTemporaryFile-mode-’w-b’-bufsize-1-suffix-”-prefix-’tmp’-dir-None-delete-True" class="headerlink" title="tempfile.NamedTemporaryFile([mode&#x3D;’w+b’[, bufsize&#x3D;-1[, suffix&#x3D;”[, prefix&#x3D;’tmp’[, dir&#x3D;None[, delete&#x3D;True]]]]]])"></a>tempfile.NamedTemporaryFile([mode&#x3D;’w+b’[, bufsize&#x3D;-1[, suffix&#x3D;”[, prefix&#x3D;’tmp’[, dir&#x3D;None[, delete&#x3D;True]]]]]])</h3><p>tempfile.NamedTemporaryFile函数的行为与tempfile.TemporaryFile类似，只不过它多了一个delete参数，用于指定类文件对象close或者被del之后，是否也一同删除磁盘上的临时文件（当delete &#x3D; True的时候，行为与TemporaryFile一样）。</p>
+<h3 id="tempfile-SpooledTemporaryFile-max-size-0-mode-’w-b’-bufsize-1-suffix-”-prefix-’tmp’-dir-None"><a href="#tempfile-SpooledTemporaryFile-max-size-0-mode-’w-b’-bufsize-1-suffix-”-prefix-’tmp’-dir-None" class="headerlink" title="tempfile.SpooledTemporaryFile([max_size&#x3D;0[, mode&#x3D;’w+b’[, bufsize&#x3D;-1[, suffix&#x3D;”[, prefix&#x3D;’tmp’[, dir&#x3D;None]]]]]])"></a>tempfile.SpooledTemporaryFile([max_size&#x3D;0[, mode&#x3D;’w+b’[, bufsize&#x3D;-1[, suffix&#x3D;”[, prefix&#x3D;’tmp’[, dir&#x3D;None]]]]]])</h3><p>tempfile.SpooledTemporaryFile函数的行为与tempfile.TemporaryFile类似。不同的是向类文件对象写数据的时候，数据长度只有到达参数max_size指定大小时，或者调用类文件对象的fileno()方法，数据才会真正写入到磁盘的临时文件中。</p>
+]]></content>
+      <categories>
+        <category>Python后端</category>
+      </categories>
+      <tags>
+        <tag>tempfile</tag>
+        <tag>临时文件</tag>
       </tags>
   </entry>
   <entry>
