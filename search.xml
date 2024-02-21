@@ -1,23 +1,6 @@
 <?xml version="1.0" encoding="utf-8"?>
 <search>
   <entry>
-    <title>使用Python实现的杨辉三角</title>
-    <url>/171222/</url>
-    <content><![CDATA[<p>某日，闲来无事做，就尝试着用Python实现了下杨辉三角，以下使用Python2 实现的杨辉三角 </p>
-<span id="more"></span>
-
-<figure class="highlight python"><table><tr><td class="code"><pre><span class="line"><span class="keyword">def</span> <span class="title function_">triangel</span>():</span><br><span class="line">    <span class="built_in">print</span> <span class="string">&#x27; &#x27;</span>*(<span class="number">20</span>*<span class="number">3</span>)+<span class="built_in">str</span>(<span class="number">1</span>)             <span class="comment">#定义起始两行</span></span><br><span class="line">    <span class="built_in">print</span> <span class="string">&#x27; &#x27;</span>*(<span class="number">19</span>*<span class="number">3</span>)+<span class="built_in">str</span>(<span class="number">1</span>)+<span class="string">&#x27; &#x27;</span>*<span class="number">5</span>+<span class="built_in">str</span>(<span class="number">1</span>)</span><br><span class="line">    <span class="keyword">for</span> i <span class="keyword">in</span> <span class="built_in">range</span>(<span class="number">3</span>,<span class="number">21</span>):</span><br><span class="line">        <span class="keyword">if</span> i ==<span class="number">3</span>:</span><br><span class="line">            L = [<span class="number">1</span>,<span class="number">1</span>]       <span class="comment">#初始化第二行        </span></span><br><span class="line">        L1 = []</span><br><span class="line">        <span class="keyword">for</span> j <span class="keyword">in</span> <span class="built_in">range</span>(<span class="number">2</span>,i):</span><br><span class="line">            z = L[i-j-<span class="number">1</span>]+L[i-j] <span class="comment"># 通过上一行构建下一层数据</span></span><br><span class="line">            L1.append(z)        <span class="comment"># 将数据添加到一个空列表中</span></span><br><span class="line">        L = [<span class="number">1</span>]       <span class="comment"># 再次对L初始化</span></span><br><span class="line">        L.extend(L1)    <span class="comment"># 将两个列表合并</span></span><br><span class="line">        L.append(<span class="number">1</span>)     <span class="comment"># 在L列表中添加最后一个数据“1”</span></span><br><span class="line"></span><br><span class="line">        <span class="comment"># 以下内容为杨辉三角的打印</span></span><br><span class="line">        t = <span class="string">&#x27; &#x27;</span>*((<span class="number">21</span>-i)*<span class="number">3</span>)+<span class="built_in">str</span>(<span class="number">1</span>)   <span class="comment"># 每次循环进行初始化每列的第一个数据1</span></span><br><span class="line">        <span class="keyword">for</span> h <span class="keyword">in</span> <span class="built_in">range</span>(<span class="number">1</span>,<span class="built_in">len</span>(L)):   <span class="comment"># 以下为构建每列的除一个数据外的其他数据，</span></span><br><span class="line">            <span class="keyword">if</span> L[h]&lt;<span class="number">10</span>:             <span class="comment"># 如果数据小于10，就是其前面5个空格，如果</span></span><br><span class="line">                t = t + <span class="string">&#x27; &#x27;</span>*<span class="number">5</span>+<span class="built_in">str</span>(L[h]) <span class="comment">#数据小于100，就减少一个空格，依次类推，</span></span><br><span class="line">            <span class="keyword">elif</span> L[h] &lt;<span class="number">100</span>:         <span class="comment"># 直至剩余一个空格，用于分辨相邻的数据</span></span><br><span class="line">                t = t+<span class="string">&#x27; &#x27;</span>*<span class="number">4</span>+<span class="built_in">str</span>(L[h])</span><br><span class="line">            <span class="keyword">elif</span> L[h] &lt; <span class="number">1000</span>:</span><br><span class="line">                t = t + <span class="string">&#x27; &#x27;</span>*<span class="number">3</span>+<span class="built_in">str</span>(L[h])</span><br><span class="line">            <span class="keyword">elif</span> L[h] &lt; <span class="number">10000</span>:</span><br><span class="line">                t = t + <span class="string">&#x27; &#x27;</span>*<span class="number">2</span>+<span class="built_in">str</span>(L[h])</span><br><span class="line">            <span class="keyword">elif</span> L[h] &lt; <span class="number">100000</span>:</span><br><span class="line">                t = t + <span class="string">&#x27; &#x27;</span>*<span class="number">1</span>+<span class="built_in">str</span>(L[h])</span><br><span class="line">        <span class="built_in">print</span> t</span><br><span class="line"><span class="keyword">if</span> __name__ == <span class="string">&quot;__main__&quot;</span>:</span><br><span class="line">    triangel()</span><br><span class="line"></span><br></pre></td></tr></table></figure>
-
-<p><img src="/userImages/yanghuisanjiao.png" alt="杨辉三角"></p>
-]]></content>
-      <categories>
-        <category>Python杂记</category>
-      </categories>
-      <tags>
-        <tag>杨辉三角</tag>
-      </tags>
-  </entry>
-  <entry>
     <title>MongoEngine所使用的操作符</title>
     <url>/171220/</url>
     <content><![CDATA[<h3 id="什么是MongoEngine？"><a href="#什么是MongoEngine？" class="headerlink" title="什么是MongoEngine？"></a>什么是MongoEngine？</h3><blockquote>
@@ -71,6 +54,23 @@
       <tags>
         <tag>Mongo</tag>
         <tag>操作符</tag>
+      </tags>
+  </entry>
+  <entry>
+    <title>使用Python实现的杨辉三角</title>
+    <url>/171222/</url>
+    <content><![CDATA[<p>某日，闲来无事做，就尝试着用Python实现了下杨辉三角，以下使用Python2 实现的杨辉三角 </p>
+<span id="more"></span>
+
+<figure class="highlight python"><table><tr><td class="code"><pre><span class="line"><span class="keyword">def</span> <span class="title function_">triangel</span>():</span><br><span class="line">    <span class="built_in">print</span> <span class="string">&#x27; &#x27;</span>*(<span class="number">20</span>*<span class="number">3</span>)+<span class="built_in">str</span>(<span class="number">1</span>)             <span class="comment">#定义起始两行</span></span><br><span class="line">    <span class="built_in">print</span> <span class="string">&#x27; &#x27;</span>*(<span class="number">19</span>*<span class="number">3</span>)+<span class="built_in">str</span>(<span class="number">1</span>)+<span class="string">&#x27; &#x27;</span>*<span class="number">5</span>+<span class="built_in">str</span>(<span class="number">1</span>)</span><br><span class="line">    <span class="keyword">for</span> i <span class="keyword">in</span> <span class="built_in">range</span>(<span class="number">3</span>,<span class="number">21</span>):</span><br><span class="line">        <span class="keyword">if</span> i ==<span class="number">3</span>:</span><br><span class="line">            L = [<span class="number">1</span>,<span class="number">1</span>]       <span class="comment">#初始化第二行        </span></span><br><span class="line">        L1 = []</span><br><span class="line">        <span class="keyword">for</span> j <span class="keyword">in</span> <span class="built_in">range</span>(<span class="number">2</span>,i):</span><br><span class="line">            z = L[i-j-<span class="number">1</span>]+L[i-j] <span class="comment"># 通过上一行构建下一层数据</span></span><br><span class="line">            L1.append(z)        <span class="comment"># 将数据添加到一个空列表中</span></span><br><span class="line">        L = [<span class="number">1</span>]       <span class="comment"># 再次对L初始化</span></span><br><span class="line">        L.extend(L1)    <span class="comment"># 将两个列表合并</span></span><br><span class="line">        L.append(<span class="number">1</span>)     <span class="comment"># 在L列表中添加最后一个数据“1”</span></span><br><span class="line"></span><br><span class="line">        <span class="comment"># 以下内容为杨辉三角的打印</span></span><br><span class="line">        t = <span class="string">&#x27; &#x27;</span>*((<span class="number">21</span>-i)*<span class="number">3</span>)+<span class="built_in">str</span>(<span class="number">1</span>)   <span class="comment"># 每次循环进行初始化每列的第一个数据1</span></span><br><span class="line">        <span class="keyword">for</span> h <span class="keyword">in</span> <span class="built_in">range</span>(<span class="number">1</span>,<span class="built_in">len</span>(L)):   <span class="comment"># 以下为构建每列的除一个数据外的其他数据，</span></span><br><span class="line">            <span class="keyword">if</span> L[h]&lt;<span class="number">10</span>:             <span class="comment"># 如果数据小于10，就是其前面5个空格，如果</span></span><br><span class="line">                t = t + <span class="string">&#x27; &#x27;</span>*<span class="number">5</span>+<span class="built_in">str</span>(L[h]) <span class="comment">#数据小于100，就减少一个空格，依次类推，</span></span><br><span class="line">            <span class="keyword">elif</span> L[h] &lt;<span class="number">100</span>:         <span class="comment"># 直至剩余一个空格，用于分辨相邻的数据</span></span><br><span class="line">                t = t+<span class="string">&#x27; &#x27;</span>*<span class="number">4</span>+<span class="built_in">str</span>(L[h])</span><br><span class="line">            <span class="keyword">elif</span> L[h] &lt; <span class="number">1000</span>:</span><br><span class="line">                t = t + <span class="string">&#x27; &#x27;</span>*<span class="number">3</span>+<span class="built_in">str</span>(L[h])</span><br><span class="line">            <span class="keyword">elif</span> L[h] &lt; <span class="number">10000</span>:</span><br><span class="line">                t = t + <span class="string">&#x27; &#x27;</span>*<span class="number">2</span>+<span class="built_in">str</span>(L[h])</span><br><span class="line">            <span class="keyword">elif</span> L[h] &lt; <span class="number">100000</span>:</span><br><span class="line">                t = t + <span class="string">&#x27; &#x27;</span>*<span class="number">1</span>+<span class="built_in">str</span>(L[h])</span><br><span class="line">        <span class="built_in">print</span> t</span><br><span class="line"><span class="keyword">if</span> __name__ == <span class="string">&quot;__main__&quot;</span>:</span><br><span class="line">    triangel()</span><br><span class="line"></span><br></pre></td></tr></table></figure>
+
+<p><img src="/userImages/yanghuisanjiao.png" alt="杨辉三角"></p>
+]]></content>
+      <categories>
+        <category>Python杂记</category>
+      </categories>
+      <tags>
+        <tag>杨辉三角</tag>
       </tags>
   </entry>
   <entry>
@@ -911,6 +911,85 @@
       </tags>
   </entry>
   <entry>
+    <title>Python 3中的Urllib库的使用</title>
+    <url>/190615/</url>
+    <content><![CDATA[<p>在Python中有着这样一个常用的、基础的爬虫库。在Python2中为urllib.urllib，在Python3中官方为了便于管理，将和请求有关的函数封装进了urllib.request模块中。</p>
+<p>在此处，使用Python3做记录。</p>
+<span id="more"></span>
+
+<h3 id="urlopen函数"><a href="#urlopen函数" class="headerlink" title="urlopen函数"></a>urlopen函数</h3><p>urlopen函数是request中的一个很常用的函数，它主要用于打开一个网页。其中有着很多的属性。</p>
+<figure class="highlight python"><table><tr><td class="code"><pre><span class="line"><span class="keyword">from</span> urllib <span class="keyword">import</span> request</span><br><span class="line"></span><br><span class="line">resp = request.<span class="built_in">open</span>(<span class="string">&quot;https://www.baidu.com&quot;</span>)</span><br><span class="line"><span class="built_in">print</span>(resp.read())</span><br></pre></td></tr></table></figure>
+
+
+
+<h3 id="urlretrieve函数"><a href="#urlretrieve函数" class="headerlink" title="urlretrieve函数"></a>urlretrieve函数</h3><p>urlretrieve函数可以很方便的将网页保存至本地。其实用方法见下方代码：</p>
+<figure class="highlight python"><table><tr><td class="code"><pre><span class="line"><span class="keyword">from</span> urllib <span class="keyword">import</span> request</span><br><span class="line"></span><br><span class="line">request.urlretrieve()</span><br></pre></td></tr></table></figure>
+
+
+
+<h3 id="urlencode函数"><a href="#urlencode函数" class="headerlink" title="urlencode函数"></a>urlencode函数</h3><p>将字典类型的数据转化为url编码的数据</p>
+<figure class="highlight python"><table><tr><td class="code"><pre><span class="line"><span class="keyword">from</span> urllib <span class="keyword">import</span> parse, request</span><br><span class="line"></span><br><span class="line">params = &#123;<span class="string">&quot;wd&quot;</span>: <span class="string">&quot;爬虫之道&quot;</span>&#125;</span><br><span class="line"></span><br><span class="line">qs = parse.urlencode(params)</span><br><span class="line"></span><br><span class="line">url = <span class="string">f&quot;https://www.baidu.com/s?<span class="subst">&#123;qs&#125;</span>&quot;</span></span><br><span class="line"></span><br><span class="line">resp = request.urlopen(url)</span><br></pre></td></tr></table></figure>
+
+
+
+<h3 id="parse-qs函数"><a href="#parse-qs函数" class="headerlink" title="parse_qs函数"></a>parse_qs函数</h3><p>将url编码后的参数还原为字典形式，其中的值以列表形式进行存储。</p>
+<figure class="highlight python"><table><tr><td class="code"><pre><span class="line"><span class="keyword">from</span> urllib <span class="keyword">import</span> parse</span><br><span class="line"></span><br><span class="line">ps = &#123;<span class="string">&quot;name&quot;</span>: <span class="string">&quot;爬虫之道&quot;</span>, <span class="string">&quot;vxcode&quot;</span>: <span class="string">&quot;spider_rold&quot;</span>&#125;</span><br><span class="line"></span><br><span class="line">results = parse.urlencode(ps)</span><br><span class="line"></span><br><span class="line">new_results = parse.parse_qs(results)</span><br><span class="line"><span class="built_in">print</span>(new_results)</span><br></pre></td></tr></table></figure>
+
+<h3 id="urlparse和urlsplit函数"><a href="#urlparse和urlsplit函数" class="headerlink" title="urlparse和urlsplit函数"></a>urlparse和urlsplit函数</h3><p>对URL各部分进行分割，其中在使用urlsplit函数时，没有_params_参数。（<em>注</em>：params参数指的是在以下链接中”?”前添加”;”，位于这两者之间的内容，如：_<a href="https://www.baidu.com/s;hello?wd=hello+world_%EF%BC%89">https://www.baidu.com/s;hello?wd=hello+world_）</a></p>
+<figure class="highlight python"><table><tr><td class="code"><pre><span class="line"><span class="keyword">from</span> urllib <span class="keyword">import</span> parse</span><br><span class="line"></span><br><span class="line">params = &#123;<span class="string">&quot;wd&quot;</span>: <span class="string">&quot;爬虫之道&quot;</span>&#125;</span><br><span class="line"></span><br><span class="line">qs = parse.urlencode(params)</span><br><span class="line">url = <span class="string">f&quot;https://www.baidu.com/s?<span class="subst">&#123;qs&#125;</span>&quot;</span></span><br><span class="line"></span><br><span class="line">result = parse.urlparse(url)</span><br><span class="line"></span><br><span class="line"><span class="built_in">print</span>(<span class="string">&#x27;scheme:&#x27;</span>, result.scheme)</span><br><span class="line"><span class="built_in">print</span>(<span class="string">&#x27;netloc:&#x27;</span>, result.netloc)</span><br><span class="line"><span class="built_in">print</span>(<span class="string">&#x27;path:&#x27;</span>, result.path)</span><br><span class="line"><span class="built_in">print</span>(<span class="string">&#x27;params:&#x27;</span>, result.params)</span><br><span class="line"><span class="built_in">print</span>(<span class="string">&#x27;query:&#x27;</span>, result.query)</span><br><span class="line"><span class="built_in">print</span>(<span class="string">&#x27;fragment:&#x27;</span>, result.fragment)</span><br></pre></td></tr></table></figure>
+
+<h3 id="request-Request类"><a href="#request-Request类" class="headerlink" title="request.Request类"></a>request.Request类</h3><p>在爬虫中，如果想使用一些参数，如：请求头，请求数据等，需要使用到Request类。如果只是使用urlopen函数，没有办法进行添加请求头。在没有使用_User-Agent_的时候，如果服务器发现是爬虫，服务器可能会返回一条假的数据内容，或者是不返回内容。所以，将爬虫程序伪装成正常的浏览器访问是很有必要的一件事。</p>
+<figure class="highlight python"><table><tr><td class="code"><pre><span class="line"><span class="keyword">from</span> urllib <span class="keyword">import</span> request, parse</span><br><span class="line"></span><br><span class="line">headers = &#123;<span class="string">&#x27;user-agent&#x27;</span>: <span class="string">&quot;Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/75.0.3770.90 Safari/537.36&quot;</span>&#125;</span><br><span class="line">params = &#123;<span class="string">&quot;wd&quot;</span>: <span class="string">&quot;爬虫之道&quot;</span>&#125;</span><br><span class="line"></span><br><span class="line">qs = parse.urlencode(params)</span><br><span class="line">url = <span class="string">f&quot;https://www.baidu.com/s?<span class="subst">&#123;qs&#125;</span>&quot;</span></span><br><span class="line"></span><br><span class="line">req = request.Request(url, headers=headers)</span><br><span class="line">resp = request.urlopen(req)</span><br><span class="line"><span class="built_in">print</span>(resp.read())</span><br></pre></td></tr></table></figure>
+
+<p>注： 可以去挑战一下网络爬虫界的“珠穆朗玛峰” —– 拉勾网</p>
+<h3 id="ProxyHandler处理器"><a href="#ProxyHandler处理器" class="headerlink" title="ProxyHandler处理器"></a>ProxyHandler处理器</h3><p>在爬取网站时，一般情况下网站都会做一些反爬虫机制，如封ip。如果只使用一个ip地址进行爬取，在网站封掉ip地址后，就无法获取数据了。所以，在有反爬虫机制的情况，反反爬虫机制便可以使用了。在urllib中通过使用ProxyHandler进行设置代理服务器。</p>
+<p>在使用代理与未使用代理的区别：</p>
+<p><img src="/userImages/proxy.jpg">  </p>
+<figure class="highlight python"><table><tr><td class="code"><pre><span class="line"><span class="keyword">from</span> urllib <span class="keyword">import</span> request</span><br><span class="line"></span><br><span class="line"><span class="comment">### 未使用代理</span></span><br><span class="line">resp = request.urlopen(<span class="string">&#x27;http://httpbin.org/get&#x27;</span>)</span><br><span class="line"><span class="built_in">print</span>(resp.read())</span><br><span class="line"></span><br><span class="line"><span class="comment">### 使用代理</span></span><br><span class="line">handler = request.ProxyHandler(&#123;<span class="string">&quot;https&quot;</span>: <span class="string">&quot;58.253.152.231:9999&quot;</span>&#125;)</span><br><span class="line"></span><br><span class="line">opener = request.build_opener(handler)</span><br><span class="line">req = request.Request(<span class="string">&quot;http://httpbin.org/get&quot;</span>)</span><br><span class="line">resp = opener.<span class="built_in">open</span>(req)</span><br><span class="line"><span class="built_in">print</span>(resp.read())</span><br></pre></td></tr></table></figure>
+
+<p>常用的代理：</p>
+<ul>
+<li>西刺代理：<a href="https://www.xicidaili.com/">https://www.xicidaili.com</a></li>
+<li>快代理: <a href="https://www.kuaidaili.com/free/">https://www.kuaidaili.com/free/</a></li>
+</ul>
+<h3 id="Cookie是什么"><a href="#Cookie是什么" class="headerlink" title="Cookie是什么"></a>Cookie是什么</h3><p>在网站汇总，http请求是无状态的。在第一次和服务器建立连接登录后，第二次请求服务器依旧不能知道当前请求的用户是谁。Cookie的出现就是为了解决该问题。第一次登录后，服务器会返回一些数据(cookie) 给浏览器，然后浏览器将数据保存在本地。当用户发送第二次请求时，浏览器会自动的将保存在本地的数据(cookie)一起发送给服务器。服务通过判断不同的cookie信息，进行确认用户。cookie的存储大小是有限的一般不会超过4KB，因此在设置cookie对的时候，只能存储少量数据。</p>
+<h4 id="cookie的格式："><a href="#cookie的格式：" class="headerlink" title="cookie的格式："></a>cookie的格式：</h4><p>Set-Cookie: NAME&#x3D;VALUE；Expires&#x3D;DATE；Path&#x3D;PATH；Domain&#x3D;DOMAIN_NAME；SECURE</p>
+<p>参数含义：</p>
+<ul>
+<li>NAME：Cookie的名字</li>
+<li>VALUE：Cookie的值</li>
+<li>Expires:  Cookie的过期时间</li>
+<li>Path：Cookie作用的路径</li>
+<li>Domain： Cookie作用的域名</li>
+<li>SECURE：是否只在HTTP协议下起作用</li>
+</ul>
+<h3 id="使用cookielib库和HTTPCookieProcessor模块模拟登陆"><a href="#使用cookielib库和HTTPCookieProcessor模块模拟登陆" class="headerlink" title="使用cookielib库和HTTPCookieProcessor模块模拟登陆"></a>使用cookielib库和HTTPCookieProcessor模块模拟登陆</h3><p>在Python中使用cookie，一般是通过http.cookiejar模块和urllib模块的HTTPCookieProcessor处理器一起使用的。</p>
+<ul>
+<li>http.cookiejar：提供用于存储cookie的对象</li>
+<li>HTTPCookieProcessor：处理cookie对象并构建handler对象</li>
+</ul>
+<h4 id="http-cookiejar模块"><a href="#http-cookiejar模块" class="headerlink" title="http.cookiejar模块"></a>http.cookiejar模块</h4><p>在该模块中主要有三个类，CookieJar、FileCookieJar、MozillaCookieJar、LWPCookieJar。其作用如下：</p>
+<ul>
+<li>CookieJar：管理HTTP cookie值、存储HTTP请求生成的cookie，向传出的HTTP请求添加cookie对象。整个cookie都存储在内存中，对CookieJar实例进行垃圾回收后cookie失效。</li>
+<li>FileCookieJar (filename, delayload&#x3D;None, policy&#x3D;None)：从CookieJar派生而来，用来创建FileCookieJar实例。检索cookie信息并将cookie存储到文件中。filename是存储cookie的文件名，delayload为True是支持延迟访问文件，即只有在需要时才读取文件或将数据存储在文件中。</li>
+<li>MozillaCookieJar (filename, delayload&#x3D;None, policy&#x3D;None)：从FileCookieJar派生而来，创建与Mozilla浏览器cookies.txt兼容的FileCookieJar实例。</li>
+<li>LWPCookieJar (filename, delayload&#x3D;None, policy&#x3D;None)：从FileCookieJar派生而来，创建与libwww·per标准的Set-Cookies3文件格式兼容的FileCookieJar实例。</li>
+</ul>
+<h3 id="保存Cookie至本地"><a href="#保存Cookie至本地" class="headerlink" title="保存Cookie至本地"></a>保存Cookie至本地</h3><p>保存cookie到本地，可以使用cookiejar的save方法。</p>
+<figure class="highlight python"><table><tr><td class="code"><pre><span class="line"><span class="keyword">from</span> urllib <span class="keyword">import</span> request</span><br><span class="line"><span class="keyword">from</span> http.cookiejar <span class="keyword">import</span> MozillaCookieJar</span><br><span class="line"></span><br><span class="line">cookiejar = MozillaCookieJar(<span class="string">&#x27;cookies.txt&#x27;</span>)</span><br><span class="line">handler = request.HTTPCookieProcessor(cookiejar)</span><br><span class="line">opener = request.build_opener(handler)</span><br><span class="line"></span><br><span class="line">handlers = &#123;</span><br><span class="line">    <span class="string">&#x27;User-Agent&#x27;</span>: <span class="string">&#x27;Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/75.0.3770.100 Safari/537.36&#x27;</span>,</span><br><span class="line">&#125;</span><br><span class="line"></span><br><span class="line">req = request.Request(<span class="string">&#x27;http://httpbin.org/cookies&#x27;</span>, headers=handlers)</span><br><span class="line"></span><br><span class="line">resp = opener.<span class="built_in">open</span>(req)</span><br><span class="line"><span class="built_in">print</span>(resp.read())</span><br><span class="line"></span><br><span class="line">cookiejar.save(ignore_discard=<span class="literal">True</span>, ignore_expires=<span class="literal">True</span>)</span><br></pre></td></tr></table></figure>
+
+<h3 id="加载本地cookie"><a href="#加载本地cookie" class="headerlink" title="加载本地cookie"></a>加载本地cookie</h3><p>从本地文件读取cookie信息，可以使用cookiejar中的load方法</p>
+<figure class="highlight python"><table><tr><td class="code"><pre><span class="line"><span class="keyword">from</span> http.cookiejar <span class="keyword">import</span> MozillaCookieJar</span><br><span class="line"></span><br><span class="line">cookiejar = MozillaCookieJar(<span class="string">&#x27;cookies.txt&#x27;</span>)</span><br><span class="line">cookiejar.load(ignore_discard=<span class="literal">True</span>)</span><br><span class="line"><span class="keyword">for</span> cookie <span class="keyword">in</span> cookiejar:</span><br><span class="line">    <span class="built_in">print</span>(cookie)</span><br></pre></td></tr></table></figure>
+
+]]></content>
+      <categories>
+        <category>爬虫</category>
+      </categories>
+      <tags>
+        <tag>urllib</tag>
+      </tags>
+  </entry>
+  <entry>
     <title>BeautifulSoup4库</title>
     <url>/190628-1/</url>
     <content><![CDATA[<p>和lxml一样，BeautifulSoup也是一个HTML&#x2F;XML的解析器，主要的功能也是解析和提取HTML&#x2F;XML数据。</p>
@@ -1267,85 +1346,6 @@
       </categories>
       <tags>
         <tag>XPath</tag>
-      </tags>
-  </entry>
-  <entry>
-    <title>Python 3中的Urllib库的使用</title>
-    <url>/190615/</url>
-    <content><![CDATA[<p>在Python中有着这样一个常用的、基础的爬虫库。在Python2中为urllib.urllib，在Python3中官方为了便于管理，将和请求有关的函数封装进了urllib.request模块中。</p>
-<p>在此处，使用Python3做记录。</p>
-<span id="more"></span>
-
-<h3 id="urlopen函数"><a href="#urlopen函数" class="headerlink" title="urlopen函数"></a>urlopen函数</h3><p>urlopen函数是request中的一个很常用的函数，它主要用于打开一个网页。其中有着很多的属性。</p>
-<figure class="highlight python"><table><tr><td class="code"><pre><span class="line"><span class="keyword">from</span> urllib <span class="keyword">import</span> request</span><br><span class="line"></span><br><span class="line">resp = request.<span class="built_in">open</span>(<span class="string">&quot;https://www.baidu.com&quot;</span>)</span><br><span class="line"><span class="built_in">print</span>(resp.read())</span><br></pre></td></tr></table></figure>
-
-
-
-<h3 id="urlretrieve函数"><a href="#urlretrieve函数" class="headerlink" title="urlretrieve函数"></a>urlretrieve函数</h3><p>urlretrieve函数可以很方便的将网页保存至本地。其实用方法见下方代码：</p>
-<figure class="highlight python"><table><tr><td class="code"><pre><span class="line"><span class="keyword">from</span> urllib <span class="keyword">import</span> request</span><br><span class="line"></span><br><span class="line">request.urlretrieve()</span><br></pre></td></tr></table></figure>
-
-
-
-<h3 id="urlencode函数"><a href="#urlencode函数" class="headerlink" title="urlencode函数"></a>urlencode函数</h3><p>将字典类型的数据转化为url编码的数据</p>
-<figure class="highlight python"><table><tr><td class="code"><pre><span class="line"><span class="keyword">from</span> urllib <span class="keyword">import</span> parse, request</span><br><span class="line"></span><br><span class="line">params = &#123;<span class="string">&quot;wd&quot;</span>: <span class="string">&quot;爬虫之道&quot;</span>&#125;</span><br><span class="line"></span><br><span class="line">qs = parse.urlencode(params)</span><br><span class="line"></span><br><span class="line">url = <span class="string">f&quot;https://www.baidu.com/s?<span class="subst">&#123;qs&#125;</span>&quot;</span></span><br><span class="line"></span><br><span class="line">resp = request.urlopen(url)</span><br></pre></td></tr></table></figure>
-
-
-
-<h3 id="parse-qs函数"><a href="#parse-qs函数" class="headerlink" title="parse_qs函数"></a>parse_qs函数</h3><p>将url编码后的参数还原为字典形式，其中的值以列表形式进行存储。</p>
-<figure class="highlight python"><table><tr><td class="code"><pre><span class="line"><span class="keyword">from</span> urllib <span class="keyword">import</span> parse</span><br><span class="line"></span><br><span class="line">ps = &#123;<span class="string">&quot;name&quot;</span>: <span class="string">&quot;爬虫之道&quot;</span>, <span class="string">&quot;vxcode&quot;</span>: <span class="string">&quot;spider_rold&quot;</span>&#125;</span><br><span class="line"></span><br><span class="line">results = parse.urlencode(ps)</span><br><span class="line"></span><br><span class="line">new_results = parse.parse_qs(results)</span><br><span class="line"><span class="built_in">print</span>(new_results)</span><br></pre></td></tr></table></figure>
-
-<h3 id="urlparse和urlsplit函数"><a href="#urlparse和urlsplit函数" class="headerlink" title="urlparse和urlsplit函数"></a>urlparse和urlsplit函数</h3><p>对URL各部分进行分割，其中在使用urlsplit函数时，没有_params_参数。（<em>注</em>：params参数指的是在以下链接中”?”前添加”;”，位于这两者之间的内容，如：_<a href="https://www.baidu.com/s;hello?wd=hello+world_%EF%BC%89">https://www.baidu.com/s;hello?wd=hello+world_）</a></p>
-<figure class="highlight python"><table><tr><td class="code"><pre><span class="line"><span class="keyword">from</span> urllib <span class="keyword">import</span> parse</span><br><span class="line"></span><br><span class="line">params = &#123;<span class="string">&quot;wd&quot;</span>: <span class="string">&quot;爬虫之道&quot;</span>&#125;</span><br><span class="line"></span><br><span class="line">qs = parse.urlencode(params)</span><br><span class="line">url = <span class="string">f&quot;https://www.baidu.com/s?<span class="subst">&#123;qs&#125;</span>&quot;</span></span><br><span class="line"></span><br><span class="line">result = parse.urlparse(url)</span><br><span class="line"></span><br><span class="line"><span class="built_in">print</span>(<span class="string">&#x27;scheme:&#x27;</span>, result.scheme)</span><br><span class="line"><span class="built_in">print</span>(<span class="string">&#x27;netloc:&#x27;</span>, result.netloc)</span><br><span class="line"><span class="built_in">print</span>(<span class="string">&#x27;path:&#x27;</span>, result.path)</span><br><span class="line"><span class="built_in">print</span>(<span class="string">&#x27;params:&#x27;</span>, result.params)</span><br><span class="line"><span class="built_in">print</span>(<span class="string">&#x27;query:&#x27;</span>, result.query)</span><br><span class="line"><span class="built_in">print</span>(<span class="string">&#x27;fragment:&#x27;</span>, result.fragment)</span><br></pre></td></tr></table></figure>
-
-<h3 id="request-Request类"><a href="#request-Request类" class="headerlink" title="request.Request类"></a>request.Request类</h3><p>在爬虫中，如果想使用一些参数，如：请求头，请求数据等，需要使用到Request类。如果只是使用urlopen函数，没有办法进行添加请求头。在没有使用_User-Agent_的时候，如果服务器发现是爬虫，服务器可能会返回一条假的数据内容，或者是不返回内容。所以，将爬虫程序伪装成正常的浏览器访问是很有必要的一件事。</p>
-<figure class="highlight python"><table><tr><td class="code"><pre><span class="line"><span class="keyword">from</span> urllib <span class="keyword">import</span> request, parse</span><br><span class="line"></span><br><span class="line">headers = &#123;<span class="string">&#x27;user-agent&#x27;</span>: <span class="string">&quot;Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/75.0.3770.90 Safari/537.36&quot;</span>&#125;</span><br><span class="line">params = &#123;<span class="string">&quot;wd&quot;</span>: <span class="string">&quot;爬虫之道&quot;</span>&#125;</span><br><span class="line"></span><br><span class="line">qs = parse.urlencode(params)</span><br><span class="line">url = <span class="string">f&quot;https://www.baidu.com/s?<span class="subst">&#123;qs&#125;</span>&quot;</span></span><br><span class="line"></span><br><span class="line">req = request.Request(url, headers=headers)</span><br><span class="line">resp = request.urlopen(req)</span><br><span class="line"><span class="built_in">print</span>(resp.read())</span><br></pre></td></tr></table></figure>
-
-<p>注： 可以去挑战一下网络爬虫界的“珠穆朗玛峰” —– 拉勾网</p>
-<h3 id="ProxyHandler处理器"><a href="#ProxyHandler处理器" class="headerlink" title="ProxyHandler处理器"></a>ProxyHandler处理器</h3><p>在爬取网站时，一般情况下网站都会做一些反爬虫机制，如封ip。如果只使用一个ip地址进行爬取，在网站封掉ip地址后，就无法获取数据了。所以，在有反爬虫机制的情况，反反爬虫机制便可以使用了。在urllib中通过使用ProxyHandler进行设置代理服务器。</p>
-<p>在使用代理与未使用代理的区别：</p>
-<p><img src="/userImages/proxy.jpg">  </p>
-<figure class="highlight python"><table><tr><td class="code"><pre><span class="line"><span class="keyword">from</span> urllib <span class="keyword">import</span> request</span><br><span class="line"></span><br><span class="line"><span class="comment">### 未使用代理</span></span><br><span class="line">resp = request.urlopen(<span class="string">&#x27;http://httpbin.org/get&#x27;</span>)</span><br><span class="line"><span class="built_in">print</span>(resp.read())</span><br><span class="line"></span><br><span class="line"><span class="comment">### 使用代理</span></span><br><span class="line">handler = request.ProxyHandler(&#123;<span class="string">&quot;https&quot;</span>: <span class="string">&quot;58.253.152.231:9999&quot;</span>&#125;)</span><br><span class="line"></span><br><span class="line">opener = request.build_opener(handler)</span><br><span class="line">req = request.Request(<span class="string">&quot;http://httpbin.org/get&quot;</span>)</span><br><span class="line">resp = opener.<span class="built_in">open</span>(req)</span><br><span class="line"><span class="built_in">print</span>(resp.read())</span><br></pre></td></tr></table></figure>
-
-<p>常用的代理：</p>
-<ul>
-<li>西刺代理：<a href="https://www.xicidaili.com/">https://www.xicidaili.com</a></li>
-<li>快代理: <a href="https://www.kuaidaili.com/free/">https://www.kuaidaili.com/free/</a></li>
-</ul>
-<h3 id="Cookie是什么"><a href="#Cookie是什么" class="headerlink" title="Cookie是什么"></a>Cookie是什么</h3><p>在网站汇总，http请求是无状态的。在第一次和服务器建立连接登录后，第二次请求服务器依旧不能知道当前请求的用户是谁。Cookie的出现就是为了解决该问题。第一次登录后，服务器会返回一些数据(cookie) 给浏览器，然后浏览器将数据保存在本地。当用户发送第二次请求时，浏览器会自动的将保存在本地的数据(cookie)一起发送给服务器。服务通过判断不同的cookie信息，进行确认用户。cookie的存储大小是有限的一般不会超过4KB，因此在设置cookie对的时候，只能存储少量数据。</p>
-<h4 id="cookie的格式："><a href="#cookie的格式：" class="headerlink" title="cookie的格式："></a>cookie的格式：</h4><p>Set-Cookie: NAME&#x3D;VALUE；Expires&#x3D;DATE；Path&#x3D;PATH；Domain&#x3D;DOMAIN_NAME；SECURE</p>
-<p>参数含义：</p>
-<ul>
-<li>NAME：Cookie的名字</li>
-<li>VALUE：Cookie的值</li>
-<li>Expires:  Cookie的过期时间</li>
-<li>Path：Cookie作用的路径</li>
-<li>Domain： Cookie作用的域名</li>
-<li>SECURE：是否只在HTTP协议下起作用</li>
-</ul>
-<h3 id="使用cookielib库和HTTPCookieProcessor模块模拟登陆"><a href="#使用cookielib库和HTTPCookieProcessor模块模拟登陆" class="headerlink" title="使用cookielib库和HTTPCookieProcessor模块模拟登陆"></a>使用cookielib库和HTTPCookieProcessor模块模拟登陆</h3><p>在Python中使用cookie，一般是通过http.cookiejar模块和urllib模块的HTTPCookieProcessor处理器一起使用的。</p>
-<ul>
-<li>http.cookiejar：提供用于存储cookie的对象</li>
-<li>HTTPCookieProcessor：处理cookie对象并构建handler对象</li>
-</ul>
-<h4 id="http-cookiejar模块"><a href="#http-cookiejar模块" class="headerlink" title="http.cookiejar模块"></a>http.cookiejar模块</h4><p>在该模块中主要有三个类，CookieJar、FileCookieJar、MozillaCookieJar、LWPCookieJar。其作用如下：</p>
-<ul>
-<li>CookieJar：管理HTTP cookie值、存储HTTP请求生成的cookie，向传出的HTTP请求添加cookie对象。整个cookie都存储在内存中，对CookieJar实例进行垃圾回收后cookie失效。</li>
-<li>FileCookieJar (filename, delayload&#x3D;None, policy&#x3D;None)：从CookieJar派生而来，用来创建FileCookieJar实例。检索cookie信息并将cookie存储到文件中。filename是存储cookie的文件名，delayload为True是支持延迟访问文件，即只有在需要时才读取文件或将数据存储在文件中。</li>
-<li>MozillaCookieJar (filename, delayload&#x3D;None, policy&#x3D;None)：从FileCookieJar派生而来，创建与Mozilla浏览器cookies.txt兼容的FileCookieJar实例。</li>
-<li>LWPCookieJar (filename, delayload&#x3D;None, policy&#x3D;None)：从FileCookieJar派生而来，创建与libwww·per标准的Set-Cookies3文件格式兼容的FileCookieJar实例。</li>
-</ul>
-<h3 id="保存Cookie至本地"><a href="#保存Cookie至本地" class="headerlink" title="保存Cookie至本地"></a>保存Cookie至本地</h3><p>保存cookie到本地，可以使用cookiejar的save方法。</p>
-<figure class="highlight python"><table><tr><td class="code"><pre><span class="line"><span class="keyword">from</span> urllib <span class="keyword">import</span> request</span><br><span class="line"><span class="keyword">from</span> http.cookiejar <span class="keyword">import</span> MozillaCookieJar</span><br><span class="line"></span><br><span class="line">cookiejar = MozillaCookieJar(<span class="string">&#x27;cookies.txt&#x27;</span>)</span><br><span class="line">handler = request.HTTPCookieProcessor(cookiejar)</span><br><span class="line">opener = request.build_opener(handler)</span><br><span class="line"></span><br><span class="line">handlers = &#123;</span><br><span class="line">    <span class="string">&#x27;User-Agent&#x27;</span>: <span class="string">&#x27;Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/75.0.3770.100 Safari/537.36&#x27;</span>,</span><br><span class="line">&#125;</span><br><span class="line"></span><br><span class="line">req = request.Request(<span class="string">&#x27;http://httpbin.org/cookies&#x27;</span>, headers=handlers)</span><br><span class="line"></span><br><span class="line">resp = opener.<span class="built_in">open</span>(req)</span><br><span class="line"><span class="built_in">print</span>(resp.read())</span><br><span class="line"></span><br><span class="line">cookiejar.save(ignore_discard=<span class="literal">True</span>, ignore_expires=<span class="literal">True</span>)</span><br></pre></td></tr></table></figure>
-
-<h3 id="加载本地cookie"><a href="#加载本地cookie" class="headerlink" title="加载本地cookie"></a>加载本地cookie</h3><p>从本地文件读取cookie信息，可以使用cookiejar中的load方法</p>
-<figure class="highlight python"><table><tr><td class="code"><pre><span class="line"><span class="keyword">from</span> http.cookiejar <span class="keyword">import</span> MozillaCookieJar</span><br><span class="line"></span><br><span class="line">cookiejar = MozillaCookieJar(<span class="string">&#x27;cookies.txt&#x27;</span>)</span><br><span class="line">cookiejar.load(ignore_discard=<span class="literal">True</span>)</span><br><span class="line"><span class="keyword">for</span> cookie <span class="keyword">in</span> cookiejar:</span><br><span class="line">    <span class="built_in">print</span>(cookie)</span><br></pre></td></tr></table></figure>
-
-]]></content>
-      <categories>
-        <category>爬虫</category>
-      </categories>
-      <tags>
-        <tag>urllib</tag>
       </tags>
   </entry>
   <entry>
@@ -2646,16 +2646,32 @@
     <content><![CDATA[<blockquote>
 <p>tempfile模块，用来对临时数据进行操作</p>
 </blockquote>
-<h2 id="tempfile-临时文件-夹-操作"><a href="#tempfile-临时文件-夹-操作" class="headerlink" title="tempfile 临时文件(夹)操作"></a>tempfile 临时文件(夹)操作</h2><h3 id="tempfile-mkstemp-suffix-”-prefix-’tmp’-dir-None-text-False"><a href="#tempfile-mkstemp-suffix-”-prefix-’tmp’-dir-None-text-False" class="headerlink" title="tempfile.mkstemp([suffix&#x3D;”[, prefix&#x3D;’tmp’[, dir&#x3D;None[, text&#x3D;False]]]])"></a>tempfile.mkstemp([suffix&#x3D;”[, prefix&#x3D;’tmp’[, dir&#x3D;None[, text&#x3D;False]]]])</h3><p>mkstemp方法用于创建一个临时文件。该方法仅仅用于创建临时文件，调用tempfile.mkstemp函数后，返回包含两个元素的元组，第一个元素指示操作该临时文件的安全级别，第二个元素指示该临时文件的路径。参数suffix和prefix分别表示临时文件名称的后缀和前缀；dir指定了临时文件所在的目录，如果没有指定目录，将根据系统环境变量TMPDIR, TEMP或者TMP的设置来保存临时文件；参数text指定了是否以文本的形式来操作文件，默认为False，表示以二进制的形式来操作文件。</p>
+<h2 id="tempfile-临时文件-夹-操作"><a href="#tempfile-临时文件-夹-操作" class="headerlink" title="tempfile 临时文件(夹)操作"></a>tempfile 临时文件(夹)操作</h2><blockquote>
+<p>tempfile.mkstemp([suffix&#x3D;”[, prefix&#x3D;’tmp’[, dir&#x3D;None[, text&#x3D;False]]]])<br>mkstemp方法用于创建一个临时文件。该方法仅仅用于创建临时文件，调用tempfile.mkstemp函数后，返回包含两个元素的元组，第一个元素指示操作该临时文件的安全级别，第二个元素指示该临时文件的路径。参数suffix和prefix分别表示临时文件名称的后缀和前缀；dir指定了临时文件所在的目录，如果没有指定目录，将根据系统环境变量TMPDIR, TEMP或者TMP的设置来保存临时文件；参数text指定了是否以文本的形式来操作文件，默认为False，表示以二进制的形式来操作文件。</p>
+</blockquote>
 <span id="more"></span>
 
-<h3 id="tempfile-mkdtemp-suffix-”-prefix-’tmp’-dir-None"><a href="#tempfile-mkdtemp-suffix-”-prefix-’tmp’-dir-None" class="headerlink" title="tempfile.mkdtemp([suffix&#x3D;”[, prefix&#x3D;’tmp’[, dir&#x3D;None]]])"></a>tempfile.mkdtemp([suffix&#x3D;”[, prefix&#x3D;’tmp’[, dir&#x3D;None]]])</h3><p>该函数用于创建一个临时文件夹。参数的意思与tempfile.mkdtemp一样。它返回临时文件夹的绝对路径。</p>
-<h3 id="tempfile-mktemp-suffix-”-prefix-’tmp’-dir-None"><a href="#tempfile-mktemp-suffix-”-prefix-’tmp’-dir-None" class="headerlink" title="tempfile.mktemp([suffix&#x3D;”[, prefix&#x3D;’tmp’[, dir&#x3D;None]]])"></a>tempfile.mktemp([suffix&#x3D;”[, prefix&#x3D;’tmp’[, dir&#x3D;None]]])</h3><p>mktemp用于返回一个临时文件的路径，但并不创建该临时文件。</p>
-<h3 id="tempfile-tempdir"><a href="#tempfile-tempdir" class="headerlink" title="tempfile.tempdir"></a>tempfile.tempdir</h3><p>该属性用于指定创建的临时文件（夹）所在的默认文件夹。如果没有设置该属性或者将其设为None，Python将返回以下环境变量TMPDIR, TEMP, TEMP指定的目录，如果没有定义这些环境变量，临时文件将被创建在当前工作目录。</p>
-<h3 id="tempfile-gettempdir"><a href="#tempfile-gettempdir" class="headerlink" title="tempfile.gettempdir()"></a>tempfile.gettempdir()</h3><p>gettempdir()则用于返回保存临时文件的文件夹路径。</p>
-<h3 id="tempfile-TemporaryFile-mode-’w-b’-bufsize-1-suffix-”-prefix-’tmp’-dir-None"><a href="#tempfile-TemporaryFile-mode-’w-b’-bufsize-1-suffix-”-prefix-’tmp’-dir-None" class="headerlink" title="tempfile.TemporaryFile([mode&#x3D;’w+b’[, bufsize&#x3D;-1[, suffix&#x3D;”[, prefix&#x3D;’tmp’[, dir&#x3D;None]]]]])"></a>tempfile.TemporaryFile([mode&#x3D;’w+b’[, bufsize&#x3D;-1[, suffix&#x3D;”[, prefix&#x3D;’tmp’[, dir&#x3D;None]]]]])</h3><p>该函数返回一个类文件对象(file-like)用于临时数据保存（实际上对应磁盘上的一个临时文件）。当文件对象被close或者被del的时候，临时文件将从磁盘上删除。mode、bufsize参数的单方与open()函数一样；suffix和prefix指定了临时文件名的后缀和前缀；dir用于设置临时文件默认的保存路径。返回的类文件对象有一个file属性，它指向真正操作的底层的file对象。</p>
-<h3 id="tempfile-NamedTemporaryFile-mode-’w-b’-bufsize-1-suffix-”-prefix-’tmp’-dir-None-delete-True"><a href="#tempfile-NamedTemporaryFile-mode-’w-b’-bufsize-1-suffix-”-prefix-’tmp’-dir-None-delete-True" class="headerlink" title="tempfile.NamedTemporaryFile([mode&#x3D;’w+b’[, bufsize&#x3D;-1[, suffix&#x3D;”[, prefix&#x3D;’tmp’[, dir&#x3D;None[, delete&#x3D;True]]]]]])"></a>tempfile.NamedTemporaryFile([mode&#x3D;’w+b’[, bufsize&#x3D;-1[, suffix&#x3D;”[, prefix&#x3D;’tmp’[, dir&#x3D;None[, delete&#x3D;True]]]]]])</h3><p>tempfile.NamedTemporaryFile函数的行为与tempfile.TemporaryFile类似，只不过它多了一个delete参数，用于指定类文件对象close或者被del之后，是否也一同删除磁盘上的临时文件（当delete &#x3D; True的时候，行为与TemporaryFile一样）。</p>
-<h3 id="tempfile-SpooledTemporaryFile-max-size-0-mode-’w-b’-bufsize-1-suffix-”-prefix-’tmp’-dir-None"><a href="#tempfile-SpooledTemporaryFile-max-size-0-mode-’w-b’-bufsize-1-suffix-”-prefix-’tmp’-dir-None" class="headerlink" title="tempfile.SpooledTemporaryFile([max_size&#x3D;0[, mode&#x3D;’w+b’[, bufsize&#x3D;-1[, suffix&#x3D;”[, prefix&#x3D;’tmp’[, dir&#x3D;None]]]]]])"></a>tempfile.SpooledTemporaryFile([max_size&#x3D;0[, mode&#x3D;’w+b’[, bufsize&#x3D;-1[, suffix&#x3D;”[, prefix&#x3D;’tmp’[, dir&#x3D;None]]]]]])</h3><p>tempfile.SpooledTemporaryFile函数的行为与tempfile.TemporaryFile类似。不同的是向类文件对象写数据的时候，数据长度只有到达参数max_size指定大小时，或者调用类文件对象的fileno()方法，数据才会真正写入到磁盘的临时文件中。</p>
+<blockquote>
+<p>tempfile.mkdtemp([suffix&#x3D;”[, prefix&#x3D;’tmp’[, dir&#x3D;None]]])<br>该函数用于创建一个临时文件夹。参数的意思与tempfile.mkdtemp一样。它返回临时文件夹的绝对路径。</p>
+</blockquote>
+<blockquote>
+<p>tempfile.mktemp([suffix&#x3D;”[, prefix&#x3D;’tmp’[, dir&#x3D;None]]])<br>mktemp用于返回一个临时文件的路径，但并不创建该临时文件。</p>
+</blockquote>
+<blockquote>
+<p>tempfile.tempdir<br>该属性用于指定创建的临时文件（夹）所在的默认文件夹。如果没有设置该属性或者将其设为None，Python将返回以下环境变量TMPDIR, TEMP, TEMP指定的目录，如果没有定义这些环境变量，临时文件将被创建在当前工作目录。</p>
+</blockquote>
+<blockquote>
+<p>tempfile.gettempdir()<br>gettempdir()则用于返回保存临时文件的文件夹路径。</p>
+</blockquote>
+<blockquote>
+<p>tempfile.TemporaryFile([mode&#x3D;’w+b’[, bufsize&#x3D;-1[, suffix&#x3D;”[, prefix&#x3D;’tmp’[, dir&#x3D;None]]]]])<br>该函数返回一个类文件对象(file-like)用于临时数据保存（实际上对应磁盘上的一个临时文件）。当文件对象被close或者被del的时候，临时文件将从磁盘上删除。mode、bufsize参数的单方与open()函数一样；suffix和prefix指定了临时文件名的后缀和前缀；dir用于设置临时文件默认的保存路径。返回的类文件对象有一个file属性，它指向真正操作的底层的file对象。</p>
+</blockquote>
+<blockquote>
+<p>tempfile.NamedTemporaryFile([mode&#x3D;’w+b’[, bufsize&#x3D;-1[, suffix&#x3D;”[, prefix&#x3D;’tmp’[, dir&#x3D;None[, delete&#x3D;True]]]]]])<br>tempfile.NamedTemporaryFile函数的行为与tempfile.TemporaryFile类似，只不过它多了一个delete参数，用于指定类文件对象close或者被del之后，是否也一同删除磁盘上的临时文件（当delete &#x3D; True的时候，行为与TemporaryFile一样）。</p>
+</blockquote>
+<blockquote>
+<p>tempfile.SpooledTemporaryFile([max_size&#x3D;0[, mode&#x3D;’w+b’[, bufsize&#x3D;-1[, suffix&#x3D;”[, prefix&#x3D;’tmp’[, dir&#x3D;None]]]]]])<br>tempfile.SpooledTemporaryFile函数的行为与tempfile.TemporaryFile类似。不同的是向类文件对象写数据的时候，数据长度只有到达参数max_size指定大小时，或者调用类文件对象的fileno()方法，数据才会真正写入到磁盘的临时文件中。</p>
+</blockquote>
 ]]></content>
       <categories>
         <category>Python后端</category>
@@ -2663,42 +2679,6 @@
       <tags>
         <tag>tempfile</tag>
         <tag>临时文件</tag>
-      </tags>
-  </entry>
-  <entry>
-    <title>Python进制转换</title>
-    <url>/%E8%BF%9B%E5%88%B6%E8%BD%AC%E6%8D%A2/</url>
-    <content><![CDATA[<h3 id="Python中实现的进制间的转换"><a href="#Python中实现的进制间的转换" class="headerlink" title="Python中实现的进制间的转换"></a>Python中实现的进制间的转换</h3><blockquote>
-<p>在python中可以使用Python的内置函数进行进制间的转换。<br>  bin()：其他进制转二进制<br>  oct()：其他进制转八进制<br>  int()：其他进制转十进制<br>  hex()：其他进制转十六进制  </p>
-</blockquote>
-<span id="more"></span>
-<h3 id="二进制、八进制、十六进制的形式"><a href="#二进制、八进制、十六进制的形式" class="headerlink" title="二进制、八进制、十六进制的形式"></a>二进制、八进制、十六进制的形式</h3><ul>
-<li>二进制：以“0b”开头，如：0b111为十进制的7</li>
-<li>八进制：以“0”开头，如：026为十进制的22</li>
-<li>十六进制：以“0x”开头，如：0x1f为十进制的31</li>
-</ul>
-<h3 id="二进制、八进制、十六进制对照表"><a href="#二进制、八进制、十六进制对照表" class="headerlink" title="二进制、八进制、十六进制对照表"></a>二进制、八进制、十六进制对照表</h3><p><img src="/userImages/dzb.png" alt="对照表"></p>
-<h3 id="二进制、八进制、十六进制转十进制"><a href="#二进制、八进制、十六进制转十进制" class="headerlink" title="二进制、八进制、十六进制转十进制"></a>二进制、八进制、十六进制转十进制</h3><p>使用int()函数，第一个参数是要转换的数字，类型为字符串，第二个参数是该数几进制的数，转化结果为一个十进制的数。  </p>
-<figure class="highlight python"><table><tr><td class="code"><pre><span class="line">二进制转十进制：</span><br><span class="line"><span class="meta">&gt;&gt;&gt; </span><span class="built_in">int</span>(<span class="string">&#x27;0b1111&#x27;</span>,<span class="number">2</span>)</span><br><span class="line"><span class="number">15</span></span><br><span class="line">八进制转十进制：</span><br><span class="line"><span class="meta">&gt;&gt;&gt; </span><span class="built_in">int</span>(<span class="string">&#x27;67&#x27;</span>,<span class="number">8</span>)</span><br><span class="line"><span class="number">55</span></span><br><span class="line">十六进制转十进制：</span><br><span class="line"><span class="meta">&gt;&gt;&gt; </span><span class="built_in">int</span>(<span class="string">&#x27;0x1f&#x27;</span>,<span class="number">16</span>)</span><br><span class="line"><span class="number">31</span></span><br></pre></td></tr></table></figure>
-
-<h3 id="八进制、十进制、十六进制转二进制"><a href="#八进制、十进制、十六进制转二进制" class="headerlink" title="八进制、十进制、十六进制转二进制"></a>八进制、十进制、十六进制转二进制</h3><p>使用bin()函数，需要先将八进制、十六进制转换为十进制，然后才能转换为二进制，<br>即八进制&#x2F;十六进制 —&gt; 十进制 —&gt; 二进制</p>
-<figure class="highlight python"><table><tr><td class="code"><pre><span class="line">八进制转二进制：</span><br><span class="line"><span class="meta">&gt;&gt;&gt; </span><span class="built_in">bin</span>(<span class="built_in">int</span>(<span class="string">&#x27;016&#x27;</span>,<span class="number">8</span>))</span><br><span class="line"><span class="string">&#x27;0b1110&#x27;</span></span><br><span class="line">十进制转二进制：</span><br><span class="line"><span class="meta">&gt;&gt;&gt; </span><span class="built_in">bin</span>(<span class="number">14</span>)</span><br><span class="line"><span class="string">&#x27;0b1110&#x27;</span></span><br><span class="line">十六进制转二进制：</span><br><span class="line"><span class="meta">&gt;&gt;&gt; </span><span class="built_in">bin</span>(<span class="built_in">int</span>(<span class="string">&#x27;0xe&#x27;</span>,<span class="number">16</span>))</span><br><span class="line"><span class="string">&#x27;0b1110&#x27;</span></span><br></pre></td></tr></table></figure>
-
-<h3 id="二进制、十进制、十六进制转八进制"><a href="#二进制、十进制、十六进制转八进制" class="headerlink" title="二进制、十进制、十六进制转八进制"></a>二进制、十进制、十六进制转八进制</h3><p>使用oct()函数可以直接进行进制的转换</p>
-<figure class="highlight python"><table><tr><td class="code"><pre><span class="line">二进制转八进制：</span><br><span class="line"><span class="meta">&gt;&gt;&gt; </span><span class="built_in">oct</span>(<span class="number">0b1110</span>)</span><br><span class="line"><span class="string">&#x27;016&#x27;</span></span><br><span class="line">十进制转八进制：</span><br><span class="line"><span class="meta">&gt;&gt;&gt; </span><span class="built_in">oct</span>(<span class="number">14</span>)</span><br><span class="line"><span class="string">&#x27;016&#x27;</span></span><br><span class="line">十六进制转八进制：</span><br><span class="line"><span class="meta">&gt;&gt;&gt; </span><span class="built_in">oct</span>(<span class="number">0xe</span>)</span><br><span class="line"><span class="string">&#x27;016&#x27;</span></span><br></pre></td></tr></table></figure>
-
-<h3 id="二进制、八进制、十进制转十六进制"><a href="#二进制、八进制、十进制转十六进制" class="headerlink" title="二进制、八进制、十进制转十六进制"></a>二进制、八进制、十进制转十六进制</h3><p>使用hex()函数，需要先将二进制、八进制转换为十进制，然后才能转换为十六进制，<br>即二进制&#x2F;八进制 —&gt; 十进制 —&gt; 十六进制</p>
-<figure class="highlight python"><table><tr><td class="code"><pre><span class="line">二进制转十六进制：</span><br><span class="line"><span class="meta">&gt;&gt;&gt; </span><span class="built_in">hex</span>(<span class="built_in">int</span>(<span class="string">&#x27;0b1110&#x27;</span>,<span class="number">2</span>))</span><br><span class="line"><span class="string">&#x27;0xe&#x27;</span></span><br><span class="line">八进制转十六进制：</span><br><span class="line"><span class="meta">&gt;&gt;&gt; </span><span class="built_in">hex</span>(<span class="built_in">int</span>(<span class="string">&#x27;016&#x27;</span>,<span class="number">8</span>))</span><br><span class="line"><span class="string">&#x27;0xe&#x27;</span></span><br><span class="line">十进制转十六进制：</span><br><span class="line"><span class="meta">&gt;&gt;&gt; </span><span class="built_in">hex</span>(<span class="number">14</span>)</span><br><span class="line"><span class="string">&#x27;0xe&#x27;</span></span><br></pre></td></tr></table></figure>
-
-
-]]></content>
-      <categories>
-        <category>Python杂记</category>
-      </categories>
-      <tags>
-        <tag>二进制</tag>
-        <tag>八进制</tag>
-        <tag>十六进制</tag>
       </tags>
   </entry>
   <entry>
@@ -2820,6 +2800,42 @@
         <tag>虚拟机迁移</tag>
         <tag>NFS</tag>
         <tag>动态迁移</tag>
+      </tags>
+  </entry>
+  <entry>
+    <title>Python进制转换</title>
+    <url>/%E8%BF%9B%E5%88%B6%E8%BD%AC%E6%8D%A2/</url>
+    <content><![CDATA[<h3 id="Python中实现的进制间的转换"><a href="#Python中实现的进制间的转换" class="headerlink" title="Python中实现的进制间的转换"></a>Python中实现的进制间的转换</h3><blockquote>
+<p>在python中可以使用Python的内置函数进行进制间的转换。<br>  bin()：其他进制转二进制<br>  oct()：其他进制转八进制<br>  int()：其他进制转十进制<br>  hex()：其他进制转十六进制  </p>
+</blockquote>
+<span id="more"></span>
+<h3 id="二进制、八进制、十六进制的形式"><a href="#二进制、八进制、十六进制的形式" class="headerlink" title="二进制、八进制、十六进制的形式"></a>二进制、八进制、十六进制的形式</h3><ul>
+<li>二进制：以“0b”开头，如：0b111为十进制的7</li>
+<li>八进制：以“0”开头，如：026为十进制的22</li>
+<li>十六进制：以“0x”开头，如：0x1f为十进制的31</li>
+</ul>
+<h3 id="二进制、八进制、十六进制对照表"><a href="#二进制、八进制、十六进制对照表" class="headerlink" title="二进制、八进制、十六进制对照表"></a>二进制、八进制、十六进制对照表</h3><p><img src="/userImages/dzb.png" alt="对照表"></p>
+<h3 id="二进制、八进制、十六进制转十进制"><a href="#二进制、八进制、十六进制转十进制" class="headerlink" title="二进制、八进制、十六进制转十进制"></a>二进制、八进制、十六进制转十进制</h3><p>使用int()函数，第一个参数是要转换的数字，类型为字符串，第二个参数是该数几进制的数，转化结果为一个十进制的数。  </p>
+<figure class="highlight python"><table><tr><td class="code"><pre><span class="line">二进制转十进制：</span><br><span class="line"><span class="meta">&gt;&gt;&gt; </span><span class="built_in">int</span>(<span class="string">&#x27;0b1111&#x27;</span>,<span class="number">2</span>)</span><br><span class="line"><span class="number">15</span></span><br><span class="line">八进制转十进制：</span><br><span class="line"><span class="meta">&gt;&gt;&gt; </span><span class="built_in">int</span>(<span class="string">&#x27;67&#x27;</span>,<span class="number">8</span>)</span><br><span class="line"><span class="number">55</span></span><br><span class="line">十六进制转十进制：</span><br><span class="line"><span class="meta">&gt;&gt;&gt; </span><span class="built_in">int</span>(<span class="string">&#x27;0x1f&#x27;</span>,<span class="number">16</span>)</span><br><span class="line"><span class="number">31</span></span><br></pre></td></tr></table></figure>
+
+<h3 id="八进制、十进制、十六进制转二进制"><a href="#八进制、十进制、十六进制转二进制" class="headerlink" title="八进制、十进制、十六进制转二进制"></a>八进制、十进制、十六进制转二进制</h3><p>使用bin()函数，需要先将八进制、十六进制转换为十进制，然后才能转换为二进制，<br>即八进制&#x2F;十六进制 —&gt; 十进制 —&gt; 二进制</p>
+<figure class="highlight python"><table><tr><td class="code"><pre><span class="line">八进制转二进制：</span><br><span class="line"><span class="meta">&gt;&gt;&gt; </span><span class="built_in">bin</span>(<span class="built_in">int</span>(<span class="string">&#x27;016&#x27;</span>,<span class="number">8</span>))</span><br><span class="line"><span class="string">&#x27;0b1110&#x27;</span></span><br><span class="line">十进制转二进制：</span><br><span class="line"><span class="meta">&gt;&gt;&gt; </span><span class="built_in">bin</span>(<span class="number">14</span>)</span><br><span class="line"><span class="string">&#x27;0b1110&#x27;</span></span><br><span class="line">十六进制转二进制：</span><br><span class="line"><span class="meta">&gt;&gt;&gt; </span><span class="built_in">bin</span>(<span class="built_in">int</span>(<span class="string">&#x27;0xe&#x27;</span>,<span class="number">16</span>))</span><br><span class="line"><span class="string">&#x27;0b1110&#x27;</span></span><br></pre></td></tr></table></figure>
+
+<h3 id="二进制、十进制、十六进制转八进制"><a href="#二进制、十进制、十六进制转八进制" class="headerlink" title="二进制、十进制、十六进制转八进制"></a>二进制、十进制、十六进制转八进制</h3><p>使用oct()函数可以直接进行进制的转换</p>
+<figure class="highlight python"><table><tr><td class="code"><pre><span class="line">二进制转八进制：</span><br><span class="line"><span class="meta">&gt;&gt;&gt; </span><span class="built_in">oct</span>(<span class="number">0b1110</span>)</span><br><span class="line"><span class="string">&#x27;016&#x27;</span></span><br><span class="line">十进制转八进制：</span><br><span class="line"><span class="meta">&gt;&gt;&gt; </span><span class="built_in">oct</span>(<span class="number">14</span>)</span><br><span class="line"><span class="string">&#x27;016&#x27;</span></span><br><span class="line">十六进制转八进制：</span><br><span class="line"><span class="meta">&gt;&gt;&gt; </span><span class="built_in">oct</span>(<span class="number">0xe</span>)</span><br><span class="line"><span class="string">&#x27;016&#x27;</span></span><br></pre></td></tr></table></figure>
+
+<h3 id="二进制、八进制、十进制转十六进制"><a href="#二进制、八进制、十进制转十六进制" class="headerlink" title="二进制、八进制、十进制转十六进制"></a>二进制、八进制、十进制转十六进制</h3><p>使用hex()函数，需要先将二进制、八进制转换为十进制，然后才能转换为十六进制，<br>即二进制&#x2F;八进制 —&gt; 十进制 —&gt; 十六进制</p>
+<figure class="highlight python"><table><tr><td class="code"><pre><span class="line">二进制转十六进制：</span><br><span class="line"><span class="meta">&gt;&gt;&gt; </span><span class="built_in">hex</span>(<span class="built_in">int</span>(<span class="string">&#x27;0b1110&#x27;</span>,<span class="number">2</span>))</span><br><span class="line"><span class="string">&#x27;0xe&#x27;</span></span><br><span class="line">八进制转十六进制：</span><br><span class="line"><span class="meta">&gt;&gt;&gt; </span><span class="built_in">hex</span>(<span class="built_in">int</span>(<span class="string">&#x27;016&#x27;</span>,<span class="number">8</span>))</span><br><span class="line"><span class="string">&#x27;0xe&#x27;</span></span><br><span class="line">十进制转十六进制：</span><br><span class="line"><span class="meta">&gt;&gt;&gt; </span><span class="built_in">hex</span>(<span class="number">14</span>)</span><br><span class="line"><span class="string">&#x27;0xe&#x27;</span></span><br></pre></td></tr></table></figure>
+
+
+]]></content>
+      <categories>
+        <category>Python杂记</category>
+      </categories>
+      <tags>
+        <tag>二进制</tag>
+        <tag>八进制</tag>
+        <tag>十六进制</tag>
       </tags>
   </entry>
 </search>

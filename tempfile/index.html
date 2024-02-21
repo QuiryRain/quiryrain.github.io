@@ -19,15 +19,15 @@
 
 <script class="next-config" data-name="main" type="application/json">{"hostname":"blog.qaz327zz.tk","root":"/","images":"/images","scheme":"Gemini","darkmode":false,"version":"8.19.1","exturl":false,"sidebar":{"position":"left","display":"post","padding":18,"offset":12},"copycode":{"enable":false,"style":null},"fold":{"enable":false,"height":500},"bookmark":{"enable":false,"color":"#222","save":"auto"},"mediumzoom":false,"lazyload":false,"pangu":false,"comments":{"style":"tabs","active":null,"storage":true,"lazyload":false,"nav":null},"stickytabs":false,"motion":{"enable":true,"async":false,"transition":{"menu_item":"fadeInDown","post_block":"fadeIn","post_header":"fadeInDown","post_body":"fadeInDown","coll_header":"fadeInLeft","sidebar":"fadeInUp"}},"i18n":{"placeholder":"搜索...","empty":"没有找到任何搜索结果：${query}","hits_time":"找到 ${hits} 个搜索结果（用时 ${time} 毫秒）","hits":"找到 ${hits} 个搜索结果"},"path":"/search.xml","localsearch":{"enable":true,"trigger":"auto","top_n_per_article":1,"unescape":false,"preload":false}}</script><script src="/js/config.js"></script>
 
-    <meta name="description" content="tempfile模块，用来对临时数据进行操作  tempfile 临时文件(夹)操作tempfile.mkstemp([suffix&#x3D;”[, prefix&#x3D;’tmp’[, dir&#x3D;None[, text&#x3D;False]]]])mkstemp方法用于创建一个临时文件。该方法仅仅用于创建临时文件，调用tempfile.mkstemp函数后，返回包含两个元素的元组">
+    <meta name="description" content="tempfile模块，用来对临时数据进行操作  tempfile 临时文件(夹)操作 tempfile.mkstemp([suffix&#x3D;”[, prefix&#x3D;’tmp’[, dir&#x3D;None[, text&#x3D;False]]]])mkstemp方法用于创建一个临时文件。该方法仅仅用于创建临时文件，调用tempfile.mkstemp函数后，返回包含两个元素的元">
 <meta property="og:type" content="article">
 <meta property="og:title" content="tempfile模块的用法">
 <meta property="og:url" content="https://blog.qaz327zz.tk/tempfile/index.html">
 <meta property="og:site_name" content="QuiryRain的博客">
-<meta property="og:description" content="tempfile模块，用来对临时数据进行操作  tempfile 临时文件(夹)操作tempfile.mkstemp([suffix&#x3D;”[, prefix&#x3D;’tmp’[, dir&#x3D;None[, text&#x3D;False]]]])mkstemp方法用于创建一个临时文件。该方法仅仅用于创建临时文件，调用tempfile.mkstemp函数后，返回包含两个元素的元组">
+<meta property="og:description" content="tempfile模块，用来对临时数据进行操作  tempfile 临时文件(夹)操作 tempfile.mkstemp([suffix&#x3D;”[, prefix&#x3D;’tmp’[, dir&#x3D;None[, text&#x3D;False]]]])mkstemp方法用于创建一个临时文件。该方法仅仅用于创建临时文件，调用tempfile.mkstemp函数后，返回包含两个元素的元">
 <meta property="og:locale" content="zh_CN">
 <meta property="article:published_time" content="2019-02-25T07:40:43.000Z">
-<meta property="article:modified_time" content="2020-07-14T00:31:07.648Z">
+<meta property="article:modified_time" content="2024-02-21T02:35:27.522Z">
 <meta property="article:author" content="QuiryRain">
 <meta property="article:tag" content="tempfile">
 <meta property="article:tag" content="临时文件">
@@ -141,7 +141,7 @@
       <div class="sidebar-panel-container">
         <!--noindex-->
         <div class="post-toc-wrap sidebar-panel">
-            <div class="post-toc animated"><ol class="nav"><li class="nav-item nav-level-2"><a class="nav-link" href="#tempfile-%E4%B8%B4%E6%97%B6%E6%96%87%E4%BB%B6-%E5%A4%B9-%E6%93%8D%E4%BD%9C"><span class="nav-number">1.</span> <span class="nav-text">tempfile 临时文件(夹)操作</span></a><ol class="nav-child"><li class="nav-item nav-level-3"><a class="nav-link" href="#tempfile-mkstemp-suffix-%E2%80%9D-prefix-%E2%80%99tmp%E2%80%99-dir-None-text-False"><span class="nav-number">1.1.</span> <span class="nav-text">tempfile.mkstemp([suffix&#x3D;”[, prefix&#x3D;’tmp’[, dir&#x3D;None[, text&#x3D;False]]]])</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#tempfile-mkdtemp-suffix-%E2%80%9D-prefix-%E2%80%99tmp%E2%80%99-dir-None"><span class="nav-number">1.2.</span> <span class="nav-text">tempfile.mkdtemp([suffix&#x3D;”[, prefix&#x3D;’tmp’[, dir&#x3D;None]]])</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#tempfile-mktemp-suffix-%E2%80%9D-prefix-%E2%80%99tmp%E2%80%99-dir-None"><span class="nav-number">1.3.</span> <span class="nav-text">tempfile.mktemp([suffix&#x3D;”[, prefix&#x3D;’tmp’[, dir&#x3D;None]]])</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#tempfile-tempdir"><span class="nav-number">1.4.</span> <span class="nav-text">tempfile.tempdir</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#tempfile-gettempdir"><span class="nav-number">1.5.</span> <span class="nav-text">tempfile.gettempdir()</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#tempfile-TemporaryFile-mode-%E2%80%99w-b%E2%80%99-bufsize-1-suffix-%E2%80%9D-prefix-%E2%80%99tmp%E2%80%99-dir-None"><span class="nav-number">1.6.</span> <span class="nav-text">tempfile.TemporaryFile([mode&#x3D;’w+b’[, bufsize&#x3D;-1[, suffix&#x3D;”[, prefix&#x3D;’tmp’[, dir&#x3D;None]]]]])</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#tempfile-NamedTemporaryFile-mode-%E2%80%99w-b%E2%80%99-bufsize-1-suffix-%E2%80%9D-prefix-%E2%80%99tmp%E2%80%99-dir-None-delete-True"><span class="nav-number">1.7.</span> <span class="nav-text">tempfile.NamedTemporaryFile([mode&#x3D;’w+b’[, bufsize&#x3D;-1[, suffix&#x3D;”[, prefix&#x3D;’tmp’[, dir&#x3D;None[, delete&#x3D;True]]]]]])</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#tempfile-SpooledTemporaryFile-max-size-0-mode-%E2%80%99w-b%E2%80%99-bufsize-1-suffix-%E2%80%9D-prefix-%E2%80%99tmp%E2%80%99-dir-None"><span class="nav-number">1.8.</span> <span class="nav-text">tempfile.SpooledTemporaryFile([max_size&#x3D;0[, mode&#x3D;’w+b’[, bufsize&#x3D;-1[, suffix&#x3D;”[, prefix&#x3D;’tmp’[, dir&#x3D;None]]]]]])</span></a></li></ol></li></ol></div>
+            <div class="post-toc animated"><ol class="nav"><li class="nav-item nav-level-2"><a class="nav-link" href="#tempfile-%E4%B8%B4%E6%97%B6%E6%96%87%E4%BB%B6-%E5%A4%B9-%E6%93%8D%E4%BD%9C"><span class="nav-number">1.</span> <span class="nav-text">tempfile 临时文件(夹)操作</span></a></li></ol></div>
         </div>
         <!--/noindex-->
 
@@ -233,7 +233,7 @@
         <i class="far fa-calendar-check"></i>
       </span>
       <span class="post-meta-item-text">更新于</span>
-      <time title="修改时间：2020-07-14 08:31:07" itemprop="dateModified" datetime="2020-07-14T08:31:07+08:00">2020-07-14</time>
+      <time title="修改时间：2024-02-21 10:35:27" itemprop="dateModified" datetime="2024-02-21T10:35:27+08:00">2024-02-21</time>
     </span>
     <span class="post-meta-item">
       <span class="post-meta-item-icon">
@@ -272,16 +272,32 @@
     <div class="post-body" itemprop="articleBody"><blockquote>
 <p>tempfile模块，用来对临时数据进行操作</p>
 </blockquote>
-<h2 id="tempfile-临时文件-夹-操作"><a href="#tempfile-临时文件-夹-操作" class="headerlink" title="tempfile 临时文件(夹)操作"></a>tempfile 临时文件(夹)操作</h2><h3 id="tempfile-mkstemp-suffix-”-prefix-’tmp’-dir-None-text-False"><a href="#tempfile-mkstemp-suffix-”-prefix-’tmp’-dir-None-text-False" class="headerlink" title="tempfile.mkstemp([suffix&#x3D;”[, prefix&#x3D;’tmp’[, dir&#x3D;None[, text&#x3D;False]]]])"></a>tempfile.mkstemp([suffix&#x3D;”[, prefix&#x3D;’tmp’[, dir&#x3D;None[, text&#x3D;False]]]])</h3><p>mkstemp方法用于创建一个临时文件。该方法仅仅用于创建临时文件，调用tempfile.mkstemp函数后，返回包含两个元素的元组，第一个元素指示操作该临时文件的安全级别，第二个元素指示该临时文件的路径。参数suffix和prefix分别表示临时文件名称的后缀和前缀；dir指定了临时文件所在的目录，如果没有指定目录，将根据系统环境变量TMPDIR, TEMP或者TMP的设置来保存临时文件；参数text指定了是否以文本的形式来操作文件，默认为False，表示以二进制的形式来操作文件。</p>
+<h2 id="tempfile-临时文件-夹-操作"><a href="#tempfile-临时文件-夹-操作" class="headerlink" title="tempfile 临时文件(夹)操作"></a>tempfile 临时文件(夹)操作</h2><blockquote>
+<p>tempfile.mkstemp([suffix&#x3D;”[, prefix&#x3D;’tmp’[, dir&#x3D;None[, text&#x3D;False]]]])<br>mkstemp方法用于创建一个临时文件。该方法仅仅用于创建临时文件，调用tempfile.mkstemp函数后，返回包含两个元素的元组，第一个元素指示操作该临时文件的安全级别，第二个元素指示该临时文件的路径。参数suffix和prefix分别表示临时文件名称的后缀和前缀；dir指定了临时文件所在的目录，如果没有指定目录，将根据系统环境变量TMPDIR, TEMP或者TMP的设置来保存临时文件；参数text指定了是否以文本的形式来操作文件，默认为False，表示以二进制的形式来操作文件。</p>
+</blockquote>
 <span id="more"></span>
 
-<h3 id="tempfile-mkdtemp-suffix-”-prefix-’tmp’-dir-None"><a href="#tempfile-mkdtemp-suffix-”-prefix-’tmp’-dir-None" class="headerlink" title="tempfile.mkdtemp([suffix&#x3D;”[, prefix&#x3D;’tmp’[, dir&#x3D;None]]])"></a>tempfile.mkdtemp([suffix&#x3D;”[, prefix&#x3D;’tmp’[, dir&#x3D;None]]])</h3><p>该函数用于创建一个临时文件夹。参数的意思与tempfile.mkdtemp一样。它返回临时文件夹的绝对路径。</p>
-<h3 id="tempfile-mktemp-suffix-”-prefix-’tmp’-dir-None"><a href="#tempfile-mktemp-suffix-”-prefix-’tmp’-dir-None" class="headerlink" title="tempfile.mktemp([suffix&#x3D;”[, prefix&#x3D;’tmp’[, dir&#x3D;None]]])"></a>tempfile.mktemp([suffix&#x3D;”[, prefix&#x3D;’tmp’[, dir&#x3D;None]]])</h3><p>mktemp用于返回一个临时文件的路径，但并不创建该临时文件。</p>
-<h3 id="tempfile-tempdir"><a href="#tempfile-tempdir" class="headerlink" title="tempfile.tempdir"></a>tempfile.tempdir</h3><p>该属性用于指定创建的临时文件（夹）所在的默认文件夹。如果没有设置该属性或者将其设为None，Python将返回以下环境变量TMPDIR, TEMP, TEMP指定的目录，如果没有定义这些环境变量，临时文件将被创建在当前工作目录。</p>
-<h3 id="tempfile-gettempdir"><a href="#tempfile-gettempdir" class="headerlink" title="tempfile.gettempdir()"></a>tempfile.gettempdir()</h3><p>gettempdir()则用于返回保存临时文件的文件夹路径。</p>
-<h3 id="tempfile-TemporaryFile-mode-’w-b’-bufsize-1-suffix-”-prefix-’tmp’-dir-None"><a href="#tempfile-TemporaryFile-mode-’w-b’-bufsize-1-suffix-”-prefix-’tmp’-dir-None" class="headerlink" title="tempfile.TemporaryFile([mode&#x3D;’w+b’[, bufsize&#x3D;-1[, suffix&#x3D;”[, prefix&#x3D;’tmp’[, dir&#x3D;None]]]]])"></a>tempfile.TemporaryFile([mode&#x3D;’w+b’[, bufsize&#x3D;-1[, suffix&#x3D;”[, prefix&#x3D;’tmp’[, dir&#x3D;None]]]]])</h3><p>该函数返回一个类文件对象(file-like)用于临时数据保存（实际上对应磁盘上的一个临时文件）。当文件对象被close或者被del的时候，临时文件将从磁盘上删除。mode、bufsize参数的单方与open()函数一样；suffix和prefix指定了临时文件名的后缀和前缀；dir用于设置临时文件默认的保存路径。返回的类文件对象有一个file属性，它指向真正操作的底层的file对象。</p>
-<h3 id="tempfile-NamedTemporaryFile-mode-’w-b’-bufsize-1-suffix-”-prefix-’tmp’-dir-None-delete-True"><a href="#tempfile-NamedTemporaryFile-mode-’w-b’-bufsize-1-suffix-”-prefix-’tmp’-dir-None-delete-True" class="headerlink" title="tempfile.NamedTemporaryFile([mode&#x3D;’w+b’[, bufsize&#x3D;-1[, suffix&#x3D;”[, prefix&#x3D;’tmp’[, dir&#x3D;None[, delete&#x3D;True]]]]]])"></a>tempfile.NamedTemporaryFile([mode&#x3D;’w+b’[, bufsize&#x3D;-1[, suffix&#x3D;”[, prefix&#x3D;’tmp’[, dir&#x3D;None[, delete&#x3D;True]]]]]])</h3><p>tempfile.NamedTemporaryFile函数的行为与tempfile.TemporaryFile类似，只不过它多了一个delete参数，用于指定类文件对象close或者被del之后，是否也一同删除磁盘上的临时文件（当delete &#x3D; True的时候，行为与TemporaryFile一样）。</p>
-<h3 id="tempfile-SpooledTemporaryFile-max-size-0-mode-’w-b’-bufsize-1-suffix-”-prefix-’tmp’-dir-None"><a href="#tempfile-SpooledTemporaryFile-max-size-0-mode-’w-b’-bufsize-1-suffix-”-prefix-’tmp’-dir-None" class="headerlink" title="tempfile.SpooledTemporaryFile([max_size&#x3D;0[, mode&#x3D;’w+b’[, bufsize&#x3D;-1[, suffix&#x3D;”[, prefix&#x3D;’tmp’[, dir&#x3D;None]]]]]])"></a>tempfile.SpooledTemporaryFile([max_size&#x3D;0[, mode&#x3D;’w+b’[, bufsize&#x3D;-1[, suffix&#x3D;”[, prefix&#x3D;’tmp’[, dir&#x3D;None]]]]]])</h3><p>tempfile.SpooledTemporaryFile函数的行为与tempfile.TemporaryFile类似。不同的是向类文件对象写数据的时候，数据长度只有到达参数max_size指定大小时，或者调用类文件对象的fileno()方法，数据才会真正写入到磁盘的临时文件中。</p>
+<blockquote>
+<p>tempfile.mkdtemp([suffix&#x3D;”[, prefix&#x3D;’tmp’[, dir&#x3D;None]]])<br>该函数用于创建一个临时文件夹。参数的意思与tempfile.mkdtemp一样。它返回临时文件夹的绝对路径。</p>
+</blockquote>
+<blockquote>
+<p>tempfile.mktemp([suffix&#x3D;”[, prefix&#x3D;’tmp’[, dir&#x3D;None]]])<br>mktemp用于返回一个临时文件的路径，但并不创建该临时文件。</p>
+</blockquote>
+<blockquote>
+<p>tempfile.tempdir<br>该属性用于指定创建的临时文件（夹）所在的默认文件夹。如果没有设置该属性或者将其设为None，Python将返回以下环境变量TMPDIR, TEMP, TEMP指定的目录，如果没有定义这些环境变量，临时文件将被创建在当前工作目录。</p>
+</blockquote>
+<blockquote>
+<p>tempfile.gettempdir()<br>gettempdir()则用于返回保存临时文件的文件夹路径。</p>
+</blockquote>
+<blockquote>
+<p>tempfile.TemporaryFile([mode&#x3D;’w+b’[, bufsize&#x3D;-1[, suffix&#x3D;”[, prefix&#x3D;’tmp’[, dir&#x3D;None]]]]])<br>该函数返回一个类文件对象(file-like)用于临时数据保存（实际上对应磁盘上的一个临时文件）。当文件对象被close或者被del的时候，临时文件将从磁盘上删除。mode、bufsize参数的单方与open()函数一样；suffix和prefix指定了临时文件名的后缀和前缀；dir用于设置临时文件默认的保存路径。返回的类文件对象有一个file属性，它指向真正操作的底层的file对象。</p>
+</blockquote>
+<blockquote>
+<p>tempfile.NamedTemporaryFile([mode&#x3D;’w+b’[, bufsize&#x3D;-1[, suffix&#x3D;”[, prefix&#x3D;’tmp’[, dir&#x3D;None[, delete&#x3D;True]]]]]])<br>tempfile.NamedTemporaryFile函数的行为与tempfile.TemporaryFile类似，只不过它多了一个delete参数，用于指定类文件对象close或者被del之后，是否也一同删除磁盘上的临时文件（当delete &#x3D; True的时候，行为与TemporaryFile一样）。</p>
+</blockquote>
+<blockquote>
+<p>tempfile.SpooledTemporaryFile([max_size&#x3D;0[, mode&#x3D;’w+b’[, bufsize&#x3D;-1[, suffix&#x3D;”[, prefix&#x3D;’tmp’[, dir&#x3D;None]]]]]])<br>tempfile.SpooledTemporaryFile函数的行为与tempfile.TemporaryFile类似。不同的是向类文件对象写数据的时候，数据长度只有到达参数max_size指定大小时，或者调用类文件对象的fileno()方法，数据才会真正写入到磁盘的临时文件中。</p>
+</blockquote>
 
     </div>
 
